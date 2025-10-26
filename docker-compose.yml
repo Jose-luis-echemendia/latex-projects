@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  latex:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # dockerfile: Dockerfile.light
+    container_name: latex-workspace
+    volumes:
+      # Montar tu directorio de proyectos LaTeX
+      - ./latex-projects:/workspace
+      # Para usar fuentes del sistema (opcional)
+      - /usr/share/fonts:/usr/share/fonts:ro
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    # Para desarrollo interactivo
+    command: tail -f /dev/null
