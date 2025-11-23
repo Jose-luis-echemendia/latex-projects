@@ -14,5 +14,5 @@ services:
     working_dir: /workspace
     stdin_open: true
     tty: true
-    # Para desarrollo interactivo
+    # Para development interactivo
     command: tail -f /dev/null

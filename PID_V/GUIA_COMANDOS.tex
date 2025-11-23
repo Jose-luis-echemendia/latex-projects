@@ -1,0 +1,251 @@
+% ================================================================
+% 📚 GUÍA DE USO DE COMANDOS PERSONALIZADOS
+% ================================================================
+% Este archivo muestra cómo usar todos los comandos disponibles
+% en template_pid.cls
+% ================================================================
+
+\documentclass{template_pid}
+
+\begin{document}
+
+\chapter{Guía de Comandos Personalizados}
+
+\section{Formato de Texto Básico}
+
+\subsection{Cursiva, Negrita y Subrayado}
+
+Puedes usar \italica{texto en cursiva} para énfasis suave.
+
+Usa \negrita{texto en negrita} para dar más peso.
+
+El \subrayado{texto subrayado} también está disponible.
+
+Para combinar estilos: \negrita{\italica{negrita e itálica juntas}}.
+
+\subsection{Términos y Conceptos Importantes}
+
+Define un \termino{término técnico} importante (negrita + cursiva).
+
+Destaca un \concepto{concepto clave} en color azul.
+
+El comando \importante{¡IMPORTANTE!} resalta en rojo y negrita.
+
+\subsection{Código y Variables}
+
+Para código inline usa \codigo{printf("Hola mundo")}.
+
+Para variables o parámetros: \variable{nombreVariable}.
+
+Las \sigla{UCI}, \sigla{HTML}, \sigla{CSS} se escriben en versalitas.
+
+\subsection{Colores Personalizados}
+
+Puedes usar \colortext{green}{texto en verde} o \colortext{purple}{texto en morado}.
+
+% ================================================================
+\section{Notas y Observaciones}
+
+\nota{Nota al margen}
+Este texto tiene una nota al margen. Las notas aparecen en el margen derecho.
+
+\notaimportante{Esta es una nota importante que aparece destacada en el texto principal en color naranja.}
+
+\observacion{Esta es una observación relevante que se muestra en color teal y cursiva.}
+
+% ================================================================
+\section{Entornos Personalizados}
+
+\subsection{Ejemplos}
+
+\begin{ejemplo}
+Este es un ejemplo de cómo usar un comando o concepto.
+Puede contener múltiples líneas y explicaciones detalladas.
+\end{ejemplo}
+
+\subsection{Definiciones}
+
+\begin{definicion}{Base de Datos}
+Una base de datos es un conjunto organizado de datos estructurados,
+normalmente almacenados electrónicamente en un sistema informático.
+\end{definicion}
+
+\subsection{Bloques de Código}
+
+\begin{codigobloque}
+def suma(a, b):
+    return a + b
+
+resultado = suma(5, 3)
+print(resultado)  # Output: 8
+\end{codigobloque}
+
+\subsection{Advertencias}
+
+\begin{advertencia}
+Este proceso puede consumir mucha memoria. Asegúrate de tener
+al menos 8GB de RAM disponibles antes de ejecutar.
+\end{advertencia}
+
+% ================================================================
+\section{Listas y Enumeraciones}
+
+\subsection{Lista con Números}
+
+\begin{enumeracion}
+    \item Primer elemento de la lista
+    \item Segundo elemento de la lista
+    \item Tercer elemento de la lista
+    \begin{enumeracion}
+        \item Subelemento 1
+        \item Subelemento 2
+    \end{enumeracion}
+    \item Cuarto elemento
+\end{enumeracion}
+
+\subsection{Lista con Viñetas}
+
+\begin{listapuntos}
+    \item Primer punto
+    \item Segundo punto
+    \item Tercer punto
+    \begin{listapuntos}
+        \item Subpunto A
+        \item Subpunto B
+    \end{listapuntos}
+\end{listapuntos}
+
+\subsection{Lista Alfabética}
+
+\begin{listaalfabetica}
+    \item Primera opción (a)
+    \item Segunda opción (b)
+    \item Tercera opción (c)
+    \item Cuarta opción (d)
+\end{listaalfabetica}
+
+\subsection{Lista con Números Romanos}
+
+\begin{listaromana}
+    \item Fase I del proyecto
+    \item Fase II del proyecto
+    \item Fase III del proyecto
+    \item Fase IV del proyecto
+\end{listaromana}
+
+% ================================================================
+\section{Referencias Cruzadas}
+
+Supongamos que tienes una sección etiquetada como \codigo{\textbackslash label\{sec:introduccion\}}
+
+Puedes referenciarla con: Ver \refsec{sec:introduccion} para más detalles.
+
+Para figuras: Como se muestra en \reffig{fig:arquitectura}...
+
+Para tablas: Los datos se presentan en \reftab{tab:resultados}...
+
+Para epígrafes: Consultar \refepi{epi:metodologia}...
+
+% ================================================================
+\section{Ejemplos Combinados}
+
+\subsection{Caso de Uso Práctico}
+
+En el development de \termino{sistemas web}, es fundamental comprender
+el \concepto{patrón MVC} (Modelo-Vista-Controlador).
+
+\begin{definicion}{MVC}
+\sigla{MVC} es un patrón de arquitectura de software que separa
+una aplicación en tres componentes principales:
+\begin{listapuntos}
+    \item \negrita{Modelo}: maneja los datos y la lógica de negocio
+    \item \negrita{Vista}: presenta la información al usuario
+    \item \negrita{Controlador}: gestiona la interacción del usuario
+\end{listapuntos}
+\end{definicion}
+
+\begin{ejemplo}
+En Django (Python), puedes definir un modelo así:
+
+\begin{codigobloque}
+from django.db import models
+
+class Usuario(models.Model):
+    nombre = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    fecha_registro = models.DateTimeField(auto_now_add=True)
+\end{codigobloque}
+\end{ejemplo}
+
+\notaimportante{Es importante validar siempre los datos de entrada
+antes de guardarlos en la base de datos.}
+
+\subsection{Proceso de Implementación}
+
+Para implementar un sistema \sigla{CRUD} básico:
+
+\begin{enumeracion}
+    \item Diseñar el modelo de datos
+    \item Crear las vistas necesarias
+    \item Implementar los controladores
+    \item Realizar pruebas unitarias
+    \item Desplegar en producción
+\end{enumeracion}
+
+\begin{advertencia}
+Nunca subas las credenciales de base de datos al repositorio.
+Usa variables de entorno para información sensible.
+\end{advertencia}
+
+% ================================================================
+\section{Resumen de Comandos Disponibles}
+
+\subsection{Formato de Texto}
+\begin{listapuntos}
+    \item \codigo{\textbackslash italica\{texto\}} - Texto en cursiva
+    \item \codigo{\textbackslash negrita\{texto\}} - Texto en negrita
+    \item \codigo{\textbackslash subrayado\{texto\}} - Texto subrayado
+    \item \codigo{\textbackslash termino\{texto\}} - Término importante (negrita + cursiva)
+    \item \codigo{\textbackslash concepto\{texto\}} - Concepto destacado (azul + negrita)
+    \item \codigo{\textbackslash importante\{texto\}} - Texto muy importante (rojo + negrita)
+    \item \codigo{\textbackslash sigla\{ABC\}} - Siglas en versalitas
+\end{listapuntos}
+
+\subsection{Código}
+\begin{listapuntos}
+    \item \codigo{\textbackslash codigo\{codigo\}} - Código inline
+    \item \codigo{\textbackslash variable\{var\}} - Variable o parámetro
+\end{listapuntos}
+
+\subsection{Notas}
+\begin{listapuntos}
+    \item \codigo{\textbackslash nota\{texto\}} - Nota al margen
+    \item \codigo{\textbackslash notaimportante\{texto\}} - Nota destacada (naranja)
+    \item \codigo{\textbackslash observacion\{texto\}} - Observación (teal + cursiva)
+\end{listapuntos}
+
+\subsection{Entornos}
+\begin{listapuntos}
+    \item \codigo{ejemplo} - Para mostrar ejemplos
+    \item \codigo{definicion\{nombre\}} - Para definiciones formales
+    \item \codigo{codigobloque} - Para bloques de código
+    \item \codigo{advertencia} - Para advertencias importantes
+\end{listapuntos}
+
+\subsection{Listas}
+\begin{listapuntos}
+    \item \codigo{enumeracion} - Lista numerada (1, 2, 3...)
+    \item \codigo{listapuntos} - Lista con viñetas (•)
+    \item \codigo{listaalfabetica} - Lista con letras (a, b, c...)
+    \item \codigo{listaromana} - Lista romana (I, II, III...)
+\end{listapuntos}
+
+\subsection{Referencias}
+\begin{listapuntos}
+    \item \codigo{\textbackslash refsec\{label\}} - Referencia a sección
+    \item \codigo{\textbackslash reffig\{label\}} - Referencia a figura
+    \item \codigo{\textbackslash reftab\{label\}} - Referencia a tabla
+    \item \codigo{\textbackslash refepi\{label\}} - Referencia a epígrafe
+\end{listapuntos}
+
+\end{document}

@@ -1,0 +1,200 @@
+% ================================================================
+% 📚 EXAMPLE: HOW TO USE LINK COMMANDS
+% ================================================================
+% This file demonstrates the new link commands
+% ================================================================
+
+\documentclass{template_pid}
+
+\begin{document}
+
+\chapter{Examples of Using Links}
+
+\section{Basic Link Usage}
+
+\subsection{Visible URL Links}
+
+The simplest way to add a link is to show the full URL:
+
+Visit our repository at \link{https://github.com/Jose-luis-echemendia/latex-projects}
+
+You can also reference documentation: \link{https://www.latex-project.org/}
+
+Or academic resources: \link{https://scholar.google.com/}
+
+\subsection{Custom Text Links}
+
+For cleaner text, use custom link text:
+
+Check out \linktext{our GitHub repository}{https://github.com/Jose-luis-echemendia/latex-projects}
+
+Learn more about \linktext{LaTeX documentation}{https://www.latex-project.org/}
+
+Watch this \linktext{excellent tutorial}{https://www.youtube.com/watch?v=example}
+
+% ================================================================
+\section{Links in Different Contexts}
+
+\subsection{Links in Lists}
+
+Useful resources for learning:
+
+\begin{bulletlist}
+    \item \linktext{Overleaf Tutorials}{https://www.overleaf.com/learn}
+    \item \linktext{LaTeX Wikibook}{https://en.wikibooks.org/wiki/LaTeX}
+    \item \linktext{TeX Stack Exchange}{https://tex.stackexchange.com/}
+    \item Direct link: \link{https://www.ctan.org/}
+\end{bulletlist}
+
+\subsection{Links with Code Examples}
+
+To install the package, visit \linktext{PyPI}{https://pypi.org/} and run:
+
+\begin{codeblock}
+pip install package-name
+\end{codeblock}
+
+Documentation available at \link{https://docs.python.org/}
+
+\subsection{Links in Definitions}
+
+\begin{definition}{REST API}
+A \term{REST API} is an architectural style for web services.
+Learn more at \linktext{RESTful API Tutorial}{https://restfulapi.net/}.
+\end{definition}
+
+\subsection{Links in Examples}
+
+\begin{example}
+To clone a repository from GitHub:
+
+\begin{codeblock}
+git clone https://github.com/username/repo.git
+\end{codeblock}
+
+See the \linktext{Git documentation}{https://git-scm.com/doc} for more commands.
+\end{example}
+
+% ================================================================
+\section{Academic and Research Links}
+
+\subsection{Citations with Links}
+
+According to \linktext{recent research}{https://www.nature.com/articles/example},
+neural networks show promising results.
+
+\importantnote{Always verify that your links are accessible and permanent.}
+
+Key research databases:
+
+\begin{enumeration}
+    \item \linktext{Google Scholar}{https://scholar.google.com/}
+    \item \linktext{IEEE Xplore}{https://ieeexplore.ieee.org/}
+    \item \linktext{ArXiv}{https://arxiv.org/}
+    \item \linktext{ResearchGate}{https://www.researchgate.net/}
+\end{enumeration}
+
+% ================================================================
+\section{Technical Resources with Links}
+
+\subsection{Programming Documentation}
+
+For different programming languages:
+
+\begin{alphalist}
+    \item \bold{Python:} Official docs at \link{https://docs.python.org/}
+    \item \bold{JavaScript:} MDN reference \linktext{here}{https://developer.mozilla.org/en-US/docs/Web/JavaScript}
+    \item \bold{Java:} Oracle documentation \linktext{available here}{https://docs.oracle.com/javase/}
+    \item \bold{C++:} Reference at \link{https://en.cppreference.com/}
+\end{alphalist}
+
+\subsection{Framework Documentation}
+
+Popular frameworks and their documentation:
+
+\begin{bulletlist}
+    \item \bold{Django:} \linktext{Official Documentation}{https://docs.djangoproject.com/}
+    \item \bold{React:} \linktext{React Docs}{https://react.dev/}
+    \item \bold{Spring Boot:} \linktext{Spring Guides}{https://spring.io/guides}
+    \item \bold{Flask:} \linktext{Flask Documentation}{https://flask.palletsprojects.com/}
+\end{bulletlist}
+
+% ================================================================
+\section{Combining Links with Other Commands}
+
+\subsection{Links with Important Notes}
+
+\importantnote{Before installing any package, always check the official repository
+at \linktext{PyPI}{https://pypi.org/} or \linktext{npm}{https://www.npmjs.com/}
+to verify it's legitimate and actively maintained.}
+
+\subsection{Links with Observations}
+
+\observation{The \term{GitHub API} provides extensive functionality.
+Explore the \linktext{API documentation}{https://docs.github.com/en/rest}
+to learn about available endpoints.}
+
+\subsection{Links in Warnings}
+
+\begin{warning}
+Do not download packages from untrusted sources. Always use official repositories:
+\begin{bulletlist}
+    \item Python: \link{https://pypi.org/}
+    \item Node.js: \link{https://www.npmjs.com/}
+    \item Ruby: \link{https://rubygems.org/}
+\end{bulletlist}
+\end{warning}
+
+% ================================================================
+\section{Best Practices for Using Links}
+
+\begin{enumeration}
+    \item Use \code{\textbackslash link\{\}} when the URL itself is informative
+    \begin{example}
+    Project repository: \link{https://github.com/user/project-name}
+    \end{example}
+
+    \item Use \code{\textbackslash linktext\{\}\{\}} for cleaner, more readable text
+    \begin{example}
+    Read the \linktext{complete guide}{https://example.com/very/long/url/here}
+    instead of showing a long URL.
+    \end{example}
+
+    \item Keep link text descriptive and meaningful
+    \begin{bulletlist}
+        \item \textcolor{green}{Good:} \linktext{Django REST framework tutorial}{https://www.django-rest-framework.org/tutorial/}
+        \item \textcolor{red}{Bad:} \linktext{click here}{https://www.django-rest-framework.org/tutorial/}
+    \end{bulletlist}
+
+    \item Test all links before finalizing your document
+
+    \item Consider using permanent URLs (DOIs) for academic papers
+    \begin{example}
+    \linktext{Paper title}{https://doi.org/10.1234/example}
+    \end{example}
+\end{enumeration}
+
+% ================================================================
+\section{Quick Reference}
+
+\subsection{Syntax}
+
+\begin{codeblock}
+% Visible URL link
+\textbackslash link\{https://www.example.com/\}
+
+% Custom text link
+\textbackslash linktext\{descriptive text\}\{https://www.example.com/\}
+\end{codeblock}
+
+\subsection{Common Use Cases}
+
+\begin{bulletlist}
+    \item Repository links: \link{https://github.com/username/repo}
+    \item Documentation: \linktext{Read the docs}{https://readthedocs.org/}
+    \item Video tutorials: \linktext{YouTube channel}{https://www.youtube.com/channel/example}
+    \item Academic papers: \linktext{DOI link}{https://doi.org/10.1234/example}
+    \item API references: \linktext{API docs}{https://api.example.com/docs}
+\end{bulletlist}
+
+\end{document}

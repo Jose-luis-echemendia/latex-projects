@@ -5,9 +5,9 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Sánchez(2021)]{sanchez2021}
-Juan Sánchez.
-\newblock \emph{Introducción a la Gestión de Proyectos}.
-\newblock Editorial UCI, La Habana, Cuba, 2021.
+\bibitem[{UNESCO}(2022)]{unesco2022}
+{UNESCO}.
+\newblock \emph{Reimagining our futures together: A new social contract for education}.
+\newblock UNESCO, 2022.
 
 \end{thebibliography}

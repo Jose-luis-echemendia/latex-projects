@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  27 OCT 2025 12:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  23 NOV 2025 18:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/jose/Escritorio/latex-projects/PID/main.tex
-(/home/jose/Escritorio/latex-projects/PID/main.tex
+**/home/jose/Escritorio/latex-projects/PID_V/main.tex
+(/home/jose/Escritorio/latex-projects/PID_V/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (./template_pid.cls
@@ -407,9 +407,47 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip101
+\enit@outerparindent=\dimen191
+\enit@toks=\toks29
+\enit@inbox=\box57
+\enit@count@id=\count304
+\enitdp@description=\count305
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+) (/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip102
+\RaggedLeftLeftskip=\skip103
+\RaggedRightLeftskip=\skip104
+\CenteringRightskip=\skip105
+\RaggedLeftRightskip=\skip106
+\RaggedRightRightskip=\skip107
+\CenteringParfillskip=\skip108
+\RaggedLeftParfillskip=\skip109
+\RaggedRightParfillskip=\skip110
+\JustifyingParfillskip=\skip111
+\CenteringParindent=\skip112
+\RaggedLeftParindent=\skip113
+\RaggedRightParindent=\skip114
+\JustifyingParindent=\skip115
+) (/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
+Package: acronym 2020/04/17 v1.47 Support for acronyms (Tobias Oetiker)
+ (/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+\AC@clearlist=\toks30
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
    defining Unicode char U+2248 (decimal 8776)
-\c@epigrafe=\count304
+\c@epigraph=\count306
+)
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 3.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (./main.aux)
 \openout1 = `main.aux'.
 
@@ -433,17 +471,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count305
-\scratchdimen=\dimen191
-\scratchbox=\box57
-\nofMPsegments=\count306
-\nofMParguments=\count307
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count308
-\MPscratchDim=\dimen192
-\MPnumerator=\count309
-\makeMPintoPDFobject=\count310
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count307
+\scratchdimen=\dimen192
+\scratchbox=\box58
+\nofMPsegments=\count308
+\nofMParguments=\count309
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count310
+\MPscratchDim=\dimen193
+\MPnumerator=\count311
+\makeMPintoPDFobject=\count312
+\everyMPtoPDFconversion=\toks32
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -464,14 +502,14 @@ Package hyperref Info: Link coloring OFF on input line 3.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(85.35826pt, 441.01773pt, 71.13188pt)
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
 * v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=441.01773pt
+* \textwidth=455.24411pt
 * \textheight=702.78308pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
 * \topmargin=-38.1381pt
 * \headheight=15.0pt
 * \headsep=25.0pt
@@ -497,17 +535,30 @@ Package caption Info: End \AtBeginDocument code.
 File: img/uci_logo.png Graphic file (type png)
 <use img/uci_logo.png>
 Package pdftex.def Info: img/uci_logo.png  used on input line 10.
-(pdftex.def)             Requested size: 154.35889pt x 53.68774pt.
+(pdftex.def)             Requested size: 159.33821pt x 55.41978pt.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 10.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 10.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/uci_logo.png>]) (./datos_contacto.tex [1
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./img/uci_logo.png>]) (./summary.tex
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 34.
+
+Overfull \hbox (1.67703pt too wide) in paragraph at lines 34--34
+\T1/phv/b/n/14.4 Palabras claves: \T1/phv/m/n/14.4 Mod-e-los Car-ac-terís-ti-cos, Líneas de Pro-duc-tos de Soft-
+ []
+
+[1
 
 
-]) (./resumen.tex [2
-
-
-
-] [3
+]
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 34.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 34.
+ [2
 
 ]) (./main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
@@ -521,72 +572,69 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [4
+ [3
 
 
 ] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
- [5
+ [4
 
 ] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- (./opinion_tutores.tex [6
+ [5
 
-] [7
+] (./introduction.tex
+Package acronym Info: Label `acro:SPL' newly defined as it shall be overridden
+although it is yet undefined on input line 9.
 
-
-]) (./introduccion.tex) (./desarrollo.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            *{Desarrollo} [1
+l.29 L
+      a proliferaciÃ³n de modalidades educativas (presenciales, hÃ­bridas, e... [1
 
 
 
-
-]
+]) (./development.tex [2]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 8.
 
-(./epigrafes/epigrafe1.tex) (./epigrafes/epigrafe2.tex) (./epigrafes/epigrafe3.tex) (./epigrafes/epigrafe4.tex) (./epigrafes/epigrafe5.tex [2
+(./epigraphs/epigraph1.tex) (./epigraphs/epigraph2.tex) (./epigraphs/epigraph3.tex) (./epigraphs/epigraph4.tex [3
 
-]) (./epigrafes/epigrafe6.tex) (./epigrafes/epigrafe7.tex) (./epigrafes/epigrafe8.tex)) (./conclusiones.tex [3]) (./recomendaciones.tex [4
-
-
-] [5
-
-
-]) (./anexos.tex [6
-
-
-
-]) (./referencias_bibliograficas.tex
-Overfull \hbox (8.77396pt too wide) in paragraph at lines 55--55
-\T1/cmr/m/it/14.4 aulafacil.com\T1/cmr/m/n/14.4 , \T1/cmr/m/it/14.4 mono-grafias.com\T1/cmr/m/n/14.4 , sitios web no ar-bi-tra-dos o no in-sti-tu-cionales,
- []
-
-[7
-
-
-
-]
-Overfull \hbox (33.9482pt too wide) in paragraph at lines 55--55
-\T1/cmr/m/n/14.4 Re-cu-per-a-do de http://www.msnbc.msn.com/id/39625809/ns/world_news-
+]) (./epigraphs/epigraph5.tex) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex
+Overfull \hbox (2.84317pt too wide) in paragraph at lines 3--3
+\T1/phv/m/n/14.4 de la In-ge-niería de Req-ui-si-tos de-sar-rol-la-da de-sagrea-do en: Iden-ti-fi-cación
  []
 
 
-Overfull \hbox (82.76125pt too wide) in paragraph at lines 55--55
-\T1/cmr/m/n/14.4 nidad de Madrid (\T1/cmr/m/it/14.4 Tesis doc-tor-al\T1/cmr/m/n/14.4 ). Re-cu-per-a-do de http://hdl.handle.net/10486/4872 
+Overfull \hbox (2.42604pt too wide) in paragraph at lines 3--3
+\T1/phv/m/n/14.4 cación de las fun-cional-i-dades clave de la apli-cación (his-to-rias de usuario)
  []
 
-[8] [9]) (./referencias.tex (./main.bbl)) [10
+) (./epigraphs/epigraph8.tex [4])
+Overfull \hbox (3.1518pt too wide) in paragraph at lines 3--19
+[]\T1/phv/m/n/14.4 <En sen-ti-do gen-er-al este epí-grafe pre-sen-ta el dis-eño de los mecan-
+ []
 
+) (./conclusions.tex [5]) (./recommendations.tex [6
+
+
+] [7
+
+
+]) (./annexes.tex [8
+
+
+
+]) (./acronyms.tex) (./bibliographic_references.tex [9
+
+
+] (./main.bbl)) [10
 
 
 ] (./main.aux)
@@ -595,21 +643,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 359A54687C328C5A0E25114F201C2AF7;2447.
+(rerunfilecheck)             Checksum: 8CBF8EA5A7198898F8B68986F4101FBE;2363.
  ) 
 Here is how much of TeX's memory you used:
- 15124 strings out of 476182
- 237348 string characters out of 5795594
- 1930975 words of memory out of 5000000
- 36804 multiletter control sequences out of 15000+600000
- 571301 words of font info for 66 fonts, out of 8000000 for 9000
+ 15920 strings out of 476182
+ 250421 string characters out of 5795594
+ 1929975 words of memory out of 5000000
+ 37588 multiletter control sequences out of 15000+600000
+ 596502 words of font info for 73 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,11n,93p,719b,577s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1440.600pk> </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1440.600pk> </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi2488.600pk> </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk>
-Output written on main.pdf (18 pages, 165947 bytes).
+ 90i,12n,93p,720b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (16 pages, 73368 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
+ 217 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
+ 55 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

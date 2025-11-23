@@ -1,4 +1,4 @@
-% ibra :]
+% Jose :]
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{uci_proyecto}[2025/10/09 Clase para informes técnicos UCI]
 
@@ -26,12 +26,28 @@
 \usepackage{etoolbox}
 \usepackage{xstring}
 \usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{helvet}  % Fuente Arial (Helvetica es el equivalente)
+\usepackage{ragged2e} % Para justificación mejorada
+\usepackage[printonlyused]{acronym}  % Para gestión de acrónimos
+\usepackage{indentfirst}  % Sangría en el primer párrafo después de títulos
 
 % ----------------------------------------------------------
-% 📄 Márgenes y formato general
+% 📄 Márgenes y formato global
 % ----------------------------------------------------------
-\geometry{top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+
+% Configurar Arial como fuente principal
+\renewcommand{\familydefault}{\sfdefault}
+
+% Interlineado de 1.5
 \onehalfspacing
+
+% Justificación de texto (por defecto en LaTeX, pero lo especificamos)
+\justifying
+
+% Sangría al inicio de cada párrafo (1.27 cm = 0.5 pulgadas, estándar académico)
+\setlength{\parindent}{1.27cm}
 
 \DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
 \setlength{\headheight}{15pt}
@@ -64,6 +80,11 @@
 \titleformat{\chapter}{\bfseries\huge}{\thechapter.}{1em}{}
 \titleformat{\section}{\bfseries\Large}{\thesection.}{1em}{}
 \titleformat{\subsection}{\bfseries\large}{\thesubsection.}{1em}{}
+
+% Espaciado de títulos
+\titlespacing*{\chapter}{0pt}{30pt}{30pt}      % Capítulos
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}  % Secciones
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}  % Subsecciones
 
 \renewcommand{\contentsname}{Tabla de Contenidos}
 \renewcommand{\listtablename}{Índice de Tablas}
@@ -112,9 +133,9 @@
   }
 
   % TÍTULO
-  {\Large \textbf{#1}}\\[1.5cm]
-  {\huge \textbf{#2}}\\[1.5cm]
-  \textit{Informe Técnico de la asignatura de Proyecto de Investigación y Desarrollo}\\[2cm]
+  {\Large \textbf{#1}}\\[2cm]
+  {\huge \textbf{#2}}\\[2cm]
+  \textit{Informe Técnico de la asignatura de Proyecto de Investigación y development V}\\[2cm]
 
   % AUTORES Y TUTORES
   \begin{flushleft}
@@ -126,8 +147,8 @@
   \end{flushleft}
 
   \vfill
-  {\large La Habana, #8 de #9}\\[0.2cm]
-  \textit{“Año de la Revolución”}
+  {\large \textbf{La Habana, #8 de #9}}\\[0.2cm]
+  \textit{\textbf{“Año 67 de la Revolución”}}
   \end{titlepage}
 }
 
@@ -207,14 +228,17 @@
   % ----- Resumen -----
   \chapter*{Resumen}              % título del resumen
   \markboth{Resumen}{}            % actualiza la cabecera
-
-  {\large #1}                     % contenido del resumen en español
+  
+  \onehalfspacing                 % asegura interlineado 1.5
+  \large                          % tamaño de fuente
+  #1                              % contenido del resumen en español
 
   % ----- Abstract -----
   \chapter*{\textit{Abstract}}    % título en cursiva (igual formato que Resumen)
   \markboth{Abstract}{}            % actualiza la cabecera
 
-  {\large \textit{#2}}            % contenido en cursiva
+  \onehalfspacing                 % asegura interlineado 1.5
+  \large \textit{#2}              % contenido en cursiva
 
   \cleardoublepage                 % asegura que la siguiente sección comience en nueva página
 }
@@ -234,7 +258,9 @@
   \chapter*{Datos de Contacto}    % título
   \markboth{Datos de Contacto}{}  % actualiza la cabecera
 
-  {\large #1}                     % contenido del resumen en español
+  \onehalfspacing                 % asegura interlineado 1.5
+  \large                          % tamaño de fuente
+  #1                              % contenido
 
   \cleardoublepage                 % asegura que la siguiente sección comience en nueva página
 }
@@ -252,7 +278,9 @@
   \chapter*{Recomendaciones}      % título sin numerar
   \thispagestyle{plain}           % pie centrado, sin cabecera
 
-  {\large #1}                     % contenido de la sección
+  \onehalfspacing                 % asegura interlineado 1.5
+  \large                          % tamaño de fuente
+  #1                              % contenido de la sección
 
   \cleardoublepage                % deja lista la siguiente sección
 }
@@ -269,7 +297,9 @@
   \chapter*{Anexos}
   \thispagestyle{plain}
 
-  {\large #1}
+  \onehalfspacing                 % asegura interlineado 1.5
+  \large                          % tamaño de fuente
+  #1
 
   \cleardoublepage
 }
@@ -287,7 +317,9 @@
   \chapter*{Opinión de los Tutores}    % título
   \markboth{Opinión de los Tutores}{}  % actualiza la cabecera
 
-  {\large #1}                     % contenido del resumen en español
+  \onehalfspacing                 % asegura interlineado 1.5
+  \large                          % tamaño de fuente
+  #1                              % contenido
 
   \cleardoublepage                 % asegura que la siguiente sección comience en nueva página
 }
@@ -295,7 +327,7 @@
 
 
 % ----------------------------------------------------------
-% 📌 Comando para la estructura del capítulo de desarrollo
+% 📌 Comando para la estructura del capítulo de development
 % ----------------------------------------------------------
 
 % --- Introducción del capítulo (no numerada pero en el índice) ---
@@ -309,13 +341,13 @@
 }
 
 % --- Epígrafes numerados en romano (también en el índice) ---
-\newcounter{epigrafe}[chapter]
-\renewcommand{\theepigrafe}{\Roman{epigrafe}}
+\newcounter{epigraph}[chapter]
+\renewcommand{\theepigraph}{\Roman{epigraph}}
 
-\newcommand{\Epigrafe}[2]{%
-  \refstepcounter{epigrafe}
-  \section*{\theepigrafe. #1}%
-  \addcontentsline{toc}{section}{\theepigrafe. #1}%
+\newcommand{\epigraph}[2]{%
+  \refstepcounter{epigraph}
+  \section*{\theepigraph. #1}%
+  \addcontentsline{toc}{section}{\theepigraph. #1}%
   \phantomsection
   \label{epi:#1}%
   #2
@@ -335,7 +367,9 @@
   \chapter*{Referencias bibliográficas}
   \thispagestyle{plain}
 
-  {\large #1}
+  \onehalfspacing                 % asegura interlineado 1.5
+  \large                          % tamaño de fuente
+  #1
 
   \cleardoublepage
 }
@@ -375,3 +409,133 @@
   \bibliography{referencias}   % tu archivo .bib
   \cleardoublepage
 }
+
+
+% ----------------------------------------------------------
+% ✨ CUSTOM COMMANDS FOR TEXT FORMATTING
+% ----------------------------------------------------------
+
+% --- Commands to highlight important terms ---
+\newcommand{\term}[1]{\textbf{\textit{#1}}}
+\newcommand{\concept}[1]{\textcolor{blue}{\textbf{#1}}}
+
+% --- Commands for inline code ---
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\var}[1]{\texttt{\textit{#1}}}
+
+% --- Commands for notes ---
+\newcommand{\note}[1]{\marginpar{\small\textcolor{red}{#1}}}
+\newcommand{\importantnote}[1]{%
+  \begin{quote}
+    \textcolor{orange}{\textbf{Note:} #1}
+  \end{quote}
+}
+
+% --- Command to highlight observations ---
+\newcommand{\observation}[1]{%
+  \begin{quote}
+    \textcolor{teal}{\textbf{Observation:} \textit{#1}}
+  \end{quote}
+}
+
+% --- Commands for links and URLs ---
+% Link with visible URL: \link{https://www.youtube.com/}
+\newcommand{\link}[1]{\href{#1}{\textcolor{blue}{\underline{#1}}}}
+
+% Link with custom text: \linktext{youtube}{https://www.youtube.com/}
+\newcommand{\linktext}[2]{\href{#2}{\textcolor{blue}{\underline{#1}}}}
+
+
+% ----------------------------------------------------------
+% 📦 CUSTOM ENVIRONMENTS
+% ----------------------------------------------------------
+
+% --- Environment for examples ---
+\newenvironment{example}{%
+  \par\vspace{0.3cm}
+  \noindent\textcolor{blue}{\textbf{Example:}}
+  \begin{quote}
+}{%
+  \end{quote}
+  \vspace{0.3cm}
+}
+
+% --- Environment for definitions ---
+\newenvironment{definition}[1]{%
+  \par\vspace{0.3cm}
+  \noindent\textcolor{purple}{\textbf{Definition (#1):}}
+  \begin{quote}\itshape
+}{%
+  \end{quote}
+  \vspace{0.3cm}
+}
+
+% --- Environment for code blocks ---
+\newenvironment{codeblock}{%
+  \par\vspace{0.3cm}
+  \noindent\textbf{Code:}
+  \begin{quote}\ttfamily\small
+}{%
+  \end{quote}
+  \vspace{0.3cm}
+}
+
+% --- Environment for warnings ---
+\newenvironment{warning}{%
+  \par\vspace{0.3cm}
+  \noindent\textcolor{red}{\textbf{⚠ Warning:}}
+  \begin{quote}
+}{%
+  \end{quote}
+  \vspace{0.3cm}
+}
+
+
+% ----------------------------------------------------------
+% 📋 CUSTOM LISTS
+% ----------------------------------------------------------
+
+% --- Enumeration with numbers ---
+\newenvironment{enumeration}{%
+  \begin{enumerate}
+}{%
+  \end{enumerate}
+}
+
+% --- List with bullet points ---
+\newenvironment{bulletlist}{%
+  \begin{itemize}
+}{%
+  \end{itemize}
+}
+
+% --- List with letters (a, b, c...) ---
+\newenvironment{alphalist}{%
+  \begin{enumerate}[label=\alph*)]
+}{%
+  \end{enumerate}
+}
+
+% --- List with roman numerals (I, II, III...) ---
+\newenvironment{romanlist}{%
+  \begin{enumerate}[label=\Roman*.]
+}{%
+  \end{enumerate}
+}
+
+
+% ----------------------------------------------------------
+% 🎯 COMMANDS FOR SPECIAL CONTENT HIGHLIGHTING
+% ----------------------------------------------------------
+
+% --- Highlight important text ---
+\newcommand{\important}[1]{\textcolor{red}{\textbf{#1}}}
+
+% --- Text in custom color ---
+\newcommand{\colortext}[2]{\textcolor{#1}{#2}}
+
+% --- Improved cross-references ---
+\newcommand{\refsec}[1]{section~\ref{#1}}
+\newcommand{\reffig}[1]{figure~\ref{#1}}
+\newcommand{\reftab}[1]{table~\ref{#1}}
+\newcommand{\refepi}[1]{epigraph~\ref{#1}}
