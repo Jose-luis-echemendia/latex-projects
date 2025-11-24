@@ -31,7 +31,7 @@ gestión curricular flexible y adaptable, esto implica revisar y actualizar cons
 planes de estudio para integrar nuevas metodologías, tecnologías y recursos educativos.
 Igualmente, la gestión curricular efectiva es fundamental para garantizar que los cambios e
 innovaciones en el ámbito educativo se implementen de manera coherente y sistemática. La
-integración de las TIC (Tecnologías de la Información y Comunicación) en el aula permite
+integración de las \ac{TIC} en el aula permite
 ampliar el acceso a la información, fomentar la colaboración entre estudiantes, personalizar
 el aprendizaje y desarrollar habilidades digitales clave, de la misma manera, la gestión
 curricular puede incluir la planificación y el uso estratégico de la tecnología en los
@@ -59,15 +59,15 @@ en la toma de decisiones y generar propuestas educativas que contribuyan al desa
 La búsqueda de esta flexibilidad ha llevado a la exploración de paradigmas de ingeniería de software aplicados
 al ámbito educativo. El concepto de \ac{SPL}
 ofrece un enfoque estructurado y probado para gestionar familias de productos
-a partir de un conjunto común de activos(Apel et al., 2013). Cuando este
+a partir de un conjunto común de activos \citep{apel2013feature}. Cuando este
 paradigma se aplica al dominio educativo, surge el concepto de "Líneas de
 Productos Educativos", donde un tronco curricular común puede derivar en
 múltiples planes de estudio especializados mediante la gestión explícita de su
 variabilidad. La investigación en este campo es incipiente pero prometedora;
-por ejemplo, estudios en el ecosistema de software educativo SOLAR han
+por ejemplo, estudios en el ecosistema de software educativo \textit{SOLAR} han
 demostrado que la modelación de la variabilidad, incluso en componentes
 dinámicos como los foros de discusión, es fundamental para crear sistemas
-adaptativos que respondan a contextos educativos diversos (Guzmán-Luján etal., 2022).
+adaptativos que respondan a contextos educativos diversos \citep{guzman2022variabilidad}.
 
 Actualmente, la definición y el mantenimiento de la variabilidad curricular se gestionan 
 principalmente mediante documentos estáticos, hojas de cálculo y procesos manuales, un enfoque que resulta 
@@ -83,12 +83,12 @@ En conjunto, estos efectos negativos evidencian que los métodos tradicionales b
 manual ya no son sostenibles, pues ponen en riesgo la calidad, pertinencia y eficiencia del modelo formativo.
 
 La proliferación de modalidades educativas (presenciales, híbridas, en línea,
-MOOCs, micro-learning) y enfoques pedagógicos (aprendizaje basado en
-proyectos, flipped classroom, gamificación) ha creado un panorama de extrema
-variabilidad instruccional (Bates, 2019). Actualmente, esta complejidad se
-gestiona predominantemente mediante soluciones ad-hoc que resultan en
-implementaciones rígidas y de alto costo de mantenimiento (Sánchez et al.,
-2020).La educación se enfrenta a la difícil actividad de crear experiencias de
+\ac{MOOC}, \textit{micro-learning}) y enfoques pedagógicos (aprendizaje basado en
+proyectos, \textit{flipped classroom}, gamificación) ha creado un panorama de extrema
+variabilidad instruccional \citep{bates2019teaching}. Actualmente, esta complejidad se
+gestiona predominantemente mediante soluciones \textit{ad-hoc} que resultan en
+implementaciones rígidas y de alto costo de mantenimiento \citep{sanchez2020metodologia}.
+La educación se enfrenta a la difícil actividad de crear experiencias de
 aprendizaje verdaderamente personalizadas para cada estudiante o contexto
 institucional sin un esfuerzo manual enorme. Además, cada nuevo curso o
 recurso educativo se desarrolla casi desde cero, sin reutilizar componentes
@@ -96,12 +96,10 @@ comunes de manera sistemática.
 
 De este análisis, se desprende la siguiente interrogante que define el
 \textbf{problema de investigación:}
-¿Cómo implementar un servicio backend que proporcione la funcionalidad completa
-para la gestión, validación y configuración de Modelos de
-Características en el contexto de Líneas de Productos Educativos?
+¿Cómo implementar un servicio \textit{backend} que proporcione la funcionalidad completa
+para la gestión, validación y configuración de \ac{FM} en el contexto de Líneas de Productos Educativos?
 Tomando como \textbf{objeto de estudio:} 
-Ingeniería de Líneas de Productos de Software (Software
-Product Line Engineering - SPLE) aplicada al dominio educativo.
+\ac{SPLE} aplicada al dominio educativo.
 Enmarcado en el \textbf{campo de acción:}
 servicios \textit{backend} especializados para la gestión de la variabilidad en Líneas de Productos Educativos.
 Con el fin de solucionar la problemática planteada, se define como \textbf{objetivo general:}
@@ -111,19 +109,19 @@ en Líneas de Productos Educativos.
 Para dar cumplimiento al objetivo planteado se proponen las siguientes \textbf{tareas investigativas:}
 \begin{enumerate}
     \item \textbf{Estudio} exhaustivo del estado del arte en Ingeniería de
-    Líneas de Productos de Software, Modelos de Características y su
+    Líneas de Productos de Software, \ac{FM} y su
     aplicación al dominio educativo.
     \item \textbf{Análisis} de diferentes soluciones homólogas para la identificación de características
     generales y tendencias en este tipo de aplicaciones.
     \item \textbf{Diseño} de la arquitectura del servicio \textit{backend}, definiendo los
     componentes principales  y el modelo de datos para
-    representar Modelos de Características en el contexto educativo.
+    representar \ac{FM} en el contexto educativo.
     \item \textbf{Selección} de las herramientas, tecnologías y metodología a emplear, para garantizar
     una excelente y eficiente experiencia de desarrollo y alineado con los objetivos del proyecto.
     \item \textbf{Identificación} de los requisitos funcionales y no funcionales necesarios para un
     sistema capaz de gestionar la variabilidad de Líneas de Productos Educativos.
     \item \textbf{Implementación} del servicio \textit{backend} para materializar el sistema que dará respuesta
-    a la problemática planteada, asegurando la creación, análisis, validación y configuración de Modelos de Características.
+    a la problemática planteada, asegurando la creación, análisis, validación y configuración de \ac{FM}.
     \item \textbf{Validación} del servicio desarrollado mediante casos de uso representativos
     en el ámbito educativo, evaluando su funcionalidad, rendimiento, utilidad y 
     efectividad para capturar la variabilidad en la educación.
@@ -140,17 +138,17 @@ siguientes \textbf{métodos científicos:}
             \item \textbf{Modelación:} se utilizó para la elaboración de los diagramas del lenguaje de
             modelado y en la representación de las características de la solución.
             \item \textbf{Histórico-Lógico:} Se empleó para comprender la evolución de las técnicas de
-            gestión de variabilidad en SPL, desde sus orígenes en ingeniería de software
+            gestión de variabilidad en \ac{SPL}, desde sus orígenes en ingeniería de software
             hasta su aplicación potencial en dominios educativos, analizando su desarrollo
             histórico y lógica interna.
             \item \textbf{Analítico-sintético:} Utilizado en el examen crítico de la bibliografía
-            especializada sobre SPL, Feature Models y sistemas educativos, permitiendo
+            especializada sobre \ac{SPL}, \ac{FM} y sistemas educativos, permitiendo
             sintetizar un marco conceptual adaptado al dominio educativo.
         \end{itemize}
     \item \textbf{Métodos empíricos:}
         \begin{itemize}
             \item \textbf{Observación:} Mediante este método se analizaron herramientas
-            existentes de gestión SPL (como pure::variants, FeatureIDE) para
+            existentes de gestión \ac{SPL} (como \textit{pure::variants}, \textit{FeatureIDE}) para
             identificar limitaciones técnicas y requisitos necesarios para el contexto
             educativo específico.
             \item \textbf{Entrevista:} Se entrevista especialistas responsables de diseños

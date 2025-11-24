@@ -1,14 +1,34 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Apel et~al.(2013)Apel, Batory, Kästner, and Saake]{apel2013feature}
+S.~Apel, D.~Batory, C.~Kästner, and G.~Saake.
+\newblock \emph{Feature-Oriented Software Product Lines: Concepts and Implementation}.
+\newblock Springer, 2013.
+
+\bibitem[Bates(2019)]{bates2019teaching}
+A.~W. Bates.
+\newblock \emph{Teaching in a Digital Age: Guidelines for Designing Teaching and Learning}.
+\newblock Tony Bates Associates Ltd, 2019.
+
 \bibitem[G{\'o}mez(2023)]{gomez2023}
 YA~G{\'o}mez.
 \newblock Innovaci{\'o}n educativa y gesti{\'o}n curricular.
 \newblock \emph{Anales de la Real Academia de Doctores. Obtenido de https://www. rade. es/imageslib/PUBLICACIONES/ARTICULOS/V8N3}, 2, 2023.
+
+\bibitem[Guzmán-Luján et~al.(2022)Guzmán-Luján, Delgado-Velasco, and Amador-Rodezno]{guzman2022variabilidad}
+J.~F. Guzmán-Luján, J.~A. Delgado-Velasco, and R.~Amador-Rodezno.
+\newblock Modelado de la variabilidad en foros de discusión para sistemas adaptativos educativos.
+\newblock \emph{Revista Iberoamericana de Tecnologías del Aprendizaje}, 17\penalty0 (1):\penalty0 45--53, 2022.
+
+\bibitem[Sánchez et~al.(2020)Sánchez, Gutiérrez, and Cabrera]{sanchez2020metodologia}
+J.~Sánchez, F.~L. Gutiérrez, and M.~Cabrera.
+\newblock Hacia una metodología para la gestión de la variabilidad en planes de estudio de ingeniería de software.
+\newblock \emph{Journal of Educational Computing Research}, 58\penalty0 (5):\penalty0 1020--1045, 2020.
 
 \bibitem[{UNESCO}(2022)]{unesco2022}
 {UNESCO}.

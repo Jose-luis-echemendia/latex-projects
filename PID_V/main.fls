@@ -277,12 +277,12 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8c.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr8c.vf
 INPUT ./development.tex
 INPUT ./development.tex
 INPUT ./development.tex
 INPUT ./development.tex
 INPUT development.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr8c.vf
 INPUT ./epigraphs/epigraph1.tex
 INPUT ./epigraphs/epigraph1.tex
 INPUT ./epigraphs/epigraph1.tex
@@ -343,6 +343,11 @@ INPUT ./acronyms.tex
 INPUT ./acronyms.tex
 INPUT ./acronyms.tex
 INPUT acronyms.tex
+INPUT ./glossary.tex
+INPUT ./glossary.tex
+INPUT ./glossary.tex
+INPUT ./glossary.tex
+INPUT glossary.tex
 INPUT ./bibliographic_references.tex
 INPUT ./bibliographic_references.tex
 INPUT ./bibliographic_references.tex

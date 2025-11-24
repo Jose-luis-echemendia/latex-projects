@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  23 NOV 2025 21:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  23 NOV 2025 22:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -531,7 +531,7 @@ Package hyperref Info: Link coloring OFF on input line 3.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 (./portada.tex
-<img/uci_logo.png, id=64, 554.07pt x 192.72pt>
+<img/uci_logo.png, id=68, 554.07pt x 192.72pt>
 File: img/uci_logo.png Graphic file (type png)
 <use img/uci_logo.png>
 Package pdftex.def Info: img/uci_logo.png  used on input line 13.
@@ -648,6 +648,9 @@ l.27
 
 
 ]
+Package acronym Info: Label `acro:TIC' newly defined as it shall be overridden
+although it is yet undefined on input line 34.
+
 Overfull \hbox (5.55672pt too wide) in paragraph at lines 28--39
 []\T1/phv/m/n/14.4 La in-no-vación ed-uca-ti-va y la gestión cur-ric-u-lar es-tán es-trechamente
  []
@@ -671,6 +674,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [3]
+Package acronym Info: Label `acro:MOOC' newly defined as it shall be overridden
+although it is yet undefined on input line 86.
+Package acronym Info: Label `acro:FM' newly defined as it shall be overridden
+although it is yet undefined on input line 100.
+Package acronym Info: Label `acro:SPLE' newly defined as it shall be overridden
+although it is yet undefined on input line 102.
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -687,10 +697,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [5]
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 138.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 136.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-)
+)) (./development.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -698,15 +708,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[6]) (./development.tex
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[7]
+[6]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 8.
@@ -719,7 +721,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[8
+[7
 
 ]) (./epigraphs/epigraph5.tex) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex
 Overfull \hbox (2.84317pt too wide) in paragraph at lines 3--3
@@ -739,7 +741,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[9])
+[8])
 Overfull \hbox (3.1518pt too wide) in paragraph at lines 3--19
 []\T1/phv/m/n/14.4 <En sen-ti-do gen-er-al este epí-grafe pre-sen-ta el dis-eño de los mecan-
  []
@@ -752,7 +754,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[10]) (./recommendations.tex
+[9]) (./recommendations.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -760,7 +762,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[11
+[10
 
 
 ]
@@ -771,7 +773,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[12
+[11
 
 
 ]) (./annexes.tex
@@ -782,11 +784,26 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
+[12
+
+
+
+]) (./acronyms.tex) (./glossary.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 17.8423pt, for example:
+(fancyhdr)                \setlength{\headheight}{17.8423pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
+
 [13
 
 
+]
 
-]) (./acronyms.tex) (./bibliographic_references.tex
+Package enumitem Warning: Negative labelwidth. This does not make much
+(enumitem)                sense, on input line 5.
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 17.8423pt, for example:
@@ -796,9 +813,16 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [14
 
+]) (./bibliographic_references.tex
 
-] (./main.bbl
-Underfull \hbox (badness 1281) in paragraph at lines 9--12
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 17.8423pt, for example:
+(fancyhdr)                \setlength{\headheight}{17.8423pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
+
+[15] (./main.bbl
+Underfull \hbox (badness 1281) in paragraph at lines 19--22
 \T1/phv/m/sl/14.4 la Re-al Academia de Doc-tores. Obtenido de https://www. rade.
  []
 
@@ -810,7 +834,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[15
+[16
 
 
 ] (./main.aux)
@@ -819,21 +843,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 65B511BF5B2360C676D220C56CB77BC8;2358.
+(rerunfilecheck)             Checksum: 9530298A74A3AD3ED1C9732BD0D6086B;2444.
  ) 
 Here is how much of TeX's memory you used:
- 15990 strings out of 476182
- 251388 string characters out of 5795594
- 1931975 words of memory out of 5000000
- 37639 multiletter control sequences out of 15000+600000
+ 16049 strings out of 476182
+ 252378 string characters out of 5795594
+ 1932975 words of memory out of 5000000
+ 37682 multiletter control sequences out of 15000+600000
  599705 words of font info for 76 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,13n,93p,720b,722s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,93p,720b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (21 pages, 86242 bytes).
+Output written on main.pdf (22 pages, 94174 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 305 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
+ 83 named destinations out of 1000 (max. 500000)
+ 134 words of extra memory for PDF output out of 10000 (max. 10000000)
 

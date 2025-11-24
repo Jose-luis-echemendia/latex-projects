@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1763953103.18684 "main.aux" "main.bbl" "main" 1763953138.39715 0
+["bibtex main"] 1763953663.55088 "main.aux" "main.bbl" "main" 1763953664.08521 0
   "./bibliographic_references.bib" 1763951719.29888 12120 860b33366f765469f00b6faaed7cd1d3 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1763953138.3151 2931 2e332ce458726c1d1b14c808bfda38fd "pdflatex"
+  "main.aux" 1763953663.99343 4291 696d5d6219262db9cf9cf1da410dee4e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1763953137.87803 "/home/jose/Escritorio/latex-projects/PID_V/main.tex" "main.pdf" "main" 1763953138.39731 0
+["pdflatex"] 1763953663.56805 "/home/jose/Escritorio/latex-projects/PID_V/main.tex" "main.pdf" "main" 1763953664.08545 0
   "/etc/texmf/web2c/texmf.cnf" 1761542323.73075 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/jose/Escritorio/latex-projects/PID_V/main.tex" 1763939293.86291 522 0543bf29f43bd190654f1f1aab347606 ""
+  "/home/jose/Escritorio/latex-projects/PID_V/main.tex" 1763953662.71072 564 9585d3249b95d7b673a9d5126fe1b6e9 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768653 4484 b828043cbd581d289d955903c1339981 ""
@@ -125,7 +125,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1761542332.27793 128028 f533b797fba58d231669ea19e894e23e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1761542359 6800785 3be1916a582eeb909b96849d0ff6c36a ""
-  "acronyms.tex" 1763952037.83161 318 142462e3859fd208507ae32a3bef691a ""
+  "acronyms.tex" 1763953460.90131 491 b7fb2a85dbeefdb2cfe408be845e303a ""
   "annexes.tex" 1760052230 381 1d9ed9ec788e6178787b7b7628fc68ad ""
   "bibliographic_references.tex" 1763939258.2295 159 50d1fdc6d709bc5c3ba646e8e272cdd6 ""
   "conclusions.tex" 1760053766 640 3c20a11d8edfbd5b98b6291e7b383ec9 ""
@@ -138,15 +138,16 @@
   "epigraphs/epigraph6.tex" 1763929844.22013 556 03bd3c675811637146044ab0d408c943 ""
   "epigraphs/epigraph7.tex" 1763929844.24528 305 3bdcdab65fb8362264a1e21e098cf030 ""
   "epigraphs/epigraph8.tex" 1763929844.5761 230 b2b554bd7d1c77f4969466c32eb1c785 ""
+  "glossary.tex" 1763953496.18646 2758 1408e5b3b2f96c1f474a43b1d633c81b ""
   "img/uci_logo.png" 1760036054 10761 c4b74bd2292b791091a187980f170204 ""
-  "introduction.tex" 1763953137.6271 13245 bcede827acdf0df6be1f53b2142fd29c ""
-  "main.aux" 1763953138.3151 2931 2e332ce458726c1d1b14c808bfda38fd "pdflatex"
-  "main.bbl" 1763953103.20301 688 51279801b43d9a05505b98b7ee01e8b6 "bibtex main"
-  "main.lof" 1763953138.3161 30 1bb04962d39b6bda471ac6c46ce13f85 "pdflatex"
-  "main.lot" 1763953138.3161 30 1bb04962d39b6bda471ac6c46ce13f85 "pdflatex"
-  "main.out" 1763953138.3161 2358 65b511bf5b2360c676d220c56cb77bc8 "pdflatex"
-  "main.tex" 1763939293.86291 522 0543bf29f43bd190654f1f1aab347606 ""
-  "main.toc" 1763953138.3161 989 42704935e5fea569f2bcfa19a6a100b6 "pdflatex"
+  "introduction.tex" 1763953627.3102 13141 e67583d3218a0e94056b7c67f6de070c ""
+  "main.aux" 1763953663.99343 4291 696d5d6219262db9cf9cf1da410dee4e "pdflatex"
+  "main.bbl" 1763953663.56444 1870 93376227cbc49fa548372b060a701336 "bibtex main"
+  "main.lof" 1763953663.99443 30 1bb04962d39b6bda471ac6c46ce13f85 "pdflatex"
+  "main.lot" 1763953663.99443 30 1bb04962d39b6bda471ac6c46ce13f85 "pdflatex"
+  "main.out" 1763953663.99443 2444 9530298a74a3ad3ed1c9732bd0d6086b "pdflatex"
+  "main.tex" 1763953662.71072 564 9585d3249b95d7b673a9d5126fe1b6e9 ""
+  "main.toc" 1763953663.99443 1039 43cab231142447a4fde12d2e150397aa "pdflatex"
   "portada.tex" 1763942916.55967 515 0109f7bffc4e16a046b89b381ff831e7 ""
   "recommendations.tex" 1760052152 482 281e5202af153b67333308ebfc8f0a8e ""
   "summary.tex" 1763939081.33269 3341 f846555f2cfbe493c958397421df2c29 ""
