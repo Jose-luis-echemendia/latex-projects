@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1763953663.55088 "main.aux" "main.bbl" "main" 1763954615.59086 0
+["bibtex main"] 1763953663.55088 "main.aux" "main.bbl" "main" 1763954716.04341 0
   "./bibliographic_references.bib" 1763951719.29888 12120 860b33366f765469f00b6faaed7cd1d3 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1763954615.51275 4291 696d5d6219262db9cf9cf1da410dee4e "pdflatex"
+  "main.aux" 1763954715.96247 4291 696d5d6219262db9cf9cf1da410dee4e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1763954615.07223 "/home/jose/Escritorio/latex-projects/PID_V/main.tex" "main.pdf" "main" 1763954615.59106 0
+["pdflatex"] 1763954715.53985 "/home/jose/Escritorio/latex-projects/PID_V/main.tex" "main.pdf" "main" 1763954716.04362 0
   "/etc/texmf/web2c/texmf.cnf" 1761542323.73075 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/jose/Escritorio/latex-projects/PID_V/main.tex" 1763953662.71072 564 9585d3249b95d7b673a9d5126fe1b6e9 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -141,16 +141,16 @@
   "glossary.tex" 1763954399.45872 2758 1408e5b3b2f96c1f474a43b1d633c81b ""
   "img/uci_logo.png" 1760036054 10761 c4b74bd2292b791091a187980f170204 ""
   "introduction.tex" 1763954400.11363 13141 e67583d3218a0e94056b7c67f6de070c ""
-  "main.aux" 1763954615.51275 4291 696d5d6219262db9cf9cf1da410dee4e "pdflatex"
+  "main.aux" 1763954715.96247 4291 696d5d6219262db9cf9cf1da410dee4e "pdflatex"
   "main.bbl" 1763953663.56444 1870 93376227cbc49fa548372b060a701336 "bibtex main"
-  "main.lof" 1763954615.51383 30 1bb04962d39b6bda471ac6c46ce13f85 "pdflatex"
-  "main.lot" 1763954615.51383 30 1bb04962d39b6bda471ac6c46ce13f85 "pdflatex"
-  "main.out" 1763954615.51275 2444 9530298a74a3ad3ed1c9732bd0d6086b "pdflatex"
+  "main.lof" 1763954715.96347 30 1bb04962d39b6bda471ac6c46ce13f85 "pdflatex"
+  "main.lot" 1763954715.96347 30 1bb04962d39b6bda471ac6c46ce13f85 "pdflatex"
+  "main.out" 1763954715.96347 2444 9530298a74a3ad3ed1c9732bd0d6086b "pdflatex"
   "main.tex" 1763953662.71072 564 9585d3249b95d7b673a9d5126fe1b6e9 ""
-  "main.toc" 1763954615.51383 1039 43cab231142447a4fde12d2e150397aa "pdflatex"
+  "main.toc" 1763954715.96347 1039 43cab231142447a4fde12d2e150397aa "pdflatex"
   "portada.tex" 1763942916.55967 515 0109f7bffc4e16a046b89b381ff831e7 ""
   "recommendations.tex" 1760052152 482 281e5202af153b67333308ebfc8f0a8e ""
-  "summary.tex" 1763954614.79875 3340 8fb495cfc132e16178511fff2d35b7c2 ""
+  "summary.tex" 1763954715.32247 3400 53967ed0bb0ffa57ae8b197099628559 ""
   "template_pid.cls" 1763946924.6563 17876 7c390aaad4a0e8fa9c9deb02f833ffdd ""
   (generated)
   "main.aux"
