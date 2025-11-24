@@ -1,9 +1,14 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{2}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[G{\'o}mez(2023)]{gomez2023}
+YA~G{\'o}mez.
+\newblock Innovaci{\'o}n educativa y gesti{\'o}n curricular.
+\newblock \emph{Anales de la Real Academia de Doctores. Obtenido de https://www. rade. es/imageslib/PUBLICACIONES/ARTICULOS/V8N3}, 2, 2023.
 
 \bibitem[{UNESCO}(2022)]{unesco2022}
 {UNESCO}.
