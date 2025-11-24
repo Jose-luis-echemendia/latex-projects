@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  23 NOV 2025 18:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  23 NOV 2025 19:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -510,11 +510,11 @@ Package hyperref Info: Link coloring OFF on input line 3.
 * \textheight=702.78308pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-38.1381pt
-* \headheight=15.0pt
-* \headsep=25.0pt
+* \topmargin=-43.59085pt
+* \headheight=14.0pt
+* \headsep=28.45274pt
 * \topskip=12.0pt
-* \footskip=30.0pt
+* \footskip=28.45274pt
 * \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
@@ -534,12 +534,12 @@ Package caption Info: End \AtBeginDocument code.
 <img/uci_logo.png, id=64, 554.07pt x 192.72pt>
 File: img/uci_logo.png Graphic file (type png)
 <use img/uci_logo.png>
-Package pdftex.def Info: img/uci_logo.png  used on input line 10.
+Package pdftex.def Info: img/uci_logo.png  used on input line 13.
 (pdftex.def)             Requested size: 159.33821pt x 55.41978pt.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 10.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 13.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 10.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 13.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./img/uci_logo.png>]) (./summary.tex
@@ -550,6 +550,13 @@ Overfull \hbox (1.67703pt too wide) in paragraph at lines 34--34
 \T1/phv/b/n/14.4 Palabras claves: \T1/phv/m/n/14.4 Mod-e-los Car-ac-terís-ti-cos, Líneas de Pro-duc-tos de Soft-
  []
 
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 17.8423pt, for example:
+(fancyhdr)                \setlength{\headheight}{17.8423pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
+
 [1
 
 
@@ -558,7 +565,15 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <24.88> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 34.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 34.
- [2
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 17.8423pt, for example:
+(fancyhdr)                \setlength{\headheight}{17.8423pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
+
+[2
 
 ]) (./main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
@@ -572,39 +587,87 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [3
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[3
 
 
 ] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
- [4
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 20.28412pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.28412pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-6.28412pt}.
+
+[4
 
 ] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [5
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 20.28412pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.28412pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-6.28412pt}.
+
+[5
 
 ] (./introduction.tex
 Package acronym Info: Label `acro:SPL' newly defined as it shall be overridden
 although it is yet undefined on input line 9.
+)
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 L
-      a proliferaciÃ³n de modalidades educativas (presenciales, hÃ­bridas, e... [1
+l.24 
+      [1
 
 
 
-]) (./development.tex [2]
+] (./development.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[2]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 8.
 
-(./epigraphs/epigraph1.tex) (./epigraphs/epigraph2.tex) (./epigraphs/epigraph3.tex) (./epigraphs/epigraph4.tex [3
+(./epigraphs/epigraph1.tex) (./epigraphs/epigraph2.tex) (./epigraphs/epigraph3.tex) (./epigraphs/epigraph4.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[3
 
 ]) (./epigraphs/epigraph5.tex) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex
 Overfull \hbox (2.84317pt too wide) in paragraph at lines 3--3
@@ -616,25 +679,81 @@ Overfull \hbox (2.42604pt too wide) in paragraph at lines 3--3
 \T1/phv/m/n/14.4 cación de las fun-cional-i-dades clave de la apli-cación (his-to-rias de usuario)
  []
 
-) (./epigraphs/epigraph8.tex [4])
+) (./epigraphs/epigraph8.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[4])
 Overfull \hbox (3.1518pt too wide) in paragraph at lines 3--19
 []\T1/phv/m/n/14.4 <En sen-ti-do gen-er-al este epí-grafe pre-sen-ta el dis-eño de los mecan-
  []
 
-) (./conclusions.tex [5]) (./recommendations.tex [6
+) (./conclusions.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[5]) (./recommendations.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[6
 
 
-] [7
+]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 17.8423pt, for example:
+(fancyhdr)                \setlength{\headheight}{17.8423pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
+
+[7
 
 
-]) (./annexes.tex [8
+]) (./annexes.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 17.8423pt, for example:
+(fancyhdr)                \setlength{\headheight}{17.8423pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
+
+[8
 
 
 
-]) (./acronyms.tex) (./bibliographic_references.tex [9
+]) (./acronyms.tex) (./bibliographic_references.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 17.8423pt, for example:
+(fancyhdr)                \setlength{\headheight}{17.8423pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
+
+[9
 
 
-] (./main.bbl)) [10
+] (./main.bbl))
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[10
 
 
 ] (./main.aux)
@@ -643,18 +762,18 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8CBF8EA5A7198898F8B68986F4101FBE;2363.
+(rerunfilecheck)             Checksum: 65B511BF5B2360C676D220C56CB77BC8;2358.
  ) 
 Here is how much of TeX's memory you used:
- 15920 strings out of 476182
- 250421 string characters out of 5795594
- 1929975 words of memory out of 5000000
- 37588 multiletter control sequences out of 15000+600000
- 596502 words of font info for 73 fonts, out of 8000000 for 9000
+ 15928 strings out of 476182
+ 250532 string characters out of 5795594
+ 1931975 words of memory out of 5000000
+ 37595 multiletter control sequences out of 15000+600000
+ 599392 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,12n,93p,720b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,93p,720b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (16 pages, 73368 bytes).
+Output written on main.pdf (16 pages, 74630 bytes).
 PDF statistics:
  217 PDF objects out of 1000 (max. 8388607)
  187 compressed objects within 2 object streams

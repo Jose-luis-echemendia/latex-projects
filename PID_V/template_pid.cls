@@ -35,7 +35,7 @@
 % ----------------------------------------------------------
 % 📄 Márgenes y formato global
 % ----------------------------------------------------------
-\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headheight=14pt,headsep=1cm,footskip=1cm}
 
 % Configurar Arial como fuente principal
 \renewcommand{\familydefault}{\sfdefault}
@@ -50,7 +50,12 @@
 \setlength{\parindent}{1.27cm}
 
 \DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
-\setlength{\headheight}{15pt}
+
+% ----------------------------------------------------------
+% 📝 Comando para definir el autor (se usará en el pie de página)
+% ----------------------------------------------------------
+\newcommand{\authorname}[1]{\def\@authorname{#1}}
+\newcommand{\@authorname}{} % valor por defecto vacío
 
 
 % ----------------------------------------------------------
@@ -59,19 +64,33 @@
 \pagestyle{fancy}
 \fancyhf{} % limpia cabeceras y pies
 
-% Cabecera derecha: muestra capítulo o sección
-\fancyhead[R]{\nouppercase{\rightmark}}
-% Pie de página centrado: número de página
-\fancyfoot[C]{\thepage}
+% Líneas de separación
+\renewcommand{\headrulewidth}{0.4pt}  % Línea debajo del header
+\renewcommand{\footrulewidth}{0.4pt}  % Línea arriba del footer
 
-% Marcadores para capítulos y secciones
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{#1}}
+% Tamaño de fuente uniforme para header y footer
+\newcommand{\headerfooterfont}{\small}  % Puedes cambiar a \footnotesize o \normalsize
 
-% Evitar cabecera en portada o páginas especiales
+% Cabecera derecha: muestra el nombre del capítulo actual (en gris medio)
+% Se agrega espacio vertical con \raisebox para separar del línea
+\fancyhead[R]{\raisebox{0.2cm}{\headerfooterfont\textcolor{black!60}{\nouppercase{\leftmark}}}}
+% Pie de página izquierdo: nombre del autor (en gris medio)
+\fancyfoot[L]{\raisebox{0.2cm}{\headerfooterfont\textcolor{black!60}{\@authorname}}}
+% Pie de página centrado: número de página (valor negativo lo baja más)
+\fancyfoot[C]{\raisebox{-0.3cm}{\headerfooterfont\textcolor{black!60}{\thepage}}}
+
+% Marcadores para capítulos (solo nombre del capítulo, sin "Capítulo X")
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
+% Redefinir estilo plain para que también muestre header en páginas de inicio de capítulo
 \fancypagestyle{plain}{%
   \fancyhf{}
-  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}  % Línea debajo del header
+  \renewcommand{\footrulewidth}{0.4pt}  % Línea arriba del footer
+  \fancyhead[R]{\raisebox{0.2cm}{\headerfooterfont\textcolor{black!60}{\nouppercase{\leftmark}}}} % Con separación
+  \fancyfoot[L]{\raisebox{0.2cm}{\headerfooterfont\textcolor{black!60}{\@authorname}}}            % Con separación
+  \fancyfoot[C]{\raisebox{-0.3cm}{\headerfooterfont\textcolor{black!60}{\thepage}}}               % Bajado
 }
 
 % ----------------------------------------------------------
@@ -82,7 +101,7 @@
 \titleformat{\subsection}{\bfseries\large}{\thesubsection.}{1em}{}
 
 % Espaciado de títulos
-\titlespacing*{\chapter}{0pt}{30pt}{30pt}      % Capítulos
+\titlespacing*{\chapter}{0pt}{0pt}{30pt}      % Capítulos
 \titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}  % Secciones
 \titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}  % Subsecciones
 
@@ -135,7 +154,7 @@
   % TÍTULO
   {\Large \textbf{#1}}\\[2cm]
   {\huge \textbf{#2}}\\[2cm]
-  \textit{Informe Técnico de la asignatura de Proyecto de Investigación y development V}\\[2cm]
+  \textit{Informe Técnico de la asignatura de Proyecto de Investigación y desarrollo V}\\[2cm]
 
   % AUTORES Y TUTORES
   \begin{flushleft}
@@ -202,9 +221,9 @@
 % ----------------------------------------------------------
 % 📌 Numeración de páginas
 % ----------------------------------------------------------
-% Preliminares en números romanos
+% Preliminares en números romanos (mayúsculas)
 \newcommand{\preliminaries}{%
-  \pagenumbering{roman}%
+  \pagenumbering{Roman}%
   \setcounter{page}{1}%
 }
 
