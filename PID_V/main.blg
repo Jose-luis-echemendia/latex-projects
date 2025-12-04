@@ -3,44 +3,54 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plainnat.bst
 Database file #1: bibliographic_references.bib
-You've used 6 entries,
+Warning--entry type for "academialab_linea_productos" isn't style-file defined
+--line 40 of file bibliographic_references.bib
+Warning--entry type for "ingenieria_software_lps" isn't style-file defined
+--line 47 of file bibliographic_references.bib
+Warning--entry type for "sgbuzz_lps" isn't style-file defined
+--line 54 of file bibliographic_references.bib
+Warning--empty year in academialab_linea_productos
+Warning--empty year in ingenieria_software_lps
+Warning--empty year in sgbuzz_lps
+You've used 10 entries,
             2773 wiz_defined-function locations,
-            626 strings with 5886 characters,
-and the built_in function-call counts, 2388 in all, are:
-= -- 196
-> -- 129
-< -- 3
-+ -- 45
-- -- 39
-* -- 184
-:= -- 385
-add.period$ -- 18
-call.type$ -- 6
-change.case$ -- 28
-chr.to.int$ -- 6
-cite$ -- 12
-duplicate$ -- 122
-empty$ -- 210
-format.name$ -- 45
-if$ -- 486
+            643 strings with 6496 characters,
+and the built_in function-call counts, 3710 in all, are:
+= -- 307
+> -- 189
+< -- 6
++ -- 67
+- -- 57
+* -- 263
+:= -- 589
+add.period$ -- 33
+call.type$ -- 10
+change.case$ -- 45
+chr.to.int$ -- 10
+cite$ -- 23
+duplicate$ -- 188
+empty$ -- 339
+format.name$ -- 67
+if$ -- 764
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 9
-newline$ -- 38
-num.names$ -- 24
-pop$ -- 68
+missing$ -- 11
+newline$ -- 61
+num.names$ -- 40
+pop$ -- 131
 preamble$ -- 1
-purify$ -- 25
+purify$ -- 39
 quote$ -- 0
-skip$ -- 84
+skip$ -- 128
 stack$ -- 0
-substring$ -- 62
-swap$ -- 6
+substring$ -- 70
+swap$ -- 10
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 51
-warning$ -- 0
-while$ -- 22
+type$ -- 90
+warning$ -- 3
+while$ -- 34
 width$ -- 0
-write$ -- 82
+write$ -- 133
+(There were 6 warnings)

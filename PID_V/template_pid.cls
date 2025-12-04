@@ -359,18 +359,54 @@
   \vspace{0.5cm} % espacio antes del primer epígrafe
 }
 
-% --- Epígrafes numerados en romano (también en el índice) ---
+% --- Epígrafes numerados en arábigo (también en el índice) ---
 \newcounter{epigraph}[chapter]
-\renewcommand{\theepigraph}{\Roman{epigraph}}
+\renewcommand{\theepigraph}{\arabic{epigraph}}
 
 \newcommand{\epigraph}[2]{%
-  \refstepcounter{epigraph}
+  \refstepcounter{epigraph}%
+  % resetear contadores de niveles inferiores cuando se crea un nuevo epígrafe
+  \setcounter{subepigraph}{0}%
+  \setcounter{subsubepigraph}{0}%
   \section*{\theepigraph. #1}%
-  \addcontentsline{toc}{section}{\theepigraph. #1}%
+  \addcontentsline{toc}{section}{\protect\theepigraph. \protect#1}%
   \phantomsection
-  \label{epi:#1}%
+  \label{epi:\theepigraph}%
   #2
   \vspace{0.5cm}
+}
+
+% --- Sub-epígrafes (numeración ligada al epígrafe principal) ---
+\newcounter{subepigraph}[epigraph]
+\renewcommand{\thesubepigraph}{\theepigraph.\arabic{subepigraph}}
+\newcommand{\subepigraph}[2]{%
+  \refstepcounter{subepigraph}%
+  \noindent{\Large\bfseries\thesubepigraph\ #1\par}%
+  \addcontentsline{toc}{subsection}{\protect\thesubepigraph\ \protect#1}%
+  \phantomsection
+  \label{sepi:\thesubepigraph}%
+  \vspace{0.3cm}%
+  \noindent #2\par\vspace{0.5cm}%
+}
+
+% --- Sub-sub-epígrafes ---
+\newcounter{subsubepigraph}[subepigraph]
+\renewcommand{\thesubsubepigraph}{\thesubepigraph.\arabic{subsubepigraph}}
+\newcommand{\subsubepigraph}[2]{%
+  \refstepcounter{subsubepigraph}%
+  \noindent{\Large\bfseries\thesubsubepigraph\ #1\par}%
+  \addcontentsline{toc}{subsubsection}{\protect\thesubsubepigraph\ \protect#1}%
+  \phantomsection
+  \label{ssepi:\thesubsubepigraph}%
+  \vspace{0.3cm}%
+  \noindent #2\par\vspace{0.5cm}%
+}
+
+% --- Subsección sin numeración (para usar dentro de cualquier epígrafe) ---
+\newcommand{\unnumberedsubsection}[1]{%
+  \vspace{0.4cm}%
+  \noindent{\fontsize{12pt}{14.4pt}\selectfont\bfseries #1\par}%
+  \vspace{0.2cm}%
 }
 
 

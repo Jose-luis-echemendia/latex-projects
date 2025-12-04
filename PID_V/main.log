@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  23 NOV 2025 22:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  3 DEC 2025 23:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -444,6 +444,8 @@ Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
    defining Unicode char U+2248 (decimal 8776)
 \c@epigraph=\count306
+\c@subepigraph=\count307
+\c@subsubepigraph=\count308
 )
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
@@ -471,16 +473,16 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
+\scratchcounter=\count309
 \scratchdimen=\dimen192
 \scratchbox=\box58
-\nofMPsegments=\count308
-\nofMParguments=\count309
+\nofMPsegments=\count310
+\nofMParguments=\count311
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count310
+\MPscratchCnt=\count312
 \MPscratchDim=\dimen193
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
 \everyMPtoPDFconversion=\toks32
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -531,7 +533,7 @@ Package hyperref Info: Link coloring OFF on input line 3.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 (./portada.tex
-<img/uci_logo.png, id=68, 554.07pt x 192.72pt>
+<img/uci_logo.png, id=72, 554.07pt x 192.72pt>
 File: img/uci_logo.png Graphic file (type png)
 <use img/uci_logo.png>
 Package pdftex.def Info: img/uci_logo.png  used on input line 13.
@@ -711,9 +713,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [6]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 8.
+(hyperref)                be the same. Added a new anchor on input line 17.
 
-(./epigraphs/epigraph1.tex) (./epigraphs/epigraph2.tex) (./epigraphs/epigraph3.tex) (./epigraphs/epigraph4.tex
+(./epigraphs/epigraph1.tex
+Overfull \hbox (11.33974pt too wide) in paragraph at lines 96--96
+\T1/phv/m/n/14.4 ciones es-en-ciales, los fun-da-men-tos teóri-cos ex-is-tentes y los an-tecedentes
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -723,7 +729,35 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [7
 
-]) (./epigraphs/epigraph5.tex) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex
+]
+Overfull \hbox (12.7281pt too wide) in paragraph at lines 96--96
+\T1/phv/b/n/17.28 1.1.1 In-ge-niería de Líneas de Pro-duc-tos de Soft-ware (SPL) 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[8]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[9]) (./epigraphs/epigraph2.tex) (./epigraphs/epigraph3.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[10]) (./epigraphs/epigraph4.tex) (./epigraphs/epigraph5.tex) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex
 Overfull \hbox (2.84317pt too wide) in paragraph at lines 3--3
 \T1/phv/m/n/14.4 de la In-ge-niería de Req-ui-si-tos de-sar-rol-la-da de-sagrea-do en: Iden-ti-fi-cación
  []
@@ -733,7 +767,6 @@ Overfull \hbox (2.42604pt too wide) in paragraph at lines 3--3
 \T1/phv/m/n/14.4 cación de las fun-cional-i-dades clave de la apli-cación (his-to-rias de usuario)
  []
 
-) (./epigraphs/epigraph8.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -741,8 +774,8 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[8])
-Overfull \hbox (3.1518pt too wide) in paragraph at lines 3--19
+[11]) (./epigraphs/epigraph8.tex)
+Overfull \hbox (3.1518pt too wide) in paragraph at lines 3--28
 []\T1/phv/m/n/14.4 <En sen-ti-do gen-er-al este epí-grafe pre-sen-ta el dis-eño de los mecan-
  []
 
@@ -754,7 +787,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[9]) (./recommendations.tex
+[12]) (./recommendations.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -762,7 +795,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[10
+[13
 
 
 ]
@@ -773,7 +806,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[11
+[14
 
 
 ]) (./annexes.tex
@@ -784,7 +817,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[12
+[15
 
 
 
@@ -796,7 +829,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[13
+[16
 
 
 ]
@@ -811,9 +844,9 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[14
+[17
 
-]) (./bibliographic_references.tex
+]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 17.8423pt, for example:
@@ -821,12 +854,43 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[15] (./main.bbl
-Underfull \hbox (badness 1281) in paragraph at lines 19--22
+[18]) (./bibliographic_references.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 17.8423pt, for example:
+(fancyhdr)                \setlength{\headheight}{17.8423pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
+
+[19] (./main.bbl
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 12.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 9--14
+[]\T1/phv/m/n/14.4 AcademiaLab.  Línea de pro-duc-tos de soft-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--14
+\T1/phv/m/n/14.4 ware.  URL []$\T1/cmtt/m/n/14.4 https : / / academia-[]lab . com / enciclopedia /
+ []
+
+
+Underfull \hbox (badness 1460) in paragraph at lines 9--14
+\T1/cmtt/m/n/14.4 linea-[]de-[]productos-[]de-[]software/$[]\T1/phv/m/n/14.4 .  Re-cu-per-a-do 25 de oc-tubre
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 28--32
 \T1/phv/m/sl/14.4 la Re-al Academia de Doc-tores. Obtenido de https://www. rade.
  []
 
-))
+
+Underfull \hbox (badness 1024) in paragraph at lines 42--47
+[]\T1/phv/m/n/14.4 Ingeniería de Soft-ware.  Líneas de pro-duc-to soft-ware para acel-
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -834,30 +898,38 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[16
+[20
 
 
-] (./main.aux)
+]))
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[21] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9530298A74A3AD3ED1C9732BD0D6086B;2444.
+(rerunfilecheck)             Checksum: 109C3F55703C523B0197AE04AFE6B364;2625.
  ) 
 Here is how much of TeX's memory you used:
- 16049 strings out of 476182
- 252378 string characters out of 5795594
+ 16119 strings out of 476182
+ 253681 string characters out of 5795594
  1931975 words of memory out of 5000000
- 37682 multiletter control sequences out of 15000+600000
- 599705 words of font info for 76 fonts, out of 8000000 for 9000
+ 37729 multiletter control sequences out of 15000+600000
+ 600018 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,13n,93p,720b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (22 pages, 94211 bytes).
+ 90i,14n,93p,720b,651s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (27 pages, 114384 bytes).
 PDF statistics:
- 305 PDF objects out of 1000 (max. 8388607)
- 268 compressed objects within 3 object streams
- 83 named destinations out of 1000 (max. 500000)
- 134 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 398 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

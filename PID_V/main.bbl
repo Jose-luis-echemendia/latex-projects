@@ -1,38 +1,74 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[{AcademiaLab}()]{academialab_linea_productos}
+{AcademiaLab}.
+\newblock Línea de productos de software.
+\newblock URL
+  \url{https://academia-lab.com/enciclopedia/linea-de-productos-de-software/}.
+\newblock Recuperado 25 de octubre de 2025.
+
 \bibitem[Apel et~al.(2013)Apel, Batory, Kästner, and Saake]{apel2013feature}
 S.~Apel, D.~Batory, C.~Kästner, and G.~Saake.
-\newblock \emph{Feature-Oriented Software Product Lines: Concepts and Implementation}.
+\newblock \emph{Feature-Oriented Software Product Lines: Concepts and
+  Implementation}.
 \newblock Springer, 2013.
 
 \bibitem[Bates(2019)]{bates2019teaching}
 A.~W. Bates.
-\newblock \emph{Teaching in a Digital Age: Guidelines for Designing Teaching and Learning}.
+\newblock \emph{Teaching in a Digital Age: Guidelines for Designing Teaching
+  and Learning}.
 \newblock Tony Bates Associates Ltd, 2019.
 
 \bibitem[G{\'o}mez(2023)]{gomez2023}
 YA~G{\'o}mez.
 \newblock Innovaci{\'o}n educativa y gesti{\'o}n curricular.
-\newblock \emph{Anales de la Real Academia de Doctores. Obtenido de https://www. rade. es/imageslib/PUBLICACIONES/ARTICULOS/V8N3}, 2, 2023.
+\newblock \emph{Anales de la Real Academia de Doctores. Obtenido de
+  https://www. rade. es/imageslib/PUBLICACIONES/ARTICULOS/V8N3}, 2, 2023.
 
-\bibitem[Guzmán-Luján et~al.(2022)Guzmán-Luján, Delgado-Velasco, and Amador-Rodezno]{guzman2022variabilidad}
+\bibitem[Guzmán-Luján et~al.(2022)Guzmán-Luján, Delgado-Velasco, and
+  Amador-Rodezno]{guzman2022variabilidad}
 J.~F. Guzmán-Luján, J.~A. Delgado-Velasco, and R.~Amador-Rodezno.
-\newblock Modelado de la variabilidad en foros de discusión para sistemas adaptativos educativos.
-\newblock \emph{Revista Iberoamericana de Tecnologías del Aprendizaje}, 17\penalty0 (1):\penalty0 45--53, 2022.
+\newblock Modelado de la variabilidad en foros de discusión para sistemas
+  adaptativos educativos.
+\newblock \emph{Revista Iberoamericana de Tecnologías del Aprendizaje},
+  17\penalty0 (1):\penalty0 45--53, 2022.
 
-\bibitem[Sánchez et~al.(2020)Sánchez, Gutiérrez, and Cabrera]{sanchez2020metodologia}
+\bibitem[{Ingeniería de Software}()]{ingenieria_software_lps}
+{Ingeniería de Software}.
+\newblock Líneas de producto software para acelerar el desarrollo de
+  aplicaciones relacionadas.
+\newblock URL \url{https://ingenieriadesoftware.es/lineas-producto-software/}.
+\newblock Recuperado 25 de octubre de 2025.
+
+\bibitem[Pohl et~al.(2005)Pohl, Böckle, and van~der Linden]{pohl2005software}
+K.~Pohl, G.~Böckle, and F.~J. van~der Linden.
+\newblock \emph{Software Product Line Engineering: Foundations, Principles and
+  Techniques}.
+\newblock Springer, 2005.
+
+\bibitem[{SG Buzz}()]{sgbuzz_lps}
+{SG Buzz}.
+\newblock Líneas de productos de software.
+\newblock URL \url{https://sg.com.mx/revista/34/lineas-productos-software}.
+\newblock Recuperado 25 de octubre de 2025.
+
+\bibitem[Sánchez et~al.(2020)Sánchez, Gutiérrez, and
+  Cabrera]{sanchez2020metodologia}
 J.~Sánchez, F.~L. Gutiérrez, and M.~Cabrera.
-\newblock Hacia una metodología para la gestión de la variabilidad en planes de estudio de ingeniería de software.
-\newblock \emph{Journal of Educational Computing Research}, 58\penalty0 (5):\penalty0 1020--1045, 2020.
+\newblock Hacia una metodología para la gestión de la variabilidad en planes
+  de estudio de ingeniería de software.
+\newblock \emph{Journal of Educational Computing Research}, 58\penalty0
+  (5):\penalty0 1020--1045, 2020.
 
 \bibitem[{UNESCO}(2022)]{unesco2022}
 {UNESCO}.
-\newblock \emph{Reimagining our futures together: A new social contract for education}.
+\newblock \emph{Reimagining our futures together: A new social contract for
+  education}.
 \newblock UNESCO, 2022.
 
 \end{thebibliography}

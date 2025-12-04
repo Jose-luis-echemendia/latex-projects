@@ -1,3 +1,96 @@
-\epigraph{Fundamentación Teórica}{%
+\epigraph{Fundamentación Teórica}{
+La base teórica funciona como el armazón conceptual sobre el cual se erige todo
+trabajo investigativo. Esta sección delimita las nociones esenciales, los
+fundamentos teóricos existentes y los antecedentes modelares que respaldan la
+indagación, brindando un sistema de referencia que guía la captación y
+interpretación de los datos. Este epígrafe establece el marco conceptual necesario 
+para comprender la propuesta de solución. Se parte de los conceptos 
+generales de la Ingieniería de Software para luego enfocarse en una técnica específica, 
+modelos característicos, para finalmente concluir la transición del conocimiento hacia el
+dominio de la planificación y variabilidad educativa.
 
-}
+\subepigraph{Conceptos asociados al tema}{
+    
+    En este epígrafe se desglosan los conceptos esenciales que convergen en el
+    núcleo del estudio: desde los fundamentos literarios y el valor pedagógico de la
+    fábula, pasando por los desafíos y oportunidades de su digitalización, hasta los
+    sistemas tecnológicos diseñados para su gestión y análisis. La clarificación de
+    estos términos no solo delimita el campo de acción, sino que también
+    proporciona el lenguaje común y la base teórica necesaria para el diseño de
+    una solución coherente y efectiva.
+
+    \subsubepigraph{Ingeniería de Líneas de Productos de Software (SPL)}{
+
+        La Ingeniería de \ac{SPL} es una estrategia de
+        ingeniería de software que busca producir familias de sistemas de software
+        similares a partir de un conjunto común de activos centrales mediante un
+        proceso gestionado de desarrollo y gestión de la variabilidad. El objetivo
+        principal es lograr la reutilización a gran escala, lo que se traduce en una reducción
+        de costos, menor tiempo de comercialización y mayor calidad de los
+        productos \citep{sgbuzz_lps}. El concepto de
+        \ac{SPL} surgió a finales de los años 90 como respuesta directa a la crisis de
+        productividad que enfrentaba la industria del software a pesar de las técnicas
+        de reutilización orientadas a objetos. La \ac{SPLE} formaliza una práctica que ya
+        existía intuitivamente en muchas empresas: construir un software base
+        (plataforma) para generar rápidamente múltiples productos similares con
+        variaciones controladas \citep{academialab_linea_productos}
+
+        \unnumberedsubsection{Conceptos Clave de SPL:}
+        \begin{enumerate}
+            \item \textbf{Línea de Productos:} Es la familia completa de sistemas de software
+            que pueden ser generados. Representa el espacio de posibilidades
+            definido por el conjunto de activos.
+            \item \textbf{Activos Centrales (\textit{Core Assets}):} Son los componentes fundamentales
+            (código, arquitectura, modelos de diseño, documentación, planes de
+            prueba) diseñados específicamente para ser compartidos y reutilizados
+            en toda la línea. La inversión inicial en estos activos es clave para el
+            éxito de la estrategia.
+            \item \textbf{Variabilidad:} Es la propiedad esencial de una \ac{SPL}. Define la capacidad
+            de la línea para ser adaptada, personalizada o configurada para generar
+            productos específicos que satisfagan las necesidades particulares de un
+            cliente o escenario. La variabilidad es, en esencia, el conjunto de
+            diferencias controladas entre los productos posibles.
+            \item \textbf{Puntos de Variabilidad (\textit{Variability Points}):} Son las ubicaciones
+            explícitas dentro de los Activos Centrales donde se deben tomar
+            decisiones para configurar un producto. Estos puntos actúan como
+            "interruptores" o "opciones" que guían el proceso de personalización.
+        \end{enumerate}
+
+        La motivación detrás de la \ac{SPL} es fundamentalmente económica y técnica,
+        pues permite el ahorro de costos, ya que al compartir la gran mayoría de los
+        activos (entre el 70\% y 90\% del sistema), se evita la reimplementación del
+        mismo código y diseño para cada nuevo producto, además, provee de una reducción del tiempo de comercialización (\textit{Time-to-Market}) pues la creación de
+        un nuevo producto se reduce de un ciclo completo de desarrollo a un simple
+        proceso de configuración y ensamblaje de activos preexistentes y permite una
+        mejora de la calidad, pues como los activos centrales, al ser reutilizados y
+        probados en múltiples productos, alcanzan un nivel de madurez y robustez
+        superior al que podría lograrse en un desarrollo de producto único \citep{ingenieria_software_lps}.
+
+        La \ac{SPL} opera a través de dos procesos interdependientes que deben
+        gestionarse de manera continua, siendo el primero de estos la Ingeniería del
+        Dominio (\textit{Domain Engineering}), proceso hacia arriba que se enfoca en la
+        creación y el mantenimiento de los Activos Centrales, cuya tarea principal es el
+        modelado de la variabilidad para comprender y documentar todas las posibles
+        configuraciones que la línea puede soportar y que constituye la base teórica y
+        formal de la línea, y un segundo, la Ingeniería de la Aplicación (\textit{Application
+        Engineering}), el cual es el proceso hacia abajo que utiliza los Activos Centrales
+        para configurar y generar productos específicos, que implica tomar las
+        decisiones de variabilidad definidas en el modelo (seleccionar las opciones)
+        para producir una instancia concreta de la línea de productos. La herramienta
+        principal y estándar de facto para formalizar y gestionar la variabilidad durante
+        la Ingeniería del Dominio es el \ac{FM}.
+        Este modelo establece el puente formal entre las opciones de la línea de
+        productos y la capacidad de generar una instancia válida, lo cual es el principio
+        que se busca trasladar al diseño curricular.
+    }
+    \subsubepigraph{Modelos de Características}{
+
+        Es necesario contar con un modelo que represente de manera explícita las
+        variaciones y opciones disponibles en la línea de productos. Este modelo
+        debe ser capaz de capturar la complejidad de las relaciones entre las
+        características y sus variaciones, así como las restricciones que pueden
+        existir entre ellas \citep{pohl2005software}. La representación gráfica de estas relaciones es
+        fundamental para facilitar la comprensión y el análisis de la variabilidad
+        en la línea de productos.
+    }
+}}

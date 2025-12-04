@@ -356,9 +356,14 @@ INPUT bibliographic_references.tex
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1440.tfm
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
+INPUT /home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1440.600pk
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
