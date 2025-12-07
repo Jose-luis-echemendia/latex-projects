@@ -1,3 +1,111 @@
-\epigraph{Nombre del Epígrafe II}{%
-<Generalmente este epígrafe se dedica a la sistematización de los fundamentos teórico-metodológicos asociados al tipo de resultado contenido en el campo de acción y que fue reflejado en el objetivo [general] de la investigación; así como establece cuáles de estos fundamentos se constituyeron referentes de la investigación tanto en el contexto nacional como internacional>
+\epigraph{Análisis del mercado}{%
+%<Generalmente este epígrafe se dedica a la sistematización de los fundamentos 
+% teórico-metodológicos asociados al tipo de resultado contenido en el campo de acción 
+% y que fue reflejado en el objetivo [general] de la investigación; así como establece 
+% cuáles de estos fundamentos se constituyeron referentes de la investigación tanto en 
+% el contexto nacional como internacional>
+
+    Introducción
+
+    \subepigraph{Panorama General del Mercado}{
+        El mercado de sistemas de gestión curricular presenta una segmentación clara
+        entre soluciones genéricas de administración académica y herramientas
+        especializadas en modelado de variabilidad. Mientras plataformas como
+        Moodle, Blackboard y Canvas dominan el segmento de gestión del aprendizaje
+        (LMS), existen vacíos significativos en soluciones específicas para la
+        planificación curricular basada en Líneas de Productos Educativos (Sánchez et
+        al., 2020).
+    }
+
+    \subepigraph{Análisis de Soluciones Existentes}{
+        \unnumberedsubsection{Sistemas de Gestión Curricular Tradicionales:}
+        \begin{itemize}
+            \item SIGA y Banner: Los sistemas como Banner son fundamentalmente
+            sistemas de información transaccionales diseñados para la gestión
+            operativa de una institución. Su arquitectura está optimizada para
+            manejar grandes volúmenes de datos de estudiantes, matrículas,
+            registros de cursos y pagos. La evidencia de su funcionamiento, como
+            se observa en la documentación de "Banner Student", muestra una
+            estructura basada en bloques, ventanas y secciones para la gestión de
+            admisiones, currículums y campos de estudio (Ellucian Company,
+            2015b). Esta lógica está orientada a capturar y recuperar información de
+            forma consistente, no a modelar relaciones complejas y variables entre
+            componentes curriculares. Carecen de un motor de reglas nativo quepermita definir y verificar restricciones complejas como las que se
+            modelan con "requiere" o "excluye" en un Feature Model. Su limitación
+            principal es que operan sobre una estructura de datos fija y predefinida,
+            lo que los hace rígidos para experimentar con diferentes configuraciones
+            curriculares o para gestionar una línea de productos educativos donde
+            las relaciones entre asignaturas y competencias son dinámicas y
+            variables.
+            \item Moodle LMS: es una plataforma excelente para la ejecución y gestión de
+            un plan de estudios ya definido. Su fortaleza reside en organizar cursos,
+            desglosarlos en unidades y lecciones, gestionar la entrega de
+            contenidos, las actividades de evaluación y la interacción entre
+            estudiantes y profesores. Sin embargo, su funcionalidad no se extiende
+            al diseño instruccional ni a la planificación curricular basada en
+            características. Moodle asume que el diseño del curso (los objetivos, la
+            secuencia de contenidos, las actividades de evaluación) ya ha sido
+            realizado externamente. No proporciona herramientas para que los
+            gestores académicos modelen visualmente un plan de estudios, definan
+            características opcionales u obligatorias, o establezcan restricciones
+            entre ellas. En el contexto de tu investigación, Moodle sería un
+            consumidor potencial de la configuración curricular final generada por tu
+            backend, pero no una herramienta para crearla.
+        \end{itemize}
+        \unnumberedsubsection{Herramientas de Modelado de Variabilidad:}
+        \begin{itemize}
+            \item pure::variants: es una solución comercial robusta para la ingeniería de líneas
+            de productos de software (SPL). Proporciona un entorno completo para definir
+            características, crear modelos, gestionar restricciones y, crucialmente, derivar
+            productos concretos a partir de configuraciones válidas. Su potencia es
+            innegable en el dominio técnico para el que fue diseñado. El problema central
+            para tu contexto educativo es su alta barrera de entrada para usuarios no
+            técnicos. Los gestores académicos y diseñadores curriculares, que son
+            expertos en pedagogía pero no necesariamente en SPL, se verían enfrentados
+            a una terminología y flujos de trabajo propios de la ingeniería de software.
+            Adaptar pure::variants requeriría una personalización significativa de la
+            interfaz y una capacitación intensiva, lo que dificulta su adopción ágil en un
+            entorno académico, validando la necesidad de una solución más especializaday accesible.
+            \item FeatureIDE: es un entorno de código abierto construido como un plugin para
+            Eclipse, lo que lo hace muy popular en entornos de investigación y enseñanza
+            de la ingeniería de software. Al igual que pure::variants, es poderoso para
+            el análisis y la configuración de modelos de características. Sin embargo, su
+            dependencia de Eclipse y su orientación hacia desarrolladores lo convierten en
+            una herramienta que requiere especialización técnica. Para un coordinador de
+            carrera o un vicerrector académico, interactuar con FeatureIDE supondría una
+            curva de aprendizaje muy pronunciada. Su arquitectura no está diseñada para
+            integrarse de manera natural con los sistemas de información universitarios
+            existentes (como los propios SIGA o Banner), lo que limita su utilidad práctica
+            para la gestión curricular del día a día. Su uso en educación se limita
+            predominantemente a la enseñanza de conceptos de SPL, no a la gestión
+            operativa de currículos.
+        \end{itemize}
+    }
+
+    \subepigraph{Oportunidades de Mercado Identificadas}{
+        El mercado asociado a la temática padece de un vacío crítico. No existen
+        soluciones que integren efectivamente la gestión de variabilidad de SPL con la
+        planificación curricular educativa, creando una oportunidad para sistemas
+        especializados (Sánchez et al., 2020). Las herramientas existentes de SPL están
+        diseñadas para ingenieros de software, no para profesionales de la educación,
+        limitando su adopción en instituciones educativas (Chen et al., 2020).
+
+        La solución propuesta se posiciona estratégicamente en el mercado educativo
+        como un "Motor de Variabilidad Curricular" especializado, que capitaliza las
+        tendencias actuales de crecimiento en educación híbrida y multimodal, así
+        como las demandas crecientes de personalización educativa y eficiencia en la
+        gestión académica post-pandemia. Su propuesta de valor se sustenta en
+        fortalezas técnicas diferenciadoras, incluyendo un backend especializado en
+        gestión de variabilidad curricular, un motor de reglas educativo que comprende
+        prerrequisitos y competencias, una API RESTful para integración con sistemas
+        existentes y un modelo de datos optimizado para planificación académica.
+        Estas capacidades se traducen en ventajas competitivas tangibles como la
+        automatización de validaciones que reduce errores en diseño curricular, la
+        generación de múltiples variantes de planes de estudio desde un tronco comúny su 
+        adaptabilidad a contextos institucionales diversos, posicionándose como
+        complemento esencial -no competencia- de los sistemas LMS existentes, al
+        enfocarse específicamente en el diseño y planificación académica más que en
+        la ejecución curricular.
+    }
+
 }

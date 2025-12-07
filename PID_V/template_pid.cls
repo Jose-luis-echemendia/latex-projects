@@ -31,6 +31,7 @@
 \usepackage{ragged2e} % Para justificación mejorada
 \usepackage[printonlyused]{acronym}  % Para gestión de acrónimos
 \usepackage{indentfirst}  % Sangría en el primer párrafo después de títulos
+\usepackage{longtable}
 
 % ----------------------------------------------------------
 % 📄 Márgenes y formato global
@@ -46,8 +47,8 @@
 % Justificación de texto (por defecto en LaTeX, pero lo especificamos)
 \justifying
 
-% Sangría al inicio de cada párrafo (1.27 cm = 0.5 pulgadas, estándar académico)
-\setlength{\parindent}{1.27cm}
+% Sangría al inicio de cada párrafo (0.5 cm)
+\setlength{\parindent}{0.5cm}
 
 \DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
 
@@ -154,7 +155,7 @@
   % TÍTULO
   {\Large \textbf{#1}}\\[2cm]
   {\huge \textbf{#2}}\\[2cm]
-  \textit{Informe Técnico de la asignatura de Proyecto de Investigación y desarrollo V}\\[2cm]
+  \textit{Informe Técnico de la asignatura de Proyecto de Investigación y Desarrollo V}\\[2cm]
 
   % AUTORES Y TUTORES
   \begin{flushleft}
