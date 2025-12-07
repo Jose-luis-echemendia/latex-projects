@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  6 DEC 2025 21:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  6 DEC 2025 23:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -509,7 +509,6 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 3.
- (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -555,7 +554,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
  (./portada.tex
-<img/uci_logo.png, id=84, 554.07pt x 192.72pt>
+<img/uci_logo.png, id=4, 554.07pt x 192.72pt>
 File: img/uci_logo.png Graphic file (type png)
 <use img/uci_logo.png>
 Package pdftex.def Info: img/uci_logo.png  used on input line 13.
@@ -599,18 +598,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [2
 
-]) (./main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+])
+No file main.toc.
 \tf@toc=\write4
 \openout4 = `main.toc'.
-
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -622,10 +613,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [3
 
 
-] (./main.lot)
+]
+No file main.lot.
 \tf@lot=\write5
 \openout5 = `main.lot'.
-
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -636,10 +627,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [4
 
-] (./main.lof)
+]
+No file main.lof.
 \tf@lof=\write6
 \openout6 = `main.lof'.
-
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -652,6 +643,22 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 ] (./introduction.tex
 
+Package natbib Warning: Citation `unesco2022' on page 1 undefined on input line 7.
+
+
+Overfull \hbox (15.83255pt too wide) in paragraph at lines 3--11
+\T1/phv/m/n/14.4 antes de-man-das del mer-ca-do lab-o-ral ex-i-gen que las in-sti-tu-ciones académi-
+ []
+
+
+Package natbib Warning: Citation `gomez2023' on page 1 undefined on input line 27.
+
+
+Overfull \hbox (1.83484pt too wide) in paragraph at lines 18--28
+[]\T1/phv/m/n/14.4 La in-no-vación ed-uca-ti-va se re-fiere a la in-tro-duc-ción de nuevas ideas,
+ []
+
+
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
@@ -662,14 +669,28 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 
+l.28 
       [1
 
 
 
 ]
 Package acronym Info: Label `acro:TIC' newly defined as it shall be overridden
-although it is yet undefined on input line 34.
+although it is yet undefined on input line 35.
+
+
+Package acronym Warning: Acronym `TIC' is not defined on input line 35.
+
+
+Package acronym Warning: Acronym `TIC' is not defined on input line 35.
+
+
+Package natbib Warning: Citation `gomez2023' on page 2 undefined on input line 39.
+
+
+Overfull \hbox (3.41824pt too wide) in paragraph at lines 41--47
+[]\T1/phv/m/n/14.4 En este sen-ti-do, la in-no-vación ed-uca-ti-va y la gestión cur-ric-u-lar deben
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -680,11 +701,19 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [2]
 Package acronym Info: Label `acro:SPL' newly defined as it shall be overridden
-although it is yet undefined on input line 60.
+although it is yet undefined on input line 61.
 
-Overfull \hbox (3.62085pt too wide) in paragraph at lines 59--71
-[]\T1/phv/m/n/14.4 La búsque-da de es-ta flex-i-bil-i-dad ha ll-e-va-do a la ex-plo-ración de paradig-
- []
+
+Package acronym Warning: Acronym `SPL' is not defined on input line 61.
+
+
+Package acronym Warning: Acronym `SPL' is not defined on input line 61.
+
+
+Package natbib Warning: Citation `apel2013feature' on page 3 undefined on input line 63.
+
+
+Package natbib Warning: Citation `guzman2022variabilidad' on page 3 undefined on input line 71.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -695,11 +724,40 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [3]
 Package acronym Info: Label `acro:MOOC' newly defined as it shall be overridden
-although it is yet undefined on input line 86.
+although it is yet undefined on input line 87.
+
+
+Package acronym Warning: Acronym `MOOC' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `MOOC' is not defined on input line 87.
+
+
+Package natbib Warning: Citation `bates2019teaching' on page 4 undefined on input line 89.
+
+
+Package natbib Warning: Citation `sanchez2020metodologia' on page 4 undefined on input line 91.
+
+
+Overfull \hbox (2.09456pt too wide) in paragraph at lines 86--97
+\T1/phv/m/n/14.4 mente, es-ta com-ple-ji-dad se ges-tiona pre-dom-i-nan-te-mente me-di-ante solu-
+ []
+
 Package acronym Info: Label `acro:FM' newly defined as it shall be overridden
-although it is yet undefined on input line 100.
+although it is yet undefined on input line 101.
+
+Package acronym Warning: Acronym `FM' is not defined on input line 101.
+
+
+Package acronym Warning: Acronym `FM' is not defined on input line 101.
+
 Package acronym Info: Label `acro:SPLE' newly defined as it shall be overridden
-although it is yet undefined on input line 102.
+although it is yet undefined on input line 103.
+
+Package acronym Warning: Acronym `SPLE' is not defined on input line 103.
+
+
+Package acronym Warning: Acronym `SPLE' is not defined on input line 103.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -710,6 +768,15 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [4]
 
+Package acronym Warning: Acronym `FM' is not defined on input line 113.
+
+
+Package acronym Warning: Acronym `FM' is not defined on input line 119.
+
+
+Package acronym Warning: Acronym `FM' is not defined on input line 125.
+
+
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
@@ -717,10 +784,23 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [5]
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 136.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 137.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-)) (./development.tex
+)
+
+Package acronym Warning: Acronym `SPL' is not defined on input line 142.
+
+
+Package acronym Warning: Acronym `SPL' is not defined on input line 146.
+
+
+Package acronym Warning: Acronym `FM' is not defined on input line 146.
+
+
+Package acronym Warning: Acronym `SPL' is not defined on input line 152.
+
+) (./development.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -733,7 +813,20 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 17.
 
-(./epigraphs/epigraph1.tex
+(./epigraphs/epigraph1.tex)
+Runaway argument?
+{ La base teÃ³rica funciona como el armazÃ³n conceptual sobre el cual\ETC.
+./development.tex:20: File ended while scanning use of \epigraph.
+<inserted text> 
+                \par 
+l.20 \input{epigraphs/epigraph1}
+                                
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+(./epigraphs/epigraph2.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -744,9 +837,33 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [7
 
 ]
-Overfull \hbox (12.7281pt too wide) in paragraph at lines 417--417
-\T1/phv/b/n/17.28 1.1.1 In-ge-niería de Líneas de Pro-duc-tos de Soft-ware (SPL) 
+
+Package natbib Warning: Citation `moodle2025overview' on page 8 undefined on input line 153.
+
+
+Package natbib Warning: Citation `blackboard2025overview' on page 8 undefined on input line 153.
+
+
+Package natbib Warning: Citation `canvas2025overview' on page 8 undefined on input line 153.
+
+
+Package natbib Warning: Citation `sanchez2020metodologia' on page 8 undefined on input line 153.
+
+
+Package acronym Warning: Acronym `SPL' is not defined on input line 153.
+
+
+Overfull \hbox (2.58348pt too wide) in paragraph at lines 153--153
+[]\T1/phv/m/n/14.4 El análi-sis de solu-ciones ex-is-tentes se or-ga-ni-za en dos gru-pos clara-
  []
+
+
+Overfull \hbox (4.8023pt too wide) in paragraph at lines 153--153
+\T1/phv/m/n/14.4 mente difer-en-ci-a-dos, ca-da uno rep-re-sen-ta-ti-vo de per-spec-ti-vas y al-cances
+ []
+
+
+Package natbib Warning: Citation `ellucian2015b_banner' on page 8 undefined on input line 153.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -757,6 +874,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [8]
 
+Package natbib Warning: Citation `moodle2025overview' on page 9 undefined on input line 153.
+
+
+Package natbib Warning: Citation `moodle2025overview' on page 9 undefined on input line 153.
+
+
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
@@ -764,8 +887,20 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [9]
-Package acronym Info: Label `acro:FODA' newly defined as it shall be overridden
-although it is yet undefined on input line 417.
+
+Package acronym Warning: Acronym `SPL' is not defined on input line 153.
+
+
+Package natbib Warning: Citation `purevariants2024overview' on page 10 undefined on input line 153.
+
+
+Package acronym Warning: Acronym `SPL' is not defined on input line 153.
+
+
+Package natbib Warning: Citation `thum2014featureide' on page 10 undefined on input line 153.
+
+
+Package acronym Warning: Acronym `SPL' is not defined on input line 153.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -776,28 +911,19 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [10]
 
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[11]
-Package acronym Info: Label `acro:SAT' newly defined as it shall be overridden
-although it is yet undefined on input line 417.
-Package acronym Info: Label `acro:SHARPSAT' newly defined as it shall be overridden
-although it is yet undefined on input line 417.
+Package acronym Warning: Acronym `SPL' is not defined on input line 153.
 
 
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+Package natbib Warning: Citation `sanchez2020metodologia' on page 11 undefined on input line 153.
 
-[12]
-Package acronym Info: Label `acro:META' newly defined as it shall be overridden
-although it is yet undefined on input line 417.
+
+Package acronym Warning: Acronym `SPL' is not defined on input line 153.
+
+
+Package natbib Warning: Citation `chen2020variability' on page 11 undefined on input line 153.
+
+
+Package acronym Warning: Acronym `SPL' is not defined on input line 153.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -806,7 +932,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[13]
+[11]) (./epigraphs/epigraph3.tex) (./epigraphs/epigraph4.tex) (./epigraphs/epigraph5.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -814,7 +940,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[14]
+[12]) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex) (./epigraphs/epigraph8.tex)) (./conclusions.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -822,16 +948,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[15]
-Overfull \hbox (25.33517pt too wide) in paragraph at lines 417--417
-[]\T1/phv/m/n/14.4 Gestión Pedagóg-i-ca: Se en-fo-ca en el nú-cleo del pro-ce-so de enseñanza-
- []
-
-
-Overfull \hbox (7.42245pt too wide) in paragraph at lines 417--417
-\T1/phv/m/n/14.4 re-cur-sos hu-manos, ma-te-ri-ales y fi-nancieros, cre-an-do las condi-ciones
- []
-
+[13]) (./recommendations.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -839,117 +956,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[16]
-Overfull \hbox (2.28072pt too wide) in paragraph at lines 417--417
-\T1/phv/m/n/14.4 soft-ware de cal-i-dad [[]Som-merville[], []2016[]]. A difer-en-cia de la pro-gra-mación
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[17]
-Overfull \hbox (20.38203pt too wide) in paragraph at lines 417--417
-\T1/phv/m/n/14.4 nología, la ped-a-gogía y el con-tenido se in-ter-rela-cio-nan [[]Mishra and Koehler[],
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[18]
-Overfull \hbox (1.8638pt too wide) in paragraph at lines 417--417
-[]\T1/phv/m/n/14.4 Un Con-fig-u-rador Cur-ric-u-lar es una her-ramien-ta es-pe-cial-iza-da que apli-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[19]) (./epigraphs/epigraph2.tex
-Overfull \hbox (8.45961pt too wide) in paragraph at lines 111--111
- \T1/phv/m/n/14.4 El mer-ca-do de sis-temas de gestión cur-ric-u-lar pre-sen-ta una seg-mentación
- []
-
-
-Overfull \hbox (3.01613pt too wide) in paragraph at lines 111--111
-\T1/phv/m/n/14.4 ramien-tas es-pe-cial-izadas en mod-e-la-do de vari-abil-i-dad. Mien-tras platafor-
- []
-
-
-Overfull \hbox (7.8987pt too wide) in paragraph at lines 111--111
-\T1/phv/m/n/14.4 mas co-mo Moo-dle, Black-board y Can-vas dom-i-nan el seg-men-to de gestión
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[20]
-Overfull \hbox (8.18506pt too wide) in paragraph at lines 111--111
-[]\T1/phv/m/n/14.4 Moodle LMS: es una platafor-ma ex-ce-lente para la eje-cu-ción y gestión
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[21]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[22]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[23]) (./epigraphs/epigraph3.tex) (./epigraphs/epigraph4.tex) (./epigraphs/epigraph5.tex) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex) (./epigraphs/epigraph8.tex)
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[24]) (./conclusions.tex
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[25]) (./recommendations.tex
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[26
+[14
 
 
 ]
@@ -960,19 +967,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[27
+[15
 
 
 ]) (./annexes.tex
-Overfull \hbox (0.81203pt too wide) in paragraph at lines 3--3
-[]\T1/phv/m/n/14.4 <Contenido de los anex-os con igual tipo de fuente Ar-i-al, pero a tamaño
- []
-
-
-Overfull \hbox (10.70645pt too wide) in paragraph at lines 3--3
-\T1/phv/m/n/14.4 los anex-os im-pre-scindibles para com-ple-men-tar lo pre-sen-ta-do en la memo-
- []
-
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 17.8423pt, for example:
@@ -980,7 +978,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[28
+[16
 
 
 
@@ -992,7 +990,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[29
+[17
 
 
 ]
@@ -1007,9 +1005,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[30
+[18
 
 ]
+Overfull \hbox (10.2592pt too wide) in paragraph at lines 28--29
+\T1/phv/m/n/14.4 Enfoque dis-eña-do es-pecí-fi-ca-mente para un propósi-to par-tic-u-lar, sin seguir
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 17.8423pt, for example:
@@ -1017,7 +1019,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[31]
+[19]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 17.8423pt, for example:
@@ -1025,14 +1027,36 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[32]
-Overfull \hbox (9.00697pt too wide) in paragraph at lines 58--59
+[20]
+Overfull \hbox (9.00697pt too wide) in paragraph at lines 61--62
 \T1/phv/m/n/14.4 vid-u-al váli-do, re-spetan-do to-das las re-stric-ciones y de-pen-den-cias definidas
  []
 
 
-Overfull \hbox (5.50732pt too wide) in paragraph at lines 64--65
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 17.8423pt, for example:
+(fancyhdr)                \setlength{\headheight}{17.8423pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
+
+[21]
+Overfull \hbox (5.50732pt too wide) in paragraph at lines 76--77
 \T1/phv/m/n/14.4 Estructura cog-ni-ti-va gen-er-al-iza-da que rep-re-sen-ta un pa-trón de movimien-
+ []
+
+
+Overfull \hbox (0.61209pt too wide) in paragraph at lines 79--80
+\T1/phv/m/n/14.4 planes cur-ric-u-lares para re-spon-der a necesi-dades es-pecí-fi-cas sin perder
+ []
+
+
+Overfull \hbox (40.83032pt too wide) in paragraph at lines 91--92
+\T1/phv/m/n/14.4 Sistema for-mal de lóg-i-ca que uti-liza vari-ables proposi-cionales (ver-dadero/falso)
+ []
+
+
+Overfull \hbox (5.37842pt too wide) in paragraph at lines 91--92
+\T1/phv/m/n/14.4 y op-er-adores lógi-cos (AND, OR, NOT, im-pli-ca) para rep-re-sen-tar y analizar
  []
 
 
@@ -1042,18 +1066,8 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[33]
-Overfull \hbox (40.83032pt too wide) in paragraph at lines 76--77
-\T1/phv/m/n/14.4 Sistema for-mal de lóg-i-ca que uti-liza vari-ables proposi-cionales (ver-dadero/falso)
- []
-
-
-Overfull \hbox (5.37842pt too wide) in paragraph at lines 76--77
-\T1/phv/m/n/14.4 y op-er-adores lógi-cos (AND, OR, NOT, im-pli-ca) para rep-re-sen-tar y analizar
- []
-
-
-Overfull \hbox (2.6131pt too wide) in paragraph at lines 79--80
+[22]
+Overfull \hbox (2.6131pt too wide) in paragraph at lines 94--95
 \T1/phv/m/n/14.4 Recorrido per-son-al-iza-do de apren-diza-je que un es-tu-di-ante sigue a través
  []
 
@@ -1065,54 +1079,46 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[34] (./main.bbl
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 12.
+[23] (./main.bbl
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 11.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 9--14
-[]\T1/phv/m/n/14.4 AcademiaLab.  Línea de pro-duc-tos de soft-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 2261) in paragraph at lines 9--13
+[]\T1/phv/m/n/14.4 Anthology Inc.  Black-board learn: Platafor-ma para la en-señan-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--14
-\T1/phv/m/n/14.4 ware.  URL []$\T1/cmtt/m/n/14.4 https : / / academia-[]lab . com / enciclopedia /
+Underfull \hbox (badness 1924) in paragraph at lines 9--13
+\T1/phv/m/n/14.4 za y el apren-diza-je, 2025.  URL []$\T1/cmtt/m/n/14.4 https : / / www . anthology . com /
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 9--14
-\T1/cmtt/m/n/14.4 linea-[]de-[]productos-[]de-[]software/$[]\T1/phv/m/n/14.4 .  Re-cu-per-a-do 25 de oc-tubre
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--63
-[]\T1/phv/m/n/14.4 GeeksforGeeks.  What is fea-ture en-gi-neer-ing?  URL
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--63
-[]$\T1/cmtt/m/n/14.4 https : / / www . geeksforgeeks . org / machine-[]learning /
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[35
-
-
-]
-Underfull \hbox (badness 1281) in paragraph at lines 65--69
+Underfull \hbox (badness 1281) in paragraph at lines 34--37
 \T1/phv/m/sl/14.4 la Re-al Academia de Doc-tores. Obtenido de https://www. rade.
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 97--102
-[]\T1/phv/m/n/14.4 Ingeniería de Soft-ware.  Líneas de pro-duc-to soft-ware para acel-
- []
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[24
+
+
+]))
+
+Package natbib Warning: There were undefined citations.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1121,47 +1127,42 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[36]
-Underfull \hbox (badness 2221) in paragraph at lines 135--140
-\T1/phv/m/sl/14.4 Iberoamer-i-cana de Tec-nologías del Apren-diza-je\T1/phv/m/n/14.4 , 14(3):112--120,
- []
+[25] (./main.aux
 
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
 
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[37]))
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[38] (./main.aux)
+)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F7876145D9AC7CCB2E169CE75A10F92A;3481.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  471DC0BD3770D18BC422D94F77D02FFE;3055.
  ) 
 Here is how much of TeX's memory you used:
- 16422 strings out of 476182
- 259020 string characters out of 5795594
+ 16250 strings out of 476182
+ 256065 string characters out of 5795594
  1932975 words of memory out of 5000000
- 37967 multiletter control sequences out of 15000+600000
- 600786 words of font info for 78 fonts, out of 8000000 for 9000
+ 37869 multiletter control sequences out of 15000+600000
+ 600018 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,14n,93p,720b,717s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (44 pages, 184275 bytes).
+ 90i,13n,93p,720b,655s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (31 pages, 117512 bytes).
 PDF statistics:
- 704 PDF objects out of 1000 (max. 8388607)
- 595 compressed objects within 6 object streams
- 161 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 285 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

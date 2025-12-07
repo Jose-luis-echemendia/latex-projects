@@ -48,7 +48,7 @@
 \justifying
 
 % Sangría al inicio de cada párrafo (0.5 cm)
-\setlength{\parindent}{0.5cm}
+\setlength{\parindent}{1cm}
 
 \DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
 

@@ -6,29 +6,35 @@
     \item[Variabilidad Curricular] 
     Capacidad de un plan de estudios para ofrecer múltiples rutas de especialización, asignaturas optativas y diferentes prerequisitos, permitiendo personalizar la formación académica según las necesidades y objetivos de cada estudiante.
     
-    \item[Modelos de Características (\textit{Feature Models})]
+    \item[Modelo de Características (\textit{Feature Model})]
     Representación jerárquica y estructurada de las características de un sistema o producto, que permite especificar y gestionar la variabilidad mediante relaciones de dependencia, opcionalidad y exclusión entre diferentes componentes o funcionalidades.
     
-    \item[Líneas de Productos de Software (\textit{Software Product Lines})]
+    \item[Línea de Productos de Software (\textit{Software Product Line})]
     Conjunto de sistemas de software que comparten un núcleo común de componentes y se diferencian por características específicas, permitiendo la reutilización sistemática y la gestión eficiente de familias de productos relacionados.
     
     \item[Líneas de Productos Educativos]
     Aplicación del paradigma de Líneas de Productos de Software al dominio educativo, donde un tronco curricular común puede derivar en múltiples planes de estudio especializados mediante la gestión explícita de su variabilidad.
     
-    \item[\textit{Backend}]
+    \item[Sistema Integrado de Gestión Académica (SIGA)]
+    Plataforma institucional diseñada para registrar, administrar y mantener la información académica de estudiantes, programas y procesos administrativos, enfocada en la operación cotidiana más que en el modelado de la variabilidad curricular.
+
+    \item[Sistema de Gestión del Aprendizaje (\textit{Learning Management System})]
+    Plataforma tecnológica que facilita la planificación, entrega y seguimiento de cursos y actividades formativas en línea, permitiendo gestionar contenidos, evaluaciones y la interacción entre docentes y estudiantes.
+
+    \item[Servidor de Aplicaciones (\textit{backend})]
     Parte del sistema de software que opera en el servidor y se encarga de la lógica de negocio, el procesamiento de datos, la gestión de bases de datos y la comunicación con otros servicios, sin interactuar directamente con el usuario final.
     
-    \item[\textit{Ad-hoc}]
-    Solución o enfoque diseñado específicamente para un propósito particular, sin seguir un patrón o metodología generalizable, lo que dificulta su reutilización y mantenimiento.
+    \item[Solución ad hoc (\textit{ad hoc})]
+    Enfoque diseñado específicamente para un propósito particular, sin seguir un patrón o metodología generalizable, lo que dificulta su reutilización y mantenimiento.
     
-    \item[\textit{Flipped Classroom} (Aula Invertida)]
+    \item[Aula Invertida (\textit{Flipped Classroom})]
     Enfoque pedagógico en el que los estudiantes revisan el contenido teórico de forma autónoma (generalmente mediante videos o lecturas) fuera del aula, y utilizan el tiempo en clase para actividades prácticas, discusiones y resolución de problemas con el apoyo del docente.
     
-    \item[\textit{Micro-learning}]
+    \item[Microaprendizaje (\textit{Micro-learning})]
     Estrategia de aprendizaje que presenta contenidos educativos en pequeñas unidades de información, diseñadas para ser consumidas en períodos cortos de tiempo, facilitando la retención y permitiendo mayor flexibilidad en el proceso de aprendizaje.
     
     \item[Gamificación]
-    Incorporación de elementos y mecánicas propias de los juegos (puntos, niveles, recompensas, desafíos) en contextos educativos para aumentar la motivación, el engagement y la participación activa de los estudiantes.
+    Incorporación de elementos y mecánicas propias de los juegos (puntos, niveles, recompensas, desafíos) en contextos educativos para aumentar la motivación, el compromiso (\textit{engagement}) y la participación activa de los estudiantes.
     
     \item[Activos Centrales (\textit{Core Assets})]
     Componentes fundamentales (código, arquitectura, modelos de diseño, documentación, planes de prueba) diseñados específicamente para ser compartidos y reutilizados en toda una Línea de Productos de Software. La inversión inicial en estos activos es clave para el éxito de la estrategia de reutilización.
@@ -42,28 +48,37 @@
     \item[Puntos de Variabilidad (\textit{Variability Points})]
     Ubicaciones explícitas dentro de los Activos Centrales de una Línea de Productos de Software donde se deben tomar decisiones para configurar un producto. Actúan como "interruptores" u "opciones" que guían el proceso de personalización del sistema.
     
-    \item[Restricciones Cross-Tree]
+    \item[Restricciones Transversales (\textit{cross-tree})]
     Reglas lógicas en un Modelo de Características que definen dependencias entre características que no están directamente conectadas en la jerarquía padre-hijo. Capturan relaciones complejas del mundo real como "requiere" (si A entonces B) o "excluye" (A y B no pueden coexistir).
     
-    \item[SAT Solver]
+    \item[Solucionador SAT (\textit{SAT solver})]
     Herramienta algorítmica especializada que determina si una fórmula lógica proposicional puede ser satisfecha (tiene al menos una solución válida). En el contexto de Líneas de Productos de Software, se utiliza para verificar si un Modelo de Características tiene configuraciones válidas.
     
-    \item[\#SAT (Model Counting)]
+    \item[Conteo de Modelos (\textit{Model Counting})]
     Proceso de calcular el número total de asignaciones de valores que satisfacen una fórmula lógica. En Modelos de Características, determina cuántas configuraciones de producto válidas existen en una línea de productos, métrica esencial para medir su variabilidad.
-    
-    \item[Backend]
-    Componente del sistema de software que opera en el servidor, responsable de la lógica de negocio, procesamiento de datos, gestión de bases de datos y servicios de aplicación, sin interacción directa con la interfaz de usuario.
     
     \item[Configuración (en SPL)]
     Proceso sistemático de seleccionar un conjunto específico de características de un Modelo de Características para derivar un producto individual válido, respetando todas las restricciones y dependencias definidas en el modelo.
     
+    \item[Motor de Variabilidad Curricular]
+    Componente de software especializado que aplica técnicas de gestión de variabilidad para modelar planes de estudio, validar restricciones pedagógicas y generar configuraciones curriculares personalizadas.
+
+    \item[Interfaz de Programación de Aplicaciones (\textit{Application Programming Interface})]
+    Conjunto documentado de reglas y protocolos que permiten la comunicación entre sistemas de software, facilitando la integración de servicios y la interoperabilidad de aplicaciones.
+
+    \item[Configurador Curricular]
+    Herramienta que aplica los principios de las Líneas de Productos de Software al diseño de planes de estudio, guiando la selección de asignaturas y restricciones para generar configuraciones curriculares personalizadas, coherentes y viables.
+
     \item[Diseño Instruccional]
     Proceso sistemático de planificación, desarrollo e implementación de experiencias de aprendizaje, basado en teorías pedagógicas y mejores prácticas educativas, con el objetivo de facilitar la adquisición efectiva de conocimientos y habilidades.
     
     \item[Esquema Motor]
     Estructura cognitiva generalizada que representa un patrón de movimiento aprendido. Según la Teoría del Esquema Motor de Schmidt, la práctica variable enriquece estos esquemas, permitiendo mayor adaptabilidad en diferentes contextos.
     
-    \item[Feature-Oriented Domain Analysis (FODA)]
+    \item[Gestión de la Variabilidad]
+    Conjunto de estrategias, procesos y herramientas destinados a identificar, planificar y controlar las diferencias permitidas en productos o planes curriculares para responder a necesidades específicas sin perder coherencia ni calidad.
+
+    \item[Análisis de Dominio Orientado a Características (\textit{Feature-Oriented Domain Analysis})]
     Metodología pionera introducida por Kang et al. (1990) para el análisis de dominios en ingeniería de software. Formalizó el concepto de Modelos de Características como herramienta principal para capturar la variabilidad funcional en familias de sistemas.
     
     \item[Meta-modelo]

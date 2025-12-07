@@ -4,414 +4,464 @@
 % fundamentos se constituyeron referentes de la investigación>
 
 \epigraph{Fundamentación Teórica}{
-La base teórica funciona como el armazón conceptual sobre el cual se erige todo
-trabajo investigativo. Esta sección delimita las nociones esenciales, los
-fundamentos teóricos existentes y los antecedentes modelares que respaldan la
-indagación, brindando un sistema de referencia que guía la captación y
-interpretación de los datos. Este epígrafe establece el marco conceptual necesario 
-para comprender la propuesta de solución. Se parte de los conceptos 
-generales de la Ingieniería de Software para luego enfocarse en una técnica específica, 
-modelos característicos, para finalmente concluir la transición del conocimiento hacia el
-dominio de la planificación y variabilidad educativa.
+    La base teórica funciona como el armazón conceptual sobre el cual se erige todo
+    trabajo investigativo. Esta sección delimita las nociones esenciales, los
+    fundamentos teóricos existentes y los antecedentes modelares que respaldan la
+    indagación, brindando un sistema de referencia que guía la captación y
+    interpretación de los datos. Este epígrafe establece el marco conceptual necesario 
+    para comprender la propuesta de solución. Se parte de los conceptos 
+    generales de la Ingieniería de Software para luego enfocarse en una técnica específica, 
+    modelos característicos, para finalmente concluir la transición del conocimiento hacia el
+    dominio de la planificación y variabilidad educativa.
 
-\subepigraph{Conceptos asociados al tema}{
-    
-    En este epígrafe se desglosan los conceptos esenciales que convergen en el
-    núcleo del estudio: desde los fundamentos literarios y el valor pedagógico de la
-    fábula, pasando por los desafíos y oportunidades de su digitalización, hasta los
-    sistemas tecnológicos diseñados para su gestión y análisis. La clarificación de
-    estos términos no solo delimita el campo de acción, sino que también
-    proporciona el lenguaje común y la base teórica necesaria para el diseño de
-    una solución coherente y efectiva.
-
-    \subsubepigraph{Ingeniería de Líneas de Productos de Software (SPL)}{
-
-        La Ingeniería de \ac{SPL} es una estrategia de
-        ingeniería de software que busca producir familias de sistemas de software
-        similares a partir de un conjunto común de activos centrales mediante un
-        proceso gestionado de desarrollo y gestión de la variabilidad. El objetivo
-        principal es lograr la reutilización a gran escala, lo que se traduce en una reducción
-        de costos, menor tiempo de comercialización y mayor calidad de los
-        productos \citep{sgbuzz_lps}. El concepto de
-        \ac{SPL} surgió a finales de los años 90 como respuesta directa a la crisis de
-        productividad que enfrentaba la industria del software a pesar de las técnicas
-        de reutilización orientadas a objetos. La \ac{SPLE} formaliza una práctica que ya
-        existía intuitivamente en muchas empresas: construir un software base
-        (plataforma) para generar rápidamente múltiples productos similares con
-        variaciones controladas \citep{academialab_linea_productos}
-
-        \unnumberedsubsection{Conceptos Clave de SPL:}
-        \begin{enumerate}
-            \item \textbf{Línea de Productos:} Es la familia completa de sistemas de software
-            que pueden ser generados. Representa el espacio de posibilidades
-            definido por el conjunto de activos.
-            \item \textbf{Activos Centrales (\textit{Core Assets}):} Son los componentes fundamentales
-            (código, arquitectura, modelos de diseño, documentación, planes de
-            prueba) diseñados específicamente para ser compartidos y reutilizados
-            en toda la línea. La inversión inicial en estos activos es clave para el
-            éxito de la estrategia.
-            \item \textbf{Variabilidad:} Es la propiedad esencial de una \ac{SPL}. Define la capacidad
-            de la línea para ser adaptada, personalizada o configurada para generar
-            productos específicos que satisfagan las necesidades particulares de un
-            cliente o escenario. La variabilidad es, en esencia, el conjunto de
-            diferencias controladas entre los productos posibles.
-            \item \textbf{Puntos de Variabilidad (\textit{Variability Points}):} Son las ubicaciones
-            explícitas dentro de los Activos Centrales donde se deben tomar
-            decisiones para configurar un producto. Estos puntos actúan como
-            "interruptores" o "opciones" que guían el proceso de personalización.
-        \end{enumerate}
-
-        La motivación detrás de la \ac{SPL} es fundamentalmente económica y técnica,
-        pues permite el ahorro de costos, ya que al compartir la gran mayoría de los
-        activos (entre el 70\% y 90\% del sistema), se evita la reimplementación del
-        mismo código y diseño para cada nuevo producto, además, provee de una reducción del tiempo de comercialización (\textit{Time-to-Market}) pues la creación de
-        un nuevo producto se reduce de un ciclo completo de desarrollo a un simple
-        proceso de configuración y ensamblaje de activos preexistentes y permite una
-        mejora de la calidad, pues como los activos centrales, al ser reutilizados y
-        probados en múltiples productos, alcanzan un nivel de madurez y robustez
-        superior al que podría lograrse en un desarrollo de producto único \citep{ingenieria_software_lps}.
-
-        La \ac{SPL} opera a través de dos procesos interdependientes que deben
-        gestionarse de manera continua, siendo el primero de estos la Ingeniería del
-        Dominio (\textit{Domain Engineering}), proceso hacia arriba que se enfoca en la
-        creación y el mantenimiento de los Activos Centrales, cuya tarea principal es el
-        modelado de la variabilidad para comprender y documentar todas las posibles
-        configuraciones que la línea puede soportar y que constituye la base teórica y
-        formal de la línea, y un segundo, la Ingeniería de la Aplicación (\textit{Application
-        Engineering}), el cual es el proceso hacia abajo que utiliza los Activos Centrales
-        para configurar y generar productos específicos, que implica tomar las
-        decisiones de variabilidad definidas en el modelo (seleccionar las opciones)
-        para producir una instancia concreta de la línea de productos. La herramienta
-        principal y estándar de facto para formalizar y gestionar la variabilidad durante
-        la Ingeniería del Dominio es el \ac{FM}.
-        Este modelo establece el puente formal entre las opciones de la línea de
-        productos y la capacidad de generar una instancia válida, lo cual es el principio
-        que se busca trasladar al diseño curricular.
-    }
-    \subsubepigraph{Modelos de Características}{
-
-        Es necesario contar con un modelo que represente de manera explícita las
-        variaciones y opciones disponibles en la línea de productos. Este modelo
-        debe ser capaz de capturar la complejidad de las relaciones entre las
-        características y sus variaciones, así como las restricciones que pueden
-        existir entre ellas \citep{pohl2005software}. La representación gráfica de estas relaciones es
-        fundamental para facilitar la comprensión y el análisis de la variabilidad
-        en la línea de productos.
-
-        El Modelo de Características (Feature Model - \ac{FM}) es la técnica de modelado
-        central en la Ingeniería de Líneas de Productos de Software. Su formalismo es
-        indispensable para pasar de la noción abstracta de variabilidad a una
-        representación estructurada y analizable \citep{ptc_feature_models}. Los Modelos de Características fueron formalmente
-        introducidos por Kang, et al. (1990) como parte de la metodología \ac{FODA}, un enfoque pionero para la ingeniería de dominios. Desde su concepción, un FM ha sido reconocido como el artefacto
-        primario para la captura de la variabilidad funcional de un sistema. En esencia,
-        un FM es un modelo de dominio que no solo documenta las posibles
-        funcionalidades, sino que también define las reglas de composición entre ellas
-        \citep{gfg_feature_engineering}.
+    \subepigraph{Conceptos asociados al tema}{
         
-        Formalmente, un Modelo de Características se define como un árbol de
-        decisiones jerárquico donde cada nodo es una característica (\textit{feature}). Una
-        característica se entiende como una unidad de funcionalidad, un requisito, o un
-        aspecto distintivo de un sistema, tal como es percibido por el usuario final o el
-        analista del dominio.
+        En este epígrafe se desglosan los conceptos esenciales que convergen en el
+        núcleo del estudio: desde los fundamentos literarios y el valor pedagógico de la
+        fábula, pasando por los desafíos y oportunidades de su digitalización, hasta los
+        sistemas tecnológicos diseñados para su gestión y análisis. La clarificación de
+        estos términos no solo delimita el campo de acción, sino que también
+        proporciona el lenguaje común y la base teórica necesaria para el diseño de
+        una solución coherente y efectiva.
 
-        La estructura del FM es un árbol de composición, donde:
-        \begin{itemize}
-            \item La Característica Raíz representa el sistema o la Línea de Producto
-            completa (ej., la carrera de Ingeniería Informática).
-            \item Las características descendientes detallan la composición de sus
-            características padre hasta alcanzar las características hoja, que son las
-            unidades más pequeñas y configurables.
-        \end{itemize}
+        \subsubepigraph{Ingeniería de Líneas de Productos de Software (SPL)}{
 
-        \unnumberedsubsection{Relaciones estructurales}
-        La potencia del FM reside en su notación gráfica concisa, la cual utiliza la
-        posición y símbolos específicos para codificar las restricciones de
-        configuración. Las relaciones entre una característica padre y sus hijos definen
-        las decisiones de inclusión o exclusión:
+            La Ingeniería de \ac{SPL} es una estrategia de
+            ingeniería de software que busca producir familias de sistemas de software
+            similares a partir de un conjunto común de activos centrales mediante un
+            proceso gestionado de desarrollo y gestión de la variabilidad. El objetivo
+            principal es lograr la reutilización a gran escala, lo que se traduce en una reducción
+            de costos, menor tiempo de comercialización y mayor calidad de los
+            productos \citep{sgbuzz_lps}. El concepto de
+            \ac{SPL} surgió a finales de los años 90 como respuesta directa a la crisis de
+            productividad que enfrentaba la industria del software a pesar de las técnicas
+            de reutilización orientadas a objetos. La \ac{SPLE} formaliza una práctica que ya
+            existía intuitivamente en muchas empresas: construir un software base
+            (plataforma) para generar rápidamente múltiples productos similares con
+            variaciones controladas \citep{academialab_linea_productos}
 
-        \unnumberedsubsection{Restricciones (\textit{Cross-Tree})}
+            \unnumberedsubsection{Conceptos Clave de SPL:}
+            \begin{enumerate}
+                \item \textbf{Línea de Productos:} Es la familia completa de sistemas de software
+                que pueden ser generados. Representa el espacio de posibilidades
+                definido por el conjunto de activos.
+                \item \textbf{Activos Centrales (\textit{Core Assets}):} Son los componentes fundamentales
+                (código, arquitectura, modelos de diseño, documentación, planes de
+                prueba) diseñados específicamente para ser compartidos y reutilizados
+                en toda la línea. La inversión inicial en estos activos es clave para el
+                éxito de la estrategia.
+                \item \textbf{Variabilidad:} Es la propiedad esencial de una \ac{SPL}. Define la capacidad
+                de la línea para ser adaptada, personalizada o configurada para generar
+                productos específicos que satisfagan las necesidades particulares de un
+                cliente o escenario. La variabilidad es, en esencia, el conjunto de
+                diferencias controladas entre los productos posibles.
+                \item \textbf{Puntos de Variabilidad (\textit{Variability Points}):} Son las ubicaciones
+                explícitas dentro de los Activos Centrales donde se deben tomar
+                decisiones para configurar un producto. Estos puntos actúan como
+                "interruptores" o "opciones" que guían el proceso de personalización.
+            \end{enumerate}
 
-        Las relaciones jerárquicas son insuficientes para capturar todas las reglas de
-        negocio complejas. Por ello, los \ac{FM} permiten definir las restricciones cross-
-        tree (o restricciones transversales); que son reglas lógicas que definen
-        dependencias entre características que no están directamente conectadas en
-        la jerarquía padre-hijo del árbol de características. Su función es garantizar la
-        validez de una configuración al capturar las relaciones complejas del mundo
-        real que la estructura jerárquica por sí sola no puede expresar \citep{sundermann2023sat}.
+            La motivación detrás de la \ac{SPL} es fundamentalmente económica y técnica,
+            pues permite el ahorro de costos, ya que al compartir la gran mayoría de los
+            activos (entre el 70\% y 90\% del sistema), se evita la reimplementación del
+            mismo código y diseño para cada nuevo producto, además, provee de una reducción del tiempo de comercialización (\textit{Time-to-Market}) pues la creación de
+            un nuevo producto se reduce de un ciclo completo de desarrollo a un simple
+            proceso de configuración y ensamblaje de activos preexistentes y permite una
+            mejora de la calidad, pues como los activos centrales, al ser reutilizados y
+            probados en múltiples productos, alcanzan un nivel de madurez y robustez
+            superior al que podría lograrse en un desarrollo de producto único \citep{ingenieria_software_lps}.
 
-        Las dos formas más comunes y fundamentales son:
-        \begin{itemize}
-            \item \textbf{Requiere:} Esta restricción establece una dependencia de presencia. Si
-            una característica A requiere una característica B, entonces siempre que
-            A sea seleccionada en una configuración, B también debe estarlo. Porejemplo, en un modelo de características para un automóvil, la
-            característica "Navegación" puede requerir la característica "Pantalla
-            Táctil". Esta relación se modela en lógica proposicional como el
-            condicional $A \rightarrow B$ \citep{sundermann2023sat}.
-            \item \textbf{Excluye:} Esta restricción establece un conflicto o incompatibilidad. Si
-            una característica C excluye una característica D, entonces ambas no
-            pueden formar parte de la misma configuración. Por ejemplo, el motor
-            "Diésel" puede excluir la transmisión "Eléctrica" en un vehículo híbrido.
-            Su representación lógica es la negación de la conjunción: $\neg(C \land D)$
-            (Sundermann et al., 2023).
-        \end{itemize}
+            La \ac{SPL} opera a través de dos procesos interdependientes que deben
+            gestionarse de manera continua, siendo el primero de estos la Ingeniería del
+            Dominio (\textit{Domain Engineering}), proceso hacia arriba que se enfoca en la
+            creación y el mantenimiento de los Activos Centrales, cuya tarea principal es el
+            modelado de la variabilidad para comprender y documentar todas las posibles
+            configuraciones que la línea puede soportar y que constituye la base teórica y
+            formal de la línea, y un segundo, la Ingeniería de la Aplicación (\textit{Application
+            Engineering}), el cual es el proceso hacia abajo que utiliza los Activos Centrales
+            para configurar y generar productos específicos, que implica tomar las
+            decisiones de variabilidad definidas en el modelo (seleccionar las opciones)
+            para producir una instancia concreta de la línea de productos. La herramienta
+            principal y estándar de facto para formalizar y gestionar la variabilidad durante
+            la Ingeniería del Dominio es el \ac{FM}.
+            Este modelo establece el puente formal entre las opciones de la línea de
+            productos y la capacidad de generar una instancia válida, lo cual es el principio
+            que se busca trasladar al diseño curricular.
+        }
+        \subsubepigraph{Modelos de Características}{
 
-        \unnumberedsubsection{Semántica Formal y SAT Solvers}
+            Es necesario contar con un modelo que represente de manera explícita las
+            variaciones y opciones disponibles en la línea de productos. Este modelo
+            debe ser capaz de capturar la complejidad de las relaciones entre las
+            características y sus variaciones, así como las restricciones que pueden
+            existir entre ellas \citep{pohl2005software}. La representación gráfica de estas relaciones es
+            fundamental para facilitar la comprensión y el análisis de la variabilidad
+            en la línea de productos.
 
-        La semántica formal de un Modelo de Características proporciona un
-        significado matemático preciso a todos sus elementos (jerarquía, relaciones y
-        restricciones), lo que permite un análisis automático y libre de ambigüedades.
-        \begin{itemize}
-            \item \textbf{Traducción a Lógica Proposicional:} La base de la semántica formal es
-            la traducción de todo el FM a una fórmula en lógica proposicional. Cada
-            característica se representa como una variable proposicional (que puede
-            ser Verdadera o Falsa, indicando si está seleccionada o no). Las
-            relaciones padre-hijo y las restricciones cross-tree se convierten en una
-            serie de fórmulas lógicas que, en conjunto, definen el conjunto de todas
-            las configuraciones válidas \citep{sundermann2023sat}.
-            \item \textbf{Satisfacibilidad (\ac{SAT}) y \ac{SHARPSAT}:} Una vez el \ac{FM} está representado como
-            una fórmula lógica F, se pueden realizar diversos análisis:
-                \begin{itemize}
-                    \item \textbf{Análisis de \ac{SAT}:} Consiste en verificar si existe al menos una
-                    asignación de valores (Verdadero/Falso) a las variables que haga
-                    que la fórmula F sea verdadera. Esto responde a la pregunta
-                    fundamental de si el \ac{FM} tiene al menos una configuración válida
-                    \citep{sundermann2023sat}.
-                    \item \textbf{Análisis de \ac{SHARPSAT} (Model Counting):} Es el cálculo del número
-                    total de asignaciones que satisfacen F. Esto es crucial para determinar el número total de configuraciones válidas que
-                    define un \ac{FM}, una métrica esencial para comprender su
-                    variabilidad y complejidad \citep{sundermann2023sat}.
-                \end{itemize}
-            \item \textbf{SAT Solvers:} Un SAT solver es una herramienta algorítmica altamente
-            optimizada diseñada para resolver problemas de satisfacibilidad. Dada
-            una fórmula F, el solver determina si es satisfacible (SAT) o insatisfacible
-            (UNSAT). Para el análisis de \ac{SHARPSAT}, se emplean \ac{SHARPSAT} solvers
-            especializados, como sharpSAT y Ganak, que han demostrado un
-            rendimiento excelente al calcular el número de configuraciones en
-            modelos industriales \citep{sundermann2023sat, soos2024ganak}.
-        \end{itemize}
+            El Modelo de Características (\textit{Feature Model} - \ac{FM}) es la técnica de modelado
+            central en la Ingeniería de Líneas de Productos de Software. Su formalismo es
+            indispensable para pasar de la noción abstracta de variabilidad a una
+            representación estructurada y analizable \citep{ptc_feature_models}. Los Modelos de Características fueron formalmente
+            introducidos por \citet{kang1990foda} como parte de la metodología \ac{FODA}, un enfoque pionero para la ingeniería de dominios. Desde su concepción, un \ac{FM} ha sido reconocido como el artefacto
+            primario para la captura de la variabilidad funcional de un sistema. En esencia,
+            un \ac{FM} es un modelo de dominio que no solo documenta las posibles
+            funcionalidades, sino que también define las reglas de composición entre ellas
+            \citep{gfg_feature_engineering}.
+            
+            Formalmente, un Modelo de Características se define como un árbol de
+            decisiones jerárquico donde cada nodo es una característica (\textit{feature}). Una
+            característica se entiende como una unidad de funcionalidad, un requisito, o un
+            aspecto distintivo de un sistema, tal como es percibido por el usuario final o el
+            analista del dominio.
+
+            La estructura del \ac{FM} es un árbol de composición, donde:
+            \begin{itemize}
+                \item La Característica Raíz representa el sistema o la Línea de Producto
+                completa (ej., la carrera de Ingeniería Informática).
+                \item Las características descendientes detallan la composición de sus
+                características padre hasta alcanzar las características hoja, que son las
+                unidades más pequeñas y configurables.
+            \end{itemize}
+
+            \unnumberedsubsection{Relaciones estructurales}
+            La potencia del \ac{FM} reside en su notación gráfica concisa, la cual utiliza la
+            posición y símbolos específicos para codificar las restricciones de
+            configuración. Las relaciones entre una característica padre y sus hijos definen
+            las decisiones de inclusión o exclusión:\ref{tab:metodologias}
+                        
+            \begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
+                \caption{Comparación, Metodología Ágil VS Metodología Tradicional \label{tab:metodologias}\\
+                
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Parámetros} & \textbf{Metodologías Ágiles} & \textbf{Metodologías Tradicionales} \\
+                \hline
+                \endfirsthead
+                
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Parámetros} & \textbf{Metodologías Ágiles} & \textbf{Metodologías Tradicionales} \\
+                \hline
+                \endhead
+                
+                % Cuerpo de la tabla
+                Acercamiento & Adaptivo & Predictivo \\ 
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                Medición del objetivo & Valor para el negocio & Conformación del plan \\ 
+                \hline
+                Tamaño del proyecto & Pequeño & Largo \\ 
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                Tipo de administración & Descentralizado & Autocrático \\ 
+                \hline
+                Perspectiva de cambios & Adaptable a cambio & Sostenible al cambio \\ 
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                Cultura del equipo & Liderazgo\textbackslash Colaboración & Comandada\textbackslash Controlada \\ 
+                \hline
+                Documentación & Baja & Pesada \\ 
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                Orientada & Personas & Procesos \\ 
+                \hline
+                Ciclos de desarrollo & Numerosos & Limitados \\ 
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                Dominio de desarrollo & Impredecibles & Predecibles \\ 
+                \hline
+                Planificación inicial & Mínima & Comprensiva \\ 
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                Retorno de la inversión & Temprano en el proyecto & Al final del proyecto \\ 
+                \hline
+                Tamaño del equipo & Pequeño & Grande \\ 
+                \hline
+            \end{longtable}
+
+            \unnumberedsubsection{Restricciones (\textit{Cross-Tree})}
+
+            Las relaciones jerárquicas son insuficientes para capturar todas las reglas de
+            negocio complejas. Por ello, los \ac{FM} permiten definir las restricciones transversales (\textit{cross-tree}); que son reglas lógicas que definen
+            dependencias entre características que no están directamente conectadas en
+            la jerarquía padre-hijo del árbol de características. Su función es garantizar la
+            validez de una configuración al capturar las relaciones complejas del mundo
+            real que la estructura jerárquica por sí sola no puede expresar \citep{sundermann2023sat}.
+
+            Las dos formas más comunes y fundamentales son:
+            \begin{itemize}
+                \item \textbf{Requiere:} Esta restricción establece una dependencia de presencia. Si
+                una característica A requiere una característica B, entonces siempre que
+                A sea seleccionada en una configuración, B también debe estarlo. Porejemplo, en un modelo de características para un automóvil, la
+                característica "Navegación" puede requerir la característica "Pantalla
+                Táctil". Esta relación se modela en lógica proposicional como el
+                condicional $A \rightarrow B$ \citep{sundermann2023sat}.
+                \item \textbf{Excluye:} Esta restricción establece un conflicto o incompatibilidad. Si
+                una característica C excluye una característica D, entonces ambas no
+                pueden formar parte de la misma configuración. Por ejemplo, el motor
+                "Diésel" puede excluir la transmisión "Eléctrica" en un vehículo híbrido.
+                Su representación lógica es la negación de la conjunción: $\neg(C \land D)$
+                \citep{sundermann2023sat}.
+            \end{itemize}
+
+            \unnumberedsubsection{Semántica Formal y Solucionadores SAT (\textit{SAT Solvers})}
+
+            La semántica formal de un Modelo de Características proporciona un
+            significado matemático preciso a todos sus elementos (jerarquía, relaciones y
+            restricciones), lo que permite un análisis automático y libre de ambigüedades.
+            \begin{itemize}
+                \item \textbf{Traducción a Lógica Proposicional:} La base de la semántica formal es
+                la traducción de todo el \ac{FM} a una fórmula en lógica proposicional. Cada
+                característica se representa como una variable proposicional (que puede
+                ser Verdadera o Falsa, indicando si está seleccionada o no). Las
+                relaciones padre-hijo y las restricciones cross-tree se convierten en una
+                serie de fórmulas lógicas que, en conjunto, definen el conjunto de todas
+                las configuraciones válidas \citep{sundermann2023sat}.
+                \item \textbf{Satisfacibilidad (\ac{SAT}) y \ac{SHARPSAT}:} Una vez el \ac{FM} está representado como
+                una fórmula lógica F, se pueden realizar diversos análisis:
+                    \begin{itemize}
+                        \item \textbf{Análisis de \ac{SAT}:} Consiste en verificar si existe al menos una
+                        asignación de valores (Verdadero/Falso) a las variables que haga
+                        que la fórmula F sea verdadera. Esto responde a la pregunta
+                        fundamental de si el \ac{FM} tiene al menos una configuración válida
+                        \citep{sundermann2023sat}.
+                        \item \textbf{Análisis de \ac{SHARPSAT}:} Consiste en el conteo de modelos (\textit{Model Counting}) que
+                        satisfacen F. Esto es crucial para determinar el número total de configuraciones válidas que
+                        define un \ac{FM}, una métrica esencial para comprender su
+                        variabilidad y complejidad \citep{sundermann2023sat}.
+                    \end{itemize}
+                \item \textbf{Solucionadores SAT (\textit{SAT solvers}):} Un solucionador SAT (\textit{SAT solver}) es una herramienta algorítmica altamente
+                optimizada diseñada para resolver problemas de satisfacibilidad. Dada
+                una fórmula F, el solucionador (\textit{solver}) determina si es satisfacible (\ac{SAT}) o insatisfacible
+                (UNSAT). Para el análisis de \ac{SHARPSAT}, se emplean solucionadores especializados de conteo de modelos (\textit{\#SAT solvers})
+                como sharpSAT y Ganak, que han demostrado un
+                rendimiento excelente al calcular el número de configuraciones en
+                modelos industriales \citep{sundermann2023sat, soos2024ganak}.
+            \end{itemize}
+            
+        }
+
+        \subsubepigraph{Meta-modelo Educativo}{
+
+            Un Meta-modelo Educativo es un modelo de alto nivel que define los
+            conceptos, las relaciones y las restricciones necesarias para especificar, de
+            manera formal y estandarizada, cómo se deben diseñar aplicaciones de
+            software educativo \citep{estrada2022metamodelo}. Su propósito fundamental
+            es servir como un andamiaje conceptual que garantiza la inclusión de criterios
+            esenciales —como la usabilidad y el conocimiento pedagógico— que, de otro
+            modo, podrían omitirse en el proceso de desarrollo, dando como resultado
+            herramientas educativas más robustas, eficaces y fáciles de usar \citep{estrada_metamodelo_repo}.
+            
+            A diferencia de un modelo educativo, que se enfoca en métodos de enseñanza
+            y relaciones en el aula, un meta-modelo opera en un nivel de abstracción
+            superior. Mientras un modelo educativo podría ser, por ejemplo, el Modelo de
+            Transformación Académica (\ac{META}) que se centra en competencias y el trabajo
+            autónomo del alumno \citep{hernandez2019meta}, un meta-modelo educativo
+            define el lenguaje y las reglas para crear dichos modelos y, crucialmente, para
+            traducirlos a artefactos de software concretos \citep{estrada2022metamodelo}.
         
-    }
-
-    \subsubepigraph{Meta-modelo Educativo}{
-
-        Un Meta-modelo Educativo es un modelo de alto nivel que define los
-        conceptos, las relaciones y las restricciones necesarias para especificar, de
-        manera formal y estandarizada, cómo se deben diseñar aplicaciones de
-        software educativo \citep{estrada2022metamodelo}. Su propósito fundamental
-        es servir como un andamiaje conceptual que garantiza la inclusión de criterios
-        esenciales —como la usabilidad y el conocimiento pedagógico— que, de otro
-        modo, podrían omitirse en el proceso de desarrollo, dando como resultado
-        herramientas educativas más robustas, eficaces y fáciles de usar \citep{estrada_metamodelo_repo}.
+            La necesidad de un meta-modelo surge de problemas recurrentes en el diseño
+            de software educativo, donde a menudo se carece de:
+            \begin{itemize}
+                \item Recursos para soportar el trabajo colaborativo.
+                \item Estrategias efectivas para la retroalimentación de las acciones del estudiante.
+                \item Sistemas de ayuda para capacitar a usuarios sin experiencia \citep{estrada_metamodelo_repo}.
+            \end{itemize}
         
-        A diferencia de un modelo educativo, que se enfoca en métodos de enseñanza
-        y relaciones en el aula, un meta-modelo opera en un nivel de abstracción
-        superior. Mientras un modelo educativo podría ser, por ejemplo, el Modelo de
-        Transformación Académica (\ac{META}) que se centra en competencias y el trabajo
-        autónomo del alumno \citep{hernandez2019meta}, un meta-modelo educativo
-        define el lenguaje y las reglas para crear dichos modelos y, crucialmente, para
-        traducirlos a artefactos de software concretos \citep{estrada2022metamodelo}.
-     
-        La necesidad de un meta-modelo surge de problemas recurrentes en el diseño
-        de software educativo, donde a menudo se carece de:
-        \begin{itemize}
-            \item Recursos para soportar el trabajo colaborativo.
-            \item Estrategias efectivas para la retroalimentación de las acciones del estudiante.
-            \item Sistemas de ayuda para capacitar a usuarios sin experiencia \citep{estrada_metamodelo_repo}.
-        \end{itemize}
-    
-        Al definir formalmente estos elementos y sus interrelaciones, tu meta-modelo
-        se convierte en la columna vertebral de tu backend. Este permite que el
-        sistema no solo almacene información, sino que comprenda y procese la lógica
-        fundamental de la variabilidad curricular, asegurando que todas las
-        configuraciones generadas sean pedagógicamente sólidas y estructuralmente
-        consistentes.
+            Al definir formalmente estos elementos y sus interrelaciones, tu meta-modelo
+            se convierte en la columna vertebral de tu servidor (\textit{backend}). Este permite que el
+            sistema no solo almacene información, sino que comprenda y procese la lógica
+            fundamental de la variabilidad curricular, asegurando que todas las
+            configuraciones generadas sean pedagógicamente sólidas y estructuralmente
+            consistentes.
 
-        La literatura plantea que se puede estructurar un meta-modelo alrededor de los
-        siguientes componentes \citep{estrada2022metamodelo}:
-        \begin{itemize}
-            \item Conceptos: Las entidades fundamentales (asignatura, competencia, modalidad, estilo de aprendizaje).
-            \item Atributos: Las propiedades que caracterizan a cada concepto (nombre, créditos, obligatoriedad).
-            \item Relaciones Estructurales y Dinámicas: Cómo se vinculan los conceptos entre sí (prerrequisito de, parte de, excluye a).
-            \item Restricciones: Reglas de integridad que garantizan la validez del modelo 
-            (ejemplo: "una asignatura optativa no puede ser prerrequisito de más de tres asignaturas obligatorias").
-        \end{itemize}
+            La literatura plantea que se puede estructurar un meta-modelo alrededor de los
+            siguientes componentes \citep{estrada2022metamodelo}:
+            \begin{itemize}
+                \item Conceptos: Las entidades fundamentales (asignatura, competencia, modalidad, estilo de aprendizaje).
+                \item Atributos: Las propiedades que caracterizan a cada concepto (nombre, créditos, obligatoriedad).
+                \item Relaciones Estructurales y Dinámicas: Cómo se vinculan los conceptos entre sí (prerrequisito de, parte de, excluye a).
+                \item Restricciones: Reglas de integridad que garantizan la validez del modelo 
+                (ejemplo: "una asignatura optativa no puede ser prerrequisito de más de tres asignaturas obligatorias").
+            \end{itemize}
 
-    }
+        }
 
-    \subsubepigraph{Gestión de la variabilidad}{
+        \subsubepigraph{Gestión de la variabilidad}{
 
-        La variabilidad es un principio fundamental en los procesos de aprendizaje, que
-        postula que las diferencias individuales entre los estudiantes no son
-        excepciones, sino la regla en cualquier entorno educativo \citep{rose2007udl}.
-        Este concepto rompe con el paradigma de un "alumno promedio" y
-        reconoce que cada estudiante es una combinación única de fortalezas,
-        desafíos e intereses que están interconectados en todo su ser \citep{cast2018udl}.
+            La variabilidad es un principio fundamental en los procesos de aprendizaje, que
+            postula que las diferencias individuales entre los estudiantes no son
+            excepciones, sino la regla en cualquier entorno educativo \citep{rose2007udl}.
+            Este concepto rompe con el paradigma de un "alumno promedio" y
+            reconoce que cada estudiante es una combinación única de fortalezas,
+            desafíos e intereses que están interconectados en todo su ser \citep{cast2018udl}.
 
-        Desde una perspectiva cognitiva, la variabilidad no es un obstáculo, sino un
-        recurso de aprendizaje esencial. Según la revisión de más de 150 estudios
-        analizada por \citet{raviv2022variability}, la exposición a estímulos
-        variables conduce a una mejor capacidad para generalizar el conocimiento.
-        Este principio se manifiesta en diferentes dimensiones del aprendizaje:
-        \begin{itemize}
-            \item En el aprendizaje conceptual: Para que un estudiante comprenda
-            verdaderamente una categoría (como "mamífero"), es crucial que se
-            enfrente a ejemplos diversos y heterogéneos (diferentes tipos de
-            mamíferos), lo que le permite identificar las características relevantes y
-            esenciales, filtrando las irrelevantes \citep{raviv2022variability}.
-            \item En el desarrollo de habilidades: La Hipótesis de la Variabilidad, originada
-            de la Teoría del Esquema Motor de Schmidt (1975), postula que una
-            práctica abundante y variada enriquece los esquemas motores generales. 
-            Esto le otorga a la persona una amplitud de respuesta para
-            adaptarse y resolver problemas en diferentes escenarios y contextos \citep{schmidt1975schema}.
-        \end{itemize}
+            Desde una perspectiva cognitiva, la variabilidad no es un obstáculo, sino un
+            recurso de aprendizaje esencial. Según la revisión de más de 150 estudios
+            analizada por \citet{raviv2022variability}, la exposición a estímulos
+            variables conduce a una mejor capacidad para generalizar el conocimiento.
+            Este principio se manifiesta en diferentes dimensiones del aprendizaje:
+            \begin{itemize}
+                \item En el aprendizaje conceptual: Para que un estudiante comprenda
+                verdaderamente una categoría (como "mamífero"), es crucial que se
+                enfrente a ejemplos diversos y heterogéneos (diferentes tipos de
+                mamíferos), lo que le permite identificar las características relevantes y
+                esenciales, filtrando las irrelevantes \citep{raviv2022variability}.
+                \item En el desarrollo de habilidades: La Hipótesis de la Variabilidad, originada
+                de la Teoría del Esquema Motor de Schmidt (1975), postula que una
+                práctica abundante y variada enriquece los esquemas motores generales. 
+                Esto le otorga a la persona una amplitud de respuesta para
+                adaptarse y resolver problemas en diferentes escenarios y contextos \citep{schmidt1975schema}.
+            \end{itemize}
 
-        La implicación pedagógica central es que un enfoque educativo uniforme, que
-        no considera esta diversidad intrínseca, inevitablemente desatiende a la
-        mayoría de los estudiantes \citep{rose2007udl}. Abrazar la variabilidad
-        significa, por tanto, crear experiencias de aprendizaje que sean personales y
-        significativas para esta diversidad de perfiles \citep{cast2018udl}.
+            La implicación pedagógica central es que un enfoque educativo uniforme, que
+            no considera esta diversidad intrínseca, inevitablemente desatiende a la
+            mayoría de los estudiantes \citep{rose2007udl}. Abrazar la variabilidad
+            significa, por tanto, crear experiencias de aprendizaje que sean personales y
+            significativas para esta diversidad de perfiles \citep{cast2018udl}.
 
-        La gestión de la variabilidad es el conjunto de procesos, estrategias y acciones
-        deliberadas diseñadas para optimizar el funcionamiento de las instituciones
-        educativas, planificando, organizando, dirigiendo y controlando los recursos
-        con el objetivo explícito de responder a la diversidad del alumnado y alcanzar
-        metas pedagógicas de calidad \citep{weinstein2002liderazgo}.
+            La gestión de la variabilidad es el conjunto de procesos, estrategias y acciones
+            deliberadas diseñadas para optimizar el funcionamiento de las instituciones
+            educativas, planificando, organizando, dirigiendo y controlando los recursos
+            con el objetivo explícito de responder a la diversidad del alumnado y alcanzar
+            metas pedagógicas de calidad \citep{weinstein2002liderazgo}.
 
-        Esta gestión no es una tarea única, sino una función que se despliega en varias
-        dimensiones interdependientes \citep{weinstein2002liderazgo}:
-        \begin{itemize}
-            \item Gestión Pedagógica: Se enfoca en el núcleo del proceso de enseñanza-
-            aprendizaje. Implica diseñar planes y programas académicos que se
-            ajusten a las necesidades y características de los estudiantes,
-            fomentando la innovación en metodologías y la implementación de
-            evaluaciones formativas.
-            \item  Gestión Administrativa: Asegura una administración eficiente de los
-            recursos humanos, materiales y financieros, creando las condiciones
-            operativas y de infraestructura necesarias para un entorno propicio para
-            el desarrollo de todos los estudiantes.
-            \item  Gestión Comunitaria: Busca fortalecer los lazos entre la institución
-            educativa, las familias y el entorno social, fomentando un ambiente
-            inclusivo y de convivencia positiva que es fundamental para el
-            aprendizaje.
-        \end{itemize}
+            Esta gestión no es una tarea única, sino una función que se despliega en varias
+            dimensiones interdependientes \citep{weinstein2002liderazgo}:
+            \begin{itemize}
+                \item Gestión Pedagógica: Se enfoca en el núcleo del proceso de enseñanza-
+                aprendizaje. Implica diseñar planes y programas académicos que se
+                ajusten a las necesidades y características de los estudiantes,
+                fomentando la innovación en metodologías y la implementación de
+                evaluaciones formativas.
+                \item  Gestión Administrativa: Asegura una administración eficiente de los
+                recursos humanos, materiales y financieros, creando las condiciones
+                operativas y de infraestructura necesarias para un entorno propicio para
+                el desarrollo de todos los estudiantes.
+                \item  Gestión Comunitaria: Busca fortalecer los lazos entre la institución
+                educativa, las familias y el entorno social, fomentando un ambiente
+                inclusivo y de convivencia positiva que es fundamental para el
+                aprendizaje.
+            \end{itemize}
 
-        Para que esta gestión sea efectiva, la literatura especializada identifica factores
-        críticos. Según \citet{weinstein2002liderazgo}, entre ellos se encuentran un liderazgo
-        legitimado, un sentido de misión compartido, un clima de convivencia positivo y 
-        procesos de planificación participativa. La ausencia de un liderazgo efectivo y
-        de herramientas modernas de gestión se cuenta entre los factores que afectan
-        negativamente los resultados de las organizaciones educativas \citep{weinstein2002liderazgo}.
-    }
+            Para que esta gestión sea efectiva, la literatura especializada identifica factores
+            críticos. Según \citet{weinstein2002liderazgo}, entre ellos se encuentran un liderazgo
+            legitimado, un sentido de misión compartido, un clima de convivencia positivo y 
+            procesos de planificación participativa. La ausencia de un liderazgo efectivo y
+            de herramientas modernas de gestión se cuenta entre los factores que afectan
+            negativamente los resultados de las organizaciones educativas \citep{weinstein2002liderazgo}.
+        }
 
-    \subsubepigraph{Ingeniería de Software Educativo}{
+        \subsubepigraph{Ingeniería de Software Educativo}{
 
-        La Ingeniería de Software es una disciplina que aplica principios y métodos
-        sistemáticos para el desarrollo, operación y mantenimiento de software de
-        calidad \citep{sommerville2016se}. A diferencia de la programación individual, esta
-        disciplina se enfoca en la aplicación de un enfoque de ingeniería para construir
-        software confiable y eficiente que satisfaga los requisitos del usuario,
-        considerando restricciones de tiempo y presupuesto \citep{pressman2014se}.
+            La Ingeniería de Software es una disciplina que aplica principios y métodos
+            sistemáticos para el desarrollo, operación y mantenimiento de software de
+            calidad \citep{sommerville2016se}. A diferencia de la programación individual, esta
+            disciplina se enfoca en la aplicación de un enfoque de ingeniería para construir
+            software confiable y eficiente que satisfaga los requisitos del usuario,
+            considerando restricciones de tiempo y presupuesto \citep{pressman2014se}.
 
-        La ingeniería de software establece un marco metodológico que abarca todo el
-        ciclo de vida del desarrollo, desde la captura de requisitos hasta el
-        mantenimiento del producto final, garantizando la calidad mediante procesos
-        estandarizados y mejores prácticas validadas \citep{ieee_glossary_2014}.
-        
-        El Software Educativo se define como cualquier programa computacional cuyo
-        propósito principal es apoyar el proceso de enseñanza-aprendizaje, facilitando
-        la adquisición de conocimientos o desarrollo de habilidades específicas \citep{bates2019teaching}. Este tipo de software se caracteriza por su intencionalidad pedagógica
-        explícita, distinguiéndose del software de propósito general por su diseño
-        centrado en objetivos educativos concretos \citep{bates2019teaching}.
+            La ingeniería de software establece un marco metodológico que abarca todo el
+            ciclo de vida del desarrollo, desde la captura de requisitos hasta el
+            mantenimiento del producto final, garantizando la calidad mediante procesos
+            estandarizados y mejores prácticas validadas \citep{ieee_glossary_2014}.
+            
+            El Software Educativo se define como cualquier programa computacional cuyo
+            propósito principal es apoyar el proceso de enseñanza-aprendizaje, facilitando
+            la adquisición de conocimientos o desarrollo de habilidades específicas \citep{bates2019teaching}. Este tipo de software se caracteriza por su intencionalidad pedagógica
+            explícita, distinguiéndose del software de propósito general por su diseño
+            centrado en objetivos educativos concretos \citep{bates2019teaching}.
 
-        La efectividad del software educativo depende críticamente de la integración de
-        principios instruccionales sólidos en su diseño, asegurando que no solo sea
-        tecnológicamente robusto, sino también pedagógicamente sound \citep{mishra2006tpack}. 
-        La investigación ha demostrado que el software educativo bien
-        diseñado puede mejorar significativamente los resultados de aprendizaje
-        cuando se alinea con estrategias pedagógicas apropiadas \citep{hattie2009visible}.
+            La efectividad del software educativo depende críticamente de la integración de
+            principios instruccionales sólidos en su diseño, asegurando que no solo sea
+            tecnológicamente robusto, sino también pedagógicamente sólido \citep{mishra2006tpack}. 
+            La investigación ha demostrado que el software educativo bien
+            diseñado puede mejorar significativamente los resultados de aprendizaje
+            cuando se alinea con estrategias pedagógicas apropiadas \citep{hattie2009visible}.
 
-        La Ingeniería de Software Educativo emerge como la intersección disciplinaria
-        que aplica los principios de la ingeniería de software al dominio específico del
-        desarrollo de software educativo \citep{sommerville2016se, bates2019teaching}. 
-        Esta integración es crucial porque combina el rigor técnico de la ingeniería de
-        software con la fundamentación pedagógica necesaria para crear herramientas
-        educativas efectivas \citep{mishra2006tpack}.
-        
-        El desafío central en esta disciplina híbrida reside en equilibrar los requisitos técnicos 
-        (rendimiento, confiabilidad, mantenibilidad) con los requisitos
-        pedagógicos (valor educativo, adecuación al nivel del estudiante, alineamiento
-        con objetivos de aprendizaje) \citep{bates2019teaching}. El modelo TPACK 
-        (Conocimiento Tecnológico Pedagógico del Contenido) enfatiza la necesidad de esta
-        integración, argumentando que la tecnología educativa efectiva requiere una
-        comprensión profunda de cómo la tecnología, la pedagogía y el contenido se
-        interrelacionan \citep{mishra2006tpack}.
+            La Ingeniería de Software Educativo emerge como la intersección disciplinaria
+            que aplica los principios de la ingeniería de software al dominio específico del
+            desarrollo de software educativo \citep{sommerville2016se, bates2019teaching}. 
+            Esta integración es crucial porque combina el rigor técnico de la ingeniería de
+            software con la fundamentación pedagógica necesaria para crear herramientas
+            educativas efectivas \citep{mishra2006tpack}.
+            
+            El desafío central en esta disciplina híbrida reside en equilibrar los requisitos técnicos 
+            (rendimiento, confiabilidad, mantenibilidad) con los requisitos
+            pedagógicos (valor educativo, adecuación al nivel del estudiante, alineamiento
+            con objetivos de aprendizaje) \citep{bates2019teaching}. El modelo TPACK (\ac{TPACK})
+            enfatiza la necesidad de esta
+            integración, argumentando que la tecnología educativa efectiva requiere una
+            comprensión profunda de cómo la tecnología, la pedagogía y el contenido se
+            interrelacionan \citep{mishra2006tpack}.
 
-        En el contexto de la investigación, la Ingeniería de Software Educativo
-        proporciona el marco metodológico para desarrollar un backend que no solo
-        sea técnicamente robusto, sino también pedagógicamente fundamentado,
-        capaz de gestionar la variabilidad curricular de manera que respete los
-        principios de diseño instruccional y promueva experiencias de aprendizaje
-        significativas.
-    }
+            En el contexto de la investigación, la Ingeniería de Software Educativo
+            proporciona el marco metodológico para desarrollar un servidor (\textit{backend}) que no solo
+            sea técnicamente robusto, sino también pedagógicamente fundamentado,
+            capaz de gestionar la variabilidad curricular de manera que respete los
+            principios de diseño instruccional y promueva experiencias de aprendizaje
+            significativas.
+        }
 
-    \subsubepigraph{Configurador curricular}{
-        En el contexto de las Líneas de Productos de Software (\ac{SPL}), la configuración
-        se refiere al proceso sistemático de seleccionar un conjunto específico de
-        características de un Modelo de Características para derivar un producto
-        individual que satisfaga requisitos particulares \citep{apel2013feature}. Este proceso
-        implica tomar decisiones de configuración que respeten todas las restricciones
-        definidas en el modelo, asegurando que la selección final de características sea
-        válida y consistente \citep{benavides2010automated}.
+        \subsubepigraph{Configurador curricular}{
+            En el contexto de las Líneas de Productos de Software (\ac{SPL}), la configuración
+            se refiere al proceso sistemático de seleccionar un conjunto específico de
+            características de un Modelo de Características para derivar un producto
+            individual que satisfaga requisitos particulares \citep{apel2013feature}. Este proceso
+            implica tomar decisiones de configuración que respeten todas las restricciones
+            definidas en el modelo, asegurando que la selección final de características sea
+            válida y consistente \citep{benavides2010automated}.
 
-        La configuración en \ac{SPL} se caracteriza por ser un proceso guiado por
-        restricciones donde las dependencias entre características (mandatorias,
-        opcionales, alternativas) y las restricciones cross-tree (requiere, excluye)
-        determinan el espacio de configuraciones posibles \citep{chen2020variability}. La
-        complejidad de este proceso aumenta exponencialmente con el tamaño del
-        modelo, haciendo necesario el uso de herramientas automatizadas para garantizar 
-        la corrección de las configuraciones generadas \citep{benavides2010automated}.
+            La configuración en \ac{SPL} se caracteriza por ser un proceso guiado por
+            restricciones donde las dependencias entre características (mandatorias,
+            opcionales, alternativas) y las restricciones cross-tree (requiere, excluye)
+            determinan el espacio de configuraciones posibles \citep{chen2020variability}. La
+            complejidad de este proceso aumenta exponencialmente con el tamaño del
+            modelo, haciendo necesario el uso de herramientas automatizadas para garantizar 
+            la corrección de las configuraciones generadas \citep{benavides2010automated}.
 
-        La planificación curricular es el proceso de diseño y organización sistemática
-        de los elementos que constituyen un plan de estudios, incluyendo objetivos de
-        aprendizaje, contenidos, actividades educativas y criterios de evaluación
-        \citep{unesco2022}. Tradicionalmente, este proceso ha sido realizado de manera
-        manual por comités académicos, utilizando documentos estáticos y hojas de
-        cálculo que dificultan la gestión de la complejidad y variabilidad inherentes a los
-        programas educativos modernos \citep{sanchez2020metodologia}.
+            La planificación curricular es el proceso de diseño y organización sistemática
+            de los elementos que constituyen un plan de estudios, incluyendo objetivos de
+            aprendizaje, contenidos, actividades educativas y criterios de evaluación
+            \citep{unesco2022}. Tradicionalmente, este proceso ha sido realizado de manera
+            manual por comités académicos, utilizando documentos estáticos y hojas de
+            cálculo que dificultan la gestión de la complejidad y variabilidad inherentes a los
+            programas educativos modernos \citep{sanchez2020metodologia}.
 
-        Los desafíos en la planificación curricular contemporánea incluyen la necesidad
-        de crear trayectorias formativas personalizadas que respondan a diferentes
-        perfiles estudiantiles y demandas del mercado laboral, manteniendo al mismo
-        tiempo la consistencia académica y el cumplimiento de los estándares de
-        calidad educativa \citep{rodriguez2019gestion_curricular}. La gestión manual de estas
-        complejidades resulta en procesos lentos, propensos a errores y difíciles de
-        mantener \citep{sanchez2020metodologia}.
+            Los desafíos en la planificación curricular contemporánea incluyen la necesidad
+            de crear trayectorias formativas personalizadas que respondan a diferentes
+            perfiles estudiantiles y demandas del mercado laboral, manteniendo al mismo
+            tiempo la consistencia académica y el cumplimiento de los estándares de
+            calidad educativa \citep{rodriguez2019gestion_curricular}. La gestión manual de estas
+            complejidades resulta en procesos lentos, propensos a errores y difíciles de
+            mantener \citep{sanchez2020metodologia}.
 
-        Un Configurador Curricular es una herramienta especializada que aplica los
-        principios de configuración de \ac{SPL} al dominio de la planificación educativa, permitiendo 
-        la generación semi-automatizada de planes de estudio
-        personalizados a partir de un modelo base que captura la variabilidad curricular
-        \citep{sanchez2020metodologia}. Este sistema opera como un motor de decisiones
-        académicas que guía al usuario (gestor académico, coordinador de programa)
-        a través del espacio de configuraciones válidas, garantizando que el plan de
-        estudio resultante cumpla con todas las restricciones pedagógicas y
-        administrativas \citep{chen2020variability}.
+            Un Configurador Curricular es una herramienta especializada que aplica los
+            principios de configuración de \ac{SPL} al dominio de la planificación educativa, permitiendo 
+            la generación semi-automatizada de planes de estudio
+            personalizados a partir de un modelo base que captura la variabilidad curricular
+            \citep{sanchez2020metodologia}. Este sistema opera como un motor de decisiones
+            académicas que guía al usuario (gestor académico, coordinador de programa)
+            a través del espacio de configuraciones válidas, garantizando que el plan de
+            estudio resultante cumpla con todas las restricciones pedagógicas y
+            administrativas \citep{chen2020variability}.
 
-        El valor fundamental de un configurador curricular reside en su capacidad para
-        reducir la complejidad del diseño curricular mediante la aplicación de
-        restricciones formales que previenen configuraciones inválidas \citep{rodriguez2019gestion_curricular}. 
-        Por ejemplo, el sistema puede asegurar automáticamente que:
-        \begin{itemize}
-            \item Se cumplan todos los prerrequisitos entre asignaturas
-            \item Se respeten los límites de créditos por semestre
-            \item Se mantenga la coherencia entre las competencias a desarrollar y las asignaturas seleccionadas
-            \item Se eviten conflictos de horario y sobrecarga académica
-        \end{itemize}
-        
-        En el contexto de la investigación, el desarrollo del backend para un
-        configurador curricular representa la materialización técnica de este concepto,
-        proporcionando la lógica de negocio, el motor de reglas y los servicios
-        necesarios para soportar el proceso de configuración curricular de manera
-        robusta, escalable y consistente.
-    }
-}}
+            El valor fundamental de un configurador curricular reside en su capacidad para
+            reducir la complejidad del diseño curricular mediante la aplicación de
+            restricciones formales que previenen configuraciones inválidas \citep{rodriguez2019gestion_curricular}. 
+            Por ejemplo, el sistema puede asegurar automáticamente que:
+            \begin{itemize}
+                \item Se cumplan todos los prerrequisitos entre asignaturas
+                \item Se respeten los límites de créditos por semestre
+                \item Se mantenga la coherencia entre las competencias a desarrollar y las asignaturas seleccionadas
+                \item Se eviten conflictos de horario y sobrecarga académica
+            \end{itemize}
+            
+            En el contexto de la investigación, el desarrollo del servidor (\textit{backend}) para un
+            configurador curricular representa la materialización técnica de este concepto,
+            proporcionando la lógica de negocio, el motor de reglas y los servicios
+            necesarios para soportar el proceso de configuración curricular de manera
+            robusta, escalable y consistente.
+        }
+}
+}

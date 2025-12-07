@@ -1,197 +1,76 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[{AcademiaLab}()]{academialab_linea_productos}
-{AcademiaLab}.
-\newblock Línea de productos de software.
-\newblock URL
-  \url{https://academia-lab.com/enciclopedia/linea-de-productos-de-software/}.
+\bibitem[{Anthology Inc.}(2025)]{blackboard2025overview}
+{Anthology Inc.}
+\newblock Blackboard learn: Plataforma para la enseñanza y el aprendizaje, 2025.
+\newblock URL \url{https://www.anthology.com/blackboard-learn}.
 \newblock Recuperado 25 de octubre de 2025.
 
 \bibitem[Apel et~al.(2013)Apel, Batory, Kästner, and Saake]{apel2013feature}
 S.~Apel, D.~Batory, C.~Kästner, and G.~Saake.
-\newblock \emph{Feature-Oriented Software Product Lines: Concepts and
-  Implementation}.
+\newblock \emph{Feature-Oriented Software Product Lines: Concepts and Implementation}.
 \newblock Springer, 2013.
 
 \bibitem[Bates(2019)]{bates2019teaching}
 A.~W. Bates.
-\newblock \emph{Teaching in a Digital Age: Guidelines for Designing Teaching
-  and Learning}.
+\newblock \emph{Teaching in a Digital Age: Guidelines for Designing Teaching and Learning}.
 \newblock Tony Bates Associates Ltd, 2019.
-
-\bibitem[Benavides et~al.(2010)Benavides, Segura, and
-  Ruiz-Cortés]{benavides2010automated}
-D.~Benavides, S.~Segura, and A.~Ruiz-Cortés.
-\newblock Automated analysis of feature models 20 years later: A literature
-  review.
-\newblock \emph{Information Systems}, 35\penalty0 (6):\penalty0 615--636, 2010.
-
-\bibitem[{CAST}(2018)]{cast2018udl}
-{CAST}.
-\newblock Universal design for learning guidelines version 2.2, 2018.
-\newblock URL \url{http://udlguidelines.cast.org}.
 
 \bibitem[Chen et~al.(2020)Chen, Babar, and Ali]{chen2020variability}
 L.~Chen, M.~A. Babar, and N.~Ali.
-\newblock Variability management in software product lines: A systematic
-  review.
+\newblock Variability management in software product lines: A systematic review.
 \newblock \emph{ACM Computing Surveys}, 53\penalty0 (4):\penalty0 1--45, 2020.
 
-\bibitem[Estrada~Perea()]{estrada_metamodelo_repo}
-B.~M. Estrada~Perea.
-\newblock Definición de un metamodelo basado en usabilidad y conocimiento
-  pedagógico para el diseño de aplicaciones de software educativo.
-\newblock Repositorio Institucional UNAL.
-
-\bibitem[Estrada~Perea and Giraldo(2022)]{estrada2022metamodelo}
-B.~M. Estrada~Perea and G.~L. Giraldo.
-\newblock Definición de un meta-modelo para el diseño de aplicaciones de
-  software educativo basado en usabilidad y conocimiento pedagógico.
-\newblock \emph{Información Tecnológica}, 33\penalty0 (5), 2022.
-\newblock \doi{10.4067/S0718-07642022000500035}.
-
-\bibitem[{GeeksforGeeks}()]{gfg_feature_engineering}
-{GeeksforGeeks}.
-\newblock What is feature engineering?
-\newblock URL
-  \url{https://www.geeksforgeeks.org/machine-learning/what-is-feature-engineering/}.
+\bibitem[{Ellucian Company}(2015)]{ellucian2015b_banner}
+{Ellucian Company}.
+\newblock Banner de ellucian. características generales, 2015.
 
 \bibitem[G{\'o}mez(2023)]{gomez2023}
 YA~G{\'o}mez.
 \newblock Innovaci{\'o}n educativa y gesti{\'o}n curricular.
-\newblock \emph{Anales de la Real Academia de Doctores. Obtenido de
-  https://www. rade. es/imageslib/PUBLICACIONES/ARTICULOS/V8N3}, 2, 2023.
+\newblock \emph{Anales de la Real Academia de Doctores. Obtenido de https://www. rade. es/imageslib/PUBLICACIONES/ARTICULOS/V8N3}, 2, 2023.
 
-\bibitem[Guzmán-Luján et~al.(2022)Guzmán-Luján, Delgado-Velasco, and
-  Amador-Rodezno]{guzman2022variabilidad}
+\bibitem[Guzmán-Luján et~al.(2022)Guzmán-Luján, Delgado-Velasco, and Amador-Rodezno]{guzman2022variabilidad}
 J.~F. Guzmán-Luján, J.~A. Delgado-Velasco, and R.~Amador-Rodezno.
-\newblock Modelado de la variabilidad en foros de discusión para sistemas
-  adaptativos educativos.
-\newblock \emph{Revista Iberoamericana de Tecnologías del Aprendizaje},
-  17\penalty0 (1):\penalty0 45--53, 2022.
+\newblock Modelado de la variabilidad en foros de discusión para sistemas adaptativos educativos.
+\newblock \emph{Revista Iberoamericana de Tecnologías del Aprendizaje}, 17\penalty0 (1):\penalty0 45--53, 2022.
 
-\bibitem[Hattie(2009)]{hattie2009visible}
-J.~Hattie.
-\newblock \emph{Visible Learning: A Synthesis of Over 800 Meta-Analyses
-  Relating to Achievement}.
-\newblock Routledge, 2009.
-
-\bibitem[Hernández and Rojas(2019)]{hernandez2019meta}
-A.~Hernández and E.~Rojas.
-\newblock Modelo de transformación académica (meta): una propuesta para la
-  educación superior.
-\newblock \emph{Revista Iberoamericana de Educación}, 80\penalty0
-  (1):\penalty0 45--62, 2019.
-
-\bibitem[{IEEE}(2014)]{ieee_glossary_2014}
-{IEEE}.
-\newblock Ieee standard glossary of software engineering terminology, 2014.
-\newblock IEEE Std 610.12-1990.
-
-\bibitem[{Ingeniería de Software}()]{ingenieria_software_lps}
-{Ingeniería de Software}.
-\newblock Líneas de producto software para acelerar el desarrollo de
-  aplicaciones relacionadas.
-\newblock URL \url{https://ingenieriadesoftware.es/lineas-producto-software/}.
+\bibitem[{Instructure}(2025)]{canvas2025overview}
+{Instructure}.
+\newblock Canvas lms: Enseñanza y aprendizaje en cualquier lugar, 2025.
+\newblock URL \url{https://www.instructure.com/canvas}.
 \newblock Recuperado 25 de octubre de 2025.
 
-\bibitem[Mishra and Koehler(2006)]{mishra2006tpack}
-P.~Mishra and M.~J. Koehler.
-\newblock Technological pedagogical content knowledge: A framework for teacher
-  knowledge.
-\newblock \emph{Teachers College Record}, 108\penalty0 (6):\penalty0
-  1017--1054, 2006.
-
-\bibitem[Pohl et~al.(2005)Pohl, Böckle, and van~der Linden]{pohl2005software}
-K.~Pohl, G.~Böckle, and F.~J. van~der Linden.
-\newblock \emph{Software Product Line Engineering: Foundations, Principles and
-  Techniques}.
-\newblock Springer, 2005.
-
-\bibitem[Pressman(2014)]{pressman2014se}
-R.~S. Pressman.
-\newblock \emph{Software Engineering: A Practitioner's Approach}.
-\newblock McGraw-Hill Education, 8 edition, 2014.
-
-\bibitem[{PTC}(2025)]{ptc_feature_models}
-{PTC}.
-\newblock Feature models and features: What are they, 2025.
-\newblock URL \url{https://www.ptc.com/en/blogs/alm/modelling-features}.
+\bibitem[{Moodle Project}(2025)]{moodle2025overview}
+{Moodle Project}.
+\newblock ¿qué es moodle? visión general de la plataforma, 2025.
+\newblock URL \url{https://moodle.com/es/what-is-moodle/}.
 \newblock Recuperado 25 de octubre de 2025.
 
-\bibitem[Raviv et~al.(2022)Raviv, Lupyan, and Green]{raviv2022variability}
-L.~Raviv, G.~Lupyan, and S.~C. Green.
-\newblock How variability shapes learning and generalization.
-\newblock \emph{Trends in Cognitive Sciences}, 26\penalty0 (6):\penalty0
-  462--483, 2022.
-
-\bibitem[Rodríguez et~al.(2019)Rodríguez, Vizcaíno, and
-  Piattini]{rodriguez2019gestion_curricular}
-P.~Rodríguez, A.~Vizcaíno, and M.~Piattini.
-\newblock Herramientas de gestión curricular: Una evaluación de la situación
-  actual.
-\newblock \emph{IEEE Revista Iberoamericana de Tecnologías del Aprendizaje},
-  14\penalty0 (3):\penalty0 112--120, 2019.
-
-\bibitem[Rose and Strangman(2007)]{rose2007udl}
-D.~H. Rose and N.~Strangman.
-\newblock Universal design for learning: Meeting the challenge of individual
-  learning differences through a neurocognitive perspective.
-\newblock \emph{Universal Access in the Information Society}, 5\penalty0
-  (4):\penalty0 381--391, 2007.
-
-\bibitem[Schmidt(1975)]{schmidt1975schema}
-R.~A. Schmidt.
-\newblock A schema theory of discrete motor skill learning.
-\newblock \emph{Psychological Review}, 82\penalty0 (4):\penalty0 225--260,
-  1975.
-
-\bibitem[{SG Buzz}()]{sgbuzz_lps}
-{SG Buzz}.
-\newblock Líneas de productos de software.
-\newblock URL \url{https://sg.com.mx/revista/34/lineas-productos-software}.
+\bibitem[{pure-systems GmbH}(2024)]{purevariants2024overview}
+{pure-systems GmbH}.
+\newblock pure::variants product overview, 2024.
+\newblock URL \url{https://www.pure-systems.com/en/products/purevariants}.
 \newblock Recuperado 25 de octubre de 2025.
 
-\bibitem[Sommerville(2016)]{sommerville2016se}
-I.~Sommerville.
-\newblock \emph{Software Engineering}.
-\newblock Pearson Education, 10 edition, 2016.
-
-\bibitem[Soos(2024)]{soos2024ganak}
-M.~Soos.
-\newblock Ganakv2 released.
-\newblock Wonderings of a SAT geek, 2024.
-
-\bibitem[Sundermann et~al.(2023)Sundermann, Dörr, Junker, and
-  Kehrer]{sundermann2023sat}
-C.~Sundermann, L.~Dörr, M.~Junker, and T.~Kehrer.
-\newblock Evaluating state-of-the-art \#sat solvers on industrial configuration
-  spaces.
-\newblock \emph{Empirical Software Engineering}, 28\penalty0 (29), 2023.
-
-\bibitem[Sánchez et~al.(2020)Sánchez, Gutiérrez, and
-  Cabrera]{sanchez2020metodologia}
+\bibitem[Sánchez et~al.(2020)Sánchez, Gutiérrez, and Cabrera]{sanchez2020metodologia}
 J.~Sánchez, F.~L. Gutiérrez, and M.~Cabrera.
-\newblock Hacia una metodología para la gestión de la variabilidad en planes
-  de estudio de ingeniería de software.
-\newblock \emph{Journal of Educational Computing Research}, 58\penalty0
-  (5):\penalty0 1020--1045, 2020.
+\newblock Hacia una metodología para la gestión de la variabilidad en planes de estudio de ingeniería de software.
+\newblock \emph{Journal of Educational Computing Research}, 58\penalty0 (5):\penalty0 1020--1045, 2020.
+
+\bibitem[Thüm et~al.(2014)Thüm, Kästner, Benduhn, Meinicke, Saake, and Leich]{thum2014featureide}
+T.~Thüm, C.~Kästner, F.~Benduhn, J.~Meinicke, G.~Saake, and T.~Leich.
+\newblock Featureide: An extensible framework for feature-oriented software desarrollo.
+\newblock \emph{Science of Computer Programming}, 79:\penalty0 70--85, 2014.
 
 \bibitem[{UNESCO}(2022)]{unesco2022}
 {UNESCO}.
-\newblock \emph{Reimagining our futures together: A new social contract for
-  education}.
+\newblock \emph{Reimagining our futures together: A new social contract for education}.
 \newblock UNESCO, 2022.
-
-\bibitem[Weinstein(2002)]{weinstein2002liderazgo}
-J.~Weinstein.
-\newblock Liderazgo directivo y gestión de la diversidad.
-\newblock In \emph{Calidad en la educación: Una mirada desde la gestión de la
-  diversidad}, pages 15--42. Ministerio de Educación, 2002.
 
 \end{thebibliography}
