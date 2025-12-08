@@ -4,7 +4,7 @@
     herramientas y \textit{frameworks} que permitan materializar de manera eficiente los modelos 
     curriculares, soportar reglas de variabilidad y garantizar una experiencia de desarrollo fluida. 
     En este epígrafe se describen los componentes tecnológicos que conformarán la plataforma, 
-    justificando su elección en función de criterios como escalabilidad, mantenibilidad, 
+    justificando su elección en función de Solo FastAPIs como escalabilidad, mantenibilidad, 
     interoperabilidad y robustez. Asimismo, se analizan los entornos de desarrollo, 
     lenguajes de programación, sistemas de persistencia y bibliotecas especializadas que 
     facilitan la representación formal de restricciones curriculares y la validación 
@@ -12,7 +12,7 @@
     tecnológica que sustenta la solución y cómo cada herramienta contribuye al logro de 
     sus objetivos funcionales y no funcionales.
 
-    \subepigraph{Lenguaje de programación}{
+    \subepigraph{Lenguaje de Programación}{
 
         Python será el lenguaje principal utilizado para el desarrollo del \textit{backend} de la 
         solución propuesta. Su elección se fundamenta en su madurez tecnológica, su amplio 
@@ -84,7 +84,7 @@
 
     }
 
-    \subepigraph{Framework de desarrollo}{
+    \subepigraph{Framework de Desarrollo}{
         
         FastAPI será el framework \textit{backend} adoptado para la implementación de la plataforma, 
         debido a su equilibrio entre simplicidad de desarrollo, alto rendimiento y robustez 
@@ -144,20 +144,288 @@
         
     }
     
-    \subepigraph{Base de datos y gestor de base de datos}{
-        PostgreSQL y pg admin
+    \subepigraph{Base de Datos y Gestor de Base de Datos}{
+        
+        La persistencia de los modelos curriculares, configuraciones generadas, 
+        versiones históricas y metadatos asociados requiere de un sistema robusto, 
+        seguro y con garantías de consistencia transaccional. En este proyecto se 
+        selecciona PostgreSQL como gestor de base de datos relacional, debido a su madurez, 
+        fiabilidad y su capacidad de manejar estructuras complejas con fuertes requisitos 
+        de integridad referencial. PostgreSQL destaca por su cumplimiento estricto del 
+        estándar SQL, su modelo ACID, y su eficiente gestión de transacciones, elementos 
+        imprescindibles para representar relaciones jerárquicas entre características, 
+        restricciones cross-tree, y snapshots versionados del modelo sin comprometer la 
+        coherencia global del sistema.
+
+        Además, PostgreSQL ofrece capacidades avanzadas como índices compuestos, consultas 
+        optimizadas, vistas materializadas, triggers y procedimientos almacenados, que 
+        resultan útiles para procesar datos curriculares con alto grado de estructuración. 
+        El motor también soporta tipos de datos JSON y JSONB, permitiendo almacenar 
+        representaciones semiestructuradas de configuraciones y estados transitorios, por 
+        lo que proporciona flexibilidad para almacenar tanto esquemas estáticos como 
+        snapshots dinámicos relacionados con la evolución del Modelo de Características.
+
+        Adicionalmente, PostgreSQL se integra de forma natural con SQLAlchemy como ORM 
+        dentro del backend desarrollado en FastAPI, facilitando el diseño declarativo de 
+        entidades, la gestión del ciclo de persistencia, la validación de relaciones y la 
+        migración segura del esquema. Esta integración favorece una arquitectura limpia y 
+        escalable, desacoplando las capas de datos, servicios y lógica de negocio.
+
+        Para la administración visual del motor se empleará pgAdmin, interfaz ampliamente 
+        utilizada para la gestión de bases de datos PostgreSQL. Mediante esta herramienta 
+        es posible inspeccionar tablas, ejecutar consultas SQL, visualizar índices y 
+        constraints, supervisar cargas de trabajo y realizar respaldos de forma controlada. 
+        En el contexto de la solución propuesta, pgAdmin permite auditar el estado de los 
+        modelos almacenados, verificar reglas impuestas, revisar configuraciones generadas 
+        y garantizar la trazabilidad del sistema.
+
+        En conjunto, la elección de PostgreSQL como sistema de persistencia y pgAdmin 
+        como herramienta administrativa proporciona una base confiable y alineada 
+        con las necesidades de integridad, consistencia y trazabilidad del sistema 
+        curricular modelado.
+            
     }
 
     \subepigraph{Contenerización y Orquestación}{
-        docker y y docker compose
+
+        Para garantizar la portabilidad, reproducibilidad y facilidad de despliegue del 
+        sistema propuesto, se adoptará Docker como tecnología base de contenedorización. 
+        Docker permite encapsular los servicios de la aplicación —incluyendo el backend 
+        FastAPI, la base de datos PostgreSQL, la herramienta administrativa pgAdmin y
+        otros servicios de utilidad o futuros módulos asociados— dentro de entornos aislados 
+        y autocontenidos. Esto elimina problemas de dependencias, divergencias de entorno
+        y configuraciones inconsistentes entre despliegues locales y productivos.
+        La capacidad de reproducir una imagen de forma determinística contribuye directamente 
+        a la robustez y mantenibilidad de la solución.
+
+        La contenedorización resulta especialmente útil para aplicaciones multicapa como 
+        la propuesta, donde distintos servicios deben colaborar manteniendo canales de 
+        comunicación estables. Docker permite garantizar uniformidad tanto en las 
+        dependencias del backend, como versiones de librerías, configuración del servidor 
+        de aplicación y parámetros del engine de base de datos, disminuyendo errores 
+        derivados de diferencias de entorno y facilitando diagnósticos.
+
+        Sobre Docker se construye Docker Compose, herramienta de orquestación ligera que 
+        permite describir, mediante un único archivo declarativo, toda la topología de 
+        servicios del sistema. Esto incluye la configuración de redes internas, gestión 
+        de persistencia en volúmenes, variables de entorno, reglas de dependencias entre 
+        contenedores, puntos de exposición de puertos, así como políticas de reinicio. 
+        En el contexto del sistema de modelado curricular, Docker Compose facilita levantar 
+        el entorno completo de desarrollo o producción con un solo comando, garantizando 
+        escalabilidad y reduciendo tiempos de despliegue o recuperación ante fallos.
+
+        Un beneficio adicional de esta estrategia es su contribución a las prácticas de 
+        Integración Continua y Despliegue Continuo (CI/CD). Gracias a la naturaleza 
+        declarativa y reproducible de los contenedores, el sistema puede desplegarse 
+        automáticamente mediante pipelines controlados sin intervención manual, asegurando 
+        que las versiones del modelo curricular, las configuraciones generadas y los 
+        snapshots almacenados sean accesibles en entornos iguales o equivalentes entre sí.
+
+        De esta forma, el uso conjunto de Docker y Docker Compose aporta portabilidad,
+        eficiencia en despliegue, coherencia entre entornos y una base técnica sólida para 
+        escalar la solución futura en producción.
+            
+    }
     
-        }
     \subepigraph{Almacenamiento en Memoria, Caching y Mensajería}{
-        Redis
+
+        Redis será incorporado como componente clave para el almacenamiento temporal 
+        y procesamiento eficiente de información crítica durante las fases de 
+        generación y validación de configuraciones curriculares. Su naturaleza de 
+        base de datos en memoria permite alcanzar tiempos de respuesta extremadamente 
+        bajos, lo cual resulta particularmente valioso en un sistema donde las 
+        operaciones de verificación de restricciones, derivación de configuraciones 
+        válidas y resolución de incompatibilidades pueden ejecutarse de forma intensiva 
+        y repetitiva.
+
+        A diferencia de un motor relacional tradicional, Redis está optimizado 
+        para operaciones clave–valor y estructuras avanzadas como listas, conjuntos, 
+        mapas hash y sorted sets. Estas estructuras permiten modelar transitoriamente 
+        elementos como:
+        \begin{itemize}
+            \item configuraciones candidatas generadas por el usuario,
+            
+            \item listas de incompatibilidades detectadas,
+            
+            \item descriptores internos del Feature Model,
+            
+            \item estados de sesión durante la exploración de alternativas,
+            
+            \item cachés de resultados de validaciones repetitivas.
+        \end{itemize}
+
+        Este almacenamiento en memoria reduce significativamente la latencia, lo que 
+        contribuye a experiencias interactivas y a la capacidad del sistema de 
+        responder en tiempo real a decisiones del usuario (por ejemplo, activar 
+        o desactivar características, consultar prerequisitos, etc.).
+
+        Otro aspecto clave es que Redis permite persistencia opcional mediante 
+        snapshots (RDB), lo que lo convierte en un aliado directo del soporte de 
+        versionado de modelos y configuraciones. Es decir, puede almacenar estados 
+        intermedios del proceso de modelado curricular sin interferir con la base de 
+        datos principal, permitiendo restaurar fácilmente versiones anteriores o 
+        explorar ramas alternativas del mismo modelo.
+
+        Además, Redis implementa un sistema de Time-To-Live (TTL), lo que permite 
+        gestionar la caducidad automática de configuraciones temporales, sesiones y 
+        cálculos ya procesados. Esta funcionalidad contribuye a la integridad global 
+        del sistema y evita acumulación de datos residual.
+
+        Finalmente, una característica determinante para su elección es su excelente 
+        integración con FastAPI, permitiendo aprovechar plenamente la naturaleza 
+        asíncrona del backend. Gracias a librerías como aioredis, las operaciones de 
+        lectura/escritura se realizan sin bloquear el event loop, lo que maximiza la 
+        concurrencia cuando múltiples usuarios exploran configuraciones simultáneamente.
+
+        En síntesis, Redis aporta velocidad, soporte a cálculos temporales complejos, 
+        persistencia selectiva, alta concurrencia y facilidad de integración con el 
+        framework propuesto, consolidándose como la pieza ideal para manejar la lógica 
+        dinámica del sistema.
+            
     }
     
     \subepigraph{Procesamiento Asíncrono}{
-        celery
+
+        En la arquitectura propuesta, Celery desempeñará un rol esencial como 
+        orquestador de tareas asíncronas, permitiendo que operaciones complejas, 
+        lentas o intensivas en cómputo se ejecuten fuera del ciclo de solicitud-respuesta 
+        del API, mejorando sustancialmente la experiencia del usuario y la disponibilidad 
+        del sistema.
+
+        Dado que el proceso de generación y validación de configuraciones curriculares 
+        incluye fases donde se deben:
+        \begin{itemize}
+            \item Recorrer árboles completos del Feature Model,
+            
+            \item Validar múltiples restricciones cruzadas,
+            
+            \item Propagar efectos lógicos por dependencias,
+            
+            \item Explorar configuraciones alternativas válidas,
+            
+            \item Verificar versiones y retrocompatibilidad,
+        \end{itemize}
+
+        Resulta natural que estas tareas no se ejecuten directamente en una petición HTTP, 
+        ya que podrían bloquear el servidor o provocar tiempos de respuesta superiores 
+        a lo aceptable. Celery permite delegar estos procesos a “workers” paralelos 
+        que pueden ejecutarse en segundo plano, liberando a FastAPI para seguir 
+        atendiendo solicitudes sin congestión.
+
+        La integración de Celery con Redis (como message broker) permite que las tareas 
+        se publiquen, distribuyan, encolen, ejecuten y documenten de forma confiable. 
+        Asimismo, Redis funge como backend de resultados, permitiendo al sistema:
+        \begin{itemize}
+            \item Consultar el estado de una ejecución,
+            
+            \item Recuperar resultados parciales o finales,
+            
+            \item Cancelar o reprogramar tareas,
+            
+            \item Mostrar progresos al usuario.
+        \end{itemize}
+
+        Otra ventaja crítica es que Celery soporta escalamiento horizontal, lo cual es 
+        relevante para tu sistema, en el cual múltiples usuarios pueden realizar 
+        evaluaciones simultáneamente sobre modelos distintos o versiones diferentes. 
+        Con más carga, simplemente se añaden más workers, sin necesidad de cambios 
+        estructurales.
+
+        Desde el punto de vista de robustez, Celery ofrece herramientas para:
+        \begin{itemize}
+            \item Reintentos automáticos ante fallos,
+            
+            \item Límite de concurrencia,
+            
+            \item Priorización de colas,
+            
+            \item Periodicidad (con Celery Beat) para ejecutar tareas programadas.
+        \end{itemize}
+
+        Esto permite automatizar procesos como:
+        \begin{itemize}
+            \item Generación periódica de snapshots de Feature Models,
+            
+            \item Validaciones nocturnas de consistencia,
+            
+            \item Limpieza de configuraciones expiradas,
+            
+            \item Backups de estados intermedios.
+        \end{itemize}
+
+        Finalmente, Celery es altamente compatible con FastAPI y Python, manteniendo 
+        coherencia tecnológica con la decisión de usar un stack asíncrono y un modelo 
+        de validación compleja. Su adopción garantiza que la capa lógica pesada no 
+        degrade la utilidad interactiva del sistema, sino que se ejecute de forma 
+        paralela, programada y resistente. La siguiente tabla \ref{tab:fastAPIvsFastAPIconCelery} 
+        respalda la justificación de por qué adicionar celery al sistema.
+
+        \begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
+            \caption{Tabla Comparativa: FastAPI vs FastAPI + Celery \label{tab:fastAPIvsFastAPIconCelery}}\\
+            \hline
+            \rowcolor[HTML]{CBCEFB} 
+            \textbf{Criterio} & \textbf{Solo FastAPI} & \textbf{FastAPI + Celery} \\
+            \hline
+            \endfirsthead
+            
+            \multicolumn{3}{c}
+	        {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+            
+            \hline
+            \rowcolor[HTML]{CBCEFB} 
+            \textbf{Criterio} & \textbf{Solo FastAPI} & \textbf{FastAPI + Celery} \\
+            \hline
+            \endhead
+            
+            \hline
+            \multicolumn{3}{|r|}{{Continúa en la siguiente página}} \\
+            \endfoot
+            
+            \hline
+            \endlastfoot
+            
+            % Cuerpo de la tabla
+            Manejo de operaciones pesadas & Bloquea el servidor si la tarea tarda mucho & Delegación a workers externos sin bloqueo \\ 
+            \hline
+            \rowcolor[HTML]{EDEBF1}
+            Experiencia del usuario & Tiempos de respuesta largos para validaciones & Respuestas inmediatas + seguimiento del progreso \\ 
+            \hline
+            Escalabilidad & Limitada al número de workers del servidor & Escalamiento horizontal agregando workers Celery \\ 
+            \hline
+            \rowcolor[HTML]{EDEBF1}
+            Naturaleza de carga & Orientada a I/O y sincronización & Orientada a cómputo intensivo y tareas diferidas \\ 
+            \hline
+            Validación de modelos complejos & Puede agotar recursos del servidor & Optimización mediante workers paralelos \\ 
+            \hline
+            \rowcolor[HTML]{EDEBF1}
+            Generación de snapshots o versiones & Bajo rendimiento si se ejecuta en el request & Tareas programadas y automáticas (Celery Beat) \\ 
+            \hline
+            Robustez ante fallos & Fallos interrumpen solicitudes activas & Reintentos automáticos e independientes \\ 
+            \hline
+            \rowcolor[HTML]{EDEBF1}
+            Concurrencia & Limitada & Altamente concurrente \\ 
+            \hline
+            Distribución de carga & Manual, difícil de gestionar & Balance natural mediante colas y brokers \\ 
+            \hline
+            \rowcolor[HTML]{EDEBF1}
+            Estado de procesos largos & No persistente, no rastreable & Persistente, rastreable, recuperable \\ 
+            \hline
+            Integración con Redis & Opcional & Ideal, Redis como broker y backend \\ 
+            \hline
+            \rowcolor[HTML]{EDEBF1}
+            Mantenimiento & Monolítico & Arquitectura desacoplada y modular \\ 
+            \hline
+
+        \end{longtable}
+
+        Esta comparación evidencia que mientras FastAPI permite construir servicios web 
+        altamente eficientes para operaciones sin bloqueo y validaciones ligeras, la 
+        incorporación de Celery habilita un procesamiento robusto y distribuido ideal 
+        para la naturaleza intensiva de la manipulación y validación de Feature Models, 
+        generando configuraciones, snapshots y cálculos alternativos sin afectar la 
+        disponibilidad del sistema.
+
+            
     }
     
     \subepigraph{Algoritmos, Motor de Reglas y Validación}{
@@ -168,12 +436,12 @@
         poetry y uv
     }
     
-    \subepigraph{Control de versiones}{
+    \subepigraph{Herramienta para el control de versiones}{
         GIT y GITHUB
     
     }
     
-    \subepigraph{Herramienta de modelado}{
+    \subepigraph{Herramienta y lenguaje de modelado}{
         uml y visual paradigm
     }
     
@@ -222,5 +490,4 @@
         necesidad de alguna experiencia \cite{vscode2025, vscode_docs2025}.
 
     }
-
 }
