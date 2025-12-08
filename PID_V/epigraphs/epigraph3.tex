@@ -1,3 +1,233 @@
-\epigraph{Metodología de desarrollo del software}{%
-    METODOLOGIA XP
+\epigraph{Metodología de desarrollo del software}{
+	
+    Las metodologías de desarrollo de software son enfoques estructurados que guían las distintas fases del ciclo de vida de un proyecto, desde la planificación y análisis hasta la implementación y mantenimiento. Estas metodologías establecen principios, prácticas y procedimientos para gestionar el desarrollo de manera organizada y eficiente, promoviendo la colaboración en equipo y la calidad del producto final \citep{pacienzia2015metodologias}. 
+    
+    A lo largo de esta sección se realiza un análisis de las metodologías de software disponibles y, finalmente, se detallan los principios, fases y prácticas de la metodología seleccionada para guiar el diseño e implementación del sistema propuesto. La elección de la metodología es fundamental para asegurar un proceso de desarrollo ágil, eficiente y adaptable a posibles cambios en los requisitos del proyecto. Estas metodologías facilitan además la detección temprana de errores y el ajuste progresivo de funcionalidades, garantizando la calidad final del sistema.
+    
+    En la actualidad se pueden diferenciar dos grandes grupos de metodologías de desarrollo de software: las ágiles y las tradicionales. A continuación, se explican las características de cada una de ellas.
+    
+    \subepigraph{Metodologías de desarrollo de software tradicionales}
+    
+    Las metodologías de desarrollo de software tradicionales se caracterizan por definir total y rígidamente los requisitos al inicio de los proyectos de ingeniería de software. Los ciclos de desarrollo son poco flexibles y no permiten realizar cambios, al contrario que las metodologías ágiles; lo que ha propiciado el incremento en el uso de las segundas.
+    
+    La organización del trabajo de las metodologías tradicionales es lineal, es decir, las etapas se suceden una tras otra y no se puede empezar la siguiente sin terminar la anterior. Tampoco se puede volver hacia atrás una vez se ha cambiado de etapa. Estas metodologías, no se adaptan nada bien a los cambios, y el mundo actual cambia constantemente \citep{awad2005agile_v_traditional}. Las principales metodologías tradicionales o clásicas son:
+    
+    
+    \begin{itemize}
+    	\item Modelo en Cascada: también conocido como el ciclo de vida clásico del software, es una de las metodologías de desarrollo de software más antiguas y ampliamente utilizadas. Este enfoque se basa en la idea de que el desarrollo de software debe seguir una secuencia lineal y predefinida de etapas de riguroso orden, cada una de las cuales debe completarse antes de pasar a la siguiente. Los requisitos y especificaciones iniciales no están predispuestos para cambiarse.
+    	\item Incremental: en esta metodología de desarrollo de software se va construyendo el producto final de manera progresiva. En cada etapa incremental se agrega una nueva funcionalidad, lo que permite ver resultados de una forma más rápida en comparación con el modelo en cascada. El software se puede empezar a utilizar incluso antes de que se complete totalmente y, en general, es mucho más flexible que las demás metodologías.
+    	\item Espiral: es una combinación de los dos modelos anteriores, que añade el concepto de análisis de riesgo. Se divide en cuatro etapas: planificación, análisis de riesgo, desarrollo de prototipo y evaluación del cliente. El nombre de esta metodología da nombre a su funcionamiento, ya que se van procesando las etapas en forma de espiral. Cuanto más cerca del centro se está, más avanzado está el proyecto.
+    \end{itemize}
+    
+    \subepigraph{Metodologías de desarrollo de software ágiles}
+    
+    Hoy en día las metodologías ágiles de desarrollo de software son las más utilizadas debido a su alta flexibilidad y agilidad. Los equipos de trabajo que las utilizan son mucho más productivos y eficientes, ya que saben lo que tienen que hacer en cada momento. Además, la metodología permite adaptar el software a las necesidades que van surgiendo por el camino, lo que facilita construir aplicaciones más funcionales.
+    
+    Las metodologías ágiles se basan en la metodología incremental, en la que en cada ciclo de desarrollo se van agregando nuevas funcionalidades a la aplicación final. Sin embargo, los ciclos son mucho más cortos y rápidos, por lo que se van agregando pequeñas funcionalidades en lugar de grandes cambios.
+    
+    Este tipo de metodologías permite construir equipos de trabajo autosuficientes e independientes que se reúnen cada poco tiempo para poner en común las novedades. Poco a poco, se va construyendo y puliendo el producto final, a la vez que el cliente puede ir aportando nuevos requerimientos o correcciones, ya que puede comprobar cómo avanza el proyecto en tiempo real \citep{pacienzia2015metodologias}. 
+    Las principales metodologías ágiles son:
+    \begin{itemize}
+    	\item Kanban: metodología de trabajo inventada por la empresa de automóviles Toyota. Consiste en dividir las tareas en porciones mínimas y organizarlas en un tablero de trabajo dividido en tareas pendientes, en curso y finalizadas. De esta forma, se crea un flujo de trabajo muy visual basado en tareas prioritarias e incrementando el valor del producto.
+    	\item Scrum: es también una metodología incremental que divide los requisitos y tareas de forma similar a Kanban. Se itera sobre bloques de tiempos cortos y fijos (entre dos y cuatro semanas) para conseguir un resultado completo en cada iteración. Las etapas son: planificación de la iteración (\textit{planning sprint}), ejecución (\textit{sprint}), reunión diaria (\textit{daily meeting}) y demostración de resultados (\textit{sprint review}). Cada iteración por estas etapas se denomina también \textit{sprint}. 
+    	\item \ac{XP}: es una metodología de desarrollo de software basada en las relaciones interpersonales, que se consideran la clave del éxito. Su principal objetivo es crear un buen ambiente de trabajo en equipo y que haya un \textit{feedback} constante del cliente. El trabajo se basa en 12 conceptos: diseño sencillo, \textit{testing}, refactorización y codificación con estándares, propiedad colectiva del código, programación en parejas, integración continua, entregas semanales e integridad con el cliente, \textit{cliente in situ}, entregas frecuentes y planificación.
+    \end{itemize}
+    
+    \subepigraph{Elección de la metodología}
+    
+    En las metodologías tradicionales el principal problema es que nunca se logra planificar bien el esfuerzo requerido para seguir la metodología. Pero entonces, si se logran definir métricas que apoyen la estimación de las actividades de desarrollo, muchas prácticas de metodologías tradicionales podrían ser apropiadas. El no poder predecir siempre los resultados de cada proceso no significa que se esté frente a una disciplina de azar. Lo que significa es que se está frente a la necesidad de adaptación de los procesos de desarrollo que son llevados por parte de los equipos que desarrollan software \citep{awad2005agile_v_traditional}.
+    
+    Tener metodologías diferentes para aplicar de acuerdo con el proyecto que se desarrolle resulta una idea interesante. Estas metodologías pueden involucrar prácticas tanto de metodologías ágiles como de metodologías tradicionales. De esta manera se podría tener una metodología por cada proyecto, la problemática sería definir cada una de las prácticas, y en el momento preciso definir parámetros para saber cuál usar.
+    Es importante tener en cuenta que el uso de un método ágil no vale para cualquier proyecto. Sin embargo, una de las principales ventajas de los métodos ágiles es su peso inicialmente ligero y por eso las personas que no estén acostumbradas a seguir procesos encuentran estas metodologías bastante agradables.
+    
+    La tabla \ref{tab:metodologias} explica de forma resumida las diferencias que existen entre las metodologías ágiles y las tradicionales:
+    
+    
+    \begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
+    	\caption{Comparación, Metodología Ágil VS Metodología Tradicional ~\citep{awad2005agile_v_traditional}} \label{tab:metodologias}\\
+    	
+    	\hline
+    	\rowcolor[HTML]{CBCEFB} 
+    	\textbf{Parámetros} & \textbf{Metodologías Ágiles} & \textbf{Metodologías Tradicionales} \\
+    	\hline
+    	\endfirsthead
+    	
+    	\hline
+    	\rowcolor[HTML]{CBCEFB} 
+    	\textbf{Parámetros} & \textbf{Metodologías Ágiles} & \textbf{Metodologías Tradicionales} \\
+    	\hline
+    	\endhead
+    	
+    	% Cuerpo de la tabla
+    	Acercamiento & Adaptivo & Predictivo \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Medición del objetivo & Valor para el negocio & Conformación del plan \\ 
+    	\hline
+    	Tamaño del proyecto & Pequeño & Largo \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Tipo de administración & Descentralizado & Autocrático \\ 
+    	\hline
+    	Perspectiva de cambios & Adaptable a cambio & Sostenible al cambio \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Cultura del equipo & Liderazgo\textbackslash Colaboración & Comandada\textbackslash Controlada \\ 
+    	\hline
+    	Documentación & Baja & Pesada \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Orientada & Personas & Procesos \\ 
+    	\hline
+    	Ciclos de desarrollo & Numerosos & Limitados \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Dominio de desarrollo & Impredecibles & Predecibles \\ 
+    	\hline
+    	Planificación inicial & Mínima & Comprensiva \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Retorno de la inversión & Temprano en el proyecto & Al final del proyecto \\ 
+    	\hline
+    	Tamaño del equipo & Pequeño & Grande \\ 
+    	\hline
+    \end{longtable}
+    
+    Para la selección de la metodología a utilizar se toma como referencia la tabla \ref{tab:metodologias}. Para ello se analizan las características del proyecto atendiendo a los diferentes aspectos y se selecciona la metodología con la que haya más coincidencias, dando como resultado de este análisis la tabla \ref{tab:resultado}.
+    
+    \begin{longtable}{|p{4cm}|p{2cm}|p{2cm}|}
+    	\caption{Comparación de la Metodología Ágil y la Metodología Tradicional con respecto al proyecto. Fuente: Elaboración propia}
+    	\label{tab:resultado} \\
+    	
+    	\hline
+    	\rowcolor[HTML]{CBCEFB} 
+    	\textbf{Parámetros} & \textbf{Ágiles} & \textbf{Pesadas} \\
+    	\hline
+    	\endfirsthead
+    	
+    	\hline
+    	\rowcolor[HTML]{CBCEFB} 
+    	\textbf{Parámetros} & \textbf{Ágiles} & \textbf{Pesadas} \\
+    	\hline
+    	\endhead
+    	
+    	% Cuerpo de la tabla
+    	Acercamiento & X & \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Medición del objetivo & X & \\ 
+    	\hline
+    	Tamaño del proyecto & X & \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Tipo de administración & X & \\ 
+    	\hline
+    	Perspectiva de cambios & X & \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Cultura del equipo & X & \\ 
+    	\hline
+    	Documentación & X & \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Orientada & X & \\ 
+    	\hline
+    	Ciclos de desarrollo & X & \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Dominio de desarrollo & X & \\ 
+    	\hline
+    	Planificación inicial & X & \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Retorno de la inversión &  & X \\ 
+    	\hline
+    	Tamaño del equipo & X & \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Total: & 12 & 1 \\ 
+    	\hline
+    \end{longtable}
+    
+    Como resultado se obtiene que lo mejor es utilizar una metodología ágil. Ya que, según el análisis realizado, se acomoda mejor a las necesidades y características del proceso a llevar a cabo. Para decidir qué metodología ágil se utilizará, se realizó una comparación entre algunas de las metodologías ágiles más comúnmente utilizadas, la cual se refleja en la tabla \ref{tab:comparacionAgil}.
+    
+    
+    \begin{longtable}{|l|l|l|}
+    	\caption{Comparación de Metodología Ágiles. Fuente: Elaboración propia}
+    	\label{tab:comparacionAgil} \\
+    	\hline
+    	\rowcolor[HTML]{CBCEFB} 
+    	\textbf{Parámetros} & \textbf{XP} & \textbf{Scrum} \\
+    	\hline
+    	\endfirsthead
+    	
+    	\hline
+    	\rowcolor[HTML]{CBCEFB} 
+    	\textbf{Parámetros} & \textbf{XP} & \textbf{Scrum} \\
+    	\hline
+    	\endhead
+    	
+    	\hline
+    	Duración & 1 a 2 semanas & 2 semanas a 1 mes \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Cambios & Sensibles al cambio & No permite cambios \\ 
+    	\hline
+    	Prioridad & Estricta, priorizada por el cliente & Determinada por el equipo \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Prácticas de ingeniería & Prescribe prácticas (pruebas, programación en parejas) & No prescribe prácticas \\ 
+    	\hline
+    	Tamaño de los proyectos & Pequeños y medianos & Pequeños, medianos y grandes \\ 
+    	\hline
+    	\rowcolor[HTML]{EDEBF1}
+    	Tamaño de equipo & Menor que 10 & Múltiples equipos menores que 10 \\ 
+    	\hline
+    \end{longtable}
+    
+    
+    
+    Teniendo en cuenta la tabla \ref{tab:comparacionAgil} se decide utilizar la metodología \ac{XP}. Esto se debe a que es muy eficiente durante el proceso de pruebas y planificación, su tasa de error es muy pequeña, facilita los cambios, origina una programación muy organizada, además de fomentar la comunicación entre los desarrolladores y los clientes. También se puede aplicar a cualquier lenguaje de programación, el cliente tiene control sobre las prioridades, durante todo el proyecto se pueden realizar diversas pruebas y, sobre todo, permite ahorrar mucho tiempo y dinero.
+    
+    \subepigraph{Programación Extrema}
+    
+    \ac{XP} es una metodología ágil de desarrollo de software con bases en la comunicación constante y la retroalimentación. Uno de sus fines principales es el de construir un producto que vaya en línea con los requerimientos del cliente. En ese sentido es adaptable a los cambios, generando una rápida respuesta frente a cualquier inconveniente. Por otro lado, el equipo de trabajo tiene la ventaja de potenciar sus relaciones, ya que el proceso que de este se desprende es abierto, conjunto y de aprendizaje continuo \citep{pressman2014se}. 
+    
+    Las 4 etapas que sigue \ac{XP} son:  
+    \begin{itemize}
+    	\item Planificación: toma como referencia la identificación de las \ac{HU} con pequeñas versiones que se irán revisando en periodos cortos con el fin de obtener un software funcional.
+    	\item Diseño: trabaja el código orientado a objetivos y, sobre todo, usando los recursos necesarios para que funcione. 
+    	\item Codificación: se refiere al proceso de programación organizada en parejas, estandarizada y que resulte en un código universal entendible. 
+    	\item Pruebas: consiste en un testeo automático y continuo en el que el cliente tiene voz para validar y proponer.
+    \end{itemize}
+    
+    Los principios de \ac{XP} comprenden diez buenas prácticas que involucran al equipo de trabajo, los procesos y el cliente \citep{pressman2014se}; los cuales son:
+    \begin{itemize}
+    	\item Planificación incremental: Se toman los requerimientos en \ac{HU}, las cuales son negociadas progresivamente con el cliente.
+    	\item Entregas pequeñas: Se desarrolla primero la más mínima parte útil que le proporcione funcionalidad al sistema, y poco a poco se efectúan incrementos que añaden funcionalidad a la primera entrega, cada ciclo termina con una entrega del sistema.
+    	\item Diseño sencillo: Solo se efectúa el diseño necesario para cumplir con los requerimientos actuales, es decir, no se abordan requerimientos futuros.
+    	\item Desarrollo previamente aprobado: Una de las características relevantes y propias de \ac{XP} es que primero se escriben las pruebas y luego se da la codificación, esto con la finalidad de asegurar la satisfacción del requerimiento.
+    	\item Limpieza del código o refactorización: Consiste en simplificar y optimizar el programa sin perder funcionalidad, es decir, alterar su estructura interna sin afectar su comportamiento externo.
+    	\item Programación en parejas: Es otra de las características de esta metodología, que propone que los desarrolladores trabajen en parejas en una terminal, verificando cada uno el trabajo del otro y ayudándose para buscar las mejores soluciones. Se entiende que de esta forma el trabajo será más eficiente y de mayor calidad.
+    	\item Propiedad colectiva: El conocimiento y la información deben ser de todos, por lo tanto no se desarrollan islas de conocimiento, todos los programadores poseen todo el código y cualquiera puede sugerir y realizar mejoras.
+    	\item Integración continua: Al terminar una tarea, esta se integra al sistema entero y se realizan pruebas de unidad a todo el sistema, esta práctica permite que la aplicación sea más funcional en cada iteración y garantiza su funcionamiento con los demás módulos del sistema.
+    	\item Ritmo sostenible: No es aceptable trabajar durante grandes cantidades de horas ya que se considera que puede reducir la calidad del código y la productividad del equipo a mediano plazo, se sugieren 40 horas semanales.
+    	\item Cliente presente: Se debe tener un representante (cliente o usuario final) a tiempo completo, ya que en \ac{XP} este hace parte del equipo de desarrollo y es responsable de formular los requerimientos para el desarrollo del sistema.
+    \end{itemize}
+    
+    \subsubepigraph{Artefactos}
+    
+    Las metodologías utilizan artefactos para describir las actividades o procedimientos que se deben seguir durante su desarrollo. A continuación, se describen los artefactos de \ac{XP}:
+    
+    \begin{itemize}
+    	\item \textbf{\ac{HU}:}
+    	Representan una breve descripción del comportamiento del sistema. Emplea terminología del cliente sin lenguaje técnico. Se realiza una por cada característica principal del sistema. Se emplean para hacer estimaciones de tiempo y para el plan de lanzamientos. Reemplazan un gran documento de requisitos y presiden la creación de las pruebas de aceptación. Estas deben proporcionar sólo el detalle suficiente como para poder hacer razonable la estimación de cuánto tiempo requiere la implementación de la \ac{HU}, difiere de los casos de uso porque son escritos por el cliente, no por los programadores, empleando terminología del cliente \citep{pressman2014se}.
+    	\item \textbf{Tareas de Ingeniería:}
+    	Una \ac{HU} se descompone en varias tareas de ingeniería, que describen las actividades que se realizarán en cada una de ellas. Así mismo, las tareas de ingeniería se vinculan más al desarrollador, ya que permite tener un acercamiento con el código \citep{pressman2014se}.
+    	\item \textbf{Tarjetas \ac{CRC}:}
+    	Estas tarjetas se dividen en tres secciones que contienen la información del nombre de la clase, sus responsabilidades y sus colaboradores. Una clase es cualquier persona, cosa, evento, concepto, pantalla o reporte. Las responsabilidades de una clase son las cosas que conoce y las que realiza, sus atributos y métodos. Los colaboradores son las demás clases con las que trabaja en conjunto para llevar a cabo sus responsabilidades \citep{pressman2014se}.
+    \end{itemize}
+    
+    En síntesis, actualmente \ac{XP} es una de las metodologías de mayor aceptación en la industria del software. Su enfoque basado en los métodos ágiles, su énfasis en la gestión del recurso humano, el cual es uno de los puntos más críticos en todo proyecto, y sus principios de previsibilidad y adaptabilidad hacen de esta metodología una buena opción a seguir.
+    
 }
