@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  8 DEC 2025 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  8 DEC 2025 16:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -959,7 +959,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [13]
-<img/feature_models.png, id=391, 618.81187pt x 412.54124pt>
+<img/feature_models.png, id=393, 618.81187pt x 412.54124pt>
 File: img/feature_models.png Graphic file (type png)
 <use img/feature_models.png>
 Package pdftex.def Info: img/feature_models.png  used on input line 466.
@@ -1152,7 +1152,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [29]
-Overfull \hbox (10.85004pt too wide) in paragraph at lines 226--226
+Overfull \hbox (10.85004pt too wide) in paragraph at lines 493--493
 \T1/phv/m/n/14.4 re-stric-ciones transver-sales y ar-di-nal-i-dades con clar-i-dad y sin am-bigüedad.
  []
 
@@ -1164,7 +1164,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [30]
-Overfull \hbox (1.92209pt too wide) in paragraph at lines 226--226
+Overfull \hbox (1.92209pt too wide) in paragraph at lines 493--493
 \T1/phv/m/n/14.4 gener-ar con-fig-u-ra-ciones vál-i-das a par-tir de elec-ciones de usuario, aplicar
  []
 
@@ -1176,7 +1176,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [31]
-Overfull \hbox (10.178pt too wide) in paragraph at lines 226--226
+Overfull \hbox (10.178pt too wide) in paragraph at lines 493--493
 []\T1/phv/m/n/14.4 FastAPI será el frame-work \T1/phv/m/sl/14.4 back-end \T1/phv/m/n/14.4 adop-ta-do para la im-ple-mentación
  []
 
@@ -1196,8 +1196,18 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [33]
-Overfull \hbox (7.262pt too wide) in paragraph at lines 226--226
+Overfull \hbox (7.262pt too wide) in paragraph at lines 493--493
 []\T1/phv/m/n/14.4 Finalmente, la com-pat-i-bil-i-dad de FastAPI con con-tro-ladores de bases
+ []
+
+
+Overfull \hbox (3.63577pt too wide) in paragraph at lines 493--493
+\T1/phv/m/n/14.4 com-puestos, con-sul-tas op-ti-mizadas, vis-tas ma-te-ri-al-izadas, trig-gers y pro-
+ []
+
+
+Overfull \hbox (1.40277pt too wide) in paragraph at lines 493--493
+\T1/phv/m/n/14.4 tipos de datos JSON y JSONB, per-mi-tien-do al-ma-ce-nar rep-re-senta-ciones
  []
 
 
@@ -1208,6 +1218,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [34]
+Overfull \hbox (25.82315pt too wide) in paragraph at lines 493--493
+[]\T1/phv/m/n/14.4 Adicionalmente, Post-greSQL se in-te-gra de for-ma nat-u-ral con SQLAlche-
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1215,7 +1229,16 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[35]) (./epigraphs/epigraph5.tex) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex) (./epigraphs/epigraph8.tex)
+[35]
+Overfull \hbox (44.19936pt too wide) in paragraph at lines 493--493
+[]\T1/phv/m/n/14.4 Sobre Dock-er se con-struye Dock-er Com-pose, her-ramien-ta de orquestación
+ []
+
+
+Overfull \hbox (2.22444pt too wide) in paragraph at lines 493--493
+\T1/phv/m/n/14.4 tro-la-dos sin in-ter-ven-ción man-u-al, ase-gu-ran-do que las ver-siones del mod-
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1223,7 +1246,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[36]) (./conclusions.tex
+[36]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1231,7 +1254,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[37]) (./recommendations.tex
+[37]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1239,7 +1262,162 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[38
+[38]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[39]
+Overfull \hbox (9.1472pt too wide) in alignment at lines 493--493
+ [] [] [] 
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 493--493
+ [] [] [] 
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 493--493
+ [] [] [] 
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 493--493
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/phv/m/n/14.4 Manejo de op-era-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/phv/m/n/14.4 Experiencia del
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/phv/m/n/14.4 Respuestas in-medi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+\T1/phv/m/n/14.4 atas + seguimien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+\T1/phv/m/n/14.4 in-ten-si-vo y tar-eas
+ []
+
+
+Underfull \hbox (badness 2617) in paragraph at lines 493--493
+[]|\T1/phv/m/n/14.4 Puede ago-tar re-cur-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/phv/m/n/14.4 Optimización me-di-
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 493--493
+\T1/phv/m/n/14.4 ante work-ers par-ale-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/phv/m/n/14.4 Tareas pro-gra-madas
+ []
+
+
+Underfull \hbox (badness 6094) in paragraph at lines 493--493
+[]|\T1/phv/m/n/14.4 Reintentos au-tomáti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/phv/m/n/14.4 Altamente con-cur-
+ []
+
+
+Underfull \hbox (badness 3078) in paragraph at lines 493--493
+[]|\T1/phv/m/n/14.4 Estado de pro-ce-sos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/phv/m/n/14.4 No per-sis-tente, no
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/phv/m/n/14.4 Persistente, ras-tre-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/phv/m/n/14.4 Arquitectura de-
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 493--493
+ [] [] [] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[40]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[41]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[42]) (./epigraphs/epigraph5.tex) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex) (./epigraphs/epigraph8.tex)
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[43]) (./conclusions.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[44]) (./recommendations.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[45
 
 
 ]
@@ -1250,7 +1428,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[39
+[46
 
 
 ]) (./annexes.tex
@@ -1261,7 +1439,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[40
+[47
 
 
 
@@ -1278,7 +1456,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[41
+[48
 
 
 ]
@@ -1293,7 +1471,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[42
+[49
 
 ]
 Overfull \hbox (10.2592pt too wide) in paragraph at lines 28--29
@@ -1307,7 +1485,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[43]
+[50]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 17.8423pt, for example:
@@ -1315,7 +1493,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[44]
+[51]
 Overfull \hbox (9.00697pt too wide) in paragraph at lines 61--62
 \T1/phv/m/n/14.4 vid-u-al váli-do, re-spetan-do to-das las re-stric-ciones y de-pen-den-cias definidas
  []
@@ -1327,7 +1505,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[45]
+[52]
 Overfull \hbox (5.50732pt too wide) in paragraph at lines 76--77
 \T1/phv/m/n/14.4 Estructura cog-ni-ti-va gen-er-al-iza-da que rep-re-sen-ta un pa-trón de movimien-
  []
@@ -1354,7 +1532,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[46]
+[53]
 Overfull \hbox (2.6131pt too wide) in paragraph at lines 94--95
 \T1/phv/m/n/14.4 Recorrido per-son-al-iza-do de apren-diza-je que un es-tu-di-ante sigue a través
  []
@@ -1367,7 +1545,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
-[47] (./main.bbl
+[54] (./main.bbl
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 11.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -1408,7 +1586,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[48
+[55
 
 
 ]
@@ -1433,7 +1611,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[49]
+[56]
 Underfull \hbox (badness 2564) in paragraph at lines 113--117
 []\T1/phv/m/n/14.4 IBM Cor-po-ra-tion.  What is an in-te-grat-ed de-vel-op-ment en-vi-ron-
  []
@@ -1455,7 +1633,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[50]
+[57]
 Underfull \hbox (badness 2221) in paragraph at lines 215--218
 \T1/phv/m/sl/14.4 Iberoamer-i-cana de Tec-nologías del Apren-diza-je\T1/phv/m/n/14.4 , 14(3):112--120,
  []
@@ -1467,7 +1645,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[51]
+[58]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1475,7 +1653,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[52]))
+[59]))
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1483,27 +1661,27 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[53] (./main.aux)
+[60] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B01EEE11D489D07978A0E1D6D39624A1;6854.
+(rerunfilecheck)             Checksum: F55BAA6F9DBAB80A42BEBF0F27CBB9B0;7024.
  ) 
 Here is how much of TeX's memory you used:
- 16772 strings out of 476182
- 265191 string characters out of 5795594
- 1938975 words of memory out of 5000000
- 38243 multiletter control sequences out of 15000+600000
+ 16782 strings out of 476182
+ 265285 string characters out of 5795594
+ 1943975 words of memory out of 5000000
+ 38245 multiletter control sequences out of 15000+600000
  600786 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  90i,14n,93p,720b,758s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (60 pages, 521698 bytes).
+Output written on main.pdf (67 pages, 535795 bytes).
 PDF statistics:
- 1054 PDF objects out of 1200 (max. 8388607)
- 914 compressed objects within 10 object streams
- 229 named destinations out of 1000 (max. 500000)
+ 1088 PDF objects out of 1200 (max. 8388607)
+ 941 compressed objects within 10 object streams
+ 237 named destinations out of 1000 (max. 500000)
  275 words of extra memory for PDF output out of 10000 (max. 10000000)
 

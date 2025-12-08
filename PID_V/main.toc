@@ -16,25 +16,25 @@
 \contentsline {subsection}{\thesubepigraph \ Oportunidades de Mercado Identificadas}{27}{subepigraph.0.2.3}%
 \contentsline {section}{\theepigraph . Metodología de desarrollo del software}{29}{epigraph.0.3}%
 \contentsline {section}{\theepigraph . herramientas y tecnologías}{29}{epigraph.0.4}%
-\contentsline {subsection}{\thesubepigraph \ Lenguaje de programación}{29}{subepigraph.0.4.1}%
-\contentsline {subsection}{\thesubepigraph \ Framework de desarrollo}{32}{subepigraph.0.4.2}%
-\contentsline {subsection}{\thesubepigraph \ Base de datos y gestor de base de datos}{34}{subepigraph.0.4.3}%
-\contentsline {subsection}{\thesubepigraph \ Contenerización y Orquestación}{34}{subepigraph.0.4.4}%
-\contentsline {subsection}{\thesubepigraph \ Almacenamiento en Memoria, Caching y Mensajería}{34}{subepigraph.0.4.5}%
-\contentsline {subsection}{\thesubepigraph \ Procesamiento Asíncrono}{34}{subepigraph.0.4.6}%
-\contentsline {subsection}{\thesubepigraph \ Algoritmos, Motor de Reglas y Validación}{34}{subepigraph.0.4.7}%
-\contentsline {subsection}{\thesubepigraph \ Gestor de dependencias}{34}{subepigraph.0.4.8}%
-\contentsline {subsection}{\thesubepigraph \ Control de versiones}{35}{subepigraph.0.4.9}%
-\contentsline {subsection}{\thesubepigraph \ Herramienta de modelado}{35}{subepigraph.0.4.10}%
-\contentsline {subsection}{\thesubepigraph \ Herramientas para diseñar y ejecutar pruebas}{35}{subepigraph.0.4.11}%
-\contentsline {subsection}{\thesubepigraph \ Herramientas para diseñar y ejecutar pruebas}{35}{subepigraph.0.4.12}%
-\contentsline {subsection}{\thesubepigraph \ Entorno Integrado de Desarrollo}{35}{subepigraph.0.4.13}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe V}{36}{epigraph.0.5}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe VI}{36}{epigraph.0.6}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe VII}{36}{epigraph.0.7}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe VIII}{37}{epigraph.0.8}%
-\contentsline {chapter}{Conclusiones}{38}{section*.54}%
-\contentsline {chapter}{Recomendaciones}{39}{section*.56}%
-\contentsline {chapter}{Anexos}{40}{section*.58}%
-\contentsline {chapter}{Acrónimos}{41}{chapter*.60}%
-\contentsline {chapter}{Glosario}{42}{chapter*.61}%
+\contentsline {subsection}{\thesubepigraph \ Lenguaje de Programación}{29}{subepigraph.0.4.1}%
+\contentsline {subsection}{\thesubepigraph \ Framework de Desarrollo}{32}{subepigraph.0.4.2}%
+\contentsline {subsection}{\thesubepigraph \ Base de Datos y Gestor de Base de Datos}{34}{subepigraph.0.4.3}%
+\contentsline {subsection}{\thesubepigraph \ Contenerización y Orquestación}{35}{subepigraph.0.4.4}%
+\contentsline {subsection}{\thesubepigraph \ Almacenamiento en Memoria, Caching y Mensajería}{36}{subepigraph.0.4.5}%
+\contentsline {subsection}{\thesubepigraph \ Procesamiento Asíncrono}{38}{subepigraph.0.4.6}%
+\contentsline {subsection}{\thesubepigraph \ Algoritmos, Motor de Reglas y Validación}{41}{subepigraph.0.4.7}%
+\contentsline {subsection}{\thesubepigraph \ Gestor de dependencias}{41}{subepigraph.0.4.8}%
+\contentsline {subsection}{\thesubepigraph \ Herramienta para el control de versiones}{41}{subepigraph.0.4.9}%
+\contentsline {subsection}{\thesubepigraph \ Herramienta y lenguaje de modelado}{42}{subepigraph.0.4.10}%
+\contentsline {subsection}{\thesubepigraph \ Herramientas para diseñar y ejecutar pruebas}{42}{subepigraph.0.4.11}%
+\contentsline {subsection}{\thesubepigraph \ Herramientas para diseñar y ejecutar pruebas}{42}{subepigraph.0.4.12}%
+\contentsline {subsection}{\thesubepigraph \ Entorno Integrado de Desarrollo}{42}{subepigraph.0.4.13}%
+\contentsline {section}{\theepigraph . Nombre del Epígrafe V}{43}{epigraph.0.5}%
+\contentsline {section}{\theepigraph . Nombre del Epígrafe VI}{43}{epigraph.0.6}%
+\contentsline {section}{\theepigraph . Nombre del Epígrafe VII}{43}{epigraph.0.7}%
+\contentsline {section}{\theepigraph . Nombre del Epígrafe VIII}{44}{epigraph.0.8}%
+\contentsline {chapter}{Conclusiones}{45}{section*.54}%
+\contentsline {chapter}{Recomendaciones}{46}{section*.56}%
+\contentsline {chapter}{Anexos}{47}{section*.58}%
+\contentsline {chapter}{Acrónimos}{48}{chapter*.60}%
+\contentsline {chapter}{Glosario}{49}{chapter*.61}%
