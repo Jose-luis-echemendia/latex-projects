@@ -25,7 +25,7 @@
 \usepackage{xparse}
 \usepackage{etoolbox}
 \usepackage{xstring}
-\usepackage{xcolor}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage{enumitem}
 \usepackage{helvet}  % Fuente Arial (Helvetica es el equivalente)
 \usepackage{ragged2e} % Para justificación mejorada

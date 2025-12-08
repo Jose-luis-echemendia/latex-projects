@@ -116,7 +116,7 @@
 
             La estructura del \ac{FM} es un árbol de composición, donde:
             \begin{itemize}
-                \item La Característica Raíz representa el sistema o la Línea de Producto
+                \item La Característica Raíz representa el sistema o la línea de producto
                 completa (ej., la carrera de Ingeniería Informática).
                 \item Las características descendientes detallan la composición de sus
                 características padre hasta alcanzar las características hoja, que son las
@@ -126,67 +126,66 @@
             \unnumberedsubsection{Relaciones estructurales}
             La potencia del \ac{FM} reside en su notación gráfica concisa, la cual utiliza la
             posición y símbolos específicos para codificar las restricciones de
-            configuración. Las relaciones entre una característica padre y sus hijos definen
-            las decisiones de inclusión o exclusión:\ref{tab:metodologias}
+            configuración. Las relaciones entre una característica padre (letra P) y sus hijos (letra C) definen
+            las decisiones de inclusión o exclusión; véase la Tabla~\ref{tab:relaciones_estructurales_FM} 
+            \citep{pohl2005software, kang1990foda, benavides2010PrinciplesFM, benavides2010automated, wang2007FormalSemanticsFM}.
                         
             \begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
-                \caption{Comparación, Metodología Ágil VS Metodología Tradicional \label{tab:metodologias}\\
-                
+                \caption{Notación semántica de las relaciones entre características de los \ac{FM} \label{tab:relaciones_estructurales_FM}}\\
                 \hline
                 \rowcolor[HTML]{CBCEFB} 
-                \textbf{Parámetros} & \textbf{Metodologías Ágiles} & \textbf{Metodologías Tradicionales} \\
+                \textbf{Relación} & \textbf{Semántica Formal} & \textbf{Implicación en la Configuración} \\
                 \hline
                 \endfirsthead
                 
+                \multicolumn{3}{c}
+	            {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+                
                 \hline
                 \rowcolor[HTML]{CBCEFB} 
-                \textbf{Parámetros} & \textbf{Metodologías Ágiles} & \textbf{Metodologías Tradicionales} \\
+                \textbf{Relación} & \textbf{Semántica Formal} & \textbf{Implicación en la Configuración} \\
                 \hline
                 \endhead
                 
+                \hline
+                \multicolumn{3}{|r|}{{Continúa en la siguiente página}} \\
+                \endfoot
+                
+                \hline
+                \endlastfoot
+                
                 % Cuerpo de la tabla
-                Acercamiento & Adaptivo & Predictivo \\ 
+                Obligatoa lipa tinyria & $P \rightarrow C$ & Si el padre P es seleccionado, el hijo obligatorio C debe incluirse. No hay variabilidad en este punto \\ 
                 \hline
                 \rowcolor[HTML]{EDEBF1}
-                Medición del objetivo & Valor para el negocio & Conformación del plan \\ 
+                Opcional & $C \rightarrow P $ & El hijo C puede ser incluido o excluido, si se selecciona el padre P. Introduce variabilidad \\ 
                 \hline
-                Tamaño del proyecto & Pequeño & Largo \\ 
-                \hline
-                \rowcolor[HTML]{EDEBF1}
-                Tipo de administración & Descentralizado & Autocrático \\ 
-                \hline
-                Perspectiva de cambios & Adaptable a cambio & Sostenible al cambio \\ 
+                Agrupación AND & $\left(P \rightarrow \bigwedge_{i=1}^{n} C_i\right) \land \bigwedge_{i=1}^{n} (C_i \rightarrow P)$ & Si se selecciona la característica padre P, todos los hijos Ci deben incluirse; cada hijo seleccionado implica la presencia del padre. No introduce variabilidad dentro del grupo \\
                 \hline
                 \rowcolor[HTML]{EDEBF1}
-                Cultura del equipo & Liderazgo\textbackslash Colaboración & Comandada\textbackslash Controlada \\ 
+                Agrupación OR & $\left(P \rightarrow \bigvee_{i=1}^{n} C_i\right) \land \bigwedge_{i=1}^{n} (C_i \rightarrow P)$ & Al seleccionar el padre P, debe elegirse al menos un hijo Ci. Cada hijo seleccionado requiere que el padre esté presente. Sí introduce variabilidad \\
                 \hline
-                Documentación & Baja & Pesada \\ 
-                \hline
-                \rowcolor[HTML]{EDEBF1}
-                Orientada & Personas & Procesos \\ 
-                \hline
-                Ciclos de desarrollo & Numerosos & Limitados \\ 
-                \hline
-                \rowcolor[HTML]{EDEBF1}
-                Dominio de desarrollo & Impredecibles & Predecibles \\ 
-                \hline
-                Planificación inicial & Mínima & Comprensiva \\ 
-                \hline
-                \rowcolor[HTML]{EDEBF1}
-                Retorno de la inversión & Temprano en el proyecto & Al final del proyecto \\ 
-                \hline
-                Tamaño del equipo & Pequeño & Grande \\ 
+                Agrupación alternativa & $\left(P \rightarrow \bigvee_{i=1}^{n} C_i\right) \land \bigwedge_{i \neq j} \neg(C_i \land C_j) \land \bigwedge_{i=1}^{n} (C_i \rightarrow P)$ & Cuando el padre P se selecciona, exactamente un hijo Ci puede activarse y la elección de cualquier hijo obliga a seleccionar al padre. Sí introduce variabilidad \\
                 \hline
             \end{longtable}
+
+            La figura \ref{fig:relaciones_estructurales_FM} muestra los símbolos gráficos para representar las relaciones estructurales.
+            \begin{figure}[H]
+                \centering
+                \captionbox{Símbolos gráficos para representar las relaciones estructurales. \label{fig:relaciones_estructurales_FM}}
+                {\includegraphics[width=1\linewidth]{img/feature_models.png}}
+            \end{figure}
 
             \unnumberedsubsection{Restricciones (\textit{Cross-Tree})}
 
             Las relaciones jerárquicas son insuficientes para capturar todas las reglas de
-            negocio complejas. Por ello, los \ac{FM} permiten definir las restricciones transversales (\textit{cross-tree}); que son reglas lógicas que definen
+            negocio complejas. Por ello, los \ac{FM} permiten definir las restricciones transversales 
+            (\textit{cross-tree}); que son reglas lógicas que definen
             dependencias entre características que no están directamente conectadas en
             la jerarquía padre-hijo del árbol de características. Su función es garantizar la
             validez de una configuración al capturar las relaciones complejas del mundo
-            real que la estructura jerárquica por sí sola no puede expresar \citep{sundermann2023sat}.
+            real que la estructura jerárquica por sí sola no puede expresar 
+            \citep{sundermann2023sat,benavides2005Taxonomy}.
 
             Las dos formas más comunes y fundamentales son:
             \begin{itemize}
@@ -195,18 +194,18 @@
                 A sea seleccionada en una configuración, B también debe estarlo. Porejemplo, en un modelo de características para un automóvil, la
                 característica "Navegación" puede requerir la característica "Pantalla
                 Táctil". Esta relación se modela en lógica proposicional como el
-                condicional $A \rightarrow B$ \citep{sundermann2023sat}.
+                condicional $A \rightarrow B$ \citep{sundermann2023sat, benavides2005Taxonomy}.
                 \item \textbf{Excluye:} Esta restricción establece un conflicto o incompatibilidad. Si
                 una característica C excluye una característica D, entonces ambas no
                 pueden formar parte de la misma configuración. Por ejemplo, el motor
                 "Diésel" puede excluir la transmisión "Eléctrica" en un vehículo híbrido.
                 Su representación lógica es la negación de la conjunción: $\neg(C \land D)$
-                \citep{sundermann2023sat}.
+                \citep{sundermann2023sat, benavides2005Taxonomy}.
             \end{itemize}
 
             \unnumberedsubsection{Semántica Formal y Solucionadores SAT (\textit{SAT Solvers})}
 
-            La semántica formal de un Modelo de Características proporciona un
+            La semántica formal de un \ac{FM} proporciona un
             significado matemático preciso a todos sus elementos (jerarquía, relaciones y
             restricciones), lo que permite un análisis automático y libre de ambigüedades.
             \begin{itemize}
@@ -216,7 +215,7 @@
                 ser Verdadera o Falsa, indicando si está seleccionada o no). Las
                 relaciones padre-hijo y las restricciones cross-tree se convierten en una
                 serie de fórmulas lógicas que, en conjunto, definen el conjunto de todas
-                las configuraciones válidas \citep{sundermann2023sat}.
+                las configuraciones válidas \citep{sundermann2023sat, thum2014featureide}.
                 \item \textbf{Satisfacibilidad (\ac{SAT}) y \ac{SHARPSAT}:} Una vez el \ac{FM} está representado como
                 una fórmula lógica F, se pueden realizar diversos análisis:
                     \begin{itemize}
@@ -224,11 +223,11 @@
                         asignación de valores (Verdadero/Falso) a las variables que haga
                         que la fórmula F sea verdadera. Esto responde a la pregunta
                         fundamental de si el \ac{FM} tiene al menos una configuración válida
-                        \citep{sundermann2023sat}.
+                        \citep{sundermann2023sat, benavides2010automated,mendonca2009SAT}.
                         \item \textbf{Análisis de \ac{SHARPSAT}:} Consiste en el conteo de modelos (\textit{Model Counting}) que
                         satisfacen F. Esto es crucial para determinar el número total de configuraciones válidas que
                         define un \ac{FM}, una métrica esencial para comprender su
-                        variabilidad y complejidad \citep{sundermann2023sat}.
+                        variabilidad y complejidad \citep{sundermann2023sat, benavides2010automated,mendonca2009SAT}.
                     \end{itemize}
                 \item \textbf{Solucionadores SAT (\textit{SAT solvers}):} Un solucionador SAT (\textit{SAT solver}) es una herramienta algorítmica altamente
                 optimizada diseñada para resolver problemas de satisfacibilidad. Dada
@@ -236,7 +235,7 @@
                 (UNSAT). Para el análisis de \ac{SHARPSAT}, se emplean solucionadores especializados de conteo de modelos (\textit{\#SAT solvers})
                 como sharpSAT y Ganak, que han demostrado un
                 rendimiento excelente al calcular el número de configuraciones en
-                modelos industriales \citep{sundermann2023sat, soos2024ganak}.
+                modelos industriales \citep{sundermann2023sat, soos2020Ganak}.
             \end{itemize}
             
         }
