@@ -136,7 +136,7 @@
         configuraciones, repositorios, controladores y almacenes de versión.
 
         Finalmente, la compatibilidad de FastAPI con controladores de bases de datos SQL, 
-        junto con herramientas de orquestación (Docker) y despliegue CI/CD, permite 
+        junto con herramientas de orquestación (Docker) y \ac{CI/CD}, permite 
         que la solución crezca de forma controlada desde prototipos académicos hasta implementaciones 
         institucionales. En conjunto, su velocidad, asincronía, simplicidad expresiva, capacidad de
         validación y flexibilidad lo convierten en la opción más adecuada para el sistema curricular 
@@ -215,7 +215,7 @@
         escalabilidad y reduciendo tiempos de despliegue o recuperación ante fallos.
 
         Un beneficio adicional de esta estrategia es su contribución a las prácticas de 
-        Integración Continua y Despliegue Continuo (CI/CD). Gracias a la naturaleza 
+        \ac{CI/CD}. Gracias a la naturaleza 
         declarativa y reproducible de los contenedores, el sistema puede desplegarse 
         automáticamente mediante pipelines controlados sin intervención manual, asegurando 
         que las versiones del modelo curricular, las configuraciones generadas y los 
@@ -503,7 +503,52 @@
 
     
     \subepigraph{Herramienta para el control de versiones}{
-        GIT y GITHUB
+        
+        Los sistemas de control de versiones más populares son Git, Subversion y Mercurial. 
+        Se eligió Git debido a que es un sistema de control de versiones distribuido 
+        utilizado en el desarrollo de software que rastrea las modificaciones realizadas 
+        en el código fuente. Git, a diferencia de los sistemas de control de versiones 
+        centralizados, permite que varios desarrolladores colaboren de forma independiente 
+        en un solo proyecto al permitirles mantener repositorios locales separados que se 
+        sincronizan con un repositorio remoto. Los repositorios, que contienen los archivos 
+        del proyecto y el historial de cambios, son esenciales para el funcionamiento de Git 
+        \citep{ponuthorai2022git}. Una confirmación en un repositorio es una instantánea del 
+        proyecto en ese momento específico; cada confirmación se distingue por un \textit{hash} 
+        distinto y va acompañada de un mensaje de explicación. Las ramas permiten a los 
+        desarrolladores trabajar de forma independiente en varias funciones o correcciones 
+        \citep{loeliger2012version}.
+        
+        Mientras que otras ramas se utilizan para el desarrollo, el código estable 
+        generalmente se encuentra en la rama principal, también conocida como \textit{main}. 
+        La reorganización y la combinación son dos formas en que los cambios de las ramas 
+        se pueden combinar en la rama principal, cada una con una función distinta para 
+        preservar el historial del proyecto. Se crea una copia local de un repositorio 
+        clonándolo, y los cambios locales se sincronizan con un repositorio remoto mediante 
+        la inserción y la extracción \citep{ghodke2024git}. El área de preparación sirve como 
+        zona de influencia donde se realizan modificaciones antes de la confirmación. Los 
+        submódulos, \textit{cherry-pick} y Git \textit{hooks} son ejemplos de funciones 
+        avanzadas que proporcionan más personalización y control. Los conocidos servicios de 
+        alojamiento de Git, como GitHub, GitLab y Bitbucket, ofrecen plataformas para la 
+        revisión de código, la gestión de repositorios y la integración de herramientas, que 
+        promueven el desarrollo colaborativo. El uso de Git mejora los procesos de desarrollo 
+        al facilitar el trabajo en equipo y la gestión de código efectivos 
+        \citep{ponuthorai2022git}.
+        
+        GitHub es una plataforma de alojamiento de código basada en la web que utiliza Git 
+        como tecnología subyacente para el control de versiones. Actúa como un servicio de 
+        repositorio remoto centralizado, ampliando las capacidades de Git con herramientas 
+        de colaboración, gestión de proyectos y características sociales. Como una de las 
+        plataformas más populares para el desarrollo de software colaborativo, GitHub permite 
+        a los equipos alojar repositorios públicos y privados, facilitando la revisión de 
+        código mediante \textit{pull requests}, el seguimiento de problemas con \textit{issues} 
+        y la automatización de flujos de trabajo mediante GitHub Actions. Su interfaz gráfica 
+        y sus herramientas de gestión hacen que las operaciones de Git, como la fusión de ramas 
+        y la resolución de conflictos, sean más accesibles para los desarrolladores, al tiempo 
+        que proporcionan integraciones robustas con herramientas de \ac{CI/CD} y servicios de 
+        terceros. GitHub también fomenta la comunidad \textit{open-source} mediante funciones 
+        como la bifurcación (\textit{forking}) de repositorios y las contribuciones externas, 
+        consolidándose como un entorno integral para el ciclo de vida del desarrollo de software 
+        \citep{github2024, ghodke2024git}.
     
     }
     

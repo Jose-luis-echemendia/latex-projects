@@ -15,26 +15,31 @@
 \contentsline {subsection}{\thesubepigraph \ Análisis de Soluciones Existentes}{23}{subepigraph.0.2.2}%
 \contentsline {subsection}{\thesubepigraph \ Oportunidades de Mercado Identificadas}{26}{subepigraph.0.2.3}%
 \contentsline {section}{\theepigraph . Metodología de desarrollo del software}{27}{epigraph.0.3}%
-\contentsline {section}{\theepigraph . herramientas y tecnologías}{28}{epigraph.0.4}%
-\contentsline {subsection}{\thesubepigraph \ Lenguaje de Programación}{28}{subepigraph.0.4.1}%
-\contentsline {subsection}{\thesubepigraph \ Framework de Desarrollo}{30}{subepigraph.0.4.2}%
-\contentsline {subsection}{\thesubepigraph \ Base de Datos y Gestor de Base de Datos}{32}{subepigraph.0.4.3}%
-\contentsline {subsection}{\thesubepigraph \ Contenerización y Orquestación}{34}{subepigraph.0.4.4}%
-\contentsline {subsection}{\thesubepigraph \ Almacenamiento en Memoria, Caching y Mensajería}{35}{subepigraph.0.4.5}%
-\contentsline {subsection}{\thesubepigraph \ Procesamiento Asíncrono}{36}{subepigraph.0.4.6}%
-\contentsline {subsection}{\thesubepigraph \ Algoritmos, Motor de Reglas y Validación}{40}{subepigraph.0.4.7}%
-\contentsline {subsection}{\thesubepigraph \ Gestor de dependencias}{41}{subepigraph.0.4.8}%
-\contentsline {subsection}{\thesubepigraph \ Herramienta para el control de versiones}{42}{subepigraph.0.4.9}%
-\contentsline {subsection}{\thesubepigraph \ Lenguaje de modelados}{42}{subepigraph.0.4.10}%
-\contentsline {subsection}{\thesubepigraph \ Herramienta CASE}{42}{subepigraph.0.4.11}%
-\contentsline {subsection}{\thesubepigraph \ Herramientas para diseñar y ejecutar pruebas}{43}{subepigraph.0.4.12}%
-\contentsline {subsection}{\thesubepigraph \ Entorno Integrado de Desarrollo}{43}{subepigraph.0.4.13}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe V}{44}{epigraph.0.5}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe VI}{44}{epigraph.0.6}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe VII}{45}{epigraph.0.7}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe VIII}{45}{epigraph.0.8}%
-\contentsline {chapter}{Conclusiones}{46}{section*.54}%
-\contentsline {chapter}{Recomendaciones}{47}{section*.56}%
-\contentsline {chapter}{Anexos}{48}{section*.58}%
-\contentsline {chapter}{Acrónimos}{49}{chapter*.60}%
-\contentsline {chapter}{Glosario}{50}{chapter*.61}%
+\contentsline {subsection}{\thesubepigraph \ Metodologías de desarrollo de software tradicionales}{28}{subepigraph.0.3.1}%
+\contentsline {subsection}{\thesubepigraph \ Metodologías de desarrollo de software ágiles}{29}{subepigraph.0.3.2}%
+\contentsline {subsection}{\thesubepigraph \ Elección de la metodología}{31}{subepigraph.0.3.3}%
+\contentsline {subsection}{\thesubepigraph \ Programación Extrema}{34}{subepigraph.0.3.4}%
+\contentsline {subsubsection}{\thesubsubepigraph \ Artefactos}{36}{subsubepigraph.0.3.4.1}%
+\contentsline {section}{\theepigraph . herramientas y tecnologías}{37}{epigraph.0.4}%
+\contentsline {subsection}{\thesubepigraph \ Lenguaje de Programación}{38}{subepigraph.0.4.1}%
+\contentsline {subsection}{\thesubepigraph \ Framework de Desarrollo}{40}{subepigraph.0.4.2}%
+\contentsline {subsection}{\thesubepigraph \ Base de Datos y Gestor de Base de Datos}{42}{subepigraph.0.4.3}%
+\contentsline {subsection}{\thesubepigraph \ Contenerización y Orquestación}{43}{subepigraph.0.4.4}%
+\contentsline {subsection}{\thesubepigraph \ Almacenamiento en Memoria, Caching y Mensajería}{45}{subepigraph.0.4.5}%
+\contentsline {subsection}{\thesubepigraph \ Procesamiento Asíncrono}{46}{subepigraph.0.4.6}%
+\contentsline {subsection}{\thesubepigraph \ Algoritmos, Motor de Reglas y Validación}{49}{subepigraph.0.4.7}%
+\contentsline {subsection}{\thesubepigraph \ Gestor de dependencias}{51}{subepigraph.0.4.8}%
+\contentsline {subsection}{\thesubepigraph \ Herramienta para el control de versiones}{51}{subepigraph.0.4.9}%
+\contentsline {subsection}{\thesubepigraph \ Lenguaje de modelados}{53}{subepigraph.0.4.10}%
+\contentsline {subsection}{\thesubepigraph \ Herramienta CASE}{53}{subepigraph.0.4.11}%
+\contentsline {subsection}{\thesubepigraph \ Herramientas para diseñar y ejecutar pruebas}{54}{subepigraph.0.4.12}%
+\contentsline {subsection}{\thesubepigraph \ Entorno Integrado de Desarrollo}{54}{subepigraph.0.4.13}%
+\contentsline {section}{\theepigraph . Nombre del Epígrafe V}{56}{epigraph.0.5}%
+\contentsline {section}{\theepigraph . Nombre del Epígrafe VI}{56}{epigraph.0.6}%
+\contentsline {section}{\theepigraph . Nombre del Epígrafe VII}{56}{epigraph.0.7}%
+\contentsline {section}{\theepigraph . Nombre del Epígrafe VIII}{56}{epigraph.0.8}%
+\contentsline {chapter}{Conclusiones}{57}{section*.63}%
+\contentsline {chapter}{Recomendaciones}{58}{section*.65}%
+\contentsline {chapter}{Anexos}{59}{section*.67}%
+\contentsline {chapter}{Acrónimos}{60}{chapter*.69}%
+\contentsline {chapter}{Glosario}{61}{chapter*.70}%
