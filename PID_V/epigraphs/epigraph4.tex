@@ -429,30 +429,131 @@
     }
     
     \subepigraph{Algoritmos, Motor de Reglas y Validación}{
-        algoritmos geneticos, IA, SymPy y NetworkX
+
+        Para garantizar la consistencia, completitud y validez de las configuraciones
+        generadas a partir del Modelo de Características (FM), la plataforma integrará
+        un conjunto de algoritmos especializados, combinando enfoques deterministas y
+        heurísticos según la naturaleza del problema a resolver.
+
+        En primer lugar, se utilizará \textbf{SymPy} como motor base para la
+        representación simbólica y evaluación lógica de restricciones asociadas al FM.
+        SymPy permite manipular expresiones booleanas, aplicar simplificaciones,
+        detectar contradicciones y verificar satisfacibilidad, lo que resulta esencial
+        para la evaluación de relaciones \textit{cross-tree} como \textit{requires},
+        \textit{excludes}, \textit{implies} y restricciones de cardinalidad. Su uso
+        asegura una verificación formal, basada en lógica proposicional y álgebra
+        simbólica, manteniendo precisión y trazabilidad en los análisis.
+
+        De manera complementaria, la plataforma empleará \textbf{NetworkX} para
+        modelar y procesar las dependencias entre características como grafos
+        dirigidos, permitiendo ejecutar algoritmos de recorrido, detección de ciclos,
+        análisis de conectividad, propagación de condiciones y determinación de
+        componentes fuertemente conexas. Este enfoque orientado a grafos habilita la
+        inspección estructural del FM, la detección temprana de inconsistencias y la
+        aplicación eficiente de validaciones transversales.
+
+        En escenarios donde la validación determinista no sea suficiente para explorar
+        el espacio de configuraciones posibles —especialmente cuando existan
+        alternativas múltiples y restricciones complejas— se utilizarán técnicas
+        heurísticas como \textbf{algoritmos genéticos}. Estos permiten buscar
+        soluciones aproximadas optimizando criterios como completitud, compatibilidad
+        y minimización de violaciones. Su empleo resulta valioso para sugerir
+        configuraciones válidas, proponer versiones corregidas y explorar variantes
+        del FM bajo metas específicas.
+
+        Finalmente, el motor combinará ambas estrategias: validación determinista
+        formal para garantizar consistencia lógica e integridad del modelo, y
+        heurísticas evolutivas para asistir en la derivación de alternativas válidas
+        ante configuraciones incompletas o conflictivas. Esta hibridación permite un
+        balance adecuado entre rigor matemático, eficiencia computacional y soporte a
+        tareas exploratorias propias del dominio curricular.
+
     }
+
     
     \subepigraph{Gestor de dependencias}{
-        poetry y uv
+
+        Para la gestión eficiente de dependencias, aislamiento de entornos y
+        versionado reproducible de librerías, la plataforma adoptará \textbf{Poetry} y
+        \textbf{UV} como gestores complementarios.
+
+        Poetry permite mantener un control declarativo de las dependencias del
+        proyecto mediante archivos \texttt{pyproject.toml}, garantizando la trazabilidad
+        del stack tecnológico y la compatibilidad de versiones. Su mecanismo de
+        resolución de dependencias asegura consistencia en los entornos de desarrollo y
+        producción, reduciendo incidencias asociadas a incompatibilidades entre
+        librerías.
+
+        Además, Poetry facilita la generación de entornos virtuales aislados, el
+        bloqueo de versiones exactas (\texttt{poetry.lock}), la publicación del
+        proyecto como paquete y la automatización de scripts relacionados con el
+        ciclo de vida del backend.
+
+        En conjunto con Poetry, se utilizará \textbf{UV} como herramienta moderna para
+        instalación ultrarrápida de dependencias y creación de entornos. UV destaca
+        por su rendimiento de orden de magnitud superior a herramientas
+        tradicionales, lo cual mejora tiempos de despliegue, entornos CI/CD y
+        operaciones de reconstrucción.
+
+        La combinación de Poetry y UV permite una gestión robusta, reproducible y
+        eficiente de dependencias, alineada con las necesidades de mantenibilidad,
+        escalabilidad y automatización del sistema.
+
     }
+
     
     \subepigraph{Herramienta para el control de versiones}{
         GIT y GITHUB
     
     }
     
-    \subepigraph{Herramienta y lenguaje de modelado}{
-        uml y visual paradigm
+    \subepigraph{Lenguaje de modelados}{
+
+        El lenguaje de modelado se refiera a un lenguaje formal utilizado para crear 
+        modelos que representan sistemas, procesos o estructuras de datos. 
+        Estos lenguajes proporcionan un conjunto de reglas sintácticas y 
+        semánticas que facilitan la comprensión de fenómenos complejos de manera 
+        estructurada \citep{rumbaugh2004uml}.
+        
+        El lenguaje de modelado a utilizar es el Lenguaje de Modelado Unificado (UML), 
+        este lenguaje ofrece un estándar para describir un plano del sistema, 
+        incluyendo aspectos conceptuales tales como procesos de negocios, funciones 
+        del sistema, expresiones de lenguajes de programación, esquemas de bases de 
+        datos y componentes reutilizables. Este lenguaje de modelo 
+        es el seleccionado para especificar o describir métodos o procesos, definir el 
+        sistema y sus artefactos para la documentación y construcción de la aplicación 
+        web a desarrollar \citep{omg2017}.
+    }
+
+    \subepigraph{Herramienta CASE}{
+
+        Una herramienta de la ingeniería de software asistida por computadoras (CASE) 
+        es un programa informático destinado a aumentar la productividad durante 
+        todo el proceso de desarrollo de software reduciendo el coste de estas en 
+        términos de tiempo y de dinero \ciptep{pressman2014se}. Según Sommerville, estas herramientas nos pueden ayudar 
+        en todos los aspectos del ciclo de vida de desarrollo del \textit{software} en tareas como el 
+        diseño de proyectos, cálculo de costes, implementación de parte del código 
+        automáticamente con el diseño dado, compilación automática, documentación o 
+        detección de errores, automatizar actividades de análisis, mejorando asi la productividad
+        y calidad del \textit{software}. Durante el diseñó de la 
+        solución se empleó la herramienta CASE: 
+        Visual Paradigm en su versión 16.2 \citep{sommerville2016se}.
+
+        La herramienta Visual Paradigm es reconocida mundialmente por sus soluciones 
+        de software para la transformación de negocio. Propicia un conjunto de ayudas 
+        para el desarrollo de programas informáticos, desde la planificación, pasando 
+        por el análisis y el diseño, hasta la generación de código. Soporta los 
+        principales estándares de la industria tales como el Lenguaje de Modelado 
+        Unificado (UML), la notación de Modelado de Procesos de Negocio (BPMN) y un 
+        sinfín de diagramas.  Por lo que Visual Paradigm es una herramienta CASE 
+        integral y flexible para el modelo y gestión en el desarrollo de software, 
+        procesos de negocio y arquitectura empresarial \citep{visualParadigm2024}.
     }
     
     \subepigraph{Herramientas para diseñar y ejecutar pruebas}{
         postman y pruebas unitarias
     }
-    
-    \subepigraph{Herramientas para diseñar y ejecutar pruebas}{
-        Structlog Sentry
-    }
-    
+        
     \subepigraph{Entorno Integrado de Desarrollo}{
 
         Los Entornos Integrados de Desarrollo (IDE) son las herramientas que 
@@ -475,7 +576,7 @@
         integrado de Git, resaltado de sintaxis, finalización inteligente de código,
         fragmentos y refactorización de código. Además, 
         su nivel de personalización permite adaptar el entorno a las preferencias de cada 
-        programador mediante temas, atajos y configuraciones avanzadas \cite{vscode_docs2025}.
+        programador mediante temas, atajos y configuraciones avanzadas \citep{vscode_docs2025}.
 
         VSCode presenta extensiones importantísimas que permite adaptar el
         entorno de desarrollo para una enorme infinidad de tareas, tecnologías y lenguajes. 
@@ -487,7 +588,10 @@
         programación, pues funciona muy bien en incluso equipos con recursos
         limitados; además, los desarrolladores lo aprecian porque su interfaz de
         usuario es muy intuitiva y permite comenzar, prácticamente, a trabajar sin
-        necesidad de alguna experiencia \cite{vscode2025, vscode_docs2025}.
+        necesidad de alguna experiencia \citep{vscode2025, vscode_docs2025}.
 
     }
 }
+
+
+

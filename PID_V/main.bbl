@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{55}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -137,6 +137,12 @@ Kyo~C. Kang, Sholom Cohen, James~A. Hess, William~E. Novak, and A.~Spencer Peter
 \newblock Feature-oriented domain analysis (foda) feasibility study.
 \newblock Technical Report CMU/SEI-90-TR-21, Software Engineering Institute, Carnegie Mellon University, 1990.
 
+\bibitem[Ltd.(2024)]{visualParadigm2024}
+Visual Paradigm~International Ltd.
+\newblock Visual paradigm documentation.
+\newblock \url{https://www.visual-paradigm.com/documentation/}, 2024.
+\newblock Accessed: 2025-01-10.
+
 \bibitem[Lutz(2013)]{lutz2013learning}
 Mark Lutz.
 \newblock Learning python.
@@ -157,6 +163,12 @@ P.~Mishra and M.~J. Koehler.
 \newblock ¿qué es moodle? visión general de la plataforma, 2025.
 \newblock URL \url{https://moodle.com/es/what-is-moodle/}.
 \newblock Recuperado 25 de octubre de 2025.
+
+\bibitem[Obj(2017)]{omg2017}
+\emph{Unified Modeling Language (UML) Specification}.
+\newblock Object Management Group, 2017.
+\newblock URL \url{https://www.omg.org/spec/UML}.
+\newblock Accedido: 10 de diciembre de 2025.
 
 \bibitem[Pesce(2021)]{pesce2021benchmark}
 Luigi Pesce.
@@ -220,6 +232,11 @@ P.~Rodríguez, A.~Vizcaíno, and M.~Piattini.
 D.~H. Rose and N.~Strangman.
 \newblock Universal design for learning: Meeting the challenge of individual learning differences through a neurocognitive perspective.
 \newblock \emph{Universal Access in the Information Society}, 5\penalty0 (4):\penalty0 381--391, 2007.
+
+\bibitem[Rumbaugh et~al.(2004)Rumbaugh, Jacobson, and Booch]{rumbaugh2004uml}
+James Rumbaugh, Ivar Jacobson, and Grady Booch.
+\newblock \emph{Unified Modeling Language Reference Manual}.
+\newblock Pearson, 2004.
 
 \bibitem[Schmidt(1975)]{schmidt1975schema}
 R.~A. Schmidt.
