@@ -34,6 +34,44 @@
 \usepackage{longtable}
 \usepackage[edges]{forest}
 \usepackage{array}
+\usetikzlibrary{shadows}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Definimos un estilo para SQL
+\lstdefinelanguage{SQL}{
+  morekeywords={
+    SELECT, FROM, WHERE, AND, OR, NOT, NULL, IS, IN, LIKE, BETWEEN,
+    JOIN, INNER, LEFT, RIGHT, FULL, OUTER, ON, AS, DISTINCT,
+    GROUP, BY, HAVING, ORDER, LIMIT, OFFSET,
+    INSERT, INTO, VALUES, UPDATE, SET, DELETE,
+    CREATE, TABLE, VIEW, INDEX, SEQUENCE, TRIGGER,
+    PRIMARY, KEY, FOREIGN, REFERENCES,
+    WITH, RECURSIVE, UNION, ALL
+  },
+  sensitive=false,
+  morecomment=[l]--,
+  morecomment=[s]{/*}{*/},
+  morestring=[b]' 
+}
+
+\lstset{
+  language=SQL,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{gray},
+  stringstyle=\color{teal},
+  numbers=left,
+  numberstyle=\tiny, 
+  stepnumber=1,
+  numbersep=8pt,
+  showstringspaces=false,
+  breaklines=true,
+  frame=single,
+  tabsize=2,
+  captionpos=b
+}
 
 % ----------------------------------------------------------
 % 📄 Márgenes y formato global
