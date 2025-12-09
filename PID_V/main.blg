@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: plainnat.bst
+Database file #1: bibliographic_references.bib
+Warning--entry type for "ptc_feature_models" isn't style-file defined
+--line 17 of file bibliographic_references.bib
+Warning--entry type for "moodle2025overview" isn't style-file defined
+--line 25 of file bibliographic_references.bib
+Warning--entry type for "blackboard2025overview" isn't style-file defined
+--line 33 of file bibliographic_references.bib
+Warning--entry type for "canvas2025overview" isn't style-file defined
+--line 41 of file bibliographic_references.bib
+Warning--entry type for "academialab_linea_productos" isn't style-file defined
+--line 72 of file bibliographic_references.bib
+Warning--entry type for "ingenieria_software_lps" isn't style-file defined
+--line 79 of file bibliographic_references.bib
+Warning--entry type for "sgbuzz_lps" isn't style-file defined
+--line 86 of file bibliographic_references.bib
+Warning--entry type for "gfg_feature_engineering" isn't style-file defined
+--line 130 of file bibliographic_references.bib
+Warning--entry type for "purevariants2024overview" isn't style-file defined
+--line 434 of file bibliographic_references.bib
+Warning--entry type for "ibm_IDE" isn't style-file defined
+--line 721 of file bibliographic_references.bib
+Warning--empty year in academialab_linea_productos
+Warning--empty year in estrada_metamodelo_repo
+Warning--empty year in gfg_feature_engineering
+Warning--empty year in ingenieria_software_lps
+Warning--empty publisher in lutz2013learning
+Warning--empty year in sgbuzz_lps
+You've used 75 entries,
+            2773 wiz_defined-function locations,
+            966 strings with 15242 characters,
+and the built_in function-call counts, 27943 in all, are:
+= -- 2465
+> -- 1322
+< -- 61
++ -- 475
+- -- 396
+* -- 1866
+:= -- 4326
+add.period$ -- 255
+call.type$ -- 75
+change.case$ -- 343
+chr.to.int$ -- 71
+cite$ -- 156
+duplicate$ -- 1431
+empty$ -- 2587
+format.name$ -- 492
+if$ -- 5920
+int.to.chr$ -- 5
+int.to.str$ -- 1
+missing$ -- 64
+newline$ -- 407
+num.names$ -- 296
+pop$ -- 881
+preamble$ -- 1
+purify$ -- 283
+quote$ -- 0
+skip$ -- 1056
+stack$ -- 0
+substring$ -- 586
+swap$ -- 126
+text.length$ -- 6
+text.prefix$ -- 1
+top$ -- 0
+type$ -- 740
+warning$ -- 6
+while$ -- 263
+width$ -- 0
+write$ -- 980
+(There were 16 warnings)

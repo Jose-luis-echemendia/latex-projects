@@ -1,9 +1,9 @@
-\epigraph{herramientas y tecnologías}{
+\epigraph{Herramientas y tecnologías}{
 
     La implementación de la solución propuesta requiere la selección cuidadosa de tecnologías, 
     herramientas y \textit{frameworks} que permitan materializar de manera eficiente los modelos 
     curriculares, soportar reglas de variabilidad y garantizar una experiencia de desarrollo fluida. 
-    En este epígrafe se describen los componentes tecnológicos que conformarán la plataforma, 
+    En este epígrafe se describen los componentes tecnológicos que conformarán la plataforma,
     justificando su elección en función de Solo FastAPIs como escalabilidad, mantenibilidad, 
     interoperabilidad y robustez. Asimismo, se analizan los entornos de desarrollo, 
     lenguajes de programación, sistemas de persistencia y bibliotecas especializadas que 
@@ -13,6 +13,17 @@
     sus objetivos funcionales y no funcionales.
 
     \subepigraph{Lenguaje de Programación}{
+
+        Los lenguajes de programación son herramientas formales que permiten 
+        expresar instrucciones de manera estructurada para que un sistema 
+        computacional ejecute tareas determinadas \citep{sebesta2016}. A través de ellos se 
+        implementan algoritmos, modelos de datos, reglas de negocio y mecanismos de 
+        interacción con el usuario u otros sistemas. La elección de un lenguaje influye 
+        directamente en la escalabilidad, el rendimiento, la mantenibilidad y la 
+        capacidad de expresar soluciones complejas de manera eficiente. En el contexto 
+        del sistema propuesto, el lenguaje seleccionado debe ofrecer flexibilidad, 
+        capacidad de representación estructural y soporte robusto para lógica y 
+        concurrencia \citep{sommerville2016se}.
 
         Python será el lenguaje principal utilizado para el desarrollo del \textit{backend} de la 
         solución propuesta. Su elección se fundamenta en su madurez tecnológica, su amplio 
@@ -65,7 +76,7 @@
         previas, preservando así la consistencia y trazabilidad del sistema en el tiempo.
 
         Asimismo, Python ofrece un ecosistema robusto para el desarrollo de aplicaciones web 
-        a través de frameworks como FastAPI, que permiten construir servicios RESTful eficientes 
+        a través de frameworks como FastAPI, que permiten construir servicios \ac{REST}ful eficientes 
         y escalables, lo cual facilita exponer un motor de validación y generación de configuraciones 
         como servicio \citep{ramirez2019fastapi}. A esto se suma la compatibilidad con herramientas 
         modernas de persistencia de datos como SQLAlchemy y pydantic, lo que facilita la representación 
@@ -85,6 +96,17 @@
     }
 
     \subepigraph{Framework de Desarrollo}{
+
+        Los frameworks de desarrollo son estructuras software 
+        que proporcionan un conjunto de herramientas, patrones, 
+        módulos y convenciones que simplifican la construcción de 
+        aplicaciones \citep{sommerville2016se}. Permiten acelerar la implementación de funcionalidades 
+        complejas, garantizando buenas prácticas de diseño y facilitando la 
+        mantenibilidad del software \citep{pressman2014se}. Un framework adecuado reduce la repetición 
+        de código, mejora la seguridad, permite la modularización y posibilita el 
+        desarrollo escalable. En este proyecto, el framework seleccionado debe soportar 
+        concurrencia, validación, comunicación con bases de datos y un desarrollo claro 
+        basado en APIs \citep{gamma1995Frameworks}.
         
         FastAPI será el framework \textit{backend} adoptado para la implementación de la plataforma, 
         debido a su equilibrio entre simplicidad de desarrollo, alto rendimiento y robustez 
@@ -111,13 +133,13 @@
         inconsistencias desde la capa de entrada.
 
         Un argumento especialmente relevante para seleccionar FastAPI es la naturaleza 
-        intensiva en validaciones y operaciones I/O que caracteriza al sistema propuesto. 
+        intensiva en validaciones y operaciones \ac{I/O} que caracteriza al sistema propuesto. 
         La plataforma no solo debe recibir configuraciones y verificar reglas, sino también 
         consultar persistencia, aplicar evaluaciones lógicas, generar respuestas alternativas y 
         registrar versiones de modelo, todo ello de manera concurrente y potencialmente bajo 
         múltiples usuarios. Debido a su arquitectura asíncrona nativa basada en async/await, 
         FastAPI permite manejar este patrón de carga sin bloqueo, maximizando la eficiencia en 
-        tareas I/O y reduciendo latencias \citep{eugene2023fastapi, pesce2021benchmark}. Esto se 
+        tareas \ac{I/O} y reduciendo latencias \citep{eugene2023fastapi, pesce2021benchmark}. Esto se 
         traduce en una capacidad real de escalar, sin incurrir en cuellos de botella característicos 
         de frameworks síncronos, lo que resulta esencial en un sistema donde las consultas y 
         validaciones son frecuentes, complejas y potencialmente concurrentes.
@@ -135,7 +157,7 @@
         útil para organizar servicios de modelado de FM, motor de restricciones, evaluadores de 
         configuraciones, repositorios, controladores y almacenes de versión.
 
-        Finalmente, la compatibilidad de FastAPI con controladores de bases de datos SQL, 
+        Finalmente, la compatibilidad de FastAPI con controladores de bases de datos \ac{SQL}, 
         junto con herramientas de orquestación (Docker) y \ac{CI/CD}, permite 
         que la solución crezca de forma controlada desde prototipos académicos hasta implementaciones 
         institucionales. En conjunto, su velocidad, asincronía, simplicidad expresiva, capacidad de
@@ -145,27 +167,39 @@
     }
     
     \subepigraph{Base de Datos y Gestor de Base de Datos}{
+
+        Las bases de datos son sistemas diseñados para almacenar, organizar y 
+        proteger información de manera eficiente y estructurada, garantizando su 
+        disponibilidad a lo largo del tiempo. Para interactuar con ellas, se emplean 
+        gestores de bases de datos (DBMS), que proporcionan mecanismos de control, 
+        recuperación, consultas, integridad y seguridad. La selección de una base de datos 
+        adecuada depende del tipo de datos a manejar, los niveles de consistencia requeridos 
+        y los volúmenes previstos. En una plataforma como la propuesta, donde se gestionan 
+        configuraciones, versiones, restricciones y metadatos del dominio curricular, el 
+        gestor debe asegurar durabilidad, consistencia y rendimiento óptimo.
         
         La persistencia de los modelos curriculares, configuraciones generadas, 
         versiones históricas y metadatos asociados requiere de un sistema robusto, 
         seguro y con garantías de consistencia transaccional. En este proyecto se 
         selecciona PostgreSQL como gestor de base de datos relacional, debido a su madurez, 
         fiabilidad y su capacidad de manejar estructuras complejas con fuertes requisitos 
-        de integridad referencial. PostgreSQL destaca por su cumplimiento estricto del 
-        estándar SQL, su modelo ACID, y su eficiente gestión de transacciones, elementos 
+        de integridad referencial \citep{postgres2024, momjian2001postgresql}. PostgreSQL destaca por su cumplimiento estricto del 
+        estándar \ac{SQL}, su modelo \ac{ACID}, y su eficiente gestión de transacciones, elementos 
         imprescindibles para representar relaciones jerárquicas entre características, 
         restricciones cross-tree, y snapshots versionados del modelo sin comprometer la 
-        coherencia global del sistema.
+        coherencia global del sistema \citep{momjian2001postgresql}.
 
         Además, PostgreSQL ofrece capacidades avanzadas como índices compuestos, consultas 
         optimizadas, vistas materializadas, triggers y procedimientos almacenados, que 
-        resultan útiles para procesar datos curriculares con alto grado de estructuración. 
-        El motor también soporta tipos de datos JSON y JSONB, permitiendo almacenar 
+        resultan útiles para procesar datos curriculares con alto grado de estructuración 
+        \citep{postgres2024}. 
+        El motor también soporta tipos de datos \ac{JSON} y \ac{JSONB}, permitiendo almacenar 
         representaciones semiestructuradas de configuraciones y estados transitorios, por 
         lo que proporciona flexibilidad para almacenar tanto esquemas estáticos como 
-        snapshots dinámicos relacionados con la evolución del Modelo de Características.
+        snapshots dinámicos relacionados con la evolución del Modelo de Características 
+        \citep{postgres2024}.
 
-        Adicionalmente, PostgreSQL se integra de forma natural con SQLAlchemy como ORM 
+        Adicionalmente, PostgreSQL se integra de forma natural con SQLAlchemy como \ac{ORM} 
         dentro del backend desarrollado en FastAPI, facilitando el diseño declarativo de 
         entidades, la gestión del ciclo de persistencia, la validación de relaciones y la 
         migración segura del esquema. Esta integración favorece una arquitectura limpia y 
@@ -173,7 +207,7 @@
 
         Para la administración visual del motor se empleará pgAdmin, interfaz ampliamente 
         utilizada para la gestión de bases de datos PostgreSQL. Mediante esta herramienta 
-        es posible inspeccionar tablas, ejecutar consultas SQL, visualizar índices y 
+        es posible inspeccionar tablas, ejecutar consultas \ac{SQL}, visualizar índices y 
         constraints, supervisar cargas de trabajo y realizar respaldos de forma controlada. 
         En el contexto de la solución propuesta, pgAdmin permite auditar el estado de los 
         modelos almacenados, verificar reglas impuestas, revisar configuraciones generadas 
@@ -182,19 +216,31 @@
         En conjunto, la elección de PostgreSQL como sistema de persistencia y pgAdmin 
         como herramienta administrativa proporciona una base confiable y alineada 
         con las necesidades de integridad, consistencia y trazabilidad del sistema 
-        curricular modelado.
+        curricular modelado \citep{momjian2001postgresql, postgres2024}.
             
     }
 
     \subepigraph{Contenerización y Orquestación}{
 
+        La contenerización es una tecnología que permite empaquetar aplicaciones junto con 
+        todas sus dependencias en unidades aisladas, reproducibles y portables llamadas 
+        contenedores. Esto garantiza que una aplicación se ejecute de la misma manera en 
+        cualquier entorno, eliminando problemas de incompatibilidad. Para ello se emplean 
+        herramientas especializadas, donde Docker se ha consolidado como estándar industrial. 
+        Por su parte, la orquestación permite administrar múltiples contenedores, asegurando 
+        coordinación, escalabilidad y resiliencia; funciones que normalmente se alcanzan 
+        mediante tecnologías como Docker Compose o Kubernetes. Este enfoque es crucial para 
+        despliegues confiables, mantenibles y escalables.
+
         Para garantizar la portabilidad, reproducibilidad y facilidad de despliegue del 
-        sistema propuesto, se adoptará Docker como tecnología base de contenedorización. 
+        sistema propuesto, se adoptará Docker como tecnología base de contenedorización 
+        \citep{boettiger2015introduction, docker2024docs}. 
         Docker permite encapsular los servicios de la aplicación —incluyendo el backend 
         FastAPI, la base de datos PostgreSQL, la herramienta administrativa pgAdmin y
         otros servicios de utilidad o futuros módulos asociados— dentro de entornos aislados 
         y autocontenidos. Esto elimina problemas de dependencias, divergencias de entorno
-        y configuraciones inconsistentes entre despliegues locales y productivos.
+        y configuraciones inconsistentes entre despliegues locales y productivos 
+        \citep{boettiger2015introduction}.
         La capacidad de reproducir una imagen de forma determinística contribuye directamente 
         a la robustez y mantenibilidad de la solución.
 
@@ -203,23 +249,25 @@
         comunicación estables. Docker permite garantizar uniformidad tanto en las 
         dependencias del backend, como versiones de librerías, configuración del servidor 
         de aplicación y parámetros del engine de base de datos, disminuyendo errores 
-        derivados de diferencias de entorno y facilitando diagnósticos.
+        derivados de diferencias de entorno y facilitando diagnósticos \citep{docker2024docs}.
 
         Sobre Docker se construye Docker Compose, herramienta de orquestación ligera que 
         permite describir, mediante un único archivo declarativo, toda la topología de 
-        servicios del sistema. Esto incluye la configuración de redes internas, gestión 
+        servicios del sistema \citep{docker2024docs}. Esto incluye la configuración de redes internas, gestión 
         de persistencia en volúmenes, variables de entorno, reglas de dependencias entre 
         contenedores, puntos de exposición de puertos, así como políticas de reinicio. 
         En el contexto del sistema de modelado curricular, Docker Compose facilita levantar 
         el entorno completo de desarrollo o producción con un solo comando, garantizando 
-        escalabilidad y reduciendo tiempos de despliegue o recuperación ante fallos.
+        escalabilidad y reduciendo tiempos de despliegue o recuperación ante fallos 
+        \citep{boettiger2015introduction}.
 
         Un beneficio adicional de esta estrategia es su contribución a las prácticas de 
         \ac{CI/CD}. Gracias a la naturaleza 
         declarativa y reproducible de los contenedores, el sistema puede desplegarse 
         automáticamente mediante pipelines controlados sin intervención manual, asegurando 
         que las versiones del modelo curricular, las configuraciones generadas y los 
-        snapshots almacenados sean accesibles en entornos iguales o equivalentes entre sí.
+        snapshots almacenados sean accesibles en entornos iguales o equivalentes entre sí 
+        \citep{docker2024docs}.
 
         De esta forma, el uso conjunto de Docker y Docker Compose aporta portabilidad,
         eficiencia en despliegue, coherencia entre entornos y una base técnica sólida para 
@@ -229,9 +277,19 @@
     
     \subepigraph{Almacenamiento en Memoria, Caching y Mensajería}{
 
+        El almacenamiento en memoria es una técnica que permite guardar temporalmente datos en 
+        memoria RAM para acelerar el acceso a información que se consulta de forma recurrente, 
+        evitando operaciones de disco o consultas de base de datos innecesarias. El caching se 
+        basa precisamente en optimizar velocidad, reduciendo latencias y mejorando el rendimiento 
+        global del sistema. Existen herramientas especializadas que permiten gestionar este 
+        almacenamiento temporal, soportar estructuras clave-valor y facilitar comunicación 
+        entre servicios. Redis destaca entre ellas por su eficiencia, simplicidad y capacidades 
+        adicionales como mensajería, pub/sub y persistencia configurable, lo que la convierte 
+        en una pieza clave para arquitecturas modernas.
+
         Redis será incorporado como componente clave para el almacenamiento temporal 
         y procesamiento eficiente de información crítica durante las fases de 
-        generación y validación de configuraciones curriculares. Su naturaleza de 
+        generación y validación de configuraciones curriculares \citep{carlson2013redis}. Su naturaleza de 
         base de datos en memoria permite alcanzar tiempos de respuesta extremadamente 
         bajos, lo cual resulta particularmente valioso en un sistema donde las 
         operaciones de verificación de restricciones, derivación de configuraciones 
@@ -240,7 +298,7 @@
 
         A diferencia de un motor relacional tradicional, Redis está optimizado 
         para operaciones clave–valor y estructuras avanzadas como listas, conjuntos, 
-        mapas hash y sorted sets. Estas estructuras permiten modelar transitoriamente 
+        mapas hash y sorted sets \citep{carlson2013redis}. Estas estructuras permiten modelar transitoriamente 
         elementos como:
         \begin{itemize}
             \item configuraciones candidatas generadas por el usuario,
@@ -257,23 +315,23 @@
         Este almacenamiento en memoria reduce significativamente la latencia, lo que 
         contribuye a experiencias interactivas y a la capacidad del sistema de 
         responder en tiempo real a decisiones del usuario (por ejemplo, activar 
-        o desactivar características, consultar prerequisitos, etc.).
+        o desactivar características, consultar prerequisitos, etc.) \citep{carlson2013redis}.
 
         Otro aspecto clave es que Redis permite persistencia opcional mediante 
         snapshots (RDB), lo que lo convierte en un aliado directo del soporte de 
-        versionado de modelos y configuraciones. Es decir, puede almacenar estados 
+        versionado de modelos y configuraciones \citep{carlson2013redis}. Es decir, puede almacenar estados 
         intermedios del proceso de modelado curricular sin interferir con la base de 
         datos principal, permitiendo restaurar fácilmente versiones anteriores o 
         explorar ramas alternativas del mismo modelo.
 
-        Además, Redis implementa un sistema de Time-To-Live (TTL), lo que permite 
+        Además, Redis implementa un sistema de Time-To-Live (\ac{TTL}), lo que permite 
         gestionar la caducidad automática de configuraciones temporales, sesiones y 
         cálculos ya procesados. Esta funcionalidad contribuye a la integridad global 
-        del sistema y evita acumulación de datos residual.
+        del sistema y evita acumulación de datos residual \citep{carlson2013redis}.
 
         Finalmente, una característica determinante para su elección es su excelente 
         integración con FastAPI, permitiendo aprovechar plenamente la naturaleza 
-        asíncrona del backend. Gracias a librerías como aioredis, las operaciones de 
+        asíncrona del backend \citep{ramirez2019fastapi}. Gracias a librerías como aioredis, las operaciones de 
         lectura/escritura se realizan sin bloquear el event loop, lo que maximiza la 
         concurrencia cuando múltiples usuarios exploran configuraciones simultáneamente.
 
@@ -286,11 +344,21 @@
     
     \subepigraph{Procesamiento Asíncrono}{
 
+        El procesamiento asíncrono permite ejecutar tareas en segundo plano sin bloquear 
+        la operación principal del sistema, lo cual es esencial cuando existen tareas costosas, 
+        como validaciones complejas, consultas externas, cálculos intensivos o envío de 
+        notificaciones. En el ecosistema de Python existen herramientas especializadas para 
+        administrar colas de trabajo, distribuir tareas y realizar ejecución diferida. Entre 
+        ellas, Celery se ha posicionado como la solución estándar para orquestar tareas 
+        asíncronas, ofreciendo escalabilidad, distribución y tolerancia a fallos. Su integración 
+        con brokers como Redis permite construir sistemas altamente eficientes, modulares y no 
+        bloqueantes.
+
         En la arquitectura propuesta, Celery desempeñará un rol esencial como 
         orquestador de tareas asíncronas, permitiendo que operaciones complejas, 
         lentas o intensivas en cómputo se ejecuten fuera del ciclo de solicitud-respuesta 
         del API, mejorando sustancialmente la experiencia del usuario y la disponibilidad 
-        del sistema.
+        del sistema \citep{celery2024docs}.
 
         Dado que el proceso de generación y validación de configuraciones curriculares 
         incluye fases donde se deben:
@@ -329,7 +397,7 @@
         relevante para tu sistema, en el cual múltiples usuarios pueden realizar 
         evaluaciones simultáneamente sobre modelos distintos o versiones diferentes. 
         Con más carga, simplemente se añaden más workers, sin necesidad de cambios 
-        estructurales.
+        estructurales \citep{celery2024docs}.
 
         Desde el punto de vista de robustez, Celery ofrece herramientas para:
         \begin{itemize}
@@ -355,13 +423,13 @@
 
         Finalmente, Celery es altamente compatible con FastAPI y Python, manteniendo 
         coherencia tecnológica con la decisión de usar un stack asíncrono y un modelo 
-        de validación compleja. Su adopción garantiza que la capa lógica pesada no 
+        de validación compleja \citep{celery2024docs, ramirez2019fastapi}. Su adopción garantiza que la capa lógica pesada no 
         degrade la utilidad interactiva del sistema, sino que se ejecute de forma 
         paralela, programada y resistente. La siguiente tabla \ref{tab:fastAPIvsFastAPIconCelery} 
         respalda la justificación de por qué adicionar celery al sistema.
 
         \begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
-            \caption{Tabla Comparativa: FastAPI vs FastAPI + Celery \label{tab:fastAPIvsFastAPIconCelery}}\\
+            \caption{Tabla Comparativa: FastAPI vs FastAPI + Celery. Fuente: Elaboración propia. \label{tab:fastAPIvsFastAPIconCelery}}\\
             \hline
             \rowcolor[HTML]{CBCEFB} 
             \textbf{Criterio} & \textbf{Solo FastAPI} & \textbf{FastAPI + Celery} \\
@@ -393,7 +461,7 @@
             Escalabilidad & Limitada al número de workers del servidor & Escalamiento horizontal agregando workers Celery \\ 
             \hline
             \rowcolor[HTML]{EDEBF1}
-            Naturaleza de carga & Orientada a I/O y sincronización & Orientada a cómputo intensivo y tareas diferidas \\ 
+            Naturaleza de carga & Orientada a \ac{I/O} y sincronización & Orientada a cómputo intensivo y tareas diferidas \\ 
             \hline
             Validación de modelos complejos & Puede agotar recursos del servidor & Optimización mediante workers paralelos \\ 
             \hline
@@ -436,19 +504,20 @@
         heurísticos según la naturaleza del problema a resolver.
 
         En primer lugar, se utilizará \textbf{SymPy} como motor base para la
-        representación simbólica y evaluación lógica de restricciones asociadas al FM.
+        representación simbólica y evaluación lógica de restricciones asociadas al FM 
+        \citep{meurer2017sympy}.
         SymPy permite manipular expresiones booleanas, aplicar simplificaciones,
         detectar contradicciones y verificar satisfacibilidad, lo que resulta esencial
         para la evaluación de relaciones \textit{cross-tree} como \textit{requires},
         \textit{excludes}, \textit{implies} y restricciones de cardinalidad. Su uso
         asegura una verificación formal, basada en lógica proposicional y álgebra
-        simbólica, manteniendo precisión y trazabilidad en los análisis.
+        simbólica, manteniendo precisión y trazabilidad en los análisis \citep{meurer2017sympy}.
 
         De manera complementaria, la plataforma empleará \textbf{NetworkX} para
         modelar y procesar las dependencias entre características como grafos
         dirigidos, permitiendo ejecutar algoritmos de recorrido, detección de ciclos,
         análisis de conectividad, propagación de condiciones y determinación de
-        componentes fuertemente conexas. Este enfoque orientado a grafos habilita la
+        componentes fuertemente conexas \citep{hagberg2008networkx}. Este enfoque orientado a grafos habilita la
         inspección estructural del FM, la detección temprana de inconsistencias y la
         aplicación eficiente de validaciones transversales.
 
@@ -464,7 +533,7 @@
         Finalmente, el motor combinará ambas estrategias: validación determinista
         formal para garantizar consistencia lógica e integridad del modelo, y
         heurísticas evolutivas para asistir en la derivación de alternativas válidas
-        ante configuraciones incompletas o conflictivas. Esta hibridación permite un
+        ante configuraciones incompletas o conflictivas \citep{benavides2010automated}. Esta hibridación permite un
         balance adecuado entre rigor matemático, eficiencia computacional y soporte a
         tareas exploratorias propias del dominio curricular.
 
@@ -475,14 +544,14 @@
 
         Para la gestión eficiente de dependencias, aislamiento de entornos y
         versionado reproducible de librerías, la plataforma adoptará \textbf{Poetry} y
-        \textbf{UV} como gestores complementarios.
+        \textbf{UV} como gestores complementarios \citep{poetry2024}.
 
         Poetry permite mantener un control declarativo de las dependencias del
         proyecto mediante archivos \texttt{pyproject.toml}, garantizando la trazabilidad
         del stack tecnológico y la compatibilidad de versiones. Su mecanismo de
         resolución de dependencias asegura consistencia en los entornos de desarrollo y
         producción, reduciendo incidencias asociadas a incompatibilidades entre
-        librerías.
+        librerías \citep{poetry2024}.
 
         Además, Poetry facilita la generación de entornos virtuales aislados, el
         bloqueo de versiones exactas (\texttt{poetry.lock}), la publicación del
@@ -490,14 +559,14 @@
         ciclo de vida del backend.
 
         En conjunto con Poetry, se utilizará \textbf{UV} como herramienta moderna para
-        instalación ultrarrápida de dependencias y creación de entornos. UV destaca
+        instalación ultrarrápida de dependencias y creación de entornos \citep{uv2024}. UV destaca
         por su rendimiento de orden de magnitud superior a herramientas
         tradicionales, lo cual mejora tiempos de despliegue, entornos CI/CD y
         operaciones de reconstrucción.
 
         La combinación de Poetry y UV permite una gestión robusta, reproducible y
         eficiente de dependencias, alineada con las necesidades de mantenibilidad,
-        escalabilidad y automatización del sistema.
+        escalabilidad y automatización del sistema \citep{poetry2024, uv2024}.
 
     }
 
@@ -527,7 +596,11 @@
         la inserción y la extracción \citep{ghodke2024git}. El área de preparación sirve como 
         zona de influencia donde se realizan modificaciones antes de la confirmación. Los 
         submódulos, \textit{cherry-pick} y Git \textit{hooks} son ejemplos de funciones 
-        avanzadas que proporcionan más personalización y control. Los conocidos servicios de 
+        avanzadas que proporcionan más personalización y control. En resumen, 
+        Git permite llevar un historial exhaustivo de cambios, ramificación para
+        desarrollo de nuevas características, fusiones controladas, auditoría de
+        modificaciones y recuperación de estados previos del sistema.
+        Los conocidos servicios de 
         alojamiento de Git, como GitHub, GitLab y Bitbucket, ofrecen plataformas para la 
         revisión de código, la gestión de repositorios y la integración de herramientas, que 
         promueven el desarrollo colaborativo. El uso de Git mejora los procesos de desarrollo 
@@ -560,7 +633,7 @@
         semánticas que facilitan la comprensión de fenómenos complejos de manera 
         estructurada \citep{rumbaugh2004uml}.
         
-        El lenguaje de modelado a utilizar es el Lenguaje de Modelado Unificado (UML), 
+        El lenguaje de modelado a utilizar es el Lenguaje de Modelado Unificado (\ac{UML}), 
         este lenguaje ofrece un estándar para describir un plano del sistema, 
         incluyendo aspectos conceptuales tales como procesos de negocios, funciones 
         del sistema, expresiones de lenguajes de programación, esquemas de bases de 
@@ -575,7 +648,7 @@
         Una herramienta de la ingeniería de software asistida por computadoras (CASE) 
         es un programa informático destinado a aumentar la productividad durante 
         todo el proceso de desarrollo de software reduciendo el coste de estas en 
-        términos de tiempo y de dinero \ciptep{pressman2014se}. Según Sommerville, estas herramientas nos pueden ayudar 
+        términos de tiempo y de dinero \citep{pressman2014se}. Según Sommerville, estas herramientas nos pueden ayudar 
         en todos los aspectos del ciclo de vida de desarrollo del \textit{software} en tareas como el 
         diseño de proyectos, cálculo de costes, implementación de parte del código 
         automáticamente con el diseño dado, compilación automática, documentación o 
@@ -589,24 +662,49 @@
         para el desarrollo de programas informáticos, desde la planificación, pasando 
         por el análisis y el diseño, hasta la generación de código. Soporta los 
         principales estándares de la industria tales como el Lenguaje de Modelado 
-        Unificado (UML), la notación de Modelado de Procesos de Negocio (BPMN) y un 
-        sinfín de diagramas.  Por lo que Visual Paradigm es una herramienta CASE 
+        Unificado (\ac{UML}), la notación de Modelado de Procesos de Negocio (\ac{BPMN}) y un 
+        sinfín de diagramas.  Por lo que Visual Paradigm es una herramienta \ac{CASE} 
         integral y flexible para el modelo y gestión en el desarrollo de software, 
         procesos de negocio y arquitectura empresarial \citep{visualParadigm2024}.
     }
     
     \subepigraph{Herramientas para diseñar y ejecutar pruebas}{
-        postman y pruebas unitarias
+
+        Para garantizar la calidad y correcto funcionamiento del sistema propuesto, se 
+        emplearán herramientas especializadas tanto para pruebas de API como para 
+        pruebas unitarias del código.
+
+        \textbf{Postman} será utilizado como plataforma de desarrollo y pruebas de \ac{API}s 
+        \citep{postman2024}. Esta herramienta permite diseñar, documentar y probar endpoints 
+        \ac{REST}ful de forma interactiva, facilitando la verificación de contratos de datos, 
+        validación de respuestas, gestión de variables de entorno y automatización de 
+        colecciones de pruebas. Postman resulta esencial para validar el comportamiento 
+        del backend FastAPI, asegurando que las operaciones de generación y validación 
+        de configuraciones curriculares respondan correctamente bajo distintos escenarios 
+        \citep{postman2024}.
+
+        Complementariamente, se utilizará \textbf{pytest} como framework para la 
+        ejecución de pruebas unitarias en Python \citep{pytest2024}. Pytest destaca por su 
+        sintaxis clara, capacidad de parametrización, gestión de fixtures y generación 
+        de reportes detallados, lo que facilita la escritura y mantenimiento de pruebas 
+        automatizadas. Su integración con el ecosistema Python permite validar lógica de 
+        negocio, algoritmos de validación, operaciones sobre modelos de características 
+        y comportamiento de componentes aislados del sistema \citep{pytest2024}.
+
+        La combinación de Postman para pruebas de integración a nivel de \ac{API} y pytest 
+        para pruebas unitarias proporciona una cobertura completa del sistema, 
+        garantizando robustez tanto en la interfaz externa como en la lógica interna.
+            
     }
         
     \subepigraph{Entorno Integrado de Desarrollo}{
 
-        Los Entornos Integrados de Desarrollo (IDE) son las herramientas que 
+        Los Entornos Integrados de Desarrollo (\ac{IDE}) son las herramientas que 
         todo desarrollador debe tener a mano. Permiten editar y gestionar
         código fuente en diversos lenguajes de programación y ofrecen
         múltiples herramientas para facilitar el trabajo y aumentar la productividad, pues
         permiten depurar, resaltar sintaxis, autocompletado, integración con control de versiones
-        y la refactorización. Por lo general cada IDE está asociado a un único 
+        y la refactorización. Por lo general cada \ac{IDE} está asociado a un único 
         lenguaje de programación o a un conjunto pequeño de lenguajes, cuyo factor 
         provoca que la gran mayoría de desarrolladores opten por otras alternativas, 
         ya que en proyectos donde el uso de múltiples lenguajes es evidente, 
