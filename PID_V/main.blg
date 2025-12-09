@@ -1,0 +1,74 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: plainnat.bst
+Database file #1: bibliographic_references.bib
+Warning--entry type for "ptc_feature_models" isn't style-file defined
+--line 17 of file bibliographic_references.bib
+Warning--entry type for "moodle2025overview" isn't style-file defined
+--line 25 of file bibliographic_references.bib
+Warning--entry type for "blackboard2025overview" isn't style-file defined
+--line 33 of file bibliographic_references.bib
+Warning--entry type for "canvas2025overview" isn't style-file defined
+--line 41 of file bibliographic_references.bib
+Warning--entry type for "academialab_linea_productos" isn't style-file defined
+--line 72 of file bibliographic_references.bib
+Warning--entry type for "ingenieria_software_lps" isn't style-file defined
+--line 79 of file bibliographic_references.bib
+Warning--entry type for "sgbuzz_lps" isn't style-file defined
+--line 86 of file bibliographic_references.bib
+Warning--entry type for "gfg_feature_engineering" isn't style-file defined
+--line 130 of file bibliographic_references.bib
+Warning--entry type for "purevariants2024overview" isn't style-file defined
+--line 434 of file bibliographic_references.bib
+Warning--entry type for "ibm_IDE" isn't style-file defined
+--line 721 of file bibliographic_references.bib
+Warning--empty year in academialab_linea_productos
+Warning--can't use both volume and number fields in benavides2010a
+Warning--empty year in estrada_metamodelo_repo
+Warning--empty year in gfg_feature_engineering
+Warning--empty year in ingenieria_software_lps
+Warning--empty publisher in lutz2013learning
+Warning--empty year in sgbuzz_lps
+You've used 80 entries,
+            2773 wiz_defined-function locations,
+            991 strings with 16155 characters,
+and the built_in function-call counts, 30273 in all, are:
+= -- 2687
+> -- 1442
+< -- 65
++ -- 517
+- -- 432
+* -- 2050
+:= -- 4662
+add.period$ -- 276
+call.type$ -- 80
+change.case$ -- 370
+chr.to.int$ -- 75
+cite$ -- 167
+duplicate$ -- 1548
+empty$ -- 2788
+format.name$ -- 536
+if$ -- 6430
+int.to.chr$ -- 6
+int.to.str$ -- 1
+missing$ -- 68
+newline$ -- 436
+num.names$ -- 312
+pop$ -- 938
+preamble$ -- 1
+purify$ -- 306
+quote$ -- 0
+skip$ -- 1142
+stack$ -- 0
+substring$ -- 646
+swap$ -- 147
+text.length$ -- 8
+text.prefix$ -- 2
+top$ -- 0
+type$ -- 795
+warning$ -- 7
+while$ -- 280
+width$ -- 0
+write$ -- 1053
+(There were 17 warnings)

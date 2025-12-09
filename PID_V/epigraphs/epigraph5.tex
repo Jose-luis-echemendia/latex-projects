@@ -1,17 +1,17 @@
 \epigraph{Propuesta de Solución}{
 
-    La solución propuesta consiste en el diseño e implementación de una 
-    plataforma especializada para la gestión de Modelos de Características 
-    (Feature Models, FM) aplicados al dominio curricular. Esta solución 
+    La solución propuesta consiste en el diseño e implementación de un servicio  
+    \textit{backend} especializado para la gestión de \ac{FM} 
+    aplicados al dominio curricular. Esta solución 
     permitirá representar formalmente planes de estudio, definir variabilidad 
     entre módulos, establecer dependencias, restricciones y rutas formativas 
     alternativas, así como derivar configuraciones válidas que representen 
     itinerarios personalizados. En esencia, el sistema habilita una ingeniería 
-    curricular basada en la lógica SPL (Software Product Lines), donde los 
+    curricular basada en la lógica \ac{SPL}, donde los 
     planes de estudio se conciben como familias de productos y cada 
     configuración curricular corresponde a un producto derivado.
 
-    La plataforma abordará todas las fases necesarias para este proceso: 
+    El servicio abordará todas las fases necesarias para este proceso: 
     diseño del modelo curricular (equivalente al análisis de dominio), definición 
     de restricciones y cardinalidades (gestión de variabilidad), 
     validación automatizada de configuraciones (ensamblaje de productos) y 
@@ -65,16 +65,16 @@
             final (el Plan de Estudios) sea siempre válido.
 
             Aunque existen otros modelos de variabilidad (como las tablas de decisión o
-            los diagramas UML de variabilidad), el FM es el formalismo preferido por su
+            los diagramas \ac{UML} de variabilidad), el \ac{FM} es el formalismo preferido por su
             simplicidad visual y su potencia analítica. A diferencia de modelos como las
             tablas, que pueden volverse inmanejables al aumentar el número de
-            características, el FM provee una visión de alto nivel y, simultáneamente, una
+            características, el \ac{FM} provee una visión de alto nivel y, simultáneamente, una
             base lógica binaria robusta para el análisis automatizado de la consistencia (el
             propósito crucial en la propuesta de solución).
             
             En el contexto de la plataforma web propuesta, el Modelo de Características es
             el artefacto central. El Módulo Frontend tendrá el propósito de funcionar como
-            un Editor Gráfico de Fms, traduciendo la notación visual (árboles y símbolos) a
+            un Editor Gráfico de \ac{FM}s, traduciendo la notación visual (árboles y símbolos) a
             la estructura lógica subyacente. Esto permitirá a los gestores académicos:
             \begin{enumerate}
                 \item \textbf{Modelar:} Crear y modificar visualmente la estructura curricular (árbol
@@ -88,7 +88,7 @@
 
         \subsubepigraph{La Analogía Formal Curricular}{
 
-            La aplicación de los Modelos de Características (FM) a la gestión y diseño
+            La aplicación de los Modelos de Características (\ac{FM}) a la gestión y diseño
             curricular constituye el principal aporte metodológico de esta investigación.
             Esta extensión se fundamenta en la premisa de que la variabilidad, concepto
             central de la Ingeniería de Líneas de Productos de Software (SPL), es
@@ -140,7 +140,8 @@
             \end{longtable}
 
             Yendo un paso más adelante para evidenciar la aplicabilidad del Modelo de 
-            Características (FM) al dominio curricular, se presenta un ejemplo \ref{fig:fm_data_structures}
+            Características (FM) al dominio curricular, se presenta un ejemplo 
+            \ref{fig:fm_data_structures,fig:fm_data_structures_2}
             basado en la asignatura Estructura de Datos I. 
             El modelo computacional interno, que constituye una estructura formal JSON, 
             no se presenta aquí de forma literal por motivos de extensión, pero sí se expone 
@@ -217,10 +218,20 @@
                         ]
                         [Pilas, branchstyle,
                             edge label={node[midway, mandatory]{}}
+                            % AQUI ESTA EL CAMBIO PARA EL XOR
                             [Implementación, xorstyle,
-                                edge label={node[midway, mandatory]{}}
-                                [Con Arreglos, leafstyle, name=pilas-arr]
-                                [Con Listas, leafstyle, name=pilas-list]
+                                edge label={node[midway, mandatory]{}},
+                                tikz+={
+                                    % Dibuja un arco desde la arista del primer hijo al último
+                                    % (!1) es el primer hijo, (!l) es el último hijo.
+                                    % .east es el ancla del padre.
+                                    \draw [thick] 
+                                        ($(.east)!20pt!(!1.west)$) 
+                                        to[bend left=45] 
+                                        ($(.east)!20pt!(!l.west)$);
+                                }
+                                [Con Arreglos, leafstyle]
+                                [Con Listas, leafstyle]
                             ]
                         ]
                         [Colas, branchstyle,
@@ -242,17 +253,126 @@
                             edge label={node[midway, mandatory]{}}
                         ]
                     ]
-                    % Arco XOR para Pilas - estilo estándar FM
-                    \draw[thick, red] 
-                        ([xshift=8pt]pilas-arr.east) 
-                        arc[start angle=90, end angle=-90, radius=12pt]
-                        ([xshift=8pt]pilas-list.east);
-                    \node[font=\tiny, red] at ([xshift=22pt]$(pilas-arr.east)!0.5!(pilas-list.east)$) {XOR};
-                    \end{forest}%
+                \end{forest}%
             }
-            \caption{Representación simplificada del \ac{FM} de la asignatura Estructura de Datos I. Fuente: elaboración propia.}
-            \label{fig:fm_data_structures}
+            \caption{Representación simplificada \#1 del \ac{FM} de la asignatura Estructura de Datos I. Fuente: elaboración propia.}
+            \label{fig:fm_data_structures_1}
             \end{figure}
+
+            \begin{figure}[H]
+            \centering
+            \resizebox{\textwidth}{!}{%
+                \tikzset{
+                    rootstyle/.style={
+                        fill=blue!20,
+                        draw=blue!60,
+                        thick,
+                        font=\bfseries\footnotesize
+                    },
+                    branchstyle/.style={
+                        fill=green!15,
+                        draw=green!50,
+                        thick
+                    },
+                    leafstyle/.style={
+                        fill=yellow!15,
+                        draw=orange!50,
+                        thick
+                    },
+                    optionalstyle/.style={
+                        fill=gray!10,
+                        draw=gray!40,
+                        dashed
+                    },
+                    xorstyle/.style={
+                        fill=red!10,
+                        draw=red!50,
+                        thick
+                    },
+                    orstyle/.style={
+                        fill=purple!10,
+                        draw=purple!50,
+                        thick
+                    },
+                    mandatory/.style={circle, fill=black, minimum size=4pt, inner sep=0pt},
+                    optional/.style={circle, draw=black, fill=white, minimum size=4pt, inner sep=0pt},
+                    edge label/.style={font=\tiny, inner sep=1pt}
+                }
+                \begin{forest}
+                    for tree={
+                        draw,
+                        rounded corners,
+                        font=\footnotesize,
+                        node options={align=center},
+                        anchor=north,
+                        parent anchor=south,
+                        % --- AUMENTÉ LA SEPARACIÓN HORIZONTAL ---
+                        l sep=40pt, 
+                        s sep=15pt,
+                        edge={thick},
+                        grow=0,
+                        child anchor=west,
+                        parent anchor=east,
+                        minimum width=2.5cm,
+                        minimum height=0.8cm,
+                        drop shadow
+                    }
+                    [Estructura de Datos I, rootstyle
+                        % --- RAMA XOR (Símbolo más grande) ---
+                        [Lenguaje de\\Implementación, xorstyle,
+                            edge label={node[midway, mandatory]{}},
+                            tikz+={
+                                % Cambié 15pt a 28pt para hacerlo más largo
+                                % Cambié 'thick' a 'very thick' para que se note más la línea
+                                \draw [very thick] 
+                                    ($(.east)!28pt!(!1.west)$) 
+                                    to[bend left=30] 
+                                    ($(.east)!28pt!(!l.west)$);
+                            }
+                            [C/C++, leafstyle]
+                            [Java, leafstyle]
+                            [Python, leafstyle]
+                        ]
+                        [Técnicas de\\Programación, branchstyle,
+                            edge label={node[midway, mandatory]{}}
+                            [Recursión\\Avanzada, leafstyle]
+                            [Genérica, leafstyle]
+                            [Manejo de\\Memoria, leafstyle]
+                        ]
+                        % --- RAMA OR (Símbolo más grande) ---
+                        [Herramientas, orstyle,
+                            edge label={node[midway, mandatory]{}},
+                            tikz+={
+                                % Cambié 15pt a 28pt para hacer el abanico más grande
+                                \filldraw [fill=black] 
+                                    (.east) -- 
+                                    ($(.east)!28pt!(!1.west)$) 
+                                    to[bend left=30] 
+                                    ($(.east)!28pt!(!l.west)$) -- 
+                                    cycle;
+                            }
+                            [IDE, leafstyle]
+                            [Debugger, leafstyle]
+                            [Git, leafstyle]
+                        ]
+                        [Análisis de\\Complejidad, branchstyle,
+                            edge label={node[midway, mandatory]{}}
+                            [Notación Big-O, leafstyle,
+                                edge label={node[midway, mandatory]{}}
+                            ]
+                            [Análisis Temporal, leafstyle,
+                                edge label={node[midway, mandatory]{}}
+                            ]
+                            [Análisis Espacial, leafstyle,
+                                edge label={node[midway, mandatory]{}}
+                            ]
+                        ]
+                    ]
+                \end{forest}%
+            }
+            \caption{Representación simplificada \#2 del \ac{FM} de la asignatura Estructura de Datos I. Fuente: elaboración propia.}
+            \label{fig:fm_data_structures_2}
+        \end{figure}
 
             Este caso permite demostrar cómo un curso académico, lejos de ser un 
             listado estático de contenidos, posee una estructura jerárquica, 
@@ -264,7 +384,7 @@
             estructurada como un árbol donde la característica raíz corresponde al curso 
             completo y las características hijas representan módulos, temas o decisiones 
             didácticas. Esta representación no solo captura los contenidos, sino que los 
-            organiza con semántica formal, permitiendo análisis automatizable. El ejemplo 
+            organiza con semántica formal, permitiendo análisis automatizable. Los ejemplos 
             ilustra distintos tipos de variabilidad presentes en currículos reales:
             contenidos obligatorios (módulos troncales), opcionales (tópicos avanzados), 
             alternativas mutuamente excluyentes (implementación de pilas), configuraciones 
@@ -323,13 +443,13 @@
 
         \subsubepigraph{Importancia Estratégica y Propósito en la Solución}{
 
-            El uso de los FMs en la planificación curricular no es solo un ejercicio de
+            El uso de los \ac{FM}s en la planificación curricular no es solo un ejercicio de
             modelado, sino una ventaja estratégica que permite pasar de la descripción a la
-            comprobación formal del currículo. El propósito del FM en la solución
+            comprobación formal del currículo. El propósito del \ac{FM} en la solución
             informática propuesta es doble:
             \begin{itemize}
-                \item Estructura de Datos Central: El FM (codificado en un formato lógico como un árbol JSON) sirve como el modelo de datos maestro del currículo.
-                \item Base para el Análisis de Consistencia: La formalidad lógica del FM permite que un motor de análisis (\ac{SAT} Solver), verifique automáticamente si el plan de estudios modelado contiene inconsistencias (Ej: ciclos de prerrequisitos o restricciones de exclusión que hagan imposible la selección de la Característica Raíz).
+                \item Estructura de Datos Central: El \ac{FM} (codificado en un formato lógico como un árbol \ac{JSON}) sirve como el modelo de datos maestro del currículo.
+                \item Base para el Análisis de Consistencia: La formalidad lógica del \ac{FM} permite que un motor de análisis (\ac{SAT} Solver), verifique automáticamente si el plan de estudios modelado contiene inconsistencias (Ej: ciclos de prerrequisitos o restricciones de exclusión que hagan imposible la selección de la Característica Raíz).
             \end{itemize}
 
         }
@@ -340,7 +460,7 @@
 
         La arquitectura propuesta se fundamenta en un enfoque modular y 
         basado en componentes, diseñados para soportar la validación, generación y 
-        análisis de configuraciones derivadas del Modelo de Características (FM). 
+        análisis de configuraciones derivadas del Modelo de Características (\ac{FM}). 
         La estructura conceptual integra elementos propios de arquitecturas 
         estratificadas y de puertos y adaptadores, permitiendo la separación 
         clara entre el núcleo de negocio y los mecanismos de infraestructura. 
@@ -351,15 +471,15 @@
         En un nivel superior, el sistema se organiza en tres capas funcionales: 
         presentación, aplicación y dominio, mientras que la capa de infraestructura 
         provee servicios externos que se integran mediante adaptadores. Esta 
-        división permite mantener una clara separación de responsabilidades: la API 
-        expone servicios REST; la lógica de negocio coordina procesos de validación, 
+        división permite mantener una clara separación de responsabilidades: la \ac{API} 
+        expone servicios \ac{REST}; la lógica de negocio coordina procesos de validación, 
         generación y análisis; y el dominio encapsula las abstracciones 
-        fundamentales del FM (características, restricciones, configuraciones, 
+        fundamentales del \ac{FM} (características, restricciones, configuraciones, 
         métricas estructurales, entre otras).
 
         Un elemento central de esta arquitectura lo constituye el subsistema de 
         validación, el cual implementa un enfoque híbrido combinando métodos 
-        deterministas (SAT/SMT) con técnicas heurísticas (algoritmos genéticos) y 
+        deterministas (\ac{SAT}/\ac{SMT}) con técnicas heurísticas (algoritmos genéticos) y 
         análisis estructural basado en teoría de grafos. Este subsistema se 
         encapsula dentro de la capa de aplicación y se implementa mediante un 
         conjunto de componentes especializados: un validador lógico (PySAT/Z3), 
@@ -380,8 +500,8 @@
         Desde una perspectiva operativa, la arquitectura soporta escenarios como 
         validación de configuraciones propuestas por usuarios, búsqueda de 
         configuraciones alternativas, análisis automático de errores, diagnóstico 
-        de inconsistencias internas del FM, y evaluación de impacto estructural. 
-        Adicionalmente, el modelo es extensible a procesos evolutivos del FM, 
+        de inconsistencias internas del \ac{FM}, y evaluación de impacto estructural. 
+        Adicionalmente, el modelo es extensible a procesos evolutivos del \ac{FM}, 
         permitiendo comparar versiones, detectar cambios incompatibles y evaluar 
         decisiones curriculares en términos de validez y redundancia lógica. 
         Esta capacidad de evolución controlada es clave para un soporte curricular 
@@ -395,17 +515,17 @@
         separación funcional de tres componentes fundamentales, cada uno 
         respaldado por estrategias tecnológicas que optimizan su ejecución:
         \begin{enumerate}
-            \item \textbf{Validador Lógico (SAT/SMT Solver):} Responsable de verificar la consistencia 
-            global de las decisiones tomadas sobre un FM, incluyendo restricciones 
+            \item \textbf{Validador Lógico (\ac{SAT}/\ac{SMT} Solver):} Responsable de verificar la consistencia 
+            global de las decisiones tomadas sobre un \ac{FM}, incluyendo restricciones 
             booleanas, cardinalidades, relaciones cross-tree y condiciones derivadas. 
-            Para esta capa, los enfoques basados en satisfacibilidad (SAT) o 
-            satisfacibilidad modulo teorías (SMT) resultan adecuados, dada su 
+            Para esta capa, los enfoques basados en satisfacibilidad (\ac{SAT}) o 
+            satisfacibilidad modulo teorías (\ac{SMT}) resultan adecuados, dada su 
             capacidad para manejar espacios combinatorios extensos y resolver 
             expresiones complejas con garantías formales. Motores como MiniSAT, Z3 y 
             PySAT han sido ampliamente utilizados en validación de líneas de 
             productos por su eficiencia y soporte para expresiones simbólicas 
             extensas \citep{benavides2010automated}. Estos mecanismos interactúan con 
-            la representación del FM expresada en forma canónica (CNF o DNF), 
+            la representación del \ac{FM} expresada en forma canónica (\ac{CNF} o \ac{DNF}), 
             resolviendo satisfacibilidad de manera robusta y escalable.
 
             \item \textbf{Generador de Configuraciones (Heurístico / Buscador Guiado):}
@@ -417,20 +537,19 @@
             de evaluar exhaustivamente todas las combinaciones posibles. Asimismo, el 
             generador puede interactuar con el solver formal: una configuración 
             preliminar producida heurísticamente puede validarse posteriormente 
-            mediante SAT/SMT, combinando rapidez exploratoria con corrección lógica.
+            mediante \ac{SAT}/\ac{SMT}, combinando rapidez exploratoria con corrección lógica.
 
             \item \textbf{Analizador Estructural (Estructuras de Grafo y Optimización):}
-            Encargado de inspeccionar propiedades internas del FM que no dependen únicamente 
+            Encargado de inspeccionar propiedades internas del \ac{FM} que no dependen únicamente 
             de restricciones lógicas sino de la topología del modelo. Entre estas 
             tareas se incluyen: detección de características inaccesibles 
             (dead features), redundancias, relaciones implícitas, dependencias 
             transitivas, componentes fuertemente conexas y métricas de impacto. 
             Tecnologías como NetworkX, junto con algoritmos clásicos de teoría de 
-            grafos (DFS, análisis de caminos, SCC), permiten instrumentar estas 
+            grafos (\ac{DFS}, análisis de caminos, \ac{SCC}), permiten instrumentar estas 
             verificaciones de manera sistemática y automatizada. Este componente 
             resulta indispensable para garantizar la mantenibilidad, comprensibilidad 
             y calidad del FM antes incluso de intentar su configuración.
-
         \end{enumerate}
 
         La combinación de estos tres componentes—validador lógico, 
@@ -446,8 +565,124 @@
     }
 
 
-    hablaremos en un sub epigrafe con el siguiente tema:
-    Patrones de diseños
-    Estandares de códigos
+    \subepigraph{Patrones de Diseño}{
+
+        La propuesta arquitectónica incorpora un conjunto de patrones de diseño orientados a 
+        garantizar extensibilidad, mantenibilidad, independencia tecnológica y coherencia 
+        conceptual. La selección de dichos patrones no constituye una decisión meramente 
+        ingenieril, sino una fundamentación metodológica que asegura la correcta evolución del 
+        sistema, su capacidad para integrar nuevos algoritmos y su adaptabilidad a escenarios 
+        curriculares diversos. Desde un punto de vista científico, el uso de patrones 
+        sistematiza la estructura de solución, reduce la complejidad accidental e incrementa 
+        la robustez verificable del software.
+
+        En primer lugar, el patrón \textbf{Strategy} resulta esencial para la definición de múltiples 
+        mecanismos de validación sobre el Modelo de Características. A través de este patrón, 
+        la plataforma puede abstraer e intercambiar, de forma dinámica, estrategias de 
+        validación (SAT, SMT, heurística), sin alterar el núcleo de la aplicación ni su modelo 
+        de dominio. Esta independencia operativa es particularmente relevante en contextos donde 
+        el análisis lógico de configuraciones requiere combinar enfoques deterministas y 
+        aproximados, o cuando la evolución de los modelos demanda nuevas técnicas de inferencia 
+        formal.
+
+        El patrón \textbf{Factory Method}, aplicado complementariamente al \textbf{Strategy}, permite instanciar 
+        validadores, generadores de configuraciones y analizadores estructurales a partir de 
+        criterios definidos por la aplicación (por ejemplo, elección entre PySAT y Z3 Solver).
+        De esta manera, la inicialización y configuración de componentes complejos queda 
+        encapsulada, asegurando que el núcleo del sistema no dependa de detalles de 
+        implementación concreta. Esta abstracción es especialmente útil cuando se integran 
+        librerías externas cuyo ciclo de inicialización es no trivial.
+
+        Por otra parte, el sistema adopta el patrón \textbf{Repository}, encargado de desacoplar el 
+        modelo de dominio de los mecanismos de acceso y persistencia en bases de datos. Al 
+        emplear interfaces para repositorios y adaptadores para implementaciones 
+        (PostgreSQL, Redis, MinIO), la aplicación garantiza independencia tecnológica y 
+        capacidad de sustitución futura sin comprometer el modelo conceptual. Este patrón 
+        fortalece las propiedades de trazabilidad y versionado del FM, al permitir decidir 
+        políticas de almacenamiento, recuperación y auditoría sin afectar la lógica principal.
+
+        Adicionalmente, el patrón \textbf{Façade} se emplea para unificar operaciones complejas 
+        expuestas por el motor de validación. Dado que la validación completa involucra 
+        análisis SAT/SMT, heurísticas evolutivas y métricas estructurales, la fachada permite 
+        que clientes externos (p. ej., API REST, CLI, orquestadores) interactúen con el 
+        subsistema de validación a través de una interfaz simplificada, escondiendo la 
+        complejidad del proceso interno. Este patrón no solo reduce acoplamiento, sino que 
+        también mejora la legibilidad y estabilidad del sistema frente a cambios internos.
+
+        El patrón \textbf{Observer} se emplea para soportar la evolución del FM. Cuando una 
+        característica, restricción o versión del modelo se modifica, componentes dependientes 
+        (analizadores estructurales, cachés, herramientas de auditoría) son notificados 
+        automáticamente. Este patrón permite evitar inconsistencias temporales, revalidar 
+        configuraciones afectadas y disparar procesos de cálculo incremental, preservando 
+        coherencia a lo largo del ciclo de vida del modelo.
+
+        Complementariamente, la plataforma adopta el patrón \textbf{Decorator} para incorporar 
+        responsabilidades transversales, tales como caché, autenticación, autorización y 
+        trazabilidad, sin modificar el código de los controladores o servicios. Esta técnica 
+        habilita una composición funcional altamente flexible, reduciendo duplicación y 
+        permitiendo una evolución controlada de dichas funcionalidades auxiliares.
+
+        El patrón \textbf{Composite} se aplica en la representación jerárquica natural de las 
+        características del FM (raíz, subcaracterísticas, alternativas), permitiendo tratar 
+        nodos internos y hojas de forma homogénea. Esto simplifica operaciones recursivas de 
+        conteo, propagación de restricciones, verificación estructural y evaluación parcial de 
+        configuraciones. Su adopción refuerza la estructura intrínseca del problema SPL.
+
+        El patrón \textbf{Template Method} se utiliza para definir el esqueleto general de 
+        algoritmos de persistencia y validación, dejando que pasos específicos se deleguen a 
+        las implementaciones concretas (sincrónicas o asíncronas). Este patrón incrementa la 
+        reutilización lógica y asegura uniformidad de comportamiento entre componentes 
+        funcionalmente equivalentes.
+
+        El sistema también emplea el patrón \textbf{Chain of Responsibility}, particularmente en la 
+        cadena de middlewares para gestión de solicitudes HTTP. Cada componente de la cadena 
+        (autorización, verificación, invalidación de caché, auditoría) procesa la solicitud de 
+        forma independiente, permitiendo decisiones locales y promoviendo un flujo flexible y 
+        extensible. Esta cadena modulariza preocupaciones transversales sin contaminar la 
+        lógica del dominio.
+
+        En escenarios donde se integran servicios externos (almacenamiento, autenticación, 
+        caché distribuida), el patrón \textbf{Adapter} garantiza compatibilidad de interfaces y 
+        portabilidad tecnológica. La abstracción de clientes externos simplifica testing, 
+        reduce acoplamiento y habilita sustitución futura de proveedores sin modificar la 
+        lógica del sistema.
+
+        Asimismo, la arquitectura incorpora el patrón de \textbf{Inversión de Dependencias} (\textbf{Dependency Injection}), 
+        el cual constituye un elemento clave para garantizar reproducibilidad y control del entorno de 
+        ejecución. Gracias a este patrón, los componentes que dependen de conexiones a bases de datos, 
+        validadores lógicos, servicios de almacenamiento y caché distribuida no instancian sus dependencias 
+        directamente, sino que las reciben a través de contenedores o fábricas inyectadas. Esto permite que 
+        los algoritmos de validación y generación trabajen sobre interfaces abstractas replicables en 
+        distintos contextos (pruebas unitarias, pruebas de carga, depuración, despliegue real), posibilitando 
+        reproducir resultados experimentales y diagnósticos de inconsistencias sin variaciones provocadas por 
+        diferencias ambientales. Desde el punto de vista científico, este patrón refuerza la verificabilidad, 
+        permitiendo la replicación controlada de experimentos sobre configuraciones FM y asegurando que 
+        variaciones en infraestructura no afecten la coherencia de los resultados.
+
+        El patrón \textbf{Singleton} se aplica para la gestión centralizada de configuraciones globales y 
+        recursos compartidos tales como el motor de base de datos, el pool de conexiones y las políticas de 
+        validación. Al garantizar la existencia de una única instancia de dichos elementos, el sistema preserva 
+        consistencia interna, evita condiciones de carrera y reduce la posibilidad de estados divergentes entre 
+        módulos. Este patrón aporta estabilidad operacional, pues asegura que decisiones críticas (como el modo 
+        de validación SAT/SMT, parámetros de inicialización simbólica y reglas de auditoría) se mantengan 
+        invariantes a lo largo de la ejecución del sistema. Su eficacia es especialmente notable en contextos 
+        de ejecución concurrente, donde múltiples agentes interactúan con la plataforma de validación, y 
+        constituye una base esencial para la predictibilidad y consistencia del comportamiento computacional.
+
+        Finalmente, el patrón \textbf{Proxy} se emplea para controlar acceso a recursos sensibles 
+        (como la documentación interna y áreas administrativas), aplicando validaciones y 
+        restricciones sin duplicar lógica. Esta técnica habilita control fino de acceso y 
+        preservación de políticas de seguridad a nivel transversal.
+
+        En conjunto, los patrones descritos constituyen la cimentación estructural de la 
+        plataforma, contribuyendo a un entorno de validación lógico-analítica de alta 
+        confiabilidad, evolutividad y reutilización. Su aplicación metodológica no solo responde 
+        a buenas prácticas de ingeniería de software, sino que es también una condición 
+        habilitante para cumplir los objetivos científicos de la propuesta, especialmente en 
+        lo concerniente a formalización, escalabilidad y reusabilidad del conocimiento 
+        curricular modelado.
+    }
+
+
 }
 

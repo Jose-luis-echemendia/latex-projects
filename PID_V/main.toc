@@ -26,25 +26,24 @@
 \contentsline {subsection}{\thesubepigraph \ Base de Datos y Gestor de Base de Datos}{44}{subepigraph.0.4.3}%
 \contentsline {subsection}{\thesubepigraph \ Contenerización y Orquestación}{46}{subepigraph.0.4.4}%
 \contentsline {subsection}{\thesubepigraph \ Almacenamiento en Memoria, Caching y Mensajería}{48}{subepigraph.0.4.5}%
-\contentsline {subsection}{\thesubepigraph \ Procesamiento Asíncrono}{50}{subepigraph.0.4.6}%
-\contentsline {subsection}{\thesubepigraph \ Algoritmos, Motor de Reglas y Validación}{53}{subepigraph.0.4.7}%
-\contentsline {subsection}{\thesubepigraph \ Gestor de dependencias}{56}{subepigraph.0.4.8}%
-\contentsline {subsection}{\thesubepigraph \ Herramienta para el control de versiones}{57}{subepigraph.0.4.9}%
-\contentsline {subsection}{\thesubepigraph \ Lenguaje de modelados}{59}{subepigraph.0.4.10}%
-\contentsline {subsection}{\thesubepigraph \ Herramienta CASE}{59}{subepigraph.0.4.11}%
-\contentsline {subsection}{\thesubepigraph \ Herramientas para diseñar y ejecutar pruebas}{60}{subepigraph.0.4.12}%
-\contentsline {subsection}{\thesubepigraph \ Entorno Integrado de Desarrollo}{61}{subepigraph.0.4.13}%
-\contentsline {section}{\theepigraph . Propuesta de Solución}{62}{epigraph.0.5}%
-\contentsline {subsection}{\thesubepigraph \ Modelo SPL y su Correspondencia con la Propuesta}{64}{subepigraph.0.5.1}%
-\contentsline {subsubsection}{\thesubsubepigraph \ Justificación del uso de los \ac {FM}}{65}{subsubepigraph.0.5.1.1}%
-\contentsline {subsubsection}{\thesubsubepigraph \ La Analogía Formal Curricular}{66}{subsubepigraph.0.5.1.2}%
-\contentsline {subsubsection}{\thesubsubepigraph \ El Rol Dual de las características (Variabilidad Jerárquica)}{70}{subsubepigraph.0.5.1.3}%
-\contentsline {subsubsection}{\thesubsubepigraph \ Importancia Estratégica y Propósito en la Solución}{70}{subsubepigraph.0.5.1.4}%
-\contentsline {subsection}{\thesubepigraph \ Arquitectura conceptual}{71}{subepigraph.0.5.2}%
-\contentsline {subsection}{\thesubepigraph \ Componentes funcionales del sistema}{72}{subepigraph.0.5.3}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe VI}{74}{epigraph.0.6}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe VII}{74}{epigraph.0.7}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe VIII}{74}{epigraph.0.8}%
-\contentsline {chapter}{Conclusiones}{75}{section*.84}%
-\contentsline {chapter}{Acrónimos}{76}{chapter*.86}%
-\contentsline {chapter}{Glosario}{79}{chapter*.87}%
+\contentsline {subsection}{\thesubepigraph \ Almacenamiento de Archivos y Objetos}{50}{subepigraph.0.4.6}%
+\contentsline {subsection}{\thesubepigraph \ Procesamiento Asíncrono}{51}{subepigraph.0.4.7}%
+\contentsline {subsection}{\thesubepigraph \ Algoritmos, Motor de Reglas y Validación}{55}{subepigraph.0.4.8}%
+\contentsline {subsection}{\thesubepigraph \ Gestor de dependencias}{58}{subepigraph.0.4.9}%
+\contentsline {subsection}{\thesubepigraph \ Herramienta para el control de versiones}{59}{subepigraph.0.4.10}%
+\contentsline {subsection}{\thesubepigraph \ Lenguaje de modelados}{60}{subepigraph.0.4.11}%
+\contentsline {subsection}{\thesubepigraph \ Herramienta CASE}{61}{subepigraph.0.4.12}%
+\contentsline {subsection}{\thesubepigraph \ Herramientas para diseñar y ejecutar pruebas}{62}{subepigraph.0.4.13}%
+\contentsline {subsection}{\thesubepigraph \ Entorno Integrado de Desarrollo}{63}{subepigraph.0.4.14}%
+\contentsline {section}{\theepigraph . Propuesta de Solución}{64}{epigraph.0.5}%
+\contentsline {subsection}{\thesubepigraph \ Modelo SPL y su Correspondencia con la Propuesta}{65}{subepigraph.0.5.1}%
+\contentsline {subsubsection}{\thesubsubepigraph \ Justificación del uso de los \ac {FM}}{66}{subsubepigraph.0.5.1.1}%
+\contentsline {subsubsection}{\thesubsubepigraph \ La Analogía Formal Curricular}{67}{subsubepigraph.0.5.1.2}%
+\contentsline {subsubsection}{\thesubsubepigraph \ El Rol Dual de las características (Variabilidad Jerárquica)}{73}{subsubepigraph.0.5.1.3}%
+\contentsline {subsubsection}{\thesubsubepigraph \ Importancia Estratégica y Propósito en la Solución}{74}{subsubepigraph.0.5.1.4}%
+\contentsline {subsection}{\thesubepigraph \ Arquitectura conceptual}{74}{subepigraph.0.5.2}%
+\contentsline {subsection}{\thesubepigraph \ Componentes funcionales del sistema}{76}{subepigraph.0.5.3}%
+\contentsline {subsection}{\thesubepigraph \ Patrones de Diseño}{77}{subepigraph.0.5.4}%
+\contentsline {chapter}{Conclusiones}{82}{section*.89}%
+\contentsline {chapter}{Acrónimos}{83}{chapter*.91}%
+\contentsline {chapter}{Glosario}{86}{chapter*.92}%

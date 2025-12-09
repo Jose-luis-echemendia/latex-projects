@@ -341,6 +341,54 @@
         dinámica del sistema.
             
     }
+
+    \subepigraph{Almacenamiento de Archivos y Objetos}{
+        
+        El almacenamiento persistente de archivos, versiones históricas de modelos y 
+        resultados derivados de las evaluaciones requiere una tecnología que ofrezca 
+        acceso distribuido, tolerancia a fallos, escalabilidad y compatibilidad con 
+        estándares industriales. Para satisfacer esta necesidad se incorporará 
+        \textbf{MinIO}, un sistema de almacenamiento de objetos compatible con la API de 
+        Amazon S3, ampliamente adoptado en entornos de producción y servicios en la nube 
+        \citep{minio2024docs}.
+
+        MinIO ofrece una interfaz uniforme para almacenar objetos binarios, documentos, 
+        snapshots de modelos y resultados asociados al proceso de validación. Su 
+        compatibilidad con S3 permite integrar la plataforma con herramientas estándar 
+        sin requerir dependencias propietarias \citep{adler2023evaluating}. Esta 
+        característica asegura interoperabilidad con sistemas externos, posibilitando 
+        que módulos de análisis, auditoría o visualización operen sobre un backend 
+        de almacenamiento robusto y escalable.
+
+        En el contexto de la solución propuesta, MinIO será empleado para almacenar:  
+        \begin{itemize}
+            \item snapshots persistentes de versiones del Feature Model,
+            \item configuraciones válidas generadas por los motores SAT/SMT,
+            \item artefactos derivados del análisis estructural,
+            \item archivos de auditoría e informes,
+            \item registros de pruebas y diagnósticos.
+        \end{itemize}
+
+        A diferencia del almacenamiento en memoria provisto por Redis, MinIO garantiza 
+        persistencia a largo plazo, redundancia y recuperación confiable de información. 
+        Su arquitectura distribuida permite configurar réplicas, dispersión de datos y 
+        mecanismos de resiliencia sin sacrificar rendimiento \citep{adler2023evaluating}. 
+        Además, sus políticas de control de acceso simplifican la gestión de permisos, 
+        evitando inconsistencias o pérdida de trazabilidad a lo largo del ciclo de vida 
+        del currículo.
+
+        Desde el punto de vista operativo, MinIO permite integrarse con Docker y Docker 
+        Compose de manera directa, facilitando el despliegue, escalado y administración sin 
+        requerir configuración adicional. Esto habilita una solución completa de 
+        almacenamiento distribuido que puede operar tanto en entornos locales (on-premise) 
+        como en infraestructuras institucionales o nube privada.
+
+        En síntesis, MinIO aporta durabilidad, eficiencia, compatibilidad, escalabilidad y 
+        resiliencia, consolidándose como la opción adecuada para soportar el almacenamiento 
+        persistente de artefactos curriculares y resultados analíticos del sistema propuesto.
+        
+    }
+
     
     \subepigraph{Procesamiento Asíncrono}{
 

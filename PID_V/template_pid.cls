@@ -33,6 +33,7 @@
 \usepackage{indentfirst}  % Sangría en el primer párrafo después de títulos
 \usepackage{longtable}
 \usepackage[edges]{forest}
+\usetikzlibrary{shadows.blur}  % Para efectos de sombra en diagramas TikZ
 
 
 % ----------------------------------------------------------

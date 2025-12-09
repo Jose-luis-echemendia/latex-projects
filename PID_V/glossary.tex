@@ -128,5 +128,59 @@
     
     \item[Persistencia]
     Capacidad de un sistema para almacenar datos de forma duradera en medios no volátiles (disco duro, base de datos), garantizando que la información sobreviva a reinicios del sistema, fallos de energía o cierres de aplicación, manteniendo la integridad y disponibilidad de los datos.
+    
+    \item[PySAT]
+    Biblioteca de Python que proporciona una interfaz unificada para trabajar con diferentes solucionadores SAT (Satisfacibilidad Booleana). Permite codificar problemas lógicos proposicionales y utilizar múltiples motores de satisfacibilidad de manera transparente.
+    
+    \item[Z3 Solver]
+    Solucionador de teoremas de alto rendimiento desarrollado por Microsoft Research. Capaz de verificar satisfacibilidad de fórmulas lógicas complejas que involucran teorías matemáticas (aritmética, arrays, listas), ampliamente utilizado en verificación formal y análisis de modelos.
+    
+    \item[MiniSAT]
+    Solucionador SAT minimalista y altamente eficiente que se ha convertido en referencia para el desarrollo de nuevos algoritmos de satisfacibilidad. Destaca por su implementación compacta y rendimiento excepcional en problemas de decisión booleana.
+    
+    \item[NetworkX]
+    Biblioteca de Python para creación, manipulación y análisis de estructuras de redes complejas y grafos. Proporciona algoritmos para análisis de conectividad, caminos más cortos, componentes, centralidad y otras métricas topológicas fundamentales.
+    
+    \item[Forma Normal Conjuntiva (CNF)]
+    Representación estándar de fórmulas lógicas proposicionales como conjunción (AND) de disyunciones (OR) de literales. Formato preferido por la mayoría de los solucionadores SAT por su eficiencia computacional y propiedades algorítmicas favorables.
+    
+    \item[Forma Normal Disyuntiva (DNF)]
+    Representación de fórmulas lógicas proposicionales como disyunción (OR) de conjunciones (AND) de literales. Forma dual a CNF, útil en ciertos contextos de análisis lógico aunque menos común en solucionadores SAT modernos.
+    
+    \item[Características Muertas (\textit{Dead Features})]
+    Características en un Modelo de Características que nunca pueden ser seleccionadas en ninguna configuración válida debido a restricciones contradictorias o dependencias imposibles de satisfacer. Su detección es esencial para validar la calidad del modelo.
+    
+    \item[Algoritmos Genéticos]
+    Técnica de optimización inspirada en la evolución biológica que utiliza operadores de selección, cruce y mutación para explorar espacios de soluciones complejos. Particularmente útil cuando la búsqueda exhaustiva es computacionalmente prohibitiva.
+    
+    \item[Beam Search]
+    Algoritmo de búsqueda heurística que explora un grafo de estados manteniendo solo un número fijo de mejores candidatos en cada nivel. Balancea exhaustividad y eficiencia, reduciendo el espacio de búsqueda sin sacrificar excesivamente la calidad de soluciones.
+    
+    \item[PostgreSQL]
+    Sistema de gestión de bases de datos relacional de código abierto altamente extensible, que soporta características avanzadas como tipos de datos personalizados, índices especializados, transacciones ACID completas, replicación y consultas complejas con optimización sofisticada.
+    
+    \item[Redis]
+    Base de datos en memoria de alto rendimiento que funciona como almacén de estructura de datos (strings, hashes, listas, sets, sorted sets). Ampliamente utilizada para caché, sesiones, colas de mensajes y escenarios que requieren latencia ultra baja.
+    
+    \item[MinIO]
+    Servidor de almacenamiento de objetos de alto rendimiento compatible con la API de Amazon S3. Diseñado para entornos cloud-native, ofrece almacenamiento distribuido, escalable y resiliente para grandes volúmenes de datos no estructurados.
+    
+    \item[Búsqueda en Profundidad (\textit{Depth-First Search})]
+    Algoritmo fundamental de recorrido de grafos que explora tan profundo como sea posible a lo largo de cada rama antes de retroceder. Utilizado para detección de ciclos, análisis de conectividad y ordenamiento topológico.
+    
+    \item[Componentes Fuertemente Conexas (\textit{Strongly Connected Components})]
+    Subgrafos maximales de un grafo dirigido donde cada vértice es alcanzable desde cualquier otro vértice dentro del mismo componente. Su identificación es crucial para análisis de dependencias y detección de ciclos en modelos jerárquicos.
+    
+    \item[Arquitectura Hexagonal]
+    Patrón arquitectónico que separa la lógica de negocio del núcleo de la aplicación de sus dependencias externas mediante puertos (interfaces) y adaptadores (implementaciones). Promueve independencia tecnológica, testabilidad y evolución controlada del software.
+    
+    \item[Clean Architecture]
+    Filosofía de diseño de software que organiza el código en capas concéntricas con dependencias unidireccionales hacia el interior, donde el núcleo de negocio permanece independiente de frameworks, bases de datos e interfaces de usuario, maximizando mantenibilidad y flexibilidad.
+    
+    \item[Pool de Conexiones]
+    Caché de conexiones a bases de datos reutilizables mantenidas en memoria para reducir el overhead de establecer nuevas conexiones. Mejora significativamente el rendimiento en aplicaciones con alta concurrencia al evitar la creación y destrucción repetida de conexiones costosas.
+    
+    \item[Versionamiento]
+    Práctica de mantener múltiples versiones de artefactos de software (código, modelos, configuraciones, documentación) con registro histórico de cambios, permitiendo rastrear evolución, revertir modificaciones y gestionar variantes simultáneas del sistema.
 \end{description}
 

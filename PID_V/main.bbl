@@ -1,4 +1,4 @@
-\begin{thebibliography}{78}
+\begin{thebibliography}{80}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,11 @@
 \newblock Línea de productos de software.
 \newblock URL \url{https://academia-lab.com/enciclopedia/linea-de-productos-de-software/}.
 \newblock Recuperado 25 de octubre de 2025.
+
+\bibitem[Adler and Zhang(2023)]{adler2023evaluating}
+David Adler and Kai Zhang.
+\newblock Evaluating distributed object storage for cloud-native applications: A comparative study of s3-compatible systems.
+\newblock \emph{Journal of Cloud Computing}, 12\penalty0 (4):\penalty0 1--19, 2023.
 
 \bibitem[{Anthology Inc.}(2025)]{blackboard2025overview}
 {Anthology Inc.}
@@ -241,6 +246,12 @@ M~Mendonca and A~Wasowski.
 Aaron et~al. Meurer.
 \newblock Sympy: symbolic computing in python.
 \newblock \emph{PeerJ Computer Science}, 2017.
+
+\bibitem[Min(2024)]{minio2024docs}
+\emph{MinIO Documentation}.
+\newblock MinIO Inc., 2024.
+\newblock URL \url{https://min.io/docs}.
+\newblock Accessed: 2025-01-15.
 
 \bibitem[Mishra and Koehler(2006)]{mishra2006tpack}
 P.~Mishra and M.~J. Koehler.
