@@ -33,8 +33,10 @@
 \usepackage{indentfirst}  % Sangría en el primer párrafo después de títulos
 \usepackage{longtable}
 \usepackage[edges]{forest}
-\usetikzlibrary{shadows.blur}  % Para efectos de sombra en diagramas TikZ
+\usepackage{array}
 
+% Librerías TikZ para diagramas
+\usetikzlibrary{shapes,fit,calc,shadows.blur}
 
 % ----------------------------------------------------------
 % 📄 Márgenes y formato global
@@ -363,9 +365,9 @@
   \vspace{0.5cm} % espacio antes del primer epígrafe
 }
 
-% --- Epígrafes numerados en arábigo (también en el índice) ---
+% --- Epígrafes numerados en arábigo con número de capítulo (también en el índice) ---
 \newcounter{epigraph}[chapter]
-\renewcommand{\theepigraph}{\arabic{epigraph}}
+\renewcommand{\theepigraph}{\thechapter.\arabic{epigraph}}
 
 \newcommand{\epigraph}[2]{%
   \refstepcounter{epigraph}%
@@ -373,7 +375,7 @@
   \setcounter{subepigraph}{0}%
   \setcounter{subsubepigraph}{0}%
   \section*{\theepigraph. #1}%
-  \addcontentsline{toc}{section}{\protect\theepigraph. \protect#1}%
+  \addcontentsline{toc}{section}{\protect\numberline{\theepigraph}\protect#1}%
   \phantomsection
   \label{epi:\theepigraph}%
   #2
@@ -386,7 +388,7 @@
 \newcommand{\subepigraph}[2]{%
   \refstepcounter{subepigraph}%
   \noindent{\Large\bfseries\thesubepigraph\ #1\par}%
-  \addcontentsline{toc}{subsection}{\protect\thesubepigraph\ \protect#1}%
+  \addcontentsline{toc}{subsection}{\protect\numberline{\thesubepigraph}\protect#1}%
   \phantomsection
   \label{sepi:\thesubepigraph}%
   \vspace{0.3cm}%
@@ -399,7 +401,7 @@
 \newcommand{\subsubepigraph}[2]{%
   \refstepcounter{subsubepigraph}%
   \noindent{\Large\bfseries\thesubsubepigraph\ #1\par}%
-  \addcontentsline{toc}{subsubsection}{\protect\thesubsubepigraph\ \protect#1}%
+  \addcontentsline{toc}{subsubsection}{\protect\numberline{\thesubsubepigraph}\protect#1}%
   \phantomsection
   \label{ssepi:\thesubsubepigraph}%
   \vspace{0.3cm}%

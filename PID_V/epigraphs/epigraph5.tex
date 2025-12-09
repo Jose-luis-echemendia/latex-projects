@@ -579,7 +579,7 @@
         En primer lugar, el patrón \textbf{Strategy} resulta esencial para la definición de múltiples 
         mecanismos de validación sobre el Modelo de Características. A través de este patrón, 
         la plataforma puede abstraer e intercambiar, de forma dinámica, estrategias de 
-        validación (SAT, SMT, heurística), sin alterar el núcleo de la aplicación ni su modelo 
+        validación (\ac{SAT}, \ac{SMT}, heurística), sin alterar el núcleo de la aplicación ni su modelo 
         de dominio. Esta independencia operativa es particularmente relevante en contextos donde 
         el análisis lógico de configuraciones requiere combinar enfoques deterministas y 
         aproximados, o cuando la evolución de los modelos demanda nuevas técnicas de inferencia 
@@ -598,18 +598,18 @@
         emplear interfaces para repositorios y adaptadores para implementaciones 
         (PostgreSQL, Redis, MinIO), la aplicación garantiza independencia tecnológica y 
         capacidad de sustitución futura sin comprometer el modelo conceptual. Este patrón 
-        fortalece las propiedades de trazabilidad y versionado del FM, al permitir decidir 
+        fortalece las propiedades de trazabilidad y versionado del \ac{FM}, al permitir decidir 
         políticas de almacenamiento, recuperación y auditoría sin afectar la lógica principal.
 
         Adicionalmente, el patrón \textbf{Façade} se emplea para unificar operaciones complejas 
         expuestas por el motor de validación. Dado que la validación completa involucra 
-        análisis SAT/SMT, heurísticas evolutivas y métricas estructurales, la fachada permite 
-        que clientes externos (p. ej., API REST, CLI, orquestadores) interactúen con el 
+        análisis \ac{SAT}/\ac{SMT}, heurísticas evolutivas y métricas estructurales, la fachada permite 
+        que clientes externos (p. ej., \ac{API} \ac{REST}, \ac{CLI}, orquestadores) interactúen con el 
         subsistema de validación a través de una interfaz simplificada, escondiendo la 
         complejidad del proceso interno. Este patrón no solo reduce acoplamiento, sino que 
         también mejora la legibilidad y estabilidad del sistema frente a cambios internos.
 
-        El patrón \textbf{Observer} se emplea para soportar la evolución del FM. Cuando una 
+        El patrón \textbf{Observer} se emplea para soportar la evolución del \ac{FM}. Cuando una 
         característica, restricción o versión del modelo se modifica, componentes dependientes 
         (analizadores estructurales, cachés, herramientas de auditoría) son notificados 
         automáticamente. Este patrón permite evitar inconsistencias temporales, revalidar 
@@ -623,10 +623,10 @@
         permitiendo una evolución controlada de dichas funcionalidades auxiliares.
 
         El patrón \textbf{Composite} se aplica en la representación jerárquica natural de las 
-        características del FM (raíz, subcaracterísticas, alternativas), permitiendo tratar 
+        características del \ac{FM} (raíz, subcaracterísticas, alternativas), permitiendo tratar 
         nodos internos y hojas de forma homogénea. Esto simplifica operaciones recursivas de 
         conteo, propagación de restricciones, verificación estructural y evaluación parcial de 
-        configuraciones. Su adopción refuerza la estructura intrínseca del problema SPL.
+        configuraciones. Su adopción refuerza la estructura intrínseca del problema \ac{SPL}.
 
         El patrón \textbf{Template Method} se utiliza para definir el esqueleto general de 
         algoritmos de persistencia y validación, dejando que pasos específicos se deleguen a 
@@ -635,7 +635,7 @@
         funcionalmente equivalentes.
 
         El sistema también emplea el patrón \textbf{Chain of Responsibility}, particularmente en la 
-        cadena de middlewares para gestión de solicitudes HTTP. Cada componente de la cadena 
+        cadena de middlewares para gestión de solicitudes \ac{HTTP}. Cada componente de la cadena 
         (autorización, verificación, invalidación de caché, auditoría) procesa la solicitud de 
         forma independiente, permitiendo decisiones locales y promoviendo un flujo flexible y 
         extensible. Esta cadena modulariza preocupaciones transversales sin contaminar la 
@@ -656,7 +656,7 @@
         distintos contextos (pruebas unitarias, pruebas de carga, depuración, despliegue real), posibilitando 
         reproducir resultados experimentales y diagnósticos de inconsistencias sin variaciones provocadas por 
         diferencias ambientales. Desde el punto de vista científico, este patrón refuerza la verificabilidad, 
-        permitiendo la replicación controlada de experimentos sobre configuraciones FM y asegurando que 
+        permitiendo la replicación controlada de experimentos sobre configuraciones \ac{FM} y asegurando que 
         variaciones en infraestructura no afecten la coherencia de los resultados.
 
         El patrón \textbf{Singleton} se aplica para la gestión centralizada de configuraciones globales y 
@@ -664,7 +664,7 @@
         validación. Al garantizar la existencia de una única instancia de dichos elementos, el sistema preserva 
         consistencia interna, evita condiciones de carrera y reduce la posibilidad de estados divergentes entre 
         módulos. Este patrón aporta estabilidad operacional, pues asegura que decisiones críticas (como el modo 
-        de validación SAT/SMT, parámetros de inicialización simbólica y reglas de auditoría) se mantengan 
+        de validación \ac{SAT}/\ac{SMT}, parámetros de inicialización simbólica y reglas de auditoría) se mantengan 
         invariantes a lo largo de la ejecución del sistema. Su eficacia es especialmente notable en contextos 
         de ejecución concurrente, donde múltiples agentes interactúan con la plataforma de validación, y 
         constituye una base esencial para la predictibilidad y consistencia del comportamiento computacional.
@@ -683,6 +683,606 @@
         curricular modelado.
     }
 
+    \subepigraph{Modelo de Datos}{
 
+        El modelo de datos constituye el fundamento estructural a partir del cual se gestionan los
+        elementos curriculares que se modelan mediante Feature Models, así como sus versiones,
+        relaciones, configuraciones válidas y artefactos asociados. Su diseño no responde únicamente
+        a criterios de persistencia, sino a principios formales que garantizan \textit{coherencia
+        semántica, trazabilidad, independencia evolutiva y auditabilidad histórica}.
+
+        Desde una perspectiva conceptual, el modelo de datos se orienta hacia la gestión de
+        información versionada, estructuralmente jerárquica y restringida por propiedades lógicas.
+        Esto implica que las entidades no pueden ser tratadas como objetos aislados, sino como
+        componentes interdependientes cuyo comportamiento emergente debe preservarse a lo largo
+        del tiempo. Por ejemplo, una modificación en la estructura de un Feature Model no invalida
+        necesariamente configuraciones existentes, pero debe quedar registrada, versionada y
+        auditada.
+
+        En términos metodológicos, el modelo adopta una estructura relacional
+        normalizada, reforzada con mecanismos auxiliares que permiten capturar relaciones
+        n-arias (como constraints), estructuras jerárquicas (feature trees), y vínculos temporales
+        (versioning).
+        Adicionalmente, se incorporan entidades destinadas a soportar procesos
+        analíticos, como el almacenamiento de resultados derivados del análisis SAT/SMT y
+        métricas estructurales.
+
+        En la Figura~\ref{fig:er-model} se presenta el modelo conceptual relacional adoptado,
+        en el cual se reflejan las principales entidades, sus relaciones cardinales, y las
+        dependencias que permiten soportar tanto la evolución longitudinal del currículo
+        como el proceso computacional de validación.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.90\textwidth]{img/mer.png}
+            \caption{Modelo entidad-relación.}
+            \label{fig:er-model}
+        \end{figure}
+
+        Posteriormente se describen las entidades más relevantes, detallando su rol dentro
+        del sistema, los atributos que garantizan trazabilidad y las restricciones que
+        aseguran consistencia operacional y semántica. Se destacan aquellas tablas que
+        poseen un impacto estructural directo sobre la validez de configuraciones y el
+        proceso de inferencia lógica. El modelo comprende las siguientes entidades 
+        fundamentales: \texttt{feature\_model} (Tabla~\ref{tab:feature_model}), que actúa 
+        como contenedor maestro; \texttt{feature\_model\_versions} (Tabla~\ref{tab:feature_model_versions}), 
+        responsable del versionado inmutable; \texttt{features} (Tabla~\ref{tab:features}), 
+        que constituye la unidad mínima de aprendizaje; \texttt{feature\_groups} 
+        (Tabla~\ref{tab:feature_groups}), para definir puntos de variación; 
+        \texttt{feature\_relations} (Tabla~\ref{tab:feature_relations}), que establece 
+        dependencias transversales; \texttt{constraints} (Tabla~\ref{tab:constraints}), 
+        dedicada a restricciones lógicas formales; y \texttt{configurations} 
+        (Tabla~\ref{tab:configurations}), que almacena los itinerarios curriculares derivados.
+
+        % --- TABLA 3: FEATURE MODEL ---
+        \subsubepigraph{Entidad: Feature Models}{
+
+            Representa las plantillas curriculares maestras (ver Tabla~\ref{tab:feature_model}). 
+            Actúa como el contenedor principal de las versiones (Tabla~\ref{tab:feature_model_versions}) 
+            y configuraciones (Tabla~\ref{tab:configurations}).
+
+            \begin{longtable}{|p{0.22\textwidth}|p{0.22\textwidth}|p{0.23\textwidth}|p{0.23\textwidth}|}
+                \caption{Diccionario de datos: Tabla \texttt{feature\_model}.} \label{tab:feature_model} \\
+                \rowcolor[HTML]{CBCEFB} 
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endfirsthead
+                
+                \multicolumn{3}{c}
+	            {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+                
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endhead
+                
+                \hline
+                \multicolumn{4}{|r|}{{Continúa en la siguiente página}} \\
+                \endfoot
+                
+                \hline
+                \endlastfoot
+
+                \texttt{id} & UUID & PK & Identificador único del modelo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{name} & VARCHAR(100) & NOT NULL, INDEXED & Nombre del plan o curso. \\
+                \hline
+                \texttt{description} & VARCHAR(255) & NULLABLE & Descripción breve del modelo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{domain\_id} & UUID & FK (domains), NOT NULL & Dominio de conocimiento asociado. \\
+                \hline
+                \texttt{owner\_id} & UUID & FK (users), NOT NULL & Propietario/
+                diseñador principal. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{created\_at} & TIMESTAMP & NOT NULL & Fecha de creación. \\
+                \hline
+                \texttt{updated\_at} & TIMESTAMP & NULLABLE & Fecha de última actualización. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{deleted\_at} & TIMESTAMP & NULLABLE & Fecha de eliminación lógica. \\
+                \hline
+                \texttt{is\_active} & BOOLEAN & DEFAULT TRUE & Indica si el registro está activo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{created\_by\_id} & UUID & FK (users), NULLABLE & Usuario que creó el modelo. \\
+                \hline
+                \texttt{updated\_by\_id} & UUID & FK (users), NULLABLE & Usuario que actualizó el modelo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{deleted\_by\_id} & UUID & FK (users), NULLABLE & Usuario que eliminó lógicamente el modelo. \\
+                \hline
+            \end{longtable}
+
+            \textbf{Relaciones:}
+            \begin{itemize}
+                \item Con \texttt{Domain}: \texttt{domain} (N:1) -- Asociación al dominio de conocimiento.
+                \item Con \texttt{User}: \texttt{owner} (N:1) -- Propietario principal del modelo.
+                \item Con \texttt{User}: \texttt{collaborators} (N:M vía \texttt{FeatureModelCollaborator}) -- Colaboradores autorizados.
+                \item Con \texttt{FeatureModelVersion}: \texttt{versions} (1:N) -- Historial de versiones del modelo.
+                \item Con \texttt{User}: Relaciones de auditoría (N:1) -- Trazabilidad de operaciones CRUD.
+            \end{itemize}
+
+        }
+
+        % --- TABLA 4: FEATURE MODEL VERSIONS ---
+        \subsubepigraph{Entidad: Feature Model Versions}{
+
+            Maneja el versionado de los modelos (ver Tabla~\ref{tab:feature_model_versions}), 
+            permitiendo snapshots inmutables y evolución del diseño curricular. Cada versión 
+            contiene características (Tabla~\ref{tab:features}), grupos de variabilidad 
+            (Tabla~\ref{tab:feature_groups}), relaciones cross-tree (Tabla~\ref{tab:feature_relations}) 
+            y restricciones lógicas (Tabla~\ref{tab:constraints}).
+            
+            \begin{longtable}{|p{0.22\textwidth}|p{0.22\textwidth}|p{0.23\textwidth}|p{0.23\textwidth}|}
+                \caption{Diccionario de datos: Tabla \texttt{feature\_model\_versions}.} \label{tab:feature_model_versions} \\
+                \rowcolor[HTML]{CBCEFB} 
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endfirsthead
+                
+                \multicolumn{4}{c}
+                {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+                
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endhead
+                
+                \hline
+                \multicolumn{4}{|r|}{{Continúa en la siguiente página}} \\
+                \endfoot
+                
+                \hline
+                \endlastfoot
+                
+                \texttt{id} & UUID & PK & Identificador único de la versión. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{version\_number} & INTEGER & NOT NULL, INDEXED, DEFAULT 1 & Número incremental de versión. \\
+                \hline
+                \texttt{snapshot} & JSONB & NULLABLE & Snapshot completo del modelo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{feature\_model 
+                \_id} & UUID & FK (feature\_model), NOT NULL & Modelo padre. \\
+                \hline
+                \texttt{status} & ENUM & DEFAULT 'DRAFT' & Estado: DRAFT, IN\_REVIEW, PUBLISHED. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{created\_at} & TIMESTAMP & NOT NULL & Fecha de creación. \\
+                \hline
+                \texttt{updated\_at} & TIMESTAMP & NULLABLE & Fecha de última actualización. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{deleted\_at} & TIMESTAMP & NULLABLE & Fecha de eliminación lógica. \\
+                \hline
+                \texttt{is\_active} & BOOLEAN & DEFAULT TRUE & Indica si el registro está activo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{created\_by\_id} & UUID & FK (users), NULLABLE & Usuario que creó esta versión. \\
+                \hline
+                \texttt{updated\_by\_id} & UUID & FK (users), NULLABLE & Usuario que actualizó esta versión. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{deleted\_by\_id} & UUID & FK (users), NULLABLE & Usuario que eliminó esta versión. \\
+                \hline
+            \end{longtable}
+
+            \textbf{Relaciones:}
+            \begin{itemize}
+                \item Con \texttt{FeatureModel}: \texttt{feature\_model} (N:1) -- Versión pertenece a un modelo específico.
+                \item Con \texttt{Feature}: \texttt{features} (1:N) -- Características definidas en esta versión.
+                \item Con \texttt{FeatureGroup}: \texttt{feature\_groups} (1:N) -- Grupos de variabilidad de la versión.
+                \item Con \texttt{FeatureRelation}: \texttt{feature\_relations} (1:N) -- Relaciones cross-tree.
+                \item Con \texttt{Constraint}: \texttt{constraints} (1:N) -- Restricciones lógicas aplicables.
+                \item Con \texttt{Configuration}: \texttt{configurations} (1:N) -- Configuraciones derivadas.
+                \item Con \texttt{User}: Relaciones de auditoría (N:1) -- Trazabilidad de modificaciones.
+            \end{itemize}
+
+        }
+        % --- TABLA 5: FEATURES ---
+        \subsubepigraph{Entidad: Features}{
+
+            La unidad mínima de aprendizaje (ver Tabla~\ref{tab:features}). Esta tabla es el 
+            núcleo del árbol de características, estableciendo relaciones jerárquicas 
+            mediante auto-referencia, pertenencia a grupos (Tabla~\ref{tab:feature_groups}) 
+            y dependencias transversales (Tabla~\ref{tab:feature_relations}).
+
+            \begin{longtable}{|p{0.22\textwidth}|p{0.22\textwidth}|p{0.23\textwidth}|p{0.23\textwidth}|}
+                \caption{Diccionario de datos: Tabla \texttt{features}.} \label{tab:features} \\
+                \rowcolor[HTML]{CBCEFB} 
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endfirsthead
+                
+                \multicolumn{4}{c}
+                {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+                
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endhead
+                
+                \hline
+                \multicolumn{4}{|r|}{{Continúa en la siguiente página}} \\
+                \endfoot
+                
+                \hline
+                \endlastfoot
+
+                \texttt{id} & UUID & PK & Identificador único de la feature. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{name} & VARCHAR(100) & NOT NULL, UK(version\_id, name) & Nombre de la característica. \\
+                \hline
+                \texttt{type} & ENUM & NOT NULL & MANDATORY, OPTIONAL. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{properties} & JSONB & NULLABLE, GIN INDEXED & Propiedades extendidas (créditos, horas). \\
+                \hline
+                \texttt{feature\_model 
+                \_version\_id} & UUID & FK (versions), INDEXED & Versión a la que pertenece. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{parent\_id} & UUID & FK (features), NULLABLE & Jerarquía padre-hijo (auto-referencia). \\
+                \hline
+                \texttt{group\_id} & UUID & FK (groups), NULLABLE & Grupo XOR-ALTERNATIVE/OR al que pertenece. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{resource\_id} & UUID & FK (resources), NULLABLE & Recurso multimedia asociado. \\
+                \hline
+                \texttt{created\_at} & TIMESTAMP & NOT NULL & Fecha de creación. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{updated\_at} & TIMESTAMP & NULLABLE & Fecha de última actualización. \\
+                \hline
+                \texttt{deleted\_at} & TIMESTAMP & NULLABLE & Fecha de eliminación lógica. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{is\_active} & BOOLEAN & DEFAULT TRUE & Indica si el registro está activo. \\
+                \hline
+                \texttt{created\_by\_id} & UUID & FK (users), NULLABLE & Usuario que creó la feature. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{updated\_by\_id} & UUID & FK (users), NULLABLE & Usuario que actualizó la feature. \\
+                \hline
+                \texttt{deleted\_by\_id} & UUID & FK (users), NULLABLE & Usuario que eliminó la feature. \\
+                \hline
+            \end{longtable}
+
+            \textbf{Índices:}
+            \begin{itemize}
+                \item \texttt{UNIQUE (feature\_model\_version\_id, name)} -- Garantiza nombres únicos por versión, evitando duplicación de características dentro del mismo snapshot del modelo.
+                \item \texttt{GIN (properties)} -- Índice generalizado invertido para búsqueda eficiente en propiedades \ac{JSON}, permitiendo consultas complejas sobre metadatos curriculares sin deserialización completa.
+            \end{itemize}
+
+            \textbf{Relaciones:}
+            \begin{itemize}
+                \item Jerarquía: \texttt{parent} (N:1), \texttt{children} (1:N) -- Estructura arbórea mediante auto-referencia.
+                \item Con \texttt{FeatureGroup}: \texttt{group} (N:1), \texttt{child\_groups} (1:N) -- Pertenencia a grupos de variabilidad.
+                \item Con \texttt{Resource}: \texttt{resource} (N:1) -- Vinculación con recursos educativos multimedia.
+                \item Con \texttt{Tag}: \texttt{tags} (N:M vía \texttt{FeatureTagLink}) -- Etiquetado semántico para clasificación.
+                \item Con \texttt{Configuration}: \texttt{configurations} (N:M vía \texttt{ConfigurationFeatureLink}) -- Selecciones en itinerarios.
+                \item Con \texttt{FeatureRelation}: \texttt{source\_relations} (1:N), \texttt{target\_relations} (1:N) -- Dependencias transversales.
+                \item Con \texttt{User}: Relaciones de auditoría (N:1) -- Trazabilidad de operaciones.
+            \end{itemize}
+
+        }
+
+        % --- TABLA 6: FEATURE GROUPS ---
+        \subsubepigraph{Entidad: Feature Groups}{
+
+            Define puntos de variación complejos (ver Tabla~\ref{tab:feature_groups}) donde 
+            se agrupan varias características hijas (Tabla~\ref{tab:features}) bajo lógica 
+            XOR u OR, estableciendo cardinalidades de selección.
+
+            \begin{longtable}{|p{0.24\textwidth}|p{0.20\textwidth}|p{0.23\textwidth}|p{0.23\textwidth}|}
+                \caption{Diccionario de datos: Tabla \texttt{feature\_groups}.} \label{tab:feature_groups} \\
+                \rowcolor[HTML]{CBCEFB} 
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endfirsthead
+                
+                \multicolumn{4}{c}
+                {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+                
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endhead
+                
+                \hline
+                \multicolumn{4}{|r|}{{Continúa en la siguiente página}} \\
+                \endfoot
+                
+                \hline
+                \endlastfoot
+                
+                \texttt{id} & UUID & PK & Identificador único del grupo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{group\_type} & ENUM & NOT NULL, INDEXED & XOR/ALTERNATIVE (uno y solo uno), OR (al menos uno). \\
+                \hline
+                \texttt{min\_cardinality} & INTEGER & DEFAULT 1 & Mínimo de features a seleccionar. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{max\_cardinality} & INTEGER & NULLABLE & Máximo de features (NULL = sin límite). \\
+                \hline
+                \texttt{parent\_feature 
+                \_id} & UUID & FK (features), NOT NULL & Feature que define este grupo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{feature\_model 
+                \_version\_id} & UUID & FK (versions) & Versión del modelo. \\
+                \hline
+                \texttt{created\_at} & TIMESTAMP & NOT NULL & Fecha de creación. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{updated\_at} & TIMESTAMP & NULLABLE & Fecha de última actualización. \\
+                \hline
+                \texttt{deleted\_at} & TIMESTAMP & NULLABLE & Fecha de eliminación lógica. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{is\_active} & BOOLEAN & DEFAULT TRUE & Indica si el registro está activo. \\
+                \hline
+                \texttt{created\_by\_id} & UUID & FK (users), NULLABLE & Usuario que creó el grupo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{updated\_by\_id} & UUID & FK (users), NULLABLE & Usuario que actualizó el grupo. \\
+                \hline
+                \texttt{deleted\_by\_id} & UUID & FK (users), NULLABLE & Usuario que eliminó el grupo. \\
+                \hline
+            \end{longtable}
+
+            \textbf{Relaciones:}
+            \begin{itemize}
+                \item Con \texttt{Feature}: \texttt{parent\_feature} (N:1) -- Feature que contiene el punto de variación.
+                \item Con \texttt{Feature}: \texttt{member\_features} (1:N) -- Características hijas que conforman el grupo.
+                \item Con \texttt{FeatureModelVersion}: \texttt{feature\_model\_version} (N:1) -- Versión del modelo asociada.
+                \item Con \texttt{User}: Relaciones de auditoría (N:1) -- Trazabilidad de cambios en grupos.
+            \end{itemize}
+
+        }
+
+        % --- TABLA 7: FEATURE RELATIONS ---
+        \subsubepigraph{Entidad: Feature Relations}{
+
+            Establece reglas de dependencia transversales (ver Tabla~\ref{tab:feature_relations}), 
+            conocidas como Cross-Tree Constraints, entre características (Tabla~\ref{tab:features}). 
+            Soporta relaciones de tipo "Requiere" (REQUIRES) y "Excluye" (EXCLUDES).
+
+            \begin{longtable}{|p{0.24\textwidth}|p{0.20\textwidth}|p{0.23\textwidth}|p{0.23\textwidth}|}
+                \caption{Diccionario de datos: Tabla \texttt{feature\_relations}.} \label{tab:feature_relations} \\
+                \rowcolor[HTML]{CBCEFB} 
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endfirsthead
+                
+                \multicolumn{4}{c}
+                {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+                
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endhead
+                
+                \hline
+                \multicolumn{4}{|r|}{{Continúa en la siguiente página}} \\
+                \endfoot
+                
+                \hline
+                \endlastfoot
+                
+                \texttt{id} & UUID & PK & Identificador único de la relación. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{type} & ENUM & NOT NULL, INDEXED & REQUIRES (prerequisito), EXCLUDES (incompatible). \\
+                \hline
+                \texttt{source\_feature 
+                \_id} & UUID & FK (features), INDEXED & Feature origen (la que depende). \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{target\_feature 
+                \_id} & UUID & FK (features), INDEXED & Feature destino (la requerida/excluida). \\
+                \hline
+                \texttt{feature\_model 
+                \_version\_id} & UUID & FK (versions) & Versión del modelo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{created\_at} & TIMESTAMP & NOT NULL & Fecha de creación. \\
+                \hline
+                \texttt{updated\_at} & TIMESTAMP & NULLABLE & Fecha de última actualización. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{deleted\_at} & TIMESTAMP & NULLABLE & Fecha de eliminación lógica. \\
+                \hline
+                \texttt{is\_active} & BOOLEAN & DEFAULT TRUE & Indica si el registro está activo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{created\_by\_id} & UUID & FK (users), NULLABLE & Usuario que creó la relación. \\
+                \hline
+                \texttt{updated\_by\_id} & UUID & FK (users), NULLABLE & Usuario que actualizó la relación. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{deleted\_by\_id} & UUID & FK (users), NULLABLE & Usuario que eliminó la relación. \\
+                \hline
+            \end{longtable}
+
+            \textbf{Relaciones:}
+            \begin{itemize}
+                \item Con \texttt{Feature}: \texttt{source\_feature} (N:1) -- Característica que origina la dependencia.
+                \item Con \texttt{Feature}: \texttt{target\_feature} (N:1) -- Característica destino (requerida o excluida).
+                \item Con \texttt{FeatureModelVersion}: \texttt{feature\_model\_version} (N:1) -- Versión aplicable de la relación.
+                \item Con \texttt{User}: Relaciones de auditoría (N:1) -- Registro de modificaciones a restricciones.
+            \end{itemize}
+
+        }
+
+        % --- TABLA 8: CONSTRAINTS ---
+        \subsubepigraph{Entidad: Constraints}{
+
+            Almacena restricciones lógicas complejas o proposicionales (ver Tabla~\ref{tab:constraints}) 
+            que no pueden expresarse como relaciones simples entre características 
+            (Tabla~\ref{tab:feature_relations}). Soporta expresiones en formato texto y Forma 
+            Normal Conjuntiva (\ac{CNF}) para procesamiento mediante solvers \ac{SAT}/\ac{SMT}.
+
+            \begin{longtable}{|p{0.22\textwidth}|p{0.22\textwidth}|p{0.23\textwidth}|p{0.23\textwidth}|}
+                \caption{Diccionario de datos: Tabla \texttt{constraints}.} \label{tab:constraints} \\
+                \rowcolor[HTML]{CBCEFB} 
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endfirsthead
+                
+                \multicolumn{4}{c}
+                {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+                
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endhead
+                
+                \hline
+                \multicolumn{4}{|r|}{{Continúa en la siguiente página}} \\
+                \endfoot
+                
+                \hline
+                \endlastfoot
+                
+                \texttt{id} & UUID & PK & Identificador único de la restricción. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{description} & TEXT & NULLABLE & Descripción en lenguaje natural. \\
+                \hline
+                \texttt{expr\_text} & TEXT & NOT NULL & Expresión lógica en formato texto. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{expr\_cnf} & JSONB & NULLABLE & Forma Normal Conjuntiva (para \ac{SAT} solvers). \\
+                \hline
+                \texttt{feature\_model 
+                \_version\_id} & UUID & FK (versions) & Versión del modelo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{created\_at} & TIMESTAMP & NOT NULL & Fecha de creación. \\
+                \hline
+                \texttt{updated\_at} & TIMESTAMP & NULLABLE & Fecha de última actualización. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{deleted\_at} & TIMESTAMP & NULLABLE & Fecha de eliminación lógica. \\
+                \hline
+                \texttt{is\_active} & BOOLEAN & DEFAULT TRUE & Indica si el registro está activo. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{created\_by\_id} & UUID & FK (users), NULLABLE & Usuario que creó la restricción. \\
+                \hline
+                \texttt{updated\_by\_id} & UUID & FK (users), NULLABLE & Usuario que actualizó la restricción. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{deleted\_by\_id} & UUID & FK (users), NULLABLE & Usuario que eliminó la restricción. \\
+                \hline
+            \end{longtable}
+
+            \textbf{Relaciones:}
+            \begin{itemize}
+                \item Con \texttt{FeatureModelVersion}: \texttt{feature\_model\_version} (N:1) -- Versión del modelo sobre la cual se aplica la restricción lógica.
+                \item Con \texttt{User}: Relaciones de auditoría (N:1) -- Trazabilidad de definición y modificación de restricciones formales.
+            \end{itemize}
+
+        }
+
+        % --- TABLA 9: CONFIGURATIONS ---
+        \subsubepigraph{Entidad: Configurations}{
+            
+            Almacena las selecciones específicas realizadas por un usuario (ver Tabla~\ref{tab:configurations}) 
+            sobre una versión de un modelo (Tabla~\ref{tab:feature_model_versions}), representando 
+            itinerarios de aprendizaje concretos. Cada configuración vincula un conjunto específico 
+            de características seleccionadas (Tabla~\ref{tab:features}) que cumplen las restricciones 
+            definidas (Tabla~\ref{tab:constraints} y Tabla~\ref{tab:feature_relations}).
+
+            \begin{longtable}{|p{0.22\textwidth}|p{0.22\textwidth}|p{0.23\textwidth}|p{0.23\textwidth}|}
+                \caption{Diccionario de datos: Tabla \texttt{configurations}.} \label{tab:configurations} \\
+                \rowcolor[HTML]{CBCEFB} 
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endfirsthead
+                
+                \multicolumn{4}{c}
+                {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+                
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones} & \textbf{Descripción} \\
+                \hline
+                \endhead
+                
+                \hline
+                \multicolumn{4}{|r|}{{Continúa en la siguiente página}} \\
+                \endfoot
+                
+                \hline
+                \endlastfoot
+                
+                \texttt{id} & UUID & PK & Identificador único de la configuración. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{name} & VARCHAR(100) & NOT NULL & Nombre del itinerario/plan. \\
+                \hline
+                \texttt{description} & TEXT & NULLABLE & Descripción del plan personalizado. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{feature\_model 
+                \_version\_id} & UUID & FK (versions), INDEXED & Versión base del modelo. \\
+                \hline
+                \texttt{created\_at} & TIMESTAMP & NOT NULL & Fecha de creación. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{updated\_at} & TIMESTAMP & NULLABLE & Fecha de última actualización. \\
+                \hline
+                \texttt{deleted\_at} & TIMESTAMP & NULLABLE & Fecha de eliminación lógica. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{is\_active} & BOOLEAN & DEFAULT TRUE & Indica si el registro está activo. \\
+                \hline
+                \texttt{created\_by\_id} & UUID & FK (users), NULLABLE & Usuario configurador. \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                \texttt{updated\_by\_id} & UUID & FK (users), NULLABLE & Usuario que actualizó la configuración. \\
+                \hline
+                \texttt{deleted\_by\_id} & UUID & FK (users), NULLABLE & Usuario que eliminó la configuración. \\
+                \hline
+            \end{longtable}
+
+            \textbf{Relaciones:}
+            \begin{itemize}
+                \item Con \texttt{FeatureModelVersion}: \texttt{feature\_model\_version} (N:1) -- Versión del modelo a partir de la cual se deriva la configuración.
+                \item Con \texttt{Feature}: \texttt{features} (N:M vía \texttt{ConfigurationFeatureLink}) -- Características seleccionadas que componen el itinerario curricular concreto.
+                \item Con \texttt{Tag}: \texttt{tags} (N:M vía \texttt{ConfigurationTagLink}) -- Etiquetas para clasificación y filtrado de configuraciones.
+                \item Con \texttt{User}: Relaciones de auditoría (N:1) -- Trazabilidad de creación, modificación y eliminación de itinerarios formativos.
+            \end{itemize}
+
+        }    
+    }
 }
 

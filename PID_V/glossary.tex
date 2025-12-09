@@ -171,16 +171,85 @@
     \item[Componentes Fuertemente Conexas (\textit{Strongly Connected Components})]
     Subgrafos maximales de un grafo dirigido donde cada vértice es alcanzable desde cualquier otro vértice dentro del mismo componente. Su identificación es crucial para análisis de dependencias y detección de ciclos en modelos jerárquicos.
     
+    \item[Adapter (Adaptador)]
+    Patrón de diseño estructural que permite que interfaces incompatibles trabajen juntas envolviendo un objeto con una interfaz que el cliente espera. Utilizado para integrar componentes existentes sin modificar su código fuente.
+    
     \item[Arquitectura Hexagonal]
     Patrón arquitectónico que separa la lógica de negocio del núcleo de la aplicación de sus dependencias externas mediante puertos (interfaces) y adaptadores (implementaciones). Promueve independencia tecnológica, testabilidad y evolución controlada del software.
+    
+    \item[Chain of Responsibility (Cadena de Responsabilidad)]
+    Patrón de diseño conductual que permite pasar solicitudes a lo largo de una cadena de manejadores, donde cada manejador decide si procesa la solicitud o la pasa al siguiente. Utilizado para implementar middlewares y procesamiento secuencial de peticiones.
     
     \item[Clean Architecture]
     Filosofía de diseño de software que organiza el código en capas concéntricas con dependencias unidireccionales hacia el interior, donde el núcleo de negocio permanece independiente de frameworks, bases de datos e interfaces de usuario, maximizando mantenibilidad y flexibilidad.
     
+    \item[Composite (Compuesto)]
+    Patrón de diseño estructural que permite tratar objetos individuales y composiciones de objetos de manera uniforme mediante una estructura de árbol. Ideal para representar jerarquías parte-todo como modelos de características con relaciones padre-hijo.
+    
+    \item[Decorator (Decorador)]
+    Patrón de diseño estructural que permite agregar responsabilidades adicionales a objetos dinámicamente sin alterar su estructura. Utilizado para implementar funcionalidades transversales como logging, validación y manejo de errores de forma modular.
+    
     \item[Pool de Conexiones]
     Caché de conexiones a bases de datos reutilizables mantenidas en memoria para reducir el overhead de establecer nuevas conexiones. Mejora significativamente el rendimiento en aplicaciones con alta concurrencia al evitar la creación y destrucción repetida de conexiones costosas.
     
+    \item[Dependency Injection (Inversión de Dependencias)]
+    Patrón de diseño que implementa el principio de inversión de dependencias, donde las dependencias de un objeto son proporcionadas externamente en lugar de ser creadas internamente. Facilita el testing, reduce acoplamiento y mejora la modularidad del código.
+    
+    \item[Factory Method (Método de Fábrica)]
+    Patrón de diseño creacional que define una interfaz para crear objetos pero permite a las subclases decidir qué clase instanciar. Utilizado para delegar la lógica de creación de objetos y facilitar la extensibilidad del sistema.
+    
+    \item[Façade (Fachada)]
+    Patrón de diseño estructural que proporciona una interfaz simplificada y unificada a un conjunto complejo de subsistemas. Reduce la complejidad percibida y facilita el uso de bibliotecas o frameworks mediante una API más amigable.
+    
+    \item[Middleware]
+    Componente de software que actúa como intermediario entre diferentes capas o sistemas, procesando solicitudes de forma secuencial en una cadena. En aplicaciones web, se utiliza para implementar autenticación, logging, validación y transformación de datos.
+    
+    \item[Observer (Observador)]
+    Patrón de diseño conductual que define una dependencia uno-a-muchos entre objetos, de modo que cuando un objeto cambia de estado, todos sus dependientes son notificados automáticamente. Fundamental para implementar sistemas de eventos y arquitecturas reactivas.
+    
+    \item[Proxy]
+    Patrón de diseño estructural que proporciona un sustituto o representante de otro objeto para controlar el acceso al mismo. Utilizado para implementar carga diferida, control de acceso, logging y caching de forma transparente.
+    
+    \item[Repository (Repositorio)]
+    Patrón de diseño que encapsula la lógica de acceso a datos proporcionando una interfaz de colección para operaciones CRUD sobre entidades de dominio. Desacopla la lógica de negocio de los detalles de persistencia y facilita el testing con repositorios en memoria.
+    
+    \item[Singleton]
+    Patrón de diseño creacional que garantiza que una clase tenga una única instancia global y proporciona un punto de acceso global a ella. Utilizado para gestionar recursos compartidos como pools de conexiones, configuraciones y servicios stateful.
+    
+    \item[Strategy (Estrategia)]
+    Patrón de diseño conductual que define una familia de algoritmos intercambiables encapsulados en clases separadas con una interfaz común. Permite seleccionar el algoritmo en tiempo de ejecución, promoviendo flexibilidad y reutilización.
+    
+    \item[Template Method (Método Plantilla)]
+    Patrón de diseño conductual que define el esqueleto de un algoritmo en una clase base, permitiendo a las subclases redefinir ciertos pasos sin cambiar la estructura general. Promueve reutilización de código y establece puntos de extensión controlados.
+    
     \item[Versionamiento]
     Práctica de mantener múltiples versiones de artefactos de software (código, modelos, configuraciones, documentación) con registro histórico de cambios, permitiendo rastrear evolución, revertir modificaciones y gestionar variantes simultáneas del sistema.
+    
+    \item[Amazon S3 (\textit{Simple Storage Service})]
+    Servicio de almacenamiento de objetos en la nube de Amazon Web Services que proporciona escalabilidad, disponibilidad de datos, seguridad y rendimiento. Es el estándar de facto para almacenamiento de objetos en la nube, con una API ampliamente adoptada.
+    
+    \item[Kubernetes]
+    Sistema de orquestación de contenedores de código abierto que automatiza el despliegue, escalado y gestión de aplicaciones en contenedores. Proporciona capacidades avanzadas de auto-recuperación, balanceo de carga, descubrimiento de servicios y gestión de configuración.
+    
+    \item[Docker Compose]
+    Herramienta para definir y ejecutar aplicaciones Docker multi-contenedor mediante archivos YAML declarativos. Permite especificar servicios, redes, volúmenes y dependencias en un único archivo, simplificando el despliegue y la orquestación de entornos complejos.
+    
+    \item[On-Premise]
+    Modelo de despliegue de software donde la infraestructura y las aplicaciones se alojan y ejecutan en servidores físicos o virtuales ubicados dentro de las instalaciones de la organización, en contraposición a servicios en la nube. Proporciona mayor control pero requiere inversión en hardware y mantenimiento.
+    
+    \item[Cloud-Native]
+    Enfoque de diseño y desarrollo de aplicaciones que aprovecha las ventajas de la computación en la nube, como escalabilidad elástica, resiliencia, microservicios y contenedores. Las aplicaciones cloud-native están diseñadas para ejecutarse de forma óptima en entornos de nube distribuidos.
+    
+    \item[Backtracking]
+    Algoritmo de búsqueda sistemática que explora soluciones potenciales construyéndolas incrementalmente y abandonando aquellas que no cumplen las restricciones (poda). Ampliamente utilizado en problemas de satisfacibilidad de restricciones y generación de configuraciones válidas.
+    
+    \item[Réplica]
+    Copia duplicada de datos o servicios mantenida en diferentes ubicaciones o servidores para mejorar disponibilidad, tolerancia a fallos y rendimiento. Las réplicas permiten distribuir la carga de trabajo y garantizar continuidad del servicio ante fallos.
+    
+    \item[Escalabilidad Horizontal]
+    Capacidad de un sistema para manejar mayor carga agregando más instancias o nodos al sistema, en lugar de aumentar los recursos de una única máquina (escalabilidad vertical). Fundamental para sistemas distribuidos y aplicaciones de alto rendimiento.
+    
+    \item[Dispersión de Datos (\textit{Data Sharding})]
+    Técnica de particionamiento horizontal de datos donde un conjunto de datos grande se divide en fragmentos más pequeños distribuidos en múltiples servidores. Mejora el rendimiento, la escalabilidad y permite gestionar volúmenes masivos de información.
 \end{description}
 

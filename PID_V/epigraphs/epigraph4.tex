@@ -305,7 +305,7 @@
             
             \item listas de incompatibilidades detectadas,
             
-            \item descriptores internos del Feature Model,
+            \item descriptores internos del \ac{FM},
             
             \item estados de sesión durante la exploración de alternativas,
             
@@ -318,7 +318,7 @@
         o desactivar características, consultar prerequisitos, etc.) \citep{carlson2013redis}.
 
         Otro aspecto clave es que Redis permite persistencia opcional mediante 
-        snapshots (RDB), lo que lo convierte en un aliado directo del soporte de 
+        snapshots (\ac{RDB}), lo que lo convierte en un aliado directo del soporte de 
         versionado de modelos y configuraciones \citep{carlson2013redis}. Es decir, puede almacenar estados 
         intermedios del proceso de modelado curricular sin interferir con la base de 
         datos principal, permitiendo restaurar fácilmente versiones anteriores o 
@@ -348,13 +348,13 @@
         resultados derivados de las evaluaciones requiere una tecnología que ofrezca 
         acceso distribuido, tolerancia a fallos, escalabilidad y compatibilidad con 
         estándares industriales. Para satisfacer esta necesidad se incorporará 
-        \textbf{MinIO}, un sistema de almacenamiento de objetos compatible con la API de 
-        Amazon S3, ampliamente adoptado en entornos de producción y servicios en la nube 
+        \textbf{MinIO}, un sistema de almacenamiento de objetos compatible con la \ac{API} de 
+        Amazon \ac{S3}, ampliamente adoptado en entornos de producción y servicios en la nube 
         \citep{minio2024docs}.
 
         MinIO ofrece una interfaz uniforme para almacenar objetos binarios, documentos, 
         snapshots de modelos y resultados asociados al proceso de validación. Su 
-        compatibilidad con S3 permite integrar la plataforma con herramientas estándar 
+        compatibilidad con \ac{S3} permite integrar la plataforma con herramientas estándar 
         sin requerir dependencias propietarias \citep{adler2023evaluating}. Esta 
         característica asegura interoperabilidad con sistemas externos, posibilitando 
         que módulos de análisis, auditoría o visualización operen sobre un backend 
@@ -362,8 +362,8 @@
 
         En el contexto de la solución propuesta, MinIO será empleado para almacenar:  
         \begin{itemize}
-            \item snapshots persistentes de versiones del Feature Model,
-            \item configuraciones válidas generadas por los motores SAT/SMT,
+            \item snapshots persistentes de versiones del \ac{FM},
+            \item configuraciones válidas generadas por los motores \ac{SAT}/\ac{SMT},
             \item artefactos derivados del análisis estructural,
             \item archivos de auditoría e informes,
             \item registros de pruebas y diagnósticos.
