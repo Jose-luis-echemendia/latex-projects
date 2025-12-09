@@ -530,12 +530,18 @@
         configuraciones válidas, proponer versiones corregidas y explorar variantes
         del FM bajo metas específicas.
 
-        Finalmente, el motor combinará ambas estrategias: validación determinista
-        formal para garantizar consistencia lógica e integridad del modelo, y
-        heurísticas evolutivas para asistir en la derivación de alternativas válidas
-        ante configuraciones incompletas o conflictivas \citep{benavides2010automated}. Esta hibridación permite un
-        balance adecuado entre rigor matemático, eficiencia computacional y soporte a
-        tareas exploratorias propias del dominio curricular.
+        Si bien el sistema incorpora herramientas como SymPy para análisis 
+        simbólico, NetworkX para la evaluación estructural del modelo y 
+        algoritmos genéticos para la exploración heurística del espacio de 
+        soluciones, estas tecnologías no sustituyen un motor formal de 
+        satisfacibilidad. Por su naturaleza, SymPy resulta adecuado para 
+        verificar restricciones locales o detectar inconsistencias obvias, 
+        pero no está diseñado para resolver problemas de variabilidad a gran 
+        escala. De igual forma, los algoritmos evolutivos permiten sugerir 
+        configuraciones o completar decisiones, aunque sus resultados son 
+        aproximados. Por ello, la plataforma complementa este enfoque híbrido 
+        con motores lógicos especializados basados en SAT/SMT para garantizar 
+        corrección formal y escalabilidad en los análisis.
 
     }
 

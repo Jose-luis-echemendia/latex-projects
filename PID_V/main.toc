@@ -1,5 +1,5 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Introducción}{1}{section*.8}%
+\contentsline {chapter}{Introducción}{1}{section*.9}%
 \contentsline {chapter}{Desarrollo}{8}{chapter*.14}%
 \contentsline {section}{Introducción}{8}{section*.15}%
 \contentsline {section}{\theepigraph . Fundamentación Teórica}{8}{epigraph.0.1}%
@@ -29,15 +29,21 @@
 \contentsline {subsection}{\thesubepigraph \ Procesamiento Asíncrono}{50}{subepigraph.0.4.6}%
 \contentsline {subsection}{\thesubepigraph \ Algoritmos, Motor de Reglas y Validación}{53}{subepigraph.0.4.7}%
 \contentsline {subsection}{\thesubepigraph \ Gestor de dependencias}{55}{subepigraph.0.4.8}%
-\contentsline {subsection}{\thesubepigraph \ Herramienta para el control de versiones}{55}{subepigraph.0.4.9}%
+\contentsline {subsection}{\thesubepigraph \ Herramienta para el control de versiones}{56}{subepigraph.0.4.9}%
 \contentsline {subsection}{\thesubepigraph \ Lenguaje de modelados}{57}{subepigraph.0.4.10}%
 \contentsline {subsection}{\thesubepigraph \ Herramienta CASE}{58}{subepigraph.0.4.11}%
 \contentsline {subsection}{\thesubepigraph \ Herramientas para diseñar y ejecutar pruebas}{59}{subepigraph.0.4.12}%
 \contentsline {subsection}{\thesubepigraph \ Entorno Integrado de Desarrollo}{60}{subepigraph.0.4.13}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe V}{61}{epigraph.0.5}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe VI}{61}{epigraph.0.6}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe VII}{61}{epigraph.0.7}%
-\contentsline {section}{\theepigraph . Nombre del Epígrafe VIII}{61}{epigraph.0.8}%
-\contentsline {chapter}{Conclusiones}{62}{section*.76}%
-\contentsline {chapter}{Acrónimos}{63}{chapter*.78}%
-\contentsline {chapter}{Glosario}{66}{chapter*.79}%
+\contentsline {section}{\theepigraph . Propuesta de Solución}{61}{epigraph.0.5}%
+\contentsline {subsection}{\thesubepigraph \ Modelo SPL y su Correspondencia con la Propuesta}{62}{subepigraph.0.5.1}%
+\contentsline {subsubsection}{\thesubsubepigraph \ Justificación del uso de los \ac {FM}}{63}{subsubepigraph.0.5.1.1}%
+\contentsline {subsubsection}{\thesubsubepigraph \ La Analogía Formal Curricular}{65}{subsubepigraph.0.5.1.2}%
+\contentsline {subsubsection}{\thesubsubepigraph \ El Rol Dual de las características (Variabilidad Jerárquica)}{68}{subsubepigraph.0.5.1.3}%
+\contentsline {subsubsection}{\thesubsubepigraph \ Importancia Estratégica y Propósito en la Solución}{69}{subsubepigraph.0.5.1.4}%
+\contentsline {subsection}{\thesubepigraph \ Componentes funcionales del sistema}{69}{subepigraph.0.5.2}%
+\contentsline {section}{\theepigraph . Nombre del Epígrafe VI}{71}{epigraph.0.6}%
+\contentsline {section}{\theepigraph . Nombre del Epígrafe VII}{71}{epigraph.0.7}%
+\contentsline {section}{\theepigraph . Nombre del Epígrafe VIII}{71}{epigraph.0.8}%
+\contentsline {chapter}{Conclusiones}{72}{section*.83}%
+\contentsline {chapter}{Acrónimos}{73}{chapter*.85}%
+\contentsline {chapter}{Glosario}{76}{chapter*.86}%

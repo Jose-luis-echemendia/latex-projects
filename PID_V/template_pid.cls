@@ -32,6 +32,8 @@
 \usepackage[printonlyused]{acronym}  % Para gestión de acrónimos
 \usepackage{indentfirst}  % Sangría en el primer párrafo después de títulos
 \usepackage{longtable}
+\usepackage[edges]{forest}
+
 
 % ----------------------------------------------------------
 % 📄 Márgenes y formato global

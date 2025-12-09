@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  9 DEC 2025 00:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  9 DEC 2025 01:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -474,11 +474,301 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \c@LT@tables=\count310
 \c@LT@chunks=\count311
 \LT@p@ftn=\toks33
+) (/usr/share/texlive/texmf-dist/tex/latex/forest/forest.sty
+Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
+ (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks34
+\pgfutil@tempdima=\dimen195
+\pgfutil@tempdimb=\dimen196
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box65
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks35
+\pgfkeys@temptoks=\toks36
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks37
+))
+\pgf@x=\dimen197
+\pgf@y=\dimen198
+\pgf@xa=\dimen199
+\pgf@ya=\dimen256
+\pgf@xb=\dimen257
+\pgf@yb=\dimen258
+\pgf@xc=\dimen259
+\pgf@yc=\dimen260
+\pgf@xd=\dimen261
+\pgf@yd=\dimen262
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count312
+\c@pgf@countb=\count313
+\c@pgf@countc=\count314
+\c@pgf@countd=\count315
+\t@pgf@toka=\toks38
+\t@pgf@tokb=\toks39
+\t@pgf@tokc=\toks40
+\pgf@sys@id@count=\count316
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count317
+\pgfsyssoftpath@bigbuffer@items=\count318
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen263
+\pgfmath@count=\count319
+\pgfmath@box=\box66
+\pgfmath@toks=\toks41
+\pgfmath@stack@operand=\toks42
+\pgfmath@stack@operation=\toks43
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count320
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen264
+\pgf@picmaxx=\dimen265
+\pgf@picminy=\dimen266
+\pgf@picmaxy=\dimen267
+\pgf@pathminx=\dimen268
+\pgf@pathmaxx=\dimen269
+\pgf@pathminy=\dimen270
+\pgf@pathmaxy=\dimen271
+\pgf@xx=\dimen272
+\pgf@xy=\dimen273
+\pgf@yx=\dimen274
+\pgf@yy=\dimen275
+\pgf@zx=\dimen276
+\pgf@zy=\dimen277
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen278
+\pgf@path@lasty=\dimen279
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen280
+\pgf@shorten@start@additional=\dimen281
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box67
+\pgf@hbox=\box68
+\pgf@layerbox@main=\box69
+\pgf@picture@serial@count=\count321
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen282
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen283
+\pgf@pt@y=\dimen284
+\pgf@pt@temp=\dimen285
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen286
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen287
+\pgf@sys@shading@range@num=\count322
+\pgf@shadingcount=\count323
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box70
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box71
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen288
+\pgf@nodesepend=\dimen289
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen290
+\pgffor@skip=\dimen291
+\pgffor@stack=\toks44
+\pgffor@toks=\toks45
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count324
+\pgfplotmarksize=\dimen292
+)
+\tikz@lastx=\dimen293
+\tikz@lasty=\dimen294
+\tikz@lastxsaved=\dimen295
+\tikz@lastysaved=\dimen296
+\tikz@lastmovetox=\dimen297
+\tikz@lastmovetoy=\dimen298
+\tikzleveldistance=\dimen299
+\tikzsiblingdistance=\dimen300
+\tikz@figbox=\box72
+\tikz@figbox@bg=\box73
+\tikz@tempbox=\box74
+\tikz@tempbox@bg=\box75
+\tikztreelevel=\count325
+\tikznumberofchildren=\count326
+\tikznumberofcurrentchild=\count327
+\tikz@fig@count=\count328
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count329
+\pgfmatrixcurrentcolumn=\count330
+\pgf@matrix@numberofcolumns=\count331
+)
+\tikz@expandcount=\count332
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box76
+\pgfnodeparttwobox=\box77
+\pgfnodepartthreebox=\box78
+\pgfnodepartfourbox=\box79
+\pgfnodeparttwentybox=\box80
+\pgfnodepartnineteenbox=\box81
+\pgfnodeparteighteenbox=\box82
+\pgfnodepartseventeenbox=\box83
+\pgfnodepartsixteenbox=\box84
+\pgfnodepartfifteenbox=\box85
+\pgfnodepartfourteenbox=\box86
+\pgfnodepartthirteenbox=\box87
+\pgfnodeparttwelvebox=\box88
+\pgfnodepartelevenbox=\box89
+\pgfnodeparttenbox=\box90
+\pgfnodepartninebox=\box91
+\pgfnodeparteightbox=\box92
+\pgfnodepartsevenbox=\box93
+\pgfnodepartsixbox=\box94
+\pgfnodepartfivebox=\box95
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+\pgf@intersect@solutions=\count333
+) (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks46
+\pgfopts@list@add@b@toks=\toks47
+) (/usr/share/texlive/texmf-dist/tex/latex/elocalloc/elocalloc.sty
+Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+ (/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)) (/usr/share/texlive/texmf-dist/tex/latex/inlinedef/inlinedef.sty
+Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
+\ID@toks=\toks48
+\ID@count=\count334
+)
+\ID@usercommands=\toks49
+\safeloop@depth=\count335
+\safeRKloop@depth=\count336
+\forest@temp@dimen=\dimen301
+\forest@temp@count=\count337
+\forest@n=\count338
+\forest@temp@global@count=\count339
+\forest@temp@toks=\toks50
+\forest@temparray@M=\count340
+\forest@temparray@N=\count341
+\forest@global@temparray@M=\count342
+\forest@global@temparray@N=\count343
+\forest@isnum@count=\count344
+\forest@isdim@nonintpart=\count345
+\forest@isdim@dimen=\dimen302
+\forest@sort@m=\count346
+\forest@sort@k=\count347
+\forest@sort@p=\count348
+\bracket@content=\toks51
+\bracket@afterthought=\toks52
+\forest@node@maxid=\count349
+\forest@process@left@M=\count350
+\forest@process@left@N=\count351
+\forest@process@right@M=\count352
+\forest@process@right@N=\count353
+\forest@process@saved@M=\count354
+\forest@process@saved@N=\count355
+\forest@process@result@M=\count356
+\forest@process@result@N=\count357
+\forest@process@n=\count358
+\forest@nodewalk@branch@toks=\toks53
+\forest@nodewalk@shortsteps@resolution=\toks54
+\forest@do@dynamics=\toks55
+\forest@box=\box96
+\forest@xg=\dimen303
+\forest@yg=\dimen304
+\forest@xs=\dimen305
+\forest@ys=\dimen306
+\forest@pi@toks=\toks56
+\forest@segment@toks=\toks57
+\forest@PIi@toks=\toks58
+\forest@PIii@toks=\toks59
+\forest@copy@in=\read4
+\forest@copy@out=\write4
+\forest@externalize@max@outer@n=\count359
+\forest@externalize@inner@n=\count360
+) (/usr/share/texlive/texmf-dist/tex/latex/forest/forest-lib-edges.sty
+Package: forest-lib-edges 2016/12/05 v0.1.1
 )
    defining Unicode char U+2248 (decimal 8776)
-\c@epigraph=\count312
-\c@subepigraph=\count313
-\c@subsubepigraph=\count314
+\c@epigraph=\count361
+\c@subepigraph=\count362
+\c@subsubepigraph=\count363
 )
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
@@ -506,17 +796,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count315
-\scratchdimen=\dimen195
-\scratchbox=\box65
-\nofMPsegments=\count316
-\nofMParguments=\count317
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count318
-\MPscratchDim=\dimen196
-\MPnumerator=\count319
-\makeMPintoPDFobject=\count320
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count364
+\scratchdimen=\dimen307
+\scratchbox=\box97
+\nofMPsegments=\count365
+\nofMParguments=\count366
+\everyMPshowfont=\toks60
+\MPscratchCnt=\count367
+\MPscratchDim=\dimen308
+\MPnumerator=\count368
+\makeMPintoPDFobject=\count369
+\everyMPtoPDFconversion=\toks61
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -525,8 +815,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 3.
  (./main.out) (./main.out)
-\@outlinefile=\write3
-\openout3 = `main.out'.
+\@outlinefile=\write5
+\openout5 = `main.out'.
 
 
 *geometry* driver: auto-detecting
@@ -570,7 +860,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
  (./portada.tex
-<img/uci_logo.png, id=144, 554.07pt x 192.72pt>
+<img/uci_logo.png, id=155, 554.07pt x 192.72pt>
 File: img/uci_logo.png Graphic file (type png)
 <use img/uci_logo.png>
 Package pdftex.def Info: img/uci_logo.png  used on input line 13.
@@ -634,8 +924,8 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 
 ])
-\tf@toc=\write4
-\openout4 = `main.toc'.
+\tf@toc=\write6
+\openout6 = `main.toc'.
 
 
 
@@ -653,9 +943,11 @@ Overfull \hbox (1.09998pt too wide) in paragraph at lines 3--3
  [][] [][]\T1/phv/m/n/14.4 Comparación, Metodología Ágil VS Metodología Tradi-cional 
  []
 
+Package acronym Info: Label `acro:SPL' newly defined as it shall be overridden
+although it is yet undefined on input line 7.
 )
-\tf@lot=\write5
-\openout5 = `main.lot'.
+\tf@lot=\write7
+\openout7 = `main.lot'.
 
 
 
@@ -668,8 +960,8 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [5
 
 ] (./main.lof)
-\tf@lof=\write6
-\openout6 = `main.lof'.
+\tf@lof=\write8
+\openout8 = `main.lof'.
 
 
 
@@ -723,9 +1015,6 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [2]
-Package acronym Info: Label `acro:SPL' newly defined as it shall be overridden
-although it is yet undefined on input line 61.
-
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -964,7 +1253,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [13]
-<img/feature_models.png, id=417, 618.81187pt x 412.54124pt>
+<img/feature_models.png, id=440, 618.81187pt x 412.54124pt>
 File: img/feature_models.png Graphic file (type png)
 <use img/feature_models.png>
 Package pdftex.def Info: img/feature_models.png  used on input line 466.
@@ -1384,7 +1673,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [39]
-Overfull \hbox (10.85004pt too wide) in paragraph at lines 737--737
+Overfull \hbox (10.85004pt too wide) in paragraph at lines 743--743
 \T1/phv/m/n/14.4 re-stric-ciones transver-sales y ar-di-nal-i-dades con clar-i-dad y sin am-bigüedad.
  []
 
@@ -1396,14 +1685,14 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [40]
-Overfull \hbox (1.92209pt too wide) in paragraph at lines 737--737
+Overfull \hbox (1.92209pt too wide) in paragraph at lines 743--743
 \T1/phv/m/n/14.4 gener-ar con-fig-u-ra-ciones vál-i-das a par-tir de elec-ciones de usuario, aplicar
  []
 
 Package acronym Info: Label `acro:REST' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
+although it is yet undefined on input line 743.
 
-Overfull \hbox (7.79723pt too wide) in paragraph at lines 737--737
+Overfull \hbox (7.79723pt too wide) in paragraph at lines 743--743
 \T1/phv/m/n/14.4 miten con-stru-ir ser-vi-cios [][][]Transferencia de Es-ta-do Rep-re-senta-cional (\T1/phv/m/sl/14.4 Rep-
  []
 
@@ -1415,7 +1704,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [41]
-Overfull \hbox (10.178pt too wide) in paragraph at lines 737--737
+Overfull \hbox (10.178pt too wide) in paragraph at lines 743--743
 []\T1/phv/m/n/14.4 FastAPI será el frame-work \T1/phv/m/sl/14.4 back-end \T1/phv/m/n/14.4 adop-ta-do para la im-ple-mentación
  []
 
@@ -1428,7 +1717,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [42]
 Package acronym Info: Label `acro:I/O' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
+although it is yet undefined on input line 743.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1439,16 +1728,16 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [43]
 Package acronym Info: Label `acro:SQL' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
+although it is yet undefined on input line 743.
 Package acronym Info: Label `acro:CI/CD' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
+although it is yet undefined on input line 743.
 
-Overfull \hbox (7.262pt too wide) in paragraph at lines 737--737
+Overfull \hbox (7.262pt too wide) in paragraph at lines 743--743
 []\T1/phv/m/n/14.4 Finalmente, la com-pat-i-bil-i-dad de FastAPI con con-tro-ladores de bases
  []
 
 
-Overfull \hbox (29.30313pt too wide) in paragraph at lines 737--737
+Overfull \hbox (29.30313pt too wide) in paragraph at lines 743--743
 \T1/phv/m/sl/14.4 guage\T1/phv/m/n/14.4 ) ([])[], jun-to con her-ramien-tas de orquestación (Dock-er) y [][][]Integración
  []
 
@@ -1461,13 +1750,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [44]
 Package acronym Info: Label `acro:ACID' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
+although it is yet undefined on input line 743.
 Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
+although it is yet undefined on input line 743.
 Package acronym Info: Label `acro:JSONB' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
+although it is yet undefined on input line 743.
 
-Overfull \hbox (3.63577pt too wide) in paragraph at lines 737--737
+Overfull \hbox (3.63577pt too wide) in paragraph at lines 743--743
 \T1/phv/m/n/14.4 com-puestos, con-sul-tas op-ti-mizadas, vis-tas ma-te-ri-al-izadas, trig-gers y pro-
  []
 
@@ -1480,9 +1769,9 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [45]
 Package acronym Info: Label `acro:ORM' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
+although it is yet undefined on input line 743.
 
-Overfull \hbox (25.82315pt too wide) in paragraph at lines 737--737
+Overfull \hbox (25.82315pt too wide) in paragraph at lines 743--743
 []\T1/phv/m/n/14.4 Adicionalmente, Post-greSQL se in-te-gra de for-ma nat-u-ral con SQLAlche-
  []
 
@@ -1494,7 +1783,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [46]
-Overfull \hbox (44.19936pt too wide) in paragraph at lines 737--737
+Overfull \hbox (44.19936pt too wide) in paragraph at lines 743--743
 []\T1/phv/m/n/14.4 Sobre Dock-er se con-struye Dock-er Com-pose, her-ramien-ta de orquestación
  []
 
@@ -1515,7 +1804,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [48]
 Package acronym Info: Label `acro:TTL' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
+although it is yet undefined on input line 743.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1541,102 +1830,102 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [51]
-Overfull \hbox (9.1472pt too wide) in alignment at lines 737--737
+Overfull \hbox (9.1472pt too wide) in alignment at lines 743--743
  [] [] [] 
  []
 
 
-Overfull \hbox (9.1472pt too wide) in alignment at lines 737--737
+Overfull \hbox (9.1472pt too wide) in alignment at lines 743--743
  [] [] [] 
  []
 
 
-Overfull \hbox (9.1472pt too wide) in alignment at lines 737--737
+Overfull \hbox (9.1472pt too wide) in alignment at lines 743--743
  [] [] [] 
  []
 
 
-Overfull \hbox (9.1472pt too wide) in alignment at lines 737--737
+Overfull \hbox (9.1472pt too wide) in alignment at lines 743--743
  [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
 []|\T1/phv/m/n/14.4 Manejo de op-era-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
 []|\T1/phv/m/n/14.4 Experiencia del
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
 []|\T1/phv/m/n/14.4 Respuestas in-medi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
 \T1/phv/m/n/14.4 atas + seguimien-to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
 \T1/phv/m/n/14.4 in-ten-si-vo y tar-eas
  []
 
 
-Underfull \hbox (badness 2617) in paragraph at lines 737--737
+Underfull \hbox (badness 2617) in paragraph at lines 743--743
 []|\T1/phv/m/n/14.4 Puede ago-tar re-cur-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
 []|\T1/phv/m/n/14.4 Optimización me-di-
  []
 
 
-Underfull \hbox (badness 1348) in paragraph at lines 737--737
+Underfull \hbox (badness 1348) in paragraph at lines 743--743
 \T1/phv/m/n/14.4 ante work-ers par-ale-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
 []|\T1/phv/m/n/14.4 Tareas pro-gra-madas
  []
 
 
-Underfull \hbox (badness 6094) in paragraph at lines 737--737
+Underfull \hbox (badness 6094) in paragraph at lines 743--743
 []|\T1/phv/m/n/14.4 Reintentos au-tomáti-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
 []|\T1/phv/m/n/14.4 Altamente con-cur-
  []
 
 
-Underfull \hbox (badness 3078) in paragraph at lines 737--737
+Underfull \hbox (badness 3078) in paragraph at lines 743--743
 []|\T1/phv/m/n/14.4 Estado de pro-ce-sos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
 []|\T1/phv/m/n/14.4 No per-sis-tente, no
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
 []|\T1/phv/m/n/14.4 Persistente, ras-tre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
 []|\T1/phv/m/n/14.4 Arquitectura de-
  []
 
 
-Overfull \hbox (9.1472pt too wide) in alignment at lines 737--737
+Overfull \hbox (9.1472pt too wide) in alignment at lines 743--743
  [] [] [] 
  []
 
@@ -1656,7 +1945,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [53]
-Overfull \hbox (2.26509pt too wide) in paragraph at lines 737--737
+Overfull \hbox (2.26509pt too wide) in paragraph at lines 743--743
 []\T1/phv/m/n/14.4 De man-era com-ple-men-taria, la platafor-ma em-pleará \T1/phv/b/n/14.4 Net-workX \T1/phv/m/n/14.4 para
  []
 
@@ -1668,7 +1957,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [54]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 737.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 743.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -1688,15 +1977,8 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [56]
-Overfull \hbox (7.3363pt too wide) in paragraph at lines 737--737
+Overfull \hbox (7.3363pt too wide) in paragraph at lines 743--743
 \T1/phv/m/n/14.4 plian-do las ca-paci-dades de Git con her-ramien-tas de co-lab-o-ración, gestión
- []
-
-Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
-
-Overfull \hbox (6.62378pt too wide) in paragraph at lines 737--737
-\T1/phv/m/n/14.4 Unifi-ca-do ([][][]Lenguaje de Mod-e-la-do Unifi-ca-do (\T1/phv/m/sl/14.4 Uni-fied Mod-el-ing Lan-guage\T1/phv/m/n/14.4 )
  []
 
 
@@ -1707,11 +1989,17 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [57]
-Package acronym Info: Label `acro:BPMN' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
-Package acronym Info: Label `acro:CASE' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
+Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
+although it is yet undefined on input line 743.
 
+Overfull \hbox (6.62378pt too wide) in paragraph at lines 743--743
+\T1/phv/m/n/14.4 Unifi-ca-do ([][][]Lenguaje de Mod-e-la-do Unifi-ca-do (\T1/phv/m/sl/14.4 Uni-fied Mod-el-ing Lan-guage\T1/phv/m/n/14.4 )
+ []
+
+Package acronym Info: Label `acro:BPMN' newly defined as it shall be overridden
+although it is yet undefined on input line 743.
+Package acronym Info: Label `acro:CASE' newly defined as it shall be overridden
+although it is yet undefined on input line 743.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1721,9 +2009,9 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [58]
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
+although it is yet undefined on input line 743.
 
-Overfull \hbox (9.94241pt too wide) in paragraph at lines 737--737
+Overfull \hbox (9.94241pt too wide) in paragraph at lines 743--743
 []\T1/phv/m/n/14.4 2024[]]. Pytest desta-ca por su sin-taxis clara, ca-paci-dad de parametrización,
  []
 
@@ -1736,7 +2024,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [59]
 Package acronym Info: Label `acro:IDE' newly defined as it shall be overridden
-although it is yet undefined on input line 737.
+although it is yet undefined on input line 743.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1745,7 +2033,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[60]) (./epigraphs/epigraph5.tex) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex) (./epigraphs/epigraph8.tex)) (./conclusions.tex
+[60]) (./epigraphs/epigraph5.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1753,7 +2041,21 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[61]) (./acronyms.tex
+[61]
+Overfull \hbox (2.38121pt too wide) in paragraph at lines 333--333
+[]\T1/phv/m/n/14.4 El sis-tema in-cor-po-rará fun-cional-i-dades que re-spon-den di-rec-ta-mente
+ []
+
+
+Overfull \hbox (1.67755pt too wide) in paragraph at lines 333--333
+\T1/phv/m/n/14.4 ex-plo-rar ru-tas posi-bles, per-mi-tir adapta-ciones por nive-les, per-files o com-
+ []
+
+
+Overfull \hbox (17.33022pt too wide) in paragraph at lines 333--333
+\T1/phv/m/n/14.4 pro-ce-sos fun-cionales, los com-po-nentes prin-ci-pales del sis-tema, los mecan-
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1761,7 +2063,208 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[62
+[62]
+Overfull \hbox (32.27707pt too wide) in paragraph at lines 333--333
+\T1/phv/m/n/14.4 garan-ti-zan-do que cualquier com-bi-nación deriva-da cumpla las re-glas definidas
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[63]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[64]
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/phv/b/n/14.4 Concepto Anál-o-go
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/phv/b/n/14.4 en Plan-i-fi-cación
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 333--333
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/phv/b/n/14.4 Concepto Anál-o-go
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/phv/b/n/14.4 en Plan-i-fi-cación
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 333--333
+ [] [] [] 
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 333--333
+ [] [] [] 
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 333--333
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1635) in paragraph at lines 333--333
+[]|\T1/phv/m/n/14.4 El tron-co común de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/phv/m/n/14.4 conocimien-tos que
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/phv/m/n/14.4 La ru-ta académi-ca
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/phv/m/n/14.4 Característica (Fea-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/phv/m/n/14.4 Unidad cur-ric-u-
+ []
+
+
+Underfull \hbox (badness 1259) in paragraph at lines 333--333
+\T1/phv/m/n/14.4 lar(asignatura, mó-du-
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 333--333
+[]|\T1/phv/m/n/14.4 La unidad fun-cional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/phv/m/n/14.4 Opciones Académi-
+ []
+
+
+Underfull \hbox (badness 4872) in paragraph at lines 333--333
+[]|\T1/phv/m/n/14.4 El con-jun-to de de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/phv/m/n/14.4 ci-siones disponibles
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/phv/m/n/14.4 (op-ta-tivi-dad, elec-
+ []
+
+
+Underfull \hbox (badness 7099) in paragraph at lines 333--333
+\T1/phv/m/n/14.4 tivi-dad, elec-ción de
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 333--333
+ [] [] [] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[65]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[66]
+Overfull \hbox (9.94037pt too wide) in paragraph at lines 333--333
+[]\T1/phv/m/n/14.4 La es-truc-tura del FM mues-tra clara-mente có-mo una asig-natu-ra puede
+ []
+
+
+Overfull \hbox (5.30568pt too wide) in paragraph at lines 333--333
+\T1/phv/m/n/14.4 im-parten según dis-tin-tas líneas, en-fo-ques o lengua-jes de im-ple-mentación
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[67]
+Overfull \hbox (54.80307pt too wide) in paragraph at lines 333--333
+\T1/phv/b/n/17.28 5.1.3 El Rol Du-al de las car-ac-terís-ti-cas (Vari-abil-i-dad Jerárquica) 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[68]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[69]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[70]) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex) (./epigraphs/epigraph8.tex)) (./conclusions.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[71]) (./acronyms.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[72
 
 
 ]
@@ -1776,7 +2279,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[63
+[73
 
 ]
 Overfull \hbox (10.1727pt too wide) in paragraph at lines 29--30
@@ -1795,7 +2298,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[64]) (./glossary.tex
+[74]) (./glossary.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1803,7 +2306,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[65]
+[75]
 
 Package enumitem Warning: Negative labelwidth. This does not make much
 (enumitem)                sense, on input line 5.
@@ -1815,7 +2318,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[66
+[76
 
 ]
 Overfull \hbox (10.2592pt too wide) in paragraph at lines 28--29
@@ -1829,7 +2332,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[67]
+[77]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1837,7 +2340,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[68]
+[78]
 Overfull \hbox (9.00697pt too wide) in paragraph at lines 61--62
 \T1/phv/m/n/14.4 vid-u-al váli-do, re-spetan-do to-das las re-stric-ciones y de-pen-den-cias definidas
  []
@@ -1849,7 +2352,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[69]
+[79]
 Overfull \hbox (5.50732pt too wide) in paragraph at lines 76--77
 \T1/phv/m/n/14.4 Estructura cog-ni-ti-va gen-er-al-iza-da que rep-re-sen-ta un pa-trón de movimien-
  []
@@ -1876,7 +2379,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[70]
+[80]
 Overfull \hbox (2.6131pt too wide) in paragraph at lines 94--95
 \T1/phv/m/n/14.4 Recorrido per-son-al-iza-do de apren-diza-je que un es-tu-di-ante sigue a través
  []
@@ -1888,7 +2391,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[71]
+[81]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1896,7 +2399,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[72]) (./bibliographic_references.tex
+[82]) (./bibliographic_references.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -1904,7 +2407,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[73] (./main.bbl
+[83] (./main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 9--13
 []\T1/phv/m/n/14.4 AcademiaLab.  Línea de pro-duc-tos de soft-
  []
@@ -1936,7 +2439,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[74
+[84
 
 
 ]
@@ -1961,7 +2464,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[75]
+[85]
 Underfull \hbox (badness 1281) in paragraph at lines 125--128
 \T1/phv/m/sl/14.4 la Re-al Academia de Doc-tores. Obtenido de https://www. rade.
  []
@@ -1983,7 +2486,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[76]
+[86]
 Underfull \hbox (badness 1024) in paragraph at lines 179--183
 []\T1/phv/m/n/14.4 Ingeniería de Soft-ware.  Líneas de pro-duc-to soft-ware para acel-
  []
@@ -2000,7 +2503,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[77]
+[87]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -2008,7 +2511,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[78]
+[88]
 Underfull \hbox (badness 2221) in paragraph at lines 331--334
 \T1/phv/m/sl/14.4 Iberoamer-i-cana de Tec-nologías del Apren-diza-je\T1/phv/m/n/14.4 , 14(3):112--120,
  []
@@ -2020,7 +2523,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[79]
+[89]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -2028,7 +2531,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[80]))
+[90]))
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
@@ -2036,27 +2539,27 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[81] (./main.aux)
+[91] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A1FAEF875707823922182EBD07B30154;7724.
+(rerunfilecheck)             Checksum: 43948C9F9631409E25D04E421A0BB7EB;8340.
  ) 
 Here is how much of TeX's memory you used:
- 17041 strings out of 476182
- 269052 string characters out of 5795594
- 1948975 words of memory out of 5000000
- 38423 multiletter control sequences out of 15000+600000
- 600786 words of font info for 78 fonts, out of 8000000 for 9000
+ 39664 strings out of 476182
+ 827651 string characters out of 5795594
+ 1949975 words of memory out of 5000000
+ 60733 multiletter control sequences out of 15000+600000
+ 603676 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,14n,93p,778b,779s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 148i,14n,141p,1624b,2465s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (88 pages, 594326 bytes).
+Output written on main.pdf (98 pages, 620494 bytes).
 PDF statistics:
- 1515 PDF objects out of 1728 (max. 8388607)
- 1336 compressed objects within 14 object streams
- 324 named destinations out of 1000 (max. 500000)
- 291 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1610 PDF objects out of 1728 (max. 8388607)
+ 1418 compressed objects within 15 object streams
+ 354 named destinations out of 1000 (max. 500000)
+ 319 words of extra memory for PDF output out of 10000 (max. 10000000)
 

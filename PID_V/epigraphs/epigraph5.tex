@@ -1,3 +1,339 @@
-\epigraph{Nombre del Epígrafe V}{%
-descripcion de la solucion
+\epigraph{Propuesta de Solución}{
+
+    La solución propuesta consiste en el diseño e implementación de una 
+    plataforma especializada para la gestión de Modelos de Características 
+    (Feature Models, FM) aplicados al dominio curricular. Esta solución 
+    permitirá representar formalmente planes de estudio, definir variabilidad 
+    entre módulos, establecer dependencias, restricciones y rutas formativas 
+    alternativas, así como derivar configuraciones válidas que representen 
+    itinerarios personalizados. En esencia, el sistema habilita una ingeniería 
+    curricular basada en la lógica SPL (Software Product Lines), donde los 
+    planes de estudio se conciben como familias de productos y cada 
+    configuración curricular corresponde a un producto derivado.
+
+    La plataforma abordará todas las fases necesarias para este proceso: 
+    diseño del modelo curricular (equivalente al análisis de dominio), definición 
+    de restricciones y cardinalidades (gestión de variabilidad), 
+    validación automatizada de configuraciones (ensamblaje de productos) y 
+    versionamiento del modelo (gestión de activos). Para ello se implementará 
+    un motor central que permita representar jerarquías de características, 
+    aplicar reglas transversales, procesar requerimientos, exclusiones e 
+    implicaciones, y generar configuraciones consistentes, detectando violaciones 
+    y proponiendo alternativas.
+
+    El sistema incorporará funcionalidades que responden directamente a los 
+    retos del dominio educativo: evitar inconsistencias curriculares, detectar 
+    prerrequisitos no satisfechos, prevenir combinaciones inviables, 
+    explorar rutas posibles, permitir adaptaciones por niveles, perfiles o 
+    competencias y almacenar snapshots versionados que faciliten la evolución 
+    del plan de estudios sin invalidar configuraciones previas. Este enfoque 
+    no se limita a documentar un currículo, sino que lo convierte en un modelo 
+    computable y verificable, habilitando su reutilización y variación controlada.
+
+    Finalmente, este epígrafe describe la arquitectura conceptual, los procesos 
+    funcionales, los componentes principales del sistema, los mecanismos de 
+    validación y generación de configuraciones, así como su flujo integral desde 
+    la definición del modelo hasta la derivación de itinerarios formativos 
+    personalizados. De este modo, se establece una propuesta técnica y 
+    metodológica sólida, capaz de aportar rigor, flexibilidad y trazabilidad 
+    a la gestión curricular.
+
+    \subepigraph{Modelo SPL y su Correspondencia con la Propuesta}{
+
+        La propuesta de solución se alinea conceptualmente con el enfoque de Líneas de Productos de Software (SPL), particularmente con el modelo de doble ciclo de vida (Two-Lifecycle Model), donde se distinguen claramente dos etapas: Ingeniería de Dominio (desarrollo de activos reutilizables) e Ingeniería de Aplicación (derivación de productos específicos a partir de dichos activos). En el contexto curricular, este enfoque permite abstraer el modelo del plan de estudios como un activo general, del cual se pueden derivar múltiples configuraciones personalizadas que responden a perfiles, competencias o rutas formativas diferentes.
+
+        En la fase de Ingeniería de Dominio, el sistema propuesto representa formalmente el Modelo de Características curriculares (FM) mediante estructuras jerárquicas, relaciones cross-tree, cardinalidades y restricciones lógicas. Esta fase captura la comunalidad del dominio educativo (asignaturas, prerrequisitos, módulos obligatorios) y su variabilidad (alternativas, secuencias opcionales, rutas especializadas). Dicho FM constituye la base reutilizable que puede evolucionar mediante versionamiento, manteniendo trazabilidad y preservando consistencia histórica. En términos SPL, este modelo representa el conjunto de “core assets” curriculares.
+
+        En la fase de Ingeniería de Aplicación, el FM se utiliza para derivar configuraciones curriculares válidas, equivalentes a productos dentro de una familia. El sistema interpreta selecciones de características realizadas por el usuario, verifica restricciones, detecta inconsistencias y propone soluciones alternativas. De esta forma, la implementación curricular final (como un itinerario formativo, malla o perfil de especialización) se construye mediante ensamblaje controlado de variabilidad, garantizando que cualquier combinación derivada cumpla las reglas definidas en el modelo base.
+
+        La propuesta incorpora mecanismos que facilitan esta gestión dual: validación automática, versionamiento del modelo, almacenamiento de snapshots, trazabilidad y gestión de restricciones. En consecuencia, la plataforma no actúa únicamente como un repositorio de información académica, sino como una infraestructura que operacionaliza principios SPL en un contexto educativo, permitiendo generar itinerarios formativos parametrizados, reproducibles y verificables. Esta integración del paradigma SPL habilita un proceso sistemático de personalización curricular, manteniendo coherencia, calidad y reutilización estructurada.
+    
+        \subsubepigraph{Justificación del uso de los \ac{FM}}{
+
+            La verdadera potencia del FM radica en que, una vez formalizado, se convierte
+            en un modelo lógico-matemático que define explícitamente el espacio de
+            diseño o el conjunto de configuraciones válidas ($2^n$) que se pueden generar
+            (donde $n$ es el número de características). Esta formalidad permite realizar
+            análisis automatizados esenciales mediante herramientas conocidas como
+            solvers de satisfacibilidad (SAT Solvers) o restricciones, permitiendo la
+            Validación de Consistencia, que se encarga de Determinar si un FM es
+            consistente, es decir, si existe al menos una configuración válida, la
+            Identificación de Características Muertas (Dead Features), la cual permite
+            encotrar las Características que nunca pueden ser seleccionadas debido a la
+            severidad de las restricciones y posibilitan una Configuración Guiada, que
+            asiste al usuario en la selección de opciones para garantizar que el producto
+            final (el Plan de Estudios) sea siempre válido.
+
+            Aunque existen otros modelos de variabilidad (como las tablas de decisión o
+            los diagramas UML de variabilidad), el FM es el formalismo preferido por su
+            simplicidad visual y su potencia analítica. A diferencia de modelos como las
+            tablas, que pueden volverse inmanejables al aumentar el número de
+            características, el FM provee una visión de alto nivel y, simultáneamente, una
+            base lógica binaria robusta para el análisis automatizado de la consistencia (el
+            propósito crucial en la propuesta de solución).
+            
+            En el contexto de la plataforma web propuesta, el Modelo de Características es
+            el artefacto central. El Módulo Frontend tendrá el propósito de funcionar como
+            un Editor Gráfico de Fms, traduciendo la notación visual (árboles y símbolos) a
+            la estructura lógica subyacente. Esto permitirá a los gestores académicos:
+            \begin{enumerate}
+                \item \textbf{Modelar:} Crear y modificar visualmente la estructura curricular (árbol
+                de asignaturas).
+                \item \textbf{Validar:} Enviar el modelo lógico para su análisis, asegurando que no
+                existan inconsistencias (rutas académicas imposibles) en el currículo.
+                \item \textbf{Configurar:} Utilizar el modelo como base para generar planes de
+                estudio válidos, adaptados a perfiles específicos.
+            \end{enumerate}
+        }
+
+        \subsubepigraph{La Analogía Formal Curricular}{
+
+            La aplicación de los Modelos de Características (FM) a la gestión y diseño
+            curricular constituye el principal aporte metodológico de esta investigación.
+            Esta extensión se fundamenta en la premisa de que la variabilidad, concepto
+            central de la Ingeniería de Líneas de Productos de Software (SPL), es
+            intrínseca y necesaria en los Planes de Estudio modernos de la enseñanza
+            superior.
+            
+            Para fundamentar la propuesta, es imprescindible establecer una analogía
+            formal y coherente que permita sustituir los constructos de SPL por sus
+            equivalentes en el dominio educativo, elevando el plan de estudios de un
+            simple documento descriptivo a un activo configurable y analizable:
+
+            \begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
+                \caption{Analogía de conceptos de \ac{SPL} en el Dominio Educativo. Fuente: Elaboración propia. \label{tab:analogiaSPLeducacion}}\\
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Concepto de SPL} & \textbf{Concepto Análogo en Planificación Curricular} & \textbf{Justificación} \\
+                \hline
+                \endfirsthead
+                
+                \multicolumn{3}{c}
+	            {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+                
+                \hline
+                \rowcolor[HTML]{CBCEFB} 
+                \textbf{Concepto de SPL} & \textbf{Concepto Análogo en Planificación Curricular} & \textbf{Justificación} \\
+                \hline
+                \endhead
+                
+                \hline
+                \multicolumn{3}{|r|}{{Continúa en la siguiente página}} \\
+                \endfoot
+                
+                \hline
+                \endlastfoot
+                
+                % Cuerpo de la tabla
+                Línea de Productos & Carrera o Área de Estudio & El tronco común de conocimientos que define una familia de perfiles profesionales \\ 
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                Producto Específico & Plan de estudio configuracional & La ruta académica única y válida para un estudiante o perfil de egreso definido \\ 
+                \hline
+                Característica (Feature) & Unidad curricular(asignatura, módulo, tema de estudio) & La unidad funcional mínima que puede ser seleccionada u omitida \\
+                \hline
+                \rowcolor[HTML]{EDEBF1}
+                Característica Raíz & El Currículo Base & La entidad que engloba todos los módulos y asignaturas posibles de la carrera \\
+                \hline
+                Variabilidad & Opciones Académicas & El conjunto de decisiones disponibles (optatividad, electividad, elección de menciones) que permiten personalizar la ruta del estudiante \\
+                \hline
+            \end{longtable}
+
+            Yendo un paso más adelante para evidenciar la aplicabilidad del Modelo de 
+            Características (FM) al dominio curricular, se presenta un ejemplo \ref{fig:fm_data_structures}
+            basado en la asignatura Estructura de Datos I. 
+            El modelo computacional interno, que constituye una estructura formal JSON, 
+            no se presenta aquí de forma literal por motivos de extensión, pero sí se expone 
+            su esquema jerárquico conceptual con el fin ilustrativo y 
+            suficiente para comprender las decisiones de 
+            variabilidad del FM:
+            \begin{figure}[H]
+            \centering
+            \resizebox{\textwidth}{!}{%
+                \begin{forest}
+                    for tree={
+                        draw,
+                        rounded corners,
+                        font=\footnotesize,
+                        node options={align=center},
+                        anchor=north,
+                        parent anchor=south,
+                        l sep=10pt,
+                        s sep=5pt,
+                        edge={-latex}
+                    }
+                    [Estructura de Datos I
+                        [Fundamentos\\y Análisis]
+                        [Estructuras\\Lineales
+                            [Arreglos]
+                            [Listas\\Enlazadas]
+                            [Listas\\Circulares\\(Opc.)]
+                        ]
+                        [Pilas
+                            [Implementación\\(XOR)
+                                [Con\\Arreglos]
+                                [Con\\Listas]
+                            ]
+                        ]
+                        [Colas
+                            [FIFO]
+                            [Prioridad]
+                            [Deque\\(Opc.)]
+                        ]
+                        [Árboles\\Binarios]
+                        [Algoritmos\\Ordenamiento]
+                        [Lenguaje\\(XOR)
+                            [C/C++]
+                            [Java]
+                            [Python]
+                        ]
+                    ]
+                    \end{forest}%
+            }
+            \caption{Representación simplificada del \ac{FM} de la asignatura Estructura de Datos I.}
+            \label{fig:fm_data_structures}
+            \end{figure}
+
+            Este caso permite demostrar cómo un curso académico, lejos de ser un 
+            listado estático de contenidos, posee una estructura jerárquica, 
+            elementos obligatorios y opcionales, variabilidad controlada, 
+            dependencias de prerrequisitos y restricciones internas; todas 
+            ellas propiedades capturables dentro de un FM formal.
+
+            El modelo mostrado constituye una representación declarativa de la asignatura, 
+            estructurada como un árbol donde la característica raíz corresponde al curso 
+            completo y las características hijas representan módulos, temas o decisiones 
+            didácticas. Esta representación no solo captura los contenidos, sino que los 
+            organiza con semántica formal, permitiendo análisis automatizable. El ejemplo 
+            ilustra distintos tipos de variabilidad presentes en currículos reales:
+            contenidos obligatorios (módulos troncales), opcionales (tópicos avanzados), 
+            alternativas mutuamente excluyentes (implementación de pilas), configuraciones 
+            tipo OR (técnicas complementarias) y variantes dependientes 
+            (manejo de memoria solo si la implementación se realiza en C/C++).
+
+            La estructura del FM muestra claramente cómo una asignatura puede contener 
+            subniveles jerárquicos complejos, donde cada nivel constituye un subconjunto 
+            configurable. Esto permite modelar asignaturas que se imparten según distintas 
+            líneas, enfoques o lenguajes de implementación (C/C++, Java, Python), conservando 
+            la validez curricular y evitando inconsistencias.
+
+            La variabilidad no solo define qué temas se abordan, sino cómo se implementan, 
+            qué carga cognitiva poseen y qué prerrequisitos deben cumplirse. La presencia de 
+            relaciones requires, restricciones lógicas e implicaciones capturan dependencias 
+            reales, tales como: para comprender árboles es necesario estudiar recursión, o 
+            bien optar por C/C++ implica la posibilidad de manejo manual de memoria. 
+            Esta lógica curricular, que en los planes tradicionales queda implícita o 
+            depende de interpretación docente, aquí se vuelve explícita, formal y verificable.
+
+            De este modo, la asignatura deja de ser un documento textual estático para 
+            convertirse en un componente configurable. El FM presenta la asignatura como un 
+            micro-espacio de variabilidad curricular, análogo a un “producto configurable” 
+            dentro de una línea de productos académicos. Diferentes configuraciones del FM 
+            representan distintas adaptaciones válidas de la asignatura según perfiles de 
+            estudiante, competencias, niveles de profundidad o enfoques pedagógicos. 
+            Este modelo puede procesarse mediante un motor lógico para verificar su 
+            consistencia, detectar características inaccesibles (dead features) y generar 
+            configuraciones válidas automáticamente.
+
+            Este ejemplo demuestra que los Modelos de Características no solo son adecuados 
+            para representar planes de estudios completos, sino también para modelar unidades 
+            académicas individuales con variabilidad interna. Esto abre la puerta a una 
+            flexibilidad curricular controlada, verificable y sustentada en formalismos 
+            computacionales, alineándose con los principios de Ingeniería de Líneas de 
+            Productos aplicados a la planificación educativa.
+
+        }
+
+        \subsubepigraph{El Rol Dual de las características (Variabilidad Jerárquica)}{
+
+            Un aspecto clave a formalizar es que la variabilidad no solo ocurre a nivel
+            macro (entre asignaturas), sino también a nivel micro. Un ejemplo de esto, es
+            que una Asignatura actúa como una Característica dentro del árbol curricular
+            global. No obstante, dado que los planes modernos permiten la modularidad y
+            la especialización temática, una Asignatura también puede ser concebida como
+            un Producto Específico que contiene su propia variabilidad interna:
+            \begin{itemize}
+                \item Nivel 1 (Macro): La Característica "Programación Web" las sub-características "Frontend" (Obligatoria) y
+                \item Nivel 2 (Micro): La Asignatura puede tener "Backend" (Opcional). "Backend" (que es una Característica) puede a su vez ser la Característica Raíz de un sub-FM que modela sus propios temas internos (Ej: OR "Tema: Django" OR "Tema: Spring Boot").
+            \end{itemize}
+            Esta variabilidad jerárquica permite a los gestores modelar con precisión la
+            complejidad de los currículos, desde la estructura de la carrera hasta el
+            desglose temático interno de cada unidad de estudio.
+        }
+
+        \subsubepigraph{Importancia Estratégica y Propósito en la Solución}{
+
+            El uso de los FMs en la planificación curricular no es solo un ejercicio de
+            modelado, sino una ventaja estratégica que permite pasar de la descripción a la
+            comprobación formal del currículo. El propósito del FM en la solución
+            informática propuesta es doble:
+            \begin{itemize}
+                \item Estructura de Datos Central: El FM (codificado en un formato lógico como un árbol JSON) sirve como el modelo de datos maestro del currículo.
+                \item Base para el Análisis de Consistencia: La formalidad lógica del FM permite que un motor de análisis (\ac{SAT} Solver), verifique automáticamente si el plan de estudios modelado contiene inconsistencias (Ej: ciclos de prerrequisitos o restricciones de exclusión que hagan imposible la selección de la Característica Raíz).
+            \end{itemize}
+
+        }
+
+    }
+
+    \subepigraph{Componentes funcionales del sistema}{
+        la arquitectura del motor de validación propuesta contempla la 
+        separación funcional de tres componentes fundamentales, cada uno 
+        respaldado por estrategias tecnológicas que optimizan su ejecución:
+        \begin{enumerate}
+            \item \textbf{Validador Lógico (SAT/SMT Solver):} Responsable de verificar la consistencia 
+            global de las decisiones tomadas sobre un FM, incluyendo restricciones 
+            booleanas, cardinalidades, relaciones cross-tree y condiciones derivadas. 
+            Para esta capa, los enfoques basados en satisfacibilidad (SAT) o 
+            satisfacibilidad modulo teorías (SMT) resultan adecuados, dada su 
+            capacidad para manejar espacios combinatorios extensos y resolver 
+            expresiones complejas con garantías formales. Motores como MiniSAT, Z3 y 
+            PySAT han sido ampliamente utilizados en validación de líneas de 
+            productos por su eficiencia y soporte para expresiones simbólicas 
+            extensas \citep{benavides2010automated}. Estos mecanismos interactúan con 
+            la representación del FM expresada en forma canónica (CNF o DNF), 
+            resolviendo satisfacibilidad de manera robusta y escalable.
+
+            \item \textbf{Generador de Configuraciones (Heurístico / Buscador Guiado):}
+            Este componente se encarga de construir configuraciones válidas a partir 
+            del modelo, ya sea para derivar productos académicos completos o proponer 
+            alternativas viables ante decisiones parciales proporcionadas por el 
+            usuario. Técnicas heurísticas como algoritmos genéticos, búsqueda local o 
+            beam search permiten explorar eficientemente espacios grandes sin necesidad 
+            de evaluar exhaustivamente todas las combinaciones posibles. Asimismo, el 
+            generador puede interactuar con el solver formal: una configuración 
+            preliminar producida heurísticamente puede validarse posteriormente 
+            mediante SAT/SMT, combinando rapidez exploratoria con corrección lógica.
+
+            \item \textbf{Analizador Estructural (Estructuras de Grafo y Optimización):}
+            Encargado de inspeccionar propiedades internas del FM que no dependen únicamente 
+            de restricciones lógicas sino de la topología del modelo. Entre estas 
+            tareas se incluyen: detección de características inaccesibles 
+            (dead features), redundancias, relaciones implícitas, dependencias 
+            transitivas, componentes fuertemente conexas y métricas de impacto. 
+            Tecnologías como NetworkX, junto con algoritmos clásicos de teoría de 
+            grafos (DFS, análisis de caminos, SCC), permiten instrumentar estas 
+            verificaciones de manera sistemática y automatizada. Este componente 
+            resulta indispensable para garantizar la mantenibilidad, comprensibilidad 
+            y calidad del FM antes incluso de intentar su configuración.
+
+        \end{enumerate}
+
+        La combinación de estos tres componentes—validador lógico, 
+        generador de configuraciones y analizador estructural—no solo 
+        proporciona robustez técnica sino que habilita una plataforma capaz de 
+        realizar tareas avanzadas como diagnóstico de inconsistencias, 
+        reconfiguración asistida, detección de errores de modelado, proposición 
+        de alternativas válidas y verificación formal de rutas académicas. 
+        Esta integración híbrida responde adecuadamente al carácter 
+        combinatorial del problema, aprovechando solvers exactos cuando la 
+        formalidad es crítica y enfoques heurísticos cuando la exploración 
+        requiere eficiencia y adaptabilidad.
+    }
 }
+
+
+hablaremos en un sub epigrafe con el siguiente tema:
+Arquitectura conceptual de la propuesta
+Patrones de diseños
+Estandares de códigos
