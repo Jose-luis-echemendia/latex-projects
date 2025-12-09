@@ -35,9 +35,6 @@
 \usepackage[edges]{forest}
 \usepackage{array}
 
-% Librerías TikZ para diagramas
-\usetikzlibrary{shapes,fit,calc,shadows.blur}
-
 % ----------------------------------------------------------
 % 📄 Márgenes y formato global
 % ----------------------------------------------------------
