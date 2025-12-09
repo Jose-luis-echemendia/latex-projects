@@ -149,72 +149,110 @@
             variabilidad del FM:
             \begin{figure}[H]
             \centering
-
-            % ==== Estilos FM ====
-            \tikzset{
-                optional/.style={circle, draw, inner sep=1.2pt, fill=white},
-                mandatory/.style={circle, draw, inner sep=1.2pt, fill=black},
-                xor arc/.style={draw, thick},
-            }
-
             \resizebox{\textwidth}{!}{%
-            \begin{forest}
-            for tree={
-                draw,
-                rounded corners,
-                font=\footnotesize,
-                node options={align=center},
-                anchor=north,
-                parent anchor=south,
-                l sep=12pt,
-                s sep=7pt,
-                edge={-latex}
-            }
-
-            [Estructura de Datos I
-                % ======================================================
-                [Fundamentos\\y Análisis, label={below:{\tikz\node[mandatory]{};}}]
-                
-                % ======================================================
-                [Estructuras\\Lineales
-                    [Arreglos, label={below:{\tikz\node[mandatory]{};}}]
-                    [Listas\\Enlazadas, label={below:{\tikz\node[mandatory]{};}}]
-                    [Listas\\Circulares, label={below:{\tikz\node[optional]{};}}]
-                ]
-                
-                % ======================================================
-                [Pilas, name=pilas
-                    [Implementación
-                        [Con\\Arreglos, name=pilas-arr]
-                        [Con\\Listas, name=pilas-list]
+                \tikzset{
+                    rootstyle/.style={
+                        fill=blue!20,
+                        draw=blue!60,
+                        thick,
+                        font=\bfseries\footnotesize
+                    },
+                    branchstyle/.style={
+                        fill=green!15,
+                        draw=green!50,
+                        thick
+                    },
+                    leafstyle/.style={
+                        fill=yellow!15,
+                        draw=orange!50,
+                        thick
+                    },
+                    optionalstyle/.style={
+                        fill=gray!10,
+                        draw=gray!40,
+                        dashed
+                    },
+                    xorstyle/.style={
+                        fill=red!10,
+                        draw=red!50,
+                        thick
+                    },
+                    mandatory/.style={circle, fill=black, minimum size=4pt, inner sep=0pt},
+                    optional/.style={circle, draw=black, fill=white, minimum size=4pt, inner sep=0pt},
+                    edge label/.style={font=\tiny, inner sep=1pt}
+                }
+                \begin{forest}
+                    for tree={
+                        draw,
+                        rounded corners,
+                        font=\footnotesize,
+                        node options={align=center},
+                        anchor=north,
+                        parent anchor=south,
+                        l sep=18pt,
+                        s sep=15pt,
+                        edge={thick},
+                        grow=0,
+                        child anchor=west,
+                        parent anchor=east,
+                        minimum width=2.5cm,
+                        minimum height=0.8cm,
+                        drop shadow
+                    }
+                    [Estructura de Datos I, rootstyle
+                        [Fundamentos y Análisis, branchstyle, 
+                            edge label={node[midway, mandatory]{}}
+                        ]
+                        [Estructuras Lineales, branchstyle,
+                            edge label={node[midway, mandatory]{}}
+                            [Arreglos, leafstyle,
+                                edge label={node[midway, mandatory]{}}
+                            ]
+                            [Listas Enlazadas, leafstyle,
+                                edge label={node[midway, mandatory]{}}
+                            ]
+                            [Listas Circulares, optionalstyle,
+                                edge label={node[midway, optional]{}}
+                            ]
+                        ]
+                        [Pilas, branchstyle,
+                            edge label={node[midway, mandatory]{}}
+                            [Implementación, xorstyle,
+                                edge label={node[midway, mandatory]{}}
+                                [Con Arreglos, leafstyle, name=pilas-arr]
+                                [Con Listas, leafstyle, name=pilas-list]
+                            ]
+                        ]
+                        [Colas, branchstyle,
+                            edge label={node[midway, mandatory]{}}
+                            [FIFO, leafstyle,
+                                edge label={node[midway, mandatory]{}}
+                            ]
+                            [Prioridad, leafstyle,
+                                edge label={node[midway, mandatory]{}}
+                            ]
+                            [Deque, optionalstyle,
+                                edge label={node[midway, optional]{}}
+                            ]
+                        ]
+                        [Árboles Binarios, branchstyle,
+                            edge label={node[midway, mandatory]{}}
+                        ]
+                        [Algoritmos Ordenamiento, branchstyle,
+                            edge label={node[midway, mandatory]{}}
+                        ]
                     ]
-                ]
-                
-                % ======================================================
-                [Colas
-                    [FIFO, label={below:{\tikz\node[mandatory]{};}}]
-                    [Prioridad, label={below:{\tikz\node[mandatory]{};}}]
-                    [Deque, label={below:{\tikz\node[optional]{};}}]
-                ]
-                
-                % ======================================================
-                [Árboles\\Binarios, label={below:{\tikz\node[mandatory]{};}}]
-                
-                % ======================================================
-                [Algoritmos\\Ordenamiento, label={below:{\tikz\node[mandatory]{};}}]
-                
-            ]
-            % Arcos XOR dibujados después del árbol
-            \draw[xor arc] (pilas-arr.south) ++(0,-3pt) arc[start angle=180, end angle=0, radius=15pt];
-            \draw[xor arc] (lang-c.south) ++(0,-3pt) arc[start angle=180, end angle=0, radius=30pt];
-            \end{forest}%
-            } % end resize
-
-            \caption{Representación simplificada del \ac{FM} de la asignatura Estructura de Datos I.}
+                    % Arco XOR para Pilas - estilo estándar FM
+                    \draw[thick, red] 
+                        ([xshift=8pt]pilas-arr.east) 
+                        arc[start angle=90, end angle=-90, radius=12pt]
+                        ([xshift=8pt]pilas-list.east);
+                    \node[font=\tiny, red] at ([xshift=22pt]$(pilas-arr.east)!0.5!(pilas-list.east)$) {XOR};
+                    \end{forest}%
+            }
+            \caption{Representación simplificada del \ac{FM} de la asignatura Estructura de Datos I. Fuente: elaboración propia.}
             \label{fig:fm_data_structures}
             \end{figure}
-
-
 
             Este caso permite demostrar cómo un curso académico, lejos de ser un 
             listado estático de contenidos, posee una estructura jerárquica, 
@@ -298,7 +336,61 @@
 
     }
 
+    \subepigraph{Arquitectura conceptual}{
+
+        La arquitectura propuesta se fundamenta en un enfoque modular y 
+        basado en componentes, diseñados para soportar la validación, generación y 
+        análisis de configuraciones derivadas del Modelo de Características (FM). 
+        La estructura conceptual integra elementos propios de arquitecturas 
+        estratificadas y de puertos y adaptadores, permitiendo la separación 
+        clara entre el núcleo de negocio y los mecanismos de infraestructura. 
+        Esta separación es esencial para preservar consistencia, trazabilidad y 
+        extensibilidad futura, especialmente en entornos donde los modelos 
+        curriculares evolucionan constantemente.
+
+        En un nivel superior, el sistema se organiza en tres capas funcionales: 
+        presentación, aplicación y dominio, mientras que la capa de infraestructura 
+        provee servicios externos que se integran mediante adaptadores. Esta 
+        división permite mantener una clara separación de responsabilidades: la API 
+        expone servicios REST; la lógica de negocio coordina procesos de validación, 
+        generación y análisis; y el dominio encapsula las abstracciones 
+        fundamentales del FM (características, restricciones, configuraciones, 
+        métricas estructurales, entre otras).
+
+        Un elemento central de esta arquitectura lo constituye el subsistema de 
+        validación, el cual implementa un enfoque híbrido combinando métodos 
+        deterministas (SAT/SMT) con técnicas heurísticas (algoritmos genéticos) y 
+        análisis estructural basado en teoría de grafos. Este subsistema se 
+        encapsula dentro de la capa de aplicación y se implementa mediante un 
+        conjunto de componentes especializados: un validador lógico (PySAT/Z3), 
+        un generador de configuraciones y un analizador estructural (NetworkX). 
+        Dichos componentes se exponen mediante interfaces formales, facilitando 
+        la posibilidad de intercambiar estrategias (SAT, SMT, heurísticas) mediante 
+        el patrón Strategy.
+
+        Asimismo, la arquitectura conceptual reserva un papel fundamental a los 
+        puertos y adaptadores, propios de la Arquitectura Hexagonal 
+        (o Clean Architecture). Los puertos definen contratos para interacción 
+        hacia adentro (validador, generador, analizador) y hacia afuera 
+        (repositorios y persistencia). Los adaptadores implementan las dependencias 
+        tecnológicas concretas (PostgreSQL, Redis, MinIO, Z3 Solver, NetworkX, PySAT),
+        permitiendo que el núcleo del sistema permanezca independiente de 
+        decisiones de infraestructura.
+
+        Desde una perspectiva operativa, la arquitectura soporta escenarios como 
+        validación de configuraciones propuestas por usuarios, búsqueda de 
+        configuraciones alternativas, análisis automático de errores, diagnóstico 
+        de inconsistencias internas del FM, y evaluación de impacto estructural. 
+        Adicionalmente, el modelo es extensible a procesos evolutivos del FM, 
+        permitiendo comparar versiones, detectar cambios incompatibles y evaluar 
+        decisiones curriculares en términos de validez y redundancia lógica. 
+        Esta capacidad de evolución controlada es clave para un soporte curricular 
+        robusto y científicamente fundamentado.
+            
+    }
+
     \subepigraph{Componentes funcionales del sistema}{
+
         la arquitectura del motor de validación propuesta contempla la 
         separación funcional de tres componentes fundamentales, cada uno 
         respaldado por estrategias tecnológicas que optimizan su ejecución:
@@ -355,7 +447,6 @@
 
 
     hablaremos en un sub epigrafe con el siguiente tema:
-    Arquitectura conceptual de la propuesta
     Patrones de diseños
     Estandares de códigos
 }

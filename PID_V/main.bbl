@@ -1,0 +1,425 @@
+\begin{thebibliography}{78}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{AcademiaLab}()]{academialab_linea_productos}
+{AcademiaLab}.
+\newblock Línea de productos de software.
+\newblock URL \url{https://academia-lab.com/enciclopedia/linea-de-productos-de-software/}.
+\newblock Recuperado 25 de octubre de 2025.
+
+\bibitem[{Anthology Inc.}(2025)]{blackboard2025overview}
+{Anthology Inc.}
+\newblock Blackboard learn: Plataforma para la enseñanza y el aprendizaje, 2025.
+\newblock URL \url{https://www.anthology.com/blackboard-learn}.
+\newblock Recuperado 25 de octubre de 2025.
+
+\bibitem[Apel et~al.(2013)Apel, Batory, Kästner, and Saake]{apel2013feature}
+S.~Apel, D.~Batory, C.~Kästner, and G.~Saake.
+\newblock \emph{Feature-Oriented Software Product Lines: Concepts and Implementation}.
+\newblock Springer, 2013.
+
+\bibitem[authors(2024)]{poetry2024}
+Poetry authors.
+\newblock Poetry: Python dependency management and packaging.
+\newblock \url{https://python-poetry.org}, 2024.
+\newblock Accessed: 2025-01-10.
+
+\bibitem[Awad(2005)]{awad2005agile_v_traditional}
+Mohamed~A Awad.
+\newblock A comparison between agile and traditional software development methodologies.
+\newblock \emph{University of Western Australia}, 30:\penalty0 1--69, 2005.
+
+\bibitem[Bates(2019)]{bates2019teaching}
+A.~W. Bates.
+\newblock \emph{Teaching in a Digital Age: Guidelines for Designing Teaching and Learning}.
+\newblock Tony Bates Associates Ltd, 2019.
+
+\bibitem[Benavides et~al.(2010{\natexlab{a}})Benavides, Segura, and Ruiz-Cortés]{benavides2010automated}
+D.~Benavides, S.~Segura, and A.~Ruiz-Cortés.
+\newblock Automated analysis of feature models 20 years later: A literature review.
+\newblock \emph{Information Systems}, 35\penalty0 (6):\penalty0 615--636, 2010{\natexlab{a}}.
+
+\bibitem[Benavides et~al.(2005)Benavides, Trinidad, and Ruiz-Cort{\'e}s]{benavides2005Taxonomy}
+David Benavides, Jos{\'e}-Antonio Trinidad, and Antonio Ruiz-Cort{\'e}s.
+\newblock A taxonomy of variability constraints for feature models.
+\newblock In \emph{SPLC}, pages 99--108. Springer, 2005.
+
+\bibitem[Benavides et~al.(2010{\natexlab{b}})Benavides, Segura, and Ruiz-Cort{\'e}s]{benavides2010PrinciplesFM}
+David Benavides, Sergio Segura, and Antonio Ruiz-Cort{\'e}s.
+\newblock Principles of feature modeling.
+\newblock In \emph{Proceedings of the 7th International Conference on Software Product Lines (SPLC)}, pages 13--22. Springer, 2010{\natexlab{b}}.
+
+\bibitem[Benavides et~al.(2010{\natexlab{c}})Benavides, Segura, and Ruiz-Cort{\'{e}}s]{benavides2010a}
+David Benavides, Sergio Segura, and Antonio Ruiz-Cort{\'{e}}s.
+\newblock Automated analysis of feature models 20 years later: A literature review.
+\newblock In \emph{Information Systems}, volume~35, pages 615--636, 2010{\natexlab{c}}.
+\newblock \doi{10.1016/j.is.2010.01.001}.
+
+\bibitem[Boettiger(2015)]{boettiger2015introduction}
+Carl Boettiger.
+\newblock An introduction to docker for reproducible research.
+\newblock \emph{ACM SIGOPS Operating Systems Review}, 2015.
+
+\bibitem[Carlson(2013)]{carlson2013redis}
+Josiah~L Carlson.
+\newblock \emph{Redis in Action}.
+\newblock Manning, 2013.
+
+\bibitem[{CAST}(2018)]{cast2018udl}
+{CAST}.
+\newblock Universal design for learning guidelines version 2.2, 2018.
+\newblock URL \url{http://udlguidelines.cast.org}.
+
+\bibitem[Chen et~al.(2020)Chen, Babar, and Ali]{chen2020variability}
+L.~Chen, M.~A. Babar, and N.~Ali.
+\newblock Variability management in software product lines: A systematic review.
+\newblock \emph{ACM Computing Surveys}, 53\penalty0 (4):\penalty0 1--45, 2020.
+
+\bibitem[Corporation(2025{\natexlab{a}})]{vscode2025}
+Microsoft Corporation.
+\newblock Visual studio code.
+\newblock \url{https://code.visualstudio.com/}, 2025{\natexlab{a}}.
+\newblock Editor de código fuente multiplataforma, abierto y extensible. Accedido: 2025-12-08.
+
+\bibitem[Corporation(2025{\natexlab{b}})]{vscode_docs2025}
+Microsoft Corporation.
+\newblock Visual studio code documentation.
+\newblock \url{https://code.visualstudio.com/Docs}, 2025{\natexlab{b}}.
+\newblock Documentación oficial. Accedido: 2025-12-08.
+
+\bibitem[De~Moura and Bj{\o}rner(2008)]{z3_2008}
+Leonardo De~Moura and Nikolaj Bj{\o}rner.
+\newblock {Z3}: An efficient {SMT} solver.
+\newblock In \emph{TACAS 2008 - Tools and Algorithms for the Construction and Analysis of Systems}. Springer, 2008.
+\newblock \doi{10.1007/978-3-540-78800-3_24}.
+
+\bibitem[{Ellucian Company}(2015)]{ellucian2015b_banner}
+{Ellucian Company}.
+\newblock Banner de ellucian. características generales, 2015.
+
+\bibitem[Estrada~Perea()]{estrada_metamodelo_repo}
+B.~M. Estrada~Perea.
+\newblock Definición de un metamodelo basado en usabilidad y conocimiento pedagógico para el diseño de aplicaciones de software educativo.
+\newblock Repositorio Institucional UNAL.
+
+\bibitem[Estrada~Perea and Giraldo(2022)]{estrada2022metamodelo}
+B.~M. Estrada~Perea and G.~L. Giraldo.
+\newblock Definición de un meta-modelo para el diseño de aplicaciones de software educativo basado en usabilidad y conocimiento pedagógico.
+\newblock \emph{Información Tecnológica}, 33\penalty0 (5), 2022.
+\newblock \doi{10.4067/S0718-07642022000500035}.
+
+\bibitem[Eugene and Anderson(2023)]{eugene2023fastapi}
+Michael Eugene and Robert Anderson.
+\newblock Fastapi framework performance analysis for microservices.
+\newblock \emph{International Journal of Computer Applications}, 2023.
+
+\bibitem[Gamma et~al.(1995)Gamma, Helm, Johnson, and Vlissides]{gamma1995Frameworks}
+Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
+\newblock \emph{Design Patterns: Elements of Reusable Object-Oriented Software}.
+\newblock Addison-Wesley, 1995.
+\newblock ISBN 978-0201633610.
+
+\bibitem[{GeeksforGeeks}()]{gfg_feature_engineering}
+{GeeksforGeeks}.
+\newblock What is feature engineering?
+\newblock URL \url{https://www.geeksforgeeks.org/machine-learning/what-is-feature-engineering/}.
+
+\bibitem[Ghodke and Chavan(2024)]{ghodke2024git}
+G.~M. Ghodke and T.~Chavan.
+\newblock An overview of git.
+\newblock \emph{International Journal of Scientific Research in Modern Science and Technology}, 3\penalty0 (6):\penalty0 17--23, 2024.
+
+\bibitem[G{\'o}mez(2023)]{gomez2023}
+YA~G{\'o}mez.
+\newblock Innovaci{\'o}n educativa y gesti{\'o}n curricular.
+\newblock \emph{Anales de la Real Academia de Doctores. Obtenido de https://www. rade. es/imageslib/PUBLICACIONES/ARTICULOS/V8N3}, 2, 2023.
+
+\bibitem[Guzmán-Luján et~al.(2022)Guzmán-Luján, Delgado-Velasco, and Amador-Rodezno]{guzman2022variabilidad}
+J.~F. Guzmán-Luján, J.~A. Delgado-Velasco, and R.~Amador-Rodezno.
+\newblock Modelado de la variabilidad en foros de discusión para sistemas adaptativos educativos.
+\newblock \emph{Revista Iberoamericana de Tecnologías del Aprendizaje}, 17\penalty0 (1):\penalty0 45--53, 2022.
+
+\bibitem[Hagberg et~al.(2008)Hagberg, Schult, and Swart]{hagberg2008networkx}
+Aric~A Hagberg, Daniel~A Schult, and Pieter~J Swart.
+\newblock Exploring network structure, dynamics, and function using networkx.
+\newblock \emph{SC}, 2008.
+
+\bibitem[Hattie(2009)]{hattie2009visible}
+J.~Hattie.
+\newblock \emph{Visible Learning: A Synthesis of Over 800 Meta-Analyses Relating to Achievement}.
+\newblock Routledge, 2009.
+
+\bibitem[Hernández and Rojas(2019)]{hernandez2019meta}
+A.~Hernández and E.~Rojas.
+\newblock Modelo de transformación académica (meta): una propuesta para la educación superior.
+\newblock \emph{Revista Iberoamericana de Educación}, 80\penalty0 (1):\penalty0 45--62, 2019.
+
+\bibitem[{IBM Corporation}(2023)]{ibm_IDE}
+{IBM Corporation}.
+\newblock What is an integrated development environment (ide)?, 2023.
+\newblock URL \url{https://www.ibm.com/think/topics/integrated-development-environment}.
+\newblock Accedido: 10 de diciembre de 2025.
+
+\bibitem[{IEEE}(2014)]{ieee_glossary_2014}
+{IEEE}.
+\newblock Ieee standard glossary of software engineering terminology, 2014.
+\newblock IEEE Std 610.12-1990.
+
+\bibitem[Inc.(2024{\natexlab{a}})]{docker2024docs}
+Docker Inc.
+\newblock Docker documentation.
+\newblock \url{https://docs.docker.com/}, 2024{\natexlab{a}}.
+\newblock Accessed: 2025-01-10.
+
+\bibitem[Inc.(2024{\natexlab{b}})]{github2024}
+GitHub Inc.
+\newblock Github documentation.
+\newblock \url{https://docs.github.com}, 2024{\natexlab{b}}.
+\newblock Accessed: 2025-01-10.
+
+\bibitem[Inc.(2024{\natexlab{c}})]{postman2024}
+Postman Inc.
+\newblock Postman api development platform: Documentation.
+\newblock \url{https://learning.postman.com}, 2024{\natexlab{c}}.
+\newblock Accessed: 2025-01-10.
+
+\bibitem[{Ingeniería de Software}()]{ingenieria_software_lps}
+{Ingeniería de Software}.
+\newblock Líneas de producto software para acelerar el desarrollo de aplicaciones relacionadas.
+\newblock URL \url{https://ingenieriadesoftware.es/lineas-producto-software/}.
+\newblock Recuperado 25 de octubre de 2025.
+
+\bibitem[{Instructure}(2025)]{canvas2025overview}
+{Instructure}.
+\newblock Canvas lms: Enseñanza y aprendizaje en cualquier lugar, 2025.
+\newblock URL \url{https://www.instructure.com/canvas}.
+\newblock Recuperado 25 de octubre de 2025.
+
+\bibitem[Kang et~al.(1990)Kang, Cohen, Hess, Novak, and Peterson]{kang1990foda}
+Kyo~C. Kang, Sholom Cohen, James~A. Hess, William~E. Novak, and A.~Spencer Peterson.
+\newblock Feature-oriented domain analysis (foda) feasibility study.
+\newblock Technical Report CMU/SEI-90-TR-21, Software Engineering Institute, Carnegie Mellon University, 1990.
+
+\bibitem[Krekel and contributors(2024)]{pytest2024}
+Holger Krekel and contributors.
+\newblock pytest documentation.
+\newblock \url{https://docs.pytest.org}, 2024.
+\newblock Accessed: 2025-01-10.
+
+\bibitem[Loeliger and McCullough(2012)]{loeliger2012version}
+Jon Loeliger and Matthew McCullough.
+\newblock \emph{Version Control with Git}.
+\newblock O'Reilly, 2012.
+
+\bibitem[Ltd.(2024)]{visualParadigm2024}
+Visual Paradigm~International Ltd.
+\newblock Visual paradigm documentation.
+\newblock \url{https://www.visual-paradigm.com/documentation/}, 2024.
+\newblock Accessed: 2025-01-10.
+
+\bibitem[Lutz(2013)]{lutz2013learning}
+Mark Lutz.
+\newblock Learning python.
+\newblock In \emph{O'Reilly Media}. 2013.
+
+\bibitem[Marsh(2024)]{uv2024}
+Charlie Marsh.
+\newblock Uv: Extremely fast python package installer.
+\newblock \url{https://github.com/astral-sh/uv}, 2024.
+\newblock Accessed: 2025-01-10.
+
+\bibitem[Mendonca and Wasowski(2009)]{mendonca2009SAT}
+M~Mendonca and A~Wasowski.
+\newblock Sat-based analysis of feature models is easy.
+\newblock In \emph{SPLC}, pages 231--240. ACM, 2009.
+
+\bibitem[Meurer(2017)]{meurer2017sympy}
+Aaron et~al. Meurer.
+\newblock Sympy: symbolic computing in python.
+\newblock \emph{PeerJ Computer Science}, 2017.
+
+\bibitem[Mishra and Koehler(2006)]{mishra2006tpack}
+P.~Mishra and M.~J. Koehler.
+\newblock Technological pedagogical content knowledge: A framework for teacher knowledge.
+\newblock \emph{Teachers College Record}, 108\penalty0 (6):\penalty0 1017--1054, 2006.
+
+\bibitem[Momjian(2001)]{momjian2001postgresql}
+Bruce Momjian.
+\newblock \emph{PostgreSQL: Introduction and Concepts}.
+\newblock Addison-Wesley, 2001.
+
+\bibitem[{Moodle Project}(2025)]{moodle2025overview}
+{Moodle Project}.
+\newblock ¿qué es moodle? visión general de la plataforma, 2025.
+\newblock URL \url{https://moodle.com/es/what-is-moodle/}.
+\newblock Recuperado 25 de octubre de 2025.
+
+\bibitem[Obj(2017)]{omg2017}
+\emph{Unified Modeling Language (UML) Specification}.
+\newblock Object Management Group, 2017.
+\newblock URL \url{https://www.omg.org/spec/UML}.
+\newblock Accedido: 10 de diciembre de 2025.
+
+\bibitem[Pacienzia(2015)]{pacienzia2015metodologias}
+J.~Pacienzia.
+\newblock \emph{Metodologías de desarrollo de software}.
+\newblock UCA, 2015.
+
+\bibitem[Pesce(2021)]{pesce2021benchmark}
+Luigi Pesce.
+\newblock Performance benchmarking of python web frameworks.
+\newblock \emph{Journal of Systems and Software}, 2021.
+
+\bibitem[Pohl et~al.(2005)Pohl, Böckle, and van~der Linden]{pohl2005software}
+K.~Pohl, G.~Böckle, and F.~J. van~der Linden.
+\newblock \emph{Software Product Line Engineering: Foundations, Principles and Techniques}.
+\newblock Springer, 2005.
+
+\bibitem[Ponuthorai and Loeliger(2022)]{ponuthorai2022git}
+P.~K. Ponuthorai and J.~Loeliger.
+\newblock \emph{Version Control with Git}.
+\newblock O’Reilly Media, 2022.
+
+\bibitem[{PostgreSQL Global Development Group}(2024)]{postgres2024}
+{PostgreSQL Global Development Group}.
+\newblock Postgresql official documentation.
+\newblock \url{https://www.postgresql.org/docs/}, 2024.
+\newblock Accessed: 2025-01-10.
+
+\bibitem[Pressman(2014)]{pressman2014se}
+R.~S. Pressman.
+\newblock \emph{Software Engineering: A Practitioner's Approach}.
+\newblock McGraw-Hill Education, 8 edition, 2014.
+
+\bibitem[Project(2024)]{celery2024docs}
+Celery Project.
+\newblock Celery distributed task queue documentation.
+\newblock \url{https://docs.celeryq.dev}, 2024.
+\newblock Accessed: 2025-01-10.
+
+\bibitem[{PTC}(2025)]{ptc_feature_models}
+{PTC}.
+\newblock Feature models and features: What are they, 2025.
+\newblock URL \url{https://www.ptc.com/en/blogs/alm/modelling-features}.
+\newblock Recuperado 25 de octubre de 2025.
+
+\bibitem[{pure-systems GmbH}(2024)]{purevariants2024overview}
+{pure-systems GmbH}.
+\newblock pure::variants product overview, 2024.
+\newblock URL \url{https://www.pure-systems.com/en/products/purevariants}.
+\newblock Recuperado 25 de octubre de 2025.
+
+\bibitem[Ramel(2021)]{ramel2021VSCodePopularity}
+David Ramel.
+\newblock New open source index: Vs code is no. 1 code editor.
+\newblock \emph{Visual Studio Magazine}, 2021.
+
+\bibitem[Ram{\'\i}rez(2019)]{ramirez2019fastapi}
+Sebasti{\'a}n Ram{\'\i}rez.
+\newblock Fastapi: Modern, fast (high-performance) web framework for building apis with python 3.6+.
+\newblock \url{https://fastapi.tiangolo.com}, 2019.
+\newblock Accessed: 2025-01-10.
+
+\bibitem[Raviv et~al.(2022)Raviv, Lupyan, and Green]{raviv2022variability}
+L.~Raviv, G.~Lupyan, and S.~C. Green.
+\newblock How variability shapes learning and generalization.
+\newblock \emph{Trends in Cognitive Sciences}, 26\penalty0 (6):\penalty0 462--483, 2022.
+
+\bibitem[Ray et~al.(2014)Ray, Posnett, Filkov, and Devanbu]{ray2014large}
+Baishakhi Ray, Daryl Posnett, Vladimir Filkov, and Premkumar Devanbu.
+\newblock A large-scale study of programming languages and code quality in github.
+\newblock \emph{Communications of the ACM}, 2014.
+
+\bibitem[Richards(2015)]{richards2015software}
+M.~Richards.
+\newblock \emph{Software Architecture Patterns}.
+\newblock O'Reilly Media, 2015.
+
+\bibitem[Rodríguez et~al.(2019)Rodríguez, Vizcaíno, and Piattini]{rodriguez2019gestion_curricular}
+P.~Rodríguez, A.~Vizcaíno, and M.~Piattini.
+\newblock Herramientas de gestión curricular: Una evaluación de la situación actual.
+\newblock \emph{IEEE Revista Iberoamericana de Tecnologías del Aprendizaje}, 14\penalty0 (3):\penalty0 112--120, 2019.
+
+\bibitem[Rose and Strangman(2007)]{rose2007udl}
+D.~H. Rose and N.~Strangman.
+\newblock Universal design for learning: Meeting the challenge of individual learning differences through a neurocognitive perspective.
+\newblock \emph{Universal Access in the Information Society}, 5\penalty0 (4):\penalty0 381--391, 2007.
+
+\bibitem[Rumbaugh et~al.(2004)Rumbaugh, Jacobson, and Booch]{rumbaugh2004uml}
+James Rumbaugh, Ivar Jacobson, and Grady Booch.
+\newblock \emph{Unified Modeling Language Reference Manual}.
+\newblock Pearson, 2004.
+
+\bibitem[Schmidt(1975)]{schmidt1975schema}
+R.~A. Schmidt.
+\newblock A schema theory of discrete motor skill learning.
+\newblock \emph{Psychological Review}, 82\penalty0 (4):\penalty0 225--260, 1975.
+
+\bibitem[Sebesta(2016)]{sebesta2016}
+Robert~W. Sebesta.
+\newblock \emph{Concepts of Programming Languages}.
+\newblock Pearson, 11 edition, 2016.
+\newblock ISBN 978-0133943023.
+
+\bibitem[{SG Buzz}()]{sgbuzz_lps}
+{SG Buzz}.
+\newblock Líneas de productos de software.
+\newblock URL \url{https://sg.com.mx/revista/34/lineas-productos-software}.
+\newblock Recuperado 25 de octubre de 2025.
+
+\bibitem[Sommerville(2016)]{sommerville2016se}
+I.~Sommerville.
+\newblock \emph{Software Engineering}.
+\newblock Pearson Education, 10 edition, 2016.
+
+\bibitem[Soos et~al.(2020)Soos, Gocht, and et~al.]{soos2020Ganak}
+Mate Soos, Stephan Gocht, and et~al.
+\newblock Ganak: A scalable probabilistic model counter.
+\newblock In \emph{SAT Conference}. Springer, 2020.
+
+\bibitem[Sundermann et~al.(2023)Sundermann, Dörr, Junker, and Kehrer]{sundermann2023sat}
+C.~Sundermann, L.~Dörr, M.~Junker, and T.~Kehrer.
+\newblock Evaluating state-of-the-art \#sat solvers on industrial configuration spaces.
+\newblock \emph{Empirical Software Engineering}, 28\penalty0 (29), 2023.
+
+\bibitem[Sánchez et~al.(2020)Sánchez, Gutiérrez, and Cabrera]{sanchez2020metodologia}
+J.~Sánchez, F.~L. Gutiérrez, and M.~Cabrera.
+\newblock Hacia una metodología para la gestión de la variabilidad en planes de estudio de ingeniería de software.
+\newblock \emph{Journal of Educational Computing Research}, 58\penalty0 (5):\penalty0 1020--1045, 2020.
+
+\bibitem[Thüm et~al.(2014)Thüm, Kästner, Benduhn, Meinicke, Saake, and Leich]{thum2014featureide}
+T.~Thüm, C.~Kästner, F.~Benduhn, J.~Meinicke, G.~Saake, and T.~Leich.
+\newblock Featureide: An extensible framework for feature-oriented software desarrollo.
+\newblock \emph{Science of Computer Programming}, 79:\penalty0 70--85, 2014.
+
+\bibitem[{UNESCO}(2022)]{unesco2022}
+{UNESCO}.
+\newblock \emph{Reimagining our futures together: A new social contract for education}.
+\newblock UNESCO, 2022.
+
+\bibitem[Van~Rossum and Drake(1995)]{van1995python}
+Guido Van~Rossum and Fred~L Drake.
+\newblock \emph{Python Tutorial}.
+\newblock Centrum voor Wiskunde en Informatica (CWI), 1995.
+
+\bibitem[Wang et~al.(2007)Wang, Zhao, and Hu]{wang2007FormalSemanticsFM}
+Hongyu Wang, Lu~Zhao, and Jun Hu.
+\newblock Formal semantics and verification for feature modeling.
+\newblock \emph{Computer Software and Applications Conference (COMPSAC)}, pages 148--155, 2007.
+
+\bibitem[Weinstein(2002)]{weinstein2002liderazgo}
+J.~Weinstein.
+\newblock Liderazgo directivo y gestión de la diversidad.
+\newblock In \emph{Calidad en la educación: Una mirada desde la gestión de la diversidad}, pages 15--42. Ministerio de Educación, 2002.
+
+\bibitem[Zhao et~al.(2018)Zhao, Liffiton, Eijk, Malikov, and Previti]{pysat2018}
+Han Zhao, Michael Liffiton, Patrick Eijk, Alexey Malikov, and Alessandro Previti.
+\newblock {PySAT}: A {Python} toolkit for {SAT}-based prototyping.
+\newblock In \emph{SAT 2018 - 21st International Conference on Theory and Applications of Satisfiability Testing}. Springer, 2018.
+\newblock \doi{10.1007/978-3-319-94144-8_38}.
+
+\end{thebibliography}

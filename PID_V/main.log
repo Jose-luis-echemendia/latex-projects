@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  9 DEC 2025 09:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.27)  9 DEC 2025 10:19
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/jose/Escritorio/latex-projects/PID_V/main.tex
-(/home/jose/Escritorio/latex-projects/PID_V/main.tex
+**main.tex
+(./main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (./template_pid.cls
@@ -30,93 +29,123 @@ File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2024/01/07 v24.1 The Babel package
 \babel@savecnt=\count196
 \U@D=\dimen141
 \l@unhyphenated=\language5
- (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count197
- (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
 Package babel Info: Importing data for spanish
 (babel)             from babel-es.ini. Reported on input line 4318.
 Package babel Info: Hyphen rules for 'spanish' set to \l@english
 (babel)             (\language0). Reported on input line 4318.
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen142
 \Gin@req@width=\dimen143
-) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
- (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
-) (/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
- (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count198
-) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count199
 )
 \@linkdim=\dimen144
 \Hy@linkcounter=\count266
 \Hy@pagecounter=\count267
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count268
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -129,16 +158,20 @@ Package hyperref Info: Backreferencing OFF on input line 4199.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4446.
 \c@Hy@tempcnt=\count269
- (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4784.
 \XeTeXLinkMargin=\dimen145
- (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
 \Fld@menulength=\count270
 \Field@Width=\dimen146
@@ -150,7 +183,8 @@ Package hyperref Info: backreferencing OFF on input line 6078.
 Package hyperref Info: Link coloring OFF on input line 6083.
 Package hyperref Info: Link coloring with OCG OFF on input line 6088.
 Package hyperref Info: PDF/A mode OFF on input line 6093.
- (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -159,25 +193,33 @@ package with kernel methods
 \c@Hfootnote=\count273
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
- (/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
 with kernel methods
 )
 \Fld@listcount=\count274
 \c@bookmark@seq@number=\count275
- (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
 )
 \Hy@SectionHShift=\skip50
-) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count276
@@ -192,8 +234,10 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen154
 \Gm@layoutvoffset=\dimen155
 \Gm@dimlist=\toks20
-) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
 \f@nch@headwidth=\skip51
 \f@nch@O@elh=\skip52
 \f@nch@O@erh=\skip53
@@ -203,7 +247,8 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@erf=\skip57
 \f@nch@O@olf=\skip58
 \f@nch@O@orf=\skip59
-) (/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
 \cftparskip=\skip60
@@ -242,7 +287,8 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforetabskip=\skip91
 \cfttabindent=\skip92
 \cfttabnumwidth=\skip93
-) (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \ttl@box=\box51
 \beforetitleunit=\skip94
@@ -253,9 +299,11 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \titlewidth=\dimen158
 \titlewidthlast=\dimen159
 \titlewidthfirst=\dimen160
-) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen161
 \lightrulewidth=\dimen162
@@ -274,16 +322,19 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count283
 \@lastruleclass=\count284
 \@thisrulewidth=\dimen173
-) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count285
 \float@exts=\toks22
 \float@box=\box52
 \@float@everytoks=\toks23
 \@floatcapt=\box53
-) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen174
 \captionmargin=\dimen175
@@ -299,21 +350,25 @@ Package caption Info: Standard document class detected.
 \c@continuedfloat=\count287
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip96
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
- (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
 \ex@=\dimen182
-)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen183
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count288
@@ -363,41 +418,52 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip99
 \bibsep=\skip100
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count300
-) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2024-01-22 L3 programming layer (loader) 
- (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count301
 \l__pdf_internal_box=\box56
 ))
 Package: xparse 2023-10-10 L3 Experimental document command parser
-) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \xs_counta=\count302
 \xs_countb=\count303
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
-) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
 Package xcolor Info: Model `RGB' extended on input line 1366.
@@ -407,9 +473,11 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
-) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
- (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen191
 \ar@mcellbox=\box57
@@ -422,7 +490,8 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \everycr=\toks30
 \minrowclearance=\skip103
 \rownum=\count304
-) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip104
 \enit@outerparindent=\dimen193
@@ -430,9 +499,11 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box59
 \enit@count@id=\count305
 \enitdp@description=\count306
-) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
-) (/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \CenteringLeftskip=\skip105
 \RaggedLeftLeftskip=\skip106
@@ -448,15 +519,19 @@ Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \RaggedLeftParindent=\skip116
 \RaggedRightParindent=\skip117
 \JustifyingParindent=\skip118
-) (/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
 Package: acronym 2020/04/17 v1.47 Support for acronyms (Tobias Oetiker)
- (/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
 Package: suffix 2006/07/15 1.5a Variant command support
 )
 \AC@clearlist=\toks32
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \LTleft=\skip119
 \LTright=\skip120
@@ -474,24 +549,38 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \c@LT@tables=\count310
 \c@LT@chunks=\count311
 \LT@p@ftn=\toks33
-) (/usr/share/texlive/texmf-dist/tex/latex/forest/forest.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/forest/forest.sty
 Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
- (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks34
 \pgfutil@tempdima=\dimen195
 \pgfutil@tempdimb=\dimen196
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box65
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks35
 \pgfkeys@temptoks=\toks36
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex
 \pgfkeys@tmptoks=\toks37
 ))
 \pgf@x=\dimen197
@@ -518,28 +607,60 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-pdftex.def
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfsyssoftpath@smallbuffer@items=\count317
 \pgfsyssoftpath@bigbuffer@items=\count318
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen263
 \pgfmath@count=\count319
 \pgfmath@box=\box66
 \pgfmath@toks=\toks41
 \pgfmath@stack@operand=\toks42
 \pgfmath@stack@operation=\toks43
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count320
-)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@picminx=\dimen264
 \pgf@picmaxx=\dimen265
@@ -555,75 +676,116 @@ File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@yy=\dimen275
 \pgf@zx=\dimen276
 \pgf@zy=\dimen277
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@path@lastx=\dimen278
 \pgf@path@lasty=\dimen279
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@shorten@end@additional=\dimen280
 \pgf@shorten@start@additional=\dimen281
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box67
 \pgf@hbox=\box68
 \pgf@layerbox@main=\box69
 \pgf@picture@serial@count=\count321
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgflinewidth=\dimen282
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@pt@x=\dimen283
 \pgf@pt@y=\dimen284
 \pgf@pt@temp=\dimen285
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
 File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfarrowsep=\dimen286
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen287
 \pgf@sys@shading@range@num=\count322
 \pgf@shadingcount=\count323
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfexternal@startupbox=\box70
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
 File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
 File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodeparttextbox=\box71
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 \pgf@nodesepstart=\dimen288
 \pgf@nodesepend=\dimen289
-) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen290
 \pgffor@skip=\dimen291
 \pgffor@stack=\toks44
 \pgffor@toks=\toks45
-)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@plot@mark@count=\count324
 \pgfplotmarksize=\dimen292
@@ -644,36 +806,65 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikznumberofchildren=\count326
 \tikznumberofcurrentchild=\count327
 \tikz@fig@count=\count328
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfmatrixcurrentrow=\count329
 \pgfmatrixcurrentcolumn=\count330
 \pgf@matrix@numberofcolumns=\count331
 )
 \tikz@expandcount=\count332
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.geometric.code.tex
 File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.misc.code.tex
 File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.misc.code.tex
 File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.symbols.code.tex
 File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.symbols.code.tex
 File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.arrows.code.tex
 File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.arrows.code.tex
 File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.callouts.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.callouts.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.multipart.code.tex
 File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodepartlowerbox=\box76
 \pgfnodeparttwobox=\box77
@@ -695,23 +886,35 @@ File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodepartsevenbox=\box93
 \pgfnodepartsixbox=\box94
 \pgfnodepartfivebox=\box95
-))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryfit.code.tex
 File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersection
+s.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
 \pgf@intersect@solutions=\count333
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@a@toks=\toks46
 \pgfopts@list@add@b@toks=\toks47
-) (/usr/share/texlive/texmf-dist/tex/latex/elocalloc/elocalloc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/elocalloc/elocalloc.sty
 Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
- (/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-)) (/usr/share/texlive/texmf-dist/tex/latex/inlinedef/inlinedef.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/inlinedef/inlinedef.sty
 Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \ID@toks=\toks48
 \ID@count=\count334
@@ -762,7 +965,8 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \forest@copy@out=\write4
 \forest@externalize@max@outer@n=\count359
 \forest@externalize@inner@n=\count360
-) (/usr/share/texlive/texmf-dist/tex/latex/forest/forest-lib-edges.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/forest/forest-lib-edges.sty
 Package: forest-lib-edges 2016/12/05 v0.1.1
 )
    defining Unicode char U+2248 (decimal 8776)
@@ -771,7 +975,9 @@ Package: forest-lib-edges 2016/12/05 v0.1.1
 \c@subsubepigraph=\count363
 )
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 3.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (./main.aux)
 \openout1 = `main.aux'.
@@ -794,7 +1000,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count364
 \scratchdimen=\dimen307
@@ -809,11 +1016,16 @@ LaTeX Font Info:    ... okay on input line 3.
 \everyMPtoPDFconversion=\toks61
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 Package hyperref Info: Link coloring OFF on input line 3.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -859,7 +1071,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
  (./portada.tex
-<img/uci_logo.png, id=7, 554.07pt x 192.72pt>
+<img/uci_logo.png, id=159, 554.07pt x 192.72pt>
 File: img/uci_logo.png Graphic file (type png)
 <use img/uci_logo.png>
 Package pdftex.def Info: img/uci_logo.png  used on input line 13.
@@ -868,14 +1080,17 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 13.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 13.
- [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./img/uci_logo.png>]) (./summary.tex
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/base/8r.enc} <./img/uci_logo.png>]) (./summary.tex
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 34.
 
 Overfull \hbox (1.67703pt too wide) in paragraph at lines 34--34
-\T1/phv/b/n/14.4 Palabras claves: \T1/phv/m/n/14.4 Mod-e-los Car-ac-terís-ti-cos, Líneas de Pro-duc-tos de Soft-
+\T1/phv/b/n/14.4 Palabras claves: \T1/phv/m/n/14.4 Mod-e-los Car-ac-terís-ti-co
+s, Líneas de Pro-duc-tos de Soft-
  []
 
 
@@ -883,6 +1098,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 17.8423pt, for example:
 (fancyhdr)                \setlength{\headheight}{17.8423pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
 [1
@@ -899,68 +1115,96 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 17.8423pt, for example:
 (fancyhdr)                \setlength{\headheight}{17.8423pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-3.8423pt}.
 
 [2
 
-])
-No file main.toc.
-\tf@toc=\write6
-\openout6 = `main.toc'.
+]) (./main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [3
 
 
-]
-No file main.lot.
+])
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[4] (./main.lot
+Package acronym Info: Label `acro:FM' newly defined as it shall be overridden
+although it is yet undefined on input line 2.
+
+Overfull \hbox (1.09998pt too wide) in paragraph at lines 3--3
+ [][] [][]\T1/phv/m/n/14.4 Comparación, Metodología Ágil VS Metodología Tradi-c
+ional 
+ []
+
+Package acronym Info: Label `acro:SPL' newly defined as it shall be overridden
+although it is yet undefined on input line 7.
+)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
 
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 20.28412pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.28412pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-6.28412pt}.
-
-[4
-
-]
-No file main.lof.
-\tf@lof=\write8
-\openout8 = `main.lof'.
-
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 20.28412pt, for example:
 (fancyhdr)                \setlength{\headheight}{20.28412pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-6.28412pt}.
 
 [5
 
+] (./main.lof)
+\tf@lof=\write8
+\openout8 = `main.lof'.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 20.28412pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.28412pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-6.28412pt}.
+
+[6
+
 ] (./introduction.tex
-
-Package natbib Warning: Citation `unesco2022' on page 1 undefined on input line 7.
-
-
 Overfull \hbox (15.83255pt too wide) in paragraph at lines 3--11
-\T1/phv/m/n/14.4 antes de-man-das del mer-ca-do lab-o-ral ex-i-gen que las in-sti-tu-ciones académi-
+\T1/phv/m/n/14.4 antes de-man-das del mer-ca-do lab-o-ral ex-i-gen que las in-s
+ti-tu-ciones académi-
  []
 
 
-Package natbib Warning: Citation `gomez2023' on page 1 undefined on input line 27.
-
-
 Overfull \hbox (1.83484pt too wide) in paragraph at lines 18--28
-[]\T1/phv/m/n/14.4 La in-no-vación ed-uca-ti-va se re-fiere a la in-tro-duc-ción de nuevas ideas,
+[]\T1/phv/m/n/14.4 La in-no-vación ed-uca-ti-va se re-fiere a la in-tro-duc-ció
+n de nuevas ideas,
  []
 
 
@@ -968,10 +1212,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.28 
@@ -983,18 +1229,9 @@ l.28
 Package acronym Info: Label `acro:TIC' newly defined as it shall be overridden
 although it is yet undefined on input line 35.
 
-
-Package acronym Warning: Acronym `TIC' is not defined on input line 35.
-
-
-Package acronym Warning: Acronym `TIC' is not defined on input line 35.
-
-
-Package natbib Warning: Citation `gomez2023' on page 2 undefined on input line 39.
-
-
 Overfull \hbox (3.41824pt too wide) in paragraph at lines 41--47
-[]\T1/phv/m/n/14.4 En este sen-ti-do, la in-no-vación ed-uca-ti-va y la gestión cur-ric-u-lar deben
+[]\T1/phv/m/n/14.4 En este sen-ti-do, la in-no-vación ed-uca-ti-va y la gestión
+ cur-ric-u-lar deben
  []
 
 
@@ -1002,118 +1239,72 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [2]
-Package acronym Info: Label `acro:SPL' newly defined as it shall be overridden
-although it is yet undefined on input line 61.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 61.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 61.
-
-
-Package natbib Warning: Citation `apel2013feature' on page 3 undefined on input line 63.
-
-
-Package natbib Warning: Citation `guzman2022variabilidad' on page 3 undefined on input line 71.
-
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [3]
 Package acronym Info: Label `acro:MOOC' newly defined as it shall be overridden
+
 although it is yet undefined on input line 87.
 
-
-Package acronym Warning: Acronym `MOOC' is not defined on input line 87.
-
-
-Package acronym Warning: Acronym `MOOC' is not defined on input line 87.
-
-
-Package natbib Warning: Citation `bates2019teaching' on page 4 undefined on input line 89.
-
-
-Package natbib Warning: Citation `sanchez2020metodologia' on page 4 undefined on input line 91.
-
-
-Overfull \hbox (2.09456pt too wide) in paragraph at lines 86--97
-\T1/phv/m/n/14.4 mente, es-ta com-ple-ji-dad se ges-tiona pre-dom-i-nan-te-mente me-di-ante solu-
+Overfull \hbox (4.24748pt too wide) in paragraph at lines 86--97
+\T1/phv/m/n/14.4 en línea, [][][]Curso en Línea Ma-si-vo y Abier-to (\T1/phv/m/
+sl/14.4 Mas-sive Open On-line Course\T1/phv/m/n/14.4 )
  []
 
-Package acronym Info: Label `acro:FM' newly defined as it shall be overridden
-although it is yet undefined on input line 101.
-
-Package acronym Warning: Acronym `FM' is not defined on input line 101.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 101.
-
 Package acronym Info: Label `acro:SPLE' newly defined as it shall be overridden
+
 although it is yet undefined on input line 103.
-
-Package acronym Warning: Acronym `SPLE' is not defined on input line 103.
-
-
-Package acronym Warning: Acronym `SPLE' is not defined on input line 103.
-
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [4]
 
-Package acronym Warning: Acronym `FM' is not defined on input line 113.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 119.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 125.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [5]
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 137.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
+37.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 
-Package acronym Warning: Acronym `SPL' is not defined on input line 142.
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-Package acronym Warning: Acronym `SPL' is not defined on input line 146.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 146.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 152.
-
-) (./development.tex
+[6]) (./development.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[6]
+[7]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 17.
@@ -1124,129 +1315,53 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[7
+[8
 
 ]
 Overfull \hbox (12.7281pt too wide) in paragraph at lines 466--466
-\T1/phv/b/n/17.28 1.1.1 In-ge-niería de Líneas de Pro-duc-tos de Soft-ware (SPL) 
+\T1/phv/b/n/17.28 1.1.1 In-ge-niería de Líneas de Pro-duc-tos de Soft-ware (SPL
+) 
  []
 
 
-Package acronym Warning: Acronym `SPL' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `sgbuzz_lps' on page 8 undefined on input line 466.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `SPLE' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `academialab_linea_productos' on page 8 undefined on input line 466.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[8]
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `ingenieria_software_lps' on page 9 undefined on input line 466.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [9]
-
-Package natbib Warning: Citation `pohl2005software' on page 10 undefined on input line 466.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `ptc_feature_models' on page 10 undefined on input line 466.
-
-
-Package natbib Warning: Citation `kang1990foda' on page 10 undefined on input line 466.
-
-Package acronym Info: Label `acro:FODA' newly defined as it shall be overridden
-although it is yet undefined on input line 466.
-
-Package acronym Warning: Acronym `FODA' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `FODA' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `gfg_feature_engineering' on page 10 undefined on input line 466.
+Overfull \hbox (6.58623pt too wide) in paragraph at lines 466--466
+[]\T1/phv/m/n/14.4 La [][] opera a través de dos pro-ce-sos in-ter-de-pen-di-en
+tes que deben
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [10]
+Package acronym Info: Label `acro:FODA' newly defined as it shall be overridden
 
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
+although it is yet undefined on input line 466.
 
 
-LaTeX Warning: Reference `tab:relaciones_estructurales_FM' on page 11 undefined on input line 466.
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-Package natbib Warning: Citation `pohl2005software' on page 11 undefined on input line 466.
-
-
-Package natbib Warning: Citation `kang1990foda' on page 11 undefined on input line 466.
-
-
-Package natbib Warning: Citation `benavides2010PrinciplesFM' on page 11 undefined on input line 466.
-
-
-Package natbib Warning: Citation `benavides2010automated' on page 11 undefined on input line 466.
-
-
-Package natbib Warning: Citation `wang2007FormalSemanticsFM' on page 11 undefined on input line 466.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 466--466
 []|\T1/phv/b/n/14.4 Implicación en la
  []
@@ -1276,14 +1391,7 @@ Overfull \hbox (9.1472pt too wide) in alignment at lines 466--466
  [] [] [] 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 466.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 466.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+
 Underfull \hbox (badness 10000) in paragraph at lines 466--466
 []|$[] \OMS/cmsy/m/n/14.4 ^
  []
@@ -1345,7 +1453,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 466--466
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 466--466
-[][] \OMS/cmsy/m/n/14.4 :\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 C[] \OMS/cmsy/m/n/14.4 ^ \OML/cmm/m/it/14.4 C[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ^
+[][] \OMS/cmsy/m/n/14.4 :\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 C[] \OMS/cmsy/m/
+n/14.4 ^ \OML/cmm/m/it/14.4 C[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ^
  []
 
 
@@ -1378,194 +1487,58 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[11]
+[12]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[12]
-
-LaTeX Warning: Reference `fig:relaciones_estructurales_FM' on page 13 undefined on input line 466.
-
-<img/feature_models.png, id=132, 618.81187pt x 412.54124pt>
+[13]
+<img/feature_models.png, id=445, 618.81187pt x 412.54124pt>
 File: img/feature_models.png Graphic file (type png)
 <use img/feature_models.png>
 Package pdftex.def Info: img/feature_models.png  used on input line 466.
 (pdftex.def)             Requested size: 455.24411pt x 303.50688pt.
 
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `sundermann2023sat' on page 13 undefined on input line 466.
-
-
-Package natbib Warning: Citation `benavides2005Taxonomy' on page 13 undefined on input line 466.
-
-
-Overfull \hbox (17.2434pt too wide) in paragraph at lines 466--466
-\T1/phv/m/n/14.4 finen de-pen-den-cias en-tre car-ac-terís-ti-cas que no es-tán di-rec-ta-mente conec-
- []
-
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[13 <./img/feature_models.png>]
-
-Package natbib Warning: Citation `sundermann2023sat' on page 14 undefined on input line 466.
-
-
-Package natbib Warning: Citation `benavides2005Taxonomy' on page 14 undefined on input line 466.
-
-
-Package natbib Warning: Citation `sundermann2023sat' on page 14 undefined on input line 466.
-
-
-Package natbib Warning: Citation `benavides2005Taxonomy' on page 14 undefined on input line 466.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
-Overfull \hbox (3.93687pt too wide) in paragraph at lines 466--466
-[]\T1/phv/m/n/14.4 La semán-ti-ca for-mal de un [][] pro-por-ciona un sig-nifi-ca-do matemáti-
- []
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `sundermann2023sat' on page 14 undefined on input line 466.
-
-
-Package natbib Warning: Citation `thum2014featureide' on page 14 undefined on input line 466.
-
+[14 <./img/feature_models.png>]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[14]
-Package acronym Info: Label `acro:SAT' newly defined as it shall be overridden
-although it is yet undefined on input line 466.
-
-
-Package acronym Warning: Acronym `SAT' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `SAT' is not defined on input line 466.
-
-Package acronym Info: Label `acro:SHARPSAT' newly defined as it shall be overridden
-although it is yet undefined on input line 466.
-
-Package acronym Warning: Acronym `SHARPSAT' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `SHARPSAT' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `SAT' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `sundermann2023sat' on page 15 undefined on input line 466.
-
-
-Package natbib Warning: Citation `benavides2010automated' on page 15 undefined on input line 466.
-
-
-Package natbib Warning: Citation `mendonca2009SAT' on page 15 undefined on input line 466.
-
-
-Package acronym Warning: Acronym `SHARPSAT' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `sundermann2023sat' on page 15 undefined on input line 466.
-
-
-Package natbib Warning: Citation `benavides2010automated' on page 15 undefined on input line 466.
-
-
-Package natbib Warning: Citation `mendonca2009SAT' on page 15 undefined on input line 466.
-
-
-Package acronym Warning: Acronym `SAT' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `SHARPSAT' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `sundermann2023sat' on page 15 undefined on input line 466.
-
-
-Package natbib Warning: Citation `soos2020Ganak' on page 15 undefined on input line 466.
-
-
-Overfull \hbox (11.56815pt too wide) in paragraph at lines 466--466
-\T1/phv/m/sl/14.4 solvers\T1/phv/m/n/14.4 ) co-mo sharp-SAT y Ganak, que han de-mostra-do un rendimien-
- []
-
-
-Package natbib Warning: Citation `estrada2022metamodelo' on page 15 undefined on input line 466.
-
-
-Package natbib Warning: Citation `estrada_metamodelo_repo' on page 15 undefined on input line 466.
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [15]
-Package acronym Info: Label `acro:META' newly defined as it shall be overridden
+Package acronym Info: Label `acro:SAT' newly defined as it shall be overridden
+although it is yet undefined on input line 466.
+Package acronym Info: Label `acro:SHARPSAT' newly defined as it shall be overri
+dden
 although it is yet undefined on input line 466.
 
-
-Package acronym Warning: Acronym `META' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `META' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `hernandez2019meta' on page 16 undefined on input line 466.
-
-
-Package natbib Warning: Citation `estrada2022metamodelo' on page 16 undefined on input line 466.
-
-
-Package natbib Warning: Citation `estrada_metamodelo_repo' on page 16 undefined on input line 466.
-
-
-Overfull \hbox (13.85959pt too wide) in paragraph at lines 466--466
-\T1/phv/m/n/14.4 u-lar, ase-gu-ran-do que to-das las con-fig-u-ra-ciones gen-er-adas sean pedagógi-
+Overfull \hbox (20.49066pt too wide) in paragraph at lines 466--466
+\T1/phv/b/sl/14.4 bil-i-ty\T1/phv/b/n/14.4 ) ([])[]) y [][][]Conteo de Mod-e-lo
+s (\T1/phv/b/sl/14.4 Mod-el Count-ing\T1/phv/b/n/14.4 ) ([])[]:
  []
 
 
-Package natbib Warning: Citation `estrada2022metamodelo' on page 16 undefined on input line 466.
-
-
-Overfull \hbox (12.64781pt too wide) in paragraph at lines 466--466
-[]\T1/phv/m/n/14.4 La lit-er-atu-ra plantea que se puede es-truc-turar un meta-modelo alrede-
+Overfull \hbox (11.56815pt too wide) in paragraph at lines 466--466
+\T1/phv/m/sl/14.4 solvers\T1/phv/m/n/14.4 ) co-mo sharp-SAT y Ganak, que han de
+-mostra-do un rendimien-
  []
 
 
@@ -1573,388 +1546,246 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [16]
+Package acronym Info: Label `acro:META' newly defined as it shall be overridden
 
-Package natbib Warning: Citation `rose2007udl' on page 17 undefined on input line 466.
+although it is yet undefined on input line 466.
 
-
-Package natbib Warning: Citation `cast2018udl' on page 17 undefined on input line 466.
-
-
-Overfull \hbox (7.17632pt too wide) in paragraph at lines 466--466
-[]\T1/phv/m/n/14.4 La vari-abil-i-dad es un prin-ci-pio fun-da-men-tal en los pro-ce-sos de apren-
+Overfull \hbox (13.85959pt too wide) in paragraph at lines 466--466
+\T1/phv/m/n/14.4 u-lar, ase-gu-ran-do que to-das las con-fig-u-ra-ciones gen-er
+-adas sean pedagógi-
  []
-
-
-Package natbib Warning: Citation `raviv2022variability' on page 17 undefined on input line 466.
-
-
-Package natbib Warning: Citation `raviv2022variability' on page 17 undefined on input line 466.
-
-
-Package natbib Warning: Citation `schmidt1975schema' on page 17 undefined on input line 466.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [17]
-
-Package natbib Warning: Citation `rose2007udl' on page 18 undefined on input line 466.
-
-
-Package natbib Warning: Citation `cast2018udl' on page 18 undefined on input line 466.
-
-
-Package natbib Warning: Citation `weinstein2002liderazgo' on page 18 undefined on input line 466.
+Overfull \hbox (12.64781pt too wide) in paragraph at lines 466--466
+[]\T1/phv/m/n/14.4 La lit-er-atu-ra plantea que se puede es-truc-turar un meta-
+modelo alrede-
+ []
 
 
-Package natbib Warning: Citation `weinstein2002liderazgo' on page 18 undefined on input line 466.
+Overfull \hbox (7.17632pt too wide) in paragraph at lines 466--466
+[]\T1/phv/m/n/14.4 La vari-abil-i-dad es un prin-ci-pio fun-da-men-tal en los p
+ro-ce-sos de apren-
+ []
 
 
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[18]
 Overfull \hbox (25.33517pt too wide) in paragraph at lines 466--466
-[]\T1/phv/m/n/14.4 Gestión Pedagóg-i-ca: Se en-fo-ca en el nú-cleo del pro-ce-so de enseñanza-
+[]\T1/phv/m/n/14.4 Gestión Pedagóg-i-ca: Se en-fo-ca en el nú-cleo del pro-ce-s
+o de enseñanza-
  []
 
 
 Overfull \hbox (7.42245pt too wide) in paragraph at lines 466--466
-\T1/phv/m/n/14.4 re-cur-sos hu-manos, ma-te-ri-ales y fi-nancieros, cre-an-do las condi-ciones
+\T1/phv/m/n/14.4 re-cur-sos hu-manos, ma-te-ri-ales y fi-nancieros, cre-an-do l
+as condi-ciones
  []
 
 
-Package natbib Warning: Citation `weinstein2002liderazgo' on page 18 undefined on input line 466.
-
-
-Package natbib Warning: Citation `weinstein2002liderazgo' on page 18 undefined on input line 466.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[18]
-
-Package natbib Warning: Citation `sommerville2016se' on page 19 undefined on input line 466.
-
-
-Package natbib Warning: Citation `pressman2014se' on page 19 undefined on input line 466.
-
-
-Package natbib Warning: Citation `ieee_glossary_2014' on page 19 undefined on input line 466.
-
-
-Package natbib Warning: Citation `bates2019teaching' on page 19 undefined on input line 466.
-
-
-Package natbib Warning: Citation `bates2019teaching' on page 19 undefined on input line 466.
-
-
-Package natbib Warning: Citation `mishra2006tpack' on page 19 undefined on input line 466.
-
-
-Package natbib Warning: Citation `hattie2009visible' on page 19 undefined on input line 466.
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [19]
 
-Package natbib Warning: Citation `sommerville2016se' on page 20 undefined on input line 466.
-
-
-Package natbib Warning: Citation `bates2019teaching' on page 20 undefined on input line 466.
-
-
-Package natbib Warning: Citation `mishra2006tpack' on page 20 undefined on input line 466.
-
-
-Package natbib Warning: Citation `bates2019teaching' on page 20 undefined on input line 466.
-
-Package acronym Info: Label `acro:TPACK' newly defined as it shall be overridden
-although it is yet undefined on input line 466.
-
-Package acronym Warning: Acronym `TPACK' is not defined on input line 466.
-
-
-Package acronym Warning: Acronym `TPACK' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `mishra2006tpack' on page 20 undefined on input line 466.
-
-
-Overfull \hbox (5.18373pt too wide) in paragraph at lines 466--466
-\T1/phv/m/n/14.4 (\T1/phv/m/sl/14.4 back-end\T1/phv/m/n/14.4 ) que no so-lo sea téc-ni-ca-mente ro-bus-to, sino tam-bién pedagógi-
- []
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `apel2013feature' on page 20 undefined on input line 466.
-
-
-Package natbib Warning: Citation `benavides2010automated' on page 20 undefined on input line 466.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `chen2020variability' on page 20 undefined on input line 466.
-
-
-Package natbib Warning: Citation `benavides2010automated' on page 20 undefined on input line 466.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [20]
+Package acronym Info: Label `acro:TPACK' newly defined as it shall be overridde
+n
+although it is yet undefined on input line 466.
 
-Package natbib Warning: Citation `unesco2022' on page 21 undefined on input line 466.
-
-
-Package natbib Warning: Citation `sanchez2020metodologia' on page 21 undefined on input line 466.
-
-
-Package natbib Warning: Citation `rodriguez2019gestion_curricular' on page 21 undefined on input line 466.
-
-
-Package natbib Warning: Citation `sanchez2020metodologia' on page 21 undefined on input line 466.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 466.
-
-
-Package natbib Warning: Citation `sanchez2020metodologia' on page 21 undefined on input line 466.
-
-
-Package natbib Warning: Citation `chen2020variability' on page 21 undefined on input line 466.
-
-
-Overfull \hbox (10.96498pt too wide) in paragraph at lines 466--466
-\T1/phv/m/n/14.4 cación ed-uca-ti-va, per-mi-tien-do la gen-eración semi-automatizada de planes
+Overfull \hbox (5.18373pt too wide) in paragraph at lines 466--466
+\T1/phv/m/n/14.4 (\T1/phv/m/sl/14.4 back-end\T1/phv/m/n/14.4 ) que no so-lo sea
+ téc-ni-ca-mente ro-bus-to, sino tam-bién pedagógi-
  []
 
 
-Package natbib Warning: Citation `rodriguez2019gestion_curricular' on page 21 undefined on input line 466.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[21]) (./epigraphs/epigraph2.tex
+[21]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [22]
-
-Package natbib Warning: Citation `moodle2025overview' on page 23 undefined on input line 153.
-
-
-Package natbib Warning: Citation `blackboard2025overview' on page 23 undefined on input line 153.
-
-
-Package natbib Warning: Citation `canvas2025overview' on page 23 undefined on input line 153.
+Overfull \hbox (10.96498pt too wide) in paragraph at lines 466--466
+\T1/phv/m/n/14.4 cación ed-uca-ti-va, per-mi-tien-do la gen-eración semi-automa
+tizada de planes
+ []
 
 
-Package natbib Warning: Citation `sanchez2020metodologia' on page 23 undefined on input line 153.
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-Package acronym Warning: Acronym `SPL' is not defined on input line 153.
-
-
+[23]) (./epigraphs/epigraph2.tex
 Overfull \hbox (2.58348pt too wide) in paragraph at lines 153--153
-[]\T1/phv/m/n/14.4 El análi-sis de solu-ciones ex-is-tentes se or-ga-ni-za en dos gru-pos clara-
+[]\T1/phv/m/n/14.4 El análi-sis de solu-ciones ex-is-tentes se or-ga-ni-za en d
+os gru-pos clara-
  []
 
 
 Overfull \hbox (4.8023pt too wide) in paragraph at lines 153--153
-\T1/phv/m/n/14.4 mente difer-en-ci-a-dos, ca-da uno rep-re-sen-ta-ti-vo de per-spec-ti-vas y al-cances
+\T1/phv/m/n/14.4 mente difer-en-ci-a-dos, ca-da uno rep-re-sen-ta-ti-vo de per-
+spec-ti-vas y al-cances
  []
 
 
-Package natbib Warning: Citation `ellucian2015b_banner' on page 23 undefined on input line 153.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[23]
-
-Package natbib Warning: Citation `moodle2025overview' on page 24 undefined on input line 153.
-
-
-Package natbib Warning: Citation `moodle2025overview' on page 24 undefined on input line 153.
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [24]
 
-Package acronym Warning: Acronym `SPL' is not defined on input line 153.
-
-
-Package natbib Warning: Citation `purevariants2024overview' on page 25 undefined on input line 153.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 153.
-
-
-Package natbib Warning: Citation `thum2014featureide' on page 25 undefined on input line 153.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 153.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [25]
 
-Package acronym Warning: Acronym `SPL' is not defined on input line 153.
-
-
-Package natbib Warning: Citation `sanchez2020metodologia' on page 26 undefined on input line 153.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 153.
-
-
-Package natbib Warning: Citation `chen2020variability' on page 26 undefined on input line 153.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 153.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[26]) (./epigraphs/epigraph3.tex
-
-Package natbib Warning: Citation `pacienzia2015metodologias' on page 27 undefined on input line 237.
-
+[26]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [27]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[28]) (./epigraphs/epigraph3.tex
 Overfull \hbox (49.71353pt too wide) in paragraph at lines 237--237
-[]\T1/phv/m/n/14.4 En la ac-tu-al-i-dad se pueden difer-en-ciar dos grandes gru-pos de metodologías
+[]\T1/phv/m/n/14.4 En la ac-tu-al-i-dad se pueden difer-en-ciar dos grandes gru
+-pos de metodologías
  []
 
 
 Overfull \hbox (3.3104pt too wide) in paragraph at lines 237--237
-\T1/phv/b/n/17.28 3.1 Metodologías de de-sar-rol-lo de soft-ware tradi-cionales 
+\T1/phv/b/n/17.28 3.1 Metodologías de de-sar-rol-lo de soft-ware tradi-cionales
+ 
  []
-
-
-Overfull \hbox (6.91898pt too wide) in paragraph at lines 237--237
-\T1/phv/m/n/14.4 flex-i-bles y no per-miten re-alizar cam-bios, al con-trario que las metodologías
- []
-
-
-Package natbib Warning: Citation `awad2005agile_v_traditional' on page 28 undefined on input line 237.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[28]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [29]
-
-Package natbib Warning: Citation `pacienzia2015metodologias' on page 30 undefined on input line 237.
-
-Package acronym Info: Label `acro:XP' newly defined as it shall be overridden
-although it is yet undefined on input line 237.
-
-Package acronym Warning: Acronym `XP' is not defined on input line 237.
-
-
-Package acronym Warning: Acronym `XP' is not defined on input line 237.
+Overfull \hbox (6.91898pt too wide) in paragraph at lines 237--237
+\T1/phv/m/n/14.4 flex-i-bles y no per-miten re-alizar cam-bios, al con-trario q
+ue las metodologías
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [30]
 
-Package natbib Warning: Citation `awad2005agile_v_traditional' on page 31 undefined on input line 237.
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[31]
+Package acronym Info: Label `acro:XP' newly defined as it shall be overridden
+although it is yet undefined on input line 237.
 
 Overfull \hbox (14.88167pt too wide) in paragraph at lines 237--237
-\T1/phv/m/n/14.4 ca se lo-gra plan-i-ficar bi-en el es-fuer-zo re-queri-do para seguir la metodología.
+\T1/phv/m/n/14.4 ca se lo-gra plan-i-ficar bi-en el es-fuer-zo re-queri-do para
+ seguir la metodología.
  []
 
 
 Overfull \hbox (6.62964pt too wide) in paragraph at lines 237--237
-[]\T1/phv/m/n/14.4 Tener metodologías difer-entes para aplicar de acuer-do con el proyec-
+[]\T1/phv/m/n/14.4 Tener metodologías difer-entes para aplicar de acuer-do con 
+el proyec-
  []
 
 
 Overfull \hbox (49.25414pt too wide) in paragraph at lines 237--237
-\T1/phv/m/n/14.4 pueden in-volu-crar prác-ti-cas tan-to de metodologías ágiles co-mo de metodologías
+\T1/phv/m/n/14.4 pueden in-volu-crar prác-ti-cas tan-to de metodologías ágiles 
+co-mo de metodologías
  []
 
 
-LaTeX Warning: Reference `tab:metodologias' on page 31 undefined on input line 237.
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-Package natbib Warning: Citation `awad2005agile_v_traditional' on page 31 undefined on input line 237.
-
-
-Package natbib Warning: Citation `awad2005agile_v_traditional' on page 31 undefined on input line 237.
-
-
+[32]
 Underfull \hbox (badness 2103) in paragraph at lines 237--237
 []|\T1/phv/b/n/14.4 Metodologías Tradi-
  []
@@ -2004,16 +1835,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[31]
-
-LaTeX Warning: Reference `tab:metodologias' on page 32 undefined on input line 237.
-
-
-LaTeX Warning: Reference `tab:resultado' on page 32 undefined on input line 237.
-
-
+[33]
 Overfull \hbox (1.09715pt too wide) in paragraph at lines 237--237
 []|\T1/phv/b/n/14.4 Pesadas| 
  []
@@ -2028,13 +1853,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[32]
-
-LaTeX Warning: Reference `tab:comparacionAgil' on page 33 undefined on input line 237.
-
-
+[34]
 Overfull \hbox (9.14717pt too wide) in alignment at lines 237--237
  [] [] [] 
  []
@@ -2085,64 +1907,35 @@ Overfull \hbox (9.14717pt too wide) in alignment at lines 237--237
  []
 
 
-LaTeX Warning: Reference `tab:comparacionAgil' on page 33 undefined on input line 237.
-
-
-Package acronym Warning: Acronym `XP' is not defined on input line 237.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[33]
-
-Package acronym Warning: Acronym `XP' is not defined on input line 237.
-
-
-Package natbib Warning: Citation `pressman2014se' on page 34 undefined on input line 237.
-
-
-Package acronym Warning: Acronym `XP' is not defined on input line 237.
-
+[35]
 Package acronym Info: Label `acro:HU' newly defined as it shall be overridden
 although it is yet undefined on input line 237.
 
-Package acronym Warning: Acronym `HU' is not defined on input line 237.
-
-
-Package acronym Warning: Acronym `HU' is not defined on input line 237.
-
-
-Package acronym Warning: Acronym `XP' is not defined on input line 237.
-
-
-Package natbib Warning: Citation `pressman2014se' on page 34 undefined on input line 237.
-
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[34]
-
-Package acronym Warning: Acronym `HU' is not defined on input line 237.
-
-
-Package acronym Warning: Acronym `XP' is not defined on input line 237.
-
-
+[36]
 Overfull \hbox (1.80533pt too wide) in paragraph at lines 237--237
-\T1/phv/m/n/14.4 metodología, que pro-pone que los de-sar-rol-ladores tra-ba-jen en pare-
+\T1/phv/m/n/14.4 metodología, que pro-pone que los de-sar-rol-ladores tra-ba-je
+n en pare-
  []
 
 
 Overfull \hbox (7.37839pt too wide) in paragraph at lines 237--237
-\T1/phv/m/n/14.4 jas en una ter-mi-nal, ver-i-f-i-can-do ca-da uno el tra-ba-jo del otro y ayudán-
+\T1/phv/m/n/14.4 jas en una ter-mi-nal, ver-i-f-i-can-do ca-da uno el tra-ba-jo
+ del otro y ayudán-
  []
 
 
@@ -2150,216 +1943,71 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[35]
-
-Package acronym Warning: Acronym `XP' is not defined on input line 237.
-
-
-Package acronym Warning: Acronym `XP' is not defined on input line 237.
-
-
-Package acronym Warning: Acronym `HU' is not defined on input line 237.
-
-
-Package acronym Warning: Acronym `HU' is not defined on input line 237.
-
-
-Package natbib Warning: Citation `pressman2014se' on page 36 undefined on input line 237.
-
-
-Package acronym Warning: Acronym `HU' is not defined on input line 237.
-
-
-Package natbib Warning: Citation `pressman2014se' on page 36 undefined on input line 237.
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[36]
+[37]
 Package acronym Info: Label `acro:CRC' newly defined as it shall be overridden
 although it is yet undefined on input line 237.
 
 
-Package acronym Warning: Acronym `CRC' is not defined on input line 237.
-
-
-Package acronym Warning: Acronym `CRC' is not defined on input line 237.
-
-
-Package natbib Warning: Citation `pressman2014se' on page 37 undefined on input line 237.
-
-
-Package acronym Warning: Acronym `XP' is not defined on input line 237.
-
-) (./epigraphs/epigraph4.tex
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[37]
-
-Package natbib Warning: Citation `sebesta2016' on page 38 undefined on input line 791.
-
-
-Package natbib Warning: Citation `sommerville2016se' on page 38 undefined on input line 791.
-
-
-Package natbib Warning: Citation `van1995python' on page 38 undefined on input line 791.
-
-
-Package natbib Warning: Citation `lutz2013learning' on page 38 undefined on input line 791.
-
-
-Package natbib Warning: Citation `ray2014large' on page 38 undefined on input line 791.
-
-
-Package natbib Warning: Citation `lutz2013learning' on page 38 undefined on input line 791.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 791.
-
-
-Overfull \hbox (10.85004pt too wide) in paragraph at lines 791--791
-\T1/phv/m/n/14.4 re-stric-ciones transver-sales y ar-di-nal-i-dades con clar-i-dad y sin am-bigüedad.
- []
-
+[38]) (./epigraphs/epigraph4.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[38]
-Overfull \hbox (1.92209pt too wide) in paragraph at lines 791--791
-\T1/phv/m/n/14.4 gener-ar con-fig-u-ra-ciones vál-i-das a par-tir de elec-ciones de usuario, aplicar
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [39]
-Package acronym Info: Label `acro:REST' newly defined as it shall be overridden
-although it is yet undefined on input line 791.
-
-
-Package acronym Warning: Acronym `REST' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `REST' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `ramirez2019fastapi' on page 40 undefined on input line 791.
-
-
-Package acronym Warning: Acronym `FM' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `ray2014large' on page 40 undefined on input line 791.
-
-
-Package natbib Warning: Citation `sommerville2016se' on page 40 undefined on input line 791.
-
-
-Package natbib Warning: Citation `pressman2014se' on page 40 undefined on input line 791.
-
-
-Package natbib Warning: Citation `gamma1995Frameworks' on page 40 undefined on input line 791.
+Overfull \hbox (10.85004pt too wide) in paragraph at lines 791--791
+\T1/phv/m/n/14.4 re-stric-ciones transver-sales y ar-di-nal-i-dades con clar-i-
+dad y sin am-bigüedad.
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [40]
-
-Package natbib Warning: Citation `ramirez2019fastapi' on page 41 undefined on input line 791.
-
-
-Package natbib Warning: Citation `eugene2023fastapi' on page 41 undefined on input line 791.
-
-
-Overfull \hbox (10.178pt too wide) in paragraph at lines 791--791
-[]\T1/phv/m/n/14.4 FastAPI será el frame-work \T1/phv/m/sl/14.4 back-end \T1/phv/m/n/14.4 adop-ta-do para la im-ple-mentación
+Overfull \hbox (1.92209pt too wide) in paragraph at lines 791--791
+\T1/phv/m/n/14.4 gener-ar con-fig-u-ra-ciones vál-i-das a par-tir de elec-cione
+s de usuario, aplicar
  []
 
+Package acronym Info: Label `acro:REST' newly defined as it shall be overridden
 
-Package natbib Warning: Citation `pesce2021benchmark' on page 41 undefined on input line 791.
-
-
-Package natbib Warning: Citation `ramirez2019fastapi' on page 41 undefined on input line 791.
-
-Package acronym Info: Label `acro:I/O' newly defined as it shall be overridden
 although it is yet undefined on input line 791.
 
-Package acronym Warning: Acronym `I/O' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `I/O' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `I/O' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `eugene2023fastapi' on page 41 undefined on input line 791.
-
-
-Package natbib Warning: Citation `pesce2021benchmark' on page 41 undefined on input line 791.
+Overfull \hbox (7.79723pt too wide) in paragraph at lines 791--791
+\T1/phv/m/n/14.4 miten con-stru-ir ser-vi-cios [][][]Transferencia de Es-ta-do 
+Rep-re-senta-cional (\T1/phv/m/sl/14.4 Rep-
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [41]
-
-Package natbib Warning: Citation `ramirez2019fastapi' on page 42 undefined on input line 791.
-
-
-Package natbib Warning: Citation `richards2015software' on page 42 undefined on input line 791.
-
-Package acronym Info: Label `acro:SQL' newly defined as it shall be overridden
-although it is yet undefined on input line 791.
-
-Package acronym Warning: Acronym `SQL' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `SQL' is not defined on input line 791.
-
-Package acronym Info: Label `acro:CI/CD' newly defined as it shall be overridden
-although it is yet undefined on input line 791.
-
-Package acronym Warning: Acronym `CI/CD' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `CI/CD' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `eugene2023fastapi' on page 42 undefined on input line 791.
-
-
-Overfull \hbox (7.262pt too wide) in paragraph at lines 791--791
-[]\T1/phv/m/n/14.4 Finalmente, la com-pat-i-bil-i-dad de FastAPI con con-tro-ladores de bases
+Overfull \hbox (10.178pt too wide) in paragraph at lines 791--791
+[]\T1/phv/m/n/14.4 FastAPI será el frame-work \T1/phv/m/sl/14.4 back-end \T1/ph
+v/m/n/14.4 adop-ta-do para la im-ple-mentación
  []
 
 
@@ -2367,116 +2015,61 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [42]
-
-Package natbib Warning: Citation `postgres2024' on page 43 undefined on input line 791.
-
-
-Package natbib Warning: Citation `momjian2001postgresql' on page 43 undefined on input line 791.
-
-
-Package acronym Warning: Acronym `SQL' is not defined on input line 791.
-
-Package acronym Info: Label `acro:ACID' newly defined as it shall be overridden
+Package acronym Info: Label `acro:I/O' newly defined as it shall be overridden
 although it is yet undefined on input line 791.
-
-Package acronym Warning: Acronym `ACID' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `ACID' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `momjian2001postgresql' on page 43 undefined on input line 791.
-
-
-Package natbib Warning: Citation `postgres2024' on page 43 undefined on input line 791.
-
-Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
-although it is yet undefined on input line 791.
-
-Package acronym Warning: Acronym `JSON' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `JSON' is not defined on input line 791.
-
-Package acronym Info: Label `acro:JSONB' newly defined as it shall be overridden
-although it is yet undefined on input line 791.
-
-Package acronym Warning: Acronym `JSONB' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `JSONB' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `postgres2024' on page 43 undefined on input line 791.
-
-
-Overfull \hbox (3.63577pt too wide) in paragraph at lines 791--791
-\T1/phv/m/n/14.4 com-puestos, con-sul-tas op-ti-mizadas, vis-tas ma-te-ri-al-izadas, trig-gers y pro-
- []
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [43]
-Package acronym Info: Label `acro:ORM' newly defined as it shall be overridden
+Package acronym Info: Label `acro:SQL' newly defined as it shall be overridden
+although it is yet undefined on input line 791.
+Package acronym Info: Label `acro:CI/CD' newly defined as it shall be overridde
+n
 although it is yet undefined on input line 791.
 
-
-Package acronym Warning: Acronym `ORM' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `ORM' is not defined on input line 791.
-
-
-Overfull \hbox (25.82315pt too wide) in paragraph at lines 791--791
-[]\T1/phv/m/n/14.4 Adicionalmente, Post-greSQL se in-te-gra de for-ma nat-u-ral con SQLAlche-
+Overfull \hbox (7.262pt too wide) in paragraph at lines 791--791
+[]\T1/phv/m/n/14.4 Finalmente, la com-pat-i-bil-i-dad de FastAPI con con-tro-la
+dores de bases
  []
 
 
-Package acronym Warning: Acronym `SQL' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `momjian2001postgresql' on page 44 undefined on input line 791.
-
-
-Package natbib Warning: Citation `postgres2024' on page 44 undefined on input line 791.
+Overfull \hbox (29.30313pt too wide) in paragraph at lines 791--791
+\T1/phv/m/sl/14.4 guage\T1/phv/m/n/14.4 ) ([])[], jun-to con her-ramien-tas de 
+orquestación (Dock-er) y [][][]Integración
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [44]
+Package acronym Info: Label `acro:ACID' newly defined as it shall be overridden
 
-Package natbib Warning: Citation `boettiger2015introduction' on page 45 undefined on input line 791.
+although it is yet undefined on input line 791.
+Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
 
+although it is yet undefined on input line 791.
+Package acronym Info: Label `acro:JSONB' newly defined as it shall be overridde
+n
+although it is yet undefined on input line 791.
 
-Package natbib Warning: Citation `docker2024docs' on page 45 undefined on input line 791.
-
-
-Package natbib Warning: Citation `boettiger2015introduction' on page 45 undefined on input line 791.
-
-
-Package natbib Warning: Citation `docker2024docs' on page 45 undefined on input line 791.
-
-
-Package natbib Warning: Citation `docker2024docs' on page 45 undefined on input line 791.
-
-
-Package natbib Warning: Citation `boettiger2015introduction' on page 45 undefined on input line 791.
-
-
-Overfull \hbox (44.19936pt too wide) in paragraph at lines 791--791
-[]\T1/phv/m/n/14.4 Sobre Dock-er se con-struye Dock-er Com-pose, her-ramien-ta de orquestación
+Overfull \hbox (3.63577pt too wide) in paragraph at lines 791--791
+\T1/phv/m/n/14.4 com-puestos, con-sul-tas op-ti-mizadas, vis-tas ma-te-ri-al-iz
+adas, trig-gers y pro-
  []
 
 
@@ -2484,94 +2077,80 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [45]
-
-Package acronym Warning: Acronym `CI/CD' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `docker2024docs' on page 46 undefined on input line 791.
-
-
-Package natbib Warning: Citation `carlson2013redis' on page 46 undefined on input line 791.
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[46]
-
-Package natbib Warning: Citation `carlson2013redis' on page 47 undefined on input line 791.
-
-
-Package natbib Warning: Citation `carlson2013redis' on page 47 undefined on input line 791.
-
-
-Package natbib Warning: Citation `carlson2013redis' on page 47 undefined on input line 791.
-
-Package acronym Info: Label `acro:TTL' newly defined as it shall be overridden
+Package acronym Info: Label `acro:ORM' newly defined as it shall be overridden
 although it is yet undefined on input line 791.
 
-Package acronym Warning: Acronym `TTL' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `TTL' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `carlson2013redis' on page 47 undefined on input line 791.
-
-
-Overfull \hbox (15.37091pt too wide) in paragraph at lines 791--791
-[]\T1/phv/m/n/14.4 Además, Re-dis im-ple-men-ta un sis-tema de Time-To-Live ([][][]\T1/phv/b/n/14.4 TTL! \T1/phv/m/n/14.4 ([])[]),
+Overfull \hbox (25.82315pt too wide) in paragraph at lines 791--791
+[]\T1/phv/m/n/14.4 Adicionalmente, Post-greSQL se in-te-gra de for-ma nat-u-ral
+ con SQLAlche-
  []
 
 
-Package natbib Warning: Citation `ramirez2019fastapi' on page 47 undefined on input line 791.
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[46]
+Overfull \hbox (44.19936pt too wide) in paragraph at lines 791--791
+[]\T1/phv/m/n/14.4 Sobre Dock-er se con-struye Dock-er Com-pose, her-ramien-ta 
+de orquestación
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [47]
 
-Package natbib Warning: Citation `celery2024docs' on page 48 undefined on input line 791.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [48]
-
-Package natbib Warning: Citation `celery2024docs' on page 49 undefined on input line 791.
+Package acronym Info: Label `acro:TTL' newly defined as it shall be overridden
+although it is yet undefined on input line 791.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [49]
 
-Package natbib Warning: Citation `celery2024docs' on page 50 undefined on input line 791.
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-Package natbib Warning: Citation `ramirez2019fastapi' on page 50 undefined on input line 791.
+[50]
 
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-LaTeX Warning: Reference `tab:fastAPIvsFastAPIconCelery' on page 50 undefined on input line 791.
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-
+[51]
 Overfull \hbox (9.1472pt too wide) in alignment at lines 791--791
  [] [] [] 
  []
@@ -2610,9 +2189,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 791--791
 Underfull \hbox (badness 10000) in paragraph at lines 791--791
 \T1/phv/m/n/14.4 atas + seguimien-to
  []
-
-
-Package acronym Warning: Acronym `I/O' is not defined on input line 791.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 791--791
@@ -2679,415 +2255,168 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[50]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[51]
-
-Package natbib Warning: Citation `meurer2017sympy' on page 52 undefined on input line 791.
-
-
-Package natbib Warning: Citation `meurer2017sympy' on page 52 undefined on input line 791.
-
-
-Package natbib Warning: Citation `hagberg2008networkx' on page 52 undefined on input line 791.
-
-
-Overfull \hbox (2.26509pt too wide) in paragraph at lines 791--791
-[]\T1/phv/m/n/14.4 De man-era com-ple-men-taria, la platafor-ma em-pleará \T1/phv/b/n/14.4 Net-workX \T1/phv/m/n/14.4 para
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [52]
 
-Package natbib Warning: Citation `pysat2018' on page 53 undefined on input line 791.
-
-
-Package natbib Warning: Citation `benavides2010a' on page 53 undefined on input line 791.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [53]
-
-Package natbib Warning: Citation `z3_2008' on page 54 undefined on input line 791.
-
-
-Package natbib Warning: Citation `poetry2024' on page 54 undefined on input line 791.
-
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 791.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-
-Package natbib Warning: Citation `poetry2024' on page 54 undefined on input line 791.
+Overfull \hbox (2.26509pt too wide) in paragraph at lines 791--791
+[]\T1/phv/m/n/14.4 De man-era com-ple-men-taria, la platafor-ma em-pleará \T1/p
+hv/b/n/14.4 Net-workX \T1/phv/m/n/14.4 para
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [54]
 
-Package natbib Warning: Citation `uv2024' on page 55 undefined on input line 791.
-
-
-Package natbib Warning: Citation `poetry2024' on page 55 undefined on input line 791.
-
-
-Package natbib Warning: Citation `uv2024' on page 55 undefined on input line 791.
-
-
-Package natbib Warning: Citation `ponuthorai2022git' on page 55 undefined on input line 791.
-
-
-Package natbib Warning: Citation `loeliger2012version' on page 55 undefined on input line 791.
-
-
-Package natbib Warning: Citation `ghodke2024git' on page 55 undefined on input line 791.
-
-
-Package natbib Warning: Citation `ponuthorai2022git' on page 55 undefined on input line 791.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [55]
-
-Package acronym Warning: Acronym `CI/CD' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `github2024' on page 56 undefined on input line 791.
-
-
-Package natbib Warning: Citation `ghodke2024git' on page 56 undefined on input line 791.
-
-
-Overfull \hbox (7.3363pt too wide) in paragraph at lines 791--791
-\T1/phv/m/n/14.4 plian-do las ca-paci-dades de Git con her-ramien-tas de co-lab-o-ración, gestión
- []
-
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
+91.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [56]
 
-Package natbib Warning: Citation `rumbaugh2004uml' on page 57 undefined on input line 791.
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
-although it is yet undefined on input line 791.
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-Package acronym Warning: Acronym `UML' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `UML' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `omg2017' on page 57 undefined on input line 791.
-
-
-Overfull \hbox (3.76573pt too wide) in paragraph at lines 791--791
-\T1/phv/m/n/14.4 mo pro-ce-sos de ne-go-cios, fun-ciones del sis-tema, ex-pre-siones de lengua-
+[57]
+Overfull \hbox (7.3363pt too wide) in paragraph at lines 791--791
+\T1/phv/m/n/14.4 plian-do las ca-paci-dades de Git con her-ramien-tas de co-lab
+-o-ración, gestión
  []
-
-
-Package natbib Warning: Citation `pressman2014se' on page 57 undefined on input line 791.
-
-
-Package natbib Warning: Citation `sommerville2016se' on page 57 undefined on input line 791.
-
-
-Package acronym Warning: Acronym `UML' is not defined on input line 791.
-
-Package acronym Info: Label `acro:BPMN' newly defined as it shall be overridden
-although it is yet undefined on input line 791.
-
-Package acronym Warning: Acronym `BPMN' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `BPMN' is not defined on input line 791.
-
-Package acronym Info: Label `acro:CASE' newly defined as it shall be overridden
-although it is yet undefined on input line 791.
-
-Package acronym Warning: Acronym `CASE' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `CASE' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `visualParadigm2024' on page 57 undefined on input line 791.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[57]
+[58]
+Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
+although it is yet undefined on input line 791.
+
+Overfull \hbox (6.62378pt too wide) in paragraph at lines 791--791
+\T1/phv/m/n/14.4 Unifi-ca-do ([][][]Lenguaje de Mod-e-la-do Unifi-ca-do (\T1/ph
+v/m/sl/14.4 Uni-fied Mod-el-ing Lan-guage\T1/phv/m/n/14.4 )
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[59]
+Package acronym Info: Label `acro:BPMN' newly defined as it shall be overridden
+
+although it is yet undefined on input line 791.
+Package acronym Info: Label `acro:CASE' newly defined as it shall be overridden
+
+although it is yet undefined on input line 791.
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
 although it is yet undefined on input line 791.
 
 
-Package acronym Warning: Acronym `API' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `API' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `postman2024' on page 58 undefined on input line 791.
-
-
-Package acronym Warning: Acronym `REST' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `postman2024' on page 58 undefined on input line 791.
-
-
-Package natbib Warning: Citation `pytest2024' on page 58 undefined on input line 791.
-
-
-Package natbib Warning: Citation `pytest2024' on page 58 undefined on input line 791.
-
-
-Package acronym Warning: Acronym `API' is not defined on input line 791.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[58]
-Package acronym Info: Label `acro:IDE' newly defined as it shall be overridden
-although it is yet undefined on input line 791.
-
-
-Package acronym Warning: Acronym `IDE' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `IDE' is not defined on input line 791.
-
-
-Package acronym Warning: Acronym `IDE' is not defined on input line 791.
-
-
-Package natbib Warning: Citation `ibm_IDE' on page 59 undefined on input line 791.
-
-
-Package natbib Warning: Citation `vscode2025' on page 59 undefined on input line 791.
-
-
-Package natbib Warning: Citation `ramel2021VSCodePopularity' on page 59 undefined on input line 791.
-
-
-Package natbib Warning: Citation `vscode_docs2025' on page 59 undefined on input line 791.
-
-
-Package natbib Warning: Citation `vscode2025' on page 59 undefined on input line 791.
-
-
-Package natbib Warning: Citation `vscode_docs2025' on page 59 undefined on input line 791.
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[59]) (./epigraphs/epigraph5.tex
-Overfull \hbox (2.38121pt too wide) in paragraph at lines 361--361
-[]\T1/phv/m/n/14.4 El sis-tema in-cor-po-rará fun-cional-i-dades que re-spon-den di-rec-ta-mente
- []
-
-
-Overfull \hbox (1.67755pt too wide) in paragraph at lines 361--361
-\T1/phv/m/n/14.4 ex-plo-rar ru-tas posi-bles, per-mi-tir adapta-ciones por nive-les, per-files o com-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [60]
-Overfull \hbox (17.33022pt too wide) in paragraph at lines 361--361
-\T1/phv/m/n/14.4 pro-ce-sos fun-cionales, los com-po-nentes prin-ci-pales del sis-tema, los mecan-
+Overfull \hbox (9.94241pt too wide) in paragraph at lines 791--791
+[]\T1/phv/m/n/14.4 2024[]]. Pytest desta-ca por su sin-taxis clara, ca-paci-dad
+ de parametrización,
  []
 
-
-Overfull \hbox (32.27707pt too wide) in paragraph at lines 361--361
-\T1/phv/m/n/14.4 garan-ti-zan-do que cualquier com-bi-nación deriva-da cumpla las re-glas definidas
- []
-
+Package acronym Info: Label `acro:IDE' newly defined as it shall be overridden
+although it is yet undefined on input line 791.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[61]
-
-Package acronym Warning: Acronym `FM' is not defined on input line 361.
-
+[61]) (./epigraphs/epigraph5.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [62]
+Overfull \hbox (2.38121pt too wide) in paragraph at lines 452--452
+[]\T1/phv/m/n/14.4 El sis-tema in-cor-po-rará fun-cional-i-dades que re-spon-de
+n di-rec-ta-mente
+ []
+
+
+Overfull \hbox (1.67755pt too wide) in paragraph at lines 452--452
+\T1/phv/m/n/14.4 ex-plo-rar ru-tas posi-bles, per-mi-tir adapta-ciones por nive
+-les, per-files o com-
+ []
+
+
+Overfull \hbox (17.33022pt too wide) in paragraph at lines 452--452
+\T1/phv/m/n/14.4 pro-ce-sos fun-cionales, los com-po-nentes prin-ci-pales del s
+is-tema, los mecan-
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [63]
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 361.
-
-
-Package acronym Warning: Acronym `SPL' is not defined on input line 361.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--361
-[]|\T1/phv/b/n/14.4 Concepto Anál-o-go
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--361
-\T1/phv/b/n/14.4 en Plan-i-fi-cación
- []
-
-
-Overfull \hbox (9.1472pt too wide) in alignment at lines 361--361
- [] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--361
-[]|\T1/phv/b/n/14.4 Concepto Anál-o-go
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--361
-\T1/phv/b/n/14.4 en Plan-i-fi-cación
- []
-
-
-Overfull \hbox (9.1472pt too wide) in alignment at lines 361--361
- [] [] [] 
- []
-
-
-Overfull \hbox (9.1472pt too wide) in alignment at lines 361--361
- [] [] [] 
- []
-
-
-Overfull \hbox (9.1472pt too wide) in alignment at lines 361--361
- [] [] [] 
- []
-
-
-Underfull \hbox (badness 1635) in paragraph at lines 361--361
-[]|\T1/phv/m/n/14.4 El tron-co común de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--361
-\T1/phv/m/n/14.4 conocimien-tos que
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--361
-[]|\T1/phv/m/n/14.4 La ru-ta académi-ca
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--361
-[]|\T1/phv/m/n/14.4 Característica (Fea-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--361
-[]|\T1/phv/m/n/14.4 Unidad cur-ric-u-
- []
-
-
-Underfull \hbox (badness 1259) in paragraph at lines 361--361
-\T1/phv/m/n/14.4 lar(asignatura, mó-du-
- []
-
-
-Underfull \hbox (badness 4805) in paragraph at lines 361--361
-[]|\T1/phv/m/n/14.4 La unidad fun-cional
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--361
-[]|\T1/phv/m/n/14.4 Opciones Académi-
- []
-
-
-Underfull \hbox (badness 4872) in paragraph at lines 361--361
-[]|\T1/phv/m/n/14.4 El con-jun-to de de-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--361
-\T1/phv/m/n/14.4 ci-siones disponibles
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--361
-\T1/phv/m/n/14.4 (op-ta-tivi-dad, elec-
- []
-
-
-Underfull \hbox (badness 7099) in paragraph at lines 361--361
-\T1/phv/m/n/14.4 tivi-dad, elec-ción de
- []
-
-
-Overfull \hbox (9.1472pt too wide) in alignment at lines 361--361
- [] [] [] 
+Overfull \hbox (32.27707pt too wide) in paragraph at lines 452--452
+\T1/phv/m/n/14.4 garan-ti-zan-do que cualquier com-bi-nación deriva-da cumpla l
+as re-glas definidas
  []
 
 
@@ -3095,1023 +2424,478 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [64]
 
-LaTeX Warning: Reference `fig:fm_data_structures' on page 65 undefined on input line 361.
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-Runaway argument?
-{for tree={ draw, rounded corners, font=\footnotesize , node options=\ETC.
-./epigraphs/epigraph5.tex:361: Paragraph ended before \forestrset was complete.
-<to be read again> 
-                   \par 
-l.361 }
-       
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...t, s sep=7pt, edge={-latex} } \par }
-                                                  
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-Runaway argument?
-{,afterthought={ 
-./epigraphs/epigraph5.tex:361: Paragraph ended before \forestOappto was complete.
-<to be read again> 
-                   \par 
-l.361 }
-       
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...iven options}{,afterthought={ \par }
-                                                  }
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...ven options}{,afterthought={ \par }}
-                                                  
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-Runaway argument?
-{,afterthought={ 
-./epigraphs/epigraph5.tex:361: Paragraph ended before \forestOappto was complete.
-<to be read again> 
-                   \par 
-l.361 }
-       
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...iven options}{,afterthought={ \par }
-                                                  }
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...ven options}{,afterthought={ \par }}
-                                                  
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-Runaway argument?
-{,afterthought={ 
-./epigraphs/epigraph5.tex:361: Paragraph ended before \forestOappto was complete.
-<to be read again> 
-                   \par 
-l.361 }
-       
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...iven options}{,afterthought={ \par }
-                                                  }
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...ven options}{,afterthought={ \par }}
-                                                  
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-Runaway argument?
-{,afterthought={ 
-./epigraphs/epigraph5.tex:361: Paragraph ended before \forestOappto was complete.
-<to be read again> 
-                   \par 
-l.361 }
-       
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...iven options}{,afterthought={ \par }
-                                                  }
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...ven options}{,afterthought={ \par }}
-                                                  
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-Runaway argument?
-{,afterthought={ 
-./epigraphs/epigraph5.tex:361: Paragraph ended before \forestOappto was complete.
-<to be read again> 
-                   \par 
-l.361 }
-       
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...iven options}{,afterthought={ \par }
-                                                  }
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...ven options}{,afterthought={ \par }}
-                                                  
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-Runaway argument?
-{,afterthought={ 
-./epigraphs/epigraph5.tex:361: Paragraph ended before \forestOappto was complete.
-<to be read again> 
-                   \par 
-l.361 }
-       
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...iven options}{,afterthought={ \par }
-                                                  }
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./epigraphs/epigraph5.tex:361: Extra }, or forgotten \endgroup.
-<argument> ...ven options}{,afterthought={ \par }}
-                                                  
-l.361 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+[]|\T1/phv/b/n/14.4 Concepto Anál-o-go
+ []
 
 
-./epigraphs/epigraph5.tex:361: LaTeX Error: Something's wrong--perhaps a missing \item.
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+\T1/phv/b/n/14.4 en Plan-i-fi-cación
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 452--452
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+[]|\T1/phv/b/n/14.4 Concepto Anál-o-go
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+\T1/phv/b/n/14.4 en Plan-i-fi-cación
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 452--452
+ [] [] [] 
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 452--452
+ [] [] [] 
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 452--452
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1635) in paragraph at lines 452--452
+[]|\T1/phv/m/n/14.4 El tron-co común de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+\T1/phv/m/n/14.4 conocimien-tos que
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+[]|\T1/phv/m/n/14.4 La ru-ta académi-ca
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+[]|\T1/phv/m/n/14.4 Característica (Fea-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+[]|\T1/phv/m/n/14.4 Unidad cur-ric-u-
+ []
+
+
+Underfull \hbox (badness 1259) in paragraph at lines 452--452
+\T1/phv/m/n/14.4 lar(asignatura, mó-du-
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 452--452
+[]|\T1/phv/m/n/14.4 La unidad fun-cional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+[]|\T1/phv/m/n/14.4 Opciones Académi-
+ []
+
+
+Underfull \hbox (badness 4872) in paragraph at lines 452--452
+[]|\T1/phv/m/n/14.4 El con-jun-to de de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+\T1/phv/m/n/14.4 ci-siones disponibles
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+\T1/phv/m/n/14.4 (op-ta-tivi-dad, elec-
+ []
+
+
+Underfull \hbox (badness 7099) in paragraph at lines 452--452
+\T1/phv/m/n/14.4 tivi-dad, elec-ción de
+ []
+
+
+Overfull \hbox (9.1472pt too wide) in alignment at lines 452--452
+ [] [] [] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[66]
+
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.361 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./epigraphs/epigraph5.tex:361: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./epigraphs/epigraph5.tex:361: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./epigraphs/epigraph5.tex:361: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./epigraphs/epigraph5.tex:361: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./epigraphs/epigraph5.tex:361: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./epigraphs/epigraph5.tex:361: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./epigraphs/epigraph5.tex:361: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./epigraphs/epigraph5.tex:361: Missing number, treated as zero.
-<to be read again> 
-                   \forest@id@of@lang-c 
-l.361 }
-       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Missing = inserted for \ifnum.
-<to be read again> 
-                   \forest@id@of@lang-c 
-l.361 }
-       
-I was expecting to see `<', `=', or `>'. Didn't.
-
-./epigraphs/epigraph5.tex:361: Missing number, treated as zero.
-<to be read again> 
-                   \forest@id@of@lang-c 
-l.361 }
-       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-
-./epigraphs/epigraph5.tex:361: Package forest Error: Attempt to refer to the invalid node by "forest cs".
-
-See the forest package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 }
+l.452 }
        
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
 Pretend that you're Hercule Poirot: Examine all clues,
 and deduce the truth by order and method.
 
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \forest@id@of@lang-c 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
 
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \fRsT 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
 
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \fRsT 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...forest@id@of@lang-c /name\endcsname 
-                                                  
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-\pgfutil@ifundefined ...@ifx \csname #1\endcsname 
-                                                  \relax 
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \fRsT 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...forest@id@of@lang-c /name\endcsname 
-                                                  
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-\pgfutil@ifundefined ...@ifx \csname #1\endcsname 
-                                                  \relax 
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-
-./epigraphs/epigraph5.tex:361: Package pgf Error: No shape named `\fRsT \forest@id@of@lang-c /name\endcsname ' is known.
-
-See the pgf package documentation for explanation.
+See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.361 }
+l.452 }
        
 (That was another \errmessage.)
 
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \fRsT 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
 
-Missing character: There is no / in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...forest@id@of@lang-c /name\endcsname 
-                                                  \endcsname \csname pgf@sh@...
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
 
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...f@lang-c /name\endcsname \endcsname 
-                                                  \csname pgf@sh@np@\fRsT \f...
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \fRsT 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-Missing character: There is no / in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...forest@id@of@lang-c /name\endcsname 
-                                                  \endcsname \pgf@sh@reancho...
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...f@lang-c /name\endcsname \endcsname 
-                                                  \pgf@sh@reanchor {\csname ...
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \fRsT 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \pgf@sh@ns@ 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-Missing character: There is no / in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...forest@id@of@lang-c /name\endcsname 
-                                                  \endcsname @south
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...f@lang-c /name\endcsname \endcsname 
-                                                  @south
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-Missing character: There is no @ in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-\pgfutil@ifundefined ...@ifx \csname #1\endcsname 
-                                                  \relax 
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-
-./epigraphs/epigraph5.tex:361: Package PGF Math Error: Unknown function `south' (in 'south').
-
-See the PGF Math package documentation for explanation.
+See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.361 }
+l.452 }
        
 (That was another \errmessage.)
 
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \fRsT 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
 
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \pgf@sh@ns@ 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
 
-Missing character: There is no / in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...forest@id@of@lang-c /name\endcsname 
-                                                  \endcsname @border\endcsna...
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...f@lang-c /name\endcsname \endcsname 
-                                                  @border\endcsname {\pgfqpo...
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-Missing character: There is no @ in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...csname \endcsname @border\endcsname 
-                                                  {\pgfqpointpolar {\the \c@...
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \fRsT 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \pgf@sh@ns@ 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-Missing character: There is no / in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...forest@id@of@lang-c /name\endcsname 
-                                                  \endcsname 
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...f@lang-c /name\endcsname \endcsname 
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
                                                   
-l.361 }
+l.452 }
        
-I'm ignoring this, since I wasn't doing a \csname.
+(That was another \errmessage.)
 
-Missing character: There is no @ in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-\pgf@sh@reanchor ...me pgf@anchor@#1@#2\endcsname 
-                                                  }
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
 
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \fRsT 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
 
-./epigraphs/epigraph5.tex:361: Missing number, treated as zero.
-<to be read again> 
-                   n
-l.361 }
-       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   n
-l.361 }
-       
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-Missing character: There is no n in font nullfont!
-./epigraphs/epigraph5.tex:361: Missing number, treated as zero.
-<to be read again> 
-                   a
-l.361 }
-       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   a
-l.361 }
-       
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-\pgf@temp ...\forest@id@of@lang-c /name\endcsname 
-                                                  \endcsname 
-l.361 }
-       
-I'm ignoring this, since I wasn't doing a \csname.
-
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-\pgf@temp ...of@lang-c /name\endcsname \endcsname 
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
                                                   
-l.361 }
+l.452 }
        
-I'm ignoring this, since I wasn't doing a \csname.
+(That was another \errmessage.)
 
-./epigraphs/epigraph5.tex:361: Missing number, treated as zero.
-<to be read again> 
-                   \pgf@sh@nt@ 
-l.361 }
-       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
 
-./epigraphs/epigraph5.tex:361: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \pgf@sh@nt@ 
-l.361 }
-       
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
 
-./epigraphs/epigraph5.tex:361: Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.361 }
-       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \global 
-l.361 }
-       
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Missing number, treated as zero.
-<to be read again> 
-                   \forest@id@of@lang-c 
-l.361 }
-       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \forest@id@of@lang-c 
-l.361 }
-       
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.361 }
-       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \global 
-l.361 }
-       
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Missing number, treated as zero.
-<to be read again> 
-                   /
-l.361 }
-       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   /
-l.361 }
-       
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-Missing character: There is no / in font nullfont!
-./epigraphs/epigraph5.tex:361: Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.361 }
-       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \global 
-l.361 }
-       
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Missing number, treated as zero.
-<to be read again> 
-                   \fRsT 
-l.361 }
-       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \fRsT 
-l.361 }
-       
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.361 }
-       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \global 
-l.361 }
-       
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./epigraphs/epigraph5.tex:361: Missing \endcsname inserted.
-<to be read again> 
-                   \fRsT 
-l.361 }
-       
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-Missing character: There is no / in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-<argument> ...forest@id@of@lang-c /name\endcsname 
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
                                                   
-l.361 }
+l.452 }
        
-I'm ignoring this, since I wasn't doing a \csname.
+(That was another \errmessage.)
 
-./epigraphs/epigraph5.tex:361: Extra \endcsname.
-\pgf@shape@interpictureshift ...h@pi@#1\endcsname 
-                                                  \pgfpictureid \else \pgfsy...
-l.361 }
+
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 }
        
-I'm ignoring this, since I wasn't doing a \csname.
-
-Missing character: There is no p in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-
-Package acronym Warning: Acronym `FM' is not defined on input line 361.
+(That was another \errmessage.)
 
 
-Package acronym Warning: Acronym `FM' is not defined on input line 361.
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 }
+       
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 }
+       
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 }
+       
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 }
+       
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 }
+       
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 }
+       
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 }
+       
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 }
+       
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/drop shadow' and I am goi
+ng to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 }
+       
+(That was another \errmessage.)
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[65]
-Overfull \hbox (9.94037pt too wide) in paragraph at lines 361--361
-[]\T1/phv/m/n/14.4 La es-truc-tura del FM mues-tra clara-mente có-mo una asig-natu-ra puede
- []
-
-
-Overfull \hbox (5.30568pt too wide) in paragraph at lines 361--361
-\T1/phv/m/n/14.4 im-parten según dis-tin-tas líneas, en-fo-ques o lengua-jes de im-ple-mentación
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
-
-[66]
-Overfull \hbox (54.80307pt too wide) in paragraph at lines 361--361
-\T1/phv/b/n/17.28 5.1.3 El Rol Du-al de las car-ac-terís-ti-cas (Vari-abil-i-dad Jerárquica) 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 18.0942pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.0942pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [67]
 
-Package acronym Warning: Acronym `SAT' is not defined on input line 361.
-
-
-Package natbib Warning: Citation `benavides2010automated' on page 68 undefined on input line 361.
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
 [68]
+Overfull \hbox (9.94037pt too wide) in paragraph at lines 452--452
+[]\T1/phv/m/n/14.4 La es-truc-tura del FM mues-tra clara-mente có-mo una asig-n
+atu-ra puede
+ []
+
+
+Overfull \hbox (5.30568pt too wide) in paragraph at lines 452--452
+\T1/phv/m/n/14.4 im-parten según dis-tin-tas líneas, en-fo-ques o lengua-jes de
+ im-ple-mentación
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[69]) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex) (./epigraphs/epigraph8.tex)) (./conclusions.tex
+[69]
+Overfull \hbox (54.80307pt too wide) in paragraph at lines 452--452
+\T1/phv/b/n/17.28 5.1.3 El Rol Du-al de las car-ac-terís-ti-cas (Vari-abil-i-da
+d Jerárquica) 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[70]) (./acronyms.tex
+[70]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[71
+[71]
+Overfull \hbox (5.65205pt too wide) in paragraph at lines 452--452
+\T1/phv/m/n/14.4 ios co-mo val-i-dación de con-fig-u-ra-ciones prop-ues-tas por
+ usuar-ios, búsque-
+ []
 
-
-]) (./glossary.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[72
+[72]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[73]) (./epigraphs/epigraph6.tex) (./epigraphs/epigraph7.tex)
+(./epigraphs/epigraph8.tex)) (./conclusions.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[74]) (./acronyms.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[75
+
 
 ]
+Overfull \hbox (9.1359pt too wide) in paragraph at lines 9--10
+[][]\T1/phv/m/n/14.4 Análisis de Do-minio Ori-en-ta-do a Car-ac-terís-ti-cas (\
+T1/phv/m/sl/14.4 Feature-Oriented
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[76
+
+]
+Overfull \hbox (10.1727pt too wide) in paragraph at lines 29--30
+[][]\T1/phv/m/n/14.4 Transferencia de Es-ta-do Rep-re-senta-cional (\T1/phv/m/s
+l/14.4 Rep-re-sen-ta-tion-al State
+ []
+
+
+Overfull \hbox (9.65439pt too wide) in paragraph at lines 30--31
+[][]\T1/phv/m/n/14.4 Atomicidad, Con-sis-ten-cia, Ais-lamien-to, Dura-bil-i-dad
+ (\T1/phv/m/sl/14.4 Atom-ic-i-ty, Con-
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[77]) (./glossary.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[78]
 
 Package enumitem Warning: Negative labelwidth. This does not make much
 (enumitem)                sense, on input line 5.
@@ -4121,13 +2905,15 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[73
+[79
 
 ]
 Overfull \hbox (10.2592pt too wide) in paragraph at lines 28--29
-\T1/phv/m/n/14.4 Enfoque dis-eña-do es-pecí-fi-ca-mente para un propósi-to par-tic-u-lar, sin seguir
+\T1/phv/m/n/14.4 Enfoque dis-eña-do es-pecí-fi-ca-mente para un propósi-to par-
+tic-u-lar, sin seguir
  []
 
 
@@ -4135,19 +2921,22 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[74]
+[80]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[75]
+[81]
 Overfull \hbox (9.00697pt too wide) in paragraph at lines 61--62
-\T1/phv/m/n/14.4 vid-u-al váli-do, re-spetan-do to-das las re-stric-ciones y de-pen-den-cias definidas
+\T1/phv/m/n/14.4 vid-u-al váli-do, re-spetan-do to-das las re-stric-ciones y de
+-pen-den-cias definidas
  []
 
 
@@ -4155,26 +2944,31 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[76]
+[82]
 Overfull \hbox (5.50732pt too wide) in paragraph at lines 76--77
-\T1/phv/m/n/14.4 Estructura cog-ni-ti-va gen-er-al-iza-da que rep-re-sen-ta un pa-trón de movimien-
+\T1/phv/m/n/14.4 Estructura cog-ni-ti-va gen-er-al-iza-da que rep-re-sen-ta un 
+pa-trón de movimien-
  []
 
 
 Overfull \hbox (0.61209pt too wide) in paragraph at lines 79--80
-\T1/phv/m/n/14.4 planes cur-ric-u-lares para re-spon-der a necesi-dades es-pecí-fi-cas sin perder
+\T1/phv/m/n/14.4 planes cur-ric-u-lares para re-spon-der a necesi-dades es-pecí
+-fi-cas sin perder
  []
 
 
 Overfull \hbox (40.83032pt too wide) in paragraph at lines 91--92
-\T1/phv/m/n/14.4 Sistema for-mal de lóg-i-ca que uti-liza vari-ables proposi-cionales (ver-dadero/falso)
+\T1/phv/m/n/14.4 Sistema for-mal de lóg-i-ca que uti-liza vari-ables proposi-ci
+onales (ver-dadero/falso)
  []
 
 
 Overfull \hbox (5.37842pt too wide) in paragraph at lines 91--92
-\T1/phv/m/n/14.4 y op-er-adores lógi-cos (AND, OR, NOT, im-pli-ca) para rep-re-sen-tar y analizar
+\T1/phv/m/n/14.4 y op-er-adores lógi-cos (AND, OR, NOT, im-pli-ca) para rep-re-
+sen-tar y analizar
  []
 
 
@@ -4182,11 +2976,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[77]
+[83]
 Overfull \hbox (2.6131pt too wide) in paragraph at lines 94--95
-\T1/phv/m/n/14.4 Recorrido per-son-al-iza-do de apren-diza-je que un es-tu-di-ante sigue a través
+\T1/phv/m/n/14.4 Recorrido per-son-al-iza-do de apren-diza-je que un es-tu-di-a
+nte sigue a través
  []
 
 
@@ -4194,36 +2990,184 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[78]
+[84]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[79]) (./bibliographic_references.tex
+[85]) (./bibliographic_references.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 18.0942pt, for example:
 (fancyhdr)                \setlength{\headheight}{18.0942pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+
 (fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
 
-[80] (./main.bbl))
+[86] (./main.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+[]\T1/phv/m/n/14.4 AcademiaLab.  Línea de pro-duc-tos de soft-
+ []
 
-Package natbib Warning: There were undefined citations.
 
-(./main.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+\T1/phv/m/n/14.4 ware.  URL []$\T1/cmtt/m/n/14.4 https : / / academia-[]lab . c
+om / enciclopedia /
+ []
+
+
+Underfull \hbox (badness 1460) in paragraph at lines 9--13
+\T1/cmtt/m/n/14.4 linea-[]de-[]productos-[]de-[]software/$[]\T1/phv/m/n/14.4 . 
+ Re-cu-per-a-do 25 de oc-tubre
+ []
+
+
+Underfull \hbox (badness 2261) in paragraph at lines 15--19
+[]\T1/phv/m/n/14.4 Anthology Inc.  Black-board learn: Platafor-ma para la en-se
+ñan-
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 15--19
+\T1/phv/m/n/14.4 za y el apren-diza-je, 2025.  URL []$\T1/cmtt/m/n/14.4 https :
+ / / www . anthology . com /
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[87
+
+
+]
+Underfull \hbox (badness 6542) in paragraph at lines 83--87
+[]\T1/phv/m/n/14.4 Microsoft Cor-po-ra-tion.  Vi-su-al stu-dio code.  []$\T1/cm
+tt/m/n/14.4 https : / / code .
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[88]
+Underfull \hbox (badness 10000) in paragraph at lines 127--130
+[]\T1/phv/m/n/14.4 GeeksforGeeks.  What is fea-ture en-gi-neer-ing?  URL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--130
+[]$\T1/cmtt/m/n/14.4 https : / / www . geeksforgeeks . org / machine-[]learning
+ /
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 137--140
+\T1/phv/m/sl/14.4 la Re-al Academia de Doc-tores. Obtenido de https://www. rade
+.
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 162--166
+[]\T1/phv/m/n/14.4 IBM Cor-po-ra-tion.  What is an in-te-grat-ed de-vel-op-ment
+ en-vi-ron-
+ []
+
+
+Underfull \hbox (badness 3557) in paragraph at lines 162--166
+\T1/phv/m/n/14.4 ment (ide)?, 2023.  URL []$\T1/cmtt/m/n/14.4 https : / / www .
+ ibm . com / think / topics /
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[89]
+Underfull \hbox (badness 1024) in paragraph at lines 191--195
+[]\T1/phv/m/n/14.4 Ingeniería de Soft-ware.  Líneas de pro-duc-to soft-ware par
+a acel-
+ []
+
+
+Underfull \hbox (badness 1881) in paragraph at lines 219--223
+[]\T1/phv/m/n/14.4 Visual Paradigm In-ter-na-tion-al Ltd.  Vi-su-al paradigm do
+c-u-men-ta-
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[90]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[91]
+Underfull \hbox (badness 2221) in paragraph at lines 343--346
+\T1/phv/m/sl/14.4 Iberoamer-i-cana de Tec-nologías del Apren-diza-je\T1/phv/m/n
+/14.4 , 14(3):112--120,
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[92]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[93]))
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 18.0942pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.0942pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.0942pt}.
+
+[94] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -4234,22 +3178,36 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D352C12DD4EF54008B4EB9D5F8A79DAA;8340.
+(rerunfilecheck)             Before: C7FF71FF5841F35DE739F4B84989D4ED;8545
+(rerunfilecheck)             After:  2BF00A97865140A7E6D70C846B551B0D;8545.
  ) 
 Here is how much of TeX's memory you used:
- 38820 strings out of 476182
- 811292 string characters out of 5795594
- 1953975 words of memory out of 5000000
- 60017 multiletter control sequences out of 15000+600000
- 600018 words of font info for 77 fonts, out of 8000000 for 9000
+ 39321 strings out of 476182
+ 821245 string characters out of 5795594
+ 1949975 words of memory out of 5000000
+ 60380 multiletter control sequences out of 15000+600000
+ 609296 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 144i,14n,153p,1624b,2737s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (86 pages, 558606 bytes).
+ 145i,14n,146p,1581b,2314s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{section*.10} has been referenced but does not exist
+, replaced by a fixed one
+
+ </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk>
+ </home/jose/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1440.600pk>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/hel
+vetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8
+a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (101 pages, 629774 bytes).
 PDF statistics:
- 651 PDF objects out of 1000 (max. 8388607)
- 521 compressed objects within 6 object streams
- 238 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1649 PDF objects out of 1728 (max. 8388607)
+ 1449 compressed objects within 15 object streams
+ 363 named destinations out of 1000 (max. 500000)
+ 327 words of extra memory for PDF output out of 10000 (max. 10000000)
 
