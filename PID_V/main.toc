@@ -1,0 +1,57 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Introducción}{1}{section*.9}%
+\contentsline {chapter}{\numberline {1}Desarrollo}{8}{chapter.1}%
+\contentsline {section}{Introducción}{8}{section*.14}%
+\contentsline {section}{\numberline {1.1}Fundamentación Teórica}{8}{epigraph.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Conceptos asociados al tema}{9}{subepigraph.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1.1}Ingeniería de Líneas de Productos de Software (SPL)}{9}{subsubepigraph.1.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1.2}Modelos de Características}{11}{subsubepigraph.1.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.1.3}Meta-modelo Educativo}{17}{subsubepigraph.1.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.1.4}Gestión de la variabilidad}{18}{subsubepigraph.1.1.1.4}%
+\contentsline {subsubsection}{\numberline {1.1.1.5}Ingeniería de Software Educativo}{20}{subsubepigraph.1.1.1.5}%
+\contentsline {subsubsection}{\numberline {1.1.1.6}Configurador curricular}{22}{subsubepigraph.1.1.1.6}%
+\contentsline {section}{\numberline {1.2}Análisis del mercado}{24}{epigraph.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Panorama General del Mercado}{24}{subepigraph.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Análisis de Soluciones Existentes}{24}{subepigraph.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Oportunidades de Mercado Identificadas}{27}{subepigraph.1.2.3}%
+\contentsline {section}{\numberline {1.3}Metodología de desarrollo del software}{29}{epigraph.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Metodologías de desarrollo de software tradicionales}{30}{subepigraph.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Metodologías de desarrollo de software ágiles}{31}{subepigraph.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Elección de la metodología}{32}{subepigraph.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Programación Extrema}{35}{subepigraph.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.4.1}Artefactos}{38}{subsubepigraph.1.3.4.1}%
+\contentsline {section}{\numberline {1.4}Herramientas y tecnologías}{39}{epigraph.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Lenguaje de Programación}{39}{subepigraph.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Framework de Desarrollo}{42}{subepigraph.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Base de Datos y Gestor de Base de Datos}{44}{subepigraph.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Contenerización y Orquestación}{46}{subepigraph.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Almacenamiento en Memoria, Caching y Mensajería}{48}{subepigraph.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.6}Almacenamiento de Archivos y Objetos}{50}{subepigraph.1.4.6}%
+\contentsline {subsection}{\numberline {1.4.7}Procesamiento Asíncrono}{51}{subepigraph.1.4.7}%
+\contentsline {subsection}{\numberline {1.4.8}Algoritmos, Motor de Reglas y Validación}{55}{subepigraph.1.4.8}%
+\contentsline {subsection}{\numberline {1.4.9}Gestor de dependencias}{58}{subepigraph.1.4.9}%
+\contentsline {subsection}{\numberline {1.4.10}Herramienta para el control de versiones}{59}{subepigraph.1.4.10}%
+\contentsline {subsection}{\numberline {1.4.11}Lenguaje de modelados}{60}{subepigraph.1.4.11}%
+\contentsline {subsection}{\numberline {1.4.12}Herramienta CASE}{61}{subepigraph.1.4.12}%
+\contentsline {subsection}{\numberline {1.4.13}Herramientas para diseñar y ejecutar pruebas}{62}{subepigraph.1.4.13}%
+\contentsline {subsection}{\numberline {1.4.14}Entorno Integrado de Desarrollo}{63}{subepigraph.1.4.14}%
+\contentsline {section}{\numberline {1.5}Propuesta de Solución}{64}{epigraph.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Modelo SPL y su Correspondencia con la Propuesta}{65}{subepigraph.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.1.1}Justificación del uso de los \ac {FM}}{66}{subsubepigraph.1.5.1.1}%
+\contentsline {subsubsection}{\numberline {1.5.1.2}La Analogía Formal Curricular}{67}{subsubepigraph.1.5.1.2}%
+\contentsline {subsubsection}{\numberline {1.5.1.3}El Rol Dual de las características (Variabilidad Jerárquica)}{73}{subsubepigraph.1.5.1.3}%
+\contentsline {subsubsection}{\numberline {1.5.1.4}Importancia Estratégica y Propósito en la Solución}{74}{subsubepigraph.1.5.1.4}%
+\contentsline {subsection}{\numberline {1.5.2}Arquitectura conceptual}{74}{subepigraph.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Componentes funcionales del sistema}{76}{subepigraph.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}Patrones de Diseño}{77}{subepigraph.1.5.4}%
+\contentsline {subsection}{\numberline {1.5.5}Modelo de Datos}{82}{subepigraph.1.5.5}%
+\contentsline {subsubsection}{\numberline {1.5.5.1}Entidad: Feature Models}{83}{subsubepigraph.1.5.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.5.2}Entidad: Feature Model Versions}{85}{subsubepigraph.1.5.5.2}%
+\contentsline {subsubsection}{\numberline {1.5.5.3}Entidad: Features}{87}{subsubepigraph.1.5.5.3}%
+\contentsline {subsubsection}{\numberline {1.5.5.4}Entidad: Feature Groups}{90}{subsubepigraph.1.5.5.4}%
+\contentsline {subsubsection}{\numberline {1.5.5.5}Entidad: Feature Relations}{92}{subsubepigraph.1.5.5.5}%
+\contentsline {subsubsection}{\numberline {1.5.5.6}Entidad: Constraints}{93}{subsubepigraph.1.5.5.6}%
+\contentsline {subsubsection}{\numberline {1.5.5.7}Entidad: Configurations}{95}{subsubepigraph.1.5.5.7}%
+\contentsline {chapter}{Conclusiones}{98}{section*.101}%
+\contentsline {chapter}{Acrónimos}{100}{chapter*.104}%
+\contentsline {chapter}{Glosario}{104}{chapter*.105}%
