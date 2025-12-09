@@ -149,50 +149,72 @@
             variabilidad del FM:
             \begin{figure}[H]
             \centering
-            \resizebox{\textwidth}{!}{%
-                \begin{forest}
-                    for tree={
-                        draw,
-                        rounded corners,
-                        font=\footnotesize,
-                        node options={align=center},
-                        anchor=north,
-                        parent anchor=south,
-                        l sep=10pt,
-                        s sep=5pt,
-                        edge={-latex}
-                    }
-                    [Estructura de Datos I
-                        [Fundamentos\\y Análisis]
-                        [Estructuras\\Lineales
-                            [Arreglos]
-                            [Listas\\Enlazadas]
-                            [Listas\\Circulares\\(Opc.)]
-                        ]
-                        [Pilas
-                            [Implementación\\(XOR)
-                                [Con\\Arreglos]
-                                [Con\\Listas]
-                            ]
-                        ]
-                        [Colas
-                            [FIFO]
-                            [Prioridad]
-                            [Deque\\(Opc.)]
-                        ]
-                        [Árboles\\Binarios]
-                        [Algoritmos\\Ordenamiento]
-                        [Lenguaje\\(XOR)
-                            [C/C++]
-                            [Java]
-                            [Python]
-                        ]
-                    ]
-                    \end{forest}%
+
+            % ==== Estilos FM ====
+            \tikzset{
+                optional/.style={circle, draw, inner sep=1.2pt, fill=white},
+                mandatory/.style={circle, draw, inner sep=1.2pt, fill=black},
+                xor arc/.style={draw, thick},
             }
+
+            \resizebox{\textwidth}{!}{%
+            \begin{forest}
+            for tree={
+                draw,
+                rounded corners,
+                font=\footnotesize,
+                node options={align=center},
+                anchor=north,
+                parent anchor=south,
+                l sep=12pt,
+                s sep=7pt,
+                edge={-latex}
+            }
+
+            [Estructura de Datos I
+                % ======================================================
+                [Fundamentos\\y Análisis, label={below:{\tikz\node[mandatory]{};}}]
+                
+                % ======================================================
+                [Estructuras\\Lineales
+                    [Arreglos, label={below:{\tikz\node[mandatory]{};}}]
+                    [Listas\\Enlazadas, label={below:{\tikz\node[mandatory]{};}}]
+                    [Listas\\Circulares, label={below:{\tikz\node[optional]{};}}]
+                ]
+                
+                % ======================================================
+                [Pilas, name=pilas
+                    [Implementación
+                        [Con\\Arreglos, name=pilas-arr]
+                        [Con\\Listas, name=pilas-list]
+                    ]
+                ]
+                
+                % ======================================================
+                [Colas
+                    [FIFO, label={below:{\tikz\node[mandatory]{};}}]
+                    [Prioridad, label={below:{\tikz\node[mandatory]{};}}]
+                    [Deque, label={below:{\tikz\node[optional]{};}}]
+                ]
+                
+                % ======================================================
+                [Árboles\\Binarios, label={below:{\tikz\node[mandatory]{};}}]
+                
+                % ======================================================
+                [Algoritmos\\Ordenamiento, label={below:{\tikz\node[mandatory]{};}}]
+                
+            ]
+            % Arcos XOR dibujados después del árbol
+            \draw[xor arc] (pilas-arr.south) ++(0,-3pt) arc[start angle=180, end angle=0, radius=15pt];
+            \draw[xor arc] (lang-c.south) ++(0,-3pt) arc[start angle=180, end angle=0, radius=30pt];
+            \end{forest}%
+            } % end resize
+
             \caption{Representación simplificada del \ac{FM} de la asignatura Estructura de Datos I.}
             \label{fig:fm_data_structures}
             \end{figure}
+
+
 
             Este caso permite demostrar cómo un curso académico, lejos de ser un 
             listado estático de contenidos, posee una estructura jerárquica, 
@@ -330,10 +352,11 @@
         formalidad es crítica y enfoques heurísticos cuando la exploración 
         requiere eficiencia y adaptabilidad.
     }
+
+
+    hablaremos en un sub epigrafe con el siguiente tema:
+    Arquitectura conceptual de la propuesta
+    Patrones de diseños
+    Estandares de códigos
 }
 
-
-hablaremos en un sub epigrafe con el siguiente tema:
-Arquitectura conceptual de la propuesta
-Patrones de diseños
-Estandares de códigos

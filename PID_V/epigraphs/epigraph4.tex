@@ -543,6 +543,54 @@
         con motores lógicos especializados basados en SAT/SMT para garantizar 
         corrección formal y escalabilidad en los análisis.
 
+        Para validar y generar configuraciones curriculares consistentes, 
+        se adoptó por un motor lógico basado en técnicas de satisfacibilidad 
+        booleana (SAT) y resolución de restricciones (CSP). Estas técnicas son exactas, 
+        determinísticas y ampliamente empleadas en entornos SPL industriales. 
+        Librerías como PySAT (python-sat) y Z3 Solver permiten representar 
+        cardinalidades, dependencias, exclusiones y restricciones complejas entre 
+        características, garantizando un análisis consistente independientemente del 
+        tamaño del modelo.
+
+        Para la validación formal del FM se hará uso de
+        \textbf{PySAT}, un \textit{toolkit} industrial que integra múltiples solucionadores 
+        SAT de alto rendimiento (MiniSAT, Glucose, Lingeling, Maple, entre otros).
+        PySAT permite formular restricciones curriculares como cláusulas booleanas 
+        y delegar su resolución a técnicas probadas a nivel de investigación y 
+        producción \citep{pysat2018}. Su uso mejora la escalabilidad del sistema, 
+        ya que permite manejar modelos con miles de dependencias de forma 
+        eficiente, además de habilitar análisis avanzados como detección de 
+        dependencias redundantes, pruebas de satisfacibilidad incremental y 
+        extracción de explicaciones (UNSAT cores), funcionalidad útil para 
+        asistir al usuario en la corrección de configuraciones inválidas.
+
+        Los solucionadores \textbf{SAT-based} han demostrado ser una técnica 
+        altamente efectiva en Ingeniería de Líneas de Productos (SPL) para la 
+        verificación automática de configuraciones \citep{benavides2010a}. Su 
+        aplicación consiste en reducir el Modelo de Características (FM) a una 
+        fórmula booleana y comprobar su satisfacibilidad mediante algoritmos 
+        especializados. Este enfoque es determinista, completo y garantiza la 
+        detección de inconsistencias globales, no sólo locales. A diferencia de 
+        técnicas heurísticas, los solucionadores SAT permiten decisiones exactas, 
+        prueba de imposibilidad, generación de configuraciones alternativas, 
+        evaluación de cardinalidades y análisis de impacto ante cambios, 
+        aportando rigor matemático y soporte computacional sólido para la 
+        variabilidad curricular.
+
+        Mientras los solucionadores SAT determinan si una configuración es 
+        válida o no, el uso de técnicas \textbf{Max-SAT} permite optimizar 
+        soluciones, seleccionar variantes preferidas y resolver conflictos 
+        minimizando el número de violaciones. El solucionador Z3, desarrollado 
+        por Microsoft Research, soporta \textbf{Max-SAT}, SMT 
+        (Satisfiability Modulo Theories) y razonamiento híbrido, lo que lo 
+        convierte en una herramienta idónea para el análisis curricular 
+        \citep{z3_2008}. Esto permite no sólo verificar configuraciones, 
+        sino sugerir alternativas cercanas a las decisiones originales del 
+        usuario, resolver conflictos automáticamente y explorar escenarios de 
+        “mejor esfuerzo” cuando no existe una solución exacta. En términos 
+        prácticos, Max-SAT habilita un sistema inteligente que auxilia al 
+        gestor curricular en decisiones complejas, proporcionando soluciones 
+        justificadas y transparentes.
     }
 
     
