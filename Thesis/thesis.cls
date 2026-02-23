@@ -8,9 +8,9 @@
 %% 
 %% This is a generated file.
 %% 
-%% Copyright (C) 2015 by Hass�n Lombera Rodr�guez <hlombera@uci.cu>
+%% Copyright (C) 2015 by Hassï¿½n Lombera Rodrï¿½guez <hlombera@uci.cu>
 %% Maintainers: Luis Guillermo Silva Rojas <lgsilva@uci.cu>
-%%              Rub�n Alcolea N��ez <ralcolea@uci.cu>
+%%              Rubï¿½n Alcolea Nï¿½ï¿½ez <ralcolea@uci.cu>
 %% 
 %% This file may be distributed and/or modified under the conditions of
 %% the LaTeX Project Public License, either version 1.3c of this license
@@ -24,6 +24,7 @@
 %% ==========================================================================
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesClass{thesis}[2015/07/11 v1.0.1 thesis template for the University of Computer Science]
+\makeatletter
 \LoadClass[11pt]{report} % set the openright option if you want each chapter starts on odd(right) pages
 \RequirePackage{fancyhdr}
 \RequirePackage{ifthen}
@@ -63,7 +64,7 @@
 \ProcessOptions\relax
 \RequirePackage{geometry}
 
-\RequirePackage[latin1]{inputenc}
+\RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{graphicx}
 \graphicspath{{images/}{Images/}}
@@ -72,16 +73,11 @@
 \def\lang{english}
 \DeclareOption{spanish}
 {%
-\PassOptionsToPackage{spanish, es-tabla}{babel}%
+\PassOptionsToPackage{spanish}{babel}%
 \def\lang{}
 }
 \ProcessOptions\relax
 \RequirePackage[\lang]{babel}[2014/09/25]
-\DeclareOption{spanish}
-{%
-\decimalpoint
-}
-\ProcessOptions\relax
 \RequirePackage{datetime}
 \RequirePackage{enumitem}
 \setlist{noitemsep}
@@ -125,12 +121,22 @@
 \RequirePackage[framemethod=tikz, hidealllines=true,roundcorner=10pt]{mdframed}[2013/07/01]
 
 \RequirePackage{lipsum}
-\renewcommand\lips@dolipsum{% For making lipsum compatible with babel spanish
-  \ifnum\value{lips@count}<\lips@max\relax
-    \addtocounter{lips@count}{1}%
-    \csname lipsum@\romannumeral\c@lips@count\endcsname
-    \lips@dolipsum
-  \fi
+\makeatletter
+\providecommand{\ChangeLipsumPar}{}
+\@ifundefined{AddEverypageHook}{%
+  \providecommand{\AddEverypageHook}[1]{\AddToHook{shipout/background}{#1}}%
+}{}
+\@ifundefined{@sc@wm@stampfalse}{\newcommand{\@sc@wm@stampfalse}{}}{}
+% Compatibilidad con versiones antiguas/moderna de lipsum:
+% en versiones recientes \lips@dolipsum ya no existe.
+\@ifundefined{lips@dolipsum}{}{
+  \renewcommand\lips@dolipsum{% For making lipsum compatible with babel spanish
+    \ifnum\value{lips@count}<\lips@max\relax
+      \addtocounter{lips@count}{1}%
+      \csname lipsum@\romannumeral\c@lips@count\endcsname
+      \lips@dolipsum
+    \fi
+  }
 }
 
 \newbool{noloa}
@@ -142,8 +148,8 @@
 \DeclareOption{nolol}{\booltrue{nolol}}\ProcessOptions
 
 \newcommand{\eqIntRef}[2]{(\ref{#1}-\ref{#2})}
-\renewcommand{\appendixtocname}{Ap�ndices}
-\renewcommand{\appendixpagename}{Ap�ndices}
+\renewcommand{\appendixtocname}{Apï¿½ndices}
+\renewcommand{\appendixpagename}{Apï¿½ndices}
 
 \newcommand{\ucicenter}[1]
 {
@@ -181,7 +187,7 @@
 
 \newcommand{\@logoFoot}
 {
-\textsc{\large Universidad de las Ciencias Inform�ticas}     \\
+\textsc{\large Universidad de las Ciencias Informï¿½ticas}     \\
 \textsc
 {\large
 \ifx\@center\@undefined\relax
@@ -197,8 +203,8 @@ Facultad \@facultyNum} \\
 \newcommand{\@doctypeText}
 {
 \centering
-{\bfseries Trabajo de diploma para optar por el t�tulo de
-Ingeniero en Ciencias Inform�ticas }
+{\bfseries Trabajo de diploma para optar por el tï¿½tulo de
+Ingeniero en Ciencias Informï¿½ticas }
 }
 
 \newcommand{\doctype}[1]
@@ -396,8 +402,8 @@ Ingeniero en Ciencias Inform�ticas }
 \newcommand{\introduction}
 {
 \phantomsection
-\chapter*{Introducci�n  \markboth{\slshape INTRODUCCI�N}{\slshape INTRODUCCI�N}}
-\addcontentsline{toc}{chapter}{Introducci�n}
+\chapter*{Introducciï¿½n  \markboth{\slshape INTRODUCCIï¿½N}{\slshape INTRODUCCIï¿½N}}
+\addcontentsline{toc}{chapter}{Introducciï¿½n}
 }
 \newcommand{\conclusions}
 {
@@ -408,7 +414,7 @@ Ingeniero en Ciencias Inform�ticas }
 \makeglossaries
 \newcommand{\newacronymeng}[3]
 {
-\newacronym[first={\glsentrylong{\glslabel} (\glsentryshort{\glslabel}, por sus siglas en ingl�s)}]{#1}{#2}{#3}
+\newacronym[first={\glsentrylong{\glslabel} (\glsentryshort{\glslabel}, por sus siglas en inglï¿½s)}]{#1}{#2}{#3}
 }
 \renewcommand*{\glsclearpage}{\clearpage} % it prevents the glossaries package to start in odd pages always
 \newcommand{\suggestions}
@@ -514,8 +520,8 @@ Ingeniero en Ciencias Inform�ticas }
 
 \renewcommand{\listalgorithmname}{Lista de algoritmos}
 \floatname{algorithm}{Algoritmo}
-\renewcommand{\lstlistingname}{C�digo fuente}
-\renewcommand{\lstlistlistingname}{Lista de c�digos fuentes}
+\renewcommand{\lstlistingname}{Cï¿½digo fuente}
+\renewcommand{\lstlistlistingname}{Lista de cï¿½digos fuentes}
 
 \newcommand{\CC}[1][\tiny]{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{#1\bf ++}}}
 \definecolor{strcolor}{RGB}{163,21,21} % This is the Visual Studio color for strings.
@@ -778,13 +784,13 @@ showstringspaces=false,      % Leerzeichen in Strings anzeigen ?
   breaklines=true,
   % German umlauts
   literate=%
-  {�}{{\"O}}1
-  {�}{{\"A}}1
-  {�}{{\"U}}1
-  {�}{{\ss}}1
-  {�}{{\"u}}1
-  {�}{{\"a}}1
-  {�}{{\"o}}1
+  {ï¿½}{{\"O}}1
+  {ï¿½}{{\"A}}1
+  {ï¿½}{{\"U}}1
+  {ï¿½}{{\ss}}1
+  {ï¿½}{{\"u}}1
+  {ï¿½}{{\"a}}1
+  {ï¿½}{{\"o}}1
 }
 
 \newcommand{\@pagelimit}{80}
@@ -878,7 +884,7 @@ sortlocale=es_ES]{biblatex}[2014/06/25]
     pdfcreator={\LaTeX},          %creator of the document
     pdfkeywords={\@keywords},     %list of keywords
     pdfnewwindow=true,            %links in new window
-    plainpages=false,             %make page anchors using the formatted form of the page number. With this option, hyperref writes different anchors for pages �ii� and �2�
+    plainpages=false,             %make page anchors using the formatted form of the page number. With this option, hyperref writes different anchors for pages ï¿½iiï¿½ and ï¿½2ï¿½
 }
 
 \DeclareOption{print}
@@ -888,7 +894,7 @@ sortlocale=es_ES]{biblatex}[2014/06/25]
 hidelinks
 }
 \renewcommand{\@predefensetext}{\resizebox{!}{12pt}{\textcolor{gray!60}
-{Pre-defensa [versi�n de impresi�n]}}}
+{Pre-defensa [versiï¿½n de impresiï¿½n]}}}
 }
 \ProcessOptions
 }
@@ -931,11 +937,11 @@ hidelinks
 {
 \clearpage
 \thispagestyle{empty}
-\chapter*{Declaraci�n de autor�a}
+\chapter*{Declaraciï¿½n de autorï¿½a}
 
-Declaramos ser autores de la presente tesis y reconocemos a la Universidad de las Ciencias Inform�ticas los derechos patrimoniales sobre esta, con car�cter exclusivo.\\
+Declaramos ser autores de la presente tesis y reconocemos a la Universidad de las Ciencias Informï¿½ticas los derechos patrimoniales sobre esta, con carï¿½cter exclusivo.\\
 
-Para que as� conste firmamos la presente a los \underline{\hspace{0.7cm}} d�as del mes de \underline{\hspace{1.7cm}} del a�o \underline{\hspace{1.3cm}}.
+Para que asï¿½ conste firmamos la presente a los \underline{\hspace{0.7cm}} dï¿½as del mes de \underline{\hspace{1.7cm}} del aï¿½o \underline{\hspace{1.3cm}}.
 
 \newcounter{itemscnt}
 \setcounter{itemscnt}{0}
@@ -1120,21 +1126,21 @@ Para que as� conste firmamos la presente a los \underline{\hspace{0.7cm}} d�as d
 \multicolumn{2}{|l|}{\colorentry{\textbf{Historia de usuario}}}
 \endfirsthead
 
-\caption[]{Continuaci�n de la p�gina anterior}
+\caption[]{Continuaciï¿½n de la pï¿½gina anterior}
 \endhead
 
-\multicolumn{2}{r}{{Contin�a en la pr�xima p�gina}} \\
+\multicolumn{2}{r}{{Continï¿½a en la prï¿½xima pï¿½gina}} \\
 \endfoot
 
 \hline
 \endlastfoot
 \hhline{*{2}{-}}
-\textbf{N�mero:} \thestorycnt & \textbf{Nombre:} \@storyname\\ \hline
+\textbf{Nï¿½mero:} \thestorycnt & \textbf{Nombre:} \@storyname\\ \hline
 \multicolumn{2}{|p{0.97\linewidth}|}{\textbf{Usuario:} \@storyuser} \\ \hline
 \textbf{Prioridad en negocio:} \@storypriority & \textbf{Riesgo en desarrollo:} \@storyrisk\\ \hline
-\textbf{Puntos estimados:} \@storypoints &  \textbf{Iteraci�n asignada:} \@storyiter  \\ \hline
+\textbf{Puntos estimados:} \@storypoints &  \textbf{Iteraciï¿½n asignada:} \@storyiter  \\ \hline
 \multicolumn{2}{|p{0.97\linewidth}|}{\textbf{Programador responsable:} \@storyprogrammer} \\ \hline
-\multicolumn{2}{|p{0.97\linewidth}|}{\textbf{Descripci�n:} \@storydescription}\\ \hline
+\multicolumn{2}{|p{0.97\linewidth}|}{\textbf{Descripciï¿½n:} \@storydescription}\\ \hline
 \multicolumn{2}{|p{0.97\linewidth}|}{\textbf{Observaciones:} \@storyobservation}
 \ifx\@storyinterface\undefined\relax
 \else
@@ -1186,17 +1192,17 @@ Para que as� conste firmamos la presente a los \underline{\hspace{0.7cm}} d�as d
 \multicolumn{2}{|c|}{\colorentry{\textbf{Tarjeta CRC}}}
 \endfirsthead
 
-\caption[]{Continuaci�n de la p�gina anterior}
+\caption[]{Continuaciï¿½n de la pï¿½gina anterior}
 \endhead
 
-\multicolumn{2}{r}{{Contin�a en la pr�xima p�gina}} \\
+\multicolumn{2}{r}{{Continï¿½a en la prï¿½xima pï¿½gina}} \\
 \endfoot
 
 \hline
 \endlastfoot
 \hhline{*{2}{-}}
 \multicolumn{2}{|l|}{\textbf{Clase:} \@crcclass} \\ \hline
-\textbf{Responsabilidad} & \textbf{Colaboraci�n} \\ \hline
+\textbf{Responsabilidad} & \textbf{Colaboraciï¿½n} \\ \hline
 \multicolumn{1}{|p{0.4\linewidth}|}{\vspace{-4ex}\begin{flushleft}\@crcresp \vspace{-2ex}\end{flushleft}} & \multicolumn{1}{p{0.4\linewidth}|}{\vspace{-4ex}\begin{flushleft}\@crccolab \vspace{-2ex}\end{flushleft}}
 \end{longtable}
 }
@@ -1222,17 +1228,17 @@ Para que as� conste firmamos la presente a los \underline{\hspace{0.7cm}} d�as d
 }
 {
 \begin{longtable}[c]{|c|c|m{.45\linewidth}|c|@{}c@{}}
-\caption{Estimaci�n de esfuerzo por historia de usuario}
+\caption{Estimaciï¿½n de esfuerzo por historia de usuario}
 \label{\@effortestlabel}\\ % the return here is mandatory
 \hhline{*{4}{-}}
-\colorentry{\textbf{Iteraci�n}} & \multicolumn{2}{c|}{\colorentry{\textbf{Historias de usuario}}}&  \multicolumn{1}{c|}{\colorentry{\textbf{Puntos estimados (semanas)}}} % & \colorentry{\textbf{Puntos reales}}
+\colorentry{\textbf{Iteraciï¿½n}} & \multicolumn{2}{c|}{\colorentry{\textbf{Historias de usuario}}}&  \multicolumn{1}{c|}{\colorentry{\textbf{Puntos estimados (semanas)}}} % & \colorentry{\textbf{Puntos reales}}
 \endfirsthead
 
-\caption[]{Continuaci�n de la p�gina anterior}
+\caption[]{Continuaciï¿½n de la pï¿½gina anterior}
 \endhead
 
 \cline{1-4}
-\multicolumn{4}{r}{{Contin�a en la pr�xima p�gina}} \\
+\multicolumn{4}{r}{{Continï¿½a en la prï¿½xima pï¿½gina}} \\
 \endfoot
 
 \hhline{*{4}{-}}
@@ -1351,17 +1357,17 @@ Para que as� conste firmamos la presente a los \underline{\hspace{0.7cm}} d�as d
 }
 {
 \begin{longtable}[c]{|c|c|m{.45\linewidth}|c|@{}c@{}}
-\caption{Plan de duraci�n de las iteraciones}
+\caption{Plan de duraciï¿½n de las iteraciones}
 \label{\@iterdurationlabel}\\ % the return here is mandatory
 \hhline{*{4}{-}}
-\colorentry{\textbf{Iteraci�n}} & \multicolumn{2}{c|}{\colorentry{\textbf{Historias de usuario}}}&  \multicolumn{1}{c|}{\colorentry{\textbf{Duraci�n (semanas)}}}
+\colorentry{\textbf{Iteraciï¿½n}} & \multicolumn{2}{c|}{\colorentry{\textbf{Historias de usuario}}}&  \multicolumn{1}{c|}{\colorentry{\textbf{Duraciï¿½n (semanas)}}}
 \endfirsthead
 
-\caption[]{Continuaci�n de la p�gina anterior}
+\caption[]{Continuaciï¿½n de la pï¿½gina anterior}
 \endhead
 
 \cline{1-4}
-\multicolumn{4}{r}{{Contin�a en la pr�xima p�gina}} \\
+\multicolumn{4}{r}{{Continï¿½a en la prï¿½xima pï¿½gina}} \\
 \endfoot
 
 \hhline{*{4}{-}}
@@ -1505,7 +1511,7 @@ Para que as� conste firmamos la presente a los \underline{\hspace{0.7cm}} d�as d
 
 \@clrengtaskcmds
 \set@engtasklabel{#1}
-\set@caption{Tarea de ingenier�a \# \theengtaskcnt}
+\set@caption{Tarea de ingenierï¿½a \# \theengtaskcnt}
 \set@taskcnt{\theengtaskcnt}
 }
 {
@@ -1518,17 +1524,17 @@ Para que as� conste firmamos la presente a los \underline{\hspace{0.7cm}} d�as d
 \multicolumn{2}{|l|}{\colorentry{\textbf{Tarea}}}
 \endfirsthead
 
-\caption[]{Continuaci�n de la p�gina anterior}
+\caption[]{Continuaciï¿½n de la pï¿½gina anterior}
 \endhead
 
-\multicolumn{2}{r}{{Contin�a en la pr�xima p�gina}} \\ \hhline{*{2}{-}}
+\multicolumn{2}{r}{{Continï¿½a en la prï¿½xima pï¿½gina}} \\ \hhline{*{2}{-}}
 \endfoot
 
 \hline
 \endlastfoot
 
 \hhline{*{2}{-}}
-\textbf{N�mero de tarea:} \@taskcnt  & \textbf{N�mero de Historia de usuario:} \@engtaskuserstory \\ \hline
+\textbf{Nï¿½mero de tarea:} \@taskcnt  & \textbf{Nï¿½mero de Historia de usuario:} \@engtaskuserstory \\ \hline
 \multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Nombre de la tarea:} \@engtaskname} \\ \hline
 \textbf{Tipo de tarea:} \@engtasktype  & \textbf{Puntos estimados:} \@engtaskpointestimation \\ \hline
 \textbf{Fecha de inicio:} \displaydate{startdate} &  \textbf{Fecha de fin:} \displaydate{enddate}
@@ -1538,7 +1544,7 @@ Para que as� conste firmamos la presente a los \underline{\hspace{0.7cm}} d�as d
 \\ \hline
 \multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Programador responsable:} \@engtaskprogrammer} \\ \hline
 \fi
-\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci�n:} \@engtaskdescription}\\
+\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripciï¿½n:} \@engtaskdescription}\\
 \end{longtable}
 }
 
@@ -1612,32 +1618,32 @@ Para que as� conste firmamos la presente a los \underline{\hspace{0.7cm}} d�as d
 {
 \@chktestcasecmds
 \begin{longtable}[c] {|l|l|}
-\caption{Prueba de aceptaci�n \# \thetestcasecnt}
+\caption{Prueba de aceptaciï¿½n \# \thetestcasecnt}
 \label{\@testcaselabel}\\ % the return here is mandatory
 
 \hhline{*{2}{-}}
-\multicolumn{2}{|l|}{\colorentry{\textbf{Caso de prueba de aceptaci�n}}}
+\multicolumn{2}{|l|}{\colorentry{\textbf{Caso de prueba de aceptaciï¿½n}}}
 \endfirsthead
 
-\caption[]{Continuaci�n de la p�gina anterior}
+\caption[]{Continuaciï¿½n de la pï¿½gina anterior}
 \endhead
 
-\multicolumn{2}{r}{{Contin�a en la pr�xima p�gina}} \\
+\multicolumn{2}{r}{{Continï¿½a en la prï¿½xima pï¿½gina}} \\
 \endfoot
 
 \hline
 \endlastfoot
 
 \hhline{*{2}{-}}
-\multicolumn{1}{|p{0.4\linewidth}|}{\textbf{C�digo:} \@testcasecode} & \textbf{Historia de usuario:} \@testcaseuserstory\\ \hline
+\multicolumn{1}{|p{0.4\linewidth}|}{\textbf{Cï¿½digo:} \@testcasecode} & \textbf{Historia de usuario:} \@testcaseuserstory\\ \hline
 \multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Nombre:} \@testcasename} \\ \hline
-\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripci�n:} \@testcasedescription} \\ \hline
-\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Condiciones de ejecuci�n:}\vspace{-2ex}
+\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripciï¿½n:} \@testcasedescription} \\ \hline
+\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Condiciones de ejecuciï¿½n:}\vspace{-2ex}
  \begin{flushleft}
 \@testcaseexeccond
 \vspace{-2ex}
 \end{flushleft}} \\ \hline
-\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pasos de ejecuci�n:}\vspace{-2ex}
+\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pasos de ejecuciï¿½n:}\vspace{-2ex}
 \begin{flushleft}\@testcaseexecstep \vspace{-2ex} \end{flushleft}}\\ \hline
 \multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Resultados esperados:} \@testcaseexpresult}
 \end{longtable}
@@ -1646,8 +1652,8 @@ Para que as� conste firmamos la presente a los \underline{\hspace{0.7cm}} d�as d
 \AtEndDocument
 {
 \printglossary
-\printglossary[type=\acronymtype, toctitle=Acr�nimos, title=Acr�nimos]
-\printbibliography[heading=bibintoc, title=Referencias bibliogr�ficas]
+\printglossary[type=\acronymtype, toctitle=Acrï¿½nimos, title=Acrï¿½nimos]
+\printbibliography[heading=bibintoc, title=Referencias bibliogrï¿½ficas]
 \vfill
 \medskip
 \settimeformat{ampmtime}
@@ -1678,7 +1684,7 @@ Para que as� conste firmamos la presente a los \underline{\hspace{0.7cm}} d�as d
 \SetWatermarkLightness{0.9}
 \fboxrule=1pt  % rule width
 \fboxsep=1pt
-\newcommand{\@predefensetext}{\resizebox{!}{15pt}{\fcolorbox{black}{blue!90}{\textcolor{yellow}{Pre-defensa [compilaci�n digital]}}}}
+\newcommand{\@predefensetext}{\resizebox{!}{15pt}{\fcolorbox{black}{blue!90}{\textcolor{yellow}{Pre-defensa [compilaciï¿½n digital]}}}}
 \newcommand\@predefensestamp{%
 \begin{textblock}{2}(-0.09,0.55)
 \begin{rotate}{90}
@@ -1698,6 +1704,7 @@ Para que as� conste firmamos la presente a los \underline{\hspace{0.7cm}} d�as d
 }
 }
 \ProcessOptions\relax
+\makeatother
 \endinput
 %%
 %% End of file `thesis.cls'.

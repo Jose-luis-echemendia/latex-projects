@@ -1,0 +1,155 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Alfadhlani2011}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8cec0eec5ce2ea66c44ec414e7637af0}{%
+           family={Alfadhlani},
+           familyi={A\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=5d0a63b7e10d8f5e3d1d681d086a44e6}{%
+           family={Samadhi},
+           familyi={S\bibinitperiod},
+           given={T.\bibnamedelimi M.\bibnamedelimi A.\bibnamedelimi Ari},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e06c9fea152ebc30ac15a200743cb9d}{%
+           family={Ma'ruf},
+           familyi={M\bibinitperiod},
+           given={Anas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c144e2cde3d4e2601266b2b049cd8fbe}{%
+           family={Toha},
+           familyi={T\bibinitperiod},
+           given={Isa\bibnamedelima Setiasyah},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a6002452eadd26de81d27204d8d94521}
+      \strng{fullhash}{a6002452eadd26de81d27204d8d94521}
+      \strng{bibnamehash}{a6002452eadd26de81d27204d8d94521}
+      \strng{authorbibnamehash}{a6002452eadd26de81d27204d8d94521}
+      \strng{authornamehash}{a6002452eadd26de81d27204d8d94521}
+      \strng{authorfullhash}{a6002452eadd26de81d27204d8d94521}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Assembly sequence planning of a product involves several steps, including generation of precedence constraints, generation of assembly sequences, and selection of assembly sequences. Generation and selection of assembly sequences should be able to guarantee the feasibility of assembly. Assembly will be feasible if there is no collision between components when assembled. Detection of collision-free path of assembly can be done in an automated way. There are a number of collision detection methods that have been developed, but the method requires a complicated process of data geometry analysis. This paper proposes a method for detecting a collision-free path of the assembly component in a more simple way. Geometrical data required, taken from the three-dimensional (3D) solid drawing in the form of stacked drawing in computer-aided design (CAD) systems. Retrieval of geometrical data of components and detection of the collision-free path of an assembly were done in an automated way, directly from the CAD system.}
+      \field{journaltitle}{Journal of Advanced Manufacturing Systems}
+      \field{number}{02}
+      \field{title}{Automatic collision detection for assembly sequence planning using a three-dimensional solid model}
+      \field{volume}{10}
+      \field{year}{2011}
+      \field{pages}{277\bibrangedash 291}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1142/S021968671100220X
+      \endverb
+    \endentry
+    \entry{Mathew2010}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ecc03951ef7cd89faeec128314885d15}{%
+           family={Mathew},
+           familyi={M\bibinitperiod},
+           given={Arun\bibnamedelima Tom},
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4273197adc075592da13534b1cc2d0dd}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={C.S.P.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a2008a2054ab44490c4e337af3b11e94}
+      \strng{fullhash}{a2008a2054ab44490c4e337af3b11e94}
+      \strng{bibnamehash}{a2008a2054ab44490c4e337af3b11e94}
+      \strng{authorbibnamehash}{a2008a2054ab44490c4e337af3b11e94}
+      \strng{authornamehash}{a2008a2054ab44490c4e337af3b11e94}
+      \strng{authorfullhash}{a2008a2054ab44490c4e337af3b11e94}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A mechanical assembly is a composition of interrelated parts. Assembly data base stores the geometric models of indi-vidual parts, the spatial positions and orientations of the parts in the assembly, and the relationships between parts. An assembly of parts can be represented by its liaison which has a description of its relationships between the various parts in the assembly. The problem is to not only make the information available but also use the relevant information for making decisions, especially determination of the assembly sequence plan. The method described in this paper ex-tracts the feature based assembly information from CAD models of products and build up liaisons to facilitate assembly planning applications. The system works on the assumption that the designer explicitly defines joints and mating condi-tions. Further, a computer representation of mechanical assemblies in the form of liaisons is necessary in order to automate the generation of assembly plans. A novel method of extracting the assembly information and representing them in the form of liaisons is presented in this paper.}
+      \field{journaltitle}{Journal of Software Engineering \& Applications}
+      \field{number}{2}
+      \field{title}{A Novel Method of Using API to Generate Liaison Relationships from an Assembly.}
+      \field{volume}{3}
+      \field{year}{2010}
+      \field{pages}{167\bibrangedash 175}
+      \range{pages}{9}
+      \verb{file}
+      \verb Mathew2010.pdf:.\\Doc\\Mathew2010.pdf:PDF;Mathew2010.pdf:Doc\\Mathew2010.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Ou2013}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=816ddd02df4e306741820e0169816624}{%
+           family={Ou},
+           familyi={O\bibinitperiod},
+           given={Li-Ming},
+           giveni={L\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43e8043d875498aa78c40bbb8623fb5b}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Xun},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5dd4528f003252ea5c49b2ce9fcf3626}
+      \strng{fullhash}{5dd4528f003252ea5c49b2ce9fcf3626}
+      \strng{bibnamehash}{5dd4528f003252ea5c49b2ce9fcf3626}
+      \strng{authorbibnamehash}{5dd4528f003252ea5c49b2ce9fcf3626}
+      \strng{authornamehash}{5dd4528f003252ea5c49b2ce9fcf3626}
+      \strng{authorfullhash}{5dd4528f003252ea5c49b2ce9fcf3626}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-4485}
+      \field{journaltitle}{Computer-Aided Design}
+      \field{number}{7}
+      \field{title}{Relationship matrix based automatic assembly sequence generation from a CAD model}
+      \field{volume}{45}
+      \field{year}{2013}
+      \field{pages}{1053\bibrangedash 1067}
+      \range{pages}{15}
+      \verb{doi}
+      \verb http://dx.doi.org/10.1016/j.cad.2013.04.002
+      \endverb
+      \verb{file}
+      \verb Ou2013.pdf:.\\Doc\\Ou2013.pdf:PDF;Ou2013.pdf:Doc\\Ou2013.pdf:PDF
+      \endverb
+      \keyw{Assembly sequence generation}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

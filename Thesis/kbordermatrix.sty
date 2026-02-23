@@ -1,0 +1,16 @@
+% kbordermatrix.sty
+% Minimal, modern-compatible implementation
+\ProvidesPackage{kbordermatrix}[2026/02/22 v1.1 Simple bordered matrices]
+
+\RequirePackage{amsmath}
+\makeatletter
+\newcommand{\kbordermatrix}[1]{%
+  \begingroup
+  \m@th
+  \setlength{\arraycolsep}{2pt}%
+  \left[\begin{array}{*{20}{c}}#1\end{array}\right]%
+  \endgroup
+}
+\makeatother
+
+\endinput
