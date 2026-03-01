@@ -933,7 +933,7 @@ hidelinks
 {
 \clearpage
 \thispagestyle{empty}
-\chapter*{Declaraciï¿½n de autorï¿½a}
+\chapter*{Declaración de auditoría}
 
 Declaramos ser autores de la presente tesis y reconocemos a la Universidad de las Ciencias Informï¿½ticas los derechos patrimoniales sobre esta, con carï¿½cter exclusivo.\\
 
