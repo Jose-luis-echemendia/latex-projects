@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber example"] 1771819395.36995 "example.bcf" "example.bbl" "example" 1771819749.55837 0
-  "example.bcf" 1771819749.26463 108194 c91c6597ec00e4c0bb1b3e75d0c840d2 "pdflatex"
+["biber example"] 1771819395.36995 "example.bcf" "example.bbl" "example" 1772343473.44077 0
+  "example.bcf" 1772343472.92696 108194 c91c6597ec00e4c0bb1b3e75d0c840d2 "pdflatex"
   "example.bib" 1771819378.11817 12747 4dc67a3069e75dd5afcb77df4a8d717d ""
   (generated)
   "example.bbl"
   "example.blg"
   (rewritten before read)
-["pdflatex"] 1771819744.3906 "/home/jose/Escritorio/latex-projects/Thesis/example.tex" "example.pdf" "example" 1771819749.55886 0
+["pdflatex"] 1772343465.6865 "/home/jose/Escritorio/latex-projects/Thesis/example.tex" "example.pdf" "example" 1772343473.44159 0
   "/etc/texmf/web2c/texmf.cnf" 1761542323.73075 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/jose/Escritorio/latex-projects/Thesis/example.tex" 1771818323.23288 1000 c1589956c4e3e1e25669094ee2d0da15 ""
+  "/home/jose/Escritorio/latex-projects/Thesis/example.tex" 1772343462.02982 1053 9d1bcefb68f72a0962fcccf7ce4629cb ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm" 1136768653 3584 929cdff2b7a8c11bd4d49fd68cb0ae70 ""
@@ -352,7 +352,7 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1771469684 6852716 36421896bea30e529ae88c5ec67435cc ""
   "Acronyms.tex" 1771372892.78552 143 38ba23dc28581dfcfef1adc9289660ed ""
   "Anexos/BloqueCoronaReport.pdf" 1459270484 32585 f6dcb9b166373f1eb7befc7ea7378f57 ""
-  "Anexos/code.cpp" 1771818314.7794 5426 9de66ad54b9e1f1f1921a42cc663e7de ""
+  "Anexos/code.cpp" 1771819765.55876 5426 9de66ad54b9e1f1f1921a42cc663e7de ""
   "Appendices.tex" 1771372892.7935 503 5aa960e9c18ba3ca99744758f5a67199 ""
   "Chapter1.tex" 1771372892.79848 1467 d5385526318aa7cf92b5b4a6da827ce5 ""
   "Chapter2.tex" 1771372892.80506 14848 d6f2987026bf08a0232a6f6fe7bf5f3e ""
@@ -364,19 +364,19 @@
   "LogoUCI.eps" 1459270474 359286 4e6ce2f2284e24069f973c06c4379580 ""
   "Suggestions.tex" 1771372892.85133 66 bfde05723de326d96e8ea615eb3ce1b6 ""
   "example.acr" 0 -1 0 ""
-  "example.aux" 1771819749.22862 13675 f18688c493c614426cf61b8709e61ad3 "pdflatex"
+  "example.aux" 1772343472.85996 13675 f18688c493c614426cf61b8709e61ad3 "pdflatex"
   "example.bbl" 1771819396.43551 8167 9510b77a4934969a254798f009386413 "biber example"
   "example.gls" 0 -1 0 ""
-  "example.loa" 1771819749.26685 104 fc03fc8afedcdefd3c7594b1cf2c6a20 "pdflatex"
-  "example.lof" 1771819749.26685 556 185e6978e5f689004bbd5231ec9afae0 "pdflatex"
-  "example.lol" 1771819749.26685 767 3707f692df15029b6e41aac1965e8b89 "pdflatex"
-  "example.lot" 1771819749.26685 2017 fe8c230cf004d116aff2be4ca4f14baf "pdflatex"
-  "example.run.xml" 1771819749.26685 2402 f547c80e6f683a83dc806f3ae9037c80 "pdflatex"
-  "example.tdo" 1771819749.26685 138 d74364c4620afd5c42586503b991217c "pdflatex"
-  "example.tex" 1771818323.23288 1000 c1589956c4e3e1e25669094ee2d0da15 ""
-  "example.toc" 1771819749.26685 1773 46ba0f1707be44da81db6a9f38685ece "pdflatex"
-  "kbordermatrix.sty" 1771818300.80124 357 2cf6729df6e08a84b23512434a5c5c32 ""
-  "thesis.cls" 1771819330.2663 49165 f94ec9afb5b4b44c7b513ddd9fae92fd ""
+  "example.loa" 1772343472.92996 104 fc03fc8afedcdefd3c7594b1cf2c6a20 "pdflatex"
+  "example.lof" 1772343472.92996 556 185e6978e5f689004bbd5231ec9afae0 "pdflatex"
+  "example.lol" 1772343472.92996 767 3707f692df15029b6e41aac1965e8b89 "pdflatex"
+  "example.lot" 1772343472.92996 2017 fe8c230cf004d116aff2be4ca4f14baf "pdflatex"
+  "example.run.xml" 1772343472.92996 2402 f547c80e6f683a83dc806f3ae9037c80 "pdflatex"
+  "example.tdo" 1772343472.92996 138 d74364c4620afd5c42586503b991217c "pdflatex"
+  "example.tex" 1772343462.02982 1053 9d1bcefb68f72a0962fcccf7ce4629cb ""
+  "example.toc" 1772343472.92996 1773 46ba0f1707be44da81db6a9f38685ece "pdflatex"
+  "kbordermatrix.sty" 1771819765.58676 357 2cf6729df6e08a84b23512434a5c5c32 ""
+  "thesis.cls" 1772342539.45734 49130 c914b1f7ba84527289094fbca43a15d8 ""
   (generated)
   "example.acn"
   "example.aux"

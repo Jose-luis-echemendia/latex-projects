@@ -156,13 +156,9 @@
 \def\@center{#1}
 }
 
-\newcommand{\facultynum}[1]
-{
-\ifnum#1>0\relax
-\def\@facultyNum{#1}
-\else
-  \PackageError{Thesis}{The faculty number provided is not a number!}{}
-\fi
+\newcommand{\facultynum}[1]{%
+  % Accept a textual faculty identifier (string) instead of a numeric id
+  \def\@facultyNum{#1}%
 }
 \newcommand{\eqRef}[1]{Ec.~(\ref{#1})}
 \newcommand{\figRef}[1]{Fig.~(\ref{#1})}
@@ -187,7 +183,7 @@
 
 \newcommand{\@logoFoot}
 {
-\textsc{\large Universidad de las Ciencias Informï¿½ticas}     \\
+\textsc{\large Universidad de las Ciencias Informáticas}     \\
 \textsc
 {\large
 \ifx\@center\@undefined\relax
@@ -203,8 +199,8 @@ Facultad \@facultyNum} \\
 \newcommand{\@doctypeText}
 {
 \centering
-{\bfseries Trabajo de diploma para optar por el tï¿½tulo de
-Ingeniero en Ciencias Informï¿½ticas }
+{\bfseries Trabajo de diploma para optar por el título de
+Ingeniero en Ciencias Informáticas }
 }
 
 \newcommand{\doctype}[1]

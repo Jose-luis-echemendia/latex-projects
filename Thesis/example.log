@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.18)  22 FEB 2026 23:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.18)  1 MAR 2026 00:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1186,11 +1186,11 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \glo@main@file=\write5
 \openout5 = `example.glo'.
 
-Package glossaries Info: Writing glossary file example.glo on input line 414.
+Package glossaries Info: Writing glossary file example.glo on input line 410.
 \glo@acronym@file=\write6
 \openout6 = `example.acn'.
 
-Package glossaries Info: Writing glossary file example.acn on input line 414.
+Package glossaries Info: Writing glossary file example.acn on input line 410.
 \c@cntsign=\count425
 \c@cnt=\count426
 \c@authesiscnt=\count427
@@ -1674,14 +1674,11 @@ File: LogoUCI-eps-converted-to.pdf Graphic file (type pdf)
 <use LogoUCI-eps-converted-to.pdf>
 Package pdftex.def Info: LogoUCI-eps-converted-to.pdf  used on input line 27.
 (pdftex.def)             Requested size: 164.41711pt x 127.0467pt.
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 27.
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
-File: ts1txr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `TS1/txr/m/sc' in size <12> not available
-(Font)              Font shape `TS1/txr/m/n' tried instead on input line 27.
+LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10.95> not available
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 27.
+\c@rowcnt=\count577
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 27.
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 27.
@@ -1699,13 +1696,7 @@ File: utxmia.fd 2000/12/15 v3.1
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 27.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10.95> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 27.
-LaTeX Font Info:    Font shape `TS1/txr/b/n' in size <10.95> not available
-(Font)              Font shape `TS1/txr/bx/n' tried instead on input line 27.
-\c@rowcnt=\count577
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 \openout4 = `example.ist'.
 
@@ -1746,7 +1737,10 @@ File: ts1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `TS1/txss/m/n' will be
 (Font)              scaled to size 13.67995pt on input line 27.
-
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 27.
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
+File: ts1txr.fd 2000/12/15 v3.1
+)
 Underfull \hbox (badness 10000) in paragraph at lines 27--27
 
  []
@@ -1766,6 +1760,8 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    Font shape `T1/txr/b/sc' in size <10.95> not available
 (Font)              Font shape `T1/txr/bx/sc' tried instead on input line 2.
+LaTeX Font Info:    Font shape `TS1/txr/b/n' in size <10.95> not available
+(Font)              Font shape `TS1/txr/bx/n' tried instead on input line 3.
 LaTeX Info: Redefining \sptext on input line 16.
 LaTeX Info: Redefining \. on input line 16.
 LaTeX Info: Redefining \% on input line 16.
@@ -1919,7 +1915,7 @@ LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 23.63593pt on input line 1.
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <14.4> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 7.
-<Images/DSC00461.jpg, id=181, 481.8pt x 361.35pt>
+<Images/DSC00461.jpg, id=180, 481.8pt x 361.35pt>
 File: Images/DSC00461.jpg Graphic file (type jpg)
 <use Images/DSC00461.jpg>
 Package pdftex.def Info: Images/DSC00461.jpg  used on input line 17.
@@ -2417,11 +2413,11 @@ Package logreq Info: Writing requests to 'example.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49381 strings out of 476047
- 903059 string characters out of 5792075
+ 49356 strings out of 476047
+ 902689 string characters out of 5792075
  2207975 words of memory out of 5000000
- 70104 multiletter control sequences out of 15000+600000
- 670215 words of font info for 215 fonts, out of 8000000 for 9000
+ 70082 multiletter control sequences out of 15000+600000
+ 661560 words of font info for 191 fonts, out of 8000000 for 9000
  85 hyphenation exceptions out of 8191
  112i,17n,137p,2484b,3165s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -2434,7 +2430,7 @@ pdfTeX warning (dest): name{glo:SCADA} has been referenced but does not exist, r
 pdfTeX warning (dest): name{glo:UCI} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/aurical/JanaSkrivanaSlant.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxbsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/tcxtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on example.pdf (97 pages, 597667 bytes).
+Output written on example.pdf (97 pages, 598181 bytes).
 PDF statistics:
  1015 PDF objects out of 1200 (max. 8388607)
  848 compressed objects within 9 object streams
