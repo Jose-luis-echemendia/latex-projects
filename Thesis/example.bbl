@@ -67,51 +67,6 @@
       \verb 10.1142/S021968671100220X
       \endverb
     \endentry
-    \entry{apel2013feature}{book}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=255851f52a558d3493d6dd761ab4801d}{%
-           family={Apel},
-           familyi={A\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=cfbc58b5f2448df26847afdb306118dd}{%
-           family={Batory},
-           familyi={B\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f9f9d6bb90de0bb1fe7078494e6a675f}{%
-           family={Kästner},
-           familyi={K\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d830f69c86c306314070dbeca1dee53d}{%
-           family={Saake},
-           familyi={S\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{ee414cab4c7f830e15842ba5a234e52e}
-      \strng{fullhash}{ee414cab4c7f830e15842ba5a234e52e}
-      \strng{bibnamehash}{ee414cab4c7f830e15842ba5a234e52e}
-      \strng{authorbibnamehash}{ee414cab4c7f830e15842ba5a234e52e}
-      \strng{authornamehash}{ee414cab4c7f830e15842ba5a234e52e}
-      \strng{authorfullhash}{ee414cab4c7f830e15842ba5a234e52e}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Feature-Oriented Software Product Lines: Concepts and Implementation}
-      \field{year}{2013}
-    \endentry
     \entry{bates2019teaching}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f33ff03bbfdabf2ff6bac2dbe5e3326e}{%
@@ -164,47 +119,6 @@
       \field{title}{Innovación educativa y gestión curricular}
       \field{volume}{2}
       \field{year}{2023}
-    \endentry
-    \entry{guzman2022variabilidad}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=f3f4282d45509dab59684f7578202a20}{%
-           family={Guzmán-Luján},
-           familyi={G\bibinithyphendelim L\bibinitperiod},
-           given={J.\bibnamedelimi F.},
-           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b861a97853e8aad28404b34d9eff35cb}{%
-           family={Delgado-Velasco},
-           familyi={D\bibinithyphendelim V\bibinitperiod},
-           given={J.\bibnamedelimi A.},
-           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c93c72ca3cdbc04d28d9758ae3d849b4}{%
-           family={Amador-Rodezno},
-           familyi={A\bibinithyphendelim R\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{bd464282c29a88caf968a93df22e6d79}
-      \strng{fullhash}{bd464282c29a88caf968a93df22e6d79}
-      \strng{bibnamehash}{bd464282c29a88caf968a93df22e6d79}
-      \strng{authorbibnamehash}{bd464282c29a88caf968a93df22e6d79}
-      \strng{authornamehash}{bd464282c29a88caf968a93df22e6d79}
-      \strng{authorfullhash}{bd464282c29a88caf968a93df22e6d79}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Revista Iberoamericana de Tecnologías del Aprendizaje}
-      \field{number}{1}
-      \field{title}{Modelado de la variabilidad en foros de discusión para sistemas adaptativos educativos}
-      \field{volume}{17}
-      \field{year}{2022}
-      \field{pages}{45\bibrangedash 53}
-      \range{pages}{9}
     \endentry
     \entry{Mathew2010}{article}{}
       \name{author}{2}{}{%
