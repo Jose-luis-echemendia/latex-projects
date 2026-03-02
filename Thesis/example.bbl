@@ -67,6 +67,145 @@
       \verb 10.1142/S021968671100220X
       \endverb
     \endentry
+    \entry{apel2013feature}{book}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=255851f52a558d3493d6dd761ab4801d}{%
+           family={Apel},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cfbc58b5f2448df26847afdb306118dd}{%
+           family={Batory},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9f9d6bb90de0bb1fe7078494e6a675f}{%
+           family={Kästner},
+           familyi={K\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d830f69c86c306314070dbeca1dee53d}{%
+           family={Saake},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{ee414cab4c7f830e15842ba5a234e52e}
+      \strng{fullhash}{ee414cab4c7f830e15842ba5a234e52e}
+      \strng{bibnamehash}{ee414cab4c7f830e15842ba5a234e52e}
+      \strng{authorbibnamehash}{ee414cab4c7f830e15842ba5a234e52e}
+      \strng{authornamehash}{ee414cab4c7f830e15842ba5a234e52e}
+      \strng{authorfullhash}{ee414cab4c7f830e15842ba5a234e52e}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Feature-Oriented Software Product Lines: Concepts and Implementation}
+      \field{year}{2013}
+    \endentry
+    \entry{bates2019teaching}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f33ff03bbfdabf2ff6bac2dbe5e3326e}{%
+           family={Bates},
+           familyi={B\bibinitperiod},
+           given={A.\bibnamedelimi W.},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Tony Bates Associates Ltd}%
+      }
+      \strng{namehash}{f33ff03bbfdabf2ff6bac2dbe5e3326e}
+      \strng{fullhash}{f33ff03bbfdabf2ff6bac2dbe5e3326e}
+      \strng{bibnamehash}{f33ff03bbfdabf2ff6bac2dbe5e3326e}
+      \strng{authorbibnamehash}{f33ff03bbfdabf2ff6bac2dbe5e3326e}
+      \strng{authornamehash}{f33ff03bbfdabf2ff6bac2dbe5e3326e}
+      \strng{authorfullhash}{f33ff03bbfdabf2ff6bac2dbe5e3326e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Teaching in a Digital Age: Guidelines for Designing Teaching and Learning}
+      \field{year}{2019}
+    \endentry
+    \entry{gomez2023}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c7158290e5dff3bacecab0ca8a99fddb}{%
+           family={Gómez},
+           familyi={G\bibinitperiod},
+           given={YA},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c7158290e5dff3bacecab0ca8a99fddb}
+      \strng{fullhash}{c7158290e5dff3bacecab0ca8a99fddb}
+      \strng{bibnamehash}{c7158290e5dff3bacecab0ca8a99fddb}
+      \strng{authorbibnamehash}{c7158290e5dff3bacecab0ca8a99fddb}
+      \strng{authornamehash}{c7158290e5dff3bacecab0ca8a99fddb}
+      \strng{authorfullhash}{c7158290e5dff3bacecab0ca8a99fddb}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Anales de la Real Academia de Doctores. Obtenido de https://www. rade. es/imageslib/PUBLICACIONES/ARTICULOS/V8N3}
+      \field{title}{Innovación educativa y gestión curricular}
+      \field{volume}{2}
+      \field{year}{2023}
+    \endentry
+    \entry{guzman2022variabilidad}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f3f4282d45509dab59684f7578202a20}{%
+           family={Guzmán-Luján},
+           familyi={G\bibinithyphendelim L\bibinitperiod},
+           given={J.\bibnamedelimi F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b861a97853e8aad28404b34d9eff35cb}{%
+           family={Delgado-Velasco},
+           familyi={D\bibinithyphendelim V\bibinitperiod},
+           given={J.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c93c72ca3cdbc04d28d9758ae3d849b4}{%
+           family={Amador-Rodezno},
+           familyi={A\bibinithyphendelim R\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bd464282c29a88caf968a93df22e6d79}
+      \strng{fullhash}{bd464282c29a88caf968a93df22e6d79}
+      \strng{bibnamehash}{bd464282c29a88caf968a93df22e6d79}
+      \strng{authorbibnamehash}{bd464282c29a88caf968a93df22e6d79}
+      \strng{authornamehash}{bd464282c29a88caf968a93df22e6d79}
+      \strng{authorfullhash}{bd464282c29a88caf968a93df22e6d79}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Iberoamericana de Tecnologías del Aprendizaje}
+      \field{number}{1}
+      \field{title}{Modelado de la variabilidad en foros de discusión para sistemas adaptativos educativos}
+      \field{volume}{17}
+      \field{year}{2022}
+      \field{pages}{45\bibrangedash 53}
+      \range{pages}{9}
+    \endentry
     \entry{Mathew2010}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=ecc03951ef7cd89faeec128314885d15}{%
@@ -148,6 +287,71 @@
       \verb Ou2013.pdf:.\\Doc\\Ou2013.pdf:PDF;Ou2013.pdf:Doc\\Ou2013.pdf:PDF
       \endverb
       \keyw{Assembly sequence generation}
+    \endentry
+    \entry{sanchez2020metodologia}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=15752ae2521f27fd5ca52311fe6bd224}{%
+           family={Sánchez},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6cdf5cffc2fd7a6b17c9c0d9e57355e1}{%
+           family={Gutiérrez},
+           familyi={G\bibinitperiod},
+           given={F.\bibnamedelimi L.},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8ba1b1473f0710bfbb8bb848050fd1f6}{%
+           family={Cabrera},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7746d2f36deb77afddd5c45ad8c726ea}
+      \strng{fullhash}{7746d2f36deb77afddd5c45ad8c726ea}
+      \strng{bibnamehash}{7746d2f36deb77afddd5c45ad8c726ea}
+      \strng{authorbibnamehash}{7746d2f36deb77afddd5c45ad8c726ea}
+      \strng{authornamehash}{7746d2f36deb77afddd5c45ad8c726ea}
+      \strng{authorfullhash}{7746d2f36deb77afddd5c45ad8c726ea}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Educational Computing Research}
+      \field{number}{5}
+      \field{title}{Hacia una metodología para la gestión de la variabilidad en planes de estudio de ingeniería de software}
+      \field{volume}{58}
+      \field{year}{2020}
+      \field{pages}{1020\bibrangedash 1045}
+      \range{pages}{26}
+    \endentry
+    \entry{unesco2022}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=24a0ef0a6269be289db4de9570763de3}{%
+           family={{UNESCO}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {UNESCO}%
+      }
+      \strng{namehash}{24a0ef0a6269be289db4de9570763de3}
+      \strng{fullhash}{24a0ef0a6269be289db4de9570763de3}
+      \strng{bibnamehash}{24a0ef0a6269be289db4de9570763de3}
+      \strng{authorbibnamehash}{24a0ef0a6269be289db4de9570763de3}
+      \strng{authornamehash}{24a0ef0a6269be289db4de9570763de3}
+      \strng{authorfullhash}{24a0ef0a6269be289db4de9570763de3}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Reimagining our futures together: A new social contract for education}
+      \field{year}{2022}
     \endentry
   \enddatalist
 \endrefsection
