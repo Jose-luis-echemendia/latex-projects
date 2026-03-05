@@ -1,7 +1,9 @@
 \documentclass[spanish]{thesis} [2015/30/06 v1.0]
 
 \addauthor{Jose Luis Echemendia López}
-\title{Servicio backend para la gestión de la variabilidad en líneas de productos educativos}
+\title{Servicio backend basado en el paradigma de Líneas de 
+Productos de Software y Modelos de Características para la gestión sistemática 
+de la variabilidad curricular en instituciones de Educación Superior}
 \ucicenter{}
 \facultynum{de Tencologías Interactivas}
 \addtutor{MSc. Yadira Ramírez Rodríguez}
@@ -15,17 +17,20 @@
 \acknowledgment{I am greatly indebted to professor John...}
 
 \abstract{
-  En el contexto de la rápida evolución tecnológica, la Educación Superior 
-  enfrenta el desafío de diseñar planes de estudio flexibles que
-  respondan a la demanda de perfiles profesionales especializados.
+  En el contexto de la rápida evolución tecnológica y las transformaciones sociales del siglo XXI, 
+  la Educación Superior enfrenta el desafío de gestionar currículos flexibles que respondan a 
+  demandas cambiantes. 
   Sin embargo, esta tarea se ve constantemente superada por el vertiginoso ritmo del 
   cambio tecnológico, que amenaza con dejar obsoleto cualquier modelo educativo, 
   por más innovador que sea en su concepción, antes de que pueda ser plenamente 
-  implementado y consolidado. 
+  implementado y consolidado. Además, el mantenimiento de la variabilidad curricular 
+  se realiza actualmente mediante prácticas artesanales basadas en documentos estáticos y 
+  procesos manuales, un enfoque que resulta insostenible por su lentitud, propensión a errores 
+  e incapacidad para garantizar la trazabilidad y coherencia de los planes de estudio. 
+
   Esta investigación aborda este problema aplicando los principios de la 
   Ingeniería de Líneas de Productos de Software (SPL) y los Modelos de Características 
   (\textit{Feature Models} - FM) al dominio de la planificación curricular.
-
   El trabajo se centra en el diseño, implementación y validación de un
   \textit{backend} que permita a los gestores académicos modelar currículos
   dando lugar a la variabilidad curricular mediante FMs, con el objetivo de generar
@@ -33,8 +38,7 @@
   RESTful que sirve como interfaz para las operaciones de creación, análisis, 
   validación y configuración de FMs, permitiendo representar características 
   y relaciones de obligatoriedad, optatividad y prerrequisitos como restricciones 
-  formales. Todo esto, es posible mediante un motor de reglas eficiente y un modelo de 
-  datos optimizado que garantiza la consistencia e integridad de los datos.
+  formales.
   
   El resultado principal es un servicio backend especializado que no solo 
   soporta el modelado y la persistencia de FMs adaptados al ámbito
@@ -46,8 +50,7 @@
   de ingeniería de software al dominio educativo.
 }
 
-\keywords{Modelos Característicos, Líneas de Productos de Software, 
-Líneas de Productos Educativos, variabilidad curricular.}
+\keywords{Líneas de Productos Educativos, Líneas de Productos de Software, Modelos Característicos, variabilidad curricular}
 
 \input{Glossary}
 \input{Acronyms}

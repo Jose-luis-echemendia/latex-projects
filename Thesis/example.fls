@@ -860,6 +860,9 @@ INPUT ./Appendices.tex
 INPUT ./Appendices.tex
 INPUT ./Appendices.tex
 INPUT Appendices.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/tcxi.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/tcxi.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtcxi.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xr.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xb.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/t1xb.vf
@@ -892,6 +895,7 @@ INPUT example.aux
 INPUT example.run.xml
 OUTPUT example.run.xml
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/aurical/JanaSkrivanaSlant.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtcxi.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxbsc.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb

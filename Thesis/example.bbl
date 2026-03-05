@@ -94,6 +94,44 @@
       \field{title}{Teaching in a Digital Age: Guidelines for Designing Teaching and Learning}
       \field{year}{2019}
     \endentry
+    \entry{delaguila2014}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f1be19fc8b44b76961499f01c9f10a9a}{%
+           family={Del\bibnamedelima Águila},
+           familyi={D\bibinitperiod\bibinitdelim Á\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0df37d067bc032efb3e879bae6ce9fdf}
+      \strng{fullhash}{0df37d067bc032efb3e879bae6ce9fdf}
+      \strng{bibnamehash}{0df37d067bc032efb3e879bae6ce9fdf}
+      \strng{authorbibnamehash}{0df37d067bc032efb3e879bae6ce9fdf}
+      \strng{authornamehash}{0df37d067bc032efb3e879bae6ce9fdf}
+      \strng{authorfullhash}{0df37d067bc032efb3e879bae6ce9fdf}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{UTCiencia}
+      \field{note}{[citation:1]}
+      \field{number}{3}
+      \field{title}{La gestión por procesos en las Instituciones de Educación Superior}
+      \field{volume}{1}
+      \field{year}{2014}
+      \field{pages}{140\bibrangedash 149}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb https://dialnet.unirioja.es/servlet/articulo?codigo=9596104
+      \endverb
+      \verb{url}
+      \verb https://dialnet.unirioja.es/servlet/articulo?codigo=9596104
+      \endverb
+    \endentry
     \entry{gomez2023}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c7158290e5dff3bacecab0ca8a99fddb}{%
@@ -119,6 +157,59 @@
       \field{title}{Innovación educativa y gestión curricular}
       \field{volume}{2}
       \field{year}{2023}
+    \endentry
+    \entry{gutama2025}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c15ef570d085fae46b1d0b52561987c6}{%
+           family={Gutama},
+           familyi={G\bibinitperiod},
+           given={Jonnathan\bibnamedelima Fabricio},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eda053a8b7855ca3dfab9d1dd313d1ef}{%
+           family={Ortiz\bibnamedelima González},
+           familyi={O\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Jhordi\bibnamedelima Joel},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ba01c696a559226dc699a8a091562ec4}{%
+           family={Moscoso\bibnamedelima Berna},
+           familyi={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Santiago\bibnamedelima Arturo},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58100d7a8bff6796ec93ed123784089d}{%
+           family={Ayabaca\bibnamedelima Landi},
+           familyi={A\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={David\bibnamedelima Santiago},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8465f817ac579dc50532f62928fa0d2f}
+      \strng{fullhash}{8465f817ac579dc50532f62928fa0d2f}
+      \strng{bibnamehash}{8465f817ac579dc50532f62928fa0d2f}
+      \strng{authorbibnamehash}{8465f817ac579dc50532f62928fa0d2f}
+      \strng{authornamehash}{8465f817ac579dc50532f62928fa0d2f}
+      \strng{authorfullhash}{8465f817ac579dc50532f62928fa0d2f}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{South Florida Journal of Development}
+      \field{note}{[citation:4]}
+      \field{title}{Diseño de gestión de procesos para la Secretaria y Gestores de la Unidad Académica de Ingeniería Industria y Construcción de la Universidad Católica de Cuenca}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.46932/sfjdv6n3-004
+      \endverb
+      \verb{urlraw}
+      \verb https://ojs.southfloridapublishing.com/ojs/index.php/jdev/article/view/5334
+      \endverb
+      \verb{url}
+      \verb https://ojs.southfloridapublishing.com/ojs/index.php/jdev/article/view/5334
+      \endverb
     \endentry
     \entry{Mathew2010}{article}{}
       \name{author}{2}{}{%
@@ -243,6 +334,45 @@
       \field{pages}{1020\bibrangedash 1045}
       \range{pages}{26}
     \endentry
+    \entry{soto2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1ff5b254b27a527087a7a9700dbd33bb}{%
+           family={Soto\bibnamedelima Grant},
+           familyi={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1ff5b254b27a527087a7a9700dbd33bb}
+      \strng{fullhash}{1ff5b254b27a527087a7a9700dbd33bb}
+      \strng{bibnamehash}{1ff5b254b27a527087a7a9700dbd33bb}
+      \strng{authorbibnamehash}{1ff5b254b27a527087a7a9700dbd33bb}
+      \strng{authornamehash}{1ff5b254b27a527087a7a9700dbd33bb}
+      \strng{authorfullhash}{1ff5b254b27a527087a7a9700dbd33bb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Electrónica Actualidades Investigativas en Educación}
+      \field{note}{[citation:2]}
+      \field{number}{2}
+      \field{title}{La gestión por procesos como herramienta fundamental en el aseguramiento de la calidad de las carreras universitarias}
+      \field{volume}{22}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 24}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.15517/aie.v22i2.48906
+      \endverb
+      \verb{urlraw}
+      \verb https://www.redalyc.org/journal/447/44770546017/html/
+      \endverb
+      \verb{url}
+      \verb https://www.redalyc.org/journal/447/44770546017/html/
+      \endverb
+    \endentry
     \entry{unesco2022}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=24a0ef0a6269be289db4de9570763de3}{%
@@ -266,6 +396,38 @@
       \field{labeltitlesource}{title}
       \field{title}{Reimagining our futures together: A new social contract for education}
       \field{year}{2022}
+    \endentry
+    \entry{veiga2024}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b8ea86c51773c141aea67ee4ba990e35}{%
+           family={Veiga\bibnamedelima Méndez},
+           familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Antonio\bibnamedelima José},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b8ea86c51773c141aea67ee4ba990e35}
+      \strng{fullhash}{b8ea86c51773c141aea67ee4ba990e35}
+      \strng{bibnamehash}{b8ea86c51773c141aea67ee4ba990e35}
+      \strng{authorbibnamehash}{b8ea86c51773c141aea67ee4ba990e35}
+      \strng{authornamehash}{b8ea86c51773c141aea67ee4ba990e35}
+      \strng{authorfullhash}{b8ea86c51773c141aea67ee4ba990e35}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{UP•NIVERSITY Perspectivas}
+      \field{note}{[citation:3]}
+      \field{title}{Norma ISO 9001 en Universidades: Un Enfoque para Mejorar la Gestión de la Calidad Académica}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://es.linkedin.com/pulse/norma-iso-9001-en-universidades-un-enfoque-para-la-de-veiga-m%C3%A9ndez-q70uf
+      \endverb
+      \verb{url}
+      \verb https://es.linkedin.com/pulse/norma-iso-9001-en-universidades-un-enfoque-para-la-de-veiga-m%C3%A9ndez-q70uf
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
