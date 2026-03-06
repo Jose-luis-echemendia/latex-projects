@@ -1,0 +1,13 @@
+\subsubsection{Ecosistema de herramientas y adopción}
+
+El éxito de un lenguaje de modelado depende en gran medida de la disponibilidad de herramientas que lo soporten. En torno a \ac{UVL} se ha desarrollado un ecosistema software en constante crecimiento:
+
+\begin{itemize}
+    \item \textbf{Parsers y representaciones:} Existen implementaciones del parser para Python y Java, así como un metamodelo Java para la representación de modelos \ac{UVL} en memoria \citep{universalvariabilitylanguage}.
+    
+    \item \textbf{Entornos de desarrollo:} Se ha desarrollado \ac{UVLS}, un \textit{Language Server Protocol} basado en Rust que proporciona funcionalidades de autocompletado, resaltado de sintaxis y análisis en tiempo real para editores como Visual Studio Code. También existe un entorno web de pruebas (\textit{playground}) accesible en línea \citep{loth2023uvls}.
+    
+    \item \textbf{Herramientas de análisis:} El framework \textit{Flama} (antes FLAMA) proporciona capacidades de análisis automatizado para modelos \ac{UVL} en Python, incluyendo operaciones de validación, conteo de configuraciones y explicación de inconsistencias \citep{galindo2023flama, benavides2020python}.
+    
+    \item \textbf{Integración con otras herramientas:} \ac{UVL} ha sido integrado en entornos consolidados como FeatureIDE, así como en herramientas de transformación de modelos como TraVarT, que permite convertir modelos \ac{UVL} a otros formatos como los utilizados por pure::variants \citep{feichtinger2021travart, romano2022bridging}.
+\end{itemize}

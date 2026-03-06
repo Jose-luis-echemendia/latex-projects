@@ -42,7 +42,10 @@ existía intuitivamente en muchas empresas: construir un software base
 (plataforma) para generar rápidamente múltiples productos similares con
 variaciones controladas \citep{academialab_linea_productos}
 
-\textbf{Conceptos Clave de SPL:}
+Para comprender cabalmente el paradigma de \ac{SPLE}, es necesario examinar los conceptos 
+fundamentales que constituyen su base teórica y que permiten articular la gestión 
+de la variabilidad como eje central de la estrategia. Estos conceptos son:
+
 \begin{enumerate}
     \item \textbf{Línea de Productos:} Es la familia completa de sistemas de software
     que pueden ser generados. Representa el espacio de posibilidades
@@ -99,7 +102,7 @@ Productos Educativos", donde un tronco curricular común puede derivar en
 múltiples planes de estudio especializados mediante la gestión explícita de su
 variabilidad.
 
-\subsection{Ingeniería de Líneas de Productos de Software (SPLE)}
+\subsection{Modelos de Características (Feature Models)}
 
 Es necesario contar con un modelo que represente de manera explícita las
 variaciones y opciones disponibles en la línea de productos. Este modelo
@@ -110,10 +113,10 @@ estas relaciones es fundamental para facilitar la comprensión y el análisis
 de la variabilidad en la línea de productos.
 
 El Modelo de Características (\textit{Feature Model} - \ac{FM}) es la técnica de modelado
-central en la Ingeniería de Líneas de Productos de Software. Su formalismo es
+central en \ac{SPLE}. Su formalismo es
 indispensable para pasar de la noción abstracta de variabilidad a una
 representación estructurada y analizable \citep{ptc_feature_models}. 
-Los Modelos de Características fueron formalmente introducidos por \citet{kang1990foda} 
+Los \ac{FM} fueron formalmente introducidos por \citet{kang1990foda} 
 como parte de la metodología \ac{FODA}, un enfoque pionero para la ingeniería de dominios. 
 Desde su concepción, un \ac{FM} ha sido reconocido como el artefacto
 primario para la captura de la variabilidad funcional de un sistema. En esencia,
@@ -121,7 +124,7 @@ un \ac{FM} es un modelo de dominio que no solo documenta las posibles
 funcionalidades, sino que también define las reglas de composición entre ellas
 \citep{gfg_feature_engineering}.
             
-Formalmente, un Modelo de Características se define como un árbol de
+Formalmente, un \ac{FM} se define como un árbol de
 decisiones jerárquico donde cada nodo es una característica (\textit{feature}). Una
 característica se entiende como una unidad de funcionalidad, un requisito, o un
 aspecto distintivo de un sistema, tal como es percibido por el usuario final o el
@@ -129,19 +132,22 @@ analista del dominio.
 
 La estructura del \ac{FM} es un árbol de composición, donde:
 \begin{itemize}
-    \item La Característica Raíz representa el sistema o la línea de producto
+    \item La característica raíz representa el sistema o la línea de producto
     completa (ej., la carrera de Ingeniería Informática).
     \item Las características descendientes detallan la composición de sus
     características padre hasta alcanzar las características hoja, que son las
     unidades más pequeñas y configurables.
 \end{itemize}
 
-\textbf{Relaciones estructurales}
+\subsubsection{Relaciones estructurales}
+
 La potencia del \ac{FM} reside en su notación gráfica concisa, la cual utiliza la
 posición y símbolos específicos para codificar las restricciones de
 configuración. Las relaciones entre una característica padre (letra P) y sus hijos (letra C) definen
-las decisiones de inclusión o exclusión; véase la Tabla~\ref{tab:relaciones_estructurales_FM} 
-\citep{pohl2005software, kang1990foda, benavides2010PrinciplesFM, benavides2010automated, wang2007FormalSemanticsFM}.
+las decisiones de inclusión o exclusión; véase la Tabla
+\ref{tab:relaciones_estructurales_FM} 
+\citep{pohl2005software, kang1990foda, benavides2010PrinciplesFM, 
+benavides2010automated, Wang2007FormalSemanticsFM}.
                         
 \begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
     \caption{Notación semántica de las relaciones entre características de los \ac{FM} \label{tab:relaciones_estructurales_FM}}\\
@@ -182,14 +188,25 @@ las decisiones de inclusión o exclusión; véase la Tabla~\ref{tab:relaciones_e
     \hline
 \end{longtable}
 
-La figura \ref{fig:relaciones_estructurales_FM} muestra los símbolos gráficos para representar las relaciones estructurales.
+Las relaciones descritas en la tabla \ref{tab:relaciones_estructurales_FM} constituyen 
+la base semántica sobre la cual se construye cualquier Modelo de Características. 
+Sin embargo, para que esta semántica sea útil en la práctica del modelado, es necesario 
+contar con una notación gráfica estandarizada que permita visualizar de forma 
+intuitiva la estructura jerárquica, las restricciones entre características e identificar
+los puntos de variabilidad.Esta representación visual proporciona una vista de alto nivel 
+que complementa la especificación formal, pues es la encargada de dotar a los \ac{FM} de su 
+poder comunicativo y analítico. La figura \ref{fig:relaciones_estructurales_FM} ilustra la 
+simbología convencionalmente aceptada en la literatura para representar las relaciones estructurales 
+de los \ac{FM}, donde cada símbolo codifica visualmente una de las relaciones semánticas previamente 
+explicadas.
+
 \begin{figure}[H]
     \centering
     \captionbox{Símbolos gráficos para representar las relaciones estructurales. \label{fig:relaciones_estructurales_FM}}
     {\includegraphics[width=1\linewidth]{Images/feature_models.png}}
 \end{figure}
 
-\textbf{Restricciones (\textit{Cross-Tree})}
+\subsubsection{Restricciones (\textit{Cross-Tree})}
 
 Las relaciones jerárquicas son insuficientes para capturar todas las reglas de
 negocio complejas. Por ello, los \ac{FM} permiten definir las restricciones transversales 
@@ -198,13 +215,14 @@ dependencias entre características que no están directamente conectadas en
 la jerarquía padre-hijo del árbol de características. Su función es garantizar la
 validez de una configuración al capturar las relaciones complejas del mundo
 real que la estructura jerárquica por sí sola no puede expresar 
-\citep{sundermann2023sat,benavides2005Taxonomy}.
+\citep{sundermann2023sat, benavides2005Taxonomy}.
 
 Las dos formas más comunes y fundamentales son:
 \begin{itemize}
     \item \textbf{Requiere:} Esta restricción establece una dependencia de presencia. Si
     una característica A requiere una característica B, entonces siempre que
-    A sea seleccionada en una configuración, B también debe estarlo. Porejemplo, en un modelo de características para un automóvil, la
+    A sea seleccionada en una configuración, B también debe estarlo. Porejemplo, en 
+    un \ac{FM} para un automóvil, la
     característica "Navegación" puede requerir la característica "Pantalla
     Táctil". Esta relación se modela en lógica proposicional como el
     condicional $A \rightarrow B$ \citep{sundermann2023sat, benavides2005Taxonomy}.
@@ -216,7 +234,7 @@ Las dos formas más comunes y fundamentales son:
     \citep{sundermann2023sat, benavides2005Taxonomy}.
 \end{itemize}
 
-\textbf{Semántica Formal y Solucionadores SAT (\textit{SAT Solvers})}
+\subsubsection{Semántica Formal y Solucionadores SAT (\textit{SAT Solvers})}
 
 La semántica formal de un \ac{FM} proporciona un
 significado matemático preciso a todos sus elementos (jerarquía, relaciones y
@@ -251,6 +269,138 @@ restricciones), lo que permite un análisis automático y libre de ambigüedades
     modelos industriales \citep{sundermann2023sat, soos2020Ganak}.
 \end{itemize}
 
+\subsection{Lenguaje Universal de Variabilidad (UVL)}
+
+La diversidad de notaciones y lenguajes para el modelado de la variabilidad ha sido 
+históricamente un obstáculo para la colaboración científica y la transferencia tecnológica 
+en el área de \ac{SPL}. Ante esta situación, y como resultado de una 
+iniciativa comunitaria denominada MODEVAR, surgió el Lenguaje Universal de Variabilidad 
+(\textit{Universal Variability Language} - \ac{UVL}), un esfuerzo colaborativo que ha 
+involucrado a investigadoras e investigadores de universidades de España, Alemania, Austria 
+y otros países durante más de seis años \citep{benavides2025uvl, sundermann2021yet}.
+
+El \ac{UVL} se define como un lenguaje abierto e independiente de plataforma, diseñado 
+específicamente para especificar modelos de variabilidad de forma textual. Su principal 
+objetivo es proporcionar una representación común que pueda ser utilizada tanto en el 
+ámbito académico como en la industria, facilitando así el intercambio de modelos, la 
+comparación de resultados y el desarrollo de herramientas interoperables 
+\citep{universalvariabilitylanguage}. La creación de \ac{UVL} responde a la 
+necesidad de superar la fragmentación provocada por la existencia de múltiples 
+lenguajes propietarios o académicos con capacidades y expresividad heterogéneas.
+
+Aunque \ac{UVL} nace en el contexto del software, su naturaleza genérica lo 
+hace aplicable a cualquier dominio que requiera modelar variabilidad. 
+El laboratorio \textit{Diverso Lab} de la Universidad de Sevilla, 
+liderado por el catedrático David Benavides, ha aplicado \ac{UVL} en 
+dominios tan diversos como las aplicaciones móviles, la automatización 
+del marketing, la personalización de sensores para sistemas de riego, y 
+recientemente, en la exploración de su aplicación al ámbito educativo para 
+el modelado de currículos flexibles \citep{investigacionus2025}. 
+Esta versatilidad convierte a \ac{UVL} en una opción particularmente 
+adecuada para la presente investigación, donde se utilizará como notación 
+base para representar la variabilidad curricular.
+
+\subsubsection{Diseño del lenguaje y niveles de expresividad}
+
+\ac{UVL} especifica modelos de variabilidad con una estructura similar a 
+un árbol para representar la estructura jerárquica de los modelos de variabilidad. 
+El núcleo del lenguaje viene con varios conceptos para especificar restricciones, y son exactamente
+los mismos que se explican en la tabla \ref{tab:relaciones_estructurales_FM} junto a las limitaciones
+de árboles cruzados (restricciones \textit{cross-tree\/}).
+
+El diseño de \ac{UVL} se estructura en torno, además de su núcleo, en un sistema de niveles 
+lingüísticos (\textit{language levels}) que permiten incrementar su expresividad de forma 
+controlada. Su sintaxis básica representa la estructura jerárquica de un 
+\ac{FM} mediante una notación de árbol indentado, similar a la utilizada en 
+lenguajes de programación como Python \citep{sundermann2023uvlparser}.
+
+
+El lenguaje contempla los siguientes niveles principales \citep{universalvariabilitylanguage}:
+
+\begin{itemize}
+    \item \textbf{Nivel Booleano (\textit{Boolean Level}):} Constituye la base del lenguaje e incluye:
+    \begin{itemize}
+        \item \textit{Núcleo Booleano (\textit{Boolean Core}):} Soporta las relaciones fundamentales 
+        (obligatoria, opcional, OR, alternativa) y restricciones transversales proposicionales.
+        \item \textit{Cardinalidad de Grupo (\textit{Group Cardinality}):} Extiende las 
+        relaciones padre-hijo permitiendo especificar que se seleccionen entre $n$ y $m$ c
+        aracterísticas hijas.
+    \end{itemize}
+    
+    \item \textbf{Nivel Aritmético (\textit{Arithmetic Level}):} Introduce la posibilidad de 
+    trabajar con atributos numéricos asociados a las características:
+    \begin{itemize}
+        \item \textit{Núcleo Aritmético (\textit{Arithmetic Core}):} Permite definir restricciones 
+        sobre atributos mediante operaciones aritméticas estándar (+, -, *, /, =, !=, >, <).
+        \item \textit{Agregados de Atributos (\textit{Attribute aggregates}):} Simplifica la 
+        especificación de restricciones globales mediante funciones como \texttt{sum()} y \texttt{avg()}.
+        \item \textit{Cardinalidad de Característica (\textit{Feature Cardinality}):} 
+        Permite que una misma característica pueda ser seleccionada múltiples veces dentro de 
+        un rango $[n..m]$.
+    \end{itemize}
+    
+    \item \textbf{Nivel Tipado (\textit{Type Level}):} Amplía el lenguaje con tipos de datos 
+    más complejos:
+    \begin{itemize}
+        \item \textit{Núcleo Tipado (\textit{Type Core}):} Introduce características de 
+        tipo cadena (\textit{String Features}).
+        \item \textit{Restricciones Numéricas (\textit{Numeric-Constraints}):} Añade operaciones 
+        como \texttt{floor()} y \textit{ceil()} dentro de las restricciones.
+        \item \textit{Restricciones de Cadena (\textit{String-Constraints}):} Permite operaciones 
+        como \texttt{len()} y comparación entre cadenas.
+    \end{itemize}
+\end{itemize}
+
+Además, \ac{UVL} incorpora un mecanismo de importación que permite referenciar submodelos, 
+facilitando así la composición de modelos de variabilidad de gran tamaño a partir de módulos 
+más pequeños y gestionables \citep{universalvariabilitylanguage}. El siguiente \ac{FM} representado
+ejemplifica la sintaxis \ac{UVL} y la correspondencia con su representación gráfica:
+
+
+
+
+\subsection{Configuraciones y configurador curricular}
+
+En el contexto de las Líneas de Productos de Software (\ac{SPL}), la configuración
+se refiere al proceso sistemático de seleccionar un conjunto específico de
+características de un \ac{FM} para derivar un producto
+individual que satisfaga requisitos particulares \citep{apel2013feature}. Este proceso
+implica tomar decisiones de configuración que respeten todas las restricciones
+definidas en el modelo, asegurando que la selección final de características sea
+válida y consistente \citep{benavides2010automated}.
+
+La configuración en \ac{SPL} se caracteriza por ser un proceso guiado por
+restricciones donde las dependencias entre características (mandatorias,
+opcionales, alternativas) y las restricciones cross-tree (requiere, excluye)
+determinan el espacio de configuraciones posibles \citep{chen2020variability}. La
+complejidad de este proceso aumenta exponencialmente con el tamaño del
+modelo, haciendo necesario el uso de herramientas automatizadas para garantizar 
+la corrección de las configuraciones generadas \citep{benavides2010automated}.
+
+Un configurador curricular es una herramienta especializada que aplica los
+principios de configuración de \ac{SPL} al dominio de la planificación educativa, permitiendo 
+la generación semi-automatizada de planes de estudio
+personalizados a partir de un modelo base que captura la variabilidad curricular
+\citep{sanchez2020metodologia}. Este sistema opera como un motor de decisiones
+académicas que guía al usuario (gestor académico, coordinador de programa)
+a través del espacio de configuraciones válidas, garantizando que el plan de
+estudio resultante cumpla con todas las restricciones pedagógicas y
+administrativas \citep{chen2020variability}.
+
+El valor fundamental de un configurador curricular reside en su capacidad para
+reducir la complejidad del diseño curricular mediante la aplicación de
+restricciones formales que previenen configuraciones inválidas \citep{rodriguez2019gestion_curricular}. 
+Por ejemplo, el sistema puede asegurar automáticamente que:
+\begin{itemize}
+    \item Se cumplan todos los prerrequisitos entre asignaturas y temáticas de las mismas.
+    \item Los límites de créditos por semestre se respeten.
+    \item La coherencia entre las competencias a desarrollar y las asignaturas seleccionadas se mantengan.
+    \item Se eviten conflictos de horario y sobrecarga académica.
+    \item No existan asignaturas incompatibles en el mismo plan de estudio.
+    \item Se garantice la inclusión de asignaturas obligatorias y la correcta selección de asignaturas optativas según las reglas definidas en el modelo curricular.
+    \item Se cumplan las restricciones de diversidad temática y metodológica para asegurar un plan de estudio equilibrado y completo.
+\end{itemize}
+            
 
 
 

@@ -2385,7 +2385,7 @@
     <bcf:citekey order="19" intorder="2">kang1990foda</bcf:citekey>
     <bcf:citekey order="19" intorder="3">benavides2010PrinciplesFM</bcf:citekey>
     <bcf:citekey order="19" intorder="4">benavides2010automated</bcf:citekey>
-    <bcf:citekey order="19" intorder="5">wang2007FormalSemanticsFM</bcf:citekey>
+    <bcf:citekey order="19" intorder="5">Wang2007FormalSemanticsFM</bcf:citekey>
     <bcf:citekey order="20" intorder="1">sundermann2023sat</bcf:citekey>
     <bcf:citekey order="20" intorder="2">benavides2005Taxonomy</bcf:citekey>
     <bcf:citekey order="21" intorder="1">sundermann2023sat</bcf:citekey>
@@ -2402,10 +2402,24 @@
     <bcf:citekey order="25" intorder="3">mendonca2009SAT</bcf:citekey>
     <bcf:citekey order="26" intorder="1">sundermann2023sat</bcf:citekey>
     <bcf:citekey order="26" intorder="2">soos2020Ganak</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">Ou2013</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">benavides2025uvl</bcf:citekey>
+    <bcf:citekey order="27" intorder="2">sundermann2021yet</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">universalvariabilitylanguage</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">investigacionus2025</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">sundermann2023uvlparser</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">universalvariabilitylanguage</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">universalvariabilitylanguage</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">apel2013feature</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">benavides2010automated</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">chen2020variability</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">benavides2010automated</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">sanchez2020metodologia</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">chen2020variability</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">rodriguez2019gestion_curricular</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">Ou2013</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

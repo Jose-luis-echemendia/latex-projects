@@ -1,20 +1,26 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Lista de tareas pendientes}{\es@scroman {xii}}{chapter*.12}%
+\contentsline {chapter}{Lista de tareas pendientes}{\es@scroman {xiii}}{chapter*.12}%
 \contentsline {chapter}{Introducción}{1}{chapter*.14}%
 \contentsline {chapter}{\numberline {1}Fundamentación Teórica}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Conceptos asociados al tema}{5}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Ingeniería de Líneas de Productos de Software (SPLE)}{5}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Ingeniería de Líneas de Productos de Software (SPLE)}{7}{subsection.1.1.2}%
-\contentsline {chapter}{\numberline {2}Propuesta de solución}{12}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Sección de prueba}{12}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Ejemplos de código fuente}{13}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Ejemplo de tabla grande}{19}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Tabla aleatoria}{19}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Tablas de ingeniería}{20}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Resultados}{25}{chapter.4}%
-\contentsline {chapter}{Conclusiones}{27}{chapter*.19}%
-\contentsline {chapter}{Recomendaciones}{28}{chapter*.21}%
-\contentsline {chapter}{Referencias bibliográficas}{29}{chapter*.22}%
+\contentsline {subsection}{\numberline {1.1.2}Modelos de Características (Feature Models)}{7}{subsection.1.1.2}%
+\contentsline {subsubsection}{Relaciones estructurales}{7}{section*.15}%
+\contentsline {subsubsection}{Restricciones (\textit {Cross-Tree})}{9}{section*.17}%
+\contentsline {subsubsection}{Semántica Formal y Solucionadores SAT (\textit {SAT Solvers})}{10}{section*.18}%
+\contentsline {subsection}{\numberline {1.1.3}Lenguaje Universal de Variabilidad (UVL)}{10}{subsection.1.1.3}%
+\contentsline {subsubsection}{Diseño del lenguaje y niveles de expresividad}{11}{section*.19}%
+\contentsline {subsection}{\numberline {1.1.4}Configuraciones y configurador curricular}{12}{subsection.1.1.4}%
+\contentsline {chapter}{\numberline {2}Propuesta de solución}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Sección de prueba}{15}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Ejemplos de código fuente}{16}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Ejemplo de tabla grande}{22}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tabla aleatoria}{22}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Tablas de ingeniería}{23}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Resultados}{28}{chapter.4}%
+\contentsline {chapter}{Conclusiones}{30}{chapter*.23}%
+\contentsline {chapter}{Recomendaciones}{31}{chapter*.25}%
+\contentsline {chapter}{Referencias bibliográficas}{32}{chapter*.26}%
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
@@ -65,8 +71,32 @@
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Apéndices}{31}{section*.23}%
-\contentsline {chapter}{\numberline {A}Proyectos y Avales}{32}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Otro reporte}{33}{appendix.Alph2}%
-\contentsline {section}{\numberline {B.1}Otra sección de muestra}{33}{section.Alph2.1}%
-\contentsline {section}{\numberline {B.2}Otro ensamble Industrial}{33}{section.Alph2.2}%
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Apéndices}{35}{section*.27}%
+\contentsline {chapter}{\numberline {A}Proyectos y Avales}{36}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Otro reporte}{37}{appendix.Alph2}%
+\contentsline {section}{\numberline {B.1}Otra sección de muestra}{37}{section.Alph2.1}%
+\contentsline {section}{\numberline {B.2}Otro ensamble Industrial}{37}{section.Alph2.2}%
