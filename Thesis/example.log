@@ -1474,12 +1474,12 @@ File: t1txr.fd 2000/12/15 v3.1
 LaTeX Warning: Unused global option(s):
     [spanish].
 
-No file example.aux.
+(./example.aux)
 \openout1 = `example.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 60.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 60.
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 60.
@@ -2497,10 +2497,10 @@ Package logreq Info: Writing requests to 'example.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49885 strings out of 476047
- 914067 string characters out of 5792075
- 2230062 words of memory out of 5000000
- 70627 multiletter control sequences out of 15000+600000
+ 49888 strings out of 476047
+ 914115 string characters out of 5792075
+ 2230053 words of memory out of 5000000
+ 70628 multiletter control sequences out of 15000+600000
  663601 words of font info for 192 fonts, out of 8000000 for 9000
  85 hyphenation exceptions out of 8191
  112i,17n,137p,2484b,3165s stack positions out of 10000i,1000n,20000p,200000b,200000s
