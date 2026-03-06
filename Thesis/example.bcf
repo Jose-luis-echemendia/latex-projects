@@ -2368,4 +2368,84 @@
     <bcf:citekey order="3" intorder="1">gomez2023</bcf:citekey>
     <bcf:citekey order="4" intorder="1">delaguila2014</bcf:citekey>
     <bcf:citekey order="5" intorder="1">soto2022</bcf:citekey>
-    <bcf:citekey order="6" intorde
+    <bcf:citekey order="6" intorder="1">veiga2024</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">gutama2025</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">gomez2023</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">bates2019teaching</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">sanchez2020metodologia</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">sgbuzz_lps</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">academialab_linea_productos</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">ingenieria_software_lps</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">apel2013feature</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">pohl2005software</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">ptc_feature_models</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">kang1990foda</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">gfg_feature_engineering</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">pohl2005software</bcf:citekey>
+    <bcf:citekey order="19" intorder="2">kang1990foda</bcf:citekey>
+    <bcf:citekey order="19" intorder="3">benavides2010PrinciplesFM</bcf:citekey>
+    <bcf:citekey order="19" intorder="4">benavides2010automated</bcf:citekey>
+    <bcf:citekey order="19" intorder="5">wang2007FormalSemanticsFM</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">benavides2005Taxonomy</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="21" intorder="2">benavides2005Taxonomy</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="22" intorder="2">benavides2005Taxonomy</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="23" intorder="2">thum2014featureide</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="24" intorder="2">benavides2010automated</bcf:citekey>
+    <bcf:citekey order="24" intorder="3">mendonca2009SAT</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="25" intorder="2">benavides2010automated</bcf:citekey>
+    <bcf:citekey order="25" intorder="3">mendonca2009SAT</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="26" intorder="2">soos2020Ganak</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">Ou2013</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="nyt">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">holder</bcf:sortitem>
+      <bcf:sortitem order="3">author</bcf:sortitem>
+      <bcf:sortitem order="4">editor</bcf:sortitem>
+      <bcf:sortitem order="5">translator</bcf:sortitem>
+      <bcf:sortitem order="6">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="7">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">origyear</bcf:sortitem>
+      <bcf:sortitem order="3">year</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1">volume</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="nyt/global//global/global"
+                type="entry"
+                sortingtemplatename="nyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>
