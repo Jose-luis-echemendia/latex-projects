@@ -2373,13 +2373,39 @@
     <bcf:citekey order="8" intorder="1">gomez2023</bcf:citekey>
     <bcf:citekey order="9" intorder="1">bates2019teaching</bcf:citekey>
     <bcf:citekey order="10" intorder="1">sanchez2020metodologia</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">Ou2013</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">Alfadhlani2011</bcf:citekey>
-    <bcf:citekey order="12" intorder="2">Mathew2010</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">Ou2013</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">sgbuzz_lps</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">academialab_linea_productos</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">ingenieria_software_lps</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">apel2013feature</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">pohl2005software</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">ptc_feature_models</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">kang1990foda</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">gfg_feature_engineering</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">pohl2005software</bcf:citekey>
+    <bcf:citekey order="19" intorder="2">kang1990foda</bcf:citekey>
+    <bcf:citekey order="19" intorder="3">benavides2010PrinciplesFM</bcf:citekey>
+    <bcf:citekey order="19" intorder="4">benavides2010automated</bcf:citekey>
+    <bcf:citekey order="19" intorder="5">wang2007FormalSemanticsFM</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">benavides2005Taxonomy</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="21" intorder="2">benavides2005Taxonomy</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="22" intorder="2">benavides2005Taxonomy</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="23" intorder="2">thum2014featureide</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="24" intorder="2">benavides2010automated</bcf:citekey>
+    <bcf:citekey order="24" intorder="3">mendonca2009SAT</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="25" intorder="2">benavides2010automated</bcf:citekey>
+    <bcf:citekey order="25" intorder="3">mendonca2009SAT</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">sundermann2023sat</bcf:citekey>
+    <bcf:citekey order="26" intorder="2">soos2020Ganak</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">Ou2013</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

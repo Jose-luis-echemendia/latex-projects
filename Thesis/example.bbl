@@ -19,53 +19,76 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
-    \entry{Alfadhlani2011}{article}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=8cec0eec5ce2ea66c44ec414e7637af0}{%
-           family={Alfadhlani},
+    \entry{academialab_linea_productos}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=81095ffb979495200836282e518cbaa6}{%
+           family={{AcademiaLab}},
            familyi={A\bibinitperiod}}}%
-        {{un=0,uniquepart=base,hash=5d0a63b7e10d8f5e3d1d681d086a44e6}{%
-           family={Samadhi},
+      }
+      \strng{namehash}{81095ffb979495200836282e518cbaa6}
+      \strng{fullhash}{81095ffb979495200836282e518cbaa6}
+      \strng{bibnamehash}{81095ffb979495200836282e518cbaa6}
+      \strng{authorbibnamehash}{81095ffb979495200836282e518cbaa6}
+      \strng{authornamehash}{81095ffb979495200836282e518cbaa6}
+      \strng{authorfullhash}{81095ffb979495200836282e518cbaa6}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Recuperado 25 de octubre de 2025}
+      \field{title}{Línea de productos de software}
+      \verb{urlraw}
+      \verb https://academia-lab.com/enciclopedia/linea-de-productos-de-software/
+      \endverb
+      \verb{url}
+      \verb https://academia-lab.com/enciclopedia/linea-de-productos-de-software/
+      \endverb
+    \endentry
+    \entry{apel2013feature}{book}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=255851f52a558d3493d6dd761ab4801d}{%
+           family={Apel},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cfbc58b5f2448df26847afdb306118dd}{%
+           family={Batory},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9f9d6bb90de0bb1fe7078494e6a675f}{%
+           family={Kästner},
+           familyi={K\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d830f69c86c306314070dbeca1dee53d}{%
+           family={Saake},
            familyi={S\bibinitperiod},
-           given={T.\bibnamedelimi M.\bibnamedelimi A.\bibnamedelimi Ari},
-           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7e06c9fea152ebc30ac15a200743cb9d}{%
-           family={Ma'ruf},
-           familyi={M\bibinitperiod},
-           given={Anas},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c144e2cde3d4e2601266b2b049cd8fbe}{%
-           family={Toha},
-           familyi={T\bibinitperiod},
-           given={Isa\bibnamedelima Setiasyah},
-           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{a6002452eadd26de81d27204d8d94521}
-      \strng{fullhash}{a6002452eadd26de81d27204d8d94521}
-      \strng{bibnamehash}{a6002452eadd26de81d27204d8d94521}
-      \strng{authorbibnamehash}{a6002452eadd26de81d27204d8d94521}
-      \strng{authornamehash}{a6002452eadd26de81d27204d8d94521}
-      \strng{authorfullhash}{a6002452eadd26de81d27204d8d94521}
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{ee414cab4c7f830e15842ba5a234e52e}
+      \strng{fullhash}{ee414cab4c7f830e15842ba5a234e52e}
+      \strng{bibnamehash}{ee414cab4c7f830e15842ba5a234e52e}
+      \strng{authorbibnamehash}{ee414cab4c7f830e15842ba5a234e52e}
+      \strng{authornamehash}{ee414cab4c7f830e15842ba5a234e52e}
+      \strng{authorfullhash}{ee414cab4c7f830e15842ba5a234e52e}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Assembly sequence planning of a product involves several steps, including generation of precedence constraints, generation of assembly sequences, and selection of assembly sequences. Generation and selection of assembly sequences should be able to guarantee the feasibility of assembly. Assembly will be feasible if there is no collision between components when assembled. Detection of collision-free path of assembly can be done in an automated way. There are a number of collision detection methods that have been developed, but the method requires a complicated process of data geometry analysis. This paper proposes a method for detecting a collision-free path of the assembly component in a more simple way. Geometrical data required, taken from the three-dimensional (3D) solid drawing in the form of stacked drawing in computer-aided design (CAD) systems. Retrieval of geometrical data of components and detection of the collision-free path of an assembly were done in an automated way, directly from the CAD system.}
-      \field{journaltitle}{Journal of Advanced Manufacturing Systems}
-      \field{number}{02}
-      \field{title}{Automatic collision detection for assembly sequence planning using a three-dimensional solid model}
-      \field{volume}{10}
-      \field{year}{2011}
-      \field{pages}{277\bibrangedash 291}
-      \range{pages}{15}
-      \verb{doi}
-      \verb 10.1142/S021968671100220X
-      \endverb
+      \field{title}{Feature-Oriented Software Product Lines: Concepts and Implementation}
+      \field{year}{2013}
     \endentry
     \entry{bates2019teaching}{book}{}
       \name{author}{1}{}{%
@@ -93,6 +116,131 @@
       \field{labeltitlesource}{title}
       \field{title}{Teaching in a Digital Age: Guidelines for Designing Teaching and Learning}
       \field{year}{2019}
+    \endentry
+    \entry{benavides2010automated}{article}{}
+      \name{author}{3}{}{%
+        {{un=2,uniquepart=given,hash=5f05896a71c635c8921390a6dfcaad79}{%
+           family={Benavides},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=2}}%
+        {{un=2,uniquepart=given,hash=484ee8650d5b9b4b8a4f5002f67a3c5c}{%
+           family={Segura},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=2}}%
+        {{un=2,uniquepart=given,hash=0e4bee613b7e0b6e2f44ce5d5aa938f5}{%
+           family={Ruiz-Cortés},
+           familyi={R\bibinithyphendelim C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{ae94d72372dbb7d7816a1d0f7c27941a}
+      \strng{fullhash}{ae94d72372dbb7d7816a1d0f7c27941a}
+      \strng{bibnamehash}{ae94d72372dbb7d7816a1d0f7c27941a}
+      \strng{authorbibnamehash}{ae94d72372dbb7d7816a1d0f7c27941a}
+      \strng{authornamehash}{ae94d72372dbb7d7816a1d0f7c27941a}
+      \strng{authorfullhash}{ae94d72372dbb7d7816a1d0f7c27941a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information Systems}
+      \field{number}{6}
+      \field{title}{Automated analysis of feature models 20 years later: A literature review}
+      \field{volume}{35}
+      \field{year}{2010}
+      \field{pages}{615\bibrangedash 636}
+      \range{pages}{22}
+    \endentry
+    \entry{benavides2010PrinciplesFM}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=2,uniquepart=given,hash=666e250e1d97f1aa5c87edd002508ad9}{%
+           family={Benavides},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=2}}%
+        {{un=2,uniquepart=given,hash=efefdfdaba6c5894f391e59294e0dcbe}{%
+           family={Segura},
+           familyi={S\bibinitperiod},
+           given={Sergio},
+           giveni={S\bibinitperiod},
+           givenun=2}}%
+        {{un=2,uniquepart=given,hash=b14c1d1e3d4d80ea3948645cec4ba918}{%
+           family={Ruiz-Cortés},
+           familyi={R\bibinithyphendelim C\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{ced5699625a5114fb65f93083b7a4427}
+      \strng{fullhash}{ced5699625a5114fb65f93083b7a4427}
+      \strng{bibnamehash}{ced5699625a5114fb65f93083b7a4427}
+      \strng{authorbibnamehash}{ced5699625a5114fb65f93083b7a4427}
+      \strng{authornamehash}{ced5699625a5114fb65f93083b7a4427}
+      \strng{authorfullhash}{ced5699625a5114fb65f93083b7a4427}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 7th International Conference on Software Product Lines (SPLC)}
+      \field{title}{Principles of Feature Modeling}
+      \field{year}{2010}
+      \field{pages}{13\bibrangedash 22}
+      \range{pages}{10}
+    \endentry
+    \entry{benavides2005Taxonomy}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=2,uniquepart=given,hash=666e250e1d97f1aa5c87edd002508ad9}{%
+           family={Benavides},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=2}}%
+        {{un=0,uniquepart=base,hash=4547d2ae6715436e41fba09155833b09}{%
+           family={Trinidad},
+           familyi={T\bibinitperiod},
+           given={José-Antonio},
+           giveni={J\bibinithyphendelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=2,uniquepart=given,hash=b14c1d1e3d4d80ea3948645cec4ba918}{%
+           family={Ruiz-Cortés},
+           familyi={R\bibinithyphendelim C\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{47b6736536304d40cb4f6844b060d962}
+      \strng{fullhash}{47b6736536304d40cb4f6844b060d962}
+      \strng{bibnamehash}{47b6736536304d40cb4f6844b060d962}
+      \strng{authorbibnamehash}{47b6736536304d40cb4f6844b060d962}
+      \strng{authornamehash}{47b6736536304d40cb4f6844b060d962}
+      \strng{authorfullhash}{47b6736536304d40cb4f6844b060d962}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{SPLC}
+      \field{title}{A taxonomy of variability constraints for feature models}
+      \field{year}{2005}
+      \field{pages}{99\bibrangedash 108}
+      \range{pages}{10}
     \endentry
     \entry{delaguila2014}{article}{}
       \true{moreauthor}
@@ -130,6 +278,31 @@
       \endverb
       \verb{url}
       \verb https://dialnet.unirioja.es/servlet/articulo?codigo=9596104
+      \endverb
+    \endentry
+    \entry{gfg_feature_engineering}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f1e069787ece74531d112559945c6871}{%
+           family={{GeeksforGeeks}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhash}{f1e069787ece74531d112559945c6871}
+      \strng{bibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorbibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authornamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhash}{f1e069787ece74531d112559945c6871}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is Feature Engineering?}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/machine-learning/what-is-feature-engineering/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/machine-learning/what-is-feature-engineering/
       \endverb
     \endentry
     \entry{gomez2023}{article}{}
@@ -211,6 +384,85 @@
       \verb https://ojs.southfloridapublishing.com/ojs/index.php/jdev/article/view/5334
       \endverb
     \endentry
+    \entry{ingenieria_software_lps}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eaf267f19d82ae5da57d731a12bfe53f}{%
+           family={{Ingeniería de Software}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{eaf267f19d82ae5da57d731a12bfe53f}
+      \strng{fullhash}{eaf267f19d82ae5da57d731a12bfe53f}
+      \strng{bibnamehash}{eaf267f19d82ae5da57d731a12bfe53f}
+      \strng{authorbibnamehash}{eaf267f19d82ae5da57d731a12bfe53f}
+      \strng{authornamehash}{eaf267f19d82ae5da57d731a12bfe53f}
+      \strng{authorfullhash}{eaf267f19d82ae5da57d731a12bfe53f}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Recuperado 25 de octubre de 2025}
+      \field{title}{Líneas de Producto Software para acelerar el desarrollo de aplicaciones relacionadas}
+      \verb{urlraw}
+      \verb https://ingenieriadesoftware.es/lineas-producto-software/
+      \endverb
+      \verb{url}
+      \verb https://ingenieriadesoftware.es/lineas-producto-software/
+      \endverb
+    \endentry
+    \entry{kang1990foda}{report}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=d75c44d7e6171a604320d967d9c69aaa}{%
+           family={Kang},
+           familyi={K\bibinitperiod},
+           given={Kyo\bibnamedelima C.},
+           giveni={K\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=547886e13fdebd116c554f7fbc864679}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Sholom},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=965d5e865f96e822561e2601eb8b1845}{%
+           family={Hess},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c94dd97855c8b8f193dc23f0edf23796}{%
+           family={Novak},
+           familyi={N\bibinitperiod},
+           given={William\bibnamedelima E.},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1f244ba0ee6187d486f654e1105117ca}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={A.\bibnamedelimi Spencer},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Software Engineering Institute, Carnegie Mellon University}%
+      }
+      \strng{namehash}{a2d0100f018e08eeaca3965d208a3d23}
+      \strng{fullhash}{a2d0100f018e08eeaca3965d208a3d23}
+      \strng{bibnamehash}{a2d0100f018e08eeaca3965d208a3d23}
+      \strng{authorbibnamehash}{a2d0100f018e08eeaca3965d208a3d23}
+      \strng{authornamehash}{a2d0100f018e08eeaca3965d208a3d23}
+      \strng{authorfullhash}{a2d0100f018e08eeaca3965d208a3d23}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{CMU/SEI-90-TR-21}
+      \field{title}{Feature-Oriented Domain Analysis (FODA) Feasibility Study}
+      \field{type}{techreport}
+      \field{year}{1990}
+    \endentry
     \entry{Mathew2010}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=ecc03951ef7cd89faeec128314885d15}{%
@@ -249,6 +501,42 @@
       \verb{file}
       \verb Mathew2010.pdf:.\\Doc\\Mathew2010.pdf:PDF;Mathew2010.pdf:Doc\\Mathew2010.pdf:PDF
       \endverb
+    \endentry
+    \entry{mendonca2009SAT}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=10d2ca40c846ef23b707ccc5a64f693e}{%
+           family={Mendonca},
+           familyi={M\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0e2a7738db10b4a35e219eac881353f8}{%
+           family={Wasowski},
+           familyi={W\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{46e1f76f0b4d8bb9bf5b124fe5f9fd6d}
+      \strng{fullhash}{46e1f76f0b4d8bb9bf5b124fe5f9fd6d}
+      \strng{bibnamehash}{46e1f76f0b4d8bb9bf5b124fe5f9fd6d}
+      \strng{authorbibnamehash}{46e1f76f0b4d8bb9bf5b124fe5f9fd6d}
+      \strng{authornamehash}{46e1f76f0b4d8bb9bf5b124fe5f9fd6d}
+      \strng{authorfullhash}{46e1f76f0b4d8bb9bf5b124fe5f9fd6d}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{SPLC}
+      \field{title}{SAT-based analysis of feature models is easy}
+      \field{year}{2009}
+      \field{pages}{231\bibrangedash 240}
+      \range{pages}{10}
     \endentry
     \entry{Ou2013}{article}{}
       \name{author}{2}{}{%
@@ -293,6 +581,76 @@
       \endverb
       \keyw{Assembly sequence generation}
     \endentry
+    \entry{pohl2005software}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=d8c533943a9170d75651669149c80883}{%
+           family={Pohl},
+           familyi={P\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=15b26250835bede8f2aeb0b22a755717}{%
+           family={Böckle},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7fc64545ad39c946152f413fc0671d67}{%
+           family={Linden},
+           familyi={L\bibinitperiod},
+           given={F.\bibnamedelimi J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0,
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{6e7af6affe984b22c513854bdb1abf7e}
+      \strng{fullhash}{6e7af6affe984b22c513854bdb1abf7e}
+      \strng{bibnamehash}{6e7af6affe984b22c513854bdb1abf7e}
+      \strng{authorbibnamehash}{6e7af6affe984b22c513854bdb1abf7e}
+      \strng{authornamehash}{6e7af6affe984b22c513854bdb1abf7e}
+      \strng{authorfullhash}{6e7af6affe984b22c513854bdb1abf7e}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Software Product Line Engineering: Foundations, Principles and Techniques}
+      \field{year}{2005}
+    \endentry
+    \entry{ptc_feature_models}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e095b8133a2dbdc23b300f5d39211ec0}{%
+           family={{PTC}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{e095b8133a2dbdc23b300f5d39211ec0}
+      \strng{fullhash}{e095b8133a2dbdc23b300f5d39211ec0}
+      \strng{bibnamehash}{e095b8133a2dbdc23b300f5d39211ec0}
+      \strng{authorbibnamehash}{e095b8133a2dbdc23b300f5d39211ec0}
+      \strng{authornamehash}{e095b8133a2dbdc23b300f5d39211ec0}
+      \strng{authorfullhash}{e095b8133a2dbdc23b300f5d39211ec0}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Recuperado 25 de octubre de 2025}
+      \field{title}{Feature Models and Features: What Are They}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.ptc.com/en/blogs/alm/modelling-features
+      \endverb
+      \verb{url}
+      \verb https://www.ptc.com/en/blogs/alm/modelling-features
+      \endverb
+    \endentry
     \entry{sanchez2020metodologia}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=15752ae2521f27fd5ca52311fe6bd224}{%
@@ -334,6 +692,72 @@
       \field{pages}{1020\bibrangedash 1045}
       \range{pages}{26}
     \endentry
+    \entry{sgbuzz_lps}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d29d3091ac38b5ac3e489e51abb3671a}{%
+           family={{SG Buzz}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d29d3091ac38b5ac3e489e51abb3671a}
+      \strng{fullhash}{d29d3091ac38b5ac3e489e51abb3671a}
+      \strng{bibnamehash}{d29d3091ac38b5ac3e489e51abb3671a}
+      \strng{authorbibnamehash}{d29d3091ac38b5ac3e489e51abb3671a}
+      \strng{authornamehash}{d29d3091ac38b5ac3e489e51abb3671a}
+      \strng{authorfullhash}{d29d3091ac38b5ac3e489e51abb3671a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Recuperado 25 de octubre de 2025}
+      \field{title}{Líneas de Productos de Software}
+      \verb{urlraw}
+      \verb https://sg.com.mx/revista/34/lineas-productos-software
+      \endverb
+      \verb{url}
+      \verb https://sg.com.mx/revista/34/lineas-productos-software
+      \endverb
+    \endentry
+    \entry{soos2020Ganak}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=781b1be02fd03c3b0bb119184634c537}{%
+           family={Soos},
+           familyi={S\bibinitperiod},
+           given={Mate},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc36af95758876d5fa42dad6e67e6316}{%
+           family={Gocht},
+           familyi={G\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38026ba4ee6b102b47bf3ffb41325c8f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b4156fa45c842145e9334d089a300dfb}
+      \strng{fullhash}{b4156fa45c842145e9334d089a300dfb}
+      \strng{bibnamehash}{b4156fa45c842145e9334d089a300dfb}
+      \strng{authorbibnamehash}{b4156fa45c842145e9334d089a300dfb}
+      \strng{authornamehash}{b4156fa45c842145e9334d089a300dfb}
+      \strng{authorfullhash}{b4156fa45c842145e9334d089a300dfb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{SAT Conference}
+      \field{title}{Ganak: A scalable probabilistic model counter}
+      \field{year}{2020}
+    \endentry
     \entry{soto2022}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1ff5b254b27a527087a7a9700dbd33bb}{%
@@ -372,6 +796,109 @@
       \verb{url}
       \verb https://www.redalyc.org/journal/447/44770546017/html/
       \endverb
+    \endentry
+    \entry{sundermann2023sat}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6e709aa6bc65b8408d7d71aebe0dbc91}{%
+           family={Sundermann},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=909b68cdb387d1fef5a44ab97b1aa221}{%
+           family={Dörr},
+           familyi={D\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c2f3c67c1e1de58533372c4dd87b967}{%
+           family={Junker},
+           familyi={J\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e41a997081f62d8e061d947b242d3079}{%
+           family={Kehrer},
+           familyi={K\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8c130b7f09e3535ec69da4f57ef8af44}
+      \strng{fullhash}{8c130b7f09e3535ec69da4f57ef8af44}
+      \strng{bibnamehash}{8c130b7f09e3535ec69da4f57ef8af44}
+      \strng{authorbibnamehash}{8c130b7f09e3535ec69da4f57ef8af44}
+      \strng{authornamehash}{8c130b7f09e3535ec69da4f57ef8af44}
+      \strng{authorfullhash}{8c130b7f09e3535ec69da4f57ef8af44}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Empirical Software Engineering}
+      \field{number}{29}
+      \field{title}{Evaluating state-of-the-art \#SAT solvers on industrial configuration spaces}
+      \field{volume}{28}
+      \field{year}{2023}
+    \endentry
+    \entry{thum2014featureide}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=fc662afd69c32f480cb46eab248ebdc6}{%
+           family={Thüm},
+           familyi={T\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9f9d6bb90de0bb1fe7078494e6a675f}{%
+           family={Kästner},
+           familyi={K\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57ff81d9e1b3f4d78df6f7b75cb1d04a}{%
+           family={Benduhn},
+           familyi={B\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c79a9cd3caa3eb2c923c3c5abaf96c98}{%
+           family={Meinicke},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d830f69c86c306314070dbeca1dee53d}{%
+           family={Saake},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d7431450956ead613d9fd88be386a717}{%
+           family={Leich},
+           familyi={L\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{afc959326c66f33e4e252e6f212db83c}
+      \strng{fullhash}{afc959326c66f33e4e252e6f212db83c}
+      \strng{bibnamehash}{afc959326c66f33e4e252e6f212db83c}
+      \strng{authorbibnamehash}{afc959326c66f33e4e252e6f212db83c}
+      \strng{authornamehash}{afc959326c66f33e4e252e6f212db83c}
+      \strng{authorfullhash}{afc959326c66f33e4e252e6f212db83c}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science of Computer Programming}
+      \field{title}{FeatureIDE: An extensible framework for feature-oriented software desarrollo}
+      \field{volume}{79}
+      \field{year}{2014}
+      \field{pages}{70\bibrangedash 85}
+      \range{pages}{16}
     \endentry
     \entry{unesco2022}{book}{}
       \name{author}{1}{}{%
@@ -430,6 +957,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{wang2007FormalSemanticsFM}
 \endrefsection
 \endinput
 
