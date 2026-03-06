@@ -174,7 +174,7 @@ benavides2010automated, Wang2007FormalSemanticsFM}.
     \endlastfoot
                 
     % Cuerpo de la tabla
-    Obligatoa lipa tinyria & $P \rightarrow C$ & Si el padre P es seleccionado, el hijo obligatorio C debe incluirse. No hay variabilidad en este punto \\ 
+    Obligatoria & $P \rightarrow C$ & Si el padre P es seleccionado, el hijo obligatorio C debe incluirse. No hay variabilidad en este punto \\ 
     \hline
     \rowcolor[HTML]{EDEBF1}
     Opcional & $C \rightarrow P $ & El hijo C puede ser incluido o excluido, si se selecciona el padre P. Introduce variabilidad \\ 
@@ -356,7 +356,142 @@ facilitando así la composición de modelos de variabilidad de gran tamaño a pa
 más pequeños y gestionables \citep{universalvariabilitylanguage}. El siguiente \ac{FM} representado
 ejemplifica la sintaxis \ac{UVL} y la correspondencia con su representación gráfica:
 
+\begin{lstlisting}[language=Python, caption={Ejemplo de modelo de variabilidad en \ac{UVL}}, label={lst:uvl_sandwich}, basicstyle=\footnotesize\ttfamily, frame=single, breaklines=true]
+include
+    Boolean.group-cardinality
+    Arithmetic.aggregate-function
+    Arithmetic.feature-cardinality
+    Type
+features
+    Sandwich
+        mandatory
+            Pan {Calorias 100, Azucar 20}
+        optional
+            Salsa
+                or
+                    Ketchup {Calorias 40, Azucar 35}
+                    Mostaza {Calorias 25, Azucar 5}
+            Queso
+                [0..2] // Group cardinality
+                    Cheddar {Calorias 60}
+                    Gouda {Calorias 50}
+                    Cabra {Calorias 35}
+            Pepinillo cardinality [1..3] // Feature cardinality            
+constraints
+    Ketchup => Queso
+    Pan.Azucar + Ketchup.Azucar + Mostaza.Azucar < 60 // Attribute constraints
+    sum(Calorias) < 160 // Attribute aggregate
+\end{lstlisting}
 
+\begin{figure}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+        \tikzset{
+            rootstyle/.style={
+                fill=blue!20,
+                draw=blue!60,
+                thick,
+                font=\bfseries\footnotesize
+            },
+            branchstyle/.style={
+                fill=green!15,
+                draw=green!50,
+                thick
+            },
+            leafstyle/.style={
+                fill=yellow!15,
+                draw=orange!50,
+                thick
+            },
+            optionalstyle/.style={
+                fill=gray!10,
+                draw=gray!40,
+                dashed
+            },
+            orstyle/.style={
+                fill=purple!10,
+                draw=purple!50,
+                thick
+            },
+            mandatory/.style={circle, fill=black, minimum size=4pt, inner sep=0pt},
+            optional/.style={circle, draw=black, fill=white, minimum size=4pt, inner sep=0pt},
+            edge label/.style={font=\tiny, inner sep=1pt}
+        }
+        \begin{forest}
+            for tree={
+                draw,
+                rounded corners,
+                font=\footnotesize,
+                node options={align=center},
+                anchor=north,
+                parent anchor=south,
+                l sep=18pt,
+                s sep=15pt,
+                edge={thick},
+                grow=0,
+                child anchor=west,
+                parent anchor=east,
+                minimum width=2.5cm,
+                minimum height=0.8cm,
+                drop shadow
+            }
+            [Sándwich, rootstyle
+                [Pan, branchstyle,
+                    edge label={node[midway, mandatory]{}},
+                    % Se añade align=left para que funcione el \\
+                    label={[font=\tiny, align=left, yshift=-0.2cm]right:{Calorías: 100\\Azúcar: 20}}
+                ]
+                [Salsa, optionalstyle,
+                    edge label={node[midway, optional]{}},
+                    tikz+={
+                        % El dibujo del arco "OR"
+                        \draw [thick] 
+                            ($(.east)!20pt!(!1.west)$) 
+                            to[bend left=45] 
+                            ($(.east)!20pt!(!l.west)$);
+                    }
+                    [Kétchup, orstyle,
+                        label={[font=\tiny, align=left]right:{Calorías: 40\\Azúcar: 35}}
+                    ]
+                    [Mostaza, orstyle,
+                        label={[font=\tiny, align=left]right:{Calorías: 25\\Azúcar: 5}}
+                    ]
+                ]
+                [Queso, optionalstyle,
+                    edge label={node[midway, optional]{}},
+                    label={[font=\tiny]above:{[0..2]}},
+                    [Cheddar, leafstyle,
+                        label={[font=\tiny]right:{Calorías: 60}}
+                    ]
+                    [Gouda, leafstyle,
+                        label={[font=\tiny]right:{Calorías: 50}}
+                    ]
+                    [Cabra, leafstyle,
+                        label={[font=\tiny]right:{Calorías: 35}}
+                    ]
+                ]
+                [Pepinillo, optionalstyle,
+                    edge label={node[midway, optional]{}},
+                    label={[font=\tiny]above:{[1..3]}}
+                ]
+            ]
+        \end{forest}%
+    }
+
+    \vspace{1cm}
+
+    \small
+    \begin{tabular}{|l|}
+        \hline
+        \textbf{Restricciones (UVL)} \\ \hline
+        1. Kétchup $\implies$ Queso \\
+        2. Pan.Azúcar + Kétchup.Azúcar + Mostaza.Azúcar < 60 \\
+        3. sum(Calorías) < 160 \\ \hline
+    \end{tabular}
+    
+    \caption{Representación gráfica del FM del modelo Sandwich especificado en UVL. Fuente: elaboración propia.}
+    \label{fig:fm_sandwich_uvl}
+\end{figure}
 
 
 \subsection{Configuraciones y configurador curricular}

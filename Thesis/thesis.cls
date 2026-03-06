@@ -119,6 +119,10 @@
 \RequirePackage{ifdraft}
 \RequirePackage[obeyFinal,colorinlistoftodos, prependcaption,spanish]{todonotes}[2012/07/25]
 \RequirePackage[framemethod=tikz, hidealllines=true,roundcorner=10pt]{mdframed}[2013/07/01]
+\RequirePackage{forest}
+\RequirePackage{tikz}
+\usetikzlibrary{calc, shadows}
+\usepackage{float}
 
 \RequirePackage{lipsum}
 \makeatletter
