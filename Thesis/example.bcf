@@ -2421,10 +2421,21 @@
     <bcf:citekey order="42" intorder="1">sanchez2020metodologia</bcf:citekey>
     <bcf:citekey order="43" intorder="1">chen2020variability</bcf:citekey>
     <bcf:citekey order="44" intorder="1">rodriguez2019gestion_curricular</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">Ou2013</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">gomez2023</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">diaz2002flexibilidad</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">okada2009methodology</bcf:citekey>
+    <bcf:citekey order="47" intorder="2">chimalakonda2012accelerating</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">silva2017towards</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">okada2009methodology</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">chimalakonda2012accelerating</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">silva2017towards</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">solispino2022software</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">galan2014building</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">apel2013feature</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">Ou2013</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

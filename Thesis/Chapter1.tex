@@ -102,14 +102,14 @@ Productos Educativos", donde un tronco curricular común puede derivar en
 múltiples planes de estudio especializados mediante la gestión explícita de su
 variabilidad.
 
-\subsection{Evolución y Mantenimiento de Líneas de Productos}
+\subsubsection{Evolución y Mantenimiento de Líneas de Productos}
 
 Las \ac{SPL} no son entidades estáticas; evolucionan con el tiempo para adaptarse a 
-nuevos requisitos, tecnologías y mercados. La \textbf{evolución de SPL} se refiere al 
+nuevos requisitos, tecnologías y mercados. La evolución de \ac{SPL} se refiere al 
 proceso de modificar los activos centrales y los modelos de variabilidad para incorporar 
 cambios, corregir defectos o mejorar la línea \citep{apel2013feature}.
 
-Los principales desafíos en la evolución de SPL incluyen:
+Los principales desafíos en la evolución de \ac{SPL} incluyen:
 
 \begin{itemize}
     \item Trazabilidad de cambios: Mantener registro de qué cambios se realizaron, por qué y cuándo, así como su impacto en los productos derivados.
@@ -247,14 +247,14 @@ real que la estructura jerárquica por sí sola no puede expresar
 
 Las dos formas más comunes y fundamentales son:
 \begin{itemize}
-    \item \textbf{Requiere:} Esta restricción establece una dependencia de presencia. Si
+    \item Requiere: Esta restricción establece una dependencia de presencia. Si
     una característica A requiere una característica B, entonces siempre que
     A sea seleccionada en una configuración, B también debe estarlo. Porejemplo, en 
     un \ac{FM} para un automóvil, la
     característica "Navegación" puede requerir la característica "Pantalla
     Táctil". Esta relación se modela en lógica proposicional como el
     condicional $A \rightarrow B$ \citep{sundermann2023sat, benavides2005Taxonomy}.
-    \item \textbf{Excluye:} Esta restricción establece un conflicto o incompatibilidad. Si
+    \item Excluye: Esta restricción establece un conflicto o incompatibilidad. Si
     una característica C excluye una característica D, entonces ambas no
     pueden formar parte de la misma configuración. Por ejemplo, el motor
     "Diésel" puede excluir la transmisión "Eléctrica" en un vehículo híbrido.
@@ -268,27 +268,27 @@ La semántica formal de un \ac{FM} proporciona un
 significado matemático preciso a todos sus elementos (jerarquía, relaciones y
 restricciones), lo que permite un análisis automático y libre de ambigüedades.
 \begin{itemize}
-    \item \textbf{Traducción a Lógica Proposicional:} La base de la semántica formal es
+    \item Traducción a Lógica Proposicional: La base de la semántica formal es
     la traducción de todo el \ac{FM} a una fórmula en lógica proposicional. Cada
     característica se representa como una variable proposicional (que puede
     ser Verdadera o Falsa, indicando si está seleccionada o no). Las
     relaciones padre-hijo y las restricciones cross-tree se convierten en una
     serie de fórmulas lógicas que, en conjunto, definen el conjunto de todas
     las configuraciones válidas \citep{sundermann2023sat, thum2014featureide}.
-    \item \textbf{Satisfacibilidad (\ac{SAT}) y \ac{SHARPSAT}:} Una vez el \ac{FM} está representado como
+    \item Satisfacibilidad (\ac{SAT}) y \ac{SHARPSAT}: Una vez el \ac{FM} está representado como
     una fórmula lógica F, se pueden realizar diversos análisis:
         \begin{itemize}
-            \item \textbf{Análisis de \ac{SAT}:} Consiste en verificar si existe al menos una
+            \item Análisis de \ac{SAT}: Consiste en verificar si existe al menos una
             asignación de valores (Verdadero/Falso) a las variables que haga
             que la fórmula F sea verdadera. Esto responde a la pregunta
             fundamental de si el \ac{FM} tiene al menos una configuración válida
             \citep{sundermann2023sat, benavides2010automated,mendonca2009SAT}.
-            \item \textbf{Análisis de \ac{SHARPSAT}:} Consiste en el conteo de modelos (\textit{Model Counting}) que
+            \item Análisis de \ac{SHARPSAT}: Consiste en el conteo de modelos (\textit{Model Counting}) que
             satisfacen F. Esto es crucial para determinar el número total de configuraciones válidas que
             define un \ac{FM}, una métrica esencial para comprender su
             variabilidad y complejidad \citep{sundermann2023sat, benavides2010automated,mendonca2009SAT}.
         \end{itemize}
-    \item \textbf{Solucionadores SAT (\textit{SAT solvers}):} Un solucionador SAT (\textit{SAT solver}) es una herramienta algorítmica altamente
+    \item Solucionadores SAT (\textit{SAT solvers}): Un solucionador SAT (\textit{SAT solver}) es una herramienta algorítmica altamente
     optimizada diseñada para resolver problemas de satisfacibilidad. Dada
     una fórmula F, el solucionador (\textit{solver}) determina si es satisfacible (\ac{SAT}) o insatisfacible
     (UNSAT). Para el análisis de \ac{SHARPSAT}, se emplean solucionadores especializados de conteo de modelos (\textit{\#SAT solvers})
@@ -359,7 +359,7 @@ como la programación con restricciones (\textit{constraint programming}) o la
 verificación de modelos (\textit{model checking}), especialmente cuando se buscan 
 configuraciones que optimicen funciones objetivo \citep{benavides2010automated}. 
 Lenguajes como \ac{UVL} incorporan soporte nativo para atributos y restricciones 
-sobre ellos, como se ilustró en el ejemplo del Sándwich \ref{lst:uvl_sandwich}.
+sobre ellos, como se ilustra en el ejemplo del Sándwich \ref{lst:uvl_sandwich}.
 
 \subsubsection{Análisis Automatizado de Modelos de Características (AAFM)}
 
@@ -654,6 +654,7 @@ El valor fundamental de un configurador curricular reside en su capacidad para
 reducir la complejidad del diseño curricular mediante la aplicación de
 restricciones formales que previenen configuraciones inválidas \citep{rodriguez2019gestion_curricular}. 
 Por ejemplo, el sistema puede asegurar automáticamente que:
+
 \begin{itemize}
     \item Se cumplan todos los prerrequisitos entre asignaturas y temáticas de las mismas.
     \item No existan asignaturas y/o temáticas que no esten relacionadas con otras o que sí 
@@ -668,5 +669,455 @@ Por ejemplo, el sistema puede asegurar automáticamente que:
 \end{itemize}
             
 \subsection{Gestión y flexibilidad curricular. Línea de Productos Educativos}
+
+La gestión curricular, como se expuso al inicio de este capítulo, constituye el 
+conjunto de procesos mediante los cuales las instituciones educativas diseñan, 
+implementan, evalúan y actualizan sus planes de estudio. Tradicionalmente, esta gestión 
+se ha apoyado en modelos rígidos y documentos estáticos que dificultan la adaptación a 
+contextos cambiantes \citep{gomez2023}. Sin embargo, las demandas del siglo 
+XXI —caracterizadas por la aceleración tecnológica, la diversidad de perfiles estudiantiles 
+y la necesidad de formación continua— exigen un enfoque radicalmente 
+distinto: la fexibilización curricular.
+
+La flexibilidad curricular puede entenderse como la capacidad de un plan de 
+estudios para adaptarse a las necesidades, intereses y contextos de los estudiantes o bien por 
+necesidades circunstanciales, así como a las demandas del entorno social y productivo, sin perder coherencia ni calidad 
+académica \citep{diaz2002flexibilidad}. Esta flexibilidad opera en múltiples dimensiones:
+\begin{itemize}
+    \item Flexibilidad en el tiempo: Posibilidad de cursar asignaturas en diferentes momentos, ritmos y secuencias.
+    \item Flexibilidad en el espacio: Modalidades presencial, híbrida o virtual.
+    \item Flexibilidad en los contenidos: Selección de asignaturas optativas, énfasis, menciones o itinerarios formativos.
+    \item Flexibilidad metodológica: Diversidad de enfoques pedagógicos (aprendizaje basado en proyectos, aula invertida, gamificación).
+    \item Flexibilidad en la evaluación: Adaptación de los mecanismos de acreditación a las características del estudiante y del contexto.
+\end{itemize}
+
+Lograr esta flexibilidad de manera sistemática y sostenible requiere superar las 
+prácticas artesanales basadas en documentos y hojas de cálculo. Es aquí donde los 
+paradigmas de la ingeniería de software ofrecen un camino prometedor.
+
+\subsubsection{Hacia las Líneas de Productos Educativos}
+
+La aplicación del paradigma de \ac{SPL} al dominio educativo da lugar al concepto 
+de Líneas de Productos Educativos. 
+Esta puede definirse como una familia de artefactos 
+educativos (planes de estudio, cursos, materiales didácticos, actividades de aprendizaje) 
+que comparten un núcleo común y que pueden ser configurados sistemáticamente para generar 
+productos adaptados a contextos, perfiles o necesidades 
+específicas \citep{okada2009methodology, chimalakonda2012accelerating}.
+
+La idea fundamental consiste en trasladar los principios de la \ac{SPLE} —gestión de 
+variabilidad, reutilización planificada, activos centrales, puntos de variación— al 
+diseño y gestión curricular. Así, un tronco curricular común
+(asignaturas obligatorias, competencias básicas, estructura general) constituye los 
+activos centrales de la línea, mientras que los itinerarios formativos, 
+las asignaturas optativas, las menciones o las modalidades de 
+impartición se modelan como puntos de variabilidad \citep{silva2017towards}.
+
+Investigaciones pioneras en este campo han demostrado la viabilidad y los beneficios de 
+este enfoque:
+
+\begin{itemize}
+    \item \citet{okada2009methodology} propusieron una metodología para mejorar la reutilización de materiales educativos mediante ingeniería de líneas de productos. Su trabajo demostró que la separación de partes comunes y variables en los materiales docentes permite generar variantes adaptadas a diferentes escenarios de uso, resolviendo los problemas de consistencia que surgen cuando los educadores gestionan múltiples variantes de forma artesanal.
+    
+    \item \citet{chimalakonda2012accelerating} exploraron la aplicación de \ac{SPL} en tecnologías educativas para abordar la diversidad lingüística y contextual de la India. Su investigación evidenció que el desarrollo de soluciones educativas para 22 idiomas y múltiples contextos socioculturales puede beneficiarse enormemente de un enfoque sistemático de reutilización, reduciendo el esfuerzo de desarrollo de años-persona a procesos de configuración guiados.
+    
+    \item \citet{silva2017towards} diseñaron una arquitectura de línea de productos para construir aplicaciones de aprendizaje móvil (m-learning) orientadas a la enseñanza de programación. Su trabajo identificó las características comunes y variables en este dominio y demostró cómo el enfoque \ac{SPL} puede facilitar la creación de herramientas educativas adaptadas a diferentes estilos de aprendizaje y contextos institucionales.
+    
+    \item \citet{solispino2022software} aplicaron \ac{SPL} como herramienta educativa para el aprendizaje de programación de robots industriales con Arduino. Su estudio con estudiantes de primer año universitario mostró que el enfoque permitió reutilizar entre el 38\% y el 43\% del código total necesario para programar los robots, mejorando significativamente el tiempo de desarrollo y facilitando el aprendizaje de conceptos de abstracción y modularidad.
+    
+    \item \citet{galan2014building} refactorizaron una aplicación de e-learning (E-Learning Web Miner) como una línea de productos, demostrando que el paradigma \ac{SPL} puede aliviar los costosos y propensos a errores procesos de adaptación manual que caracterizan a muchas plataformas educativas cuando deben ajustarse a diferentes contextos de enseñanza-aprendizaje.
+\end{itemize}
+
+
+\section{Fortalezas de los Modelos de Característica aplicado en la gestión curricular}
+
+La verdadera potencia del \ac{FM} radica en que, una vez formalizado,
+se convierte en un modelo lógico-matemático que define explícitamente
+el espacio de diseño o el conjunto de configuraciones válidas (2n ) que se
+pueden generar (donde n es el número de características). Esta formalidad 
+permite realizar análisis automatizados esenciales mediante herramientas 
+conocidas como solucionadores de satisfacibilidad (\textit{SAT Solvers}) o
+restricciones, permitiendo la validación de consistencia, que se encarga 
+de determinar si un \ac{FM} es consistente, es decir, si existe al menos
+una configuración válida; la Identificación de características muertas, 
+lo cual permite encotrar las características que nunca pueden ser seleccionadas debido 
+a la severidad de las restricciones y posibilitan una configuración guiada, garantizándose
+que el producto final (ej. el plan de estudios) sea siempre válido.
+
+Aunque existen otros modelos de variabilidad (como las tablas de
+decisión o los diagramas UML de variabilidad), el \ac{FM} es el formalismo
+preferido por su simplicidad visual y su potencia analítica. A diferencia
+de modelos como las tablas, que pueden volverse inmanejables al aumentar 
+el número de características, el \ac{FM} provee una visión de alto
+nivel y, simultáneamente, una base lógica binaria robusta para el análisis 
+automatizado de la consistencia.
+
+\subsection{Analogía formal curricular}
+
+La aplicación de los \ac{FM} a la gestión
+y diseño curricular constituye el principal aporte metodológico de esta
+investigación. Esta extensión se fundamenta en la premisa de que la
+variabilidad, concepto central de la \ac{SPLE} es intrínseca y necesaria en 
+los planes de estudio modernos de la enseñanza superior.
+
+Para fundamentar la propuesta, es imprescindible establecer una
+analogía \ref{tab:analogiaSPLeducacion} formal y coherente que permita 
+sustituir los constructos de \ac{SPL} por sus equivalentes en el dominio 
+educativo, elevando el plan de estudios 
+de un simple documento descriptivo a un activo configurable y
+analizable:
+
+\begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
+    \caption{Analogía de conceptos de \ac{SPL} en el Dominio Educativo. Fuente: Elaboración propia. \label{tab:analogiaSPLeducacion}}\\
+    \hline
+    \rowcolor[HTML]{CBCEFB} 
+    \textbf{Concepto de \ac{SPL}} & \textbf{Concepto análogo en planificación curricular} & \textbf{Justificación} \\
+    \hline
+    \endfirsthead
+                    
+    \multicolumn{3}{c}
+    {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+                    
+    \hline
+    \rowcolor[HTML]{CBCEFB} 
+    \textbf{Concepto de \ac{SPL}} & \textbf{Concepto análogo en planificación curricular} & \textbf{Justificación} \\
+    \hline
+    \endhead
+                    
+    \hline
+    \multicolumn{3}{|r|}{{Continúa en la siguiente página}} \\
+    \endfoot
+                    
+    \hline
+    \endlastfoot
+                    
+    % Cuerpo de la tabla
+    Línea de Productos & Carrera o área de estudio & El tronco común de conocimientos que define una familia de perfiles profesionales \\ 
+    \hline
+    \rowcolor[HTML]{EDEBF1}
+    Producto Específico & Plan de estudio configuracional & La ruta académica única y válida para un estudiante o perfil de egreso definido \\ 
+    \hline
+    Característica & Unidad curricular(asignatura, módulo, tema de estudio) & La unidad funcional mínima que puede ser seleccionada u omitida \\
+    \hline
+    \rowcolor[HTML]{EDEBF1}
+    Característica Raíz & El currículo base (ej. la carrera Ingeniería en Ciencias Informáticas o en caso que se esté modelando una asignatura, el nombre de la misma) & La entidad que engloba todos los módulos y asignaturas posibles de la carrera \\
+    \hline
+    Variabilidad & Opciones académicas & El conjunto de decisiones disponibles (optatividad, electividad, elección de menciones) que permiten personalizar la ruta del estudiante \\
+    \hline
+\end{longtable}
+
+Yendo un paso más adelante para evidenciar la aplicabilidad del \ac{FM}
+al dominio curricular, se presenta un ejemplo (figuras 
+\ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2})
+basado en la asignatura Estructura de Datos I. 
+El modelo computacional interno, que constituye una estructura formal JSON, 
+no se presenta aquí de forma literal por motivos de extensión, pero sí se expone 
+su esquema jerárquico conceptual con el fin ilustrativo y 
+suficiente para comprender las decisiones de 
+variabilidad del \ac{FM}:
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+    \tikzset{
+        rootstyle/.style={
+            fill=blue!20,
+            draw=blue!60,
+            thick,
+            font=\bfseries\footnotesize
+        },
+        branchstyle/.style={
+            fill=green!15,
+            draw=green!50,
+            thick
+        },
+        leafstyle/.style={
+            fill=yellow!15,
+            draw=orange!50,
+            thick
+        },
+        optionalstyle/.style={
+            fill=gray!10,
+            draw=gray!40,
+            dashed
+        },
+        xorstyle/.style={
+            fill=red!10,
+            draw=red!50,
+            thick
+        },
+        mandatory/.style={circle, fill=black, minimum size=4pt, inner sep=0pt},
+        optional/.style={circle, draw=black, fill=white, minimum size=4pt, inner sep=0pt},
+        edge label/.style={font=\tiny, inner sep=1pt}
+    }
+    \begin{forest}
+        for tree={
+            draw,
+            rounded corners,
+            font=\footnotesize,
+            node options={align=center},
+            anchor=north,
+            parent anchor=south,
+            l sep=18pt,
+            s sep=15pt,
+            edge={thick},
+            grow=0,
+            child anchor=west,
+            parent anchor=east,
+            minimum width=2.5cm,
+            minimum height=0.8cm,
+            drop shadow
+        }
+        [Estructura de Datos I, rootstyle
+            [Fundamentos y Análisis, branchstyle, 
+                edge label={node[midway, mandatory]{}}
+            ]
+            [Estructuras Lineales, branchstyle,
+                edge label={node[midway, mandatory]{}}
+                [Arreglos, leafstyle,
+                    edge label={node[midway, mandatory]{}}
+                ]
+                [Listas Enlazadas, leafstyle,
+                    edge label={node[midway, mandatory]{}}
+                ]
+                [Listas Circulares, optionalstyle,
+                    edge label={node[midway, optional]{}}
+                ]
+            ]
+            [Pilas, branchstyle,
+                edge label={node[midway, mandatory]{}}
+                % AQUI ESTA EL CAMBIO PARA EL XOR
+                [Implementación, xorstyle,
+                    edge label={node[midway, mandatory]{}},
+                    tikz+={
+                        % Dibuja un arco desde la arista del primer hijo al último
+                        % (!1) es el primer hijo, (!l) es el último hijo.
+                        % .east es el ancla del padre.
+                        \draw [thick] 
+                            ($(.east)!20pt!(!1.west)$) 
+                            to[bend left=45] 
+                            ($(.east)!20pt!(!l.west)$);
+                    }
+                    [Con Arreglos, leafstyle]
+                    [Con Listas, leafstyle]
+                ]
+            ]
+            [Colas, branchstyle,
+                edge label={node[midway, mandatory]{}}
+                [FIFO, leafstyle,
+                    edge label={node[midway, mandatory]{}}
+                ]
+                [Prioridad, leafstyle,
+                    edge label={node[midway, mandatory]{}}
+                ]
+                [Deque, optionalstyle,
+                    edge label={node[midway, optional]{}}
+                ]
+            ]
+            [Árboles Binarios, branchstyle,
+                edge label={node[midway, mandatory]{}}
+            ]
+            [Algoritmos Ordenamiento, branchstyle,
+                edge label={node[midway, mandatory]{}}
+            ]
+        ]
+    \end{forest}%
+}
+\caption{Representación simplificada \#1 del \ac{FM} de la asignatura Estructura de Datos I. Fuente: elaboración propia.}
+\label{fig:fm_data_structures_1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+    \tikzset{
+        rootstyle/.style={
+            fill=blue!20,
+            draw=blue!60,
+            thick,
+            font=\bfseries\footnotesize
+        },
+        branchstyle/.style={
+            fill=green!15,
+            draw=green!50,
+            thick
+        },
+        leafstyle/.style={
+            fill=yellow!15,
+            draw=orange!50,
+            thick
+        },
+        optionalstyle/.style={
+            fill=gray!10,
+            draw=gray!40,
+            dashed
+        },
+        xorstyle/.style={
+            fill=red!10,
+            draw=red!50,
+            thick
+        },
+        orstyle/.style={
+            fill=purple!10,
+            draw=purple!50,
+            thick
+        },
+        mandatory/.style={circle, fill=black, minimum size=4pt, inner sep=0pt},
+        optional/.style={circle, draw=black, fill=white, minimum size=4pt, inner sep=0pt},
+        edge label/.style={font=\tiny, inner sep=1pt}
+    }
+    \begin{forest}
+        for tree={
+            draw,
+            rounded corners,
+            font=\footnotesize,
+            node options={align=center},
+            anchor=north,
+            parent anchor=south,
+            % --- AUMENTÉ LA SEPARACIÓN HORIZONTAL ---
+            l sep=40pt, 
+            s sep=15pt,
+            edge={thick},
+            grow=0,
+            child anchor=west,
+            parent anchor=east,
+            minimum width=2.5cm,
+            minimum height=0.1cm,
+            drop shadow
+        }
+        [Estructura de Datos I, rootstyle
+            % --- RAMA XOR (Símbolo más grande) ---
+            [Lenguaje de\\Implementación, xorstyle,
+                edge label={node[midway, mandatory]{}},
+                tikz+={
+                    % Cambié 15pt a 28pt para hacerlo más largo
+                    % Cambié 'thick' a 'very thick' para que se note más la línea
+                    \draw [very thick] 
+                        ($(.east)!28pt!(!1.west)$) 
+                        to[bend left=30] 
+                        ($(.east)!28pt!(!l.west)$);
+                }
+                [C/C++, leafstyle]
+                [Java, leafstyle]
+                [Python, leafstyle]
+            ]
+            [Técnicas de\\Programación, branchstyle,
+                edge label={node[midway, mandatory]{}}
+                [Recursión\\Avanzada, leafstyle]
+                [Genérica, leafstyle]
+                [Manejo de\\Memoria, leafstyle]
+            ]
+            % --- RAMA OR (Símbolo más grande) ---
+            [Herramientas, orstyle,
+                edge label={node[midway, mandatory]{}},
+                tikz+={
+                    % Cambié 15pt a 28pt para hacer el abanico más grande
+                    \filldraw [fill=black] 
+                        (.east) -- 
+                        ($(.east)!28pt!(!1.west)$) 
+                        to[bend left=30] 
+                        ($(.east)!28pt!(!l.west)$) -- 
+                        cycle;
+                }
+                [IDE, leafstyle]
+                [Debugger, leafstyle]
+                [Git, leafstyle]
+            ]
+            [Análisis de\\Complejidad, branchstyle,
+                edge label={node[midway, mandatory]{}}
+                [Notación Big-O, leafstyle,
+                    edge label={node[midway, mandatory]{}}
+                ]
+                [Análisis Temporal, leafstyle,
+                    edge label={node[midway, mandatory]{}}
+                ]
+                [Análisis Espacial, leafstyle,
+                    edge label={node[midway, mandatory]{}}
+                ]
+            ]
+        ]
+    \end{forest}%
+}
+\caption{Representación simplificada \#2 del \ac{FM} de la asignatura Estructura de Datos I. Fuente: elaboración propia.}
+\label{fig:fm_data_structures_2}
+\end{figure}
+
+Este caso permite demostrar cómo una asignatura, lejos de ser un 
+listado estático de contenidos, posee una estructura jerárquica, 
+elementos obligatorios y opcionales, variabilidad controlada, 
+dependencias de prerrequisitos y restricciones internas; todas 
+ellas propiedades capturables dentro de un FM formal.
+El modelo mostrado (\ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2}) 
+constituye una representación declarativa de la asignatura, 
+estructurada como un árbol donde la característica raíz corresponde al curso 
+completo y las características hijas representan módulos, temas o decisiones 
+didácticas. Esta representación no solo captura los contenidos, sino que los 
+organiza con semántica formal, permitiendo análisis automatizable. Los ejemplos 
+ilustra distintos tipos de variabilidad presentes en currículos reales:
+contenidos obligatorios (módulos troncales), opcionales (tópicos avanzados), 
+alternativas mutuamente excluyentes (implementación de pilas), configuraciones 
+tipo OR (técnicas complementarias) y variantes dependientes 
+(manejo de memoria solo si la implementación se realiza en C/C++).
+
+La estructura del \ac{FM} muestra claramente cómo una asignatura puede contener 
+subniveles jerárquicos complejos, donde cada nivel constituye un subconjunto 
+configurable. Esto permite modelar asignaturas que se imparten según distintas 
+líneas, enfoques o lenguajes de implementación (C/C++, Java, Python), conservando 
+la validez curricular y evitando inconsistencias.
+
+La variabilidad no solo define qué temas se abordan, sino cómo se implementan, 
+qué carga cognitiva poseen y qué prerrequisitos deben cumplirse. La presencia de 
+relaciones cruzadas de árboles, restricciones lógicas e implicaciones capturan dependencias 
+reales, tales como: para comprender árboles es necesario estudiar recursión, o 
+bien optar por C/C++ implica la posibilidad de manejo manual de memoria. 
+Esta lógica curricular, que en los planes tradicionales queda implícita o 
+depende de interpretación docente, aquí se vuelve explícita, formal y verificable.
+
+De este modo, la asignatura deja de ser un documento textual estático para 
+convertirse en un componente configurable. El \ac{FM} presenta la asignatura como un 
+micro-espacio de variabilidad curricular, análogo a un “producto configurable” 
+dentro de una línea de productos académicos. Diferentes configuraciones del \ac{FM} 
+representan distintas adaptaciones válidas de la asignatura según perfiles de 
+estudiante, competencias, niveles de profundidad o enfoques pedagógicos. 
+Este modelo puede procesarse mediante un motor lógico para verificar su 
+consistencia, detectar características inaccesibles y generar 
+configuraciones válidas automáticamente.
+
+Por tanto, los \ac{FM} no solo son adecuados 
+para representar planes de estudios completos, sino también para modelar unidades 
+académicas individuales con variabilidad interna. Esto abre la puerta a una 
+flexibilidad curricular controlada, verificable y sustentada en formalismos 
+computacionales, alineándose con los principios de \ac{SPLE} 
+aplicados a la planificación educativa.
+
+
+\subsection{Beneficios de las Líneas de Productos Educativos}
+
+En una Línea de Productos Educativos, la variabilidad curricular se convierte 
+en el objeto central de modelado y gestión. Retomando los conceptos de \ac{FM} y 
+\ac{UVL} desarrollados en secciones anteriores, es posible representar explícitamente:
+
+\begin{itemize}
+    \item Características obligatorias: Asignaturas troncales, competencias básicas, prácticas profesionales obligatorias.
+    \item Características opcionales: Asignaturas optativas, seminarios complementarios, actividades extracurriculares.
+    \item Relaciones de alternancia: Menciones o itinerarios excluyentes entre sí (ej., mención en Ingeniería de Software vs. mención en Inteligencia Artificial).
+    \item Agrupaciones OR: Conjuntos de asignaturas entre las cuales debe elegirse un mínimo (ej., elegir al menos 3 de 5 asignaturas de un bloque).
+    \item Restricciones (\textit{cross-tree}): Prerrequisitos entre asignaturas, incompatibilidades, correlatividades, límites de créditos.
+    \item Atributos: Créditos, horas lectivas, semestre recomendado, área de conocimiento, modalidad de impartición.
+\end{itemize}
+
+
+
+La adopción del enfoque \ac{SPL} en la gestión curricular reporta beneficios 
+análogos a los observados en el desarrollo de software \citep{apel2013feature}. De los cuales
+se tiene:
+
+\begin{itemize}
+    \item Reutilización sistemática: Los diseños curriculares, una vez validados, pueden ser reutilizados para generar nuevos programas académicos sin partir desde cero.
+    \item Consistencia y trazabilidad: La representación formal de la variabilidad garantiza que todos los planes de estudio derivados respeten las mismas reglas y restricciones, facilitando la trazabilidad de los cambios.
+    \item Reducción de errores: Al automatizar la validación de configuraciones, se eliminan los errores humanos derivados de la gestión manual (inconsistencias, omisiones, conflictos).
+    \item Agilidad en la actualización: Las modificaciones al modelo central se propagan automáticamente a todos los productos derivados, manteniendo la coherencia institucional.
+    \item Exploración del espacio de configuraciones: Herramientas de análisis automatizado pueden responder preguntas como ``¿cuántos planes de estudio válidos pueden generarse?'' o ``¿qué asignaturas quedan sin posibilidad de ser cursadas?''.
+\end{itemize}
 
 

@@ -4,28 +4,33 @@
 \contentsline {chapter}{\numberline {1}Fundamentación Teórica}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Conceptos asociados al tema}{5}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Ingeniería de Líneas de Productos de Software (SPLE)}{5}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Evolución y Mantenimiento de Líneas de Productos}{7}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Modelos de Características (Feature Models)}{7}{subsection.1.1.3}%
-\contentsline {subsubsection}{Relaciones estructurales}{8}{section*.15}%
-\contentsline {subsubsection}{Restricciones (\textit {Cross-Tree})}{10}{section*.17}%
-\contentsline {subsubsection}{Semántica Formal y Solucionadores SAT (\textit {SAT Solvers})}{11}{section*.18}%
-\contentsline {subsubsection}{Operaciones sobre Modelos de Características}{11}{section*.19}%
-\contentsline {subsubsection}{Modelos de Características con atributos}{12}{section*.20}%
-\contentsline {subsubsection}{Análisis Automatizado de Modelos de Características (AAFM)}{13}{section*.21}%
-\contentsline {subsection}{\numberline {1.1.4}Lenguaje Universal de Variabilidad (UVL)}{14}{subsection.1.1.4}%
-\contentsline {subsubsection}{Diseño del lenguaje y niveles de expresividad}{14}{section*.22}%
-\contentsline {subsection}{\numberline {1.1.5}Configuraciones y configurador curricular}{17}{subsection.1.1.5}%
-\contentsline {subsection}{\numberline {1.1.6}Gestión y flexibilidad curricular. Línea de Productos Educativos}{18}{subsection.1.1.6}%
-\contentsline {chapter}{\numberline {2}Propuesta de solución}{19}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Sección de prueba}{19}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Ejemplos de código fuente}{20}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Ejemplo de tabla grande}{26}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Tabla aleatoria}{26}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Tablas de ingeniería}{27}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Resultados}{32}{chapter.4}%
-\contentsline {chapter}{Conclusiones}{34}{chapter*.25}%
-\contentsline {chapter}{Recomendaciones}{35}{chapter*.27}%
-\contentsline {chapter}{Referencias bibliográficas}{36}{chapter*.28}%
+\contentsline {subsubsection}{Evolución y Mantenimiento de Líneas de Productos}{7}{section*.15}%
+\contentsline {subsection}{\numberline {1.1.2}Modelos de Características (Feature Models)}{7}{subsection.1.1.2}%
+\contentsline {subsubsection}{Relaciones estructurales}{8}{section*.16}%
+\contentsline {subsubsection}{Restricciones (\textit {Cross-Tree})}{10}{section*.18}%
+\contentsline {subsubsection}{Semántica Formal y Solucionadores SAT (\textit {SAT Solvers})}{11}{section*.19}%
+\contentsline {subsubsection}{Operaciones sobre Modelos de Características}{11}{section*.20}%
+\contentsline {subsubsection}{Modelos de Características con atributos}{12}{section*.21}%
+\contentsline {subsubsection}{Análisis Automatizado de Modelos de Características (AAFM)}{13}{section*.22}%
+\contentsline {subsection}{\numberline {1.1.3}Lenguaje Universal de Variabilidad (UVL)}{14}{subsection.1.1.3}%
+\contentsline {subsubsection}{Diseño del lenguaje y niveles de expresividad}{14}{section*.23}%
+\contentsline {subsection}{\numberline {1.1.4}Configuraciones y configurador curricular}{17}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Gestión y flexibilidad curricular. Línea de Productos Educativos}{18}{subsection.1.1.5}%
+\contentsline {subsubsection}{Hacia las Líneas de Productos Educativos}{18}{section*.25}%
+\contentsline {section}{\numberline {1.2}Fortalezas de los Modelos de Característica aplicado en la gestión curricular}{19}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Analogía formal curricular}{20}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Beneficios de las Líneas de Productos Educativos}{23}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}Propuesta de solución}{25}{chapter.2}%
+\contentsline {subsubsection}{Posicionamiento de la presente investigación}{25}{section*.28}%
+\contentsline {section}{\numberline {2.1}Sección de prueba}{25}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Ejemplos de código fuente}{26}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Ejemplo de tabla grande}{32}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tabla aleatoria}{32}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Tablas de ingeniería}{33}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Resultados}{38}{chapter.4}%
+\contentsline {chapter}{Conclusiones}{40}{chapter*.30}%
+\contentsline {chapter}{Recomendaciones}{41}{chapter*.32}%
+\contentsline {chapter}{Referencias bibliográficas}{42}{chapter*.33}%
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
@@ -100,8 +105,30 @@
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Apéndices}{39}{section*.29}%
-\contentsline {chapter}{\numberline {A}Proyectos y Avales}{40}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Otro reporte}{41}{appendix.Alph2}%
-\contentsline {section}{\numberline {B.1}Otra sección de muestra}{41}{section.Alph2.1}%
-\contentsline {section}{\numberline {B.2}Otro ensamble Industrial}{41}{section.Alph2.2}%
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Apéndices}{46}{section*.34}%
+\contentsline {chapter}{\numberline {A}Proyectos y Avales}{47}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Otro reporte}{48}{appendix.Alph2}%
+\contentsline {section}{\numberline {B.1}Otra sección de muestra}{48}{section.Alph2.1}%
+\contentsline {section}{\numberline {B.2}Otro ensamble Industrial}{48}{section.Alph2.2}%
