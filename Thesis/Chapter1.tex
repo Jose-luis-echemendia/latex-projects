@@ -102,6 +102,34 @@ Productos Educativos", donde un tronco curricular común puede derivar en
 múltiples planes de estudio especializados mediante la gestión explícita de su
 variabilidad.
 
+\subsection{Evolución y Mantenimiento de Líneas de Productos}
+
+Las \ac{SPL} no son entidades estáticas; evolucionan con el tiempo para adaptarse a 
+nuevos requisitos, tecnologías y mercados. La \textbf{evolución de SPL} se refiere al 
+proceso de modificar los activos centrales y los modelos de variabilidad para incorporar 
+cambios, corregir defectos o mejorar la línea \citep{apel2013feature}.
+
+Los principales desafíos en la evolución de SPL incluyen:
+
+\begin{itemize}
+    \item Trazabilidad de cambios: Mantener registro de qué cambios se realizaron, por qué y cuándo, así como su impacto en los productos derivados.
+    
+    \item Impacto en productos existentes: Determinar cómo las modificaciones en la línea afectan a los productos ya desplegados y si es necesario migrarlos.
+    
+    \item Consistencia del modelo: Garantizar que después de los cambios, el \ac{FM} siga siendo consistente y represente fielmente la variabilidad deseada.
+    
+    \item Gestión de versiones: Coordinar diferentes versiones de la línea que puedan coexistir para dar soporte a productos en distintos estados de madurez.
+\end{itemize}
+
+En el dominio educativo, la evolución curricular es una realidad constante: nuevos planes de estudio, actualización de contenidos, cambios en normativas, etc. Un sistema de gestión de variabilidad curricular debe contemplar mecanismos para:
+
+\begin{itemize}
+    \item Registrar el histórico de modificaciones curriculares.
+    \item Evaluar el impacto de los cambios en los planes de estudio existentes.
+    \item Gestionar múltiples versiones de un mismo plan (por ejemplo, planes de estudio con diferentes años de implementación).
+    \item Asegurar la trazabilidad entre las versiones del modelo y los productos generados.
+\end{itemize}
+
 \subsection{Modelos de Características (Feature Models)}
 
 Es necesario contar con un modelo que represente de manera explícita las
@@ -269,6 +297,104 @@ restricciones), lo que permite un análisis automático y libre de ambigüedades
     modelos industriales \citep{sundermann2023sat, soos2020Ganak}.
 \end{itemize}
 
+\subsubsection{Operaciones sobre Modelos de Características}
+
+Para que un \ac{FM} sea útil en un entorno de desarrollo, debe soportar un conjunto de 
+operaciones que permitan manipularlo y consultarlo. Estas operaciones están agrupadas por
+grupos y son:
+
+\begin{itemize}
+    \item \textbf{Operaciones de creación y edición:}
+    \begin{itemize}
+        \item Creación del modelo: Inicialización de un \ac{FM} con su característica raíz.
+        \item Inserción/eliminación de características: Añadir o remover nodos en la jerarquía.
+        \item Modificación de relaciones: Cambiar el tipo de relación entre características padre-hijo.
+        \item Gestión de restricciones: Añadir, eliminar o modificar restricciones \textit{cross-tree}.
+    \end{itemize}
+    
+    \item \textbf{Operaciones de consulta y análisis:}
+    \begin{itemize}
+        \item Validación del modelo: Verificar la consistencia global del \ac{FM}.
+        \item Cálculo del número de configuraciones: Determinar la cardinalidad del espacio de productos.
+        \item Extracción de configuraciones: Obtener configuraciones válidas aleatorias o siguiendo criterios específicos.
+        \item Verificación de restricciones: Comprobar si una configuración candidata cumple todas las reglas.
+    \end{itemize}
+    
+    \item \textbf{Operaciones de transformación:}
+    \begin{itemize}
+        \item Exportación/importación: Serializar el modelo a formatos estándar (UVL, XML, JSON).
+        \item Refactorización: Reorganizar la estructura del modelo sin alterar su semántica.
+        \item Especialización: Generar un submás modelo a partir de decisiones parciales.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Modelos de Características con atributos}
+
+Los \ac{FM} básicos, también conocidos como feature models booleanos, capturan únicamente 
+la presencia o ausencia de características. Sin embargo, muchos dominios requieren 
+modelar información adicional asociada a cada característica, como costos, pesos, 
+tiempos, o en el caso educativo, créditos, horas lectivas o puntuaciones 
+\citep{benavides2005Taxonomy}.
+
+Los \ac{FM} con atributos 
+extienden el formalismo básico permitiendo asociar a cada característica un 
+conjunto de atributos con valores. Estos atributos pueden ser:
+\begin{itemize}
+    \item Numéricos: Enteros o reales (ej., 4 créditos, 2.5 horas).
+    \item Booleanos: Valores verdadero/falso.
+    \item Enumerados: Conjuntos finitos de valores (ej., semestre: 1,2,3,4,5).
+    \item Cadenas: Texto descriptivo.
+\end{itemize}
+
+La verdadera utilidad de los atributos emerge cuando se combinan con restricciones que los involucran. Por ejemplo, en un modelo curricular se pueden expresar reglas como:
+
+\begin{itemize}
+    \item La suma de créditos de las asignaturas optativas no debe exceder 30.
+    \item El costo de los materiales de laboratorio debe ser inferior a \$200.
+    \item La carga horaria semanal debe estar entre 20 y 25 horas.
+\end{itemize}
+
+El análisis de \ac{FM} con atributos requiere técnicas más sofisticadas, 
+como la programación con restricciones (\textit{constraint programming}) o la 
+verificación de modelos (\textit{model checking}), especialmente cuando se buscan 
+configuraciones que optimicen funciones objetivo \citep{benavides2010automated}. 
+Lenguajes como \ac{UVL} incorporan soporte nativo para atributos y restricciones 
+sobre ellos, como se ilustró en el ejemplo del Sándwich \ref{lst:uvl_sandwich}.
+
+\subsubsection{Análisis Automatizado de Modelos de Características (AAFM)}
+
+La verdadera potencia de los \ac{FM} reside en la posibilidad de realizar análisis 
+automatizados sobre ellos. El análisis de \ac{FM} (\ac{AAFM}) es un área de investigación que estudia cómo extraer información 
+útil de un \ac{FM} mediante algoritmos y herramientas automáticas 
+\citep{benavides2010automated}. Estos análisis permiten responder 
+preguntas fundamentales sobre la línea de productos antes de invertir 
+en su implementación.
+
+\citet{benavides2010automated} clasifican los análisis en varias categorías:
+
+\begin{itemize}
+    \item \textbf{Análisis de propiedades básicas:} Verifican características elementales del modelo:
+    \begin{itemize}
+        \item Consistencia (\textit{consistency}): Determina si existe al menos una configuración válida (modelo no vacío).
+        \item Modelo muerto (\textit{void model}): Detecta si el \ac{FM} carece por completo de configuraciones válidas debido a restricciones contradictorias.
+        \item Características muertas (\textit{dead features}): Identifica características que no pueden ser seleccionadas en ninguna configuración válida.
+        \item Características falsas opcionales (\textit{false optional features}): Detecta características declaradas como opcionales pero que, debido a restricciones, resultan obligatorias en todas las configuraciones.
+    \end{itemize}
+    
+    \item \textbf{Análisis de configuración:} Asisten en el proceso de seleccionar características:
+    \begin{itemize}
+        \item Validación de configuraciones: Verifica si una selección parcial o completa de características constituye una configuración válida.
+        \item Propagación de decisiones: Calcula automáticamente las consecuencias de seleccionar o excluir una característica.
+        \item Explicación de inconsistencias: Identifica las restricciones responsables de que una configuración sea inválida.
+    \end{itemize}
+    
+    \item \textbf{Análisis de optimización:} Buscan configuraciones que maximicen o minimicen ciertos criterios:
+    \begin{itemize}
+        \item Selección óptima de características: Encuentra configuraciones que optimicen funciones objetivo (costo, rendimiento, calidad).
+        \item Análisis multi-objetivo: Considera múltiples criterios simultáneamente para encontrar el conjunto de configuraciones Pareto-óptimas.
+    \end{itemize}
+\end{itemize}
+
 \subsection{Lenguaje Universal de Variabilidad (UVL)}
 
 La diversidad de notaciones y lenguajes para el modelado de la variabilidad ha sido 
@@ -353,8 +479,10 @@ El lenguaje contempla los siguientes niveles principales \citep{universalvariabi
 
 Además, \ac{UVL} incorpora un mecanismo de importación que permite referenciar submodelos, 
 facilitando así la composición de modelos de variabilidad de gran tamaño a partir de módulos 
-más pequeños y gestionables \citep{universalvariabilitylanguage}. El siguiente \ac{FM} representado
-ejemplifica la sintaxis \ac{UVL} y la correspondencia con su representación gráfica:
+más pequeños y gestionables \citep{universalvariabilitylanguage}. El \ac{FM} representado
+(\ref{lst:uvl_sandwich})
+ejemplifica la sintaxis \ac{UVL} y la correspondencia con su representación gráfica
+(\ref{fig:fm_sandwich_uvl}):
 
 \begin{lstlisting}[language=Python, caption={Ejemplo de modelo de variabilidad en \ac{UVL}}, label={lst:uvl_sandwich}, basicstyle=\footnotesize\ttfamily, frame=single, breaklines=true]
 include
@@ -528,54 +656,17 @@ restricciones formales que previenen configuraciones inválidas \citep{rodriguez
 Por ejemplo, el sistema puede asegurar automáticamente que:
 \begin{itemize}
     \item Se cumplan todos los prerrequisitos entre asignaturas y temáticas de las mismas.
+    \item No existan asignaturas y/o temáticas que no esten relacionadas con otras o que sí 
+    lo estén, pero debido a las restricciones y reglas, es imposible seleccionar o incluir
+    en cualquier configuración válida del producto.
     \item Los límites de créditos por semestre se respeten.
     \item La coherencia entre las competencias a desarrollar y las asignaturas seleccionadas se mantengan.
     \item Se eviten conflictos de horario y sobrecarga académica.
-    \item No existan asignaturas incompatibles en el mismo plan de estudio.
+    \item No existan asignaturas o temáticas incompatibles en el mismo plan de estudio.
     \item Se garantice la inclusión de asignaturas obligatorias y la correcta selección de asignaturas optativas según las reglas definidas en el modelo curricular.
     \item Se cumplan las restricciones de diversidad temática y metodológica para asegurar un plan de estudio equilibrado y completo.
 \end{itemize}
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{figure}[!htb]
-\centering
-\captionbox{Vista del Arco de Moncloa\label{fig:DSC00461}}
-{\includegraphics[width=0.7\linewidth]{Images/DSC00461}}
-\end{figure}
-
-En la Tabla \ref{Prueba} se observa \dots\\
-
-\begin{table}[!h]
-\centering
-\captionbox{Caption de Prueba\label{Prueba}}
-{
-	\begin{tabular}{lllll}
-	\hline \textbf{No. 1} & \textbf{No. 2} & \textbf{No. 3} & \textbf{No. 4} & \textbf{No. 5}\\ \hline
-	12 & 12 & 56 & 56 &  56 \\ 
-	12 & 12 & 56 & 56 &  56 \\
-	\hline 
-	\end{tabular}
-}
-\end{table}
+\subsection{Gestión y flexibilidad curricular. Línea de Productos Educativos}
 
 

@@ -1,0 +1,16 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'example.blg'
+[79] biber:340> INFO - === sáb mar  7, 2026, 00:01:17
+[97] Biber.pm:419> INFO - Reading 'example.bcf'
+[168] Biber.pm:979> INFO - Found 33 citekeys in bib section 0
+[181] Biber.pm:4419> INFO - Processing section 0
+[194] Biber.pm:4610> INFO - Looking for bibtex file 'example.bib' for section 0
+[199] bibtex.pm:1713> INFO - LaTeX decoding ...
+[287] bibtex.pm:1519> INFO - Found BibTeX data source 'example.bib'
+[674] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[674] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[674] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'es_ES'
+[746] bbl.pm:660> INFO - Writing 'example.bbl' with encoding 'UTF-8'
+[763] bbl.pm:763> INFO - Output to example.bbl
+[764] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_5MB0/0a7c5e67b4d952eac587450a692dc29d_137476.utf8, line 907, warning: 157 characters of junk seen at toplevel
+[764] Biber.pm:133> INFO - WARNINGS: 1

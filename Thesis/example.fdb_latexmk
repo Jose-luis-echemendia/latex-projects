@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber example"] 0 "example.bcf" "example.bbl" "example" 1772774792.92184 -1
-  "example.bcf" 1772774792.75575 111918 e0146b10a62fcbaf19cc3faf64cc4543 "pdflatex"
+["biber example"] 1772859677.01653 "example.bcf" "example.bbl" "example" 1772859983.65576 0
+  "example.bcf" 1772859983.36266 112300 6e039dc674c40b6749034c4d7ada7080 "pdflatex"
   "example.bib" 1772771972.17759 41389 cc4a44bf74a0941a505e78e5d5015382 ""
   (generated)
   "example.bbl"
   "example.blg"
   (rewritten before read)
-["pdflatex"] 1772774787.43026 "/home/jose/Escritorio/latex-projects/Thesis/example.tex" "example.pdf" "example" 1772774792.92212 0
+["pdflatex"] 1772859973.55862 "/home/jose/Escritorio/latex-projects/Thesis/example.tex" "example.pdf" "example" 1772859983.65628 0
   "/etc/texmf/web2c/texmf.cnf" 1761542323.73075 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/jose/Escritorio/latex-projects/Thesis/example.tex" 1772771972.18514 3252 8f045d9e17df50847e29d5da14762f74 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -379,11 +379,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1771469246.14759 5349216 bf3a80e68d946c7acd95ff030fd9bb63 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1771469684 6852716 36421896bea30e529ae88c5ec67435cc ""
-  "Acronyms.tex" 1772771972.15765 2175 144794828fda37e5cf61dcf251208947 ""
+  "Acronyms.tex" 1772858218.08998 2284 f6b09a5b84f5b9b5c382bc2e85e03649 ""
   "Anexos/BloqueCoronaReport.pdf" 1772771972.15765 32585 f6dcb9b166373f1eb7befc7ea7378f57 ""
   "Anexos/code.cpp" 1772771972.15894 5426 9de66ad54b9e1f1f1921a42cc663e7de ""
   "Appendices.tex" 1772771972.15894 503 5aa960e9c18ba3ca99744758f5a67199 ""
-  "Chapter1.tex" 1772774786.64638 31212 a5eff78ec5c00167e53ed84a66a46107 ""
+  "Chapter1.tex" 1772859970.36366 39460 f7599b17e2c9e0729baec0d2bcf8bab5 ""
   "Chapter2.tex" 1772771972.15949 14848 d6f2987026bf08a0232a6f6fe7bf5f3e ""
   "Chapter3.tex" 1772771972.15949 533 13f6f1609c824d35a3c12f66659d72a3 ""
   "Conclusions.tex" 1772771972.15949 48 b63bb1ca574a9c5bf657318d343e7187 ""
@@ -394,17 +394,17 @@
   "LogoUCI.eps" 1772771972.17268 359286 4e6ce2f2284e24069f973c06c4379580 ""
   "Suggestions.tex" 1772771972.17595 66 bfde05723de326d96e8ea615eb3ce1b6 ""
   "example.acr" 0 -1 0 ""
-  "example.aux" 1772774792.64476 28419 2d1a72c1b629d38e39e455933a9c1e9f "pdflatex"
-  "example.bbl" 1772773783.90716 55785 1cf27e13ba2aabd986e8e59625937186 "biber example"
+  "example.aux" 1772859983.15466 30360 b5346124951bc1179a70d628b423fda8 "pdflatex"
+  "example.bbl" 1772859678.5071 55785 1cf27e13ba2aabd986e8e59625937186 "biber example"
   "example.gls" 0 -1 0 ""
-  "example.loa" 1772774792.75749 104 3007f4ebc015de088132aba1f15821c8 "pdflatex"
-  "example.lof" 1772774792.75749 2808 307159d989d718c98149438795b3e65d "pdflatex"
-  "example.lol" 1772774792.75749 896 990a1e1225dcd4923d639a7267511306 "pdflatex"
-  "example.lot" 1772774792.75749 4060 5c943c761e7092e5bdac4d342ab62c45 "pdflatex"
-  "example.run.xml" 1772774792.75749 2402 f547c80e6f683a83dc806f3ae9037c80 "pdflatex"
-  "example.tdo" 1772774789.1348 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "example.loa" 1772859983.36532 104 0eeda8ee1e95cc5c4c00b2c9b6ac1b58 "pdflatex"
+  "example.lof" 1772859983.36532 2809 35c672775995c6407099e254cd697b4c "pdflatex"
+  "example.lol" 1772859983.36532 896 d16a8221819c63ad563a3acf4c2dad8a "pdflatex"
+  "example.lot" 1772859983.36532 4060 5610315333cbedd16ed2a0e53b48d2e3 "pdflatex"
+  "example.run.xml" 1772859983.36532 2402 f547c80e6f683a83dc806f3ae9037c80 "pdflatex"
+  "example.tdo" 1772859976.84234 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "example.tex" 1772771972.18514 3252 8f045d9e17df50847e29d5da14762f74 ""
-  "example.toc" 1772774792.75749 4508 ce6e82265db2cf12363702c9bda2166a "pdflatex"
+  "example.toc" 1772859983.36532 5062 7340018e7bddc0d4b2b088be08a1b5c4 "pdflatex"
   "kbordermatrix.sty" 1772771972.18522 357 2cf6729df6e08a84b23512434a5c5c32 ""
   "thesis.cls" 1772774435.43691 48904 4b28befd425d1ff6cfa521c8e5a2a181 ""
   (generated)
