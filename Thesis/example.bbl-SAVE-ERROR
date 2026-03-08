@@ -45,6 +45,34 @@
       \verb https://academia-lab.com/enciclopedia/linea-de-productos-de-software/
       \endverb
     \endentry
+    \entry{blackboard2025overview}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c056a1ddf93639c2ce40abcc4387872c}{%
+           family={{Anthology Inc.}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c056a1ddf93639c2ce40abcc4387872c}
+      \strng{fullhash}{c056a1ddf93639c2ce40abcc4387872c}
+      \strng{bibnamehash}{c056a1ddf93639c2ce40abcc4387872c}
+      \strng{authorbibnamehash}{c056a1ddf93639c2ce40abcc4387872c}
+      \strng{authornamehash}{c056a1ddf93639c2ce40abcc4387872c}
+      \strng{authorfullhash}{c056a1ddf93639c2ce40abcc4387872c}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Recuperado 25 de octubre de 2025}
+      \field{title}{Blackboard Learn: Plataforma para la enseñanza y el aprendizaje}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.anthology.com/blackboard-learn
+      \endverb
+      \verb{url}
+      \verb https://www.anthology.com/blackboard-learn
+      \endverb
+    \endentry
     \entry{apel2013feature}{book}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=255851f52a558d3493d6dd761ab4801d}{%
@@ -89,6 +117,34 @@
       \field{labeltitlesource}{title}
       \field{title}{Feature-Oriented Software Product Lines: Concepts and Implementation}
       \field{year}{2013}
+    \endentry
+    \entry{awad2005agile_v_traditional}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a96fa3be01acf35172fa0959daa40c4f}{%
+           family={Awad},
+           familyi={A\bibinitperiod},
+           given={Mohamed\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a96fa3be01acf35172fa0959daa40c4f}
+      \strng{fullhash}{a96fa3be01acf35172fa0959daa40c4f}
+      \strng{bibnamehash}{a96fa3be01acf35172fa0959daa40c4f}
+      \strng{authorbibnamehash}{a96fa3be01acf35172fa0959daa40c4f}
+      \strng{authornamehash}{a96fa3be01acf35172fa0959daa40c4f}
+      \strng{authorfullhash}{a96fa3be01acf35172fa0959daa40c4f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{University of Western Australia}
+      \field{title}{A comparison between agile and traditional software development methodologies}
+      \field{volume}{30}
+      \field{year}{2005}
+      \field{pages}{1\bibrangedash 69}
+      \range{pages}{69}
     \endentry
     \entry{bates2019teaching}{book}{}
       \name{author}{1}{}{%
@@ -341,6 +397,42 @@
       \field{pages}{1\bibrangedash 45}
       \range{pages}{45}
     \endentry
+    \entry{chimalakonda2012accelerating}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=695ca85bb1736bfc813e7b8c88beb981}{%
+           family={Chimalakonda},
+           familyi={C\bibinitperiod},
+           given={Sridhar},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db01a6a445e3bd3ad6a645fc34a3cb37}{%
+           family={Nori},
+           familyi={N\bibinitperiod},
+           given={Kesav\bibnamedelima V.},
+           giveni={K\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{586c75b1faf65cf0bcb12e1d6ad93115}
+      \strng{fullhash}{586c75b1faf65cf0bcb12e1d6ad93115}
+      \strng{bibnamehash}{586c75b1faf65cf0bcb12e1d6ad93115}
+      \strng{authorbibnamehash}{586c75b1faf65cf0bcb12e1d6ad93115}
+      \strng{authornamehash}{586c75b1faf65cf0bcb12e1d6ad93115}
+      \strng{authorfullhash}{586c75b1faf65cf0bcb12e1d6ad93115}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2012 IEEE International Conference on Technology Enhanced Education (ICTEE)}
+      \field{title}{Accelerating educational technologies using software product lines}
+      \field{year}{2012}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICTEE.2012.6208608
+      \endverb
+    \endentry
     \entry{delaguila2014}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -377,6 +469,140 @@
       \endverb
       \verb{url}
       \verb https://dialnet.unirioja.es/servlet/articulo?codigo=9596104
+      \endverb
+    \endentry
+    \entry{diaz2002flexibilidad}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c4dbd0b072c9a66d4469e412f98af3d6}{%
+           family={Díaz},
+           familyi={D\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c4dbd0b072c9a66d4469e412f98af3d6}
+      \strng{fullhash}{c4dbd0b072c9a66d4469e412f98af3d6}
+      \strng{bibnamehash}{c4dbd0b072c9a66d4469e412f98af3d6}
+      \strng{authorbibnamehash}{c4dbd0b072c9a66d4469e412f98af3d6}
+      \strng{authornamehash}{c4dbd0b072c9a66d4469e412f98af3d6}
+      \strng{authorfullhash}{c4dbd0b072c9a66d4469e412f98af3d6}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Instituto Colombiano para el Fomento de la Educación Superior}
+      \field{note}{Citado en: \url{https://www.mineducacion.gov.co/1621/articles-106706_archivo_pdf.pdf}}
+      \field{title}{Flexibilidad y educación superior en Colombia}
+      \field{year}{2002}
+    \endentry
+    \entry{ellucian2015b_banner}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=844c2de63fd607f126d47e688ed571ac}{%
+           family={{Ellucian Company}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{844c2de63fd607f126d47e688ed571ac}
+      \strng{fullhash}{844c2de63fd607f126d47e688ed571ac}
+      \strng{bibnamehash}{844c2de63fd607f126d47e688ed571ac}
+      \strng{authorbibnamehash}{844c2de63fd607f126d47e688ed571ac}
+      \strng{authornamehash}{844c2de63fd607f126d47e688ed571ac}
+      \strng{authorfullhash}{844c2de63fd607f126d47e688ed571ac}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Banner de Ellucian. Características generales}
+      \field{year}{2015}
+    \endentry
+    \entry{galan2014building}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=22136ffe5d6f5bcc7ce2a5d6f3d6f9ab}{%
+           family={Galán},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3a55b686cea34a8923b6ea395549772e}{%
+           family={{otros}},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{d6a0a16ff59e04cdf0e2706bec5478e7}
+      \strng{fullhash}{d6a0a16ff59e04cdf0e2706bec5478e7}
+      \strng{bibnamehash}{d6a0a16ff59e04cdf0e2706bec5478e7}
+      \strng{authorbibnamehash}{d6a0a16ff59e04cdf0e2706bec5478e7}
+      \strng{authornamehash}{d6a0a16ff59e04cdf0e2706bec5478e7}
+      \strng{authorfullhash}{d6a0a16ff59e04cdf0e2706bec5478e7}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Revista Iberoamericana de Tecnologias del Aprendizaje}
+      \field{number}{2}
+      \field{title}{Building Families of Software Products for e-Learning Platforms: A Case Study}
+      \field{volume}{9}
+      \field{year}{2014}
+      \field{pages}{64\bibrangedash 71}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/RITA.2014.2317524
+      \endverb
+    \endentry
+    \entry{galindo2023flama}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=d853e8a494f00d260d5a1e0211a04926}{%
+           family={Galindo},
+           familyi={G\bibinitperiod},
+           given={José\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=350311a01514edfdc77275fcd0d2cb76}{%
+           family={Horcas},
+           familyi={H\bibinitperiod},
+           given={Jose-Miguel},
+           giveni={J\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c7249a8b0cbd51d2cc25417dfba8d56}{%
+           family={Felferning},
+           familyi={F\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc0bc15dfbf74248a8a121d13c65e4e6}{%
+           family={Fernandez-Amoros},
+           familyi={F\bibinithyphendelim A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=2,uniquepart=given,hash=666e250e1d97f1aa5c87edd002508ad9}{%
+           family={Benavides},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{541edb8c315b66f8027af6c2d36cb37e}
+      \strng{fullhash}{541edb8c315b66f8027af6c2d36cb37e}
+      \strng{bibnamehash}{541edb8c315b66f8027af6c2d36cb37e}
+      \strng{authorbibnamehash}{541edb8c315b66f8027af6c2d36cb37e}
+      \strng{authornamehash}{541edb8c315b66f8027af6c2d36cb37e}
+      \strng{authorfullhash}{541edb8c315b66f8027af6c2d36cb37e}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 27th ACM International Systems and Software Product Line Conference (SPLC '23) - Tool Track}
+      \field{title}{FLAMA: A collaborative effort to build a new framework for the automated analysis of feature models}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1145/3579028.3609008
       \endverb
     \endentry
     \entry{gfg_feature_engineering}{online}{}
@@ -509,6 +735,34 @@
       \verb https://ingenieriadesoftware.es/lineas-producto-software/
       \endverb
     \endentry
+    \entry{canvas2025overview}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=430057884baf037dd2aa1e1e017e72b6}{%
+           family={{Instructure}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{430057884baf037dd2aa1e1e017e72b6}
+      \strng{fullhash}{430057884baf037dd2aa1e1e017e72b6}
+      \strng{bibnamehash}{430057884baf037dd2aa1e1e017e72b6}
+      \strng{authorbibnamehash}{430057884baf037dd2aa1e1e017e72b6}
+      \strng{authornamehash}{430057884baf037dd2aa1e1e017e72b6}
+      \strng{authorfullhash}{430057884baf037dd2aa1e1e017e72b6}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Recuperado 25 de octubre de 2025}
+      \field{title}{Canvas LMS: Enseñanza y aprendizaje en cualquier lugar}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.instructure.com/canvas
+      \endverb
+      \verb{url}
+      \verb https://www.instructure.com/canvas
+      \endverb
+    \endentry
     \entry{kang1990foda}{report}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=d75c44d7e6171a604320d967d9c69aaa}{%
@@ -637,6 +891,34 @@
       \field{pages}{231\bibrangedash 240}
       \range{pages}{10}
     \endentry
+    \entry{moodle2025overview}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b7c1aa53d05bfde93e7677eacb8b0a32}{%
+           family={{Moodle Project}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7c1aa53d05bfde93e7677eacb8b0a32}
+      \strng{fullhash}{b7c1aa53d05bfde93e7677eacb8b0a32}
+      \strng{bibnamehash}{b7c1aa53d05bfde93e7677eacb8b0a32}
+      \strng{authorbibnamehash}{b7c1aa53d05bfde93e7677eacb8b0a32}
+      \strng{authornamehash}{b7c1aa53d05bfde93e7677eacb8b0a32}
+      \strng{authorfullhash}{b7c1aa53d05bfde93e7677eacb8b0a32}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Recuperado 25 de octubre de 2025}
+      \field{title}{¿Qué es Moodle? Visión general de la plataforma}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://moodle.com/es/what-is-moodle/
+      \endverb
+      \verb{url}
+      \verb https://moodle.com/es/what-is-moodle/
+      \endverb
+    \endentry
     \entry{investigacionus2025}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=10b2f105c5b841b2ff5c6e08e893942f}{%
@@ -662,6 +944,52 @@
       \field{urlyear}{2026}
       \field{year}{2025}
       \field{urldateera}{ce}
+    \endentry
+    \entry{okada2009methodology}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=53fb86f0c48b33829c877e1c67b43131}{%
+           family={Okada},
+           familyi={O\bibinitperiod},
+           given={Takahiro},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04299ed264e5656975117eda39041302}{%
+           family={Hisazumi},
+           familyi={H\bibinitperiod},
+           given={Kenji},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=abd99adc77db179b6b1a828cbc26139a}{%
+           family={Nakanishi},
+           familyi={N\bibinitperiod},
+           given={Tsuneo},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be4383d1b570a0ea247da329253ba222}{%
+           family={Fukuda},
+           familyi={F\bibinitperiod},
+           given={Akira},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{770d554f4d131c487a0fba1238d328d2}
+      \strng{fullhash}{770d554f4d131c487a0fba1238d328d2}
+      \strng{bibnamehash}{770d554f4d131c487a0fba1238d328d2}
+      \strng{authorbibnamehash}{770d554f4d131c487a0fba1238d328d2}
+      \strng{authornamehash}{770d554f4d131c487a0fba1238d328d2}
+      \strng{authorfullhash}{770d554f4d131c487a0fba1238d328d2}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 17th International Conference on Computers in Education (ICCE 2009)}
+      \field{note}{SCOPUS ID: 84857079693}
+      \field{title}{A Methodology for improving reusability of educational materials using product line software engineering}
+      \field{year}{2009}
+      \field{pages}{170\bibrangedash 172}
+      \range{pages}{3}
     \endentry
     \entry{Ou2013}{article}{}
       \name{author}{2}{}{%
@@ -706,6 +1034,33 @@
       \endverb
       \keyw{Assembly sequence generation}
     \endentry
+    \entry{pacienzia2015metodologias}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1dded9c9a7c1b8dacc824cc310b885c7}{%
+           family={Pacienzia},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {UCA}%
+      }
+      \strng{namehash}{1dded9c9a7c1b8dacc824cc310b885c7}
+      \strng{fullhash}{1dded9c9a7c1b8dacc824cc310b885c7}
+      \strng{bibnamehash}{1dded9c9a7c1b8dacc824cc310b885c7}
+      \strng{authorbibnamehash}{1dded9c9a7c1b8dacc824cc310b885c7}
+      \strng{authornamehash}{1dded9c9a7c1b8dacc824cc310b885c7}
+      \strng{authorfullhash}{1dded9c9a7c1b8dacc824cc310b885c7}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Metodologías de desarrollo de software}
+      \field{year}{2015}
+    \endentry
     \entry{pohl2005software}{book}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=d8c533943a9170d75651669149c80883}{%
@@ -748,6 +1103,34 @@
       \field{title}{Software Product Line Engineering: Foundations, Principles and Techniques}
       \field{year}{2005}
     \endentry
+    \entry{pressman2014se}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b92a423bae31729e13272e7637eee19d}{%
+           family={Pressman},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill Education}%
+      }
+      \strng{namehash}{b92a423bae31729e13272e7637eee19d}
+      \strng{fullhash}{b92a423bae31729e13272e7637eee19d}
+      \strng{bibnamehash}{b92a423bae31729e13272e7637eee19d}
+      \strng{authorbibnamehash}{b92a423bae31729e13272e7637eee19d}
+      \strng{authornamehash}{b92a423bae31729e13272e7637eee19d}
+      \strng{authorfullhash}{b92a423bae31729e13272e7637eee19d}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{8}
+      \field{title}{Software Engineering: A Practitioner's Approach}
+      \field{year}{2014}
+    \endentry
     \entry{ptc_feature_models}{online}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=e095b8133a2dbdc23b300f5d39211ec0}{%
@@ -774,6 +1157,34 @@
       \endverb
       \verb{url}
       \verb https://www.ptc.com/en/blogs/alm/modelling-features
+      \endverb
+    \endentry
+    \entry{purevariants2024overview}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fcb08272ee5ee5b8f194bf8b09ac8ed2}{%
+           family={{pure-systems GmbH}},
+           familyi={p\bibinitperiod}}}%
+      }
+      \strng{namehash}{fcb08272ee5ee5b8f194bf8b09ac8ed2}
+      \strng{fullhash}{fcb08272ee5ee5b8f194bf8b09ac8ed2}
+      \strng{bibnamehash}{fcb08272ee5ee5b8f194bf8b09ac8ed2}
+      \strng{authorbibnamehash}{fcb08272ee5ee5b8f194bf8b09ac8ed2}
+      \strng{authornamehash}{fcb08272ee5ee5b8f194bf8b09ac8ed2}
+      \strng{authorfullhash}{fcb08272ee5ee5b8f194bf8b09ac8ed2}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Recuperado 25 de octubre de 2025}
+      \field{title}{pure::variants Product Overview}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.pure-systems.com/en/products/purevariants
+      \endverb
+      \verb{url}
+      \verb https://www.pure-systems.com/en/products/purevariants
       \endverb
     \endentry
     \entry{rodriguez2019gestion_curricular}{article}{}
@@ -882,6 +1293,90 @@
       \endverb
       \verb{url}
       \verb https://sg.com.mx/revista/34/lineas-productos-software
+      \endverb
+    \endentry
+    \entry{silva2017towards}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=bb420b0cb75bb88f28b6602c818b9c96}{%
+           family={Silva\bibnamedelima Marcolino},
+           familyi={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Anderson},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2a766e05eddab70da4c680657fb6d963}{%
+           family={Francine\bibnamedelima Barbosa},
+           familyi={F\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Ellen},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{825ff049d436c125c66a2eec515922c1}
+      \strng{fullhash}{825ff049d436c125c66a2eec515922c1}
+      \strng{bibnamehash}{825ff049d436c125c66a2eec515922c1}
+      \strng{authorbibnamehash}{825ff049d436c125c66a2eec515922c1}
+      \strng{authornamehash}{825ff049d436c125c66a2eec515922c1}
+      \strng{authorfullhash}{825ff049d436c125c66a2eec515922c1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 50th Hawaii International Conference on System Sciences (HICSS 2017)}
+      \field{title}{Towards a Software Product Line Architecture to Build M-learning Applications for the Teaching of Programming}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10125/41922
+      \endverb
+      \verb{urlraw}
+      \verb https://hdl.handle.net/10125/41922
+      \endverb
+      \verb{url}
+      \verb https://hdl.handle.net/10125/41922
+      \endverb
+    \endentry
+    \entry{solispino2022software}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=541c5f03570d1e768b4ca48466b8dda2}{%
+           family={Solis\bibnamedelima Pino},
+           familyi={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Andrés\bibnamedelima Felipe},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5907d56dfc22069af0027c875e0e6649}{%
+           family={Ruiz},
+           familyi={R\bibinitperiod},
+           given={Pablo\bibnamedelima H.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=def8dc5598048f21df3dc7a785ce9fc0}{%
+           family={Hurtado\bibnamedelima Alegria},
+           familyi={H\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Julio\bibnamedelima Ariel},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8d1f4336792469ddc35820ad8c366de0}
+      \strng{fullhash}{8d1f4336792469ddc35820ad8c366de0}
+      \strng{bibnamehash}{8d1f4336792469ddc35820ad8c366de0}
+      \strng{authorbibnamehash}{8d1f4336792469ddc35820ad8c366de0}
+      \strng{authornamehash}{8d1f4336792469ddc35820ad8c366de0}
+      \strng{authorfullhash}{8d1f4336792469ddc35820ad8c366de0}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{5}
+      \field{title}{A Software Products Line as Educational Tool to Learn Industrial Robots Programming with Arduino}
+      \field{volume}{11}
+      \field{year}{2022}
+      \field{pages}{769}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/electronics11050769
       \endverb
     \endentry
     \entry{soos2020Ganak}{inproceedings}{}
@@ -1129,6 +1624,129 @@
       \verb{doi}
       \verb 10.1145/3579028.3609013
       \endverb
+    \endentry
+    \entry{flamapyrest2024}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=58594210cb45b9ed3a2e94672d95cb8c}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Flamapy},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{fullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{bibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorbibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authornamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorfullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://pypi.org/project/flamapy-rest/}}
+      \field{title}{FLAMAPY rest API}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{flamapyfeatureidereader2025}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=58594210cb45b9ed3a2e94672d95cb8c}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Flamapy},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{fullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{bibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorbibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authornamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorfullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.flamapy.org/framework/transformations/featureide_reader}}
+      \field{title}{FeatureIDE Reader - Flamapy Documentation}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{flamapydocs2025}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=58594210cb45b9ed3a2e94672d95cb8c}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Flamapy},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{fullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{bibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorbibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authornamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorfullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \field{extraname}{3}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.flamapy.org/}}
+      \field{title}{Flamapy Documentation}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{flamapyfm2bdd2025}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=58594210cb45b9ed3a2e94672d95cb8c}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Flamapy},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{fullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{bibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorbibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authornamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorfullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \field{extraname}{4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.flamapy.org/framework/transformations/fm_to_bdd}}
+      \field{title}{FM to BDD - Flamapy Documentation}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
     \endentry
     \entry{thum2014featureide}{article}{}
       \name{author}{6}{}{%

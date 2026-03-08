@@ -2448,10 +2448,21 @@
     <bcf:citekey order="66" intorder="1">flamapydocs2025</bcf:citekey>
     <bcf:citekey order="67" intorder="1">sanchez2020metodologia</bcf:citekey>
     <bcf:citekey order="68" intorder="1">chen2020variability</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">Ou2013</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">pacienzia2015metodologias</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">awad2005agile_v_traditional</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">pacienzia2015metodologias</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">awad2005agile_v_traditional</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">awad2005agile_v_traditional</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">awad2005agile_v_traditional</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">pressman2014se</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">pressman2014se</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">pressman2014se</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">pressman2014se</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">pressman2014se</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">Ou2013</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

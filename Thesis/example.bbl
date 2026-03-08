@@ -118,6 +118,34 @@
       \field{title}{Feature-Oriented Software Product Lines: Concepts and Implementation}
       \field{year}{2013}
     \endentry
+    \entry{awad2005agile_v_traditional}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a96fa3be01acf35172fa0959daa40c4f}{%
+           family={Awad},
+           familyi={A\bibinitperiod},
+           given={Mohamed\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a96fa3be01acf35172fa0959daa40c4f}
+      \strng{fullhash}{a96fa3be01acf35172fa0959daa40c4f}
+      \strng{bibnamehash}{a96fa3be01acf35172fa0959daa40c4f}
+      \strng{authorbibnamehash}{a96fa3be01acf35172fa0959daa40c4f}
+      \strng{authornamehash}{a96fa3be01acf35172fa0959daa40c4f}
+      \strng{authorfullhash}{a96fa3be01acf35172fa0959daa40c4f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{University of Western Australia}
+      \field{title}{A comparison between agile and traditional software development methodologies}
+      \field{volume}{30}
+      \field{year}{2005}
+      \field{pages}{1\bibrangedash 69}
+      \range{pages}{69}
+    \endentry
     \entry{bates2019teaching}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f33ff03bbfdabf2ff6bac2dbe5e3326e}{%
@@ -1006,6 +1034,33 @@
       \endverb
       \keyw{Assembly sequence generation}
     \endentry
+    \entry{pacienzia2015metodologias}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1dded9c9a7c1b8dacc824cc310b885c7}{%
+           family={Pacienzia},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {UCA}%
+      }
+      \strng{namehash}{1dded9c9a7c1b8dacc824cc310b885c7}
+      \strng{fullhash}{1dded9c9a7c1b8dacc824cc310b885c7}
+      \strng{bibnamehash}{1dded9c9a7c1b8dacc824cc310b885c7}
+      \strng{authorbibnamehash}{1dded9c9a7c1b8dacc824cc310b885c7}
+      \strng{authornamehash}{1dded9c9a7c1b8dacc824cc310b885c7}
+      \strng{authorfullhash}{1dded9c9a7c1b8dacc824cc310b885c7}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Metodologías de desarrollo de software}
+      \field{year}{2015}
+    \endentry
     \entry{pohl2005software}{book}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=d8c533943a9170d75651669149c80883}{%
@@ -1047,6 +1102,34 @@
       \field{labeltitlesource}{title}
       \field{title}{Software Product Line Engineering: Foundations, Principles and Techniques}
       \field{year}{2005}
+    \endentry
+    \entry{pressman2014se}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b92a423bae31729e13272e7637eee19d}{%
+           family={Pressman},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill Education}%
+      }
+      \strng{namehash}{b92a423bae31729e13272e7637eee19d}
+      \strng{fullhash}{b92a423bae31729e13272e7637eee19d}
+      \strng{bibnamehash}{b92a423bae31729e13272e7637eee19d}
+      \strng{authorbibnamehash}{b92a423bae31729e13272e7637eee19d}
+      \strng{authornamehash}{b92a423bae31729e13272e7637eee19d}
+      \strng{authorfullhash}{b92a423bae31729e13272e7637eee19d}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{8}
+      \field{title}{Software Engineering: A Practitioner's Approach}
+      \field{year}{2014}
     \endentry
     \entry{ptc_feature_models}{online}{}
       \name{author}{1}{}{%
