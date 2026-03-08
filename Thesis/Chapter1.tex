@@ -1290,6 +1290,7 @@ especializada que integre fortalezas de ambos mundos mientras atiende las demand
 propias de la planificación curricular.
         
 \subsubsection{Sistemas de Gestión Curricular Tradicionales}
+
 \begin{itemize}
     \item SIGA y Banner: Los sistemas como Banner son fundamentalmente
     sistemas de información transaccionales diseñados para la gestión
@@ -1298,17 +1299,18 @@ propias de la planificación curricular.
     registros de cursos y pagos. La evidencia de su funcionamiento, como
     se observa en la documentación de "Banner Student", muestra una
     estructura basada en bloques, ventanas y secciones para la gestión de
-    admisiones, currículums y campos de estudio (Ellucian Company,
+    admisiones, currículos y campos de estudio (Ellucian Company,
     2015b) \citep{ellucian2015b_banner}. Esta lógica está orientada a capturar y recuperar información de
     forma consistente, no a modelar relaciones complejas y variables entre
     componentes curriculares. Carecen de un motor de reglas nativo que permite definir y verificar restricciones complejas como las que se
-    modelan con "requiere" o "excluye" en un Modelo de Características (\textit{Feature Model}). Su limitación
+    modelan con ``requiere'' o ``excluye'' en un \ac{FM}. Su limitación
     principal es que operan sobre una estructura de datos fija y predefinida,
     lo que los hace rígidos para experimentar con diferentes configuraciones
     curriculares o para gestionar una línea de productos educativos donde
     las relaciones entre asignaturas y competencias son dinámicas y
     variables.
-    \item Moodle, como \ac{LMS}, es una plataforma excelente para la ejecución y gestión de
+
+    \item Moodle: como \ac{LMS}, es una plataforma excelente para la ejecución y gestión de
     un plan de estudios ya definido. Su fortaleza reside en organizar cursos,
     desglosarlos en unidades y lecciones, gestionar la entrega de
     contenidos, las actividades de evaluación y la interacción entre
@@ -1320,25 +1322,29 @@ propias de la planificación curricular.
     realizado externamente. No proporciona herramientas para que los
     gestores académicos modelen visualmente un plan de estudios, definan
     características opcionales u obligatorias, o establezcan restricciones
-    entre ellas. En el contexto de tu investigación, Moodle sería un
-    consumidor potencial de la configuración curricular final generada por tu
-    servidor de aplicaciones (\textit{backend}), pero no una herramienta para crearla.
-
+    entre ellas. En el contexto de la investigación, Moodle sería un
+    consumidor potencial de la configuración curricular final generada por
+    la propuesta de solución, pudiéndose integrar como plataforma de entrega y gestión de los 
+    cursos derivados, pero no como herramienta para diseñar o validar la estructura 
+    curricular en sí.
 \end{itemize}
+
 \subsubsection{Herramientas de Modelado de Variabilidad}
+
 \begin{itemize}
-    \item pure::variants: es una solución comercial robusta para la ingeniería de líneas
-    de productos de software (\ac{SPL}). Proporciona un entorno completo para definir
+    \item Pure::variants: es una solución comercial robusta para \ac{SPLE}. 
+    Proporciona un entorno completo para definir
     características, crear modelos, gestionar restricciones y, crucialmente, derivar
     productos concretos a partir de configuraciones válidas. Su potencia es
-    innegable en el dominio técnico para el que fue diseñado \citep{purevariants2024overview}. El problema central
-    para tu contexto educativo es su alta barrera de entrada para usuarios no
+    innegable en el dominio técnico para el que fue diseñado \citep{purevariants2024overview}. 
+    El problema central para el contexto educativo es su alta barrera de entrada para usuarios no
     técnicos. Los gestores académicos y diseñadores curriculares, que son
-    expertos en pedagogía pero no necesariamente en \ac{SPL}, se verían enfrentados
+    expertos en pedagogía pero no necesariamente en \ac{SPLE}, se verían enfrentados
     a una terminología y flujos de trabajo propios de la ingeniería de software.
     Adaptar pure::variants requeriría una personalización significativa de la
     interfaz y una capacitación intensiva, lo que dificulta su adopción ágil en un
     entorno académico, validando la necesidad de una solución más especializaday accesible.
+
     \item FeatureIDE: es un entorno de código abierto construido como un complemento (\textit{plugin}) para
     Eclipse, lo que lo hace muy popular en entornos de investigación y enseñanza
     de la ingeniería de software \citep{thum2014featureide}. Al igual que pure::variants, es poderoso para
@@ -1352,6 +1358,43 @@ propias de la planificación curricular.
     para la gestión curricular del día a día. Su uso en educación se limita
     predominantemente a la enseñanza de conceptos de \ac{SPL}, no a la gestión
     operativa de currículos.
+
+    \item Flamapy / FlamapyIDE: es un ecosistema de código abierto para el análisis 
+    automatizado de \ac{FM}, desarrollado activamente por el grupo de investigación 
+    Diverso Lab de la Universidad de Sevilla, liderado por el catedrático David Benavides 
+    \citep{galindo2023flama}. A diferencia de pure::variants y FeatureIDE, Flamapy se 
+    concibe desde su origen como un ``\textit{framework} Python'' modular y extensible, diseñado 
+    para facilitar la integración de capacidades de análisis de variabilidad en otras 
+    aplicaciones, lo que lo emparenta directamente con el objetivo de la presente 
+    investigación. El framework soporta múltiples formatos de entrada, incluyendo UVL, 
+    FeatureIDE (.fide) y otros \citep{flamapyfeatureidereader2025}, y proporciona 
+    transformaciones a representaciones intermedias como diagramas de decisión binaria 
+    (BDD) para análisis eficientes \citep{flamapyfm2bdd2025}.
+    
+    
+    Flamapy ofrece tres interfaces principales que lo convierten en una propuesta particularmente relevante \citep{flamapyrest2024}:
+    \begin{itemize}
+        \item FlamapyIDE: un entorno de edición y análisis basado en web, accesible
+        en \url{https://ide.flamapy.org/editor}, que permite cargar modelos \ac{UVL} o 
+        FeatureIDE, visualizar su estructura, y ejecutar operaciones de análisis 
+        (validación de consistencia, detección de características muertas, conteo de 
+        configuraciones, etc.) sin necesidad de instalar software local. Esta interfaz 
+        gráfica reduce significativamente la barrera de entrada para usuarios no técnicos.
+        
+        \item API REST: Flamapy proporciona una API RESTful que expone sus 
+        capacidades de análisis como servicios web, permitiendo que otras aplicaciones 
+        (como el backend propuesto en esta investigación) integren funcionalidades avanzadas 
+        de validación y configuración de modelos de características mediante llamadas HTTP 
+        \citep{flamapyrest2024}. La API puede desplegarse localmente mediante Docker o 
+        accederse a versiones alojadas, facilitando su adopción en arquitecturas de 
+        microservicios.
+        
+        \item Línea de comandos y biblioteca Python: para integraciones más 
+        profundas, Flamapy ofrece una interfaz de línea de comandos y una biblioteca 
+        Python que permite incorporar directamente sus capacidades en aplicaciones 
+        desarrolladas en este lenguaje \citep{flamapydocs2025}.
+    \end{itemize}
+    
 \end{itemize}
 
 \subsection{Oportunidades de Mercado Identificadas}
@@ -1361,22 +1404,37 @@ padece de un vacío crítico en herramientas capaces de integrar la gestión de 
 propia de las \ac{SPL}, con la planificación curricular educativa, creando una 
 oportunidad para sistemas especializados \citep{sanchez2020metodologia}. 
 Las herramientas existentes de \ac{SPL} están diseñadas para ingenieros de software, 
-no para profesionales de la educación, limitando su adopción en 
-instituciones educativas \citep{chen2020variability}.
-
+no para profesionales de la educación ni mucho menos para la gestión curricular, 
+limitando su adopción en instituciones educativas y obliga a comprender los conceptos 
+fundamentales de \ac{SPLE} \citep{chen2020variability}. 
+En el caso de Flamapy, destacar que no permite gestionar y operar el \ac{FM} 
+desde la vista gráfica (visualización del árbol), sino mediante la escritura de \ac{UVL}.
 En este escenario, la necesidad de proponer una solución propia no surge de 
 la ausencia total de tecnologías, sino de la falta de una alternativa que articule 
 las fortalezas identificadas en ambos tipos de herramientas y las adapte al dominio 
-educativo. De los sistemas analizados se reconoce como indispensable la capacidad de 
+educativo. 
+
+De los sistemas analizados se reconoce como indispensable la capacidad de 
 representar explícitamente características con relaciones jerárquicas y restricciones; 
 la validación automática de configuraciones; la posibilidad de derivar múltiples 
 variantes a partir de un modelo común; y la interoperabilidad con ecosistemas académicos 
-existentes. Sin embargo, también se observa que estas capacidades requieren una 
-interfaz y flujo conceptual comprensible para gestores curriculares y especialistas 
-pedagógicos, no solamente para ingenieros de software.
+existentes. Flamapy, en particular, se destaca su funcionamiento en capturar y modelar los
+\ac{FM} a partir de escribir código en \ac{UVL}, su amplio abanico de exportación a diferentes
+formatos de archivos y la capacidad de diagnosticar los \ac{FM} 
+(funcionanlidad no ausente en los otros 2 sistemas analizados) 
+en búsquedas de estadísticas, como cantidad de configuraciones, 
+características muertas, etc. La relevancia de Flamapy para la presente investigación 
+es múltiple:
+
+\begin{itemize}
+    \item Su naturaleza como \textit{framework} Python facilita la integración con la propuesta solución, permitiendo reutilizar sus capacidades de análisis en lugar de implementarlas desde cero.
+    \item La existencia de una API REST validada y documentada proporciona un referente arquitectónico para el diseño del servicio.
+    \item Su enfoque en accesibilidad (interfaz web, \ac{API}) lo alinea con la necesidad de acercar las técnicas de \ac{SPL} a gestores académicos no especializados.
+    \item El equipo de desarrollo (Diverso Lab) es el mismo que lidera el estándar \ac{UVL}, garantizando coherencia con las notaciones adoptadas en esta investigación.
+\end{itemize}
 
 La solución propuesta se posiciona estratégicamente en el mercado educativo
-como un "Motor de Variabilidad Curricular" especializado, que capitaliza las
+como un ``Motor de Variabilidad Curricular'' especializado, que capitaliza las
 tendencias actuales de crecimiento en educación híbrida y multimodal, así
 como las demandas crecientes de personalización educativa y eficiencia en la
 gestión académica post-pandemia. Su propuesta de valor se sustenta en
@@ -1385,14 +1443,14 @@ diseñar y gestionar modelos de características aplicados a planes de estudio,
 y derivar itinerarios formativos dinámicos y personalizables. Su valor diferencial
 radica en su especialización en gestión de variabilidad curricular, 
 incorporar motores de reglas pedagógicas que comprenden
-prerrequisitos, competencias y secuencias, una arquitectura de Interfaz de Programación 
-de Aplicaciones (\textit{Application Programming Interface} - API) para integración con sistemas
+prerrequisitos, competencias y secuencias, una arquitectura de 
+\ac{API} para integración con sistemas
 existentes y un modelo de datos optimizado para planificación académica.
 Estas capacidades se traducen en ventajas competitivas tangibles como la
 automatización de validaciones que reduce errores en diseño curricular, la
 generación de múltiples variantes de planes de estudio desde un tronco común y su
 adaptabilidad a contextos institucionales diversos, posicionándose como
-complemento esencial -no competencia- de los sistemas LMS existentes, al
+complemento esencial -no competencia- de los sistemas \ac{LMS} existentes, al
 enfocarse específicamente en el diseño y planificación académica más que en
 la ejecución curricular. En consecuencia, la propuesta investigativa no se limita 
 a replicar herramientas existentes, sino que se posiciona como un puente necesario 

@@ -525,6 +525,58 @@
       \verb 10.1109/RITA.2014.2317524
       \endverb
     \endentry
+    \entry{galindo2023flama}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=d853e8a494f00d260d5a1e0211a04926}{%
+           family={Galindo},
+           familyi={G\bibinitperiod},
+           given={José\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=350311a01514edfdc77275fcd0d2cb76}{%
+           family={Horcas},
+           familyi={H\bibinitperiod},
+           given={Jose-Miguel},
+           giveni={J\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c7249a8b0cbd51d2cc25417dfba8d56}{%
+           family={Felferning},
+           familyi={F\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc0bc15dfbf74248a8a121d13c65e4e6}{%
+           family={Fernandez-Amoros},
+           familyi={F\bibinithyphendelim A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=2,uniquepart=given,hash=666e250e1d97f1aa5c87edd002508ad9}{%
+           family={Benavides},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{541edb8c315b66f8027af6c2d36cb37e}
+      \strng{fullhash}{541edb8c315b66f8027af6c2d36cb37e}
+      \strng{bibnamehash}{541edb8c315b66f8027af6c2d36cb37e}
+      \strng{authorbibnamehash}{541edb8c315b66f8027af6c2d36cb37e}
+      \strng{authornamehash}{541edb8c315b66f8027af6c2d36cb37e}
+      \strng{authorfullhash}{541edb8c315b66f8027af6c2d36cb37e}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 27th ACM International Systems and Software Product Line Conference (SPLC '23) - Tool Track}
+      \field{title}{FLAMA: A collaborative effort to build a new framework for the automated analysis of feature models}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1145/3579028.3609008
+      \endverb
+    \endentry
     \entry{gfg_feature_engineering}{online}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f1e069787ece74531d112559945c6871}{%
@@ -1489,6 +1541,129 @@
       \verb{doi}
       \verb 10.1145/3579028.3609013
       \endverb
+    \endentry
+    \entry{flamapyrest2024}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=58594210cb45b9ed3a2e94672d95cb8c}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Flamapy},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{fullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{bibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorbibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authornamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorfullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://pypi.org/project/flamapy-rest/}}
+      \field{title}{FLAMAPY rest API}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{flamapyfeatureidereader2025}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=58594210cb45b9ed3a2e94672d95cb8c}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Flamapy},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{fullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{bibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorbibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authornamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorfullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.flamapy.org/framework/transformations/featureide_reader}}
+      \field{title}{FeatureIDE Reader - Flamapy Documentation}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{flamapydocs2025}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=58594210cb45b9ed3a2e94672d95cb8c}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Flamapy},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{fullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{bibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorbibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authornamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorfullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \field{extraname}{3}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.flamapy.org/}}
+      \field{title}{Flamapy Documentation}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{flamapyfm2bdd2025}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=58594210cb45b9ed3a2e94672d95cb8c}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Flamapy},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{fullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{bibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorbibnamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authornamehash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \strng{authorfullhash}{58594210cb45b9ed3a2e94672d95cb8c}
+      \field{extraname}{4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.flamapy.org/framework/transformations/fm_to_bdd}}
+      \field{title}{FM to BDD - Flamapy Documentation}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
     \endentry
     \entry{thum2014featureide}{article}{}
       \name{author}{6}{}{%
