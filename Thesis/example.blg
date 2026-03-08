@@ -1,16 +1,16 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'example.blg'
-[72] biber:340> INFO - === sáb mar  7, 2026, 13:35:41
-[87] Biber.pm:419> INFO - Reading 'example.bcf'
-[152] Biber.pm:979> INFO - Found 39 citekeys in bib section 0
-[164] Biber.pm:4419> INFO - Processing section 0
-[175] Biber.pm:4610> INFO - Looking for bibtex file 'example.bib' for section 0
-[179] bibtex.pm:1713> INFO - LaTeX decoding ...
-[262] bibtex.pm:1519> INFO - Found BibTeX data source 'example.bib'
-[559] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[560] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[560] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'es_ES'
-[617] bbl.pm:660> INFO - Writing 'example.bbl' with encoding 'UTF-8'
-[634] bbl.pm:763> INFO - Output to example.bbl
-[634] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_amyf/0a7c5e67b4d952eac587450a692dc29d_219764.utf8, line 964, warning: 157 characters of junk seen at toplevel
-[634] Biber.pm:133> INFO - WARNINGS: 1
+[73] biber:340> INFO - === sáb mar  7, 2026, 14:10:51
+[88] Biber.pm:419> INFO - Reading 'example.bcf'
+[157] Biber.pm:979> INFO - Found 44 citekeys in bib section 0
+[169] Biber.pm:4419> INFO - Processing section 0
+[181] Biber.pm:4610> INFO - Looking for bibtex file 'example.bib' for section 0
+[186] bibtex.pm:1713> INFO - LaTeX decoding ...
+[315] bibtex.pm:1519> INFO - Found BibTeX data source 'example.bib'
+[720] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[721] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[721] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'es_ES'
+[791] bbl.pm:660> INFO - Writing 'example.bbl' with encoding 'UTF-8'
+[812] bbl.pm:763> INFO - Output to example.bbl
+[812] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_dqGT/0a7c5e67b4d952eac587450a692dc29d_238732.utf8, line 964, warning: 157 characters of junk seen at toplevel
+[812] Biber.pm:133> INFO - WARNINGS: 1

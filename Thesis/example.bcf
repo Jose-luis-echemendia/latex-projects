@@ -2432,10 +2432,20 @@
     <bcf:citekey order="52" intorder="1">solispino2022software</bcf:citekey>
     <bcf:citekey order="53" intorder="1">galan2014building</bcf:citekey>
     <bcf:citekey order="54" intorder="1">apel2013feature</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">Mathew2010</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">Ou2013</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">moodle2025overview</bcf:citekey>
+    <bcf:citekey order="55" intorder="2">blackboard2025overview</bcf:citekey>
+    <bcf:citekey order="55" intorder="3">canvas2025overview</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">sanchez2020metodologia</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">ellucian2015b_banner</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">moodle2025overview</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">purevariants2024overview</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">thum2014featureide</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">sanchez2020metodologia</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">chen2020variability</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">Mathew2010</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">Ou2013</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

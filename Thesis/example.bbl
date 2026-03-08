@@ -45,6 +45,34 @@
       \verb https://academia-lab.com/enciclopedia/linea-de-productos-de-software/
       \endverb
     \endentry
+    \entry{blackboard2025overview}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c056a1ddf93639c2ce40abcc4387872c}{%
+           family={{Anthology Inc.}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c056a1ddf93639c2ce40abcc4387872c}
+      \strng{fullhash}{c056a1ddf93639c2ce40abcc4387872c}
+      \strng{bibnamehash}{c056a1ddf93639c2ce40abcc4387872c}
+      \strng{authorbibnamehash}{c056a1ddf93639c2ce40abcc4387872c}
+      \strng{authornamehash}{c056a1ddf93639c2ce40abcc4387872c}
+      \strng{authorfullhash}{c056a1ddf93639c2ce40abcc4387872c}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Recuperado 25 de octubre de 2025}
+      \field{title}{Blackboard Learn: Plataforma para la enseñanza y el aprendizaje}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.anthology.com/blackboard-learn
+      \endverb
+      \verb{url}
+      \verb https://www.anthology.com/blackboard-learn
+      \endverb
+    \endentry
     \entry{apel2013feature}{book}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=255851f52a558d3493d6dd761ab4801d}{%
@@ -441,6 +469,27 @@
       \field{title}{Flexibilidad y educación superior en Colombia}
       \field{year}{2002}
     \endentry
+    \entry{ellucian2015b_banner}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=844c2de63fd607f126d47e688ed571ac}{%
+           family={{Ellucian Company}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{844c2de63fd607f126d47e688ed571ac}
+      \strng{fullhash}{844c2de63fd607f126d47e688ed571ac}
+      \strng{bibnamehash}{844c2de63fd607f126d47e688ed571ac}
+      \strng{authorbibnamehash}{844c2de63fd607f126d47e688ed571ac}
+      \strng{authornamehash}{844c2de63fd607f126d47e688ed571ac}
+      \strng{authorfullhash}{844c2de63fd607f126d47e688ed571ac}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Banner de Ellucian. Características generales}
+      \field{year}{2015}
+    \endentry
     \entry{galan2014building}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=22136ffe5d6f5bcc7ce2a5d6f3d6f9ab}{%
@@ -606,6 +655,34 @@
       \verb https://ingenieriadesoftware.es/lineas-producto-software/
       \endverb
     \endentry
+    \entry{canvas2025overview}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=430057884baf037dd2aa1e1e017e72b6}{%
+           family={{Instructure}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{430057884baf037dd2aa1e1e017e72b6}
+      \strng{fullhash}{430057884baf037dd2aa1e1e017e72b6}
+      \strng{bibnamehash}{430057884baf037dd2aa1e1e017e72b6}
+      \strng{authorbibnamehash}{430057884baf037dd2aa1e1e017e72b6}
+      \strng{authornamehash}{430057884baf037dd2aa1e1e017e72b6}
+      \strng{authorfullhash}{430057884baf037dd2aa1e1e017e72b6}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Recuperado 25 de octubre de 2025}
+      \field{title}{Canvas LMS: Enseñanza y aprendizaje en cualquier lugar}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.instructure.com/canvas
+      \endverb
+      \verb{url}
+      \verb https://www.instructure.com/canvas
+      \endverb
+    \endentry
     \entry{kang1990foda}{report}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=d75c44d7e6171a604320d967d9c69aaa}{%
@@ -733,6 +810,34 @@
       \field{year}{2009}
       \field{pages}{231\bibrangedash 240}
       \range{pages}{10}
+    \endentry
+    \entry{moodle2025overview}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b7c1aa53d05bfde93e7677eacb8b0a32}{%
+           family={{Moodle Project}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7c1aa53d05bfde93e7677eacb8b0a32}
+      \strng{fullhash}{b7c1aa53d05bfde93e7677eacb8b0a32}
+      \strng{bibnamehash}{b7c1aa53d05bfde93e7677eacb8b0a32}
+      \strng{authorbibnamehash}{b7c1aa53d05bfde93e7677eacb8b0a32}
+      \strng{authornamehash}{b7c1aa53d05bfde93e7677eacb8b0a32}
+      \strng{authorfullhash}{b7c1aa53d05bfde93e7677eacb8b0a32}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Recuperado 25 de octubre de 2025}
+      \field{title}{¿Qué es Moodle? Visión general de la plataforma}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://moodle.com/es/what-is-moodle/
+      \endverb
+      \verb{url}
+      \verb https://moodle.com/es/what-is-moodle/
+      \endverb
     \endentry
     \entry{investigacionus2025}{misc}{}
       \name{author}{1}{}{%
@@ -917,6 +1022,34 @@
       \endverb
       \verb{url}
       \verb https://www.ptc.com/en/blogs/alm/modelling-features
+      \endverb
+    \endentry
+    \entry{purevariants2024overview}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fcb08272ee5ee5b8f194bf8b09ac8ed2}{%
+           family={{pure-systems GmbH}},
+           familyi={p\bibinitperiod}}}%
+      }
+      \strng{namehash}{fcb08272ee5ee5b8f194bf8b09ac8ed2}
+      \strng{fullhash}{fcb08272ee5ee5b8f194bf8b09ac8ed2}
+      \strng{bibnamehash}{fcb08272ee5ee5b8f194bf8b09ac8ed2}
+      \strng{authorbibnamehash}{fcb08272ee5ee5b8f194bf8b09ac8ed2}
+      \strng{authornamehash}{fcb08272ee5ee5b8f194bf8b09ac8ed2}
+      \strng{authorfullhash}{fcb08272ee5ee5b8f194bf8b09ac8ed2}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Recuperado 25 de octubre de 2025}
+      \field{title}{pure::variants Product Overview}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.pure-systems.com/en/products/purevariants
+      \endverb
+      \verb{url}
+      \verb https://www.pure-systems.com/en/products/purevariants
       \endverb
     \endentry
     \entry{rodriguez2019gestion_curricular}{article}{}

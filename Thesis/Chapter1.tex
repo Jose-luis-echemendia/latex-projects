@@ -752,6 +752,17 @@ el número de características, el \ac{FM} provee una visión de alto
 nivel y, simultáneamente, una base lógica binaria robusta para el análisis 
 automatizado de la consistencia.
 
+En los próximos epígrafes se profundiza en esta línea argumental desde dos 
+perspectivas complementarias. En primer lugar, se establece una analogía formal 
+curricular que traduce los principales conceptos de la \ac{SPLE} al dominio educativo, 
+demostrando mediante un ejemplo (\ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2}) 
+concreto —como el modelado de la asignatura Estructura de Datos I— 
+cómo los \ac{FM} pueden capturar la variabilidad intrínseca de los planes de estudio. 
+Posteriormente, se sintetizan los beneficios de las Líneas de Productos Educativos, 
+destacando las ventajas que este enfoque aporta a la gestión curricular en términos de 
+reutilización, consistencia, trazabilidad y exploración del espacio de configuraciones.
+ 
+
 \subsection{Analogía formal curricular}
 
 La aplicación de los \ac{FM} a la gestión
@@ -1107,7 +1118,6 @@ en el objeto central de modelado y gestión. Retomando los conceptos de \ac{FM} 
 \end{itemize}
 
 
-
 La adopción del enfoque \ac{SPL} en la gestión curricular reporta beneficios 
 análogos a los observados en el desarrollo de software \citep{apel2013feature}. De los cuales
 se tiene:
@@ -1121,3 +1131,155 @@ se tiene:
 \end{itemize}
 
 
+\section{Análisis del mercado}
+
+El presente epígrafe desarrolla un análisis sistemático del mercado 
+relacionado con los sistemas de gestión curricular y herramientas
+de modelado de variabilidad. Se examinan tanto las soluciones tradicionales 
+empleadas por instituciones académicas como aquellas provenientes del 
+ámbito de la ingeniería de líneas de productos, identificando
+sus fortalezas, limitaciones y brechas funcionales. A partir de esta revisión, 
+se fundamenta la oportunidad tecnológica que sustenta la propuesta 
+investigativa, destacando el vacío existente entre las plataformas
+de administración académica y los mecanismos de planificación curricular 
+basados en variabilidad, lo que justifica la necesidad y pertinencia
+de la solución desarrollada.
+
+\subsection{Panorama General del Mercado}
+
+El mercado de sistemas de gestión curricular presenta una segmentación clara
+entre soluciones genéricas de administración académica y herramientas
+especializadas en modelado de variabilidad. Mientras plataformas como
+Moodle, Blackboard y Canvas dominan el segmento de los \ac{LMS} 
+\citep{moodle2025overview, blackboard2025overview, canvas2025overview},
+existen vacíos significativos en soluciones específicas para la
+planificación curricular basada en Líneas de Productos Educativos 
+\citep{sanchez2020metodologia}.
+    
+\subsection{Análisis de Soluciones Existentes}
+
+El análisis de soluciones existentes se organiza en dos grupos claramente 
+diferenciados, cada uno representativo de perspectivas y alcances funcionales 
+opuestos dentro del dominio investigado. Por un lado, se examinan los sistemas 
+institucionales de gestión curricular tradicional, ampliamente implementados 
+en universidades, cuyo propósito principal es administrar información académica 
+pero que presentan limitaciones para modelar y validar variabilidad curricular. 
+Por otro lado, se estudian herramientas avanzadas de ingeniería de 
+líneas de productos de software (\ac{SPL}), diseñadas para gestionar características y 
+restricciones complejas, pero que requieren conocimientos técnicos elevados y 
+carecen de adaptación al contexto educativo. Esta comparación permite identificar 
+brechas tecnológicas y conceptuales que fundamentan la necesidad de una solución 
+especializada que integre fortalezas de ambos mundos mientras atiende las demandas 
+propias de la planificación curricular.
+        
+\subsubsection{Sistemas de Gestión Curricular Tradicionales}
+\begin{itemize}
+    \item SIGA y Banner: Los sistemas como Banner son fundamentalmente
+    sistemas de información transaccionales diseñados para la gestión
+    operativa de una institución. Su arquitectura está optimizada para
+    manejar grandes volúmenes de datos de estudiantes, matrículas,
+    registros de cursos y pagos. La evidencia de su funcionamiento, como
+    se observa en la documentación de "Banner Student", muestra una
+    estructura basada en bloques, ventanas y secciones para la gestión de
+    admisiones, currículums y campos de estudio (Ellucian Company,
+    2015b) \citep{ellucian2015b_banner}. Esta lógica está orientada a capturar y recuperar información de
+    forma consistente, no a modelar relaciones complejas y variables entre
+    componentes curriculares. Carecen de un motor de reglas nativo que permite definir y verificar restricciones complejas como las que se
+    modelan con "requiere" o "excluye" en un Modelo de Características (\textit{Feature Model}). Su limitación
+    principal es que operan sobre una estructura de datos fija y predefinida,
+    lo que los hace rígidos para experimentar con diferentes configuraciones
+    curriculares o para gestionar una línea de productos educativos donde
+    las relaciones entre asignaturas y competencias son dinámicas y
+    variables.
+    \item Moodle, como \ac{LMS}, es una plataforma excelente para la ejecución y gestión de
+    un plan de estudios ya definido. Su fortaleza reside en organizar cursos,
+    desglosarlos en unidades y lecciones, gestionar la entrega de
+    contenidos, las actividades de evaluación y la interacción entre
+    estudiantes y profesores \citep{moodle2025overview}. Sin embargo, 
+    su funcionalidad no se extiende al diseño instruccional ni a la 
+    planificación curricular basada en
+    características. Moodle asume que el diseño del curso (los objetivos, la
+    secuencia de contenidos, las actividades de evaluación) ya ha sido
+    realizado externamente. No proporciona herramientas para que los
+    gestores académicos modelen visualmente un plan de estudios, definan
+    características opcionales u obligatorias, o establezcan restricciones
+    entre ellas. En el contexto de tu investigación, Moodle sería un
+    consumidor potencial de la configuración curricular final generada por tu
+    servidor de aplicaciones (\textit{backend}), pero no una herramienta para crearla.
+
+\end{itemize}
+\subsubsection{Herramientas de Modelado de Variabilidad}
+\begin{itemize}
+    \item pure::variants: es una solución comercial robusta para la ingeniería de líneas
+    de productos de software (\ac{SPL}). Proporciona un entorno completo para definir
+    características, crear modelos, gestionar restricciones y, crucialmente, derivar
+    productos concretos a partir de configuraciones válidas. Su potencia es
+    innegable en el dominio técnico para el que fue diseñado \citep{purevariants2024overview}. El problema central
+    para tu contexto educativo es su alta barrera de entrada para usuarios no
+    técnicos. Los gestores académicos y diseñadores curriculares, que son
+    expertos en pedagogía pero no necesariamente en \ac{SPL}, se verían enfrentados
+    a una terminología y flujos de trabajo propios de la ingeniería de software.
+    Adaptar pure::variants requeriría una personalización significativa de la
+    interfaz y una capacitación intensiva, lo que dificulta su adopción ágil en un
+    entorno académico, validando la necesidad de una solución más especializaday accesible.
+    \item FeatureIDE: es un entorno de código abierto construido como un complemento (\textit{plugin}) para
+    Eclipse, lo que lo hace muy popular en entornos de investigación y enseñanza
+    de la ingeniería de software \citep{thum2014featureide}. Al igual que pure::variants, es poderoso para
+    el análisis y la configuración de modelos de características. Sin embargo, su
+    dependencia de Eclipse y su orientación hacia desarrolladores lo convierten en
+    una herramienta que requiere especialización técnica. Para un coordinador de
+    carrera o un vicerrector académico, interactuar con FeatureIDE supondría una
+    curva de aprendizaje muy pronunciada. Su arquitectura no está diseñada para
+    integrarse de manera natural con los sistemas de información universitarios
+    existentes (como los propios SIGA o Banner), lo que limita su utilidad práctica
+    para la gestión curricular del día a día. Su uso en educación se limita
+    predominantemente a la enseñanza de conceptos de \ac{SPL}, no a la gestión
+    operativa de currículos.
+\end{itemize}
+
+\subsection{Oportunidades de Mercado Identificadas}
+
+Del análisis realizado se evidencia que el mercado asociado a la temática 
+padece de un vacío crítico en herramientas capaces de integrar la gestión de variabilidad,
+propia de las \ac{SPL}, con la planificación curricular educativa, creando una 
+oportunidad para sistemas especializados \citep{sanchez2020metodologia}. 
+Las herramientas existentes de \ac{SPL} están diseñadas para ingenieros de software, 
+no para profesionales de la educación, limitando su adopción en 
+instituciones educativas \citep{chen2020variability}.
+
+En este escenario, la necesidad de proponer una solución propia no surge de 
+la ausencia total de tecnologías, sino de la falta de una alternativa que articule 
+las fortalezas identificadas en ambos tipos de herramientas y las adapte al dominio 
+educativo. De los sistemas analizados se reconoce como indispensable la capacidad de 
+representar explícitamente características con relaciones jerárquicas y restricciones; 
+la validación automática de configuraciones; la posibilidad de derivar múltiples 
+variantes a partir de un modelo común; y la interoperabilidad con ecosistemas académicos 
+existentes. Sin embargo, también se observa que estas capacidades requieren una 
+interfaz y flujo conceptual comprensible para gestores curriculares y especialistas 
+pedagógicos, no solamente para ingenieros de software.
+
+La solución propuesta se posiciona estratégicamente en el mercado educativo
+como un "Motor de Variabilidad Curricular" especializado, que capitaliza las
+tendencias actuales de crecimiento en educación híbrida y multimodal, así
+como las demandas crecientes de personalización educativa y eficiencia en la
+gestión académica post-pandemia. Su propuesta de valor se sustenta en
+fortalezas técnicas diferenciadoras, ofreciendo un servidor de aplicaciones (\textit{backend}) que permita 
+diseñar y gestionar modelos de características aplicados a planes de estudio, 
+y derivar itinerarios formativos dinámicos y personalizables. Su valor diferencial
+radica en su especialización en gestión de variabilidad curricular, 
+incorporar motores de reglas pedagógicas que comprenden
+prerrequisitos, competencias y secuencias, una arquitectura de Interfaz de Programación 
+de Aplicaciones (\textit{Application Programming Interface} - API) para integración con sistemas
+existentes y un modelo de datos optimizado para planificación académica.
+Estas capacidades se traducen en ventajas competitivas tangibles como la
+automatización de validaciones que reduce errores en diseño curricular, la
+generación de múltiples variantes de planes de estudio desde un tronco común y su
+adaptabilidad a contextos institucionales diversos, posicionándose como
+complemento esencial -no competencia- de los sistemas LMS existentes, al
+enfocarse específicamente en el diseño y planificación académica más que en
+la ejecución curricular. En consecuencia, la propuesta investigativa no se limita 
+a replicar herramientas existentes, sino que se posiciona como un puente necesario 
+entre el rigor formal de las \ac{SPL} y la flexibilidad curricular demandada por la educación 
+contemporánea, constituyendo así una innovación con pertinencia tecnológica y 
+académico-formativa.
+    
