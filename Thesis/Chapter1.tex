@@ -609,12 +609,12 @@ constraints
     \vspace{1cm}
 
     \small
-    \begin{tabular}{|l|}
+    \begin{tabular}{|l|l|}
         \hline
-        \textbf{Restricciones (UVL)} \\ \hline
-        1. Kétchup $\implies$ Queso \\
-        2. Pan.Azúcar + Kétchup.Azúcar + Mostaza.Azúcar < 60 \\
-        3. sum(Calorías) < 160 \\ \hline
+        \textbf{ID} & \textbf{Restricciones Cruzadas (UVL / Lógica Proposicional)} \\ \hline
+        R1 & \texttt{Kétchup} $\implies$ \texttt{Queso} \\ \hline
+        R2 & \texttt{Pan.Azúcar + Kétchup.Azúcar + Mostaza.Azúcar} $\le 60$ \\ \hline
+        R3 & \texttt{sum(Calorías)} $< 60$ \\ \hline
     \end{tabular}
     
     \caption{Representación gráfica del FM del modelo Sandwich especificado en UVL. Fuente: elaboración propia.}
@@ -821,11 +821,98 @@ Yendo un paso más adelante para evidenciar la aplicabilidad del \ac{FM}
 al dominio curricular, se presenta un ejemplo (figuras 
 \ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2})
 basado en la asignatura Estructura de Datos I. 
-El modelo computacional interno, que constituye una estructura formal JSON, 
-no se presenta aquí de forma literal por motivos de extensión, pero sí se expone 
-su esquema jerárquico conceptual con el fin ilustrativo y 
+Se expone el código \ref{lst:uvl_data_structures} \ac{UVL} y su 
+esquema jerárquico conceptual con el fin ilustrativo y 
 suficiente para comprender las decisiones de 
 variabilidad del \ac{FM}:
+
+\begin{lstlisting}[
+    language=Python, 
+    caption={Ejemplo de modelo de variabilidad en \ac{UVL}}, 
+    label={lst:uvl_data_structures}, 
+    basicstyle=\footnotesize\ttfamily, 
+    frame=single, 
+    breaklines=true,
+    extendedchars=true,
+    inputencoding=utf8,
+    literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {ñ}{{\~n}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1 {Ñ}{{\~N}}1 {¿}{{\textquestiondown}}1 {¡}{{\textexclamdown}}1
+]
+namespace EstructuraDatos
+include
+    Boolean.group-cardinality
+    Arithmetic.aggregate-function
+    Arithmetic.feature-cardinality
+    Type
+features
+    Estructura de Datos I
+        mandatory
+            Fundamentos y Análisis {Horas 6}
+            
+            Estructuras Lineales
+                cardinality [1..*]
+                    mandatory
+                        Arreglos
+                        Listas Enlazadas
+                    optional
+                        Listas Circulares
+            
+            Pilas {Horas 6}
+                mandatory
+                    Implementacion
+                        alternative
+                            Con Arreglos {Horas 4, Dif 1}
+                            Con Listas {Horas 6, Dif 2}
+            
+            Colas {Horas 8}
+                mandatory
+                    FIFO {Dif 2}
+                    Prioridad {Dif 3}
+                optional
+                    Deque {Dif 2}
+            
+            Árboles Binarios {Horas 12, Dif 4}
+            
+            Algoritmos Ordenamiento {Horas 10}
+            
+            Lenguaje
+                alternative
+                    C/C++ {Carga 9}
+                    Java {Carga 6}
+                    Python {Carga 4}
+            
+            Técnicas de Programación
+                mandatory
+                    Recursión Avanzada {Carga 8}
+                    Generica {Carga 10}
+                    Manejo de Memoria {Carga 8}
+            
+            Herramientas
+                or
+                    IDE {Carga 5}
+                    Debugger {Carga 2}
+                    Git {Carga 4}
+            
+            Análisis de Complejidad
+                mandatory
+                    Notación Big-O
+                    Análisis Temporal
+                    Análisis Espacial
+constraints
+    // R1: Prerrequisito pedagógico
+    Árboles Binarios => Recursión Avanzada
+    
+    // R2: Dependencia técnica de bajo nivel
+    C/C++ <=> Manejo de Memoria
+    
+    // R3: Restricción por abstracción del lenguaje
+    Python => !Manejo de Memoria
+    
+    // R4: Restricción de recursos (Suma de atributos)
+    sum(Horas) <= 64
+    
+    // R5: Restricción de viabilidad (Cálculo entre atributos)
+    (avg(Dif) * Lenguaje.Carga) < 50
+\end{lstlisting}
 
 \begin{figure}[H]
 \centering
@@ -881,10 +968,12 @@ variabilidad del \ac{FM}:
         }
         [Estructura de Datos I, rootstyle
             [Fundamentos y Análisis, branchstyle, 
-                edge label={node[midway, mandatory]{}}
+                edge label={node[midway, mandatory]{}},
+                label={[font=\tiny]below:{Horas: 6}}
             ]
             [Estructuras Lineales, branchstyle,
-                edge label={node[midway, mandatory]{}}
+                edge label={node[midway, mandatory]{}},
+                label={[font=\tiny]above:{[1..*]}}
                 [Arreglos, leafstyle,
                     edge label={node[midway, mandatory]{}}
                 ]
@@ -909,27 +998,33 @@ variabilidad del \ac{FM}:
                             to[bend left=45] 
                             ($(.east)!20pt!(!l.west)$);
                     }
-                    [Con Arreglos, leafstyle]
-                    [Con Listas, leafstyle]
+                    [Con Arreglos, leafstyle, label={[font=\tiny, align=left]right:{Horas: 4\\Dif: 1}}]
+                    [Con Listas, leafstyle, label={[font=\tiny, align=left]right:{Horas: 6\\Dif: 2}}]
                 ]
             ]
             [Colas, branchstyle,
-                edge label={node[midway, mandatory]{}}
+                edge label={node[midway, mandatory]{}},
+                label={[font=\tiny]below:{Horas: 8}}
                 [FIFO, leafstyle,
-                    edge label={node[midway, mandatory]{}}
+                    edge label={node[midway, mandatory]{}},
+                    label={[font=\tiny, align=left]right:{Dif: 2}}
                 ]
                 [Prioridad, leafstyle,
-                    edge label={node[midway, mandatory]{}}
+                    edge label={node[midway, mandatory]{}},
+                    label={[font=\tiny, align=left]right:{Dif: 3}}
                 ]
                 [Deque, optionalstyle,
-                    edge label={node[midway, optional]{}}
+                    edge label={node[midway, optional]{}},
+                    label={[font=\tiny, align=left]right:{Dif: 2}}
                 ]
             ]
             [Árboles Binarios, branchstyle,
-                edge label={node[midway, mandatory]{}}
+                edge label={node[midway, mandatory]{}},
+                label={[font=\tiny, align=center]below:{Horas: 12, Dif: 4}}
             ]
             [Algoritmos Ordenamiento, branchstyle,
-                edge label={node[midway, mandatory]{}}
+                edge label={node[midway, mandatory]{}},
+                label={[font=\tiny]below:{Horas: 10}}
             ]
         ]
     \end{forest}%
@@ -998,7 +1093,7 @@ variabilidad del \ac{FM}:
         }
         [Estructura de Datos I, rootstyle
             % --- RAMA XOR (Símbolo más grande) ---
-            [Lenguaje de\\Implementación, xorstyle,
+            [Lenguaje, xorstyle,
                 edge label={node[midway, mandatory]{}},
                 tikz+={
                     % Cambié 15pt a 28pt para hacerlo más largo
@@ -1008,15 +1103,15 @@ variabilidad del \ac{FM}:
                         to[bend left=30] 
                         ($(.east)!28pt!(!l.west)$);
                 }
-                [C/C++, leafstyle]
-                [Java, leafstyle]
-                [Python, leafstyle]
+                [C/C++, leafstyle, label={[font=\tiny]right:{Carga: 9}}]
+                [Java, leafstyle, label={[font=\tiny]right:{Carga: 6}}]
+                [Python, leafstyle, label={[font=\tiny]right:{Carga: 4}}]
             ]
             [Técnicas de\\Programación, branchstyle,
                 edge label={node[midway, mandatory]{}}
-                [Recursión\\Avanzada, leafstyle]
-                [Genérica, leafstyle]
-                [Manejo de\\Memoria, leafstyle]
+                [Recursión\\Avanzada, leafstyle, label={[font=\tiny]right:{Carga: 8}}]
+                [Genérica, leafstyle, label={[font=\tiny]right:{Carga: 10}}]
+                [Manejo de\\Memoria, leafstyle, label={[font=\tiny]right:{Carga: 8}}]
             ]
             % --- RAMA OR (Símbolo más grande) ---
             [Herramientas, orstyle,
@@ -1030,9 +1125,9 @@ variabilidad del \ac{FM}:
                         ($(.east)!28pt!(!l.west)$) -- 
                         cycle;
                 }
-                [IDE, leafstyle]
-                [Debugger, leafstyle]
-                [Git, leafstyle]
+                [IDE, leafstyle, label={[font=\tiny]right:{Carga: 5}}]
+                [Debugger, leafstyle, label={[font=\tiny]right:{Carga: 2}}]
+                [Git, leafstyle, label={[font=\tiny]right:{Carga: 4}}]
             ]
             [Análisis de\\Complejidad, branchstyle,
                 edge label={node[midway, mandatory]{}}
@@ -1049,6 +1144,20 @@ variabilidad del \ac{FM}:
         ]
     \end{forest}%
 }
+
+\vspace{0.5cm}
+\small
+\centering
+\begin{tabular}{|l|l|}
+    \hline
+    \textbf{ID} & \textbf{Restricciones Cruzadas (UVL / Lógica Proposicional)} \\ \hline
+    R1 & \texttt{Árboles Binarios} $\implies$ \texttt{Recursión Avanzada} \\ \hline
+    R2 & \texttt{C/C++} $\iff$ \texttt{Manejo de Memoria} \\ \hline
+    R3 & \texttt{Python} $\implies \neg$ \texttt{Manejo de Memoria} \\ \hline
+    R4 & \texttt{sum(Horas)} $\le 64$ \textit{(Límite semestral)} \\ \hline
+    R5 & \texttt{avg(Dificultad) * Lenguaje.Carga} $< 50$ \textit{(Umbral de viabilidad)} \\ \hline
+\end{tabular}
+
 \caption{Representación simplificada \#2 del \ac{FM} de la asignatura Estructura de Datos I. Fuente: elaboración propia.}
 \label{fig:fm_data_structures_2}
 \end{figure}
@@ -1079,10 +1188,18 @@ la validez curricular y evitando inconsistencias.
 La variabilidad no solo define qué temas se abordan, sino cómo se implementan, 
 qué carga cognitiva poseen y qué prerrequisitos deben cumplirse. La presencia de 
 relaciones cruzadas de árboles, restricciones lógicas e implicaciones capturan dependencias 
-reales, tales como: para comprender árboles es necesario estudiar recursión, o 
-bien optar por C/C++ implica la posibilidad de manejo manual de memoria. 
+reales, tales como: para comprender árboles es necesario estudiar recursión 
+(relación R1), o 
+bien optar por C/C++ implica la posibilidad de manejo manual de memoria
+(relación R2). 
 Esta lógica curricular, que en los planes tradicionales queda implícita o 
 depende de interpretación docente, aquí se vuelve explícita, formal y verificable.
+Además, la inclusión de atributos numéricos (Horas, Dificultad, Carga) permite que el 
+\ac{FM} funcione como un sistema de soporte a la decisión. Restricciones como     
+R4 y R5 demuestran cómo el formalismo puede 
+garantizar que una configuración curricular no solo sea lógicamente 
+válida, sino también factible en términos de carga cognitiva para el 
+estudiante y disponibilidad horaria del programa.
 
 De este modo, la asignatura deja de ser un documento textual estático para 
 convertirse en un componente configurable. El \ac{FM} presenta la asignatura como un 

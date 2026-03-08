@@ -567,7 +567,6 @@ numbersep=10pt,
 tabsize=4,
 showspaces=false,
 showstringspaces=false}
-
 }
 {
 \ifthenelse{\equal{#1}{C++}}
