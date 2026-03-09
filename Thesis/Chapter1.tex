@@ -47,20 +47,20 @@ fundamentales que constituyen su base teórica y que permiten articular la gesti
 de la variabilidad como eje central de la estrategia. Estos conceptos son:
 
 \begin{enumerate}
-    \item \textbf{Línea de Productos:} Es la familia completa de sistemas de software
+    \item Línea de Productos: Es la familia completa de sistemas de software
     que pueden ser generados. Representa el espacio de posibilidades
     definido por el conjunto de activos.
-    \item \textbf{Activos Centrales (\textit{Core Assets}):} Son los componentes fundamentales
+    \item Activos Centrales (\textit{Core Assets}): Son los componentes fundamentales
     (código, arquitectura, modelos de diseño, documentación, planes de
     prueba) diseñados específicamente para ser compartidos y reutilizados
     en toda la línea. La inversión inicial en estos activos es clave para el
     éxito de la estrategia.
-    \item \textbf{Variabilidad:} Es la propiedad esencial de una \ac{SPL}. Define la capacidad
+    \item Variabilidad: Es la propiedad esencial de una \ac{SPL}. Define la capacidad
     de la línea para ser adaptada, personalizada o configurada para generar
     productos específicos que satisfagan las necesidades particulares de un
     cliente o escenario. La variabilidad es, en esencia, el conjunto de
     diferencias controladas entre los productos posibles.
-    \item \textbf{Puntos de Variabilidad (\textit{Variability Points}):} Son las ubicaciones
+    \item Puntos de Variabilidad (\textit{Variability Points}): Son las ubicaciones
     explícitas dentro de los Activos Centrales donde se deben tomar
     decisiones para configurar un producto. Estos puntos actúan como
     "interruptores" o "opciones" que guían el proceso de personalización.
@@ -130,7 +130,7 @@ En el dominio educativo, la evolución curricular es una realidad constante: nue
     \item Asegurar la trazabilidad entre las versiones del modelo y los productos generados.
 \end{itemize}
 
-\subsection{Modelos de Características (Feature Models)}
+\subsection{Modelos de Características (\textit{Feature Models})}
 
 Es necesario contar con un modelo que represente de manera explícita las
 variaciones y opciones disponibles en la línea de productos. Este modelo
@@ -144,7 +144,7 @@ El Modelo de Características (\textit{Feature Model} - \ac{FM}) es la técnica 
 central en \ac{SPLE}. Su formalismo es
 indispensable para pasar de la noción abstracta de variabilidad a una
 representación estructurada y analizable \citep{ptc_feature_models}. 
-Los \ac{FM} fueron formalmente introducidos por \citet{kang1990foda} 
+Los \ac{FM}s fueron formalmente introducidos por \citet{kang1990foda} 
 como parte de la metodología \ac{FODA}, un enfoque pionero para la ingeniería de dominios. 
 Desde su concepción, un \ac{FM} ha sido reconocido como el artefacto
 primario para la captura de la variabilidad funcional de un sistema. En esencia,
@@ -178,7 +178,7 @@ las decisiones de inclusión o exclusión; véase la Tabla
 benavides2010automated, Wang2007FormalSemanticsFM}.
                         
 \begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
-    \caption{Notación semántica de las relaciones entre características de los \ac{FM} \label{tab:relaciones_estructurales_FM}}\\
+    \caption{Notación semántica de las relaciones entre características de los \ac{FM}s \label{tab:relaciones_estructurales_FM}}\\
     \hline
     \rowcolor[HTML]{CBCEFB} 
     \textbf{Relación} & \textbf{Semántica Formal} & \textbf{Implicación en la Configuración} \\
@@ -217,15 +217,15 @@ benavides2010automated, Wang2007FormalSemanticsFM}.
 \end{longtable}
 
 Las relaciones descritas en la tabla \ref{tab:relaciones_estructurales_FM} constituyen 
-la base semántica sobre la cual se construye cualquier Modelo de Características. 
+la base semántica sobre la cual se construye cualquier \ac{FM}. 
 Sin embargo, para que esta semántica sea útil en la práctica del modelado, es necesario 
 contar con una notación gráfica estandarizada que permita visualizar de forma 
 intuitiva la estructura jerárquica, las restricciones entre características e identificar
 los puntos de variabilidad.Esta representación visual proporciona una vista de alto nivel 
-que complementa la especificación formal, pues es la encargada de dotar a los \ac{FM} de su 
+que complementa la especificación formal, pues es la encargada de dotar a los \ac{FM}s de su 
 poder comunicativo y analítico. La figura \ref{fig:relaciones_estructurales_FM} ilustra la 
 simbología convencionalmente aceptada en la literatura para representar las relaciones estructurales 
-de los \ac{FM}, donde cada símbolo codifica visualmente una de las relaciones semánticas previamente 
+de los \ac{FM}s, donde cada símbolo codifica visualmente una de las relaciones semánticas previamente 
 explicadas.
 
 \begin{figure}[H]
@@ -237,7 +237,7 @@ explicadas.
 \subsubsection{Restricciones (\textit{Cross-Tree})}
 
 Las relaciones jerárquicas son insuficientes para capturar todas las reglas de
-negocio complejas. Por ello, los \ac{FM} permiten definir las restricciones transversales 
+negocio complejas. Por ello, los \ac{FM}s permiten definir las restricciones transversales 
 (\textit{cross-tree}); que son reglas lógicas que definen
 dependencias entre características que no están directamente conectadas en
 la jerarquía padre-hijo del árbol de características. Su función es garantizar la
@@ -249,7 +249,7 @@ Las dos formas más comunes y fundamentales son:
 \begin{itemize}
     \item Requiere: Esta restricción establece una dependencia de presencia. Si
     una característica A requiere una característica B, entonces siempre que
-    A sea seleccionada en una configuración, B también debe estarlo. Porejemplo, en 
+    A sea seleccionada en una configuración, B también debe estarlo. Por ejemplo, en 
     un \ac{FM} para un automóvil, la
     característica "Navegación" puede requerir la característica "Pantalla
     Táctil". Esta relación se modela en lógica proposicional como el
@@ -272,7 +272,7 @@ restricciones), lo que permite un análisis automático y libre de ambigüedades
     la traducción de todo el \ac{FM} a una fórmula en lógica proposicional. Cada
     característica se representa como una variable proposicional (que puede
     ser Verdadera o Falsa, indicando si está seleccionada o no). Las
-    relaciones padre-hijo y las restricciones cross-tree se convierten en una
+    relaciones padre-hijo y las restricciones \textit{cross-tree} se convierten en una
     serie de fórmulas lógicas que, en conjunto, definen el conjunto de todas
     las configuraciones válidas \citep{sundermann2023sat, thum2014featureide}.
     \item Satisfacibilidad (\ac{SAT}) y \ac{SHARPSAT}: Una vez el \ac{FM} está representado como
@@ -288,7 +288,7 @@ restricciones), lo que permite un análisis automático y libre de ambigüedades
             define un \ac{FM}, una métrica esencial para comprender su
             variabilidad y complejidad \citep{sundermann2023sat, benavides2010automated,mendonca2009SAT}.
         \end{itemize}
-    \item Solucionadores SAT (\textit{SAT solvers}): Un solucionador SAT (\textit{SAT solver}) es una herramienta algorítmica altamente
+    \item Solucionadores \ac{SAT} (\textit{SAT solvers}): Un solucionador \ac{SAT} (\textit{SAT solver}) es una herramienta algorítmica altamente
     optimizada diseñada para resolver problemas de satisfacibilidad. Dada
     una fórmula F, el solucionador (\textit{solver}) determina si es satisfacible (\ac{SAT}) o insatisfacible
     (UNSAT). Para el análisis de \ac{SHARPSAT}, se emplean solucionadores especializados de conteo de modelos (\textit{\#SAT solvers})
@@ -330,13 +330,13 @@ grupos y son:
 
 \subsubsection{Modelos de Características con atributos}
 
-Los \ac{FM} básicos, también conocidos como feature models booleanos, capturan únicamente 
+Los \ac{FM}s básicos, también conocidos como \ac{FM}s booleanos, capturan únicamente 
 la presencia o ausencia de características. Sin embargo, muchos dominios requieren 
 modelar información adicional asociada a cada característica, como costos, pesos, 
 tiempos, o en el caso educativo, créditos, horas lectivas o puntuaciones 
 \citep{benavides2005Taxonomy}.
 
-Los \ac{FM} con atributos 
+Los \ac{FM}s con atributos 
 extienden el formalismo básico permitiendo asociar a cada característica un 
 conjunto de atributos con valores. Estos atributos pueden ser:
 \begin{itemize}
@@ -363,8 +363,8 @@ sobre ellos, como se ilustra en el ejemplo del Sándwich \ref{lst:uvl_sandwich}.
 
 \subsubsection{Análisis Automatizado de Modelos de Características (AAFM)}
 
-La verdadera potencia de los \ac{FM} reside en la posibilidad de realizar análisis 
-automatizados sobre ellos. El análisis de \ac{FM} (\ac{AAFM}) es un área de investigación que estudia cómo extraer información 
+La verdadera potencia de los \ac{FM}s reside en la posibilidad de realizar análisis 
+automatizados sobre ellos. El análisis de \ac{FM}s (\ac{AAFM}) es un área de investigación que estudia cómo extraer información 
 útil de un \ac{FM} mediante algoritmos y herramientas automáticas 
 \citep{benavides2010automated}. Estos análisis permiten responder 
 preguntas fundamentales sobre la línea de productos antes de invertir 
@@ -617,7 +617,7 @@ constraints
         R3 & \texttt{sum(Calorías)} $< 60$ \\ \hline
     \end{tabular}
     
-    \caption{Representación gráfica del FM del modelo Sandwich especificado en UVL. Fuente: elaboración propia.}
+    \caption{Representación gráfica del \ac{FM} del modelo Sandwich especificado en UVL. Fuente: elaboración propia.}
     \label{fig:fm_sandwich_uvl}
 \end{figure}
 
@@ -634,7 +634,7 @@ válida y consistente \citep{benavides2010automated}.
 
 La configuración en \ac{SPL} se caracteriza por ser un proceso guiado por
 restricciones donde las dependencias entre características (mandatorias,
-opcionales, alternativas) y las restricciones cross-tree (requiere, excluye)
+opcionales, alternativas) y las restricciones \textit{cross-tree} (requiere, excluye)
 determinan el espacio de configuraciones posibles \citep{chen2020variability}. La
 complejidad de este proceso aumenta exponencialmente con el tamaño del
 modelo, haciendo necesario el uso de herramientas automatizadas para garantizar 
@@ -757,7 +757,7 @@ perspectivas complementarias. En primer lugar, se establece una analogía formal
 curricular que traduce los principales conceptos de la \ac{SPLE} al dominio educativo, 
 demostrando mediante un ejemplo (\ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2}) 
 concreto —como el modelado de la asignatura Estructura de Datos I— 
-cómo los \ac{FM} pueden capturar la variabilidad intrínseca de los planes de estudio. 
+cómo los \ac{FM}s pueden capturar la variabilidad intrínseca de los planes de estudio. 
 Posteriormente, se sintetizan los beneficios de las Líneas de Productos Educativos, 
 destacando las ventajas que este enfoque aporta a la gestión curricular en términos de 
 reutilización, consistencia, trazabilidad y exploración del espacio de configuraciones.
@@ -765,7 +765,7 @@ reutilización, consistencia, trazabilidad y exploración del espacio de configu
 
 \subsection{Analogía formal curricular}
 
-La aplicación de los \ac{FM} a la gestión
+La aplicación de los \ac{FM}s a la gestión
 y diseño curricular constituye el principal aporte metodológico de esta
 investigación. Esta extensión se fundamenta en la premisa de que la
 variabilidad, concepto central de la \ac{SPLE} es intrínseca y necesaria en 
@@ -1166,7 +1166,7 @@ Este caso permite demostrar cómo una asignatura, lejos de ser un
 listado estático de contenidos, posee una estructura jerárquica, 
 elementos obligatorios y opcionales, variabilidad controlada, 
 dependencias de prerrequisitos y restricciones internas; todas 
-ellas propiedades capturables dentro de un FM formal.
+ellas propiedades capturables dentro de un \ac{FM} formal.
 El modelo mostrado (\ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2}) 
 constituye una representación declarativa de la asignatura, 
 estructurada como un árbol donde la característica raíz corresponde al curso 
@@ -1211,7 +1211,7 @@ Este modelo puede procesarse mediante un motor lógico para verificar su
 consistencia, detectar características inaccesibles y generar 
 configuraciones válidas automáticamente.
 
-Por tanto, los \ac{FM} no solo son adecuados 
+Por tanto, los \ac{FM}s no solo son adecuados 
 para representar planes de estudios completos, sino también para modelar unidades 
 académicas individuales con variabilidad interna. Esto abre la puerta a una 
 flexibilidad curricular controlada, verificable y sustentada en formalismos 
@@ -1299,8 +1299,7 @@ propias de la planificación curricular.
     registros de cursos y pagos. La evidencia de su funcionamiento, como
     se observa en la documentación de "Banner Student", muestra una
     estructura basada en bloques, ventanas y secciones para la gestión de
-    admisiones, currículos y campos de estudio (Ellucian Company,
-    2015b) \citep{ellucian2015b_banner}. Esta lógica está orientada a capturar y recuperar información de
+    admisiones, currículos y campos de estudio \citep{ellucian2015b_banner}. Esta lógica está orientada a capturar y recuperar información de
     forma consistente, no a modelar relaciones complejas y variables entre
     componentes curriculares. Carecen de un motor de reglas nativo que permite definir y verificar restricciones complejas como las que se
     modelan con ``requiere'' o ``excluye'' en un \ac{FM}. Su limitación
@@ -1348,7 +1347,7 @@ propias de la planificación curricular.
     \item FeatureIDE: es un entorno de código abierto construido como un complemento (\textit{plugin}) para
     Eclipse, lo que lo hace muy popular en entornos de investigación y enseñanza
     de la ingeniería de software \citep{thum2014featureide}. Al igual que pure::variants, es poderoso para
-    el análisis y la configuración de modelos de características. Sin embargo, su
+    el análisis y la configuración de \ac{FM}s. Sin embargo, su
     dependencia de Eclipse y su orientación hacia desarrolladores lo convierten en
     una herramienta que requiere especialización técnica. Para un coordinador de
     carrera o un vicerrector académico, interactuar con FeatureIDE supondría una
@@ -1360,16 +1359,15 @@ propias de la planificación curricular.
     operativa de currículos.
 
     \item Flamapy / FlamapyIDE: es un ecosistema de código abierto para el análisis 
-    automatizado de \ac{FM}, desarrollado activamente por el grupo de investigación 
+    automatizado de \ac{FM}s, desarrollado activamente por el grupo de investigación 
     Diverso Lab de la Universidad de Sevilla, liderado por el catedrático David Benavides 
     \citep{galindo2023flama}. A diferencia de pure::variants y FeatureIDE, Flamapy se 
     concibe desde su origen como un ``\textit{framework} Python'' modular y extensible, diseñado 
     para facilitar la integración de capacidades de análisis de variabilidad en otras 
     aplicaciones, lo que lo emparenta directamente con el objetivo de la presente 
-    investigación. El framework soporta múltiples formatos de entrada, incluyendo UVL, 
+    investigación. El \textit{framework} soporta múltiples formatos de entrada, incluyendo \ac{UVL}, 
     FeatureIDE (.fide) y otros \citep{flamapyfeatureidereader2025}, y proporciona 
-    transformaciones a representaciones intermedias como diagramas de decisión binaria 
-    (BDD) para análisis eficientes \citep{flamapyfm2bdd2025}.
+    transformaciones a representaciones intermedias como \ac{BDD} para análisis eficientes \citep{flamapyfm2bdd2025}.
     
     
     Flamapy ofrece tres interfaces principales que lo convierten en una propuesta particularmente relevante \citep{flamapyrest2024}:
@@ -1381,11 +1379,11 @@ propias de la planificación curricular.
         configuraciones, etc.) sin necesidad de instalar software local. Esta interfaz 
         gráfica reduce significativamente la barrera de entrada para usuarios no técnicos.
         
-        \item API REST: Flamapy proporciona una API RESTful que expone sus 
+        \item \ac{API} REST: Flamapy proporciona una \ac{API} RESTful que expone sus 
         capacidades de análisis como servicios web, permitiendo que otras aplicaciones 
-        (como el backend propuesto en esta investigación) integren funcionalidades avanzadas 
-        de validación y configuración de modelos de características mediante llamadas HTTP 
-        \citep{flamapyrest2024}. La API puede desplegarse localmente mediante Docker o 
+        (como el \textit{backend} propuesto en esta investigación) integren funcionalidades avanzadas 
+        de validación y configuración de modelos de características mediante llamadas de \ac{HTTP} 
+        \citep{flamapyrest2024}. La \ac{API} puede desplegarse localmente mediante Docker o 
         accederse a versiones alojadas, facilitando su adopción en arquitecturas de 
         microservicios.
         
@@ -1405,7 +1403,7 @@ propia de las \ac{SPL}, con la planificación curricular educativa, creando una
 oportunidad para sistemas especializados \citep{sanchez2020metodologia}. 
 Las herramientas existentes de \ac{SPL} están diseñadas para ingenieros de software, 
 no para profesionales de la educación ni mucho menos para la gestión curricular, 
-limitando su adopción en instituciones educativas y obliga a comprender los conceptos 
+limitando su adopción en instituciones educativas y obligando a comprender los conceptos 
 fundamentales de \ac{SPLE} \citep{chen2020variability}. 
 En el caso de Flamapy, destacar que no permite gestionar y operar el \ac{FM} 
 desde la vista gráfica (visualización del árbol), sino mediante la escritura de \ac{UVL}.
@@ -1415,20 +1413,20 @@ las fortalezas identificadas en ambos tipos de herramientas y las adapte al domi
 educativo. 
 
 De los sistemas analizados se reconoce como indispensable la capacidad de 
-representar explícitamente características con relaciones jerárquicas y restricciones; 
-la validación automática de configuraciones; la posibilidad de derivar múltiples 
-variantes a partir de un modelo común; y la interoperabilidad con ecosistemas académicos 
+representar explícitamente características con relaciones jerárquicas y restricciones, 
+la validación automática de configuraciones, la posibilidad de derivar múltiples 
+variantes a partir de un modelo común y la interoperabilidad con ecosistemas académicos 
 existentes. Flamapy, en particular, se destaca su funcionamiento en capturar y modelar los
-\ac{FM} a partir de escribir código en \ac{UVL}, su amplio abanico de exportación a diferentes
-formatos de archivos y la capacidad de diagnosticar los \ac{FM} 
-(funcionanlidad no ausente en los otros 2 sistemas analizados) 
+\ac{FM}s a partir de escribir código en \ac{UVL}, su amplio abanico de exportación a diferentes
+formatos de archivos y la capacidad de diagnosticar los \ac{FM}s 
+(funcionalidad no ausente en los otros 2 sistemas analizados) 
 en búsquedas de estadísticas, como cantidad de configuraciones, 
 características muertas, etc. La relevancia de Flamapy para la presente investigación 
 es múltiple:
 
 \begin{itemize}
     \item Su naturaleza como \textit{framework} Python facilita la integración con la propuesta solución, permitiendo reutilizar sus capacidades de análisis en lugar de implementarlas desde cero.
-    \item La existencia de una API REST validada y documentada proporciona un referente arquitectónico para el diseño del servicio.
+    \item La existencia de una \ac{API} REST validada y documentada proporciona un referente arquitectónico para el diseño del servicio.
     \item Su enfoque en accesibilidad (interfaz web, \ac{API}) lo alinea con la necesidad de acercar las técnicas de \ac{SPL} a gestores académicos no especializados.
     \item El equipo de desarrollo (Diverso Lab) es el mismo que lidera el estándar \ac{UVL}, garantizando coherencia con las notaciones adoptadas en esta investigación.
 \end{itemize}
@@ -1459,6 +1457,818 @@ contemporánea, constituyendo así una innovación con pertinencia tecnológica 
 académico-formativa.
     
 \section{Herramientas y tecnologías}
+
+La implementación de la solución propuesta requiere la selección cuidadosa de tecnologías, 
+herramientas y \textit{frameworks} que permitan materializar de manera eficiente los modelos 
+curriculares, soportar reglas de variabilidad y garantizar una experiencia de desarrollo fluida. 
+En este epígrafe se describen los componentes tecnológicos que conformarán la plataforma,
+justificando su elección. Asimismo, se analizan los entornos de desarrollo, 
+lenguajes de programación, sistemas de persistencia y bibliotecas especializadas que 
+facilitan la representación formal de restricciones curriculares y la validación 
+automática de configuraciones. Esta caracterización permite comprender la base 
+tecnológica que sustenta la solución y cómo cada herramienta contribuye al logro de 
+sus objetivos funcionales y no funcionales.
+
+\subsection{Lenguaje de Programación}
+
+Los lenguajes de programación son herramientas formales que permiten 
+expresar instrucciones de manera estructurada para que un sistema 
+computacional ejecute tareas determinadas \citep{sebesta2016}. A través de ellos se 
+implementan algoritmos, modelos de datos, reglas de negocio y mecanismos de 
+interacción con el usuario u otros sistemas. La elección de un lenguaje influye 
+directamente en la escalabilidad, el rendimiento, la mantenibilidad y la 
+capacidad de expresar soluciones complejas de manera eficiente. En el contexto 
+del sistema propuesto, el lenguaje seleccionado debe ofrecer flexibilidad, 
+capacidad de representación estructural y soporte robusto para lógica y 
+concurrencia \citep{sommerville2016se}.
+
+Entre los lenguajes de programación más utilizados para el desarrollo de aplicaciones del lado del servidor
+se encuentran Java, Python, C\#, JavaScript\textbackslash TypeScript (Node.js), Go, PHP, entre otros. Python 
+será el lenguaje principal utilizado para el desarrollo del \textit{backend} de la 
+solución propuesta. Su elección se fundamenta en su madurez tecnológica, su amplio 
+ecosistema de bibliotecas y la claridad sintáctica que facilita la implementación de 
+modelos complejos manteniendo niveles altos de legibilidad y mantenibilidad del código 
+\citep{van1995python, lutz2013learning}. Python es ampliamente utilizado en el ámbito 
+académico y profesional, lo que garantiza disponibilidad de documentación, ejemplos de 
+buenas prácticas y una sólida comunidad de soporte \citep{ray2014large}.
+
+Una de las principales fortalezas de Python radica en su capacidad de integración 
+con múltiples paradigmas de desarrollo, permitiendo tanto programación estructurada 
+como orientada a objetos y funcional \citep{lutz2013learning}. Esto resulta particularmente 
+útil para el diseño modular del sistema, la definición formal de \ac{FM} y la implementación 
+de validaciones de reglas en motores lógicos.
+
+La representación estructurada de \ac{FM}s requiere un lenguaje 
+capaz de expresar jerarquías, relaciones lógicas, restricciones transversales y 
+cardinalidades con claridad y sin ambigüedad. Python ofrece capacidades idóneas para 
+este propósito debido a su flexibilidad en estructuras de datos y su riqueza semántica 
+para definir invariantes y reglas de negocio. La cantidad de líneas de código que se requiere
+para operar los \ac{FM}s en Python es drásticamente menor que en comparación con otros lenguajes 
+como pueden ser Java y C\#, lo que mejora la experiencia de desarrollo.
+
+En primer lugar, Python permite modelar \ac{FM}s de forma natural mediante diccionarios, 
+listas y clases, manteniendo la semántica jerárquica del dominio sin necesidad de 
+sintaxis complejas ni compilación intermedia. Esto facilita representar nodos, ramas, 
+grupos OR/XOR, atributos y relaciones \textit{cross-tree} como estructuras anidadas. Gracias a 
+esta expresividad, resulta posible describir distintos niveles del modelo —desde 
+características obligatorias y opcionales hasta restricciones de cardinalidad— de manera 
+directa y legible, lo que favorece tanto su mantenimiento como su inspección.
+Adicionalmente, esta flexibilidad estructural de Python facilita la implementación de mecanismos de 
+serialización y deserialización que permiten la interoperabilidad con formatos estándar de la 
+comunidad de \ac{SPL}, como \ac{UVL} \citep{sundermann2021uvl}. \ac{UVL} se ha propuesto como un formato independiente del lenguaje para 
+representar modelos de variabilidad, y Python, gracias a su soporte para procesamiento de texto, 
+análisis sintáctico y generación de estructuras de datos, permite construir traductores bidireccionales que 
+convierten modelos \ac{UVL} en representaciones internas del sistema y viceversa, asegurando la portabilidad 
+de los modelos entre distintas herramientas y entornos de desarrollo.
+
+Además, Python ofrece un ecosistema amplio de herramientas para la validación 
+programática de configuraciones. El sistema puede implementar algoritmos de selección y 
+verificación que comprueben automáticamente consistencia lógica, satisfacibilidad de 
+prerrequisitos, exclusiones y cumplimiento de restricciones. La sintaxis de Python resulta 
+especialmente adecuada para traducir expresiones lógicas como requerimientos, exclusiones o 
+implicaciones, ya sea mediante evaluaciones directas o a través de módulos que permiten 
+construir árboles lógicos, satisfacibilidad booleana o incluso resolución por \textit{backtracking}.
+
+Adicionalmente, la flexibilidad del lenguaje, junto con el respaldo de su 
+amplio ecosistema de bibliotecas, facilita la construcción de algoritmos que no solo 
+derivan configuraciones de forma eficiente, sino que también las verifican mediante 
+evaluaciones lógicas, análisis de dependencias y resolución de conflictos. Este mismo 
+soporte permite implementar mecanismos de versionado y \textit{snapshots} del modelo, conservando 
+estados históricos y garantizando que la evolución del \ac{FM} no invalide configuraciones 
+previas, preservando así la consistencia y trazabilidad del sistema en el tiempo.
+
+En conjunto, estas características hacen de Python un lenguaje altamente apropiado 
+tanto para la representación formal de \ac{FM}s como para la generación 
+y validación automatizada de configuraciones dentro del sistema propuesto \citep{ray2014large}.
+Por su equilibrio entre simplicidad expresiva y potencia funcional, Python constituye 
+una base tecnológica idónea para el \textit{backend} del sistema, permitiendo acelerar el 
+desarrollo sin sacrificar calidad, extensibilidad ni alineación con los requisitos 
+funcionales de la solución.
+
+\subsection{\textit{Framework} de desarrollo}
+
+Los \textit{frameworks} de desarrollo son estructuras software 
+que proporcionan un conjunto de herramientas, patrones, 
+módulos y convenciones que simplifican la construcción de 
+aplicaciones \citep{sommerville2016se}. Permiten acelerar la implementación de funcionalidades 
+complejas, garantizando buenas prácticas de diseño y facilitando la 
+mantenibilidad del software \citep{pressman2014se}. Un \textit{framework} adecuado reduce la repetición 
+de código, mejora la seguridad, permite la modularización y posibilita el 
+desarrollo escalable. En este proyecto, el \textit{framework} seleccionado debe soportar 
+concurrencia, validación, comunicación con bases de datos y un desarrollo claro 
+basado en \ac{API}s \citep{gamma1995Frameworks}.
+
+Algunos de los \textit{frameworks} \textit{backend} con los que cuenta Python son 
+Django\textbackslash \ac{DRF}, FastAPI, AIOHTTP, Flask, Tornado, entre otros no tanto conocidos 
+o aclamados por la comunidad. Se evaluaron (\ref{tab:frameworks}) estas opciones considerando 
+criterios como rendimiento, facilidad de desarrollo, soporte para tipado, validación automática 
+y capacidades asíncronas.
+
+\begin{longtable}{|p{3cm}|p{2.5cm}|p{2cm}|p{2.5cm}|p{3cm}|}
+	\caption[Comparación entre \textit{frameworks} de Python]{Comparación entre \textit{frameworks} de Python. Fuente: elaboración propia} 
+    \label{tab:frameworks} \\
+    
+    \hline
+    \rowcolor[HTML]{CBCEFB} 
+    \textbf{\textit{Framework}} & \textbf{Tipo} & \textbf{Rendimiento} & \textbf{Curva de aprendizaje} & \textbf{Ideal para} \\
+    \hline
+    \endfirsthead
+    	
+    \hline
+    \rowcolor[HTML]{CBCEFB} 
+    \textbf{\textit{Framework}} & \textbf{Tipo} & \textbf{Rendimiento} & \textbf{Curva de aprendizaje} & \textbf{Ideal para} \\
+    \hline
+    \endhead
+    	
+    % Cuerpo de la tabla
+    Django & \textit{Full-stack} & Medio & Media & Sistemas completos \\ 
+    \hline
+    \rowcolor[HTML]{EDEBF1}
+    \ac{DRF} & \textit{Full-stack} \ac{API} & Medio & Media & \ac{API}s sobre Django \\ 
+    \hline
+    FastAPI & Asíncrono & Alto & Baja & \ac{API}s modernas \\ 
+    \hline
+    \rowcolor[HTML]{EDEBF1}
+    Flask & Micro & Medio & Muy baja & Prototipos, servicios \\ 
+    \hline
+    Tornado & Asíncrono & Alto & Alta & Tiempo real \\
+    \hline
+    \rowcolor[HTML]{EDEBF1}
+    AIOHTTP & Asíncrono & Alto & Media & Clientes\textbackslash servidores asíncronos \\ 
+    \hline
+    
+\end{longtable}
+
+De la tabla \ref{tab:frameworks} se puede concluir que, si bien \ac{DRF} ofrece una solución robusta y madura para construir \ac{API}s sobre el ecosistema 
+Django, su naturaleza síncrona y su curva de configuración pueden representar limitaciones para escenarios 
+que requieren alta concurrencia y validación estricta de \ac{FM}s. Por su parte, 
+Tornado y AIOHTTP proporcionan excelente rendimiento asíncrono, pero demandan un desarrollo más manual y 
+complejo. Flask, aunque sencillo y flexible, carece de tipado fuerte y validación automática, aspectos 
+cruciales para garantizar la consistencia de los \ac{FM}s y las configuraciones derivadas. 
+En contraste, FastAPI fue seleccionado como el \textit{framework} principal para el desarrollo del \textit{backend} debido a 
+su combinación equilibrada de alto rendimiento asíncrono, sintaxis intuitiva, simplicidad de desarrollo y capacidades avanzadas de 
+validación mediante Pydantic \citep{ramirez2021fastapi}. 
+
+Un factor determinante en la selección de FastAPI es su rendimiento comparable a 
+implementaciones escritas en Go y Node.js, gracias a su construcción sobre Starlette 
+(para la capa asíncrona) y Pydantic (para validación y serialización) \citep{pesce2021benchmark}. 
+Esta combinación permite manejar múltiples peticiones concurrentes, realizar verificaciones 
+de reglas e interacciones dinámicas con el motor de configuraciones sin degradación perceptible 
+del servicio, incluso bajo cargas elevadas.
+
+Un argumento especialmente relevante para seleccionar FastAPI es la naturaleza 
+intensiva en validaciones y operaciones \ac{I/O} que caracteriza al sistema propuesto. 
+La plataforma no solo debe recibir configuraciones y verificar reglas, sino también 
+consultar persistencia, aplicar evaluaciones lógicas, generar respuestas alternativas y 
+registrar versiones de modelo, todo ello de manera concurrente y potencialmente bajo 
+múltiples usuarios. Debido a su arquitectura asíncrona nativa basada en async/await, 
+FastAPI permite manejar este patrón de carga sin bloqueo, maximizando la eficiencia en 
+tareas \ac{I/O} y reduciendo latencias \citep{eugene2023fastapi, pesce2021benchmark}. Esto se 
+traduce en una capacidad real de escalar, sin incurrir en cuellos de botella característicos 
+de \textit{frameworks} síncronos, lo que resulta esencial en un sistema donde las consultas y 
+validaciones son frecuentes, complejas y potencialmente concurrentes.
+
+FastAPI aprovecha las características más recientes 
+de Python (\textit{type hints}) para ofrecer validación automática de datos, documentación interactiva generada 
+dinámicamente (OpenAPI/Swagger) y soporte nativo para concurrencia, lo que resulta particularmente ventajoso 
+para implementar operaciones de validación y derivación de configuraciones en \ac{FM} 
+\citep{fastapi2023docs}. Esta capacidad de tipado fuerte permite mapear directamente las estructuras de los 
+\ac{FM}s —como características, restricciones y relaciones— a modelos Pydantic, asegurando que los datos
+procesados cumplan consistentemente con las reglas del dominio. Además, su enfoque modular y su 
+integración fluida con bases de datos relacionales y no relacionales mediante bibliotecas como SQLAlchemy y 
+Motor lo convierten en una opción versátil y preparada para escalar junto con los requisitos del sistema 
+\citep{lubanovic2019python}. Por estas razones, FastAPI constituye la base tecnológica idónea para implementar 
+la propuesta de solución, alineado con los objetivos funcionales y no funcionales del sistema.
+
+\subsection{Base de Datos y Gestor de Base de Datos}
+
+Las bases de datos son sistemas diseñados para almacenar, organizar y 
+proteger información de manera eficiente y estructurada, garantizando su 
+disponibilidad a lo largo del tiempo \citep{sciencedirect_dbms}.
+La persistencia de los modelos curriculares, configuraciones generadas, 
+versiones históricas y metadatos asociados requiere de un sistema robusto, 
+seguro y con garantías de consistencia transaccional. 
+
+Entre los sistemas de bases de 
+datos más utilizados se encuentran MySQL, PostgreSQL, MongoDB y SQL Server. Se 
+selecciona PostgreSQL como gestor de base de datos relacional, debido a su madurez, 
+fiabilidad y su capacidad de manejar estructuras complejas con fuertes requisitos 
+de integridad referencial \citep{postgres2024, momjian2001postgresql}. 
+PostgreSQL destaca por su cumplimiento estricto del 
+estándar \ac{SQL}, su modelo \ac{ACID}, y su eficiente gestión de transacciones, elementos 
+imprescindibles para representar relaciones jerárquicas entre características, 
+restricciones \textit{cross-tree}, y \textit{snapshots} versionados del modelo sin comprometer la 
+coherencia global del sistema \citep{momjian2001postgresql}.
+
+Además, PostgreSQL ofrece capacidades avanzadas como índices compuestos, consultas 
+optimizadas, vistas materializadas, \textit{triggers} y procedimientos almacenados, que 
+resultan útiles para procesar datos curriculares con alto grado de estructuración \citep{postgres2024}. 
+El motor también soporta tipos de datos \ac{JSON} y \ac{JSONB}, permitiendo almacenar 
+representaciones semiestructuradas de configuraciones y estados transitorios, por 
+lo que proporciona flexibilidad para almacenar tanto esquemas estáticos como 
+\textit{snapshots} dinámicos relacionados con la evolución del \ac{FM} 
+\citep{postgres2024}.
+
+Adicionalmente, PostgreSQL se integra de forma natural con SQLAlchemy como \ac{ORM} 
+dentro del \textit{backend} desarrollado en FastAPI, facilitando el diseño declarativo de 
+entidades, la gestión del ciclo de persistencia, la validación de relaciones y la 
+migración segura del esquema. Esta integración favorece una arquitectura limpia y 
+escalable, desacoplando las capas de datos, servicios y lógica de negocio.
+
+Para la administración visual del motor se empleará pgAdmin, interfaz ampliamente 
+utilizada para la gestión de bases de datos PostgreSQL. Mediante esta herramienta 
+es posible inspeccionar tablas, ejecutar consultas \ac{SQL}, visualizar índices y 
+restricciones, supervisar cargas de trabajo y realizar respaldos de forma controlada. 
+En el contexto de la solución propuesta, pgAdmin permite auditar el estado de los 
+modelos almacenados, verificar reglas impuestas, revisar configuraciones generadas 
+y garantizar la trazabilidad del sistema.
+
+En conjunto, la elección de PostgreSQL como sistema de persistencia y pgAdmin 
+como herramienta administrativa proporciona una base confiable y alineada 
+con las necesidades de integridad, consistencia y trazabilidad del sistema 
+a desarrollar.
+        
+\subsection{Contenerización y Orquestación}
+
+La contenerización es una tecnología que permite empaquetar aplicaciones junto con 
+todas sus dependencias en unidades aisladas, reproducibles y portables llamadas 
+contenedores. Esto garantiza que una aplicación se ejecute de la misma manera en 
+cualquier entorno, eliminando problemas de incompatibilidad. Para ello se emplean 
+herramientas especializadas, donde Docker se ha consolidado como estándar industrial. 
+Por su parte, la orquestación permite administrar múltiples contenedores, asegurando 
+coordinación, escalabilidad y resiliencia; funciones que normalmente se alcanzan 
+mediante tecnologías como Docker Compose o Kubernetes. Este enfoque es crucial para 
+despliegues confiables, mantenibles y escalables.
+
+Para garantizar la portabilidad, reproducibilidad y facilidad de despliegue del 
+sistema propuesto, se adoptará Docker como tecnología base de contenedorización 
+\citep{boettiger2015introduction, docker2024docs}. 
+Docker permite encapsular los servicios de la aplicación —incluyendo el \textit{backend} 
+FastAPI, la base de datos PostgreSQL, la herramienta administrativa pgAdmin y
+otros servicios de utilidad o futuros módulos asociados— dentro de entornos aislados 
+y autocontenidos. Esto elimina problemas de dependencias, divergencias de entorno
+y configuraciones inconsistentes entre despliegues locales y productivos 
+\citep{boettiger2015introduction}.
+La capacidad de reproducir una imagen de forma determinística contribuye directamente 
+a la robustez y mantenibilidad de la solución.
+
+La contenedorización resulta especialmente útil para aplicaciones multicapa como 
+la propuesta, donde distintos servicios deben colaborar manteniendo canales de 
+comunicación estables. Docker permite garantizar uniformidad tanto en las 
+dependencias del \textit{backend}, como versiones de bibliotecas, configuración del servidor 
+de aplicación y parámetros del motor de base de datos, disminuyendo errores 
+derivados de diferencias de entorno y facilitando diagnósticos \citep{docker2024docs}.
+
+Sobre Docker se construye Docker Compose, herramienta de orquestación ligera que 
+permite describir, mediante un único archivo declarativo, toda la topología de 
+servicios del sistema \citep{docker2024docs}. Esto incluye la configuración de redes internas, gestión 
+de persistencia en volúmenes, variables de entorno, reglas de dependencias entre 
+contenedores, puntos de exposición de puertos, así como políticas de reinicio. 
+En el contexto del sistema de modelado curricular, Docker Compose facilita levantar 
+el entorno completo de desarrollo o producción con un solo comando, garantizando 
+escalabilidad y reduciendo tiempos de despliegue o recuperación ante fallos 
+\citep{boettiger2015introduction}.
+
+Un beneficio adicional de esta estrategia es su contribución a las prácticas de 
+\ac{CI/CD}. Gracias a la naturaleza 
+declarativa y reproducible de los contenedores, el sistema puede desplegarse 
+automáticamente mediante \textins{pipelines} controlados sin intervención manual, asegurando 
+que las versiones del modelo curricular, las configuraciones generadas y los 
+\textit{snapshots} almacenados sean accesibles en entornos iguales o equivalentes entre sí 
+\citep{docker2024docs}.
+
+\subsection{Almacenamiento en Memoria, \textit{Caching} y Mensajería}
+
+El almacenamiento en memoria es una técnica que permite guardar temporalmente datos en la
+\ac{RAM} para acelerar el acceso a información que se consulta de forma recurrente, 
+evitando operaciones de disco o consultas de base de datos innecesarias. El \textit{caching} se 
+basa precisamente en optimizar velocidad, reduciendo latencias y mejorando el rendimiento 
+global del sistema. Existen herramientas especializadas que permiten gestionar este 
+almacenamiento temporal, soportar estructuras clave-valor y facilitar comunicación 
+entre servicios. Redis destaca entre ellas por su eficiencia, simplicidad y capacidades 
+adicionales como mensajería, \textit{pub/sub} y persistencia configurable, lo que la convierte 
+en una pieza clave para arquitecturas modernas.
+
+Redis será incorporado como componente clave para el almacenamiento temporal 
+y procesamiento eficiente de información crítica durante las fases de 
+generación y validación de configuraciones curriculares \citep{carlson2013redis}. Su naturaleza de 
+base de datos en memoria permite alcanzar tiempos de respuesta extremadamente 
+bajos, lo cual resulta particularmente valioso en un sistema donde las 
+operaciones de verificación de restricciones, derivación de configuraciones 
+válidas y resolución de incompatibilidades pueden ejecutarse de forma intensiva 
+y repetitiva.
+
+A diferencia de un motor relacional tradicional, Redis está optimizado 
+para operaciones clave–valor y estructuras avanzadas como listas, conjuntos, 
+mapas \textit{hash} y \textit{sorted sets} \citep{carlson2013redis}. Estas estructuras permiten modelar transitoriamente 
+elementos como:
+\begin{itemize}
+    \item Configuraciones candidatas generadas por el usuario.
+    \item Listas de incompatibilidades detectadas.
+    \item Descriptores internos del \ac{FM}.
+    \item Estados de sesión durante la exploración de alternativas.
+    \item Cachés de resultados de validaciones repetitivas.
+\end{itemize}
+
+Este almacenamiento en memoria reduce significativamente la latencia, lo que 
+contribuye a experiencias interactivas y a la capacidad del sistema de 
+responder en tiempo real a decisiones del usuario (por ejemplo, activar 
+o desactivar características, consultar prerequisitos, etc.) \citep{carlson2013redis}.
+
+Otro aspecto clave es que Redis permite persistencia opcional mediante 
+\textit{snapshots}, lo que lo convierte en un aliado directo del soporte de 
+versionado de modelos y configuraciones \citep{carlson2013redis}. Es decir, puede almacenar estados 
+intermedios del proceso de modelado curricular sin interferir con la base de 
+datos principal, permitiendo restaurar fácilmente versiones anteriores o 
+explorar ramas alternativas del mismo modelo.
+
+Además, Redis implementa un sistema de Time-To-Live (\ac{TTL}), lo que permite 
+gestionar la caducidad automática de configuraciones temporales, sesiones y 
+cálculos ya procesados. Esta funcionalidad contribuye a la integridad global 
+del sistema y evita acumulación de datos residual \citep{carlson2013redis}.
+
+Finalmente, una característica determinante para su elección es su excelente 
+integración con FastAPI, permitiendo aprovechar plenamente la naturaleza 
+asíncrona del \textit{backend} \citep{ramirez2019fastapi}. Gracias a bibliotecas como \texttt{aioredis}, las operaciones de 
+lectura/escritura se realizan sin bloquear el \texttt{event loop}, lo que maximiza la 
+concurrencia cuando múltiples usuarios exploran configuraciones simultáneamente.
+            
+\subsection{Almacenamiento de Archivos y Objetos}
+        
+El almacenamiento persistente de archivos, versiones históricas de modelos y 
+resultados derivados de las evaluaciones requiere una tecnología que ofrezca 
+acceso distribuido, tolerancia a fallos, escalabilidad y compatibilidad con 
+estándares industriales. Contar con una herramienta que permita aislar objetos de la base de datos
+es sumamente importante para evitar sobrecargar el sistema de gestión de datos relacional 
+con información que no requiere consultas estructuradas, sino almacenamiento eficiente y recuperación rápida, 
+por lo que PostgreSQL se encargaría de almacenar la dirección \ac{URL} del objeto y sus metadatos; y
+en otro sistema se almacenaría el objeto como tal.
+Para satisfacer esta necesidad se incorporará 
+MinIO, un sistema de almacenamiento de objetos compatible con la \ac{API} de 
+Amazon \ac{S3}, ampliamente adoptado en entornos de producción y servicios en la nube 
+\citep{minio2024docs}.
+
+MinIO ofrece una interfaz uniforme para almacenar objetos binarios, documentos, 
+\textit{snapshots} de modelos y resultados asociados al proceso de validación. Su 
+compatibilidad con \ac{S3} permite integrar la plataforma con herramientas estándar 
+sin requerir dependencias propietarias \citep{adler2023evaluating}. Esta 
+característica asegura interoperabilidad con sistemas externos, posibilitando 
+que módulos de análisis, auditoría o visualización operen sobre un \textit{backend} 
+de almacenamiento robusto y escalable.
+
+En el contexto de la solución propuesta, MinIO será empleado para almacenar:  
+\begin{itemize}
+    \item \textit{Snapshots} persistentes de versiones del \ac{FM}.
+    \item Configuraciones válidas generadas por los motores \ac{SAT}/\ac{SMT}.
+    \item Artefactos derivados del análisis estructural.
+    \item Archivos de auditoría e informes.
+    \item Registros de pruebas y diagnósticos.
+\end{itemize}
+
+A diferencia del almacenamiento en memoria provisto por Redis, MinIO garantiza 
+persistencia a largo plazo, redundancia y recuperación confiable de información. 
+Su arquitectura distribuida permite configurar réplicas, dispersión de datos y 
+mecanismos de resiliencia sin sacrificar rendimiento \citep{adler2023evaluating}. 
+Además, sus políticas de control de acceso simplifican la gestión de permisos, 
+evitando inconsistencias o pérdida de trazabilidad a lo largo del ciclo de vida 
+del currículo.
+
+Desde el punto de vista operativo, MinIO permite integrarse con Docker y Docker 
+Compose de manera directa, facilitando el despliegue, escalado y administración sin 
+requerir configuración adicional. Esto habilita una solución completa de 
+almacenamiento distribuido que puede operar tanto en entornos locales (\textit{on-premise}) 
+como en infraestructuras institucionales o nube privada.
+
+\subsection{Procesamiento Asíncrono}
+
+El procesamiento asíncrono permite ejecutar tareas en segundo plano sin bloquear 
+la operación principal del sistema, lo cual es esencial cuando existen tareas costosas, 
+como validaciones complejas, consultas externas, cálculos intensivos o envío de 
+notificaciones. En el ecosistema de Python existen herramientas especializadas para 
+administrar colas de trabajo, distribuir tareas y realizar ejecución diferida. Entre 
+ellas, Celery se ha posicionado como la solución estándar para orquestar tareas 
+asíncronas, ofreciendo escalabilidad, distribución y tolerancia a fallos. Su integración 
+con \text{brokers} como Redis permite construir sistemas altamente eficientes, modulares y no 
+bloqueantes.
+
+En la arquitectura propuesta, Celery desempeñará un rol esencial como 
+orquestador de tareas asíncronas, permitiendo que operaciones complejas, 
+lentas o intensivas en cómputo se ejecuten fuera del ciclo de solicitud-respuesta 
+del \ac{API}, mejorando sustancialmente la experiencia del usuario y la disponibilidad 
+del sistema \citep{celery2024docs}.
+
+Dado que el proceso de generación y validación de configuraciones curriculares 
+incluye fases donde se deben:
+\begin{itemize}
+    \item Recorrer árboles completos del \ac{FM}.
+    
+    \item Validar múltiples restricciones cruzadas.
+    
+    \item Propagar efectos lógicos por dependencias.
+    
+    \item Explorar configuraciones alternativas válidas.
+    
+    \item Verificar versiones y retrocompatibilidad.
+\end{itemize}
+
+Resulta natural que estas tareas no se ejecuten directamente en una petición \ac{HTTP}, 
+ya que podrían bloquear el servidor o provocar tiempos de respuesta superiores 
+a lo aceptable. Celery permite delegar estos procesos a \textit{``workers''} paralelos 
+que pueden ejecutarse en segundo plano, liberando a FastAPI para seguir 
+atendiendo solicitudes sin congestión.
+
+La integración de Celery con Redis (como \textit{message broker}) permite que las tareas 
+se publiquen, distribuyan, encolen, ejecuten y documenten de forma confiable. 
+Asimismo, Redis funge como \textit{backend} de resultados, permitiendo al sistema:
+\begin{itemize}
+    \item Consultar el estado de una ejecución.
+    
+    \item Recuperar resultados parciales o finales.
+    
+    \item Cancelar o reprogramar tareas.
+    
+    \item Mostrar progresos al usuario.
+\end{itemize}
+
+Otra ventaja crítica es que Celery soporta escalamiento horizontal, lo cual es 
+relevante para el sistema, en el cual múltiples usuarios pueden realizar 
+evaluaciones simultáneamente sobre modelos distintos o versiones diferentes. 
+Con más carga, simplemente se añaden más \textit{workers}, sin necesidad de cambios 
+estructurales \citep{celery2024docs}. Desde el punto de vista de robustez, Celery ofrece 
+herramientas para:
+\begin{itemize}
+    \item Reintentos automáticos ante fallos.
+    
+    \item Límite de concurrencia.
+    
+    \item Priorización de colas.
+    
+    \item Periodicidad (con Celery Beat) para ejecutar tareas programadas.
+\end{itemize}
+
+Esto permite automatizar procesos como:
+\begin{itemize}
+    \item Generación periódica de \textit{snapshots} de \ac{FM}.
+    
+    \item Validaciones nocturnas de consistencia.
+    
+    \item Limpieza de configuraciones expiradas.
+    
+    \item Copias de seguridad de estados intermedios.
+\end{itemize}
+
+Celery es altamente compatible con FastAPI y Python, manteniendo 
+coherencia tecnológica con la decisión de usar un \textit{stack} asíncrono y un modelo 
+de validación compleja \citep{celery2024docs, ramirez2019fastapi}. Su adopción garantiza que la capa lógica pesada no 
+degrade la utilidad interactiva del sistema, sino que se ejecute de forma 
+paralela, programada y resistente. La siguiente tabla \ref{tab:fastAPIvsFastAPIconCelery} 
+respalda la justificación de por qué adicionar celery al sistema.
+
+\begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
+    \caption{Tabla Comparativa: FastAPI vs FastAPI + Celery. Fuente: Elaboración propia. \label{tab:fastAPIvsFastAPIconCelery}}\\
+    \hline
+    \rowcolor[HTML]{CBCEFB} 
+    \textbf{Criterio} & \textbf{Solo FastAPI} & \textbf{FastAPI + Celery} \\
+    \hline
+    \endfirsthead
+    
+    \multicolumn{3}{c}
+    {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+    
+    \hline
+    \rowcolor[HTML]{CBCEFB} 
+    \textbf{Criterio} & \textbf{Solo FastAPI} & \textbf{FastAPI + Celery} \\
+    \hline
+    \endhead
+    
+    \hline
+    \multicolumn{3}{|r|}{{Continúa en la siguiente página}} \\
+    \endfoot
+    
+    \hline
+    \endlastfoot
+    
+    % Cuerpo de la tabla
+    Manejo de operaciones pesadas & Bloquea el servidor si la tarea tarda mucho & Delegación a \textit{workers} externos sin bloqueo \\ 
+    \hline
+    \rowcolor[HTML]{EDEBF1}
+    Experiencia del usuario & Tiempos de respuesta largos para validaciones & Respuestas inmediatas + seguimiento del progreso \\ 
+    \hline
+    Escalabilidad & Limitada al número de \textit{workers} del servidor & Escalamiento horizontal agregando \textit{workers} Celery \\ 
+    \hline
+    \rowcolor[HTML]{EDEBF1}
+    Naturaleza de carga & Orientada a \ac{I/O} y sincronización & Orientada a cómputo intensivo y tareas diferidas \\ 
+    \hline
+    Validación de modelos complejos & Puede agotar recursos del servidor & Optimización mediante \textit{workers} paralelos \\ 
+    \hline
+    \rowcolor[HTML]{EDEBF1}
+    Generación de \textit{snapshots} o versiones & Bajo rendimiento si se ejecuta en el \textit{request} & Tareas programadas y automáticas (Celery Beat) \\ 
+    \hline
+    Robustez ante fallos & Fallos interrumpen solicitudes activas & Reintentos automáticos e independientes \\ 
+    \hline
+    \rowcolor[HTML]{EDEBF1}
+    Concurrencia & Limitada & Altamente concurrente \\ 
+    \hline
+    Distribución de carga & Manual, difícil de gestionar & Balance natural mediante colas y \textit{brokers} \\ 
+    \hline
+    \rowcolor[HTML]{EDEBF1}
+    Estado de procesos largos & No persistente, no rastreable & Persistente, rastreable, recuperable \\ 
+    \hline
+    Integración con Redis & Opcional & Ideal, Redis como \textit{broker} y \textit{backend} \\ 
+    \hline
+    \rowcolor[HTML]{EDEBF1}
+    Mantenimiento & Monolítico & Arquitectura desacoplada y modular \\ 
+    \hline
+\end{longtable}
+
+Esta comparación evidencia que mientras FastAPI permite construir servicios web 
+altamente eficientes para operaciones sin bloqueo y validaciones ligeras, la 
+incorporación de Celery habilita un procesamiento distribuido ideal 
+para la naturaleza intensiva de la manipulación y validación de \ac{FM}s, 
+generando configuraciones, \textit{snapshots} y cálculos alternativos sin afectar la 
+disponibilidad del sistema.
+    
+\subsection{Algoritmos, Motor de Reglas y Validación}
+
+Para garantizar la consistencia, completitud y validez de las configuraciones
+generadas a partir del \ac{FM}, la plataforma integrará
+un conjunto de algoritmos especializados, combinando enfoques deterministas y
+heurísticos según la naturaleza del problema a resolver. 
+
+En primer lugar, se utilizará SymPy como motor base para la
+representación simbólica y evaluación lógica de restricciones asociadas al \ac{FM} 
+\citep{meurer2017sympy}.
+SymPy permite manipular expresiones booleanas, aplicar simplificaciones,
+detectar contradicciones y verificar satisfacibilidad, lo que resulta esencial
+para la evaluación de relaciones \textit{cross-tree} como \textit{requires},
+\textit{excludes}, \textit{implies} y restricciones de cardinalidad. Su uso
+asegura una verificación formal, basada en lógica proposicional y álgebra
+simbólica, manteniendo precisión y trazabilidad en los análisis \citep{meurer2017sympy}.
+
+De manera complementaria, la plataforma empleará NetworkX para
+modelar y procesar las dependencias entre características como grafos
+dirigidos, permitiendo ejecutar algoritmos de recorrido, detección de ciclos,
+análisis de conectividad, propagación de condiciones y determinación de
+componentes fuertemente conexas \citep{hagberg2008networkx}. Este enfoque orientado a grafos habilita la
+inspección estructural del \ac{FM}, la detección temprana de inconsistencias y la
+aplicación eficiente de validaciones transversales.
+
+En escenarios donde la validación determinista no sea suficiente para explorar
+el espacio de configuraciones posibles —especialmente cuando existan
+alternativas múltiples y restricciones complejas— se utilizarán técnicas
+heurísticas como algoritmos genéticos. Estos permiten buscar
+soluciones aproximadas optimizando criterios como completitud, compatibilidad
+y minimización de violaciones. Su empleo resulta valioso para sugerir
+configuraciones válidas, proponer versiones corregidas y explorar variantes
+del \ac{FM} bajo metas específicas.
+
+Si bien el sistema incorpora herramientas como SymPy para análisis 
+simbólico, NetworkX para la evaluación estructural del modelo y 
+algoritmos genéticos para la exploración heurística del espacio de 
+soluciones, estas tecnologías no sustituyen un motor formal de 
+satisfacibilidad. Por su naturaleza, SymPy resulta adecuado para 
+verificar restricciones locales o detectar inconsistencias obvias, 
+pero no está diseñado para resolver problemas de variabilidad a gran 
+escala. De igual forma, los algoritmos evolutivos permiten sugerir 
+configuraciones o completar decisiones, aunque sus resultados son 
+aproximados. Por ello, la plataforma complementa este enfoque híbrido 
+con motores lógicos especializados basados en \ac{SAT}/\ac{SMT} para garantizar 
+corrección formal y escalabilidad en los análisis.
+
+Para validar y generar configuraciones curriculares consistentes, 
+se adoptó por un motor lógico basado en técnicas \ac{SAT} y resolución de restricciones (CSP). Estas técnicas son exactas, 
+determinísticas y ampliamente empleadas en entornos \ac{SPL} industriales. 
+Librerías como PySAT (python-sat) y Z3 Solver permiten representar 
+cardinalidades, dependencias, exclusiones y restricciones complejas entre 
+características, garantizando un análisis consistente independientemente del 
+tamaño del modelo.
+
+Para la validación formal del \ac{FM} se hará uso de
+PySAT, un \textit{toolkit} industrial que integra múltiples solucionadores 
+\ac{SAT} de alto rendimiento (MiniSAT, Glucose, Lingeling, Maple, entre otros).
+PySAT permite formular restricciones curriculares como cláusulas booleanas 
+y delegar su resolución a técnicas probadas a nivel de investigación y 
+producción \citep{pysat2018}. Su uso mejora la escalabilidad del sistema, 
+ya que permite manejar modelos con miles de dependencias de forma 
+eficiente, además de habilitar análisis avanzados como detección de 
+dependencias redundantes, pruebas de satisfacibilidad incremental y 
+extracción de explicaciones (UNSAT cores), funcionalidad útil para 
+asistir al usuario en la corrección de configuraciones inválidas.
+
+Los solucionadores \ac{SAT}-based han demostrado ser una técnica 
+altamente efectiva en Ingeniería de Líneas de Productos (SPL) para la 
+verificación automática de configuraciones \citep{benavides2010automated}. Su 
+aplicación consiste en reducir el \ac{FM} a una 
+fórmula booleana y comprobar su satisfacibilidad mediante algoritmos 
+especializados. Este enfoque es determinista, completo y garantiza la 
+detección de inconsistencias globales, no sólo locales. A diferencia de 
+técnicas heurísticas, los solucionadores \ac{SAT} permiten decisiones exactas, 
+prueba de imposibilidad, generación de configuraciones alternativas, 
+evaluación de cardinalidades y análisis de impacto ante cambios, 
+aportando rigor matemático y soporte computacional sólido para la 
+variabilidad curricular.
+
+Mientras los solucionadores \ac{SAT} determinan si una configuración es 
+válida o no, el uso de técnicas Max-SAT permite optimizar 
+soluciones, seleccionar variantes preferidas y resolver conflictos 
+minimizando el número de violaciones. El solucionador Z3, desarrollado 
+por Microsoft Research, soporta Max-SAT, \ac{SMT} y razonamiento híbrido, lo que lo 
+convierte en una herramienta idónea para el análisis curricular 
+\citep{z3_2008}. Esto permite no sólo verificar configuraciones, 
+sino sugerir alternativas cercanas a las decisiones originales del 
+usuario, resolver conflictos automáticamente y explorar escenarios de 
+“mejor esfuerzo” cuando no existe una solución exacta. En términos 
+prácticos, Max-SAT habilita un sistema inteligente que auxilia al 
+gestor curricular en decisiones complejas, proporcionando soluciones 
+justificadas y transparentes.
+
+    
+\subsection{Gestor de dependencias}
+
+Para la gestión eficiente de dependencias, aislamiento de entornos y
+versionado reproducible de bibliotecas, la plataforma adoptará Poetry y
+UV como gestores complementarios \citep{poetry2024}.
+La combinación de Poetry y UV permite una gestión reproducible y
+eficiente de dependencias, alineada con las necesidades de mantenibilidad,
+escalabilidad y automatización del sistema \citep{poetry2024, uv2024}.
+
+Poetry permite mantener un control declarativo de las dependencias del
+proyecto mediante archivos \texttt{pyproject.toml}, garantizando la trazabilidad
+del \textit{stack} tecnológico y la compatibilidad de versiones. Su mecanismo de
+resolución de dependencias asegura consistencia en los entornos de desarrollo y
+producción, reduciendo incidencias asociadas a incompatibilidades entre
+bibliotecas \citep{poetry2024}. Además, Poetry facilita la generación de entornos virtuales aislados, el
+bloqueo de versiones exactas (\texttt{poetry.lock}), la publicación del
+proyecto como paquete y la automatización de scripts relacionados con el
+ciclo de vida del sistema.
+
+En conjunto con Poetry, se utilizará UV como herramienta moderna para
+instalación ultrarrápida de dependencias y creación de entornos \citep{uv2024}. UV destaca
+por su rendimiento de orden de magnitud superior a herramientas
+tradicionales, lo cual mejora tiempos de despliegue, entornos CI/CD y
+operaciones de reconstrucción.
+
+    
+\subsection{Herramienta para el control de versiones}
+        
+Los sistemas de control de versiones más populares son Git, Subversion y Mercurial. 
+Se eligió Git debido a que es un sistema de control de versiones distribuido 
+utilizado en el desarrollo de software que rastrea las modificaciones realizadas 
+en el código fuente. Git, a diferencia de los sistemas de control de versiones 
+centralizados, permite que varios desarrolladores colaboren de forma independiente 
+en un solo proyecto al permitirles mantener repositorios locales separados que se 
+sincronizan con un repositorio remoto. Los repositorios, que contienen los archivos 
+del proyecto y el historial de cambios, son esenciales para el funcionamiento de Git 
+\citep{ponuthorai2022git}. Una confirmación en un repositorio es una instantánea del 
+proyecto en ese momento específico; cada confirmación se distingue por un \textit{hash} 
+distinto y va acompañada de un mensaje de explicación. Las ramas permiten a los 
+desarrolladores trabajar de forma independiente en varias funciones o correcciones 
+\citep{loeliger2012version}.
+        
+Mientras que otras ramas se utilizan para el desarrollo, el código estable 
+generalmente se encuentra en la rama principal, también conocida como \textit{main}. 
+La reorganización y la combinación son dos formas en que los cambios de las ramas 
+se pueden combinar en la rama principal, cada una con una función distinta para 
+preservar el historial del proyecto. Se crea una copia local de un repositorio 
+clonándolo, y los cambios locales se sincronizan con un repositorio remoto mediante 
+la inserción y la extracción \citep{ghodke2024git}. El área de preparación sirve como 
+zona de influencia donde se realizan modificaciones antes de la confirmación. Los 
+submódulos, \textit{cherry-pick} y Git \textit{hooks} son ejemplos de funciones 
+avanzadas que proporcionan más personalización y control. En resumen, 
+Git permite llevar un historial exhaustivo de cambios, ramificación para
+desarrollo de nuevas características, fusiones controladas, auditoría de
+modificaciones y recuperación de estados previos del sistema.
+Los conocidos servicios de 
+alojamiento de Git, como GitHub, GitLab y Bitbucket, ofrecen plataformas para la 
+revisión de código, la gestión de repositorios y la integración de herramientas, que 
+promueven el desarrollo colaborativo. El uso de Git mejora los procesos de desarrollo 
+al facilitar el trabajo en equipo y la gestión de código efectivos 
+\citep{ponuthorai2022git}.
+        
+GitHub es una plataforma de alojamiento de código basada en la web que utiliza Git 
+como tecnología subyacente para el control de versiones. Actúa como un servicio de 
+repositorio remoto centralizado, ampliando las capacidades de Git con herramientas 
+de colaboración, gestión de proyectos y características sociales. Como una de las 
+plataformas más populares para el desarrollo de software colaborativo, GitHub permite 
+a los equipos alojar repositorios públicos y privados, facilitando la revisión de 
+código mediante \textit{pull requests}, el seguimiento de problemas con \textit{issues} 
+y la automatización de flujos de trabajo mediante GitHub Actions. Su interfaz gráfica 
+y sus herramientas de gestión hacen que las operaciones de Git, como la fusión de ramas 
+y la resolución de conflictos, sean más accesibles para los desarrolladores, al tiempo 
+que proporcionan integraciones robustas con herramientas de \ac{CI/CD} y servicios de 
+terceros. GitHub también fomenta la comunidad \textit{open-source} mediante funciones 
+como la bifurcación (\textit{forking}) de repositorios y las contribuciones externas, 
+consolidándose como un entorno integral para el ciclo de vida del desarrollo de software 
+\citep{github2024, ghodke2024git}.
+    
+    
+\subsection{Lenguaje de modelados}
+
+El lenguaje de modelado se refiera a un lenguaje formal utilizado para crear 
+modelos que representan sistemas, procesos o estructuras de datos. 
+Estos lenguajes proporcionan un conjunto de reglas sintácticas y 
+semánticas que facilitan la comprensión de fenómenos complejos de manera 
+estructurada \citep{rumbaugh2004uml}.
+        
+El lenguaje de modelado a utilizar es el Lenguaje de Modelado Unificado (\ac{UML}), 
+este lenguaje ofrece un estándar para describir un plano del sistema, 
+incluyendo aspectos conceptuales tales como procesos de negocios, funciones 
+del sistema, expresiones de lenguajes de programación, esquemas de bases de 
+datos y componentes reutilizables. Este lenguaje de modelo 
+es el seleccionado para especificar o describir métodos o procesos, definir el 
+sistema y sus artefactos para la documentación y construcción de la aplicación 
+web a desarrollar \citep{omg2017}.
+    
+
+\subsection{Herramienta CASE}
+
+Una herramienta de la ingeniería de software asistida por computadoras (CASE) 
+es un programa informático destinado a aumentar la productividad durante 
+todo el proceso de desarrollo de software reduciendo el coste de estas en 
+términos de tiempo y de dinero \citep{pressman2014se}. Según Sommerville, estas herramientas nos pueden ayudar 
+en todos los aspectos del ciclo de vida de desarrollo del software en tareas como el 
+diseño de proyectos, cálculo de costes, implementación de parte del código 
+automáticamente con el diseño dado, compilación automática, documentación o 
+detección de errores, automatizar actividades de análisis, mejorando asi la productividad
+y calidad del software. Durante el diseñó de la 
+solución se empleó la herramienta CASE: 
+Visual Paradigm en su versión 16.2 \citep{sommerville2016se}.
+
+La herramienta Visual Paradigm es reconocida mundialmente por sus soluciones 
+de software para la transformación de negocio. Propicia un conjunto de ayudas 
+para el desarrollo de programas informáticos, desde la planificación, pasando 
+por el análisis y el diseño, hasta la generación de código. Soporta los 
+principales estándares de la industria tales como el Lenguaje de Modelado 
+Unificado (\ac{UML}), la notación de Modelado de Procesos de Negocio (\ac{BPMN}) y un 
+sinfín de diagramas.  Por lo que Visual Paradigm es una herramienta \ac{CASE} 
+integral y flexible para el modelo y gestión en el desarrollo de software, 
+procesos de negocio y arquitectura empresarial \citep{visualparadigm2024}.
+
+    
+\subsection{Herramientas para diseñar y ejecutar pruebas}
+
+Para garantizar la calidad y correcto funcionamiento del sistema propuesto, se 
+emplearán herramientas especializadas tanto para pruebas de \ac{API} como para 
+pruebas unitarias del código.
+
+Postman será utilizado como plataforma de desarrollo y pruebas de \ac{API}s 
+\citep{postman2024}. Esta herramienta permite diseñar, documentar y probar endpoints 
+\ac{REST}ful de forma interactiva, facilitando la verificación de contratos de datos, 
+validación de respuestas, gestión de variables de entorno y automatización de 
+colecciones de pruebas. Postman resulta esencial para validar el comportamiento 
+del \textit{backend} FastAPI, asegurando que las operaciones de generación y validación 
+de configuraciones curriculares respondan correctamente bajo distintos escenarios 
+\citep{postman2024}.
+
+Complementariamente, se utilizará Pytest como \textit{framework} para la 
+ejecución de pruebas unitarias en Python \citep{pytest2024}. Pytest destaca por su 
+sintaxis clara, capacidad de parametrización, gestión de fixtures y generación 
+de reportes detallados, lo que facilita la escritura y mantenimiento de pruebas 
+automatizadas. Su integración con el ecosistema Python permite validar lógica de 
+negocio, algoritmos de validación, operaciones sobre modelos de características 
+y comportamiento de componentes aislados del sistema \citep{pytest2024}.
+
+La combinación de Postman para pruebas de integración a nivel de \ac{API} y pytest 
+para pruebas unitarias proporciona una cobertura completa del sistema, 
+garantizando robustez tanto en la interfaz externa como en la lógica interna.    
+        
+\subsection{Entorno Integrado de Desarrollo}
+
+Los Entornos Integrados de Desarrollo (\ac{IDE}) son las herramientas que 
+todo desarrollador debe tener a mano. Permiten editar y gestionar
+código fuente en diversos lenguajes de programación y ofrecen
+múltiples herramientas para facilitar el trabajo y aumentar la productividad, pues
+permiten depurar, resaltar sintaxis, autocompletado, integración con control de versiones
+y la refactorización. Por lo general cada \ac{IDE} está asociado a un único 
+lenguaje de programación o a un conjunto pequeño de lenguajes, cuyo factor 
+provoca que la gran mayoría de desarrolladores opten por otras alternativas, 
+ya que en proyectos donde el uso de múltiples lenguajes es evidente, 
+puede ser un obstáculo \citep{ibm_IDE}.
+
+Se escogió como entorno de desarrollo Visual Studio Code \citep{vscode2025}, cuya 
+herramienta es no convencional pero muy usada por muchos programadores, 
+siendo señalado como el editor de código más popular entre proyectos de código abierto 
+(\textit{open source}) \citep{ramel2021VSCodePopularity}.
+El creador del editor de código multiplataforma, VSCode, es Microsoft. Este software es
+gratuito y de código abierto. Incluye soporte para la depuración, control
+integrado de Git, resaltado de sintaxis, finalización inteligente de código,
+fragmentos y refactorización de código. Además, 
+su nivel de personalización permite adaptar el entorno a las preferencias de cada 
+programador mediante temas, atajos y configuraciones avanzadas \citep{vscode_docs2025}.
+
+VSCode presenta extensiones importantísimas que permite adaptar el
+entorno de desarrollo para una enorme infinidad de tareas, tecnologías y lenguajes. 
+Este conjunto, prácticamente ilimitado, es totalmente accesible
+dentro del propio editor. Tiene soporte integrado para aplicaciones web;
+por lo tanto, se puede llevar a cabo en este entorno de trabajo la
+codificación de la aplicación a desarrollar con las tecnologías FastAPI y
+Python. VSCode es considerado por brindar eficiencia y agilidad en la
+programación, pues funciona muy bien en incluso equipos con recursos
+limitados; además, los desarrolladores lo aprecian porque su interfaz de
+usuario es muy intuitiva y permite comenzar, prácticamente, a trabajar sin
+necesidad de alguna experiencia \citep{vscode2025, vscode_docs2025}.
+
+
 
 \section{Metodología de desarrollo del software}
 
@@ -1753,11 +2563,11 @@ que se deben seguir durante su desarrollo. A continuación, se describen los
 artefactos de \ac{XP}:
     
 \begin{itemize}
-	\item \textbf{\ac{HU}:}
+	\item \ac{HU}:
 	Representan una breve descripción del comportamiento del sistema. Emplea terminología del cliente sin lenguaje técnico. Se realiza una por cada característica principal del sistema. Se emplean para hacer estimaciones de tiempo y para el plan de lanzamientos. Reemplazan un gran documento de requisitos y presiden la creación de las pruebas de aceptación. Estas deben proporcionar sólo el detalle suficiente como para poder hacer razonable la estimación de cuánto tiempo requiere la implementación de la \ac{HU}, difiere de los casos de uso porque son escritos por el cliente, no por los programadores, empleando terminología del cliente \citep{pressman2014se}.
-	\item \textbf{Tareas de Ingeniería:}
+	\item Tareas de Ingeniería:
 	Una \ac{HU} se descompone en varias tareas de ingeniería, que describen las actividades que se realizarán en cada una de ellas. Así mismo, las tareas de ingeniería se vinculan más al desarrollador, ya que permite tener un acercamiento con el código \citep{pressman2014se}.
-	\item \textbf{Tarjetas \ac{CRC}:}
+	\item Tarjetas \ac{CRC}:
 	Estas tarjetas se dividen en tres secciones que contienen la información del nombre de la clase, sus responsabilidades y sus colaboradores. Una clase es cualquier persona, cosa, evento, concepto, pantalla o reporte. Las responsabilidades de una clase son las cosas que conoce y las que realiza, sus atributos y métodos. Los colaboradores son las demás clases con las que trabaja en conjunto para llevar a cabo sus responsabilidades \citep{pressman2014se}.
 \end{itemize}
     
@@ -1768,3 +2578,50 @@ y sus principios de previsibilidad y adaptabilidad hacen de esta metodología un
 opción a seguir.
     
 \section{Conclusiones del capítulo}
+
+En el desarrollo del capítulo se obtuvo una mejor visión acerca del problema planteado y se dieron cumplimiento a las primeras tareas de investigación llegando a las siguientes conclusiones:
+
+\begin{itemize}
+\item El análisis de los conceptos asociados a la solución permitió un acercamiento a los 
+temas relacionados con la \ac{SPLE}, \ac{FM} y el \ac{UVL}, 
+estableciendo una base teórica sólida que fundamenta la propuesta. La analogía formal 
+desarrollada entre estos conceptos y el dominio educativo demostró la viabilidad de aplicar 
+técnicas de variabilidad a la gestión curricular, abriendo nuevas posibilidades para la 
+flexibilización controlada de planes de estudio.
+
+\item El estudio de los sistemas homólogos relacionados con el marco de la investigación, 
+permitió identificar una brecha significativa en el mercado: mientras existen herramientas 
+maduras para la gestión administrativa académica (SIGA, Banner, Moodle) y potentes 
+\textit{frameworks} de modelado de variabilidad (pure::variants, FeatureIDE, Flamapy), 
+ninguna de ellas integra de manera natural la capacidad de modelar, validar y configurar 
+currículos educativos con un enfoque accesible para gestores académicos no especializados 
+en ingeniería de software. Esta constatación justifica la necesidad y pertinencia de la 
+solución propuesta.
+
+\item Se seleccionaron como herramientas y tecnologías principales Python como lenguaje de 
+programación, FastAPI como \text{framework} \textit{backend}, PostgreSQL como gestor de base 
+de datos, Redis para \textit{caching} y mensajería, Celery para procesamiento asíncrono, MinIO para 
+almacenamiento de objetos, y un conjunto de bibliotecas especializadas como PySAT, Z3, 
+SymPy y NetworkX para el análisis y validación de \ac{FM}s. Esta selección 
+tecnológica, respaldada por un análisis comparativo riguroso, define las bases para el 
+diseño e implementación satisfactoria de la aplicación a desarrollar, garantizando 
+rendimiento, escalabilidad, mantenibilidad y alineación con los requisitos funcionales del 
+sistema.
+
+\item El proyecto tiene las características de tener un tiempo de desarrollo corto y la 
+necesidad de realizar entregas constantes en ciclos cortos, por lo que es necesario el uso 
+de una metodología ágil. Luego de este análisis comparativo entre metodologías tradicionales 
+y ágiles, se decide utilizar la metodología \ac{XP}, permitiendo esto 
+cierta flexibilidad a lo largo del desarrollo de la aplicación, una interacción constante 
+con el usuario, la incorporación de cambios durante el proceso, y la garantía de calidad 
+mediante prácticas como programación en parejas, desarrollo dirigido por pruebas e 
+integración continua.
+
+\item La fundamentación teórica desarrollada en este capítulo constituye el armazón 
+conceptual sobre el cual se erigirá la propuesta de solución. Los conceptos de variabilidad, 
+modelos de características, restricciones \textit{cross-tree} y análisis automatizado, junto 
+con la notación \ac{UVL}, proporcionan el lenguaje formal necesario para representar currículos 
+educativos como entidades configurables, sentando las bases para un sistema capaz de 
+gestionar la complejidad inherente a la flexibilidad curricular de manera sistemática, 
+verificable y escalable.
+\end{itemize}
