@@ -42,25 +42,25 @@
 \contentsline {subsection}{\numberline {1.4.13}Herramientas para diseñar y ejecutar pruebas}{44}{subsection.1.4.13}%
 \contentsline {subsection}{\numberline {1.4.14}Entorno Integrado de Desarrollo}{44}{subsection.1.4.14}%
 \contentsline {section}{\numberline {1.5}Metodología de desarrollo del software}{45}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Metodologías de desarrollo de software tradicionales}{46}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.1}Metodologías de desarrollo de software tradicionales}{45}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}Metodologías de desarrollo de software ágiles}{46}{subsection.1.5.2}%
 \contentsline {subsection}{\numberline {1.5.3}Elección de la metodología}{47}{subsection.1.5.3}%
 \contentsline {subsection}{\numberline {1.5.4}Programación Extrema}{49}{subsection.1.5.4}%
 \contentsline {subsubsection}{Artefactos}{50}{section*.30}%
 \contentsline {section}{\numberline {1.6}Conclusiones del capítulo}{51}{section.1.6}%
-\contentsline {chapter}{\numberline {2}Propuesta de solución}{53}{chapter.2}%
-\contentsline {subsubsection}{Posicionamiento de la presente investigación}{53}{section*.31}%
-\contentsline {section}{\numberline {2.1}Sección de prueba}{53}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Ejemplos de código fuente}{54}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Ejemplo de tabla grande}{60}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Tabla aleatoria}{60}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Tablas de ingeniería}{61}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Resultados}{66}{chapter.4}%
-\contentsline {chapter}{Conclusiones}{68}{chapter*.33}%
-\contentsline {chapter}{Recomendaciones}{69}{chapter*.35}%
-\contentsline {chapter}{Glossary}{70}{section*.36}%
-\contentsline {chapter}{Acrónimos}{71}{section*.38}%
-\contentsline {chapter}{Referencias bibliográficas}{73}{chapter*.40}%
+\contentsline {chapter}{\numberline {2}Propuesta de solución}{52}{chapter.2}%
+\contentsline {subsubsection}{Posicionamiento de la presente investigación}{52}{section*.31}%
+\contentsline {section}{\numberline {2.1}Sección de prueba}{52}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Ejemplos de código fuente}{53}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Ejemplo de tabla grande}{59}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tabla aleatoria}{59}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Tablas de ingeniería}{60}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Resultados}{65}{chapter.4}%
+\contentsline {chapter}{Conclusiones}{67}{chapter*.33}%
+\contentsline {chapter}{Recomendaciones}{68}{chapter*.35}%
+\contentsline {chapter}{Glossary}{69}{section*.36}%
+\contentsline {chapter}{Acrónimos}{70}{section*.38}%
+\contentsline {chapter}{Referencias bibliográficas}{72}{chapter*.40}%
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
@@ -217,8 +217,8 @@
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Apéndices}{79}{section*.41}%
-\contentsline {chapter}{\numberline {A}Proyectos y Avales}{80}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Otro reporte}{81}{appendix.Alph2}%
-\contentsline {section}{\numberline {B.1}Otra sección de muestra}{81}{section.Alph2.1}%
-\contentsline {section}{\numberline {B.2}Otro ensamble Industrial}{81}{section.Alph2.2}%
+\contentsline {chapter}{Apéndices}{78}{section*.41}%
+\contentsline {chapter}{\numberline {A}Proyectos y Avales}{79}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Otro reporte}{80}{appendix.Alph2}%
+\contentsline {section}{\numberline {B.1}Otra sección de muestra}{80}{section.Alph2.1}%
+\contentsline {section}{\numberline {B.2}Otro ensamble Industrial}{80}{section.Alph2.2}%

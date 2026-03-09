@@ -624,7 +624,7 @@ constraints
 
 \subsection{Configuraciones y configurador curricular}
 
-En el contexto de las Líneas de Productos de Software (\ac{SPL}), la configuración
+En el contexto de las \ac{SPL}, la configuración
 se refiere al proceso sistemático de seleccionar un conjunto específico de
 características de un \ac{FM} para derivar un producto
 individual que satisfaga requisitos particulares \citep{apel2013feature}. Este proceso
@@ -717,7 +717,7 @@ Investigaciones pioneras en este campo han demostrado la viabilidad y los benefi
 este enfoque:
 
 \begin{itemize}
-    \item \citet{okada2009methodology} propusieron una metodología para mejorar la reutilización de materiales educativos mediante ingeniería de líneas de productos. Su trabajo demostró que la separación de partes comunes y variables en los materiales docentes permite generar variantes adaptadas a diferentes escenarios de uso, resolviendo los problemas de consistencia que surgen cuando los educadores gestionan múltiples variantes de forma artesanal.
+    \item \citet{okada2009methodology} propusieron una metodología para mejorar la reutilización de materiales educativos mediante \ac{SPLE}. Su trabajo demostró que la separación de partes comunes y variables en los materiales docentes permite generar variantes adaptadas a diferentes escenarios de uso, resolviendo los problemas de consistencia que surgen cuando los educadores gestionan múltiples variantes de forma artesanal.
     
     \item \citet{chimalakonda2012accelerating} exploraron la aplicación de \ac{SPL} en tecnologías educativas para abordar la diversidad lingüística y contextual de la India. Su investigación evidenció que el desarrollo de soluciones educativas para 22 idiomas y múltiples contextos socioculturales puede beneficiarse enormemente de un enfoque sistemático de reutilización, reduciendo el esfuerzo de desarrollo de años-persona a procesos de configuración guiados.
     
@@ -758,7 +758,7 @@ curricular que traduce los principales conceptos de la \ac{SPLE} al dominio educ
 demostrando mediante un ejemplo (\ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2}) 
 concreto —como el modelado de la asignatura Estructura de Datos I— 
 cómo los \ac{FM}s pueden capturar la variabilidad intrínseca de los planes de estudio. 
-Posteriormente, se sintetizan los beneficios de las Líneas de Productos Educativos, 
+Posteriormente, se sintetizan los beneficios de las \ac{SPL}, 
 destacando las ventajas que este enfoque aporta a la gestión curricular en términos de 
 reutilización, consistencia, trazabilidad y exploración del espacio de configuraciones.
  
@@ -1254,7 +1254,7 @@ El presente epígrafe desarrolla un análisis sistemático del mercado
 relacionado con los sistemas de gestión curricular y herramientas
 de modelado de variabilidad. Se examinan tanto las soluciones tradicionales 
 empleadas por instituciones académicas como aquellas provenientes del 
-ámbito de la ingeniería de líneas de productos, identificando
+ámbito de la \ac{SPLE}, identificando
 sus fortalezas, limitaciones y brechas funcionales. A partir de esta revisión, 
 se fundamenta la oportunidad tecnológica que sustenta la propuesta 
 investigativa, destacando el vacío existente entre las plataformas
@@ -1281,8 +1281,7 @@ opuestos dentro del dominio investigado. Por un lado, se examinan los sistemas
 institucionales de gestión curricular tradicional, ampliamente implementados 
 en universidades, cuyo propósito principal es administrar información académica 
 pero que presentan limitaciones para modelar y validar variabilidad curricular. 
-Por otro lado, se estudian herramientas avanzadas de ingeniería de 
-líneas de productos de software (\ac{SPL}), diseñadas para gestionar características y 
+Por otro lado, se estudian herramientas avanzadas de \ac{SPLE}, diseñadas para gestionar características y 
 restricciones complejas, pero que requieren conocimientos técnicos elevados y 
 carecen de adaptación al contexto educativo. Esta comparación permite identificar 
 brechas tecnológicas y conceptuales que fundamentan la necesidad de una solución 
@@ -1379,7 +1378,7 @@ propias de la planificación curricular.
         configuraciones, etc.) sin necesidad de instalar software local. Esta interfaz 
         gráfica reduce significativamente la barrera de entrada para usuarios no técnicos.
         
-        \item \ac{API} REST: Flamapy proporciona una \ac{API} RESTful que expone sus 
+        \item \ac{API} de \ac{REST}: Flamapy proporciona una \ac{API} RESTful que expone sus 
         capacidades de análisis como servicios web, permitiendo que otras aplicaciones 
         (como el \textit{backend} propuesto en esta investigación) integren funcionalidades avanzadas 
         de validación y configuración de modelos de características mediante llamadas de \ac{HTTP} 
@@ -1426,7 +1425,7 @@ es múltiple:
 
 \begin{itemize}
     \item Su naturaleza como \textit{framework} Python facilita la integración con la propuesta solución, permitiendo reutilizar sus capacidades de análisis en lugar de implementarlas desde cero.
-    \item La existencia de una \ac{API} REST validada y documentada proporciona un referente arquitectónico para el diseño del servicio.
+    \item La existencia de una \ac{API} \ac{REST} validada y documentada proporciona un referente arquitectónico para el diseño del servicio.
     \item Su enfoque en accesibilidad (interfaz web, \ac{API}) lo alinea con la necesidad de acercar las técnicas de \ac{SPL} a gestores académicos no especializados.
     \item El equipo de desarrollo (Diverso Lab) es el mismo que lidera el estándar \ac{UVL}, garantizando coherencia con las notaciones adoptadas en esta investigación.
 \end{itemize}
@@ -2056,7 +2055,7 @@ extracción de explicaciones (UNSAT cores), funcionalidad útil para
 asistir al usuario en la corrección de configuraciones inválidas.
 
 Los solucionadores \ac{SAT}-based han demostrado ser una técnica 
-altamente efectiva en Ingeniería de Líneas de Productos (SPL) para la 
+altamente efectiva en \ac{SPL} para la 
 verificación automática de configuraciones \citep{benavides2010automated}. Su 
 aplicación consiste en reducir el \ac{FM} a una 
 fórmula booleana y comprobar su satisfacibilidad mediante algoritmos 
@@ -2069,7 +2068,7 @@ aportando rigor matemático y soporte computacional sólido para la
 variabilidad curricular.
 
 Mientras los solucionadores \ac{SAT} determinan si una configuración es 
-válida o no, el uso de técnicas Max-SAT permite optimizar 
+válida o no, el uso de técnicas Max-\ac{SAT} permite optimizar 
 soluciones, seleccionar variantes preferidas y resolver conflictos 
 minimizando el número de violaciones. El solucionador Z3, desarrollado 
 por Microsoft Research, soporta Max-SAT, \ac{SMT} y razonamiento híbrido, lo que lo 
@@ -2078,7 +2077,7 @@ convierte en una herramienta idónea para el análisis curricular
 sino sugerir alternativas cercanas a las decisiones originales del 
 usuario, resolver conflictos automáticamente y explorar escenarios de 
 “mejor esfuerzo” cuando no existe una solución exacta. En términos 
-prácticos, Max-SAT habilita un sistema inteligente que auxilia al 
+prácticos, Max-\ac{SAT} habilita un sistema inteligente que auxilia al 
 gestor curricular en decisiones complejas, proporcionando soluciones 
 justificadas y transparentes.
 
@@ -2099,13 +2098,13 @@ resolución de dependencias asegura consistencia en los entornos de desarrollo y
 producción, reduciendo incidencias asociadas a incompatibilidades entre
 bibliotecas \citep{poetry2024}. Además, Poetry facilita la generación de entornos virtuales aislados, el
 bloqueo de versiones exactas (\texttt{poetry.lock}), la publicación del
-proyecto como paquete y la automatización de scripts relacionados con el
+proyecto como paquete y la automatización de \textit{scripts} relacionados con el
 ciclo de vida del sistema.
 
 En conjunto con Poetry, se utilizará UV como herramienta moderna para
 instalación ultrarrápida de dependencias y creación de entornos \citep{uv2024}. UV destaca
 por su rendimiento de orden de magnitud superior a herramientas
-tradicionales, lo cual mejora tiempos de despliegue, entornos CI/CD y
+tradicionales, lo cual mejora tiempos de despliegue, entornos \ac{CI/CD} y
 operaciones de reconstrucción.
 
     
@@ -2126,14 +2125,14 @@ desarrolladores trabajar de forma independiente en varias funciones o correccion
 \citep{loeliger2012version}.
         
 Mientras que otras ramas se utilizan para el desarrollo, el código estable 
-generalmente se encuentra en la rama principal, también conocida como \textit{main}. 
+generalmente se encuentra en la rama principal, también conocida como \texttt{main}. 
 La reorganización y la combinación son dos formas en que los cambios de las ramas 
 se pueden combinar en la rama principal, cada una con una función distinta para 
 preservar el historial del proyecto. Se crea una copia local de un repositorio 
 clonándolo, y los cambios locales se sincronizan con un repositorio remoto mediante 
 la inserción y la extracción \citep{ghodke2024git}. El área de preparación sirve como 
 zona de influencia donde se realizan modificaciones antes de la confirmación. Los 
-submódulos, \textit{cherry-pick} y Git \textit{hooks} son ejemplos de funciones 
+submódulos, \texttt{cherry-pick} y \texttt{Git hooks} son ejemplos de funciones 
 avanzadas que proporcionan más personalización y control. En resumen, 
 Git permite llevar un historial exhaustivo de cambios, ramificación para
 desarrollo de nuevas características, fusiones controladas, auditoría de
@@ -2170,7 +2169,7 @@ Estos lenguajes proporcionan un conjunto de reglas sintácticas y
 semánticas que facilitan la comprensión de fenómenos complejos de manera 
 estructurada \citep{rumbaugh2004uml}.
         
-El lenguaje de modelado a utilizar es el Lenguaje de Modelado Unificado (\ac{UML}), 
+El lenguaje de modelado a utilizar es el \ac{UML}, 
 este lenguaje ofrece un estándar para describir un plano del sistema, 
 incluyendo aspectos conceptuales tales como procesos de negocios, funciones 
 del sistema, expresiones de lenguajes de programación, esquemas de bases de 
@@ -2182,24 +2181,23 @@ web a desarrollar \citep{omg2017}.
 
 \subsection{Herramienta CASE}
 
-Una herramienta de la ingeniería de software asistida por computadoras (CASE) 
+Una herramienta de \ac{CASE} 
 es un programa informático destinado a aumentar la productividad durante 
-todo el proceso de desarrollo de software reduciendo el coste de estas en 
+todo el proceso de desarrollo de software reduciendo el coste de este en 
 términos de tiempo y de dinero \citep{pressman2014se}. Según Sommerville, estas herramientas nos pueden ayudar 
 en todos los aspectos del ciclo de vida de desarrollo del software en tareas como el 
 diseño de proyectos, cálculo de costes, implementación de parte del código 
 automáticamente con el diseño dado, compilación automática, documentación o 
 detección de errores, automatizar actividades de análisis, mejorando asi la productividad
-y calidad del software. Durante el diseñó de la 
-solución se empleó la herramienta CASE: 
+y calidad del software. Para el diseño de la 
+solución se empleará la herramienta \ac{CASE} 
 Visual Paradigm en su versión 16.2 \citep{sommerville2016se}.
 
 La herramienta Visual Paradigm es reconocida mundialmente por sus soluciones 
 de software para la transformación de negocio. Propicia un conjunto de ayudas 
 para el desarrollo de programas informáticos, desde la planificación, pasando 
 por el análisis y el diseño, hasta la generación de código. Soporta los 
-principales estándares de la industria tales como el Lenguaje de Modelado 
-Unificado (\ac{UML}), la notación de Modelado de Procesos de Negocio (\ac{BPMN}) y un 
+principales estándares de la industria tales como el \ac{UML}, la notación \ac{BPMN} y un 
 sinfín de diagramas.  Por lo que Visual Paradigm es una herramienta \ac{CASE} 
 integral y flexible para el modelo y gestión en el desarrollo de software, 
 procesos de negocio y arquitectura empresarial \citep{visualparadigm2024}.
@@ -2212,8 +2210,8 @@ emplearán herramientas especializadas tanto para pruebas de \ac{API} como para
 pruebas unitarias del código.
 
 Postman será utilizado como plataforma de desarrollo y pruebas de \ac{API}s 
-\citep{postman2024}. Esta herramienta permite diseñar, documentar y probar endpoints 
-\ac{REST}ful de forma interactiva, facilitando la verificación de contratos de datos, 
+\citep{postman2024}. Esta herramienta permite diseñar, documentar y probar \textit{endpoints} 
+RESTful de forma interactiva, facilitando la verificación de contratos de datos, 
 validación de respuestas, gestión de variables de entorno y automatización de 
 colecciones de pruebas. Postman resulta esencial para validar el comportamiento 
 del \textit{backend} FastAPI, asegurando que las operaciones de generación y validación 
@@ -2222,19 +2220,19 @@ de configuraciones curriculares respondan correctamente bajo distintos escenario
 
 Complementariamente, se utilizará Pytest como \textit{framework} para la 
 ejecución de pruebas unitarias en Python \citep{pytest2024}. Pytest destaca por su 
-sintaxis clara, capacidad de parametrización, gestión de fixtures y generación 
+sintaxis clara, capacidad de parametrización, gestión de \textit{fixtures} y generación 
 de reportes detallados, lo que facilita la escritura y mantenimiento de pruebas 
 automatizadas. Su integración con el ecosistema Python permite validar lógica de 
 negocio, algoritmos de validación, operaciones sobre modelos de características 
 y comportamiento de componentes aislados del sistema \citep{pytest2024}.
 
-La combinación de Postman para pruebas de integración a nivel de \ac{API} y pytest 
+La combinación de Postman para pruebas de integración a nivel de \ac{API} y Pytest 
 para pruebas unitarias proporciona una cobertura completa del sistema, 
 garantizando robustez tanto en la interfaz externa como en la lógica interna.    
         
 \subsection{Entorno Integrado de Desarrollo}
 
-Los Entornos Integrados de Desarrollo (\ac{IDE}) son las herramientas que 
+Los \ac{IDE} son las herramientas que 
 todo desarrollador debe tener a mano. Permiten editar y gestionar
 código fuente en diversos lenguajes de programación y ofrecen
 múltiples herramientas para facilitar el trabajo y aumentar la productividad, pues
@@ -2598,30 +2596,17 @@ currículos educativos con un enfoque accesible para gestores académicos no esp
 en ingeniería de software. Esta constatación justifica la necesidad y pertinencia de la 
 solución propuesta.
 
-\item Se seleccionaron como herramientas y tecnologías principales Python como lenguaje de 
-programación, FastAPI como \text{framework} \textit{backend}, PostgreSQL como gestor de base 
-de datos, Redis para \textit{caching} y mensajería, Celery para procesamiento asíncrono, MinIO para 
-almacenamiento de objetos, y un conjunto de bibliotecas especializadas como PySAT, Z3, 
-SymPy y NetworkX para el análisis y validación de \ac{FM}s. Esta selección 
-tecnológica, respaldada por un análisis comparativo riguroso, define las bases para el 
-diseño e implementación satisfactoria de la aplicación a desarrollar, garantizando 
-rendimiento, escalabilidad, mantenibilidad y alineación con los requisitos funcionales del 
+\item La selección tecnológica resultante, respaldada por un análisis comparativo riguroso, 
+define las bases para el diseño e implementación satisfactoria de la aplicación a desarrollar, 
+garantizando rendimiento, escalabilidad, mantenibilidad y alineación con los requisitos funcionales del 
 sistema.
 
 \item El proyecto tiene las características de tener un tiempo de desarrollo corto y la 
 necesidad de realizar entregas constantes en ciclos cortos, por lo que es necesario el uso 
-de una metodología ágil. Luego de este análisis comparativo entre metodologías tradicionales 
+de una metodología ágil. Luego de un análisis comparativo entre metodologías tradicionales 
 y ágiles, se decide utilizar la metodología \ac{XP}, permitiendo esto 
 cierta flexibilidad a lo largo del desarrollo de la aplicación, una interacción constante 
 con el usuario, la incorporación de cambios durante el proceso, y la garantía de calidad 
 mediante prácticas como programación en parejas, desarrollo dirigido por pruebas e 
 integración continua.
-
-\item La fundamentación teórica desarrollada en este capítulo constituye el armazón 
-conceptual sobre el cual se erigirá la propuesta de solución. Los conceptos de variabilidad, 
-modelos de características, restricciones \textit{cross-tree} y análisis automatizado, junto 
-con la notación \ac{UVL}, proporcionan el lenguaje formal necesario para representar currículos 
-educativos como entidades configurables, sentando las bases para un sistema capaz de 
-gestionar la complejidad inherente a la flexibilidad curricular de manera sistemática, 
-verificable y escalable.
-\end{itemize}
+\end{itemize}P
