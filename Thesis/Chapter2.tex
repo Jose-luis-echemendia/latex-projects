@@ -1,16 +1,60 @@
- \chapter{Propuesta de solución}
+\chapter{Análisis y diseño de la propuesta de solución}
 \label{chap:chapter2}
 
-\subsubsection{Posicionamiento de la presente investigación}
+El presente capítulo constituye el núcleo de la fase de análisis y diseño de la investigación, traduciendo
+los fundamentos teóricos establecidos en el capítulo anterior en una propuesta técnica concreta y viable.
+Partiendo del diagnóstico de la problemática y del estudio de sistemas homólogos, se procede a definir de
+manera formal y estructurada la solución de software que dará respuesta al objetivo general de la investigación.
 
-La presente investigación se inscribe precisamente en este punto de intersección: 
-se propone desarrollar un servicio backend que, basado en los principios de \ac{SPL} y 
-utilizando \ac{UVL} como lenguaje de modelado, permita a los gestores académicos 
-representar y gestionar la variabilidad curricular de forma sistemática. Este servicio 
-constituye la base computacional sobre la cual podrán construirse, en trabajos 
-futuros, configuradores curriculares intuitivos que acerquen estas potentes técnicas 
-a la comunidad educativa, democratizando así el acceso a los beneficios de la 
-ingeniería de líneas de productos en el dominio de la educación superior.
+El capítulo se inicia con la propuesta de solución, que describe a alto nivel el sistema a desarrollar. 
+A continuación, se realiza un levantamiento detallado de requisitos, clasificados en funcionales y no
+funcionales, para precisar el comportamiento y las cualidades del sistema. Estas especificaciones se refinan
+a través de \ac{HU}, las cuales, junto con su estimación de esfuerzo, sirven de base para el desarrollo del plan de
+iteraciones que guiará la implementación. Posteriormente, el diseño orientado a objetos se plasma mediante
+tarjetas \ac{CRC}, sentando las bases para la definición de la arquitectura de software basada en el patrón 
+\textbf{ARQUITECTURA}. Finalmente, se especifican los \ac{GRASP} y los patrones de diseño \ac{GoF},  
+que se aplicarán para resolver problemas comunes en el desarrollo de software y otros ámbitos referentes 
+al diseño.
+
+\section{Descripcion de la propuesta de solución}
+
+En función de dar cumplimiento al objetivo planteado y ajustándose a las necesidades presentes,
+se propone desarrollar un servicio \textit{backend} que, basado en los principios de \ac{SPLE}
+y la técnica de modelado \ac{FM}, permita a los profesionales de la educación representar y 
+gestionar la variabilidad curricular de forma sistemática utilizando \ac{UVL} como lenguaje de 
+modelado u operando directamente sobre la representación gráfica. Esta solución permitirá representar 
+formalmente planes de estudio, definir variabilidad entre módulos, establecer dependencias,
+restricciones y rutas formativas alternativas, así como derivar configuraciones 
+válidas que representen itinerarios personalizados. En esencia,
+el sistema habilita una ingeniería curricular basada en la lógica \ac{SPLE},
+donde los planes de estudio se conciben como familias de productos y
+cada configuración curricular corresponde a un producto derivado.
+
+El servicio abordará todas las fases necesarias para este proceso: 
+diseño del modelo curricular (equivalente al análisis de dominio),
+definición de restricciones y cardinalidades (gestión de variabilidad), validación 
+automatizada de configuraciones (ensamblaje de productos) y
+versionamiento del modelo (gestión de activos). Para ello se implementará 
+un motor central que permita representar jerarquías de características, 
+aplicar reglas transversales, procesar requerimientos, exclusiones
+e implicaciones, y generar configuraciones consistentes, detectando violaciones 
+y proponiendo alternativas.
+
+El sistema incorporará funcionalidades que responden directamente
+a los retos del dominio educativo: evitar inconsistencias curriculares, detectar 
+prerrequisitos no satisfechos, prevenir combinaciones inviables,
+explorar rutas posibles, permitir adaptaciones por niveles, perfiles o competencias 
+y almacenar \textit{snapshots} versionados que faciliten la evolución
+del plan de estudios sin invalidar configuraciones previas. Este enfoque
+no se limita a documentar un currículo, sino que lo convierte en un modelo 
+computable y verificable, habilitando su reutilización y variación controlada.
+
+
+
+
+% ======================================
+% 		--- PLANTILLA ---
+% ======================================
 
 \section{Sección de prueba}
 Escribir aquí el capítulo 2. Prueba de glosario  \gls{Engine}. A continuación un ejemplo de enlace al anexo \hyperlink{bloque.1}{Bloque Corona}. Este es un ejemplo de matriz con bordes numerados \citep{Mathew2010}.
