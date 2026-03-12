@@ -1,5 +1,5 @@
-\contentsline {lstlisting}{\numberline {1.1}{\ignorespaces Ejemplo de modelo de variabilidad en \ac {UVL}}}{15}{lstlisting.1.1}%
-\contentsline {lstlisting}{\numberline {1.2}{\ignorespaces Ejemplo de modelo de variabilidad en \ac {UVL}}}{21}{lstlisting.1.2}%
+\contentsline {lstlisting}{\numberline {1.1}{\ignorespaces {Ejemplo de modelo de variabilidad en \ac {UVL}}.}}{15}{lstlisting.1.1}%
+\contentsline {lstlisting}{\numberline {1.2}{\ignorespaces Ejemplo de modelo de variabilidad en \ac {UVL} para la asignatura Estructura de Datos I.}}{21}{lstlisting.1.2}%
 \contentsline {lstlisting}{\numberline {2.1}{\ignorespaces Búsqueda de máximo}}{54}{lstlisting.2.1}%
 \contentsline {lstlisting}{\numberline {2.2}{\ignorespaces Ejemplo de código en Java}}{55}{lstlisting.2.2}%
 \contentsline {lstlisting}{\numberline {2.3}{\ignorespaces Ejemplo de código en PHP}}{55}{lstlisting.2.3}%

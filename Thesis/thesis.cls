@@ -1125,7 +1125,7 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \multicolumn{2}{|l|}{\colorentry{\textbf{Historia de usuario}}}
 \endfirsthead
 
-\caption[]{Continuación de la página anterior}
+\caption[]{Continuación de la página anterior.}
 \endhead
 
 \multicolumn{2}{r}{{Continúa en la próxima página}} \\
@@ -1191,7 +1191,7 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \multicolumn{2}{|c|}{\colorentry{\textbf{Tarjeta CRC}}}
 \endfirsthead
 
-\caption[]{Continuación de la página anterior}
+\caption[]{Continuación de la página anterior.}
 \endhead
 
 \multicolumn{2}{r}{{Continúa en la próxima página}} \\
@@ -1233,7 +1233,7 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \colorentry{\textbf{Iteración}} & \multicolumn{2}{c|}{\colorentry{\textbf{Historias de usuario}}}&  \multicolumn{1}{c|}{\colorentry{\textbf{Puntos estimados (semanas)}}} % & \colorentry{\textbf{Puntos reales}}
 \endfirsthead
 
-\caption[]{Continuación de la página anterior}
+\caption[]{Continuación de la página anterior.}
 \endhead
 
 \cline{1-4}
@@ -1362,7 +1362,7 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \colorentry{\textbf{Iteración}} & \multicolumn{2}{c|}{\colorentry{\textbf{Historias de usuario}}}&  \multicolumn{1}{c|}{\colorentry{\textbf{Duración (semanas)}}}
 \endfirsthead
 
-\caption[]{Continuación de la página anterior}
+\caption[]{Continuación de la página anterior.}
 \endhead
 
 \cline{1-4}
@@ -1523,7 +1523,7 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \multicolumn{2}{|l|}{\colorentry{\textbf{Tarea}}}
 \endfirsthead
 
-\caption[]{Continuación de la página anterior}
+\caption[]{Continuación de la página anterior.}
 \endhead
 
 \multicolumn{2}{r}{{Continúa en la próxima página}} \\ \hhline{*{2}{-}}
@@ -1624,7 +1624,7 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \multicolumn{2}{|l|}{\colorentry{\textbf{Caso de prueba de aceptación}}}
 \endfirsthead
 
-\caption[]{Continuación de la página anterior}
+\caption[]{Continuación de la página anterior.}
 \endhead
 
 \multicolumn{2}{r}{{Continúa en la próxima página}} \\
