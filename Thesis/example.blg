@@ -1,0 +1,18 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'example.blg'
+[86] biber:340> INFO - === jue abr  9, 2026, 17:53:31
+[107] Biber.pm:419> INFO - Reading 'example.bcf'
+[205] Biber.pm:979> INFO - Found 93 citekeys in bib section 0
+[221] Biber.pm:4419> INFO - Processing section 0
+[230] Biber.pm:4610> INFO - Looking for bibtex file 'example.bib' for section 0
+[233] bibtex.pm:1713> INFO - LaTeX decoding ...
+[325] bibtex.pm:1519> INFO - Found BibTeX data source 'example.bib'
+[869] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[869] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[869] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'es_ES'
+[933] bbl.pm:660> INFO - Writing 'example.bbl' with encoding 'UTF-8'
+[953] bbl.pm:763> INFO - Output to example.bbl
+[956] Biber.pm:131> WARN - Duplicate entry key: 'visualparadigm2024' in file 'example.bib', skipping ...
+[956] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_bv3u/0a7c5e67b4d952eac587450a692dc29d_162550.utf8, line 7, warning: 117 characters of junk seen at toplevel
+[956] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_bv3u/0a7c5e67b4d952eac587450a692dc29d_162550.utf8, line 1091, warning: 157 characters of junk seen at toplevel
+[956] Biber.pm:133> INFO - WARNINGS: 3

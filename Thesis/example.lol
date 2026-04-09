@@ -1,4 +1,4 @@
-\contentsline {lstlisting}{\numberline {1.1}{\ignorespaces {Ejemplo de modelo de variabilidad en \ac {UVL}}.}}{15}{lstlisting.1.1}%
+\contentsline {lstlisting}{\numberline {1.1}{\ignorespaces {Ejemplo de modelo de variabilidad en \ac {UVL}}. Fuente \blx@tocontentsinit {0}\cite {universalvariabilitylanguage}.}}{15}{lstlisting.1.1}%
 \contentsline {lstlisting}{\numberline {1.2}{\ignorespaces Ejemplo de modelo de variabilidad en \ac {UVL} para la asignatura Estructura de Datos I.}}{21}{lstlisting.1.2}%
 \contentsline {lstlisting}{\numberline {2.1}{\ignorespaces Búsqueda de máximo}}{56}{lstlisting.2.1}%
 \contentsline {lstlisting}{\numberline {2.2}{\ignorespaces Ejemplo de código en Java}}{56}{lstlisting.2.2}%
