@@ -12,7 +12,7 @@ funcionales, para precisar el comportamiento y las cualidades del sistema. Estas
 a través de \ac{HU}, las cuales, junto con su estimación de esfuerzo, sirven de base para el desarrollo del plan de
 iteraciones que guiará la implementación. Posteriormente, el diseño orientado a objetos se plasma mediante
 tarjetas \ac{CRC}, sentando las bases para la definición de la arquitectura de software basada en el patrón 
-\textbf{ARQUITECTURA}. Finalmente, se especifican los \ac{GRASP} y los patrones de diseño \ac{GoF},  
+arquitectónico por capas. Finalmente, se especifican los \ac{GRASP} y los patrones de diseño \ac{GoF},  
 que se aplicarán para resolver problemas comunes en el desarrollo de software y otros ámbitos referentes 
 al diseño.
 
@@ -49,8 +49,80 @@ del plan de estudios sin invalidar configuraciones previas. Este enfoque
 no se limita a documentar un currículo, sino que lo convierte en un modelo 
 computable y verificable, habilitando su reutilización y variación controlada.
 
+\textbf{ROLES}
+
+\subsection{Componentes funcionales y esenciales del sistema}
+
+Dentro de la arquitectura general del sistema existe una separación funcional de 
+siete componentes fundamentales que encapsulan en requisitos de alto nivel las funcionalidades
+principales del sistema. Cada uno respaldado por estrategias tecnológicas y buenas prácticas del desarrollo de software
+que optimizan su ejecución y conexión entre los mismos. 
+
+\begin{itemize}
+	\item Constructor de \ac{FM}:
+    \item Validador Lógico:
+    \item Generador de Configuraciones
+    \item Analizador de Estructura
+    \item Gestor de Versionado de \ac{FM}
+    \item Interfaz con el SISTEMA AQUEL QUE VI
+    \item UVL lenguaje
+\end{itemize}
 
 
+\section{levantamiento de requisitos}
+
+El levantamiento de requisitos constituye una fase crítica dentro del ciclo de vida del desarrollo de
+software, al permitir identificar de forma estructurada las necesidades, restricciones y expectativas de los
+usuarios en relación con el sistema a construir. Esta etapa no solo define el alcance funcional del producto,
+sino que también condiciona su calidad, adaptabilidad y éxito posterior. \citep{pressman2014se}
+
+\subsection{Requisitos funcionales}
+
+Los \ac{RF} son especificaciones detalladas que describen las funciones y compor-
+tamientos que un sistema, software o producto debe realizar para satisfacer las necesidades y expectativas
+de los usuarios. Su principal función es definir qué debe hacer el sistema para cumplir con los objetivos del
+negocio y las demandas del usuario, estableciendo claramente las tareas, procesos y respuestas que el 
+sistema debe ejecutar ante diferentes situaciones. Estos requisitos son esenciales para asegurar que el sistema
+cumpla su propósito y funcione de acuerdo a los objetivos especificados del proyecto. (Maciaszek y Liong,
+2005)
+
+A continuación, se definen los \ac{RF} \ref{tab:rf} que debe cumplir la aplicación propuesta para dar
+solución a la problemática planteada:
+
+\begin{longtable}{|p{0.8cm}|p{4cm}|p{5.2cm}|p{2cm}|p{2cm}|}
+    \caption{Requisitos funcionales del sistema. Fuente: Elaboración propia. \label{tab:rf}}\\
+    \hline
+    \rowcolor[HTML]{CBCEFB} 
+    No. & Nombre & Descripción & Prioridad & Complejidad \\
+    \hline
+    \endfirsthead
+                    
+    \multicolumn{3}{c}
+    {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+                    
+    \hline
+    \rowcolor[HTML]{CBCEFB} 
+	No. & Nombre & Descripción & Prioridad & Complejidad \\
+    \hline
+    \endhead
+                    
+    \hline
+    \multicolumn{3}{|r|}{{Continúa en la siguiente página}} \\
+    \endfoot
+                    
+    \hline
+    \endlastfoot
+                    
+    % Cuerpo de la tabla
+    \ac{RF}\#1 & Autenticar usuario & Permite acceder al sistema introduciendo los siguientes datos: & Alta & Baja \\ 
+    \hline
+    \rowcolor[HTML]{EDEBF1}
+    \ac{RF}\#2 & Cerrar sesión & Permite cerrar la sesión de un usuario anteriormente autenticado & Baja & Baja \\  
+    \hline
+    \ac{RF}\#3 & Registrar usuario & Permite registrar un usuario en el sistema con los siguientes datos: & Alta & Baja \\ 
+    \hline
+    
+\end{longtable}
 
 % ======================================
 % 		--- PLANTILLA ---

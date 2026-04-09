@@ -620,6 +620,43 @@
       \field{year}{2024}
       \field{urldateera}{ce}
     \endentry
+    \entry{z3_2008}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6f56e279fa3378e39f74c27d62149c2c}{%
+           family={De\bibnamedelima Moura},
+           familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Leonardo},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99b7b42f13980bae3d14cd2bbc329658}{%
+           family={Bj{ø}rner},
+           familyi={B\bibinitperiod},
+           given={Nikolaj},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{3ae5d1423b655cb989fede4e5a1a0b43}
+      \strng{fullhash}{3ae5d1423b655cb989fede4e5a1a0b43}
+      \strng{bibnamehash}{3ae5d1423b655cb989fede4e5a1a0b43}
+      \strng{authorbibnamehash}{3ae5d1423b655cb989fede4e5a1a0b43}
+      \strng{authornamehash}{3ae5d1423b655cb989fede4e5a1a0b43}
+      \strng{authorfullhash}{3ae5d1423b655cb989fede4e5a1a0b43}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{TACAS 2008 - Tools and Algorithms for the Construction and Analysis of Systems}
+      \field{title}{{Z3}: An Efficient {SMT} Solver}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.1007/978-3-540-78800-3_24
+      \endverb
+    \endentry
     \entry{delaguila2014}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -1322,6 +1359,32 @@
       \field{labeltitlesource}{title}
       \field{title}{Version Control with Git}
       \field{year}{2012}
+    \endentry
+    \entry{visualparadigm2024}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4a72dbbccb65f38c96ba197b3ff18b03}{%
+           family={Ltd.},
+           familyi={L\bibinitperiod},
+           given={Visual\bibnamedelimb Paradigm\bibnamedelima International},
+           giveni={V\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4a72dbbccb65f38c96ba197b3ff18b03}
+      \strng{fullhash}{4a72dbbccb65f38c96ba197b3ff18b03}
+      \strng{bibnamehash}{4a72dbbccb65f38c96ba197b3ff18b03}
+      \strng{authorbibnamehash}{4a72dbbccb65f38c96ba197b3ff18b03}
+      \strng{authornamehash}{4a72dbbccb65f38c96ba197b3ff18b03}
+      \strng{authorfullhash}{4a72dbbccb65f38c96ba197b3ff18b03}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.visual-paradigm.com/documentation/}}
+      \field{note}{Accessed: 2025-01-10}
+      \field{title}{Visual Paradigm Documentation}
+      \field{year}{2024}
     \endentry
     \entry{lubanovic2019python}{book}{}
       \name{author}{1}{}{%
@@ -2991,12 +3054,12 @@
            given={Hongyu},
            giveni={H\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=38f914871272e8d3057b9e3bb84b0811}{%
+        {{un=1,uniquepart=given,hash=38f914871272e8d3057b9e3bb84b0811}{%
            family={Zhao},
            familyi={Z\bibinitperiod},
            given={Lu},
            giveni={L\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=7c2839951db3d3aa2cc64b1ba1f4f816}{%
            family={Hu},
            familyi={H\bibinitperiod},
@@ -3025,11 +3088,62 @@
       \field{pages}{148\bibrangedash 155}
       \range{pages}{8}
     \endentry
+    \entry{pysat2018}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=1,uniquepart=given,hash=3ae56fc12cdd80a44d5991bea22e3070}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Han},
+           giveni={H\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=e1bf1ec6336e92da844b508ed05c9acd}{%
+           family={Liffiton},
+           familyi={L\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b31e9458947cc3f22b21618459ce2f91}{%
+           family={Eijk},
+           familyi={E\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b34917be77572f326eb77b371f24e8a}{%
+           family={Malikov},
+           familyi={M\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6d65c69a321d8c177f4a4e617ca1e599}{%
+           family={Previti},
+           familyi={P\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{bd086578b2f7a7934ef49062aa2e2b61}
+      \strng{fullhash}{bd086578b2f7a7934ef49062aa2e2b61}
+      \strng{bibnamehash}{bd086578b2f7a7934ef49062aa2e2b61}
+      \strng{authorbibnamehash}{bd086578b2f7a7934ef49062aa2e2b61}
+      \strng{authornamehash}{bd086578b2f7a7934ef49062aa2e2b61}
+      \strng{authorfullhash}{bd086578b2f7a7934ef49062aa2e2b61}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{SAT 2018 - 21st International Conference on Theory and Applications of Satisfiability Testing}
+      \field{title}{{PySAT}: A {Python} Toolkit for {SAT}-Based Prototyping}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1007/978-3-319-94144-8_38
+      \endverb
+    \endentry
   \enddatalist
-  \missing{benavides2010a}
-  \missing{pysat2018}
-  \missing{visualParadigm2024}
-  \missing{z3_2008}
 \endrefsection
 \endinput
 
