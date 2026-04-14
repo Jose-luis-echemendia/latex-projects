@@ -549,6 +549,52 @@
       \verb 10.1109/ICTEE.2012.6208608
       \endverb
     \endentry
+    \entry{colantonio2010role}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=0faecf8ed15de543a2244de794c0de41}{%
+           family={Colantonio},
+           familyi={C\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4dd5a77d86e8790090ab8859d537d28b}{%
+           family={Di\bibnamedelima Pietro},
+           familyi={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0c78a0f398399e76ac6e398bb2739fe3}{%
+           family={Ocello},
+           familyi={O\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84096db73592800596faa9ba6bbd13fa}{%
+           family={Verde},
+           familyi={V\bibinitperiod},
+           given={Nino\bibnamedelima Vincenzo},
+           giveni={N\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f74aaf13286d6453b9880a672b64bb29}
+      \strng{fullhash}{f74aaf13286d6453b9880a672b64bb29}
+      \strng{bibnamehash}{f74aaf13286d6453b9880a672b64bb29}
+      \strng{authorbibnamehash}{f74aaf13286d6453b9880a672b64bb29}
+      \strng{authornamehash}{f74aaf13286d6453b9880a672b64bb29}
+      \strng{authorfullhash}{f74aaf13286d6453b9880a672b64bb29}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{World Scientific Publishing}
+      \field{title}{Role Mining in Business: Taming Role-Based Access Control Administration}
+      \field{year}{2010}
+      \verb{doi}
+      \verb 10.1142/9789814289986_0002
+      \endverb
+    \endentry
     \entry{vscode2025}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=91da9dc9e484daf8dc9ed72055907025}{%
@@ -772,6 +818,46 @@
       \field{journaltitle}{International Journal of Computer Applications}
       \field{title}{FastAPI Framework Performance Analysis for Microservices}
       \field{year}{2023}
+    \endentry
+    \entry{ferraiolo2007role}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ef9313cc285140c50d08e73052f50750}{%
+           family={Ferraiolo},
+           familyi={F\bibinitperiod},
+           given={David\bibnamedelima F.},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63c962b5879de2ad3ae4f3f71542fb1f}{%
+           family={Kuhn},
+           familyi={K\bibinitperiod},
+           given={D.\bibnamedelimi Richard},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b688e7f8be66fbaeae7c3bb165cc1a47}{%
+           family={Chandramouli},
+           familyi={C\bibinitperiod},
+           given={Ramaswamy},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Artech House}%
+      }
+      \strng{namehash}{bf15b597cdf8b9d934085aadd3db3152}
+      \strng{fullhash}{bf15b597cdf8b9d934085aadd3db3152}
+      \strng{bibnamehash}{bf15b597cdf8b9d934085aadd3db3152}
+      \strng{authorbibnamehash}{bf15b597cdf8b9d934085aadd3db3152}
+      \strng{authornamehash}{bf15b597cdf8b9d934085aadd3db3152}
+      \strng{authorfullhash}{bf15b597cdf8b9d934085aadd3db3152}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1596932069}
+      \field{title}{Role-Based Access Control}
+      \field{year}{2007}
     \endentry
     \entry{galan2014building}{article}{}
       \name{author}{2}{}{%
@@ -1081,6 +1167,49 @@
       \field{journaltitle}{SC}
       \field{title}{Exploring network structure, dynamics, and function using NetworkX}
       \field{year}{2008}
+    \endentry
+    \entry{hu2006assessment}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=1,uniquepart=given,hash=527b83b3c8c6264ec6be8ccbec467dad}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Vincent\bibnamedelima C.},
+           giveni={V\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=ef9313cc285140c50d08e73052f50750}{%
+           family={Ferraiolo},
+           familyi={F\bibinitperiod},
+           given={David\bibnamedelima F.},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63c962b5879de2ad3ae4f3f71542fb1f}{%
+           family={Kuhn},
+           familyi={K\bibinitperiod},
+           given={D.\bibnamedelimi Richard},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d232808e95b7c3a803bd643a24ff003f}
+      \strng{fullhash}{d232808e95b7c3a803bd643a24ff003f}
+      \strng{bibnamehash}{d232808e95b7c3a803bd643a24ff003f}
+      \strng{authorbibnamehash}{d232808e95b7c3a803bd643a24ff003f}
+      \strng{authornamehash}{d232808e95b7c3a803bd643a24ff003f}
+      \strng{authorfullhash}{d232808e95b7c3a803bd643a24ff003f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{National Institute of Standards and Technology (NIST) Interagency Report 7316}
+      \field{title}{Assessment of Access Control Systems}
+      \field{year}{2006}
+      \verb{urlraw}
+      \verb https://csrc.nist.gov/publications/detail/nistir/7316/final
+      \endverb
+      \verb{url}
+      \verb https://csrc.nist.gov/publications/detail/nistir/7316/final
+      \endverb
     \endentry
     \entry{ibm_IDE}{online}{}
       \name{author}{1}{}{%
@@ -2250,6 +2379,44 @@
       \field{title}{Unified Modeling Language Reference Manual}
       \field{year}{2004}
     \endentry
+    \entry{saltzer1975protection}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a719626d86148a18f531a22673403d68}{%
+           family={Saltzer},
+           familyi={S\bibinitperiod},
+           given={Jerome\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83b584ef97b412d31b5b98583e54ef92}{%
+           family={Schroeder},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{12a0d2bc83e0b5a594d1d1ed37207534}
+      \strng{fullhash}{12a0d2bc83e0b5a594d1d1ed37207534}
+      \strng{bibnamehash}{12a0d2bc83e0b5a594d1d1ed37207534}
+      \strng{authorbibnamehash}{12a0d2bc83e0b5a594d1d1ed37207534}
+      \strng{authornamehash}{12a0d2bc83e0b5a594d1d1ed37207534}
+      \strng{authorfullhash}{12a0d2bc83e0b5a594d1d1ed37207534}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{number}{9}
+      \field{title}{The Protection of Information in Computer Systems}
+      \field{volume}{63}
+      \field{year}{1975}
+      \field{pages}{1278\bibrangedash 1308}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1109/PROC.1975.9939
+      \endverb
+    \endentry
     \entry{sanchez2020metodologia}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=15752ae2521f27fd5ca52311fe6bd224}{%
@@ -2291,6 +2458,56 @@
       \field{pages}{1020\bibrangedash 1045}
       \range{pages}{26}
     \endentry
+    \entry{sandhu1996role}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f3b7d57399ba1dbf13fcbf28b2ad7555}{%
+           family={Sandhu},
+           familyi={S\bibinitperiod},
+           given={Ravi\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=095a4cce348eec9d581b278c22ab6129}{%
+           family={Coyne},
+           familyi={C\bibinitperiod},
+           given={Edward\bibnamedelima J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=777d2f53710ab0c09bf75c63fafceaa1}{%
+           family={Feinstein},
+           familyi={F\bibinitperiod},
+           given={Hal\bibnamedelima L.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fea1de53df3d07042f925374a93d347e}{%
+           family={Youman},
+           familyi={Y\bibinitperiod},
+           given={Charles\bibnamedelima E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{10d614baecb582aa4916c475ba89caef}
+      \strng{fullhash}{10d614baecb582aa4916c475ba89caef}
+      \strng{bibnamehash}{10d614baecb582aa4916c475ba89caef}
+      \strng{authorbibnamehash}{10d614baecb582aa4916c475ba89caef}
+      \strng{authornamehash}{10d614baecb582aa4916c475ba89caef}
+      \strng{authorfullhash}{10d614baecb582aa4916c475ba89caef}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Computer}
+      \field{number}{2}
+      \field{title}{Role-Based Access Control Models}
+      \field{volume}{29}
+      \field{year}{1996}
+      \field{pages}{38\bibrangedash 47}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/2.485845
+      \endverb
+    \endentry
     \entry{sebesta2016}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=2286349117c0c84d883dbdcd61323f25}{%
@@ -2319,6 +2536,36 @@
       \field{isbn}{978-0133943023}
       \field{title}{Concepts of Programming Languages}
       \field{year}{2016}
+    \endentry
+    \entry{serna-montoya2012}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f22127e070c99e31506f64a008b1435c}{%
+           family={Serna-Montoya},
+           familyi={S\bibinithyphendelim M\bibinitperiod},
+           given={Édgar},
+           giveni={É\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f22127e070c99e31506f64a008b1435c}
+      \strng{fullhash}{f22127e070c99e31506f64a008b1435c}
+      \strng{bibnamehash}{f22127e070c99e31506f64a008b1435c}
+      \strng{authorbibnamehash}{f22127e070c99e31506f64a008b1435c}
+      \strng{authornamehash}{f22127e070c99e31506f64a008b1435c}
+      \strng{authorfullhash}{f22127e070c99e31506f64a008b1435c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ingeniería y Universidad}
+      \field{note}{Ver p.ágina 32}
+      \field{number}{1}
+      \field{title}{Estado actual de la investigación en requisitos no funcionales}
+      \field{volume}{16}
+      \field{year}{2012}
+      \field{pages}{225\bibrangedash 246}
+      \range{pages}{22}
     \endentry
     \entry{sgbuzz_lps}{online}{}
       \name{author}{1}{}{%
@@ -2432,12 +2679,12 @@
     \endentry
     \entry{sommerville2016se}{book}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=391822eb61c91ef5882d24cbd1592b6f}{%
+        {{un=2,uniquepart=given,hash=391822eb61c91ef5882d24cbd1592b6f}{%
            family={Sommerville},
            familyi={S\bibinitperiod},
            given={I.},
            giveni={I\bibinitperiod},
-           givenun=0}}%
+           givenun=2}}%
       }
       \list{publisher}{1}{%
         {Pearson Education}%
@@ -2457,6 +2704,35 @@
       \field{edition}{10}
       \field{title}{Software Engineering}
       \field{year}{2016}
+    \endentry
+    \entry{sommerville2005}{book}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=70341b3bfcce7026902f4eb1e4111b58}{%
+           family={Sommerville},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{fullhash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{bibnamehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authorbibnamehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authornamehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authorfullhash}{70341b3bfcce7026902f4eb1e4111b58}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{8}
+      \field{isbn}{978-0321210250}
+      \field{title}{Software Engineering}
+      \field{year}{2005}
     \endentry
     \entry{soos2020Ganak}{inproceedings}{}
       \name{author}{3}{}{%
@@ -3060,12 +3336,12 @@
            given={Lu},
            giveni={L\bibinitperiod},
            givenun=1}}%
-        {{un=0,uniquepart=base,hash=7c2839951db3d3aa2cc64b1ba1f4f816}{%
+        {{un=1,uniquepart=given,hash=7c2839951db3d3aa2cc64b1ba1f4f816}{%
            family={Hu},
            familyi={H\bibinitperiod},
            given={Jun},
            giveni={J\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \list{publisher}{1}{%
         {IEEE}%
