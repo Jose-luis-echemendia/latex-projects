@@ -251,8 +251,8 @@ solución a la problemática planteada:
 	\hline
     \ac{RF}\#5 & Restablecer contraseña & Permite definir una nueva contraseña válida de forma segura a partir de uno de los siguientes escenarios: 
 		\begin{itemize}
-				\item un token de recuperación.
-				\item contraseña actual para usuarios autenticados.
+				\item Escenario con token: token de recuperación y nueva contraseña.
+				\item Escenario autenticado: contraseña actual y nueva contraseña.
 		\end{itemize}
 	& Baja & Media \\
 	\hline
@@ -261,10 +261,19 @@ solución a la problemática planteada:
     \rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#7 & Filtrar usuarios & Permite filtrar usuarios por rol o mediante un término de búsqueda. & Media & Baja \\
 	\hline
-	\ac{RF}\#8 & Actualizar perfil propio & Permite al usuario editar su información personal sin depender de administración externa. & Alta & Baja \\
+	\ac{RF}\#8 & Actualizar perfil propio & Permite al usuario editar su información personal sin depender de administración externa. Campo de entrada: 
+		\begin{itemize}
+			\item correo electrónico (opcional)
+		\end{itemize}
+	& Alta & Baja \\
 	\hline
     \rowcolor[HTML]{EDEBF1}
-	\ac{RF}\#9 & Asignar rol de usuario & Permite al administrador del sistema modificar el rol asignado a un usuario. & Alta & Baja \\
+	\ac{RF}\#9 & Asignar rol de usuario & Permite al administrador del sistema modificar el rol asignado a un usuario. Parámetros de entrada:
+		\begin{itemize}
+			\item identificador de usuario (ruta)
+			\item rol (consulta)
+		\end{itemize}
+	& Alta & Baja \\
 	\hline
 	\ac{RF}\#10 & Desactivar usuario & El sistema debe permitir inhabilitar cuentas activas. & Media & Baja \\
 	\hline
@@ -276,9 +285,20 @@ solución a la problemática planteada:
 	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#13 & Obtener dominio & Obtiene la información detallada de un dominio específico por su identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#14 & Crear dominio & El sistema debe permitir crear nuevos dominios desde perfiles administrativos. & Alta & Baja \\
+	\ac{RF}\#14 & Crear dominio & El sistema debe permitir crear nuevos dominios desde perfiles administrativos. Campos de entrada:
+		\begin{itemize}
+			\item nombre
+			\item descripción (opcional)
+		\end{itemize}
+	& Alta & Baja \\
 	\hline
-	\ac{RF}\#15 & Actualizar dominio & Permite editar la información de un dominio ya existente a un administrador. & Alta & Baja \\
+	\ac{RF}\#15 & Actualizar dominio & Permite editar la información de un dominio ya existente a un administrador. Parámetros y campos de entrada:
+		\begin{itemize}
+			\item identificador de dominio (ruta)
+			\item nombre (opcional)
+			\item descripción (opcional)
+		\end{itemize}
+	& Alta & Baja \\
 	\hline
 	\ac{RF}\#16 & Buscar dominios & Permite localizar dominios por nombre o por descripción. & Media & Baja \\
 	\hline
@@ -290,11 +310,24 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#20 & Listar \ac{FM}s & Permite listar \ac{FM}s con paginación y filtros por dominio para facilitar su navegación. & Alta & Media \\
 	\hline
-	\ac{RF}\#21 & Crear \ac{FM} & Crea un \ac{FM} asociado a un dominio válido y consistente. & Alta & Media \\
+	\ac{RF}\#21 & Crear \ac{FM} & Crea un \ac{FM} asociado a un dominio válido y consistente. Campos de entrada:
+		\begin{itemize}
+			\item nombre
+			\item descripción (opcional)
+			\item identificador de dominio
+		\end{itemize}
+	& Alta & Media \\
 	\hline
 	\ac{RF}\#22 & Consultar \ac{FM} & Muestra el detalle del \ac{FM} incluyendo sus versiones. & Alta & Media \\
 	\hline
-	\ac{RF}\#23 & Actualizar \ac{FM} & El sistema debe permitir actualizar metadatos del \ac{FM} manteniendo integridad de la información. & Alta & Media \\
+	\ac{RF}\#23 & Actualizar \ac{FM} & El sistema debe permitir actualizar metadatos del \ac{FM} manteniendo integridad de la información. Parámetros y campos de entrada:
+		\begin{itemize}
+			\item identificador de modelo (ruta)
+			\item nombre (opcional)
+			\item descripción (opcional)
+			\item estado activo (opcional)
+		\end{itemize}
+	& Alta & Media \\
 	\hline
 	\ac{RF}\#24 & Activar \ac{FM} & Activa un \ac{FM} para habilitar su uso operativo. & Alta & Baja \\
 	\hline
@@ -304,7 +337,13 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#27 & Consultar versión específica de un modelo & Permite recuperar el detalle de una versión concreta de \ac{FM}. & Alta & Baja \\
 	\hline
-	\ac{RF}\#28 & Crear versión de un modelo & Crea una nueva versión, con soporte de \textit{copy-on-write} desde una versión origen. & Alta & Media \\
+	\ac{RF}\#28 & Crear versión de un modelo & Crea una nueva versión, con soporte de \textit{copy-on-write} desde una versión origen. Parámetros y campos de entrada:
+		\begin{itemize}
+			\item identificador de modelo (ruta)
+			\item identificador de versión origen (opcional)
+			\item descripción (opcional)
+		\end{itemize}
+	& Alta & Media \\
 	\hline
 	\ac{RF}\#29 & Publicar versión de un modelo & El sistema debe permitir publicar una versión y ejecuta validaciones necesarias antes de su disponibilidad oficial. & Alta & Alta \\
 	\hline
@@ -330,11 +369,23 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#36 & Obtener \ac{UVL} efectivo de un \ac{FM} & Permite devolver el \ac{UVL} final, ya sea almacenado o generado desde la estructura vigente. & Alta & Media \\
 	\hline
-	\ac{RF}\#37 & Guardar \ac{UVL} & El sistema debe permitir guardar un \ac{UVL} analizado y validado. & Alta & Alta \\
+	\ac{RF}\#37 & Guardar \ac{UVL} & El sistema debe permitir guardar un \ac{UVL} analizado y validado. Parámetros y campos de entrada:
+		\begin{itemize}
+			\item identificador de modelo (ruta)
+			\item identificador de versión (ruta)
+			\item contenido \ac{UVL}
+		\end{itemize}
+	& Alta & Alta \\
 	\hline
 	\ac{RF}\#38 & Sincronizar \ac{UVL} desde estructura & Regenera y persiste \ac{UVL} a partir del modelo visual para mantener coherencia. & Alta & Alta \\
 	\hline
-	\ac{RF}\#39 & Aplicar \ac{UVL} a estructura & El sistema debe permitir construir una nueva versión estructural tomando como entrada una definición \ac{UVL}. & Alta & Alta \\
+	\ac{RF}\#39 & Aplicar \ac{UVL} a estructura & El sistema debe permitir construir una nueva versión estructural tomando como entrada una definición \ac{UVL}. Parámetros y campos de entrada:
+		\begin{itemize}
+			\item identificador de modelo (ruta)
+			\item identificador de versión (ruta)
+			\item contenido \ac{UVL}
+		\end{itemize}
+	& Alta & Alta \\
 	\hline
 	\ac{RF}\#40 & Validar lógica del modelo & El sistema debe permitir evaluar la satisfacibilidad y consistencia lógica global del modelo. & Alta & Alta \\
 	\hline
@@ -344,13 +395,27 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#43 & Análisis estructural de validación & El sistema debe permitir ejecutar análisis de dead características, redundancias y componentes fuertemente conectados. & Alta & Alta \\
 	\hline
-	\ac{RF}\#44 & Crear configuración persistente & Crea y almacena configuraciones asociadas a una versión tras validar consistencia. & Alta & Alta \\
+	\ac{RF}\#44 & Crear configuración persistente & Crea y almacena configuraciones asociadas a una versión tras validar consistencia. Campos de entrada:
+		\begin{itemize}
+			\item nombre
+			\item descripción (opcional)
+			\item identificador de versión del modelo de características
+			\item lista de identificadores de características
+		\end{itemize}
+	& Alta & Alta \\
 	\hline
 	\ac{RF}\#45 & Obtener configuración por identificador & Recupera una configuración específica junto con sus características relacionadas. & Media & Baja \\
 	\hline
 	\ac{RF}\#46 & Listar configuraciones & Lista configuraciones disponibles con soporte de paginación. & Media & Baja \\
 	\hline
-	\ac{RF}\#47 & Actualizar configuración & Modifica metadatos y características de una configuración existente. & Media & Baja \\
+	\ac{RF}\#47 & Actualizar configuración & Modifica metadatos y características de una configuración existente. Parámetros y campos de entrada:
+		\begin{itemize}
+			\item identificador de configuración (ruta)
+			\item nombre (opcional)
+			\item descripción (opcional)
+			\item lista de identificadores de características (opcional)
+		\end{itemize}
+	& Media & Baja \\
 	\hline
 	\ac{RF}\#48 & Activar configuración & Marca una configuración como activa para su uso. & Media & Baja \\
 	\hline
@@ -364,7 +429,17 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#53 & Listar características & Lista características mediante filtros y representación de árbol por versión. & Alta & Media \\
 	\hline
-	\ac{RF}\#54 & Crear característica & El sistema debe permitir crear nuevas características aplicando validaciones y permisos sobre la versión objetivo del modelo. & Alta & Alta \\
+	\ac{RF}\#54 & Crear característica & El sistema debe permitir crear nuevas características aplicando validaciones y permisos sobre la versión objetivo del modelo. Campos de entrada:
+		\begin{itemize}
+			\item nombre
+			\item tipo
+			\item identificador de versión del modelo de características
+			\item identificador de padre (opcional)
+			\item identificador de grupo (opcional)
+			\item identificador de recurso (opcional)
+			\item propiedades (opcional)
+		\end{itemize}
+	& Alta & Alta \\
 	\hline
 	\ac{RF}\#55 & Obtener característica & Recupera el detalle completo de una característica específica. & Media & Baja \\
 	\hline
@@ -378,7 +453,15 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#61 & Desasociar etiqueta de una característica & Permite eliminar el vínculo entre una etiqueta y una característica. & Media & Baja \\
 	\hline
-	\ac{RF}\#62	& Actualizar característica & El sistema debe permitir actualizar campos puntuales de una característica. & Alta & Alta \\
+	\ac{RF}\#62	& Actualizar característica & El sistema debe permitir actualizar campos puntuales de una característica. Parámetros y campos de entrada:
+		\begin{itemize}
+			\item identificador de característica (ruta)
+			\item nombre (opcional)
+			\item tipo (opcional)
+			\item identificador de padre (opcional)
+			\item identificador de grupo (opcional)
+		\end{itemize}
+	& Alta & Alta \\
 	\hline
 	\ac{RF}\#63 & Mover característica & El sistema debe permitir reubicar una característica cambiando su nodo padre sin perder trazabilidad. & Alta & Alta \\
 	\hline
@@ -390,9 +473,24 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#97 & Obtener grupo de características & Recupera la información de un grupo de características por su identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#98 & Crear grupo de características & Crea grupos de características con validaciones para un modelo. & Alta & Alta \\
+	\ac{RF}\#98 & Crear grupo de características & Crea grupos de características con validaciones para un modelo. Campos de entrada:
+		\begin{itemize}
+			\item tipo de grupo
+			\item identificador de característica padre
+			\item cardinalidad mínima (opcional, valor por defecto 1)
+			\item cardinalidad máxima (opcional)
+		\end{itemize}
+	& Alta & Alta \\
 	\hline
-	\ac{RF}\#99 & Actualizar grupo de características & Actualiza grupos de características conservando consistencia y versionado en el modelo. & Alta & Alta \\
+	\ac{RF}\#99 & Actualizar grupo de características & Actualiza grupos de características conservando consistencia y versionado en el modelo. Parámetros y campos de entrada:
+		\begin{itemize}
+			\item identificador de grupo (ruta)
+			\item tipo de grupo (opcional)
+			\item identificador de característica padre (opcional)
+			\item cardinalidad mínima (opcional)
+			\item cardinalidad máxima (opcional)
+		\end{itemize}
+	& Alta & Alta \\
 	\hline
 	\ac{RF}\#100 & Desactivar grupo de características & Elimina lógicamente grupos de características aplicando reglas de integridad y versionado. & Alta & Alta \\
 	\hline
@@ -402,9 +500,22 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#103 & Obtener relación de características & Obtiene el detalle de una relación de características por identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#104 & Crear relación de características & El sistema debe permitir crear relaciones entre características con validaciones semánticas y \textit{copy-on-write}. & Alta & Alta \\
+	\ac{RF}\#104 & Crear relación de características & El sistema debe permitir crear relaciones entre características con validaciones semánticas y \textit{copy-on-write}. Campos de entrada:
+		\begin{itemize}
+			\item tipo
+			\item identificador de característica origen
+			\item identificador de característica destino
+		\end{itemize}
+	& Alta & Alta \\
 	\hline
-	\ac{RF}\#105 & Actualizar relación de características & El sistema debe permitir actualizar relaciones de características existentes. & Alta & Alta \\
+	\ac{RF}\#105 & Actualizar relación de características & El sistema debe permitir actualizar relaciones de características existentes. Parámetros y campos de entrada:
+		\begin{itemize}
+			\item identificador de relación (ruta)
+			\item tipo (opcional)
+			\item identificador de característica origen (opcional)
+			\item identificador de característica destino (opcional)
+		\end{itemize}
+	& Alta & Alta \\
 	\hline
 	\ac{RF}\#106 & Activar relaciones de características & Recupera una relación de características anteriormente desactivada. & Alta & Alta \\
 	\hline
@@ -414,9 +525,21 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#109 & Obtener restricción & Recupera el detalle de una restricción por identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#110 & Crear restricción & El sistema debe permitir crear restricciones complejas con validaciones y control de versiones. & Alta & Alta \\
+	\ac{RF}\#110 & Crear restricción & El sistema debe permitir crear restricciones complejas con validaciones y control de versiones. Campos de entrada:
+		\begin{itemize}
+			\item identificador de versión del modelo de características
+			\item expresión lógica
+			\item descripción (opcional)
+		\end{itemize}
+	& Alta & Alta \\
 	\hline
-	\ac{RF}\#111 & Actualizar restricción & Actualiza restricciones existentes preservando coherencia lógica. & Alta & Alta \\
+	\ac{RF}\#111 & Actualizar restricción & Actualiza restricciones existentes preservando coherencia lógica. Parámetros y campos de entrada:
+		\begin{itemize}
+			\item identificador de restricción (ruta)
+			\item expresión lógica (opcional)
+			\item descripción (opcional)
+		\end{itemize}
+	& Alta & Alta \\
 	\hline
 	\ac{RF}\#112 & Desactivar restricción & Elimina restricciones aplicando \textit{copy-on-write} para mantener trazabilidad. & Alta & Alta \\
 	\hline
@@ -426,17 +549,59 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#114 & Obtener etiqueta & Recupera una etiqueta específica mediante su identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#115 & Crear etiqueta & Crea nuevas etiquetas asegurando unicidad de nombre. & Media & Baja \\
+	\ac{RF}\#115 & Crear etiqueta & Crea nuevas etiquetas asegurando unicidad de nombre. Campos de entrada:
+		\begin{itemize}
+			\item nombre
+			\item descripción (opcional)
+		\end{itemize}
+	& Media & Baja \\
 	\hline
 	\ac{RF}\#116 & Listar recursos & Lista recursos registrados con soporte de paginación. & Media & Baja \\
 	\hline
 	\ac{RF}\#117 & Consultar recurso & Obtiene el detalle de un recurso específico por su identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#118 & Crear recurso & El sistema debe permitir registrar recursos y asigna propietario. & Media & Baja \\
+	\ac{RF}\#118 & Crear recurso & El sistema debe permitir registrar recursos y asigna propietario. Campos de entrada:
+		\begin{itemize}
+			\item título
+			\item tipo
+			\item URL o contenido del recurso
+			\item descripción (opcional)
+			\item idioma (opcional)
+			\item duración en minutos (opcional)
+			\item versión (opcional)
+			\item estado (opcional)
+			\item fecha de publicación (opcional)
+			\item nombre del autor (opcional)
+			\item identificador de propietario (opcional)
+			\item licencia (opcional)
+			\item válido hasta (opcional)
+			\item etiquetas (opcional)
+			\item notas de accesibilidad (opcional)
+		\end{itemize}
+	& Media & Baja \\
 	\hline
-	\ac{RF}\#119 & Actualizar recurso & El sistema debe permitir actualizar parcial o totalmente la información de un recurso y mantener el último documento guardado para el mismo recurso. & Media & Media \\
+	\ac{RF}\#119 & Actualizar recurso & El sistema debe permitir actualizar parcial o totalmente la información de un recurso y mantener el último documento guardado para el mismo recurso. Parámetros y campos de entrada:
+		\begin{itemize}
+			\item identificador de recurso (ruta)
+			\item título (opcional)
+			\item tipo (opcional)
+			\item URL o contenido del recurso (opcional)
+			\item descripción (opcional)
+			\item idioma (opcional)
+			\item duración en minutos (opcional)
+			\item versión (opcional)
+			\item estado (opcional)
+			\item fecha de publicación (opcional)
+			\item nombre del autor (opcional)
+			\item identificador de propietario (opcional, solo superusuario)
+			\item licencia (opcional)
+			\item válido hasta (opcional)
+			\item etiquetas (opcional)
+			\item notas de accesibilidad (opcional)
+		\end{itemize}
+	& Media & Media \\
 	\hline
-    
+
 \end{longtable}
 
 
@@ -540,34 +705,319 @@ A continuación se definen los requisitos no funcionales del sistema:
 \end{itemize}
 
 
-
 \section{Historias de usuarios}
 
-% \ac{RF}\#36 & Estadísticas en tiempo real por WebSocket & Proporciona streaming de estadísticas de versión en tiempo real vía WebSocket. & Alta & Alta \\
-% \ac{RF}\#25 & Diff UVL vs estructura actual & Muestra diferencias entre UVL y estructura antes de aplicar cambios definitivos. & Alta & Alta \\
-% \ac{RF}\#44 & Validación integral full & Ejecuta en una sola operación la validación lógica, estructural y de análisis avanzado. & Alta & Alta \\
-% \ac{RF}\#45 & Resumen de análisis síncrono & Genera un resumen técnico consolidado del análisis de una versión. & Alta & Alta \\
-% \ac{RF}\#46 & Comparación síncrona entre versiones & Compara dos versiones y entrega diferencias relevantes para la toma de decisiones. & Alta & Alta \\
-% \hline
-% \ac{RF}\#47 & Lanzamiento de análisis batch & Inicia análisis asíncronos en segundo plano para reducir tiempos de bloqueo. & Alta & Alta \\
-% \hline
-% \ac{RF}\#25 & Generación masiva asíncrona & Lanza generación masiva de configuraciones válidas en modo asíncrono. & Alta & Alta \\
-% \hline
-% \ac{RF}\#25 & Export bundle asíncrono & Ejecuta exportaciones en lote para múltiples formatos de salida. & Media & Alta \\
-% \hline
-% \ac{RF}\#25 & Comparación batch asíncrona & Lanza comparaciones de versiones en segundo plano para cargas extensas. & Media & Alta \\
-% \hline
-% 69 & Recomputación de estadísticas batch & Recalcula estadísticas de una versión en background cuando se requiere actualización. & Media & Media \\
-% \hline
-% 70 & Estado de tarea de análisis & Permite consultar estado y resultados de tareas de análisis por identificador. & Alta & Baja \\
-% \hline
-% 71 & Estado genérico de tarea & Consulta el estado y resultado de cualquier tarea ejecutada por Celery. & Media & Baja \\
-% \hline
-% 72 & Cancelación de tarea & Revoca tareas en cola o en ejecución cuando el flujo lo requiera. & Media & Baja \\
-% \hline
-% 73 & Consulta de progreso de tarea & Muestra progreso incremental reportado por tareas de larga duración. & Media & Baja \\
-% \ac{RF}\#43 & Opciones de configuración por etapas & Calcula opciones posibles (seleccionar, descartar u obligatorias) a partir de una selección parcial. & Alta & Alta \\
-	
+Las \ac{HU}, dentro del enfoque \ac{XP}, constituyen una técnica ágil empleada para la recolección y especificación 
+de requisitos funcionales desde la perspectiva del usuario final. Estas se expresan como descripciones
+breves, usualmente en una o dos frases, utilizando un lenguaje natural no técnico que refleja directamente
+las necesidades, expectativas o problemas del usuario con relación al sistema. Su propósito es capturar de
+forma rápida, comprensible y accionable qué funcionalidad requiere el usuario y por qué, sin profundizar en
+detalles de implementación. \citep{menzinsky2018historias}
+
+Las \ac{HU} son escritas para ser implementadas en un tiempo de 1 a 3 semanas como máximo. Cuando una
+\ac{HU} esté compuesta por diferentes funcionalidades, será dividida en varias \ac{HU}. Algunas no tienen un alto
+grado de complejidad para implementarlas. Entonces, se determinará que su período de desarrollo sea de
+1, 2 o 4 días en un equivalente de 0.2, 0.4 y 0.8 en semanas, respectivamente, para así calcular el tiempo
+estimado del proyecto. \citep{beck2000extreme}
+
+Las \ac{HU} se agrupan y organizan en \textbf{épicas}, las cuales son etiquetas que representan conjuntos 
+de historias de usuario relacionadas entre sí por un objetivo funcional o temático de mayor envergadura. 
+Una épica no es más que una \ac{HU} de gran tamaño que aún no ha sido desglosada en historias más pequeñas y 
+manejables \citep{cohn2004user}. Las épicas sirven como mecanismo de organización jerárquica dentro del 
+\textit{backlog} de producto, permitiendo a los equipos ágiles planificar y priorizar a niveles estratégicos 
+sin perder de vista la trazabilidad entre las historias individuales y los grandes bloques de funcionalidad. 
+En el contexto de esta investigación, las épicas constituyen la capa superior de organización de los requisitos 
+funcionales, agrupando las \ac{HU} que contribuyen a un mismo propósito dentro del sistema.
+
+Las épidas definidas para esta investigación son las siguientes:
+
+\begin{itemize}
+	\item \textbf{Épica 1: Gestión de Identidad y Acceso}: Agrupa las historias relacionadas con la autenticación, gestión de usuarios y control de acceso al sistema.
+	\item \textbf{Épica 2: Gobernanza de Dominios Curriculares}: Incluye las historias que abordan la administración de dominios curriculares y su relación con los modelos de características.
+	\item \textbf{Épica 3: Ciclo de Vida del Feature Model (FM)}: Contiene las historias que tratan sobre la creación, gestión, versionado y publicación de los Feature Models dentro del sistema.
+	\item \textbf{Épica 4: Validación y Análisis de Modelos}: Reúne las historias enfocadas en las funcionalidades de validación lógica, estructural y análisis avanzado de los modelos.
+	\item \textbf{Épica 5: Configuración y Optimización}: Agrupa las historias relacionadas con la creación, gestión y optimización de configuraciones basadas en los modelos.
+	\item \textbf{Épica 6: Gestión de Características, Grupos y Relaciones}: Incluye las historias que abordan la administración detallada de características, sus agrupaciones y relaciones dentro del modelo.
+	\item \textbf{Épica 7: Gestión de Recursos y Etiquetas}: Contiene las historias relacionadas con la administración de recursos asociados a los modelos y la clasificación mediante etiquetas.
+\end{itemize}
+
+A continuación, se presenta un ejemplo de las \ac{HU} confeccionadas, el resto se puede encontrar en el
+anexo A.
+
+\begin{userstory}[]
+	\storyname{Autenticación y Autogestión de cuenta}
+	\storyepic{Gestión de Identidad y Acceso}
+	\storyrfs{1, 2, 3, 4, 5, 8}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{1.0}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El usuario del sistema debe poder iniciar sesión, cerrar sesión, gestionar su perfil y recuperar su acceso para garantizar la seguridad de sus datos y su identidad en la plataforma.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Permitir registro e inicio con correo y contraseña.
+	\item Procesar recuperación de acceso mediante \textit{token} enviado por correo.
+	\item Permitir la edición del perfil propio sin intervención administrativa.
+	\end{itemize}
+	}
+	\storyobservation{La historia concentra autenticación, recuperación de acceso y autogestión del perfil como capacidades base del módulo de identidad. Campos de entrada asociados: RF\#1 y RF\#3 (correo electrónico, contraseña), RF\#5 (token y nueva contraseña; o contraseña actual y nueva contraseña), RF\#8 (correo electrónico opcional).}
+\end{userstory}
+
+\begin{userstory}[]
+	\storyname{Administración de Usuarios y Permisos}
+	\storyepic{Gestión de Identidad y Acceso}
+	\storyrfs{6, 7, 9, 10, 11}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{1.2}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El administrador debe poder gestionar el listado de usuarios, sus roles y su estado activo o inactivo para controlar quién accede a la plataforma y qué acciones puede realizar según la jerarquía estática.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Listar y filtrar usuarios por rol o nombre.
+	\item Modificar el rol asignado a cada usuario.
+	\item Desactivar y activar cuentas sin eliminar la información persistida.
+	\end{itemize}
+	}
+	\storyobservation{La gestión de cuentas debe preservar la trazabilidad administrativa y evitar borrados físicos sobre usuarios existentes. Campos de entrada asociados: RF\#9 (identificador de usuario en ruta y rol en consulta).}
+\end{userstory}
+
+\subsubsection*{Épica 2: Gobernanza de Dominios Curriculares}
+
+\begin{userstory}[]
+	\storyname{Gestión de Dominios de Conocimiento}
+	\storyepic{Gobernanza de Dominios Curriculares}
+	\storyrfs{12, 13, 14, 15, 16, 17, 18, 19}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{1.2}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El administrador debe poder crear, actualizar y supervisar los dominios curriculares para establecer el contexto de alto nivel donde se alojarán los Feature Models.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Crear dominios con nombre y descripción.
+	\item Activar y desactivar dominios conforme a su estado de uso.
+	\item Obtener cada dominio junto con sus modelos asociados.
+	\end{itemize}
+	}
+	\storyobservation{El dominio funciona como unidad de organización para agrupar y consultar los modelos vinculados. Campos de entrada asociados: RF\#14 (nombre, descripción opcional) y RF\#15 (identificador de dominio en ruta; nombre y descripción opcionales).}
+\end{userstory}
+
+\subsubsection*{Épica 3: Ciclo de Vida del Feature Model (FM)}
+
+\begin{userstory}[]
+	\storyname{Gestión Operativa de Feature Models}
+	\storyepic{Ciclo de Vida del Feature Model (FM)}
+	\storyrfs{20, 21, 22, 23, 24, 25}
+	\storypriority{Alta}
+	\storyrisk{Alta}
+	\storypoints{1.4}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El diseñador de modelo debe poder crear, listar y modificar los metadatos de los Feature Models dentro de un dominio para mantener un catálogo organizado de planes de estudio o arquitecturas curriculares.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Crear modelos asociados a un dominio válido.
+	\item Actualizar metadatos preservando la integridad del modelo.
+	\item Ofrecer paginación y filtrado para la consulta de modelos.
+	\end{itemize}
+	}
+	\storyobservation{Esta historia cubre la administración operativa del catálogo de modelos, sin entrar todavía en su estructura interna. Campos de entrada asociados: RF\#21 (nombre, descripción opcional, identificador de dominio) y RF\#23 (identificador de modelo en ruta; nombre, descripción y estado activo opcionales).}
+\end{userstory}
+
+\begin{userstory}[]
+	\storyname{Gestión de Versiones y Publicación (Copy-on-Write)}
+	\storyepic{Ciclo de Vida del Feature Model (FM)}
+	\storyrfs{26, 27, 28, 29, 30, 31, 32}
+	\storypriority{Alta}
+	\storyrisk{Alta}
+	\storypoints{2.0}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El diseñador de modelo y el revisador deben poder crear versiones, publicar snapshots y archivar versiones antiguas para garantizar la trazabilidad y evolución del currículo sin afectar configuraciones previas.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Generar nuevas versiones mediante técnica \textit{copy-on-write}.
+	\item Validar la versión antes de su publicación oficial.
+	\item Permitir la recuperación de versiones archivadas.
+	\end{itemize}
+	}
+	\storyobservation{La publicación debe conservar el historial del modelo y permitir volver a estados previos sin pérdida de información. Campos de entrada asociados: RF\#28 (identificador de modelo en ruta; identificador de versión origen y descripción opcionales).}
+\end{userstory}
+
+\begin{userstory}[]
+	\storyname{Análisis de Métricas y Exportación}
+	\storyepic{Ciclo de Vida del Feature Model (FM)}
+	\storyrfs{34, 35}
+	\storypriority{Media}
+	\storyrisk{Media}
+	\storypoints{1.0}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El diseñador y el observador deben poder obtener estadísticas y exportar el modelo en múltiples formatos, como UVL, XML y JSON, para compartirlo con otras herramientas o analizar su complejidad.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Calcular métricas de la versión publicada más reciente o de una versión específica.
+	\item Exportar el modelo en formatos técnicos como \ac{UVL} y \textit{dimacs}.
+	\item Exportar el modelo en formatos visuales como \textit{mermaid} y \textit{dot}.
+	\end{itemize}
+	}
+	\storyobservation{La exportación debe ser consistente con la versión consultada y servir tanto para intercambio técnico como para inspección visual.}
+\end{userstory}
+
+\subsubsection*{Épica 4: Modelado de Variabilidad (Estructura)}
+
+\begin{userstory}[]
+	\storyname{Edición de la Jerarquía de Características}
+	\storyepic{Modelado de Variabilidad (Estructura)}
+	\storyrfs{53, 54, 55, 56, 62, 63, 94, 95}
+	\storypriority{Alta}
+	\storyrisk{Alta}
+	\storypoints{2.0}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El diseñador y el editor de modelo deben poder crear, mover, actualizar y desactivar características para construir el árbol de variabilidad que representa el plan de estudios.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Reubicar una \textit{feature} cambiando su padre sin perder consistencia.
+	\item Recuperar subárboles completos de una característica.
+	\item Aplicar desactivación lógica con soporte de versionado.
+	\end{itemize}
+	}
+	\storyobservation{Las operaciones sobre la jerarquía deben preservar integridad estructural y trazabilidad de cambios. Campos de entrada asociados: RF\#54 (nombre, tipo, identificador de versión, y opcionales de padre, grupo, recurso y propiedades) y RF\#62 (identificador de característica en ruta; nombre, tipo, padre y grupo opcionales).}
+\end{userstory}
+
+\begin{userstory}[]
+	\storyname{Modelado de Grupos y Relaciones Estructurales}
+	\storyepic{Modelado de Variabilidad (Estructura)}
+	\storyrfs{96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107}
+	\storypriority{Alta}
+	\storyrisk{Alta}
+	\storypoints{2.0}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El diseñador y el editor de modelo deben poder definir grupos de características, como XOR y OR, y relaciones jerárquicas para restringir cómo se pueden combinar los módulos educativos.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Crear grupos con validaciones sobre el tipo de agrupación.
+	\item Definir relaciones semánticas entre \textit{features}.
+	\item Mantener consistencia al activar, desactivar o actualizar dichas estructuras.
+	\end{itemize}
+	}
+	\storyobservation{Esta historia cubre la semántica estructural del árbol y la coherencia entre agrupaciones y relaciones. Campos de entrada asociados: RF\#98 (tipo de grupo, característica padre, cardinalidades), RF\#99 (identificador de grupo en ruta y campos opcionales), RF\#104 (tipo, origen, destino) y RF\#105 (identificador de relación en ruta y campos opcionales).}
+\end{userstory}
+
+\subsubsection*{Épica 5: Restricciones y Lógica Avanzada}
+
+\begin{userstory}[]
+	\storyname{Gestión de Restricciones Transversales}
+	\storyepic{Restricciones y Lógica Avanzada}
+	\storyrfs{58, 108, 109, 110, 111, 112, 113 (restricciones)}
+	\storypriority{Alta}
+	\storyrisk{Alta}
+	\storypoints{2.0}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El diseñador de modelo debe poder crear y gestionar reglas de exclusión e implicación complejas para modelar dependencias que no son jerárquicas, por ejemplo, si se elige A, no se puede elegir B.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Permitir crear restricciones complejas con validación de sintaxis.
+	\item Mantener control de versiones sobre las restricciones creadas.
+	\end{itemize}
+	}
+	\storyobservation{Las restricciones deben integrarse con el modelo sin romper la evolución histórica del mismo. Campos de entrada asociados: RF\#110 (identificador de versión, expresión lógica y descripción opcional) y RF\#111 (identificador de restricción en ruta; expresión lógica y descripción opcionales).}
+\end{userstory}
+
+\begin{userstory}[]
+	\storyname{Integración y Sincronización UVL}
+	\storyepic{Restricciones y Lógica Avanzada}
+	\storyrfs{36, 37, 38, 39}
+	\storypriority{Alta}
+	\storyrisk{Alta}
+	\storypoints{1.6}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El diseñador deben poder operar directamente sobre el lenguaje UVL o sincronizarlo desde la interfaz gráfica para mantener la potencia del modelado por código y la facilidad del modelado visual.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Sincronizar el modelo visual al editar el código \ac{UVL}.
+	\item Persistir el \ac{UVL} analizado y validado.
+	\end{itemize}
+	}
+	\storyobservation{La sincronización debe mantener equivalencia entre la representación textual y la representación visual del modelo. Campos de entrada asociados: RF\#37 y RF\#39 (identificador de modelo y versión en ruta, contenido \ac{UVL}).}
+\end{userstory}
+
+\subsubsection*{Épica 6: Validación y Análisis Lógico}
+
+\begin{userstory}[]
+	\storyname{Validación Lógica y Estructural del Modelo}
+	\storyepic{Validación y Análisis Lógico}
+	\storyrfs{40, 41, 43}
+	\storypriority{Alta}
+	\storyrisk{Alta}
+	\storypoints{2.0}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El revisador y el diseñador deben poder ejecutar análisis de consistencia, detectar dead features y redundancias para asegurar que el plan de estudios sea lógicamente posible y no presente errores.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Evaluar la satisfacibilidad global del modelo mediante un solucionador \textit{SAT}.
+	\item Detectar ciclos y nodos huérfanos.
+	\item Identificar \textit{dead features} y redundancias.
+	\end{itemize}
+	}
+	\storyobservation{El análisis debe advertir problemas estructurales y semánticos antes de publicar o derivar configuraciones.}
+\end{userstory}
+
+\subsubsection*{Épica 7: Derivación de Productos (Configurador)}
+
+\begin{userstory}[]
+	\storyname{Gestión de Configuraciones}
+	\storyepic{Derivación de Productos (Configurador)}
+	\storyrfs{44, 45, 46, 47, 48, 49}
+	\storypriority{Alta}
+	\storyrisk{Alta}
+	\storypoints{1.6}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El configurador debe poder crear, actualizar y persistir selecciones de características para generar itinerarios educativos específicos para un perfil o estudiante.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Guardar configuraciones asociadas a una versión publicada.
+	\item Ofrecer listado paginado de configuraciones almacenadas.
+	\item Mantener operaciones de actualización y activación sobre configuraciones persistidas.
+	\end{itemize}
+	}
+	\storyobservation{La configuración debe quedar ligada a una versión concreta del modelo para conservar su validez histórica. Campos de entrada asociados: RF\#44 (nombre, descripción opcional, identificador de versión y lista de características) y RF\#47 (identificador de configuración en ruta; nombre, descripción y lista de características opcionales).}
+\end{userstory}
+
+\begin{userstory}[]
+	\storyname{Validación y Generación Automática de Configuraciones}
+	\storyepic{Derivación de Productos (Configurador)}
+	\storyrfs{42, 50, 51, 52}
+	\storypriority{Alta}
+	\storyrisk{Alta}
+	\storypoints{2.0}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El configurador y el estudiante deben poder validar si una selección es consistente y generar automáticamente opciones válidas u optimizadas para encontrar el mejor camino formativo sin violar prerrequisitos.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Validar selecciones sin necesidad de persistirlas.
+	\item Ejecutar algoritmos de optimización para proponer mejores configuraciones.
+	\end{itemize}
+	}
+	\storyobservation{La generación automática debe apoyar la toma de decisiones sin obligar a guardar resultados intermedios.}
+\end{userstory}
+
+\begin{userstory}[]
+	\storyname{Enriquecimiento con Recursos y Taxonomías}
+	\storyepic{Derivación de Productos (Configurador)}
+	\storyrfs{59, 60, 61, 113 (etiquetas), 114, 115, 116, 117, 118, 119}
+	\storypriority{Media}
+	\storyrisk{Media}
+	\storypoints{1.4}
+	\storyprogrammer{Jose Luis Echemendia López}
+	\storydescription{El editor de modelo y el configurador deben poder etiquetar características y vincular recursos externos, como archivos o enlaces, para añadir contenido pedagógico real a la estructura lógica del modelo.}
+	\storyacceptancecriteria{
+	\begin{itemize}
+	\item Asociar y desasociar etiquetas a \textit{features}.
+	\item Cargar recursos y asignar propietarios.
+	\item Mantener versionada la información asociada a los recursos.
+	\end{itemize}
+	}
+	\storyobservation{Los recursos y etiquetas deben servir como apoyo semántico y documental para el uso del modelo. Campos de entrada asociados: RF\#115 (nombre, descripción opcional), RF\#118 (metadatos completos del recurso y contenido) y RF\#119 (identificador de recurso en ruta y campos opcionales, con restricción sobre propietario).}
+\end{userstory}
 
 
 \subsection{Estimación de esfuerzo por historia de usuarios}
@@ -788,6 +1238,8 @@ Este es un ejemplo de cita \citep{Mathew2010}
 
 \begin{userstory}[tb:prueba]
 	\storyname{Cargar archivo}
+	\storyepic{Ejemplo de plantilla}
+	\storyrfs{Ejemplo}
 	\storyuser{Especialista}
 	\storyiter{1}
 	\storypriority{Alta}
@@ -801,7 +1253,7 @@ Este es un ejemplo de cita \citep{Mathew2010}
 	\item blanco
 	\end{itemize}
 	}
-	\storyobservation{En caso de que el usuario no cargue un archivo, el sistema debe mostrar un mensaje de alerta con dicha explicación. Si se introduce un archivo que contiene caracteres no válidos o falta alguno de los elementos necesarios para la ejecución del módulo, este debe lanzar la excepción correspondiente.En caso de que el usuario no cargue un archivo, el sistema debe mostrar un mensaje de alerta con dicha explicación. Si se introduce un archivo que contiene caracteres no válidos o falta alguno de los elementos necesarios para la ejecución del módulo, este debe lanzar la excepción correspondiente.}
+	\storyacceptancecriteria{En caso de que el usuario no cargue un archivo, el sistema debe mostrar un mensaje de alerta con dicha explicación. Si se introduce un archivo que contiene caracteres no válidos o falta alguno de los elementos necesarios para la ejecución del módulo, este debe lanzar la excepción correspondiente.}
 	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
 \end{userstory}
 

@@ -1049,6 +1049,8 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \newcommand{\colorentry}[1]{\cellcolor{blue!20} #1}
 
 \newcommand{\storyname}[1]{\def\@storyname{#1}}
+\newcommand{\storyepic}[1]{\def\@storyepic{#1}}
+\newcommand{\storyrfs}[1]{\def\@storyrfs{#1}}
 \newcommand{\storyuser}[1]{\def\@storyuser{#1}}
 \newcommand{\storyiter}[1]{\def\@storyiter{#1}}
 \newcommand{\storypriority}[1]{\def\@storypriority{#1}}
@@ -1056,6 +1058,7 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \newcommand{\storypoints}[1]{\def\@storypoints{#1}}
 \newcommand{\storyrealpoints}[1]{\def\@storyrealpoints{#1}}
 \newcommand{\storydescription}[1]{\def\@storydescription{#1}}
+\newcommand{\storyacceptancecriteria}[1]{\def\@storyacceptancecriteria{#1}}
 \newcommand{\storyobservation}[1]{\def\@storyobservation{#1}}
 \newcommand{\storyinterface}[1]{\def\@storyinterface{#1}}
 \newcommand{\storyprogrammer}[1]{\def\@storyprogrammer{#1}}
@@ -1063,12 +1066,15 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \newcommand*{\@clruserstorycmds}{
 \let\@storydescription\undefined
 \let\@storyname\undefined
+\let\@storyepic\undefined
+\let\@storyrfs\undefined
 \let\@storyuser\undefined
 \let\@storyiter\undefined
 \let\@storypriority\undefined
 \let\@storyrisk\undefined
 \let\@storypoints\undefined
 \let\@storyrealpoints\undefined
+\let\@storyacceptancecriteria\undefined
 \let\@storyobservation\undefined
 \let\@storyinterface\undefined
 \let\@storyprogrammer\undefined
@@ -1082,11 +1088,11 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \ifx\@storydescription\undefined\relax
 \PackageError{Thesis}{You need to define the command \protect\storydescription\space to continue}{}
 \fi
-\ifx\@storyuser\undefined\relax
-\PackageError{Thesis}{You need to define the command \protect\storyuser\space to continue}{}
+\ifx\@storyepic\undefined\relax
+\PackageError{Thesis}{You need to define the command \protect\storyepic\space to continue}{}
 \fi
-\ifx\@storyiter\undefined\relax
-\PackageError{Thesis}{You need to define the command \protect\storyiter\space to continue}{}
+\ifx\@storyrfs\undefined\relax
+\PackageError{Thesis}{You need to define the command \protect\storyrfs\space to continue}{}
 \fi
 \ifx\@storypriority\undefined\relax
 \PackageError{Thesis}{You need to define the command \protect\storypriority\space to continue}{}
@@ -1100,8 +1106,8 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \ifx\@storyprogrammer\undefined\relax
 \PackageError{Thesis}{You need to define the command \protect\storyprogrammer\space to continue}{}
 \fi
-\ifx\@storyobservation\undefined\relax
-\PackageError{Thesis}{You need to define the command \protect\storyobservation\space to continue}{}
+\ifx\@storyacceptancecriteria\undefined\relax
+\PackageError{Thesis}{You need to define the command \protect\storyacceptancecriteria\space to continue}{}
 \fi
 }
 
@@ -1135,12 +1141,18 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \endlastfoot
 \hhline{*{2}{-}}
 \textbf{Número:} \thestorycnt & \textbf{Nombre:} \@storyname\\ \hline
-\multicolumn{2}{|p{0.97\linewidth}|}{\textbf{Usuario:} \@storyuser} \\ \hline
+\multicolumn{2}{|p{0.97\linewidth}|}{\textbf{Épica:} \@storyepic} \\ \hline
 \textbf{Prioridad en negocio:} \@storypriority & \textbf{Riesgo en desarrollo:} \@storyrisk\\ \hline
-\textbf{Puntos estimados:} \@storypoints &  \textbf{Iteración asignada:} \@storyiter  \\ \hline
+\multicolumn{2}{|p{0.97\linewidth}|}{\textbf{Puntos estimados:} \@storypoints}  \\ \hline
+\multicolumn{2}{|p{0.97\linewidth}|}{\textbf{RFs cubiertos:} \@storyrfs} \\ \hline
 \multicolumn{2}{|p{0.97\linewidth}|}{\textbf{Programador responsable:} \@storyprogrammer} \\ \hline
 \multicolumn{2}{|p{0.97\linewidth}|}{\textbf{Descripción:} \@storydescription}\\ \hline
+\multicolumn{2}{|p{0.97\linewidth}|}{\textbf{Criterios de aceptación:} \@storyacceptancecriteria}
+\ifx\@storyobservation\undefined\relax
+\else
+\\ \hline
 \multicolumn{2}{|p{0.97\linewidth}|}{\textbf{Observaciones:} \@storyobservation}
+\fi
 \ifx\@storyinterface\undefined\relax
 \else
 \\ \hline
