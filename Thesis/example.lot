@@ -12,34 +12,25 @@
 \contentsline {table}{\numberline {2.2}{\ignorespaces Jerarquía de roles estáticos del sistema. Fuente: elaboración propia.}}{54}{table.2.2}%
 \contentsline {table}{\numberline {2.3}{\ignorespaces Requisitos funcionales del sistema. Fuente: Elaboración propia. }}{56}{table.2.3}%
 \contentsline {table}{\numberline {2.4}{\ignorespaces Historia de usuario \# 1}}{73}{table.2.4}%
-\contentsline {table}{\numberline {2.5}{\ignorespaces Historia de usuario \# 2}}{74}{table.2.5}%
-\contentsline {table}{\numberline {2.6}{\ignorespaces Historia de usuario \# 3}}{75}{table.2.6}%
-\contentsline {table}{\numberline {2.7}{\ignorespaces Historia de usuario \# 4}}{75}{table.2.7}%
-\contentsline {table}{\numberline {2.8}{\ignorespaces Historia de usuario \# 5}}{76}{table.2.8}%
-\contentsline {table}{\numberline {2.9}{\ignorespaces Historia de usuario \# 6}}{76}{table.2.9}%
-\contentsline {table}{\numberline {2.10}{\ignorespaces Historia de usuario \# 7}}{77}{table.2.10}%
-\contentsline {table}{\numberline {2.11}{\ignorespaces Historia de usuario \# 8}}{78}{table.2.11}%
-\contentsline {table}{\numberline {2.12}{\ignorespaces Historia de usuario \# 9}}{78}{table.2.12}%
-\contentsline {table}{\numberline {2.13}{\ignorespaces Historia de usuario \# 10}}{79}{table.2.13}%
-\contentsline {table}{\numberline {2.14}{\ignorespaces Historia de usuario \# 11}}{79}{table.2.14}%
-\contentsline {table}{\numberline {2.15}{\ignorespaces Historia de usuario \# 12}}{80}{table.2.15}%
-\contentsline {table}{\numberline {2.16}{\ignorespaces Historia de usuario \# 13}}{81}{table.2.16}%
-\contentsline {table}{\numberline {2.17}{\ignorespaces Historia de usuario \# 14}}{81}{table.2.17}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Estimación de esfuerzo por historia de usuario}}{74}{table.2.5}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces Plan de duración de las iteraciones}}{75}{table.2.6}%
+\contentsline {table}{\numberline {2.7}{\ignorespaces Plan de entregas. }}{76}{table.2.7}%
+\contentsline {table}{\numberline {2.8}{\ignorespaces Tarjeta CRC \# 1}}{76}{table.2.8}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Feasible triples for highly variable Grid, MLMMH.}}{89}{table.3.1}%
-\contentsline {table}{\numberline {3.1}{\ignorespaces continued from previous page}}{90}{table.3.1}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Historia de usuario \# 15}}{90}{table.3.2}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Tarjeta CRC \# 1}}{91}{table.3.3}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Tarjeta CRC \# 2}}{91}{table.3.4}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces Estimación de esfuerzo por historia de usuario}}{92}{table.3.5}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces Estimación de esfuerzo por historia de usuario}}{92}{table.3.6}%
-\contentsline {table}{\numberline {3.7}{\ignorespaces Plan de duración de las iteraciones}}{92}{table.3.7}%
-\contentsline {table}{\numberline {3.8}{\ignorespaces Tarea de ingeniería \# 1}}{93}{table.3.8}%
-\contentsline {table}{\numberline {3.9}{\ignorespaces Tarea de desarrollo \# 1}}{93}{table.3.9}%
-\contentsline {table}{\numberline {3.10}{\ignorespaces Tarea de desarrollo \# 2}}{93}{table.3.10}%
-\contentsline {table}{\numberline {3.11}{\ignorespaces Tarea de ingeniería \# 2}}{93}{table.3.11}%
-\contentsline {table}{\numberline {3.12}{\ignorespaces Prueba de aceptación \# 1}}{94}{table.3.12}%
-\contentsline {table}{\numberline {3.13}{\ignorespaces Prueba de aceptación \# 2}}{94}{table.3.13}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Feasible triples for highly variable Grid, MLMMH.}}{83}{table.3.1}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces continued from previous page}}{84}{table.3.1}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Historia de usuario \# 2}}{84}{table.3.2}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Tarjeta CRC \# 2}}{85}{table.3.3}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Tarjeta CRC \# 3}}{85}{table.3.4}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Estimación de esfuerzo por historia de usuario}}{86}{table.3.5}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Estimación de esfuerzo por historia de usuario}}{86}{table.3.6}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces Plan de duración de las iteraciones}}{86}{table.3.7}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces Tarea de ingeniería \# 1}}{87}{table.3.8}%
+\contentsline {table}{\numberline {3.9}{\ignorespaces Tarea de desarrollo \# 1}}{87}{table.3.9}%
+\contentsline {table}{\numberline {3.10}{\ignorespaces Tarea de desarrollo \# 2}}{87}{table.3.10}%
+\contentsline {table}{\numberline {3.11}{\ignorespaces Tarea de ingeniería \# 2}}{87}{table.3.11}%
+\contentsline {table}{\numberline {3.12}{\ignorespaces Prueba de aceptación \# 1}}{88}{table.3.12}%
+\contentsline {table}{\numberline {3.13}{\ignorespaces Prueba de aceptación \# 2}}{88}{table.3.13}%
 \addvspace {10\p@ }
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
@@ -217,5 +208,46 @@
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Historia de usuario \# 3}}{104}{table.Alph1.1}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Historia de usuario \# 4}}{104}{table.Alph1.2}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces Historia de usuario \# 5}}{105}{table.Alph1.3}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces Historia de usuario \# 6}}{105}{table.Alph1.4}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces Historia de usuario \# 7}}{106}{table.Alph1.5}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces Historia de usuario \# 8}}{106}{table.Alph1.6}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces Historia de usuario \# 9}}{107}{table.Alph1.7}%
+\contentsline {table}{\numberline {A.8}{\ignorespaces Historia de usuario \# 10}}{107}{table.Alph1.8}%
+\contentsline {table}{\numberline {A.9}{\ignorespaces Historia de usuario \# 11}}{108}{table.Alph1.9}%
+\contentsline {table}{\numberline {A.10}{\ignorespaces Historia de usuario \# 12}}{108}{table.Alph1.10}%
+\contentsline {table}{\numberline {A.11}{\ignorespaces Historia de usuario \# 13}}{109}{table.Alph1.11}%
+\contentsline {table}{\numberline {A.12}{\ignorespaces Historia de usuario \# 14}}{109}{table.Alph1.12}%
+\contentsline {table}{\numberline {A.13}{\ignorespaces Historia de usuario \# 15}}{110}{table.Alph1.13}%
+\contentsline {table}{\numberline {A.14}{\ignorespaces Historia de usuario \# 16}}{110}{table.Alph1.14}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {B.1}{\ignorespaces Tarjeta CRC \# 4}}{112}{table.Alph2.1}%
+\contentsline {table}{\numberline {B.2}{\ignorespaces Tarjeta CRC \# 5}}{112}{table.Alph2.2}%
+\contentsline {table}{\numberline {B.3}{\ignorespaces Tarjeta CRC \# 6}}{112}{table.Alph2.3}%
+\contentsline {table}{\numberline {B.4}{\ignorespaces Tarjeta CRC \# 7}}{113}{table.Alph2.4}%
+\contentsline {table}{\numberline {B.5}{\ignorespaces Tarjeta CRC \# 8}}{113}{table.Alph2.5}%
+\contentsline {table}{\numberline {B.6}{\ignorespaces Tarjeta CRC \# 9}}{113}{table.Alph2.6}%
+\contentsline {table}{\numberline {B.7}{\ignorespaces Tarjeta CRC \# 10}}{113}{table.Alph2.7}%
+\contentsline {table}{\numberline {B.8}{\ignorespaces Tarjeta CRC \# 11}}{114}{table.Alph2.8}%
+\contentsline {table}{\numberline {B.9}{\ignorespaces Tarjeta CRC \# 12}}{114}{table.Alph2.9}%
+\contentsline {table}{\numberline {B.10}{\ignorespaces Tarjeta CRC \# 13}}{114}{table.Alph2.10}%
+\contentsline {table}{\numberline {B.11}{\ignorespaces Tarjeta CRC \# 14}}{114}{table.Alph2.11}%
+\contentsline {table}{\numberline {B.12}{\ignorespaces Tarjeta CRC \# 15}}{114}{table.Alph2.12}%
+\contentsline {table}{\numberline {B.13}{\ignorespaces Tarjeta CRC \# 16}}{115}{table.Alph2.13}%
+\contentsline {table}{\numberline {B.14}{\ignorespaces Tarjeta CRC \# 17}}{115}{table.Alph2.14}%
+\contentsline {table}{\numberline {B.15}{\ignorespaces Tarjeta CRC \# 18}}{115}{table.Alph2.15}%
+\contentsline {table}{\numberline {B.16}{\ignorespaces Tarjeta CRC \# 19}}{116}{table.Alph2.16}%
+\contentsline {table}{\numberline {B.17}{\ignorespaces Tarjeta CRC \# 20}}{116}{table.Alph2.17}%
+\contentsline {table}{\numberline {B.18}{\ignorespaces Tarjeta CRC \# 21}}{116}{table.Alph2.18}%
+\contentsline {table}{\numberline {B.19}{\ignorespaces Tarjeta CRC \# 22}}{116}{table.Alph2.19}%
+\contentsline {table}{\numberline {B.20}{\ignorespaces Tarjeta CRC \# 23}}{117}{table.Alph2.20}%
+\contentsline {table}{\numberline {B.21}{\ignorespaces Tarjeta CRC \# 24}}{117}{table.Alph2.21}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

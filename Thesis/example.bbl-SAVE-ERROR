@@ -237,6 +237,36 @@
       \field{title}{Teaching in a Digital Age: Guidelines for Designing Teaching and Learning}
       \field{year}{2019}
     \endentry
+    \entry{beck2000extreme}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c5dcbe71f60a8d55caa11fe1493614d0}{%
+           family={Beck},
+           familyi={B\bibinitperiod},
+           given={Kent},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{c5dcbe71f60a8d55caa11fe1493614d0}
+      \strng{fullhash}{c5dcbe71f60a8d55caa11fe1493614d0}
+      \strng{bibnamehash}{c5dcbe71f60a8d55caa11fe1493614d0}
+      \strng{authorbibnamehash}{c5dcbe71f60a8d55caa11fe1493614d0}
+      \strng{authornamehash}{c5dcbe71f60a8d55caa11fe1493614d0}
+      \strng{authorfullhash}{c5dcbe71f60a8d55caa11fe1493614d0}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Vid. pág. 33}
+      \field{title}{Extreme programming explained: embrace change}
+      \field{year}{2000}
+      \field{pages}{33}
+      \range{pages}{1}
+    \endentry
     \entry{benavides2010automated}{article}{}
       \name{author}{3}{}{%
         {{un=2,uniquepart=given,hash=5f05896a71c635c8921390a6dfcaad79}{%
@@ -548,6 +578,35 @@
       \verb{doi}
       \verb 10.1109/ICTEE.2012.6208608
       \endverb
+    \endentry
+    \entry{cohn2004user}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d33712bcde2d63bad054a832b61d01e8}{%
+           family={Cohn},
+           familyi={C\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{fullhash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{bibnamehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authorbibnamehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authornamehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authorfullhash}{d33712bcde2d63bad054a832b61d01e8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0321205681}
+      \field{note}{Capítulo 10: Epics}
+      \field{title}{User Stories Applied: For Agile Software Development}
+      \field{year}{2004}
     \endentry
     \entry{colantonio2010role}{article}{}
       \name{author}{4}{}{%
@@ -1669,6 +1728,64 @@
       \field{pages}{231\bibrangedash 240}
       \range{pages}{10}
     \endentry
+    \entry{menzinsky2018historias}{incollection}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=2e065a92685b917358f46943894edf05}{%
+           family={MenZinsky},
+           familyi={M\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=54cb8f6e81aefa8174a86f7a7b2eb4d7}{%
+           family={López},
+           familyi={L\bibinitperiod},
+           given={Gertrudis},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38d6ff8e936016742c7c478d770844eb}{%
+           family={Palacio},
+           familyi={P\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=23d7fc0ea71111f10e100fc642efefca}{%
+           family={Sobrino},
+           familyi={S\bibinitperiod},
+           given={Miguel\bibnamedelima Ángel},
+           giveni={M\bibinitperiod\bibinitdelim Á\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=41e4659cdd560cfaa74d096ce3578ba2}{%
+           family={Álvarez},
+           familyi={Á\bibinitperiod},
+           given={Rubén},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=276d7b9b8d8707da5c0e60beda1221d1}{%
+           family={Rivas},
+           familyi={R\bibinitperiod},
+           given={Verónica},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0d2c3c8c0302228ebc38bd9d0edec00d}
+      \strng{fullhash}{0d2c3c8c0302228ebc38bd9d0edec00d}
+      \strng{bibnamehash}{0d2c3c8c0302228ebc38bd9d0edec00d}
+      \strng{authorbibnamehash}{0d2c3c8c0302228ebc38bd9d0edec00d}
+      \strng{authornamehash}{0d2c3c8c0302228ebc38bd9d0edec00d}
+      \strng{authorfullhash}{0d2c3c8c0302228ebc38bd9d0edec00d}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Ingeniería de requisitos ágil}
+      \field{note}{Vid. pág. 33}
+      \field{title}{Historias de usuario}
+      \field{year}{2018}
+      \field{pages}{33}
+      \range{pages}{1}
+    \endentry
     \entry{meurer2017sympy}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1446aace9689653843b642737d33692d}{%
@@ -2060,6 +2177,35 @@
       \field{edition}{8}
       \field{title}{Software Engineering: A Practitioner's Approach}
       \field{year}{2014}
+    \endentry
+    \entry{prieto2021estimacion}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=868ee6d5ff54dc332285c9d16a8c509e}{%
+           family={Prieto},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {es}%
+      }
+      \strng{namehash}{868ee6d5ff54dc332285c9d16a8c509e}
+      \strng{fullhash}{868ee6d5ff54dc332285c9d16a8c509e}
+      \strng{bibnamehash}{868ee6d5ff54dc332285c9d16a8c509e}
+      \strng{authorbibnamehash}{868ee6d5ff54dc332285c9d16a8c509e}
+      \strng{authornamehash}{868ee6d5ff54dc332285c9d16a8c509e}
+      \strng{authorfullhash}{868ee6d5ff54dc332285c9d16a8c509e}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Iteckne}
+      \field{title}{Estimación de esfuerzo en desarrollo de software ágil: Estudio del estado actual en Bogotá}
+      \field{volume}{13}
+      \field{year}{2021}
     \endentry
     \entry{celery2024docs}{misc}{}
       \name{author}{1}{}{%

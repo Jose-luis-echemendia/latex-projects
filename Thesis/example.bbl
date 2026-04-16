@@ -267,6 +267,42 @@
       \field{pages}{33}
       \range{pages}{1}
     \endentry
+    \entry{beck2004extreme}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c5dcbe71f60a8d55caa11fe1493614d0}{%
+           family={Beck},
+           familyi={B\bibinitperiod},
+           given={Kent},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db962664752cf07563d309bf97320bc5}{%
+           family={Andres},
+           familyi={A\bibinitperiod},
+           given={Cynthia},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{05a972d2322d7190412c8633c5806a97}
+      \strng{fullhash}{05a972d2322d7190412c8633c5806a97}
+      \strng{bibnamehash}{05a972d2322d7190412c8633c5806a97}
+      \strng{authorbibnamehash}{05a972d2322d7190412c8633c5806a97}
+      \strng{authornamehash}{05a972d2322d7190412c8633c5806a97}
+      \strng{authorfullhash}{05a972d2322d7190412c8633c5806a97}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{isbn}{978-0321278654}
+      \field{note}{Capítulo sobre planificación de entregas}
+      \field{title}{Extreme Programming Explained: Embrace Change}
+      \field{year}{2004}
+    \endentry
     \entry{benavides2010automated}{article}{}
       \name{author}{3}{}{%
         {{un=2,uniquepart=given,hash=5f05896a71c635c8921390a6dfcaad79}{%
@@ -2178,6 +2214,35 @@
       \field{title}{Software Engineering: A Practitioner's Approach}
       \field{year}{2014}
     \endentry
+    \entry{prieto2021estimacion}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=868ee6d5ff54dc332285c9d16a8c509e}{%
+           family={Prieto},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {es}%
+      }
+      \strng{namehash}{868ee6d5ff54dc332285c9d16a8c509e}
+      \strng{fullhash}{868ee6d5ff54dc332285c9d16a8c509e}
+      \strng{bibnamehash}{868ee6d5ff54dc332285c9d16a8c509e}
+      \strng{authorbibnamehash}{868ee6d5ff54dc332285c9d16a8c509e}
+      \strng{authornamehash}{868ee6d5ff54dc332285c9d16a8c509e}
+      \strng{authorfullhash}{868ee6d5ff54dc332285c9d16a8c509e}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Iteckne}
+      \field{title}{Estimación de esfuerzo en desarrollo de software ágil: Estudio del estado actual en Bogotá}
+      \field{volume}{13}
+      \field{year}{2021}
+    \endentry
     \entry{celery2024docs}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=a99c0bde6295b6e85efe5744173697f4}{%
@@ -3480,6 +3545,35 @@
       \field{year}{2007}
       \field{pages}{148\bibrangedash 155}
       \range{pages}{8}
+    \endentry
+    \entry{wells2009extreme}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c1ca05ac724c94a216cce6ee20197f4b}{%
+           family={Wells},
+           familyi={W\bibinitperiod},
+           given={Don},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c1ca05ac724c94a216cce6ee20197f4b}
+      \strng{fullhash}{c1ca05ac724c94a216cce6ee20197f4b}
+      \strng{bibnamehash}{c1ca05ac724c94a216cce6ee20197f4b}
+      \strng{authorbibnamehash}{c1ca05ac724c94a216cce6ee20197f4b}
+      \strng{authornamehash}{c1ca05ac724c94a216cce6ee20197f4b}
+      \strng{authorfullhash}{c1ca05ac724c94a216cce6ee20197f4b}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{http://www.extremeprogramming.org/}}
+      \field{title}{Extreme Programming: A Gentle Introduction}
+      \field{urlday}{15}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2009}
+      \field{urldateera}{ce}
     \endentry
     \entry{pysat2018}{inproceedings}{}
       \name{author}{5}{}{%

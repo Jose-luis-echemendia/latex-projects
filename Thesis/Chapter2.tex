@@ -720,7 +720,7 @@ grado de complejidad para implementarlas. Entonces, se determinará que su perí
 1, 2 o 4 días en un equivalente de 0.2, 0.4 y 0.8 en semanas, respectivamente, para así calcular el tiempo
 estimado del proyecto. \citep{beck2000extreme}
 
-Las \ac{HU} se agrupan y organizan en \textbf{épicas}, las cuales son etiquetas que representan conjuntos 
+Las \ac{HU} se agrupan y organizan en épicas, las cuales son etiquetas que representan conjuntos 
 de historias de usuario relacionadas entre sí por un objetivo funcional o temático de mayor envergadura. 
 Una épica no es más que una \ac{HU} de gran tamaño que aún no ha sido desglosada en historias más pequeñas y 
 manejables \citep{cohn2004user}. Las épicas sirven como mecanismo de organización jerárquica dentro del 
@@ -729,7 +729,7 @@ sin perder de vista la trazabilidad entre las historias individuales y los grand
 En el contexto de esta investigación, las épicas constituyen la capa superior de organización de los requisitos 
 funcionales, agrupando las \ac{HU} que contribuyen a un mismo propósito dentro del sistema.
 
-Las épidas definidas para esta investigación son las siguientes:
+Las épicas definidas para esta investigación son las siguientes:
 
 \begin{itemize}
 	\item \textbf{Épica 1: Gestión de Identidad y Acceso}: Agrupa las historias relacionadas con la autenticación, gestión de usuarios y control de acceso al sistema.
@@ -742,205 +742,7 @@ Las épidas definidas para esta investigación son las siguientes:
 \end{itemize}
 
 A continuación, se presenta un ejemplo de las \ac{HU} confeccionadas, el resto se puede encontrar en el
-anexo A.
-
-\begin{userstory}[]
-	\storyname{Autenticación y Autogestión de cuenta}
-	\storyepic{Gestión de Identidad y Acceso}
-	\storyrfs{1, 2, 3, 4, 5, 8}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{1.0}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El usuario del sistema debe poder iniciar sesión, cerrar sesión, gestionar su perfil y recuperar su acceso para garantizar la seguridad de sus datos y su identidad en la plataforma.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Permitir registro e inicio con correo y contraseña.
-	\item Procesar recuperación de acceso mediante \textit{token} enviado por correo.
-	\item Permitir la edición del perfil propio sin intervención administrativa.
-	\end{itemize}
-	}
-	\storyobservation{La historia concentra autenticación, recuperación de acceso y autogestión del perfil como capacidades base del módulo de identidad. Campos de entrada asociados: RF\#1 y RF\#3 (correo electrónico, contraseña), RF\#5 (token y nueva contraseña; o contraseña actual y nueva contraseña), RF\#8 (correo electrónico opcional).}
-\end{userstory}
-
-\begin{userstory}[]
-	\storyname{Administración de Usuarios y Permisos}
-	\storyepic{Gestión de Identidad y Acceso}
-	\storyrfs{6, 7, 9, 10, 11}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{1.2}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El administrador debe poder gestionar el listado de usuarios, sus roles y su estado activo o inactivo para controlar quién accede a la plataforma y qué acciones puede realizar según la jerarquía estática.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Listar y filtrar usuarios por rol o nombre.
-	\item Modificar el rol asignado a cada usuario.
-	\item Desactivar y activar cuentas sin eliminar la información persistida.
-	\end{itemize}
-	}
-	\storyobservation{La gestión de cuentas debe preservar la trazabilidad administrativa y evitar borrados físicos sobre usuarios existentes. Campos de entrada asociados: RF\#9 (identificador de usuario en ruta y rol en consulta).}
-\end{userstory}
-
-\subsubsection*{Épica 2: Gobernanza de Dominios Curriculares}
-
-\begin{userstory}[]
-	\storyname{Gestión de Dominios de Conocimiento}
-	\storyepic{Gobernanza de Dominios Curriculares}
-	\storyrfs{12, 13, 14, 15, 16, 17, 18, 19}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{1.2}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El administrador debe poder crear, actualizar y supervisar los dominios curriculares para establecer el contexto de alto nivel donde se alojarán los Feature Models.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Crear dominios con nombre y descripción.
-	\item Activar y desactivar dominios conforme a su estado de uso.
-	\item Obtener cada dominio junto con sus modelos asociados.
-	\end{itemize}
-	}
-	\storyobservation{El dominio funciona como unidad de organización para agrupar y consultar los modelos vinculados. Campos de entrada asociados: RF\#14 (nombre, descripción opcional) y RF\#15 (identificador de dominio en ruta; nombre y descripción opcionales).}
-\end{userstory}
-
-\subsubsection*{Épica 3: Ciclo de Vida del Feature Model (FM)}
-
-\begin{userstory}[]
-	\storyname{Gestión Operativa de Feature Models}
-	\storyepic{Ciclo de Vida del Feature Model (FM)}
-	\storyrfs{20, 21, 22, 23, 24, 25}
-	\storypriority{Alta}
-	\storyrisk{Alta}
-	\storypoints{1.4}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El diseñador de modelo debe poder crear, listar y modificar los metadatos de los Feature Models dentro de un dominio para mantener un catálogo organizado de planes de estudio o arquitecturas curriculares.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Crear modelos asociados a un dominio válido.
-	\item Actualizar metadatos preservando la integridad del modelo.
-	\item Ofrecer paginación y filtrado para la consulta de modelos.
-	\end{itemize}
-	}
-	\storyobservation{Esta historia cubre la administración operativa del catálogo de modelos, sin entrar todavía en su estructura interna. Campos de entrada asociados: RF\#21 (nombre, descripción opcional, identificador de dominio) y RF\#23 (identificador de modelo en ruta; nombre, descripción y estado activo opcionales).}
-\end{userstory}
-
-\begin{userstory}[]
-	\storyname{Gestión de Versiones y Publicación (Copy-on-Write)}
-	\storyepic{Ciclo de Vida del Feature Model (FM)}
-	\storyrfs{26, 27, 28, 29, 30, 31, 32}
-	\storypriority{Alta}
-	\storyrisk{Alta}
-	\storypoints{2.0}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El diseñador de modelo y el revisador deben poder crear versiones, publicar snapshots y archivar versiones antiguas para garantizar la trazabilidad y evolución del currículo sin afectar configuraciones previas.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Generar nuevas versiones mediante técnica \textit{copy-on-write}.
-	\item Validar la versión antes de su publicación oficial.
-	\item Permitir la recuperación de versiones archivadas.
-	\end{itemize}
-	}
-	\storyobservation{La publicación debe conservar el historial del modelo y permitir volver a estados previos sin pérdida de información. Campos de entrada asociados: RF\#28 (identificador de modelo en ruta; identificador de versión origen y descripción opcionales).}
-\end{userstory}
-
-\begin{userstory}[]
-	\storyname{Análisis de Métricas y Exportación}
-	\storyepic{Ciclo de Vida del Feature Model (FM)}
-	\storyrfs{34, 35}
-	\storypriority{Media}
-	\storyrisk{Media}
-	\storypoints{1.0}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El diseñador y el observador deben poder obtener estadísticas y exportar el modelo en múltiples formatos, como UVL, XML y JSON, para compartirlo con otras herramientas o analizar su complejidad.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Calcular métricas de la versión publicada más reciente o de una versión específica.
-	\item Exportar el modelo en formatos técnicos como \ac{UVL} y \textit{dimacs}.
-	\item Exportar el modelo en formatos visuales como \textit{mermaid} y \textit{dot}.
-	\end{itemize}
-	}
-	\storyobservation{La exportación debe ser consistente con la versión consultada y servir tanto para intercambio técnico como para inspección visual.}
-\end{userstory}
-
-\subsubsection*{Épica 4: Modelado de Variabilidad (Estructura)}
-
-\begin{userstory}[]
-	\storyname{Edición de la Jerarquía de Características}
-	\storyepic{Modelado de Variabilidad (Estructura)}
-	\storyrfs{53, 54, 55, 56, 62, 63, 94, 95}
-	\storypriority{Alta}
-	\storyrisk{Alta}
-	\storypoints{2.0}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El diseñador y el editor de modelo deben poder crear, mover, actualizar y desactivar características para construir el árbol de variabilidad que representa el plan de estudios.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Reubicar una \textit{feature} cambiando su padre sin perder consistencia.
-	\item Recuperar subárboles completos de una característica.
-	\item Aplicar desactivación lógica con soporte de versionado.
-	\end{itemize}
-	}
-	\storyobservation{Las operaciones sobre la jerarquía deben preservar integridad estructural y trazabilidad de cambios. Campos de entrada asociados: RF\#54 (nombre, tipo, identificador de versión, y opcionales de padre, grupo, recurso y propiedades) y RF\#62 (identificador de característica en ruta; nombre, tipo, padre y grupo opcionales).}
-\end{userstory}
-
-\begin{userstory}[]
-	\storyname{Modelado de Grupos y Relaciones Estructurales}
-	\storyepic{Modelado de Variabilidad (Estructura)}
-	\storyrfs{96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107}
-	\storypriority{Alta}
-	\storyrisk{Alta}
-	\storypoints{2.0}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El diseñador y el editor de modelo deben poder definir grupos de características, como XOR y OR, y relaciones jerárquicas para restringir cómo se pueden combinar los módulos educativos.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Crear grupos con validaciones sobre el tipo de agrupación.
-	\item Definir relaciones semánticas entre \textit{features}.
-	\item Mantener consistencia al activar, desactivar o actualizar dichas estructuras.
-	\end{itemize}
-	}
-	\storyobservation{Esta historia cubre la semántica estructural del árbol y la coherencia entre agrupaciones y relaciones. Campos de entrada asociados: RF\#98 (tipo de grupo, característica padre, cardinalidades), RF\#99 (identificador de grupo en ruta y campos opcionales), RF\#104 (tipo, origen, destino) y RF\#105 (identificador de relación en ruta y campos opcionales).}
-\end{userstory}
-
-\subsubsection*{Épica 5: Restricciones y Lógica Avanzada}
-
-\begin{userstory}[]
-	\storyname{Gestión de Restricciones Transversales}
-	\storyepic{Restricciones y Lógica Avanzada}
-	\storyrfs{58, 108, 109, 110, 111, 112, 113 (restricciones)}
-	\storypriority{Alta}
-	\storyrisk{Alta}
-	\storypoints{2.0}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El diseñador de modelo debe poder crear y gestionar reglas de exclusión e implicación complejas para modelar dependencias que no son jerárquicas, por ejemplo, si se elige A, no se puede elegir B.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Permitir crear restricciones complejas con validación de sintaxis.
-	\item Mantener control de versiones sobre las restricciones creadas.
-	\end{itemize}
-	}
-	\storyobservation{Las restricciones deben integrarse con el modelo sin romper la evolución histórica del mismo. Campos de entrada asociados: RF\#110 (identificador de versión, expresión lógica y descripción opcional) y RF\#111 (identificador de restricción en ruta; expresión lógica y descripción opcionales).}
-\end{userstory}
-
-\begin{userstory}[]
-	\storyname{Integración y Sincronización UVL}
-	\storyepic{Restricciones y Lógica Avanzada}
-	\storyrfs{36, 37, 38, 39}
-	\storypriority{Alta}
-	\storyrisk{Alta}
-	\storypoints{1.6}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El diseñador deben poder operar directamente sobre el lenguaje UVL o sincronizarlo desde la interfaz gráfica para mantener la potencia del modelado por código y la facilidad del modelado visual.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Sincronizar el modelo visual al editar el código \ac{UVL}.
-	\item Persistir el \ac{UVL} analizado y validado.
-	\end{itemize}
-	}
-	\storyobservation{La sincronización debe mantener equivalencia entre la representación textual y la representación visual del modelo. Campos de entrada asociados: RF\#37 y RF\#39 (identificador de modelo y versión en ruta, contenido \ac{UVL}).}
-\end{userstory}
-
-\subsubsection*{Épica 6: Validación y Análisis Lógico}
+anexo \ref{anx:hu}.
 
 \begin{userstory}[]
 	\storyname{Validación Lógica y Estructural del Modelo}
@@ -948,92 +750,148 @@ anexo A.
 	\storyrfs{40, 41, 43}
 	\storypriority{Alta}
 	\storyrisk{Alta}
-	\storypoints{2.0}
+	\storypoints{1.0}
 	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El revisador y el diseñador deben poder ejecutar análisis de consistencia, detectar dead features y redundancias para asegurar que el plan de estudios sea lógicamente posible y no presente errores.}
+	\storydescription{El revisador y el diseñador deben poder ejecutar análisis de consistencia, detectar características muertas y redundancias para asegurar que el plan de estudios sea lógicamente posible y no presente errores.}
 	\storyacceptancecriteria{
 	\begin{itemize}
 	\item Evaluar la satisfacibilidad global del modelo mediante un solucionador \textit{SAT}.
 	\item Detectar ciclos y nodos huérfanos.
-	\item Identificar \textit{dead features} y redundancias.
+	\item Identificar características muertas y redundancias.
 	\end{itemize}
 	}
 	\storyobservation{El análisis debe advertir problemas estructurales y semánticos antes de publicar o derivar configuraciones.}
 \end{userstory}
 
-\subsubsection*{Épica 7: Derivación de Productos (Configurador)}
-
-\begin{userstory}[]
-	\storyname{Gestión de Configuraciones}
-	\storyepic{Derivación de Productos (Configurador)}
-	\storyrfs{44, 45, 46, 47, 48, 49}
-	\storypriority{Alta}
-	\storyrisk{Alta}
-	\storypoints{1.6}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El configurador debe poder crear, actualizar y persistir selecciones de características para generar itinerarios educativos específicos para un perfil o estudiante.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Guardar configuraciones asociadas a una versión publicada.
-	\item Ofrecer listado paginado de configuraciones almacenadas.
-	\item Mantener operaciones de actualización y activación sobre configuraciones persistidas.
-	\end{itemize}
-	}
-	\storyobservation{La configuración debe quedar ligada a una versión concreta del modelo para conservar su validez histórica. Campos de entrada asociados: RF\#44 (nombre, descripción opcional, identificador de versión y lista de características) y RF\#47 (identificador de configuración en ruta; nombre, descripción y lista de características opcionales).}
-\end{userstory}
-
-\begin{userstory}[]
-	\storyname{Validación y Generación Automática de Configuraciones}
-	\storyepic{Derivación de Productos (Configurador)}
-	\storyrfs{42, 50, 51, 52}
-	\storypriority{Alta}
-	\storyrisk{Alta}
-	\storypoints{2.0}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El configurador y el estudiante deben poder validar si una selección es consistente y generar automáticamente opciones válidas u optimizadas para encontrar el mejor camino formativo sin violar prerrequisitos.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Validar selecciones sin necesidad de persistirlas.
-	\item Ejecutar algoritmos de optimización para proponer mejores configuraciones.
-	\end{itemize}
-	}
-	\storyobservation{La generación automática debe apoyar la toma de decisiones sin obligar a guardar resultados intermedios.}
-\end{userstory}
-
-\begin{userstory}[]
-	\storyname{Enriquecimiento con Recursos y Taxonomías}
-	\storyepic{Derivación de Productos (Configurador)}
-	\storyrfs{59, 60, 61, 113 (etiquetas), 114, 115, 116, 117, 118, 119}
-	\storypriority{Media}
-	\storyrisk{Media}
-	\storypoints{1.4}
-	\storyprogrammer{Jose Luis Echemendia López}
-	\storydescription{El editor de modelo y el configurador deben poder etiquetar características y vincular recursos externos, como archivos o enlaces, para añadir contenido pedagógico real a la estructura lógica del modelo.}
-	\storyacceptancecriteria{
-	\begin{itemize}
-	\item Asociar y desasociar etiquetas a \textit{features}.
-	\item Cargar recursos y asignar propietarios.
-	\item Mantener versionada la información asociada a los recursos.
-	\end{itemize}
-	}
-	\storyobservation{Los recursos y etiquetas deben servir como apoyo semántico y documental para el uso del modelo. Campos de entrada asociados: RF\#115 (nombre, descripción opcional), RF\#118 (metadatos completos del recurso y contenido) y RF\#119 (identificador de recurso en ruta y campos opcionales, con restricción sobre propietario).}
-\end{userstory}
-
 
 \subsection{Estimación de esfuerzo por historia de usuarios}
 
+A lo largo de los años se han llevado a cabo numerosos estudios relacionados con la estimación
+de esfuerzo en el desarrollo de software ágil, los cuales permiten comprender los avances que
+han tenido y la necesidad de su uso en las empresas \citep{prieto2021estimacion}. La metodología \ac{XP} propone
+que la estimación de esfuerzo se realice de acuerdo a las historias de usuario. Para la solución
+informática a desarrollar se asignó una duración aproximada a cada una de las \ac{HU} 
+las cuales dieron como resultado una duración total aproximada de 13 semanas, como
+se muestra a continuación:
+
+\begin{effortestimation}
+	\addentry[7]{Enriquecimiento con Recursos y Taxonomías}{0.8}  
+	\addentry[7]{Validación y Generación Automática de Configuraciones}{1.0}  
+	\addentry[7]{Gestión de Configuraciones}{1.0}  
+	\addentry[6]{Validación Lógica y Estructural del Modelo}{1.0}  
+	\addentry[5]{Integración y Sincronización \ac{UVL}}{1.0}  
+	\addentry[5]{Gestión de Restricciones Transversales}{0.8}  
+	\addentry[4]{Modelado de Grupos y Relaciones Estructurales}{1.0}  
+	\addentry[4]{Edición de la Jerarquía de Características}{1.0}  
+	\addentry[3]{Análisis de Métricas y Exportación}{0.8}  
+	\addentry[3]{Gestión de Versiones y Publicación}{2.5}  
+	\addentry[3]{Gestión Operativa de \ac{FM}}{1.0} 
+	\addentry[2]{Gestión de Dominios de Conocimiento}{0.4} 
+	\addentry[1]{Administración de Usuarios y Permisos}{0.3} 
+	\addentry[1]{Autenticación y Autogestión de cuenta}{0.4} 
+\end{effortestimation}
+
+% Esto es una prueba de Tabla \ref{tb:est1}
 
 \subsection{Desarrollo del plan de iteraciones}
 
+Luego de estimar el tiempo de desarrollo de las HU se realizará el plan de iteraciones, mediante este se
+seleccionan las \ac{HU} que se desarrollarán en cada una de las etapas de entregas pendientes. La siguiente tabla
+muestra el plan de iteraciones con el tiempo empleado en cada una de ellas y las \ac{HU} que las componen:
 
-\subsection{Plan de duración de las iteraciones}
+\begin{iterationplan}[tb:iterdurationtest]
+\setiterresult{1}{3} % in case an iteration takes a different time than the one calculated
+\end{iterationplan}
 
 
-\subsection{Plan de entregas}
+\subsection{Desarrollo del plan de entregas}
 
+Una vez definido el plan de iteraciones, que organiza el desarrollo en ciclos 
+temporales consecutivos, es necesario establecer el \textbf{plan de entregas}, 
+el cual agrupa las iteraciones en hitos de mayor significación para el cliente o los 
+\textit{stakeholders} del proyecto \citep{beck2004extreme}. Mientras que las iteraciones 
+representan ciclos internos de desarrollo orientados a la generación incremental de funcionalidad, 
+las entregas constituyen versiones del producto que son puestas a disposición del usuario final, ya 
+sea para su validación, para su uso en entornos de prueba o para su despliegue en producción. En 
+la metodología \ac{XP}, se recomienda que las entregas sean frecuentes y de corto ciclo, 
+permitiendo así una retroalimentación temprana por parte del cliente y una adaptación continua 
+de los requisitos \citep{wells2009extreme}. A continuación, se presenta el plan de entregas \ref{tab:pe} definido 
+para el desarrollo del servicio backend, especificando las iteraciones que componen cada entrega, 
+el conjunto de funcionalidades incluidas y el valor de negocio aportado en cada hito.
+
+\begin{longtable}{|p{3.25cm}|p{3.25cm}|p{3.25cm}|p{3.25cm}|}
+    \caption{Plan de entregas. \label{tab:pe}}\\
+    \hline
+    \rowcolor[HTML]{CBCEFB} 
+    Versión & Iteración & Fecha de inicio & Fecha de fin \\
+    \hline
+    \endfirsthead		
+                    
+	\multicolumn{4}{c}
+    {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+                    
+    \hline
+    \rowcolor[HTML]{CBCEFB} 
+	Versión & Iteración & Fecha de inicio & Fecha de fin \\
+    \hline
+    \endhead
+                    
+    \hline
+	\multicolumn{4}{|r|}{{Continúa en la siguiente página}} \\
+    \endfoot
+                    
+    \hline
+    \endlastfoot
+                    
+    % Cuerpo de la tabla
+	Versión 0.1.1 & Iteración 1 & 20 de diciembre del 2025 & 9 de enero del 2026 \\
+	\hline
+	Versión 0.1.2 & Iteración 2 & 10 de enero del 2026 & 30 de enero del 2026 \\ 
+	\hline
+	Versión 0.1.3 & Iteración 3 & 31 de enero del 2026 & 20 de febrero del 2026 \\ 
+	\hline
+	Versión 0.1.4 & Iteración 4 & 21 de febrero del 2026 & 13 de marzo del 2026 \\ 
+	\hline
+	Versión 0.1.5 & Iteración 5 & 14 de marzo del 2026 & 3 de abril del 2026 \\ 
+	\hline
+	Versión 0.1.6 & Iteración 6 & 4 de abril del 2026 & 24 de abril del 2026 \\ 
+	\hline
+	Versión 0.1.7 & Iteración 7 & 25 de abril del 2026 & 15 de mayo del 2026 \\  
+    \hline
+	
+\end{longtable}
 
 \section{Tarjetas CRC}
 
+Las tarjetas CRC son una técnica utilizada en el diseño orientado a objetos para definir clases, asignar 
+responsabilidades y establecer las colaboraciones necesarias entre ellas. Esta herramienta, de naturaleza
+visual y participativa, involucra activamente a los diseñadores en la exploración de comportamientos e 
+interacciones del sistema. Cada tarjeta representa una clase y resume su nombre, funciones principales y otras
+clases con las que debe interactuar. Este enfoque promueve el pensamiento en términos de comportamiento
+más que de estructura de datos, y facilita la comprensión global del sistema desde etapas tempranas del
+desarrollo. \citep{pacienzia2015metodologias}
+
+A continuación, se presenta un ejemplo de las tarjetas CRC correspondientes a clases del sistema 
+desarrollado, el resto se puede encontrar en el anexo \ref{anx:tCRC}.
+
+\begin{crccard}[tb:crc_featuremodel]
+	\crcclass{FeatureModel}
+	\crcresp
+	{
+		\begin{itemize}
+		\item Representar un \ac{FM} (nombre, descripción, dominio).
+		\item Enlazar propietario y versiones.
+		\item Mantener colaboradores.
+		\end{itemize}
+	}
+	\crccolab
+	{
+		Domain\\
+		User\\
+		FeatureModelVersion\\
+		FeatureModelCollaborator
+	}
+\end{crccard}
 
 \section{Arquitectura de software}
 

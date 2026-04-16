@@ -869,6 +869,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/tcxr.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/t1xr.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/tcxr.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtcxr.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/txmi.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtxmi.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtxptmri.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -888,11 +891,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT ./Anexos/code.cpp
 INPUT ./Anexos/code.cpp
 INPUT Anexos/code.cpp
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/txmi.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtxmi.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtxptmri.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/tcxb.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtcxb.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -903,6 +901,8 @@ INPUT ./Anexos/code.cpp
 INPUT ./Anexos/code.cpp
 INPUT Anexos/code.cpp
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xttsl.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/tcxb.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtcxb.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txtt.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txtt.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txtt.fd
