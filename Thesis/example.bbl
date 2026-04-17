@@ -156,6 +156,46 @@
       \field{title}{Feature-Oriented Software Product Lines: Concepts and Implementation}
       \field{year}{2013}
     \endentry
+    \entry{aratchige2024overview}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=aba6a9d5938297ee16be238cb1edfea9}{%
+           family={Aratchige},
+           familyi={A\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f64cfe04c07be0d34b518e22c648c328}{%
+           family={Manujaya},
+           familyi={M\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c59b594ad79b00a567e08b0ba9803e6}{%
+           family={Weerasinghe},
+           familyi={W\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9f396359b92e019475d007f0c86d6258}
+      \strng{fullhash}{9f396359b92e019475d007f0c86d6258}
+      \strng{bibnamehash}{9f396359b92e019475d007f0c86d6258}
+      \strng{authorbibnamehash}{9f396359b92e019475d007f0c86d6258}
+      \strng{authornamehash}{9f396359b92e019475d007f0c86d6258}
+      \strng{authorfullhash}{9f396359b92e019475d007f0c86d6258}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Software Modeling}
+      \field{note}{vid. pág. 38}
+      \field{title}{An Overview of Structural Design Patterns in Object-Oriented Software Engineering}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 3}
+      \range{pages}{3}
+    \endentry
     \entry{poetry2024}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=5dc588b372793b67a6bea959368db219}{%
@@ -209,6 +249,47 @@
       \field{year}{2005}
       \field{pages}{1\bibrangedash 69}
       \range{pages}{69}
+    \endentry
+    \entry{bass2012software}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=97196c0aaced1368c3042b9299a9b34b}{%
+           family={Bass},
+           familyi={B\bibinitperiod},
+           given={Len},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=806866eee4e5b55ba7360bfe43f4f397}{%
+           family={Clements},
+           familyi={C\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a2e06c3fa40bc2221536e74ab90b7ec}{%
+           family={Kazman},
+           familyi={K\bibinitperiod},
+           given={Rick},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{f3c472223052fa8f8a1c396381e08cd3}
+      \strng{fullhash}{f3c472223052fa8f8a1c396381e08cd3}
+      \strng{bibnamehash}{f3c472223052fa8f8a1c396381e08cd3}
+      \strng{authorbibnamehash}{f3c472223052fa8f8a1c396381e08cd3}
+      \strng{authornamehash}{f3c472223052fa8f8a1c396381e08cd3}
+      \strng{authorfullhash}{f3c472223052fa8f8a1c396381e08cd3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{isbn}{978-0321815736}
+      \field{title}{Software Architecture in Practice}
+      \field{year}{2012}
     \endentry
     \entry{bates2019teaching}{book}{}
       \name{author}{1}{}{%
@@ -302,6 +383,35 @@
       \field{note}{Capítulo sobre planificación de entregas}
       \field{title}{Extreme Programming Explained: Embrace Change}
       \field{year}{2004}
+    \endentry
+    \entry{begel2020grasp}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2694e1d90cf02deb1abecbc6e1f2f80a}{%
+           family={Begel},
+           familyi={B\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2694e1d90cf02deb1abecbc6e1f2f80a}
+      \strng{fullhash}{2694e1d90cf02deb1abecbc6e1f2f80a}
+      \strng{bibnamehash}{2694e1d90cf02deb1abecbc6e1f2f80a}
+      \strng{authorbibnamehash}{2694e1d90cf02deb1abecbc6e1f2f80a}
+      \strng{authornamehash}{2694e1d90cf02deb1abecbc6e1f2f80a}
+      \strng{authorfullhash}{2694e1d90cf02deb1abecbc6e1f2f80a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{http://cs-comm.lib.muohio.edu/items/show/72}}
+      \field{title}{GRASP Patterns and Principles Memo}
+      \field{urlday}{16}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{urldateera}{ce}
     \endentry
     \entry{benavides2010automated}{article}{}
       \name{author}{3}{}{%
@@ -614,6 +724,77 @@
       \verb{doi}
       \verb 10.1109/ICTEE.2012.6208608
       \endverb
+    \endentry
+    \entry{clements2010documenting}{book}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=806866eee4e5b55ba7360bfe43f4f397}{%
+           family={Clements},
+           familyi={C\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b1cd17315cbad2bde9966d6a34ef0b97}{%
+           family={Bachmann},
+           familyi={B\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97196c0aaced1368c3042b9299a9b34b}{%
+           family={Bass},
+           familyi={B\bibinitperiod},
+           given={Len},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e93a0537dc9db010915acd5407760d4}{%
+           family={Garlan},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d9fc5289d2c4e370f62a6bc793a54357}{%
+           family={Ivers},
+           familyi={I\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=040645b21378545c7b73936494cf22ab}{%
+           family={Little},
+           familyi={L\bibinitperiod},
+           given={Reed},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6dcb0281b45ca74fc574826e4d48d94a}{%
+           family={Nord},
+           familyi={N\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b72544908a41bc3c3c5b5b7fe0d5afd}{%
+           family={Stafford},
+           familyi={S\bibinitperiod},
+           given={Judith},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{ae9117da0bacdf44b74dbe77bddb39af}
+      \strng{fullhash}{ae9117da0bacdf44b74dbe77bddb39af}
+      \strng{bibnamehash}{ae9117da0bacdf44b74dbe77bddb39af}
+      \strng{authorbibnamehash}{ae9117da0bacdf44b74dbe77bddb39af}
+      \strng{authornamehash}{ae9117da0bacdf44b74dbe77bddb39af}
+      \strng{authorfullhash}{ae9117da0bacdf44b74dbe77bddb39af}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{isbn}{978-0321552686}
+      \field{title}{Documenting Software Architectures: Views and Beyond}
+      \field{year}{2010}
     \endentry
     \entry{cohn2004user}{book}{}
       \name{author}{1}{}{%
@@ -954,6 +1135,38 @@
       \field{title}{Role-Based Access Control}
       \field{year}{2007}
     \endentry
+    \entry{fowler2003design}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=312ac886938a9b2be4f8eb607567fe4c}{%
+           family={Fowler},
+           familyi={F\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{fullhash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{bibnamehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authorbibnamehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authornamehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authorfullhash}{312ac886938a9b2be4f8eb607567fe4c}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Software}
+      \field{number}{5}
+      \field{title}{Who Needs an Architect?}
+      \field{volume}{20}
+      \field{year}{2003}
+      \field{pages}{11\bibrangedash 13}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1109/MS.2003.1231144
+      \endverb
+    \endentry
     \entry{galan2014building}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=22136ffe5d6f5bcc7ce2a5d6f3d6f9ab}{%
@@ -1041,7 +1254,7 @@
       \verb 10.1145/3579028.3609008
       \endverb
     \endentry
-    \entry{gamma1995Frameworks}{book}{}
+    \entry{gamma1995design}{book}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=abd927bf30d6566be0ac66a66e893fdd}{%
            family={Gamma},
@@ -1069,7 +1282,7 @@
            givenun=0}}%
       }
       \list{publisher}{1}{%
-        {Addison-Wesley}%
+        {Addison-Wesley Professional}%
       }
       \strng{namehash}{5cb4a6d7baf30d11bae6682eca698b4f}
       \strng{fullhash}{5cb4a6d7baf30d11bae6682eca698b4f}
@@ -1550,6 +1763,35 @@
       \field{note}{Accessed: 2025-01-10}
       \field{title}{pytest Documentation}
       \field{year}{2024}
+    \endentry
+    \entry{larman2004applying}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=be7db5922f05fc919bdc1c036502e5ee}{%
+           family={Larman},
+           familyi={L\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{be7db5922f05fc919bdc1c036502e5ee}
+      \strng{fullhash}{be7db5922f05fc919bdc1c036502e5ee}
+      \strng{bibnamehash}{be7db5922f05fc919bdc1c036502e5ee}
+      \strng{authorbibnamehash}{be7db5922f05fc919bdc1c036502e5ee}
+      \strng{authornamehash}{be7db5922f05fc919bdc1c036502e5ee}
+      \strng{authorfullhash}{be7db5922f05fc919bdc1c036502e5ee}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{isbn}{978-0131489066}
+      \field{title}{Applying UML and Patterns: An Introduction to Object-Oriented Analysis and Design and Iterative Development}
+      \field{year}{2004}
     \endentry
     \entry{loeliger2012version}{book}{}
       \name{author}{2}{}{%
@@ -2481,6 +2723,32 @@
       \field{title}{A large-scale study of programming languages and code quality in GitHub}
       \field{year}{2014}
     \endentry
+    \entry{refactoring2021patrones}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f45752a23e197e3d61b052fa482bf38e}{%
+           family={{Refactoring Guru}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f45752a23e197e3d61b052fa482bf38e}
+      \strng{fullhash}{f45752a23e197e3d61b052fa482bf38e}
+      \strng{bibnamehash}{f45752a23e197e3d61b052fa482bf38e}
+      \strng{authorbibnamehash}{f45752a23e197e3d61b052fa482bf38e}
+      \strng{authornamehash}{f45752a23e197e3d61b052fa482bf38e}
+      \strng{authorfullhash}{f45752a23e197e3d61b052fa482bf38e}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://refactoring.guru/design-patterns/catalog}}
+      \field{title}{Catalog of Design Patterns}
+      \field{urlday}{17}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+    \endentry
     \entry{rodriguez2019gestion_curricular}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=b307dd91983d341b40246fe9316a6502}{%
@@ -2521,6 +2789,40 @@
       \field{year}{2019}
       \field{pages}{112\bibrangedash 120}
       \range{pages}{9}
+    \endentry
+    \entry{rojas2021arquitectura}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c4911a3530aa10af742c61069295fe16}{%
+           family={Rojas},
+           familyi={R\bibinitperiod},
+           given={Juan\bibnamedelima Carlos},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=344eaf724cb55650479d866b3c438ce8}{%
+           family={Pérez},
+           familyi={P\bibinitperiod},
+           given={Miguel\bibnamedelima Ángel},
+           giveni={M\bibinitperiod\bibinitdelim Á\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Alfaomega}%
+      }
+      \strng{namehash}{e880f1d187257de3f9b8437220570d83}
+      \strng{fullhash}{e880f1d187257de3f9b8437220570d83}
+      \strng{bibnamehash}{e880f1d187257de3f9b8437220570d83}
+      \strng{authorbibnamehash}{e880f1d187257de3f9b8437220570d83}
+      \strng{authornamehash}{e880f1d187257de3f9b8437220570d83}
+      \strng{authorfullhash}{e880f1d187257de3f9b8437220570d83}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-6075381752}
+      \field{title}{Arquitectura de Software: Fundamentos y Prácticas}
+      \field{year}{2021}
     \endentry
     \entry{rumbaugh2004uml}{book}{}
       \name{author}{3}{}{%
@@ -2718,6 +3020,32 @@
       \field{isbn}{978-0133943023}
       \field{title}{Concepts of Programming Languages}
       \field{year}{2016}
+    \endentry
+    \entry{seguridad2022patrones}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=df1495bfeee4db5246e1dc72f726ae28}{%
+           family={{Seguridad PY}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{df1495bfeee4db5246e1dc72f726ae28}
+      \strng{fullhash}{df1495bfeee4db5246e1dc72f726ae28}
+      \strng{bibnamehash}{df1495bfeee4db5246e1dc72f726ae28}
+      \strng{authorbibnamehash}{df1495bfeee4db5246e1dc72f726ae28}
+      \strng{authornamehash}{df1495bfeee4db5246e1dc72f726ae28}
+      \strng{authorfullhash}{df1495bfeee4db5246e1dc72f726ae28}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://seguridadpy.com/patrones-de-diseno-que-son-tipos/}}
+      \field{title}{Patrones de diseño: Qué son, tipos y porqué los debes conocer}
+      \field{urlday}{17}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
     \endentry
     \entry{serna-montoya2012}{article}{}
       \name{author}{1}{}{%
@@ -3631,6 +3959,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{gamma1995Frameworks}
 \endrefsection
 \endinput
 

@@ -358,11 +358,11 @@ solución a la problemática planteada:
 	\ac{RF}\#35 & Exportar un \ac{FM} & El sistema debe permitir exportar a la versión publicada más reciente o a una versión concreta en los siguientes formatos: 
 		\begin{itemize}
 				\item \ac{UVL}.
-				\item XML.
-				\item TVL.
-				\item dimacs.
-				\item json.
-				\item dot.
+				\item \ac{XML}.
+				\item \ac{TVL}.
+				\item \ac{DIMACS}.
+				\item \ac{JSON}.
+				\item \ac{DOT}.
 				\item mermaid.
 		\end{itemize}
 	& Alta & Media \\
@@ -393,7 +393,7 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#42 & Validar configuración seleccionada & Comprueba que una selección concreta de características sea válida y consistente. & Alta & Alta \\
 	\hline
-	\ac{RF}\#43 & Análisis estructural de validación & El sistema debe permitir ejecutar análisis de dead características, redundancias y componentes fuertemente conectados. & Alta & Alta \\
+	\ac{RF}\#43 & Análisis estructural de validación & El sistema debe permitir ejecutar análisis de características muertas, redundancias y componentes fuertemente conectados. & Alta & Alta \\
 	\hline
 	\ac{RF}\#44 & Crear configuración persistente & Crea y almacena configuraciones asociadas a una versión tras validar consistencia. Campos de entrada:
 		\begin{itemize}
@@ -545,22 +545,22 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#113 & Activar restricción & Elimina restricciones aplicando \textit{copy-on-write} para mantener trazabilidad. & Alta & Alta \\
 	\hline
-	\ac{RF}\#113 & Listar etiquetas & Lista etiquetas activas disponibles para clasificación funcional. & Media & Baja \\
+	\ac{RF}\#114 & Listar etiquetas & Lista etiquetas activas disponibles para clasificación funcional. & Media & Baja \\
 	\hline
-	\ac{RF}\#114 & Obtener etiqueta & Recupera una etiqueta específica mediante su identificador. & Media & Baja \\
+	\ac{RF}\#115 & Obtener etiqueta & Recupera una etiqueta específica mediante su identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#115 & Crear etiqueta & Crea nuevas etiquetas asegurando unicidad de nombre. Campos de entrada:
+	\ac{RF}\#116 & Crear etiqueta & Crea nuevas etiquetas asegurando unicidad de nombre. Campos de entrada:
 		\begin{itemize}
 			\item nombre
 			\item descripción (opcional)
 		\end{itemize}
 	& Media & Baja \\
 	\hline
-	\ac{RF}\#116 & Listar recursos & Lista recursos registrados con soporte de paginación. & Media & Baja \\
+	\ac{RF}\#117 & Listar recursos & Lista recursos registrados con soporte de paginación. & Media & Baja \\
 	\hline
-	\ac{RF}\#117 & Consultar recurso & Obtiene el detalle de un recurso específico por su identificador. & Media & Baja \\
+	\ac{RF}\#118 & Consultar recurso & Obtiene el detalle de un recurso específico por su identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#118 & Crear recurso & El sistema debe permitir registrar recursos y asigna propietario. Campos de entrada:
+	\ac{RF}\#119 & Crear recurso & El sistema debe permitir registrar recursos y asigna propietario. Campos de entrada:
 		\begin{itemize}
 			\item título
 			\item tipo
@@ -580,7 +580,7 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Media & Baja \\
 	\hline
-	\ac{RF}\#119 & Actualizar recurso & El sistema debe permitir actualizar parcial o totalmente la información de un recurso y mantener el último documento guardado para el mismo recurso. Parámetros y campos de entrada:
+	\ac{RF}\#120 & Actualizar recurso & El sistema debe permitir actualizar parcial o totalmente la información de un recurso y mantener el último documento guardado para el mismo recurso. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de recurso (ruta)
 			\item título (opcional)
@@ -627,9 +627,9 @@ A continuación se definen los requisitos no funcionales del sistema:
 			revocados explícitamente por el usuario.
 	\item \ac{RnF}\#3: El sistema debe implementar un mecanismo de eliminación lógica mediante 
 			un cambio de estado (activo/inactivo)  para conservar la integridad referencial de la 
-			base de datos. 
-	\item \ac{RnF}\#4: Uso exclusivo de \ac{UUID} como tipo de dato para llaves primarias en las tablas de la base de datos, no valores numéricos.
-			Su generación se realizará automáticamente a nivel de aplicación o base de datos. Esto garantiza unicidad global y mejora la seguridad al no exponer 
+			\ac{BD}. 
+	\item \ac{RnF}\#4: Uso exclusivo de \ac{UUID} como tipo de dato para llaves primarias en las tablas de la \ac{BD}, no valores numéricos.
+			Su generación se realizará automáticamente a nivel de aplicación o \ac{BD}. Esto garantiza unicidad global y mejora la seguridad al no exponer 
 			patrones secuenciales.
 	\item \ac{RnF}\#5: Solo usuarios autorizados deben poder crear, modificar y eliminar registros del sistema.
 	\item \ac{RnF}\#6: El acceso al sistema a través de cualquier cliente debe ser mediante una
@@ -638,16 +638,14 @@ A continuación se definen los requisitos no funcionales del sistema:
 	\item \ac{RnF}\#7: Toda configuración variable (\ac{BD}, credenciales, \ac{URL}s externas) debe inyectarse vía variables de entorno, no hardcodeada.
 \end{itemize}
 
-
 \subsubsection{Rendimiento}
 
 \begin{itemize}
 	\item \ac{RnF}\#8: El 95\% de las peticiones a \textit{endpoints} críticos deben responderse en $ \leq 200 $ ms, y el 99\% en $ \leq 500 $ ms.
 	\item \ac{RnF}\#9: El \textit{backend} debe manejar al menos 500 usuarios simultáneos sin degradación superior al 20\%.
-	\item \ac{RnF}\#10: La latencia p95 entre capas (backend → \ac{BD}) no debe superar los 50 ms en la misma región.
+	\item \ac{RnF}\#10: La latencia p95 entre capas (\textit{backend} → \ac{BD}) no debe superar los 50 ms en la misma región.
 	\item \ac{RnF}\#11: El sistema debe soportar al menos 1000 peticiones por segundo en condiciones normales de operación.
 \end{itemize}
-
 
 \subsubsection{Integración}
 
@@ -661,7 +659,7 @@ A continuación se definen los requisitos no funcionales del sistema:
 \begin{itemize}
 	\item \ac{RnF}\#14: Todo \textit{endpoint} debe estar documentado con OpenAPI/Swagger; el código debe seguir una guía de estilo definida.
 	\item \ac{RnF}\#15: El código debe estar modularizado para poder actualizarse o reemplazarse sin afectar al resto.
-	\item \ac{RnF}\#16: El sistema debe soportar despliegue e integración continua.
+	\item \ac{RnF}\#16: El sistema debe soportar \ac{CI/CD}.
 \end{itemize}
 
 \subsubsection{Disponibilidad y confiabilidad}
@@ -669,7 +667,7 @@ A continuación se definen los requisitos no funcionales del sistema:
 \begin{itemize}
 	\item \ac{RnF}\#17: Ante la caída de una instancia del \textit{backend}, el tráfico debe redirigirse automáticamente a otra sin 
 			pérdida de peticiones activas.
-	\item \ac{RnF}\#18: El lifespan de la aplicación debe garantizar arranque y apagado ordenados: inicializar dependencias, exponer readiness/liveness, permitir drenado de peticiones activas, limpiar recursos y permitir reanudación segura de trabajos en otra instancia. 
+	\item \ac{RnF}\#18: El \textit{lifespan} de la aplicación debe garantizar arranque y apagado ordenados: inicializar dependencias, exponer \textit{readiness}/\textit{liveness}, permitir drenado de peticiones activas, limpiar recursos y permitir reanudación segura de trabajos en otra instancia. 
 	\item \ac{RnF}\#19: Todos los trabajos en curso (tareas asíncronas, procesos en memoria, sesiones transaccionales) deben poder persistir su estado o reencolarse para permitir reanudación en otra instancia sin pérdida.
 \end{itemize}
 
@@ -687,7 +685,7 @@ A continuación se definen los requisitos no funcionales del sistema:
 	\item \ac{RnF}\#23: El sistema debe mostrar el estado detallado de los servicios principales (PostgreSQL, Redis, Celery y MinIO) para saber la operatividad de los mismos, 
 			así como las métricas clave del \textit{host} para facilitar el monitoreo.
 	\item \ac{RnF}\#24: Todos los \textit{logs} deben ser estructurados en formato \ac{JSON}, con nivel (\textit{debug/info/warn/error}) y \textit{timestamp} ISO.
-	\item \ac{RnF}\#25: Se debe alertar automáticamente ante cualquier error del sistema	
+	\item \ac{RnF}\#25: Se debe alertar automáticamente ante cualquier error del sistema.	
 \end{itemize}
 
 \subsubsection{Escalabilidad}
@@ -705,7 +703,7 @@ A continuación se definen los requisitos no funcionales del sistema:
 \end{itemize}
 
 
-\section{Historias de usuarios}
+\section{Historias de usuario}
 
 Las \ac{HU}, dentro del enfoque \ac{XP}, constituyen una técnica ágil empleada para la recolección y especificación 
 de requisitos funcionales desde la perspectiva del usuario final. Estas se expresan como descripciones
@@ -721,7 +719,7 @@ grado de complejidad para implementarlas. Entonces, se determinará que su perí
 estimado del proyecto. \citep{beck2000extreme}
 
 Las \ac{HU} se agrupan y organizan en épicas, las cuales son etiquetas que representan conjuntos 
-de historias de usuario relacionadas entre sí por un objetivo funcional o temático de mayor envergadura. 
+de \ac{HU} relacionadas entre sí por un objetivo funcional o temático de mayor envergadura. 
 Una épica no es más que una \ac{HU} de gran tamaño que aún no ha sido desglosada en historias más pequeñas y 
 manejables \citep{cohn2004user}. Las épicas sirven como mecanismo de organización jerárquica dentro del 
 \textit{backlog} de producto, permitiendo a los equipos ágiles planificar y priorizar a niveles estratégicos 
@@ -733,12 +731,12 @@ Las épicas definidas para esta investigación son las siguientes:
 
 \begin{itemize}
 	\item \textbf{Épica 1: Gestión de Identidad y Acceso}: Agrupa las historias relacionadas con la autenticación, gestión de usuarios y control de acceso al sistema.
-	\item \textbf{Épica 2: Gobernanza de Dominios Curriculares}: Incluye las historias que abordan la administración de dominios curriculares y su relación con los modelos de características.
-	\item \textbf{Épica 3: Ciclo de Vida del Feature Model (FM)}: Contiene las historias que tratan sobre la creación, gestión, versionado y publicación de los Feature Models dentro del sistema.
-	\item \textbf{Épica 4: Validación y Análisis de Modelos}: Reúne las historias enfocadas en las funcionalidades de validación lógica, estructural y análisis avanzado de los modelos.
-	\item \textbf{Épica 5: Configuración y Optimización}: Agrupa las historias relacionadas con la creación, gestión y optimización de configuraciones basadas en los modelos.
-	\item \textbf{Épica 6: Gestión de Características, Grupos y Relaciones}: Incluye las historias que abordan la administración detallada de características, sus agrupaciones y relaciones dentro del modelo.
-	\item \textbf{Épica 7: Gestión de Recursos y Etiquetas}: Contiene las historias relacionadas con la administración de recursos asociados a los modelos y la clasificación mediante etiquetas.
+	\item \textbf{Épica 2: Gobernanza de Dominios Curriculares}: Incluye las historias que abordan la administración de dominios como contenedores de características.
+	\item \textbf{Épica 3: Ciclo de Vida del \ac{FM}}: Contiene las historias que tratan sobre la creación, gestión, versionado, métricas, exportación y publicación de los \ac{FM} dentro del sistema.
+	\item \textbf{Épica 4: Modelado de Variabilidad Estructural}: Reúne las historias enfocadas en la construcción del árbol (características), grupos y relaciones.
+	\item \textbf{Épica 5: Restricciones y Lógica Avanzada:}: Agrupa las historias relacionadas con la gestión de restricciones transversales y sincronización con el lenguaje \ac{UVL}.
+	\item \textbf{Épica 6: Validación y Análisis de Modelos}: Análisis de consistencia, detección de errores estructurales y características muertas.
+	\item \textbf{Épica 7: Configuración, Optimización y Recursos:}: Contiene las historias relacionadas con la derivación de productos, validación de selecciones, algoritmos de optimización, etiquetas y recursos pedagógicos.
 \end{itemize}
 
 A continuación, se presenta un ejemplo de las \ac{HU} confeccionadas, el resto se puede encontrar en el
@@ -746,7 +744,7 @@ anexo \ref{anx:hu}.
 
 \begin{userstory}[]
 	\storyname{Validación Lógica y Estructural del Modelo}
-	\storyepic{Validación y Análisis Lógico}
+	\storyepic{Validación y Análisis Lógica Avanzada}
 	\storyrfs{40, 41, 43}
 	\storypriority{Alta}
 	\storyrisk{Alta}
@@ -755,7 +753,7 @@ anexo \ref{anx:hu}.
 	\storydescription{El revisador y el diseñador deben poder ejecutar análisis de consistencia, detectar características muertas y redundancias para asegurar que el plan de estudios sea lógicamente posible y no presente errores.}
 	\storyacceptancecriteria{
 	\begin{itemize}
-	\item Evaluar la satisfacibilidad global del modelo mediante un solucionador \textit{SAT}.
+	\item Evaluar la satisfacibilidad global del modelo mediante un solucionador \ac{SAT}.
 	\item Detectar ciclos y nodos huérfanos.
 	\item Identificar características muertas y redundancias.
 	\end{itemize}
@@ -769,12 +767,12 @@ anexo \ref{anx:hu}.
 A lo largo de los años se han llevado a cabo numerosos estudios relacionados con la estimación
 de esfuerzo en el desarrollo de software ágil, los cuales permiten comprender los avances que
 han tenido y la necesidad de su uso en las empresas \citep{prieto2021estimacion}. La metodología \ac{XP} propone
-que la estimación de esfuerzo se realice de acuerdo a las historias de usuario. Para la solución
+que la estimación de esfuerzo se realice de acuerdo a las \ac{HU}. Para la solución
 informática a desarrollar se asignó una duración aproximada a cada una de las \ac{HU} 
 las cuales dieron como resultado una duración total aproximada de 13 semanas, como
-se muestra a continuación:
+se muestra en la tabla \ref{tab:estimationtest}:
 
-\begin{effortestimation}
+\begin{effortestimation}[tab:estimationtest]
 	\addentry[7]{Enriquecimiento con Recursos y Taxonomías}{0.8}  
 	\addentry[7]{Validación y Generación Automática de Configuraciones}{1.0}  
 	\addentry[7]{Gestión de Configuraciones}{1.0}  
@@ -795,9 +793,9 @@ se muestra a continuación:
 
 \subsection{Desarrollo del plan de iteraciones}
 
-Luego de estimar el tiempo de desarrollo de las HU se realizará el plan de iteraciones, mediante este se
-seleccionan las \ac{HU} que se desarrollarán en cada una de las etapas de entregas pendientes. La siguiente tabla
-muestra el plan de iteraciones con el tiempo empleado en cada una de ellas y las \ac{HU} que las componen:
+Luego de estimar el tiempo de desarrollo de las \ac{HU} se realizará el plan de iteraciones, mediante este se
+seleccionan las \ac{HU} que se desarrollarán en cada una de las etapas de entregas pendientes. La tabla 
+\ref{tb:iterdurationtest} muestra el plan de iteraciones con el tiempo empleado en cada una de ellas y las \ac{HU} que las componen:
 
 \begin{iterationplan}[tb:iterdurationtest]
 \setiterresult{1}{3} % in case an iteration takes a different time than the one calculated
@@ -807,7 +805,7 @@ muestra el plan de iteraciones con el tiempo empleado en cada una de ellas y las
 \subsection{Desarrollo del plan de entregas}
 
 Una vez definido el plan de iteraciones, que organiza el desarrollo en ciclos 
-temporales consecutivos, es necesario establecer el \textbf{plan de entregas}, 
+temporales consecutivos, es necesario establecer el plan de entregas, 
 el cual agrupa las iteraciones en hitos de mayor significación para el cliente o los 
 \textit{stakeholders} del proyecto \citep{beck2004extreme}. Mientras que las iteraciones 
 representan ciclos internos de desarrollo orientados a la generación incremental de funcionalidad, 
@@ -815,9 +813,9 @@ las entregas constituyen versiones del producto que son puestas a disposición d
 sea para su validación, para su uso en entornos de prueba o para su despliegue en producción. En 
 la metodología \ac{XP}, se recomienda que las entregas sean frecuentes y de corto ciclo, 
 permitiendo así una retroalimentación temprana por parte del cliente y una adaptación continua 
-de los requisitos \citep{wells2009extreme}. A continuación, se presenta el plan de entregas \ref{tab:pe} definido 
-para el desarrollo del servicio backend, especificando las iteraciones que componen cada entrega, 
-el conjunto de funcionalidades incluidas y el valor de negocio aportado en cada hito.
+de los requisitos \citep{wells2009extreme}. En la tabla \ref{tab:pe} se presenta el plan de entregas definido 
+para el desarrollo del servicio \textit{backend}, especificando las iteraciones que componen cada entrega, la versión
+del producto obtenida y las fechas estimadas.
 
 \begin{longtable}{|p{3.25cm}|p{3.25cm}|p{3.25cm}|p{3.25cm}|}
     \caption{Plan de entregas. \label{tab:pe}}\\
@@ -861,9 +859,9 @@ el conjunto de funcionalidades incluidas y el valor de negocio aportado en cada 
 	
 \end{longtable}
 
-\section{Tarjetas CRC}
+\section{Tarjetas Clase-Responsabilidad-Colaboración (CRC)}
 
-Las tarjetas CRC son una técnica utilizada en el diseño orientado a objetos para definir clases, asignar 
+Las tarjetas \ac{CRC} son una técnica utilizada en el diseño orientado a objetos para definir clases, asignar 
 responsabilidades y establecer las colaboraciones necesarias entre ellas. Esta herramienta, de naturaleza
 visual y participativa, involucra activamente a los diseñadores en la exploración de comportamientos e 
 interacciones del sistema. Cada tarjeta representa una clase y resume su nombre, funciones principales y otras
@@ -871,7 +869,7 @@ clases con las que debe interactuar. Este enfoque promueve el pensamiento en té
 más que de estructura de datos, y facilita la comprensión global del sistema desde etapas tempranas del
 desarrollo. \citep{pacienzia2015metodologias}
 
-A continuación, se presenta un ejemplo de las tarjetas CRC correspondientes a clases del sistema 
+A continuación, se presenta un ejemplo de las tarjetas \ac{CRC} correspondientes a clases del sistema 
 desarrollado, el resto se puede encontrar en el anexo \ref{anx:tCRC}.
 
 \begin{crccard}[tb:crc_featuremodel]
@@ -895,17 +893,255 @@ desarrollado, el resto se puede encontrar en el anexo \ref{anx:tCRC}.
 
 \section{Arquitectura de software}
 
+La arquitectura de software constituye el conjunto de decisiones de diseño fundamentales que definen la estructura 
+global de un sistema informático. Comprende la identificación y organización de los componentes que lo conforman, 
+las relaciones de comunicación y dependencia entre ellos, así como los principios y patrones que guían su evolución a 
+lo largo del tiempo \citep{bass2012software}. Más allá de un mero diagrama de bloques, la arquitectura representa el 
+puente entre los requisitos funcionales y no funcionales del sistema y su implementación concreta, estableciendo las 
+bases para alcanzar atributos de calidad como la escalabilidad, el mantenimiento, la seguridad, el rendimiento y la 
+interoperabilidad \citep{clements2010documenting}.
+
+La importancia de definir adecuadamente la arquitectura de software radica en que esta determina, en gran medida, 
+el éxito o fracaso del proyecto a largo plazo. Una arquitectura bien concebida permite gestionar la complejidad del 
+sistema, facilita la comunicación entre los miembros del equipo de desarrollo, reduce los riesgos asociados a 
+decisiones técnicas críticas y posibilita la reutilización de componentes en futuros proyectos 
+\citep{rojas2021arquitectura}. Por el contrario, una arquitectura deficiente o implícita puede derivar en sistemas 
+difíciles de mantener, propensos a errores y costosos de extender. En el contexto del desarrollo ágil, la arquitectura 
+no se define completamente al inicio, sino que emerge y se refina iterativamente a lo largo del proyecto, manteniendo 
+un equilibrio entre la planificación anticipada y la adaptabilidad frente a requisitos cambiantes 
+\citep{fowler2003design}.
+
+En esta sección se justifica la elección del patrón específico adoptado para este proyecto. Además, se
+explica cómo su estructura se alinea con la naturaleza de la aplicación y facilita el cumplimiento de los
+objetivos de diseño planteados.
+
 
 \subsection{Representación arquitectónica de la solución}
+
+La arquitectura en capas, también conocida como arquitectura n-capas o arquitectura multitier, es un patrón 
+arquitectónico que organiza los componentes de un sistema en niveles horizontales, donde cada capa cumple una 
+función específica y se comunica únicamente con las capas adyacentes \citep{bass2012software}. 
+Este enfoque sigue el principio de separación de preocupaciones, 
+promoviendo la cohesión interna de cada capa y reduciendo el acoplamiento entre ellas \citep{gamma1995design}. 
+Como resultado, las modificaciones en una capa tienen un impacto limitado sobre las demás, lo que facilita el 
+mantenimiento, las pruebas y la evolución del sistema.
+
+La arquitectura en capas ofrece múltiples beneficios que la convierten en una elección adecuada para 
+la solución propuesta \citep{rojas2021arquitectura}:
+
+\begin{itemize}
+    \item Separación de responsabilidades: Cada capa se especializa en una función específica 
+	(presentación, lógica de negocio, acceso a datos), lo que facilita la comprensión del sistema y la 
+	asignación de tareas de desarrollo.
+    
+    \item Mantenibilidad: Los cambios en una capa (por ejemplo, migrar de \ac{BD}) no 
+	afectan necesariamente a las demás, siempre que se respeten las interfaces de comunicación.
+    
+    \item Reutilizabilidad: Las capas inferiores (como la de persistencia) pueden ser reutilizadas por 
+	múltiples aplicaciones que requieran las mismas funcionalidades.
+    
+    \item Testabilidad: Cada capa puede ser probada de forma independiente mediante pruebas unitarias o 
+	de integración, facilitando la detección temprana de errores.
+    
+    \item Escalabilidad: Es posible escalar capas específicas según la demanda (por ejemplo, replicar la 
+	capa de servicios sin replicar la \ac{BD}).
+\end{itemize}
+
+\subsubsection{Capas definidas para el servicio \textit{backend}}
+
+El sistema desarrollado se estructura en cuatro capas bien diferenciadas, cada una con responsabilidades claramente 
+definidas. La Figura \ref{fig:arquitectura_capas} ilustra la organización general de la arquitectura y el 
+flujo de comunicación entre las capas:
+
+% \begin{figure}[H]
+%     \centering
+%     \captionbox{Arquitectura en capas del servicio backend. Fuente: elaboración propia.\label{fig:arquitectura_capas}}
+%     {\includegraphics[width=0.85\linewidth]{Images/arquitectura_capas.png}}
+% \end{figure}
+
+A continuación, se describe cada una de las capas que componen la arquitectura:
+
+\begin{itemize}
+    \item \textbf{Capa de presentación (API Gateway / Controladores):} Constituye el punto de entrada al sistema. Expone los endpoints de la API RESTful que reciben las peticiones de los clientes (aplicaciones web, móviles o sistemas externos). Es responsable de:
+    \begin{itemize}
+        \item Recibir y validar las solicitudes HTTP.
+        \item Autenticar y autorizar a los usuarios mediante los mecanismos de control de acceso.
+        \item Enrutar las peticiones hacia los servicios correspondientes en la capa de lógica de negocio.
+        \item Formatear las respuestas (generalmente en JSON) y manejar los códigos de estado HTTP.
+    \end{itemize}
+    
+    \item \textbf{Capa de lógica de negocio (Servicios):} Constituye el núcleo funcional del sistema. Contiene toda la lógica relacionada con la gestión de modelos de características y la variabilidad curricular. Sus responsabilidades incluyen:
+    \begin{itemize}
+        \item Implementar las operaciones de creación, edición y eliminación de modelos de características.
+        \item Gestionar las restricciones estructurales (obligatorias, opcionales, OR, alternativas) y las restricciones cross-tree (requiere, excluye).
+        \item Ejecutar los análisis automatizados sobre los modelos (validación de consistencia, detección de características muertas, conteo de configuraciones).
+        \item Aplicar las reglas de negocio específicas del dominio educativo (prerrequisitos, correlatividades, límites de créditos).
+        \item Orquestar la generación de configuraciones válidas a partir de los modelos.
+    \end{itemize}
+    
+    \item \textbf{Capa de persistencia (Repositorios):} Se encarga del almacenamiento y recuperación de los datos del sistema. Abstrae los detalles de la \ac{BD} subyacente y proporciona una interfaz uniforme para las operaciones de acceso a datos. Sus funciones son:
+    \begin{itemize}
+        \item Gestionar el almacenamiento de los modelos de características en su representación interna.
+        \item Mantener el versionamiento de los modelos (snapshots históricos).
+        \item Almacenar las configuraciones generadas y los metadatos asociados (usuario propietario, fechas, dominios).
+        \item Gestionar las entidades del sistema (usuarios, roles, dominios de conocimiento).
+    \end{itemize}
+    
+    \item \textbf{Capa de infraestructura (\ac{BD}):} Constituye el nivel más bajo de la arquitectura. Incluye el \ac{SGBD} elegido para la persistencia de la información. Sus responsabilidades son:
+    \begin{itemize}
+        \item Almacenar físicamente los datos en estructuras optimizadas (tablas, índices).
+        \item Garantizar la integridad referencial y la consistencia de los datos.
+        \item Ejecutar consultas eficientes sobre grandes volúmenes de información.
+        \item Gestionar transacciones y asegurar la durabilidad de los datos.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Flujo de comunicación entre capas}
+
+La comunicación entre capas sigue una dirección descendente: la capa de presentación recibe la petición del cliente y la delega a la capa de lógica de negocio; esta, a su vez, solicita los datos necesarios a la capa de persistencia; finalmente, la capa de persistencia interactúa con la infraestructura de \ac{BD}. La respuesta sigue el camino inverso, ascendiendo desde la \ac{BD} hasta el cliente.
+
+Este flujo unidireccional garantiza que no existan dependencias circulares, lo que simplifica el mantenimiento y facilita la sustitución de implementaciones en cada nivel. Por ejemplo, es posible cambiar el \ac{SGBD} (de PostgreSQL a MySQL) sin modificar la capa de lógica de negocio, siempre que la capa de persistencia mantenga la misma interfaz.
+
+\subsubsection{Ventajas de la arquitectura en capas para la propuesta de solución}
+
+La elección de la arquitectura en capas responde directamente a las necesidades identificadas en el análisis de requisitos.
+Esta representación arquitectónica permite abordar de manera efectiva los desafíos específicos, tales como:
+
+\begin{itemize}
+    \item Integración con sistemas existentes: La capa de presentación, al exponer una \ac{API} \ac{REST}, permite que sistemas como los mencionados en el estudio de homólogos u otros consuman las funcionalidades del \textit{backend} de variabilidad curricular sin necesidad de modificaciones profundas.
+    
+    \item Evolución del modelo curricular: La separación entre la lógica de negocio y la persistencia facilita la implementación del versionamiento de modelos, permitiendo almacenar múltiples versiones históricas sin afectar las operaciones actuales.
+    
+    \item Seguridad y auditoría: La capa de lógica de negocio centraliza el control de acceso y la validación de permisos, garantizando que solo usuarios autorizados (gestores curriculares, superadministradores) puedan modificar los modelos.
+    
+    \item Reutilización de componentes: La capa de persistencia puede ser reutilizada en futuros proyectos que requieran almacenar modelos de características, mientras que la capa de lógica de negocio encapsula las reglas de análisis de variabilidad.
+\end{itemize}
 
 
 \section{Patrones de diseños}
 
+Mientras el patrón de arquitectura define la macro-estructura del sistema, los patrones de diseño ofrecen
+soluciones a problemas de diseño recurrentes a un nivel de granularidad menor, específicamente en el diseño
+de componentes y sus interacciones. La aplicación consciente de estos patrones es crucial para lograr un
+código flexible, reusable y fácil de mantener \citep{aratchige2024overview}. Esta sección se
+divide en dos sub-apartados para abordar las dos categorías principales de patrones utilizadas en el desarrollo
+de la plataforma.
 
 \subsection{Patrones GRASP}
 
+Los patrones \ac{GRASP} constituyen un conjunto de principios y pautas fundamentales para la 
+asignación de responsabilidades en el diseño orientado a objetos \citep{larman2004applying}. A 
+diferencia de los patrones de diseño concretos, los \ac{GRASP} no ofrecen soluciones específicas 
+codificadas, sino que proporcionan un marco conceptual que guía a los diseñadores en la toma de 
+decisiones sobre qué clase debe ser responsable de qué tarea o información dentro del sistema 
+\citep{begel2020grasp}. Su propósito es lograr un diseño con alta cohesión, bajo acoplamiento y 
+una clara separación de preocupaciones, atributos esenciales para la mantenibilidad y extensibilidad 
+del software. A continuación se muestran los patronos \ac{GRASP} aplicados en el diseño de la 
+propuesta de solución y sus usos específicos:
 
-\subsection{Patrones GOF}
+\begin{itemize}
+	\item \underline{\textit{Repository} (Repositorio)}: Aísla el acceso a datos detrás de una interfaz/repositorio, separando persistencia de lógica de negocio.
+	\begin{itemize}
+		\item Repositorio base y concretos para cada tabla de la \ac{BD}, con métodos \ac{CRUD} genéricos y específicos.
+		\item Inyección de repositorios vía dependencias.
+	\end{itemize} 
+	\item \underline{\textit{Service Layer} (Capa de Servicios)}: Encapsula lógica de negocio en servicios de aplicación, evitando que los controladores conozcan detalles de dominio/persistencia.
+	\begin{itemize}
+		\item Lógica de negocio referente a los servicios de los \ac{FM}.
+	\end{itemize} 
+	\item \underline{\textit{Controller} (Controlador)}: Centraliza la gestión de eventos y solicitudes, delegando a servicios para procesar la lógica.
+	\begin{itemize}
+		\item Presente en los \textit{routers} de la capa de presentación, recibiendo peticiones HTTP, inyectando dependencias, validando permisos y delegando a servicios/repositorios.
+	\end{itemize} 
+	\item \underline{\textit{Low Coupling} (Bajo Acoplamiento)}: Minimiza las dependencias entre componentes, facilitando el mantenimiento y la evolución del sistema.
+	\begin{itemize}
+		\item En la creación de las dependencias del sistema, las cuales son inyectadas en los controladores, repositorios y servicios.
+		\item Sesión de \ac{BD} inyectada en los repositorios, evitando que la lógica de negocio tenga conocimiento de la infraestructura de persistencia.
+	\end{itemize} 
+	\item \underline{\textit{High Cohesion} (Alta Cohesión)}: Asegura que cada componente tenga una única responsabilidad bien definida, mejorando la claridad y mantenibilidad del código.
+	\begin{itemize}
+		\item Servicio enfocado en el versionado de los \ac{FM}.
+		\item Servicio enfocado en la construcción del árbol de los \ac{FM}.
+		\item Repositorios bases para cada tabla de la \ac{BD}, con métodos específicos para cada entidad que contienen métodos de validación y soporte.
+	\end{itemize} 
+\end{itemize}
+
+
+\subsection{Patrones \ac{GoF}}
+
+Los patrones de diseño \ac{GoF}  son soluciones clásicas y ampliamente reconocidas para problemas 
+específicos de diseño en software orientado a objetos. \cite{gamma1995design} subdividieron
+esta categoría de patrones en tres grupos según su propósito. En este sub-apartado se detallan 
+los patrones \ac{GoF} específicos que se han empleado en el proyecto, explicando el problema que
+resuelve cada uno en el contexto de la aplicación.
+
+\subsubsection{Patrones creacionales}
+
+Los patrones creacionales abstractizan el proceso de instanciación de objetos, 
+encapsulando el conocimiento sobre qué clases concretas crear y cómo se relacionan entre sí 
+\citep{gamma1995design}. Su objetivo principal es hacer que el sistema sea independiente de 
+cómo se crean, componen y representan sus objetos, favoreciendo la reutilización del código y 
+reduciendo el acoplamiento entre las clases que utilizan los objetos y las clases que los 
+instancian \citep{seguridad2022patrones}.
+
+\begin{itemize}
+	\item \underline{\textit{Singleton} (Instancia Única)}: Controla una única instancia compartida para acceso global.
+	\begin{itemize}
+		\item Empleado para instanciar únicamente los clientes de MinIO, Redis y Celery, evitando múltiples conexiones y garantizando un punto de acceso centralizado a estos servicios.
+		\item Instancia global para la configuración del sistema, permitiendo que todas las partes del código accedan a los mismos parámetros de configuración sin necesidad de pasarlos explícitamente.
+	\end{itemize}
+	\item \underline{\textit{Factory Method} (Método de Fábrica)}: Delega la creación de objetos a métodos especializados para desacoplar construcción de uso.
+	\begin{itemize}
+		\item Empleado para instanciar componentes reutilizables y servicios de infraestructura bajo una política de creación centralizada.
+    	\item Evita la duplicación de lógica de inicialización y reduce el acoplamiento entre consumidores e implementaciones concretas.
+	\end{itemize}  
+	\item \underline{\textit{Builder} (Constructor)}: Separa la construcción de un objeto complejo de su representación final, permitiendo crear diferentes versiones del mismo objeto usando el mismo proceso de construcción paso a paso.
+	\begin{itemize}
+		\item Empleado en la construcción del árbol completo del \ac{FM}.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Patrones estructurales}
+
+Los patrones estructurales se centran en la composición de clases y objetos para formar estructuras 
+más grandes y flexibles, manteniendo la eficiencia y la independencia de los componentes 
+involucrados \citep{gamma1995design}. Estos patrones permiten resolver problemas relacionados 
+con la interfaz que exponen los objetos, la manera en que se agregan responsabilidades adicionales 
+y cómo se adaptan componentes con interfaces incompatibles para que puedan colaborar 
+\citep{refactoring2021patrones}.
+
+\begin{itemize}
+	\item \underline{\textit{Facade} (Fachada)}: Proporciona una interfaz simplificada y unificada a un conjunto de interfaces más complejas dentro de un subsistema.
+	\begin{itemize}
+		\item Fachada de análisis que combina validación lógica, estructural y manejo de \ac{UVL} con el sistema homólogo FlamapyIDE.
+	\end{itemize} 
+	\item \underline{\textit{Decorator} (Decorador)}: Permite añadir responsabilidades adicionales a un objeto de forma dinámica, sin modificar su estructura interna ni afectar a otros objetos de la misma clase.
+	\begin{itemize}
+		\item Decoradores de caché y ruteo para los controladores.
+		\item Decoradores para registrar tareas en Celery.
+	\end{itemize}
+\end{itemize}
+\subsubsection{Patrones de comportamiento}
+
+Los patrones de comportamiento gestionan la comunicación y asignación de responsabilidades 
+entre objetos, encapsulando la lógica de interacción y distribución de tareas dentro del sistema 
+\citep{gamma1995design}. Su propósito es elevar el nivel de abstracción en el que se describe 
+el flujo de control, permitiendo que los objetos se comuniquen de manera flexible y desacoplada, 
+sin necesidad de conocer explícitamente las implementaciones concretas de sus colaboradores 
+\citep{seguridad2022patrones}.
+
+\begin{itemize}
+	\item \underline{\textit{Strategy} (Estrategia)}: Define una familia de algoritmos intercambiables, los encapsula individualmente y permite que el algoritmo varíe de forma independiente a los clientes que lo usan.
+	\begin{itemize}
+		\item Generación/optimización de configuraciones con estrategias.
+		\item Validación lógica multi‑motor (\textit{sympy}/\textit{pysat}/\textit{z3}) como estrategia interna.
+	\end{itemize} 
+	\item \underline{\textit{State} (Estado)}: Permite que un objeto modifique su comportamiento cuando su estado interno cambia. El objeto parecerá cambiar su clase.
+	\begin{itemize}
+		\item Transiciones de estado para los recursos y los \ac{FM} (ambos tienen los siguientes estaods: borrador, en revisión, publicado, archivado).
+	\end{itemize} 
+\end{itemize}
+
 
 
 \section{Conclusiones del capítulo}

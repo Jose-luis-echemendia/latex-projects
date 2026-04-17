@@ -65,11 +65,11 @@
 			\storyobservation{El dominio funciona como unidad de organización para agrupar y consultar los modelos vinculados. Campos de entrada asociados: RF\#14 (nombre, descripción opcional) y RF\#15 (identificador de dominio en ruta; nombre y descripción opcionales).}
 		\end{userstory}
 
-		\subsubsection*{Épica 3: Ciclo de Vida del Modelo de características (FM)}
+		\subsubsection*{Épica 3: Ciclo de Vida del \ac{FM}}
 
 		\begin{userstory}[]
 			\storyname{Gestión Operativa de \ac{FM}}
-			\storyepic{Ciclo de Vida del Feature Model (FM)}
+			\storyepic{Ciclo de Vida del \ac{FM}}
 			\storyrfs{20, 21, 22, 23, 24, 25}
 			\storypriority{Alta}
 			\storyrisk{Alta}
@@ -88,7 +88,7 @@
 
 		\begin{userstory}[]
 			\storyname{Gestión de Versiones y Publicación}
-			\storyepic{Ciclo de Vida del Feature Model (FM)}
+			\storyepic{Ciclo de Vida del \ac{FM}}
 			\storyrfs{26, 27, 28, 29, 30, 31, 32}
 			\storypriority{Alta}
 			\storyrisk{Alta}
@@ -107,13 +107,23 @@
 
 		\begin{userstory}[]
 			\storyname{Análisis de Métricas y Exportación}
-			\storyepic{Ciclo de Vida del Feature Model (FM)}
+			\storyepic{Ciclo de Vida del \ac{FM}}
 			\storyrfs{34, 35}
 			\storypriority{Media}
 			\storyrisk{Media}
 			\storypoints{0.8}
 			\storyprogrammer{Jose Luis Echemendia López}
-			\storydescription{El diseñador y el observador deben poder obtener estadísticas y exportar el modelo en múltiples formatos, como \ac{UVL}, XML y \ac{JSON}, para compartirlo con otras herramientas o analizar su complejidad.}
+			\storydescription{El diseñador y el observador deben poder obtener estadísticas y exportar el modelo en múltiples formatos para compartirlo con otras herramientas o analizar su complejidad. Los formatos a soportar son:
+				\begin{itemize}
+					\item \ac{UVL}.
+					\item \ac{XML}.
+					\item \ac{TVL}.
+					\item \ac{DIMACS}.
+					\item \ac{JSON}.
+					\item \ac{DOT}.
+					\item mermaid.
+				\end{itemize}
+			}
 			\storyacceptancecriteria{
 			\begin{itemize}
 			\item Calcular métricas de la versión publicada más reciente o de una versión específica.
@@ -124,11 +134,11 @@
 			\storyobservation{La exportación debe ser consistente con la versión consultada y servir tanto para intercambio técnico como para inspección visual.}
 		\end{userstory}
 
-		\subsubsection*{Épica 4: Modelado de Variabilidad (Estructura)}
+		\subsubsection*{Épica 4: Modelado de Variabilidad Estructural}
 
 		\begin{userstory}[]
 			\storyname{Edición de la Jerarquía de Características}
-			\storyepic{Modelado de Variabilidad (Estructura)}
+			\storyepic{Modelado de Variabilidad Estructural}
 			\storyrfs{53, 54, 55, 56, 62, 63, 94, 95}
 			\storypriority{Alta}
 			\storyrisk{Alta}
@@ -147,7 +157,7 @@
 
 		\begin{userstory}[]
 			\storyname{Modelado de Grupos y Relaciones Estructurales}
-			\storyepic{Modelado de Variabilidad (Estructura)}
+			\storyepic{Modelado de Variabilidad Estructural}
 			\storyrfs{96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107}
 			\storypriority{Alta}
 			\storyrisk{Alta}
@@ -157,7 +167,8 @@
 			\storyacceptancecriteria{
 			\begin{itemize}
 			\item Crear grupos con validaciones sobre el tipo de agrupación.
-			\item Definir relaciones semánticas entre \textit{features}.
+			\item Definir relaciones semánticas entre características.
+			\item Permitir la definición de cardinalidades mínimas y máximas.
 			\item Mantener consistencia al activar, desactivar o actualizar dichas estructuras.
 			\end{itemize}
 			}
@@ -169,7 +180,7 @@
 		\begin{userstory}[]
 			\storyname{Gestión de Restricciones Transversales}
 			\storyepic{Restricciones y Lógica Avanzada}
-			\storyrfs{58, 108, 109, 110, 111, 112, 113 (restricciones)}
+			\storyrfs{58, 108, 109, 110, 111, 112, 113}
 			\storypriority{Alta}
 			\storyrisk{Alta}
 			\storypoints{0.8}
@@ -178,6 +189,7 @@
 			\storyacceptancecriteria{
 			\begin{itemize}
 			\item Permitir crear restricciones complejas con validación de sintaxis.
+			\item Permitir expresiones lógicas complejas.
 			\item Mantener control de versiones sobre las restricciones creadas.
 			\end{itemize}
 			}
@@ -197,16 +209,17 @@
 			\begin{itemize}
 			\item Sincronizar el modelo visual al editar el código \ac{UVL}.
 			\item Persistir el \ac{UVL} analizado y validado.
+			\item Aplicar \ac{UVL} a la estructura para regenerar el árbol desde el código \ac{UVL}.
 			\end{itemize}
 			}
 			\storyobservation{La sincronización debe mantener equivalencia entre la representación textual y la representación visual del modelo. Campos de entrada asociados: RF\#37 y RF\#39 (identificador de modelo y versión en ruta, contenido \ac{UVL}).}
 		\end{userstory}
 
-		\subsubsection*{Épica 6: Validación y Análisis Lógico}
+		\subsubsection*{Épica 6: Validación y Análisis de Modelos}
 
 		\begin{userstory}[]
 			\storyname{Validación Lógica y Estructural del Modelo}
-			\storyepic{Validación y Análisis Lógico}
+			\storyepic{Validación y Análisis de Modelos}
 			\storyrfs{40, 41, 43}
 			\storypriority{Alta}
 			\storyrisk{Alta}
@@ -215,7 +228,7 @@
 			\storydescription{El revisador y el diseñador deben poder ejecutar análisis de consistencia, detectar características muertas y redundancias para asegurar que el plan de estudios sea lógicamente posible y no presente errores.}
 			\storyacceptancecriteria{
 			\begin{itemize}
-			\item Evaluar la satisfacibilidad global del modelo mediante un solucionador \textit{SAT}.
+			\item Evaluar la satisfacibilidad global del modelo mediante un solucionador \ac{SAT}.
 			\item Detectar ciclos y nodos huérfanos.
 			\item Identificar características muertas y redundancias.
 			\end{itemize}
@@ -223,11 +236,11 @@
 			\storyobservation{El análisis debe advertir problemas estructurales y semánticos antes de publicar o derivar configuraciones.}
 		\end{userstory}
 
-		\subsubsection*{Épica 7: Derivación de Productos (Configurador)}
+		\subsubsection*{Épica 7: Configuración, Optimización y Recursos}
 
 		\begin{userstory}[]
 			\storyname{Gestión de Configuraciones}
-			\storyepic{Derivación de Productos (Configurador)}
+			\storyepic{Configuración, Optimización y Recursos}
 			\storyrfs{44, 45, 46, 47, 48, 49}
 			\storypriority{Alta}
 			\storyrisk{Alta}
@@ -246,7 +259,7 @@
 
 		\begin{userstory}[]
 			\storyname{Validación y Generación Automática de Configuraciones}
-			\storyepic{Derivación de Productos (Configurador)}
+			\storyepic{Configuración, Optimización y Recursos}
 			\storyrfs{42, 50, 51, 52}
 			\storypriority{Alta}
 			\storyrisk{Alta}
@@ -264,8 +277,8 @@
 
 		\begin{userstory}[]
 			\storyname{Enriquecimiento con Recursos y Taxonomías}
-			\storyepic{Derivación de Productos (Configurador)}
-			\storyrfs{59, 60, 61, 113 (etiquetas), 114, 115, 116, 117, 118, 119}
+			\storyepic{Configuración, Optimización y Recursos}
+			\storyrfs{59, 60, 61, 114, 115, 116, 117, 118, 119, 120}
 			\storypriority{Media}
 			\storyrisk{Media}
 			\storypoints{0.8}
@@ -273,9 +286,10 @@
 			\storydescription{El editor de modelo y el configurador deben poder etiquetar características y vincular recursos externos, como archivos o enlaces, para añadir contenido pedagógico real a la estructura lógica del modelo.}
 			\storyacceptancecriteria{
 			\begin{itemize}
-			\item Asociar y desasociar etiquetas a \textit{features}.
+			\item Asociar y desasociar etiquetas a características.
 			\item Cargar recursos y asignar propietarios.
 			\item Mantener versionada la información asociada a los recursos.
+			\item Aceptar metadatos como idioma, licencia y otros de interés en el registro de los recursos.
 			\end{itemize}
 			}
 			\storyobservation{Los recursos y etiquetas deben servir como apoyo semántico y documental para el uso del modelo. Campos de entrada asociados: RF\#115 (nombre, descripción opcional), RF\#118 (metadatos completos del recurso y contenido) y RF\#119 (identificador de recurso en ruta y campos opcionales, con restricción sobre propietario).}
@@ -542,14 +556,14 @@
 		\crcresp
 		{
 			\begin{itemize}
-			\item Ejecutar validación SAT/SMT (sympy/pysat/z3).
+			\item Ejecutar validación \ac{SAT}/\ac{SMT} (sympy/pysat/z3).
 			\item Verificar consistencia global y configuraciones.
 			\end{itemize}
 		}
 		\crccolab
 		{
 			InvalidConstraintException y otras excepciones\\
-			Dependencias SAT/SMT
+			Dependencias \ac{SAT}/\ac{SMT}
 		}
 	\end{crccard}
 
