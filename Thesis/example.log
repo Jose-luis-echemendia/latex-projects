@@ -4193,4 +4193,1554 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 487.
 LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <9> not available
-(Font)              Font shape `T1/txt
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 499.
+LaTeX Info: Redefining \. on input line 505.
+LaTeX Info: Redefining \% on input line 505.
+ [15]
+LaTeX Font Info:    Font shape `T1/txr/b/n' in size <9> not available
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 607.
+LaTeX Info: Redefining \. on input line 634.
+LaTeX Info: Redefining \% on input line 634.
+ [16]
+LaTeX Info: Redefining \. on input line 681.
+LaTeX Info: Redefining \% on input line 681.
+ [17]
+LaTeX Info: Redefining \. on input line 720.
+LaTeX Info: Redefining \% on input line 720.
+ [18]
+LaTeX Info: Redefining \. on input line 747.
+LaTeX Info: Redefining \% on input line 747.
+ [19]
+Underfull \hbox (badness 1406) in paragraph at lines 785--785
+[]|\T1/txr/bx/n/10 Concepto aná-lo-go en pla-ni-fi-ca-
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 794--794
+[]|\T1/txr/bx/n/10 Concepto aná-lo-go en pla-ni-fi-ca-
+ []
+
+LaTeX Info: Redefining \. on input line 818.
+LaTeX Info: Redefining \% on input line 818.
+[20]
+LaTeX Info: Redefining \. on input line 873.
+LaTeX Info: Redefining \% on input line 873.
+ [21]
+LaTeX Info: Redefining \. on input line 1035.
+LaTeX Info: Redefining \% on input line 1035.
+ [22]
+LaTeX Info: Redefining \. on input line 1164.
+LaTeX Info: Redefining \% on input line 1164.
+ [23]
+Overfull \vbox (10.07777pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1164.
+LaTeX Info: Redefining \% on input line 1164.
+ [24]
+LaTeX Info: Redefining \. on input line 1227.
+LaTeX Info: Redefining \% on input line 1227.
+ [25]
+LaTeX Info: Redefining \. on input line 1264.
+LaTeX Info: Redefining \% on input line 1264.
+ [26]
+LaTeX Info: Redefining \. on input line 1310.
+LaTeX Info: Redefining \% on input line 1310.
+ [27]
+LaTeX Info: Redefining \. on input line 1370.
+LaTeX Info: Redefining \% on input line 1370.
+ [28]
+LaTeX Info: Redefining \. on input line 1425.
+LaTeX Info: Redefining \% on input line 1425.
+ [29]
+LaTeX Info: Redefining \. on input line 1470.
+LaTeX Info: Redefining \% on input line 1470.
+ [30]
+LaTeX Info: Redefining \. on input line 1522.
+LaTeX Info: Redefining \% on input line 1522.
+ [31]
+
+LaTeX Warning: Citation 'gamma1995Frameworks' on page 32 undefined on input line 1558.
+
+LaTeX Info: Redefining \. on input line 1565.
+LaTeX Info: Redefining \% on input line 1565.
+[32]
+LaTeX Font Info:    Font shape `T1/txr/b/it' in size <10> not available
+(Font)              Font shape `T1/txr/bx/it' tried instead on input line 1572.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1596--1597
+[]|\T1/txr/m/n/10 Clientes\servidores
+ []
+
+LaTeX Info: Redefining \. on input line 1641.
+LaTeX Info: Redefining \% on input line 1641.
+[33]
+LaTeX Info: Redefining \. on input line 1677.
+LaTeX Info: Redefining \% on input line 1677.
+ [34]
+LaTeX Info: Redefining \. on input line 1730.
+LaTeX Info: Redefining \% on input line 1730.
+ [35]
+LaTeX Info: Redefining \. on input line 1784.
+LaTeX Info: Redefining \% on input line 1784.
+ [36]
+LaTeX Info: Redefining \. on input line 1835.
+LaTeX Info: Redefining \% on input line 1835.
+ [37]
+LaTeX Info: Redefining \. on input line 1890.
+LaTeX Info: Redefining \% on input line 1890.
+ [38]
+Underfull \hbox (badness 4779) in paragraph at lines 1954--1955
+[]|\T1/txr/m/n/10 Respuestas in-me-dia-tas + se-gui-
+ []
+
+LaTeX Info: Redefining \. on input line 1981.
+LaTeX Info: Redefining \% on input line 1981.
+[39]
+LaTeX Info: Redefining \. on input line 2036.
+LaTeX Info: Redefining \% on input line 2036.
+ [40]
+LaTeX Info: Redefining \. on input line 2093.
+LaTeX Info: Redefining \% on input line 2093.
+ [41]
+LaTeX Info: Redefining \. on input line 2146.
+LaTeX Info: Redefining \% on input line 2146.
+ [42]
+LaTeX Info: Redefining \. on input line 2196.
+LaTeX Info: Redefining \% on input line 2196.
+ [43]
+LaTeX Info: Redefining \. on input line 2256.
+LaTeX Info: Redefining \% on input line 2256.
+ [44]
+LaTeX Info: Redefining \. on input line 2306.
+LaTeX Info: Redefining \% on input line 2306.
+ [45]
+LaTeX Info: Redefining \. on input line 2336.
+LaTeX Info: Redefining \% on input line 2336.
+ [46]
+Underfull \hbox (badness 2302) in paragraph at lines 2370--2371
+[]|\T1/txr/bx/n/10 Metodologías Tra-di-cio-na-
+ []
+
+
+Underfull \hbox (badness 2302) in paragraph at lines 2376--2377
+[]|\T1/txr/bx/n/10 Metodologías Tra-di-cio-na-
+ []
+
+LaTeX Info: Redefining \. on input line 2414.
+LaTeX Info: Redefining \% on input line 2414.
+[47]
+LaTeX Info: Redefining \. on input line 2514.
+LaTeX Info: Redefining \% on input line 2514.
+ [48]
+LaTeX Info: Redefining \. on input line 2548.
+LaTeX Info: Redefining \% on input line 2548.
+ [49]
+LaTeX Info: Redefining \. on input line 2570.
+LaTeX Info: Redefining \% on input line 2570.
+ [50]) (./Chapter2.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [51]
+Cap\'{\i }tulo 2.
+[52
+
+]
+LaTeX Info: Redefining \. on input line 83.
+LaTeX Info: Redefining \% on input line 83.
+ [53]
+Overfull \hbox (6.9845pt too wide) in paragraph at lines 129--129
+[]|\T1/txr/bx/n/10 Administrador| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
+[]|\T1/txr/bx/n/10 Editor de
+ []
+
+
+Overfull \hbox (1.4345pt too wide) in paragraph at lines 129--129
+[]|\T1/txr/bx/n/10 Configurador| 
+ []
+
+
+Overfull \hbox (21.47392pt too wide) in alignment at lines 126--131
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (6.9845pt too wide) in paragraph at lines 134--134
+[]|\T1/txr/bx/n/10 Administrador| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+[]|\T1/txr/bx/n/10 Editor de
+ []
+
+
+Overfull \hbox (1.4345pt too wide) in paragraph at lines 134--134
+[]|\T1/txr/bx/n/10 Configurador| 
+ []
+
+
+Overfull \hbox (21.47392pt too wide) in alignment at lines 131--136
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (21.47392pt too wide) in alignment at lines 136--138
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (21.47392pt too wide) in alignment at lines 138--140
+ [] [] [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+[]|\T1/txr/m/n/10 R=Sí /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+\T1/txr/m/n/10 (so-lo don-de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+\T1/txr/m/n/10 co-la-bo-ra;
+ []
+
+
+Underfull \hbox (badness 7186) in paragraph at lines 146--146
+\T1/txr/m/n/10 sin crear ni
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+[]|\T1/txr/m/n/10 R=Sí (pu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+\T1/txr/m/n/10 bli-ca-dos) /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+[]|\T1/txr/m/n/10 R=Sí (pu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+\T1/txr/m/n/10 bli-ca-dos) /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+[]|\T1/txr/bx/n/10 FeatureModel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+[]|\T1/txr/m/n/10 R=Sí /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+[]|\T1/txr/m/n/10 R=Sí /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+[]|\T1/txr/m/n/10 R=Sí /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+\T1/txr/m/n/10 (en mo-de-los
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Overfull \hbox (3.55858pt too wide) in paragraph at lines 152--152
+[]|\T1/txr/bx/n/10 FeatureRelation| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
+\T1/txr/m/n/10 (en mo-de-los
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+\T1/txr/m/n/10 (en mo-de-los
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+\T1/txr/m/n/10 (en mo-de-los
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
+[]|\T1/txr/bx/n/10 FeatureModel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
+\T1/txr/m/n/10 (ges-tio-na
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
+\T1/txr/m/n/10 co-la-bo-ra-do-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
+\T1/txr/m/n/10 res de sus
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+\T1/txr/m/n/10 (aco-ta-do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+\T1/txr/m/n/10 se-gún con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+\T1/txr/m/n/10 fi-gu-ra-ción
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Overfull \hbox (21.47392pt too wide) in alignment at lines 140--164
+ [] [] [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 164.
+LaTeX Info: Redefining \% on input line 164.
+[54]
+LaTeX Info: Redefining \. on input line 175.
+LaTeX Info: Redefining \% on input line 175.
+ [55]
+Underfull \hbox (badness 10000) in paragraph at lines 250--250
+[]|\T1/txr/m/n/10 Solicitar re-cu-pe-ra-ción de
+ []
+
+
+Underfull \hbox (badness 4254) in paragraph at lines 307--307
+[]|\T1/txr/m/n/10 Habilita un do-mi-nio pre-via-men-te
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 354--354
+[]|\T1/txr/m/n/10 El sis-te-ma de-be en-tre-gar el ár-bol
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+[][][][]\T1/txr/m/n/10 Formateo DI-MACS (DI-
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 382--384
+\T1/txr/m/n/10 una nue-va ver-sión es-truc-tu-ral to-
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 396--396
+[]|\T1/txr/m/n/10 El sis-te-ma de-be per-mi-tir eje-cu-tar
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 396--396
+\T1/txr/m/n/10 aná-li-sis de ca-rac-te-rís-ti-cas muer-tas,
+ []
+
+
+Underfull \hbox (badness 4072) in paragraph at lines 398--400
+[]|\T1/txr/m/n/10 Crea y al-ma-ce-na con-fi-gu-ra-cio-nes
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 402--403
+[]\T1/txr/m/n/10 identificador de ver-sión del
+ []
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 407--407
+[]|\T1/txr/m/n/10 Obtener con-fi-gu-ra-ción por
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
+[]|\T1/txr/m/n/10 Lista con-fi-gu-ra-cio-nes dis-po-ni-bles
+ []
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 424--424
+[]|\T1/txr/m/n/10 Validar con-fi-gu-ra-ción pro-
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 436--437
+[]\T1/txr/m/n/10 identificador de ver-sión del
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 480--481
+[]\T1/txr/m/n/10 cardinalidad mí-ni-ma (op-cio-
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 490--491
+[]\T1/txr/m/n/10 cardinalidad mí-ni-ma (op-cio-
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 495--495
+[]|[][][]\T1/txr/m/n/10 RF[][]#100| 
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 497--497
+[]|[][][]\T1/txr/m/n/10 RF[][]#101| 
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 499--499
+[]|[][][]\T1/txr/m/n/10 RF[][]#102| 
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 501--501
+[]|[][][]\T1/txr/m/n/10 RF[][]#103| 
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 503--503
+[]|[][][]\T1/txr/m/n/10 RF[][]#104| 
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 503--505
+\T1/txr/m/n/10 li-da-cio-nes se-mán-ti-cas y \T1/txr/m/it/10 copy-on-
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 511--511
+[]|[][][]\T1/txr/m/n/10 RF[][]#105| 
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 520--520
+[]|[][][]\T1/txr/m/n/10 RF[][]#106| 
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 522--522
+[]|[][][]\T1/txr/m/n/10 RF[][]#107| 
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 524--524
+[]|[][][]\T1/txr/m/n/10 RF[][]#108| 
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 526--526
+[]|[][][]\T1/txr/m/n/10 RF[][]#109| 
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 528--528
+[]|[][][]\T1/txr/m/n/10 RF[][]#110| 
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 530--531
+[]\T1/txr/m/n/10 identificador de ver-sión del
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 536--536
+[]|[][][]\T1/txr/m/n/10 RF[][]#111| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--538
+[]|\T1/txr/m/n/10 Actualiza res-tric-cio-nes exis-ten-tes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--538
+\T1/txr/m/n/10 pre-ser-van-do co-he-ren-cia ló-gi-ca.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--539
+[]\T1/txr/m/n/10 identificador de res-tric-ción
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 544--544
+[]|[][][]\T1/txr/m/n/10 RF[][]#112| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 544--544
+[]|\T1/txr/m/n/10 Elimina res-tric-cio-nes apli-can-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 544--544
+\T1/txr/m/n/10 do \T1/txr/m/it/10 copy-on-write \T1/txr/m/n/10 pa-ra man-te-ner
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 546--546
+[]|[][][]\T1/txr/m/n/10 RF[][]#113| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 546--546
+[]|\T1/txr/m/n/10 Elimina res-tric-cio-nes apli-can-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 546--546
+\T1/txr/m/n/10 do \T1/txr/m/it/10 copy-on-write \T1/txr/m/n/10 pa-ra man-te-ner
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 548--548
+[]|[][][]\T1/txr/m/n/10 RF[][]#114| 
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 548--548
+[]|\T1/txr/m/n/10 Lista eti-que-tas ac-ti-vas dis-po-ni-bles
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 550--550
+[]|[][][]\T1/txr/m/n/10 RF[][]#115| 
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 552--552
+[]|[][][]\T1/txr/m/n/10 RF[][]#116| 
+ []
+
+
+Underfull \hbox (badness 2617) in paragraph at lines 552--554
+[]|\T1/txr/m/n/10 Crea nue-vas eti-que-tas ase-gu-ran-do
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 559--559
+[]|[][][]\T1/txr/m/n/10 RF[][]#117| 
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 561--561
+[]|[][][]\T1/txr/m/n/10 RF[][]#118| 
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 563--563
+[]|[][][]\T1/txr/m/n/10 RF[][]#119| 
+ []
+
+
+Underfull \hbox (badness 5939) in paragraph at lines 575--576
+[]\T1/txr/m/n/10 identificador de pro-pie-ta-rio
+ []
+
+
+Overfull \hbox (3.77725pt too wide) in paragraph at lines 583--583
+[]|[][][]\T1/txr/m/n/10 RF[][]#120| 
+ []
+
+
+Underfull \hbox (badness 5939) in paragraph at lines 596--597
+[]\T1/txr/m/n/10 identificador de pro-pie-ta-rio
+ []
+
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+[56]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [57]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [58]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [59]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [60]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [61]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [62]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [63]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [64]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [65]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [66]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [67]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [68]
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+ [69]
+LaTeX Info: Redefining \. on input line 625.
+LaTeX Info: Redefining \% on input line 625.
+ [70]
+Overfull \hbox (1.65201pt too wide) in paragraph at lines 635--638
+[][][][]\T1/txr/m/n/10 RnF[][]#6: El ac-ce-so al sis-te-ma a tra-vés de cual-quier clien-te de-be ser me-dian-te una co-mu-ni-ca-ción se-gu-ra TLS[][][][][]/SSL[][][][][]
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 646.
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
+File: ts1txr.fd 2000/12/15 v3.1
+)
+LaTeX Info: Redefining \. on input line 670.
+LaTeX Info: Redefining \% on input line 670.
+ [71]
+LaTeX Info: Redefining \. on input line 715.
+LaTeX Info: Redefining \% on input line 715.
+ [72]
+LaTeX Info: Redefining \. on input line 762.
+LaTeX Info: Redefining \% on input line 762.
+ [73]
+LaTeX Info: Redefining \. on input line 799.
+LaTeX Info: Redefining \% on input line 799.
+ [74]
+Underfull \hbox (badness 2591) in paragraph at lines 845--845
+[]|\T1/txr/m/n/10 20 de di-ciem-bre del
+ []
+
+LaTeX Info: Redefining \. on input line 860.
+LaTeX Info: Redefining \% on input line 860.
+[75]
+LaTeX Info: Redefining \. on input line 903.
+LaTeX Info: Redefining \% on input line 903.
+ [76]
+
+LaTeX Warning: Reference `fig:arquitectura_capas' on page 77 undefined on input line 953.
+
+LaTeX Info: Redefining \. on input line 967.
+LaTeX Info: Redefining \% on input line 967.
+[77]
+LaTeX Info: Redefining \. on input line 1011.
+LaTeX Info: Redefining \% on input line 1011.
+ [78]
+LaTeX Info: Redefining \. on input line 1054.
+LaTeX Info: Redefining \% on input line 1054.
+ [79]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\ac' on input line 1070.
+
+LaTeX Info: Redefining \. on input line 1097.
+LaTeX Info: Redefining \% on input line 1097.
+[80]
+LaTeX Info: Redefining \. on input line 1155.
+LaTeX Info: Redefining \% on input line 1155.
+ [81]
+
+Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
+(lipsum)                'spanish' will be used instead.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1202.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 1204.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 1231.
+LaTeX Info: Redefining \% on input line 1231.
+[82] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+) (./Anexos/code.cpp
+LaTeX Info: Redefining \. on input line 3.
+LaTeX Info: Redefining \% on input line 3.
+ [83]
+LaTeX Font Info:    Font shape `TS1/txr/b/n' in size <10> not available
+(Font)              Font shape `TS1/txr/bx/n' tried instead on input line 3.
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (./Anexos/code.cpp) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2023/02/27 1.9 listings language file
+) (./Anexos/code.cpp
+LaTeX Font Info:    Trying to load font information for TS1+txtt on input line 40.
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txtt.fd
+File: ts1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
+ [84
+
+pdfTeX warning: pdflatex: pop empty color page stack 0
+]) (./Anexos/code.cpp) (./Anexos/code.cpp
+LaTeX Info: Redefining \. on input line 62.
+LaTeX Info: Redefining \% on input line 62.
+ [85]
+LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <9> not available
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 64.
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+) (./Anexos/code.cpp) (./Anexos/code.cpp
+LaTeX Info: Redefining \. on input line 113.
+LaTeX Info: Redefining \% on input line 113.
+ [86])
+LaTeX Info: Redefining \. on input line 1255.
+LaTeX Info: Redefining \% on input line 1255.
+ [87]
+Cap\'{\i }tulo 3.
+[88
+
+]
+LaTeX Info: Redefining \. on input line 1352.
+LaTeX Info: Redefining \% on input line 1352.
+ [89]
+LaTeX Info: Redefining \. on input line 1412.
+LaTeX Info: Redefining \% on input line 1412.
+ [90]
+LaTeX Info: Redefining \. on input line 1432.
+LaTeX Info: Redefining \% on input line 1432.
+ [91]
+
+Package Thesis Warning: You are using development and engineering tasks at the same time. Check it out!! on input line 1449.
+
+
+Package Thesis Warning: You are using development and engineering tasks at the same time. Check it out!! on input line 1460.
+
+
+Package Thesis Warning: You are using development and engineering tasks at the same time. Check it out!! on input line 1471.
+
+LaTeX Info: Redefining \. on input line 1480.
+LaTeX Info: Redefining \% on input line 1480.
+[92]) (./Chapter3.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [93]
+Cap\'{\i }tulo 4.
+[94
+
+]) (./Conclusions.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [95]) (./Suggestions.tex [96
+
+]) (./Appendices.tex)
+
+Package glossaries Warning: No \printglossary or \printglossaries found. 
+(Remove \makeglossaries if you don't want any glossaries.) 
+This document will not have a glossary.
+
+(./example.gls [97
+
+]) (./example.acr [98
+
+
+] [99
+
+
+])
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [100]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+Overfull \hbox (19.08313pt too wide) in paragraph at lines 70--70
+[][]\T1/txr/m/n/10.95 ACADEMIALAB, [s.f.]. \T1/txr/m/it/10.95 Lí-nea de pro-duc-tos de soft-wa-re\T1/txr/m/n/10.95 . []Url[]: [][]$\T1/txtt/m/n/10.95 https : / / academia -[] lab . com / enciclopedia /
+ []
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+Overfull \hbox (3.03131pt too wide) in paragraph at lines 70--70
+[][]\T1/txr/m/n/10.95 BECK, Kent y AN-DRES, Cynthia, 2004. \T1/txr/m/it/10.95 Ex-tre-me Pro-gram-ming Ex-plai-ned: Em-bra-ce Chan-ge\T1/txr/m/n/10.95 . 2nd. Addison-
+ []
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[101
+
+]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [102]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+Overfull \hbox (5.87929pt too wide) in paragraph at lines 70--70
+[][]\T1/txr/m/n/10.95 INC., Post-man, 2024. \T1/txr/m/it/10.95 Post-man API De-ve-lop-ment Plat-form: Do-cu-men-ta-tion \T1/txr/m/n/10.95 [[][]$\T1/txtt/m/n/10.95 https : / / learning . postman .
+ []
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[103]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+Overfull \hbox (2.25601pt too wide) in paragraph at lines 70--70
+\T1/txr/m/n/10.95 tionships from an As-sembly. \T1/txr/m/it/10.95 Jour-nal of Soft-wa-re En-gi-nee-ring & Ap-pli-ca-tions\T1/txr/m/n/10.95 . Vol. 3, n.[] 2, []págs.[] 167[]175
+ []
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[104]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+Overfull \hbox (1.93839pt too wide) in paragraph at lines 70--70
+\T1/txr/m/n/10.95 study of pro-gram-ming lan-gua-ges and co-de qua-lity in GitHub. \T1/txr/m/it/10.95 Com-mu-ni-ca-tions of the ACM \T1/txr/m/n/10.95 (vid. págs. [][]31[][],
+ []
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[105]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [106]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [107]
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [108]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includefoot 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=620.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Font shape `T1/txr/b/n' in size <24.88> not available
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 70.
+ [109
+
+
+
+]
+Ap\'{e}ndice A.
+[110
+
+
+
+]
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [111]
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [112]
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [113]
+LaTeX Info: Redefin
