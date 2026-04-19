@@ -947,76 +947,191 @@ la solución propuesta \citep{rojas2021arquitectura}:
 	capa de servicios sin replicar la \ac{BD}).
 \end{itemize}
 
-\subsubsection{Capas definidas para el servicio \textit{backend}}
+\subsubsection{Capas definidas para la propuesta de solución}
 
-El sistema desarrollado se estructura en cuatro capas bien diferenciadas, cada una con responsabilidades claramente 
-definidas. La Figura \ref{fig:arquitectura_capas} ilustra la organización general de la arquitectura y el 
-flujo de comunicación entre las capas:
+La solución se implementa como un monolito modular estructurado en capas, que combina 
+principios de la arquitectura en capas con una organización orientada al dominio y mecanismos 
+de procesamiento asíncrono. En cuanto al código, hay tres capas 
+bien diferenciadas, cada una con responsabilidades claramente definidas. 
+Además, se cuenta con una cuarta capa que encapsula los servicios externos de infraestructura 
+que necesita el sistema para su correcto funcionamiento. 
+La Figura \ref{fig:arquitectura_capas} ilustra la organización general de la arquitectura, el 
+flujo de comunicación entre las capas y algunos componentes clave dentro de cada una de ellas.
 
-% \begin{figure}[H]
-%     \centering
-%     \captionbox{Arquitectura en capas del servicio backend. Fuente: elaboración propia.\label{fig:arquitectura_capas}}
-%     {\includegraphics[width=0.85\linewidth]{Images/arquitectura_capas.png}}
-% \end{figure}
+\begin{figure}[H]
+    \centering
+    \captionbox{Arquitectura en capas de la propuesta de solución. Fuente: elaboración propia.\label{fig:arquitectura_capas}}
+    {\includegraphics[width=0.85\linewidth]{Images/arquitectura_feature_model4.jpg}}
+\end{figure}
 
-A continuación, se describe cada una de las capas que componen la arquitectura:
+A continuación, se describen cada una de las capas que componen la arquitectura:
 
 \begin{itemize}
-    \item \textbf{Capa de presentación (API Gateway / Controladores):} Constituye el punto de entrada al sistema. Expone los endpoints de la API RESTful que reciben las peticiones de los clientes (aplicaciones web, móviles o sistemas externos). Es responsable de:
+    \item \textbf{Capa de acceso (controladores):} Constituye el punto de entrada al sistema. 
+	Expone los \textit{endpoints} de la \ac{API} que reciben las peticiones de los clientes. Es responsable de:
     \begin{itemize}
-        \item Recibir y validar las solicitudes HTTP.
+        \item Recibir y validar las solicitudes \ac{HTTP}.
         \item Autenticar y autorizar a los usuarios mediante los mecanismos de control de acceso.
         \item Enrutar las peticiones hacia los servicios correspondientes en la capa de lógica de negocio.
-        \item Formatear las respuestas (generalmente en JSON) y manejar los códigos de estado HTTP.
+        \item Formatear las respuestas (generalmente en \ac{JSON}) y manejar los códigos de estado \ac{HTTP}.
+        \item Brindar una comunicación en tiempo real para obtener información estadística de los \ac{FM}.
     \end{itemize}
     
-    \item \textbf{Capa de lógica de negocio (Servicios):} Constituye el núcleo funcional del sistema. Contiene toda la lógica relacionada con la gestión de modelos de características y la variabilidad curricular. Sus responsabilidades incluyen:
+    \item \textbf{Capa de lógica de negocio (servicios):} Constituye el núcleo funcional del sistema. 
+	Contiene toda la lógica relacionada con la gestión de \ac{FM}, la variabilidad curricular y 
+	elementos complementarios. Esta capa está estructurada siguiendo principios de \ac{DDD}, organizando la lógica en servicios especializados que encapsulan reglas 
+	complejas del sistema de \ac{FM} y de los componentes estructurales del mismo.
+	Sus responsabilidades incluyen:
     \begin{itemize}
-        \item Implementar las operaciones de creación, edición y eliminación de modelos de características.
-        \item Gestionar las restricciones estructurales (obligatorias, opcionales, OR, alternativas) y las restricciones cross-tree (requiere, excluye).
-        \item Ejecutar los análisis automatizados sobre los modelos (validación de consistencia, detección de características muertas, conteo de configuraciones).
-        \item Aplicar las reglas de negocio específicas del dominio educativo (prerrequisitos, correlatividades, límites de créditos).
+        \item Implementar las operaciones \ac{CRUD} de \ac{FM}.
+        \item Gestionar las relaciones estructurales y las restricciones de los \ac{FM}.
+        \item Gestionar el versionamiento de los modelos.
+        \item Ejecutar los análisis automatizados sobre los modelos (validación de consistencia, detección de características muertas, conteo de configuraciones, etc).
+        \item Aplicar las reglas de negocio específicas del dominio educativo (prerrequisitos, correlatividades, límites de créditos, cantidad de horas clases, etc).
         \item Orquestar la generación de configuraciones válidas a partir de los modelos.
+        \item Exportación de \ac{FM} e importación de \ac{UVL}.
+        \item Gestión de recursos, etiquetas, dominios y usuarios.
     \end{itemize}
     
-    \item \textbf{Capa de persistencia (Repositorios):} Se encarga del almacenamiento y recuperación de los datos del sistema. Abstrae los detalles de la \ac{BD} subyacente y proporciona una interfaz uniforme para las operaciones de acceso a datos. Sus funciones son:
+    \item \textbf{Capa de persistencia (repositorios y clientes):} Se encarga de gestionar todo el 
+	almacenamiento de datos del sistema, ya sea de larga duración (\ac{BD}, almacenamiento de 
+	archivos) o de corta duración (caché, sesiones). Su objetivo es abstraer a las capas superiores 
+	(lógica de negocio y acceso) de los detalles técnicos de dónde y cómo se guarda cada tipo de 
+	información al proporcionar una interfaz uniforme para las operaciones de acceso a datos. Sus funciones son:
     \begin{itemize}
-        \item Gestionar el almacenamiento de los modelos de características en su representación interna.
-        \item Mantener el versionamiento de los modelos (snapshots históricos).
+        \item Gestionar el almacenamiento de los \ac{FM} en su representación interna.
         \item Almacenar las configuraciones generadas y los metadatos asociados (usuario propietario, fechas, dominios).
-        \item Gestionar las entidades del sistema (usuarios, roles, dominios de conocimiento).
+        \item Gestionar las entidades referentes a etiquetas, recursos, dominios, usuarios y las correspondientes al núcleo del sistema.
+        \item Almacenar archivos de exportación de \ac{FM}.
+        \item Almacenar recursos educativos (conferencias, clases prácticas, etc) asociados a las características.
+        \item Gestionar la memoria caché.
     \end{itemize}
-    
-    \item \textbf{Capa de infraestructura (\ac{BD}):} Constituye el nivel más bajo de la arquitectura. Incluye el \ac{SGBD} elegido para la persistencia de la información. Sus responsabilidades son:
+
+    \item \textbf{Capa de infraestructura (\ac{BD}, MinIO, Redis):} Constituye el nivel más bajo de la arquitectura del sistema. 
+	Es la responsable de proporcionar todos los componentes tecnológicos subyacentes que hacen posible 
+	el almacenamiento, la recuperación y el procesamiento eficiente de los datos. Esta capa es 
+	completamente transparente para las capas superiores (acceso, lógica de negocio y persistencia), 
+	las cuales interactúan con ella únicamente a través de los repositorios y clientes definidos en 
+	la capa de persistencia. Sus responsabilidades son:
     \begin{itemize}
         \item Almacenar físicamente los datos en estructuras optimizadas (tablas, índices).
         \item Garantizar la integridad referencial y la consistencia de los datos.
         \item Ejecutar consultas eficientes sobre grandes volúmenes de información.
         \item Gestionar transacciones y asegurar la durabilidad de los datos.
+        \item Almacenar físicamente los archivos de exportación de \ac{FM} y recursos educativos.
+        \item Descargar objetos mediente \ac{URL}s prefirmadas.
+        \item Organizar los objetos en \textit{buckets}.
+        \item Guardar respaldos significativos de la \ac{BD}.
+        \item Cachear consultas frecuentes y resultados de operaciones de alto costo computacional para optimizar el rendimiento y reducir la latencia del sistema.
     \end{itemize}
 \end{itemize}
 
 \subsubsection{Flujo de comunicación entre capas}
 
-La comunicación entre capas sigue una dirección descendente: la capa de presentación recibe la petición del cliente y la delega a la capa de lógica de negocio; esta, a su vez, solicita los datos necesarios a la capa de persistencia; finalmente, la capa de persistencia interactúa con la infraestructura de \ac{BD}. La respuesta sigue el camino inverso, ascendiendo desde la \ac{BD} hasta el cliente.
+La comunicación entre capas sigue una dirección descendente: la capa de acceso recibe la 
+petición del cliente y la delega a la capa de lógica de negocio; esta, a su vez, solicita los datos 
+necesarios a la capa de persistencia; finalmente, la capa de persistencia interactúa con la 
+infraestructura. La respuesta sigue el camino inverso, ascendiendo desde el nivel más bajo hasta el cliente.
 
-Este flujo unidireccional garantiza que no existan dependencias circulares, lo que simplifica el mantenimiento y facilita la sustitución de implementaciones en cada nivel. Por ejemplo, es posible cambiar el \ac{SGBD} (de PostgreSQL a MySQL) sin modificar la capa de lógica de negocio, siempre que la capa de persistencia mantenga la misma interfaz.
+Este flujo unidireccional garantiza que no existan dependencias circulares, lo que simplifica el 
+mantenimiento y facilita la sustitución de implementaciones en cada nivel. Por ejemplo, es posible 
+cambiar el \ac{SGBD} (de PostgreSQL a MySQL) sin modificar la capa de lógica de negocio, siempre que 
+la capa de persistencia mantenga la misma interfaz.
 
-\subsubsection{Ventajas de la arquitectura en capas para la propuesta de solución}
+\subsubsection{Arquitectura de Celery}
 
-La elección de la arquitectura en capas responde directamente a las necesidades identificadas en el análisis de requisitos.
+Para atender los requisitos de procesamiento asíncrono y ejecución de tareas de larga duración (como la 
+validación de \ac{FM} complejos, el conteo de configuraciones mediante solucionadores 
+\ac{SAT} o la generación masiva de planes de estudio, entre otras tareas), la solución incorpora un sistema de colas de mensajes 
+basado en Celery. Celery es un sistema de procesamiento de tareas distribuidas y asíncronas, ampliamente 
+utilizado en aplicaciones Python, que permite descargar operaciones costosas del flujo principal de la 
+aplicación, mejorando así la capacidad de respuesta del servicio y la experiencia del usuario 
+\citep{celery2025docs}.
+
+La arquitectura de Celery se estructura en cuatro componentes fundamentales que interactúan entre sí para 
+garantizar la ejecución confiable y distribuida de las tareas, tal como se ilustra en la figura 
+\ref{fig:arquitectura_celery}.
+
+\begin{figure}[H]
+    \centering
+    \captionbox{Arquitectura de Celery. Fuente: elaboración propia.\label{fig:arquitectura_celery}}
+    {\includegraphics[width=0.85\linewidth]{Images/arquitectura_celery.jpg}}
+\end{figure}
+
+A continuación, se describen cada uno de estos componentes:
+
+\begin{itemize}
+    \item Aplicación: Constituye el punto de entrada principal para la definición y configuración de las tareas. 
+	Es el componente que se integra directamente con el código del servicio \textit{backend}, 
+	permitiendo invocar funciones como tareas asíncronas. 
+	La aplicación define qué tareas están disponibles, cómo deben serializarse los argumentos y qué cola de 
+	mensajes utilizar para la comunicación \citep{celery2025firststeps}.
+    
+    \item Cola de mensajes: Actúa como intermediario entre la aplicación que publica tareas y 
+	los trabajadores que las ejecutan. Cuando la aplicación invoca una tarea asíncrona, esta se empaqueta como 
+	un mensaje y se publica en la cola. Es responsable de almacenar temporalmente estos mensajes y 
+	distribuirlos a los trabajadores disponibles. En esta solución se emplea Redis como cola de mensajes, 
+	aprovechando su alto rendimiento y su capacidad para gestionar grandes volúmenes de mensajes 
+	\citep{celery2025redis}.
+    
+    \item Trabajador: Es el proceso que consume los mensajes de la cola y ejecuta las tareas 
+	definidas en la aplicación. Los trabajadores operan de forma independiente y pueden ejecutarse en uno o 
+	múltiples nodos, permitiendo escalar horizontalmente el procesamiento de tareas según la demanda del sistema. 
+	Cada trabajador puede gestionar múltiples tareas en paralelo mediante el uso de procesos hijos \citep{celery2025workers}.
+    
+    \item Programador: Es un componente especializado que actúa como planificador de tareas 
+	periódicas. Genera tareas de forma automática en intervalos de tiempo predefinidos 
+	(por ejemplo, cada hora, cada día) y las publica en la cola de mensajes para que sean ejecutadas por los 
+	trabajadores. En el contexto del servicio \textit{backend}, este componente resulta útil para tareas como la limpieza 
+	periódica de modelos temporales, el envío de notificaciones programadas o la ejecución de análisis 
+	recurrentes sobre los \ac{FM} \citep{celery2025beat}.
+\end{itemize}
+
+La integración de Celery en la arquitectura del servicio \textit{backend} aporta múltiples ventajas al sistema:
+
+\begin{itemize}
+    \item Mejora de la experiencia de usuario: Las operaciones costosas (como la validación de un \ac{FM} con cientos 
+	de características) se ejecutan en segundo plano, devolviendo al cliente una respuesta inmediata con el 
+	identificador de la tarea. El cliente puede consultar posteriormente el estado y los resultados de la 
+	tarea sin bloquear la interfaz.
+    
+    \item Escalabilidad horizontal: Al aumentar la carga de trabajo, es posible añadir más trabajadores 
+	(incluso en servidores distintos) para procesar las tareas en paralelo, sin modificar el código de la 
+	aplicación principal.
+    
+    \item Resiliencia: Si un trabajador falla durante la ejecución de una tarea, Celery puede reencolar 
+	automáticamente la tarea para que sea ejecutada por otro trabajador, garantizando la finalización de las 
+	operaciones críticas.
+    
+    \item Desacoplamiento: La lógica de negocio que invoca tareas asíncronas no necesita conocer los detalles 
+	de cómo, cuándo o dónde se ejecutan, lo que reduce el acoplamiento entre componentes.
+\end{itemize}
+
+\subsubsection{Ventajas de la arquitectura para la propuesta de solución}
+
+La elección de la arquitectura responde directamente a las necesidades identificadas en el análisis de requisitos.
 Esta representación arquitectónica permite abordar de manera efectiva los desafíos específicos, tales como:
 
 \begin{itemize}
-    \item Integración con sistemas existentes: La capa de presentación, al exponer una \ac{API} \ac{REST}, permite que sistemas como los mencionados en el estudio de homólogos u otros consuman las funcionalidades del \textit{backend} de variabilidad curricular sin necesidad de modificaciones profundas.
+    \item Integración con sistemas existentes: La capa de acceso permite que sistemas como los mencionados 
+	en el estudio de homólogos u otros consuman las funcionalidades del \textit{backend} de variabilidad 
+	curricular sin necesidad de modificaciones profundas.
     
-    \item Evolución del modelo curricular: La separación entre la lógica de negocio y la persistencia facilita la implementación del versionamiento de modelos, permitiendo almacenar múltiples versiones históricas sin afectar las operaciones actuales.
+    \item Evolución del modelo curricular: La separación entre la lógica de negocio y la persistencia facilita la 
+	implementación del versionamiento de modelos, permitiendo almacenar múltiples versiones históricas sin afectar las 
+	operaciones actuales.
     
-    \item Seguridad y auditoría: La capa de lógica de negocio centraliza el control de acceso y la validación de permisos, garantizando que solo usuarios autorizados (gestores curriculares, superadministradores) puedan modificar los modelos.
+    \item Seguridad y auditoría: La capa de lógica de negocio centraliza el control de acceso y la validación 
+	de permisos, garantizando que solo usuarios autorizados puedan modificar los modelos.
     
-    \item Reutilización de componentes: La capa de persistencia puede ser reutilizada en futuros proyectos que requieran almacenar modelos de características, mientras que la capa de lógica de negocio encapsula las reglas de análisis de variabilidad.
+    \item Reutilización de componentes: La capa de persistencia puede ser reutilizada en futuros proyectos 
+	que requieran almacenar \ac{FM}, mientras que la capa de lógica de negocio encapsula las reglas de 
+	análisis de variabilidad.
+	
+	\item Rendimiento y escalabilidad: La incorporación de un sistema de procesamiento asíncrono basado en Celery, junto con una estrategia de caché 
+	implementada sobre Redis, permite que la solución maneje eficientemente cargas de trabajo intensivas en cómputo sin degradar 
+	la experiencia del usuario.
 \end{itemize}
-
 
 \section{Patrones de diseños}
 

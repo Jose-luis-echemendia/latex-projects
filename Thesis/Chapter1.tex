@@ -1854,7 +1854,7 @@ En la arquitectura propuesta, Celery desempeñará un rol esencial como
 orquestador de tareas asíncronas, permitiendo que operaciones complejas, 
 lentas o intensivas en cómputo se ejecuten fuera del ciclo de solicitud-respuesta 
 del \ac{API}, mejorando sustancialmente la experiencia del usuario y la disponibilidad 
-del sistema \citep{celery2024docs}.
+del sistema \citep{celery2025docs}.
 
 Dado que el proceso de generación y validación de configuraciones curriculares 
 incluye fases donde se deben:
@@ -1893,7 +1893,7 @@ Otra ventaja crítica es que Celery soporta escalamiento horizontal, lo cual es
 relevante para el sistema, en el cual múltiples usuarios pueden realizar 
 evaluaciones simultáneamente sobre modelos distintos o versiones diferentes. 
 Con más carga, simplemente se añaden más \textit{workers}, sin necesidad de cambios 
-estructurales \citep{celery2024docs}. Desde el punto de vista de robustez, Celery ofrece 
+estructurales \citep{celery2025docs}. Desde el punto de vista de robustez, Celery ofrece 
 herramientas para:
 \begin{itemize}
     \item Reintentos automáticos ante fallos.
@@ -1918,7 +1918,7 @@ Esto permite automatizar procesos como:
 
 Celery es altamente compatible con FastAPI y Python, manteniendo 
 coherencia tecnológica con la decisión de usar un \textit{stack} asíncrono y un modelo 
-de validación compleja \citep{celery2024docs, ramirez2019fastapi}. Su adopción garantiza que la capa lógica pesada no 
+de validación compleja \citep{celery2025docs, ramirez2019fastapi}. Su adopción garantiza que la capa lógica pesada no 
 degrade la utilidad interactiva del sistema, sino que se ejecute de forma 
 paralela, programada y resistente. La siguiente tabla \ref{tab:fastAPIvsFastAPIconCelery} 
 respalda la justificación de por qué adicionar celery al sistema.

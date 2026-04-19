@@ -156,6 +156,46 @@
       \field{title}{Feature-Oriented Software Product Lines: Concepts and Implementation}
       \field{year}{2013}
     \endentry
+    \entry{aratchige2024overview}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=aba6a9d5938297ee16be238cb1edfea9}{%
+           family={Aratchige},
+           familyi={A\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f64cfe04c07be0d34b518e22c648c328}{%
+           family={Manujaya},
+           familyi={M\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c59b594ad79b00a567e08b0ba9803e6}{%
+           family={Weerasinghe},
+           familyi={W\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9f396359b92e019475d007f0c86d6258}
+      \strng{fullhash}{9f396359b92e019475d007f0c86d6258}
+      \strng{bibnamehash}{9f396359b92e019475d007f0c86d6258}
+      \strng{authorbibnamehash}{9f396359b92e019475d007f0c86d6258}
+      \strng{authornamehash}{9f396359b92e019475d007f0c86d6258}
+      \strng{authorfullhash}{9f396359b92e019475d007f0c86d6258}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Software Modeling}
+      \field{note}{vid. pág. 38}
+      \field{title}{An Overview of Structural Design Patterns in Object-Oriented Software Engineering}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 3}
+      \range{pages}{3}
+    \endentry
     \entry{poetry2024}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=5dc588b372793b67a6bea959368db219}{%
@@ -1214,54 +1254,6 @@
       \verb 10.1145/3579028.3609008
       \endverb
     \endentry
-    \entry{gamma1995Frameworks}{book}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=abd927bf30d6566be0ac66a66e893fdd}{%
-           family={Gamma},
-           familyi={G\bibinitperiod},
-           given={Erich},
-           giveni={E\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=233f891813bda0f3920985f97a4a7554}{%
-           family={Helm},
-           familyi={H\bibinitperiod},
-           given={Richard},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=fd79e5e249b219ff553fc2d811104d78}{%
-           family={Johnson},
-           familyi={J\bibinitperiod},
-           given={Ralph},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e032589f0b9a38804483ab7cf5ccad7f}{%
-           family={Vlissides},
-           familyi={V\bibinitperiod},
-           given={John},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Addison-Wesley}%
-      }
-      \strng{namehash}{5cb4a6d7baf30d11bae6682eca698b4f}
-      \strng{fullhash}{5cb4a6d7baf30d11bae6682eca698b4f}
-      \strng{bibnamehash}{5cb4a6d7baf30d11bae6682eca698b4f}
-      \strng{authorbibnamehash}{5cb4a6d7baf30d11bae6682eca698b4f}
-      \strng{authornamehash}{5cb4a6d7baf30d11bae6682eca698b4f}
-      \strng{authorfullhash}{5cb4a6d7baf30d11bae6682eca698b4f}
-      \field{extraname}{1}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-0201633610}
-      \field{title}{Design Patterns: Elements of Reusable Object-Oriented Software}
-      \field{year}{1995}
-    \endentry
     \entry{gamma1995design}{book}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=abd927bf30d6566be0ac66a66e893fdd}{%
@@ -1298,10 +1290,8 @@
       \strng{authorbibnamehash}{5cb4a6d7baf30d11bae6682eca698b4f}
       \strng{authornamehash}{5cb4a6d7baf30d11bae6682eca698b4f}
       \strng{authorfullhash}{5cb4a6d7baf30d11bae6682eca698b4f}
-      \field{extraname}{2}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2733,6 +2723,32 @@
       \field{title}{A large-scale study of programming languages and code quality in GitHub}
       \field{year}{2014}
     \endentry
+    \entry{refactoring2021patrones}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f45752a23e197e3d61b052fa482bf38e}{%
+           family={{Refactoring Guru}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f45752a23e197e3d61b052fa482bf38e}
+      \strng{fullhash}{f45752a23e197e3d61b052fa482bf38e}
+      \strng{bibnamehash}{f45752a23e197e3d61b052fa482bf38e}
+      \strng{authorbibnamehash}{f45752a23e197e3d61b052fa482bf38e}
+      \strng{authornamehash}{f45752a23e197e3d61b052fa482bf38e}
+      \strng{authorfullhash}{f45752a23e197e3d61b052fa482bf38e}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://refactoring.guru/design-patterns/catalog}}
+      \field{title}{Catalog of Design Patterns}
+      \field{urlday}{17}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+    \endentry
     \entry{rodriguez2019gestion_curricular}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=b307dd91983d341b40246fe9316a6502}{%
@@ -2976,32 +2992,6 @@
       \verb 10.1109/2.485845
       \endverb
     \endentry
-    \entry{sciencedirect2025patterns}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ed15e0ed8bc63d1935fbdf9b7d303228}{%
-           family={{ScienceDirect}},
-           familyi={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{ed15e0ed8bc63d1935fbdf9b7d303228}
-      \strng{fullhash}{ed15e0ed8bc63d1935fbdf9b7d303228}
-      \strng{bibnamehash}{ed15e0ed8bc63d1935fbdf9b7d303228}
-      \strng{authorbibnamehash}{ed15e0ed8bc63d1935fbdf9b7d303228}
-      \strng{authornamehash}{ed15e0ed8bc63d1935fbdf9b7d303228}
-      \strng{authorfullhash}{ed15e0ed8bc63d1935fbdf9b7d303228}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Disponible en: \url{https://www.sciencedirect.com/topics/computer-science/design-patterns}}
-      \field{title}{Design Patterns - an overview}
-      \field{urlday}{16}
-      \field{urlmonth}{4}
-      \field{urlyear}{2026}
-      \field{year}{2025}
-      \field{urldateera}{ce}
-    \endentry
     \entry{sebesta2016}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=2286349117c0c84d883dbdcd61323f25}{%
@@ -3030,6 +3020,32 @@
       \field{isbn}{978-0133943023}
       \field{title}{Concepts of Programming Languages}
       \field{year}{2016}
+    \endentry
+    \entry{seguridad2022patrones}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=df1495bfeee4db5246e1dc72f726ae28}{%
+           family={{Seguridad PY}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{df1495bfeee4db5246e1dc72f726ae28}
+      \strng{fullhash}{df1495bfeee4db5246e1dc72f726ae28}
+      \strng{bibnamehash}{df1495bfeee4db5246e1dc72f726ae28}
+      \strng{authorbibnamehash}{df1495bfeee4db5246e1dc72f726ae28}
+      \strng{authornamehash}{df1495bfeee4db5246e1dc72f726ae28}
+      \strng{authorfullhash}{df1495bfeee4db5246e1dc72f726ae28}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://seguridadpy.com/patrones-de-diseno-que-son-tipos/}}
+      \field{title}{Patrones de diseño: Qué son, tipos y porqué los debes conocer}
+      \field{urlday}{17}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
     \endentry
     \entry{serna-montoya2012}{article}{}
       \name{author}{1}{}{%
@@ -3626,32 +3642,6 @@
       \field{year}{2025}
       \field{urldateera}{ce}
     \endentry
-    \entry{security2025gof}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=f812ce5ce5106332d15f11a05ab9702d}{%
-           family={{Team IT Security}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{f812ce5ce5106332d15f11a05ab9702d}
-      \strng{fullhash}{f812ce5ce5106332d15f11a05ab9702d}
-      \strng{bibnamehash}{f812ce5ce5106332d15f11a05ab9702d}
-      \strng{authorbibnamehash}{f812ce5ce5106332d15f11a05ab9702d}
-      \strng{authornamehash}{f812ce5ce5106332d15f11a05ab9702d}
-      \strng{authorfullhash}{f812ce5ce5106332d15f11a05ab9702d}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Disponible en: \url{https://tsecurity.de/de/2667042/IT+Programmierung/The+Gang+of+Four+%28GOF%29+Design+Patterns\%3A+A+Developer\%27s+Guide/}}
-      \field{title}{The Gang of Four (GOF) Design Patterns: A Developer's Guide}
-      \field{urlday}{16}
-      \field{urlmonth}{4}
-      \field{urlyear}{2026}
-      \field{year}{2025}
-      \field{urldateera}{ce}
-    \endentry
     \entry{thum2014featureide}{article}{}
       \name{author}{6}{}{%
         {{un=2,uniquepart=given,hash=fc662afd69c32f480cb46eab248ebdc6}{%
@@ -3969,6 +3959,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{gamma1995Frameworks}
 \endrefsection
 \endinput
 
