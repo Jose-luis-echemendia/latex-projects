@@ -108,7 +108,7 @@
 		\begin{userstory}[]
 			\storyname{Análisis de Métricas y Exportación}
 			\storyepic{Ciclo de Vida del \ac{FM}}
-			\storyrfs{34, 35}
+			\storyrfs{33, 34}
 			\storypriority{Media}
 			\storyrisk{Media}
 			\storypoints{0.8}
@@ -140,7 +140,7 @@
 		\begin{userstory}[]
 			\storyname{Edición de la Jerarquía de Características}
 			\storyepic{Modelado de Variabilidad Estructural}
-			\storyrfs{53, 54, 55, 56, 62, 63, 94, 95}
+			\storyrfs{53, 54, 55, 56, 60, 61, 62, 63}
 			\storypriority{Alta}
 			\storyrisk{Alta}
 			\storypoints{1.0}
@@ -153,13 +153,13 @@
 			\item Aplicar desactivación lógica con soporte de versionado.
 			\end{itemize}
 			}
-			\storyobservation{Las operaciones sobre la jerarquía deben preservar integridad estructural y trazabilidad de cambios. Campos de entrada asociados: RF\#54 (nombre, tipo, identificador de versión, y opcionales de padre, grupo, recurso y propiedades) y RF\#62 (identificador de característica en ruta; nombre, tipo, padre y grupo opcionales).}
+			\storyobservation{Las operaciones sobre la jerarquía deben preservar integridad estructural y trazabilidad de cambios. Campos de entrada asociados: RF\#53 (nombre, tipo, identificador de versión, y opcionales de padre, grupo, recurso y propiedades) y RF\#60 (identificador de característica en ruta; nombre, tipo, padre y grupo opcionales).}
 		\end{userstory}
 
 		\begin{userstory}[]
 			\storyname{Modelado de Grupos y Relaciones Estructurales}
 			\storyepic{Modelado de Variabilidad Estructural}
-			\storyrfs{96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107}
+			\storyrfs{64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75}
 			\storypriority{Alta}
 			\storyrisk{Alta}
 			\storypoints{1.0}
@@ -173,7 +173,7 @@
 			\item Mantener consistencia al activar, desactivar o actualizar dichas estructuras.
 			\end{itemize}
 			}
-			\storyobservation{Esta historia cubre la semántica estructural del árbol y la coherencia entre agrupaciones y relaciones. Campos de entrada asociados: RF\#98 (tipo de grupo, característica padre, cardinalidades), RF\#99 (identificador de grupo en ruta y campos opcionales), RF\#104 (tipo, origen, destino) y RF\#105 (identificador de relación en ruta y campos opcionales).}
+			\storyobservation{Esta historia cubre la semántica estructural del árbol y la coherencia entre agrupaciones y relaciones. Campos de entrada asociados: RF\#66 (tipo de grupo, característica padre, cardinalidades), RF\#67 (identificador de grupo en ruta y campos opcionales), RF\#72 (tipo, origen, destino) y RF\#73 (identificador de relación en ruta y campos opcionales).}
 		\end{userstory}
 
 		\subsubsection*{Épica 5: Restricciones y Lógica Avanzada}
@@ -181,7 +181,7 @@
 		\begin{userstory}[]
 			\storyname{Gestión de Restricciones Transversales}
 			\storyepic{Restricciones y Lógica Avanzada}
-			\storyrfs{58, 108, 109, 110, 111, 112, 113}
+			\storyrfs{76, 77, 78, 79, 80, 81}
 			\storypriority{Alta}
 			\storyrisk{Alta}
 			\storypoints{0.8}
@@ -194,7 +194,7 @@
 			\item Mantener control de versiones sobre las restricciones creadas.
 			\end{itemize}
 			}
-			\storyobservation{Las restricciones deben integrarse con el modelo sin romper la evolución histórica del mismo. Campos de entrada asociados: RF\#110 (identificador de versión, expresión lógica y descripción opcional) y RF\#111 (identificador de restricción en ruta; expresión lógica y descripción opcionales).}
+			\storyobservation{Las restricciones deben integrarse con el modelo sin romper la evolución histórica del mismo. Campos de entrada asociados: RF\#78 (identificador de versión, expresión lógica y descripción opcional) y RF\#79 (identificador de restricción en ruta; expresión lógica y descripción opcionales).}
 		\end{userstory}
 
 		\begin{userstory}[]
@@ -213,7 +213,7 @@
 			\item Aplicar \ac{UVL} a la estructura para regenerar el árbol desde el código \ac{UVL}.
 			\end{itemize}
 			}
-			\storyobservation{La sincronización debe mantener equivalencia entre la representación textual y la representación visual del modelo. Campos de entrada asociados: RF\#37 y RF\#39 (identificador de modelo y versión en ruta, contenido \ac{UVL}).}
+			\storyobservation{La sincronización debe mantener equivalencia entre la representación textual y la representación visual del modelo. Campos de entrada asociados: RF\#36 y RF\#38 (identificador de modelo y versión en ruta, contenido \ac{UVL}).}
 		\end{userstory}
 
 		\subsubsection*{Épica 6: Validación y Análisis de Modelos}
@@ -221,7 +221,7 @@
 		\begin{userstory}[]
 			\storyname{Validación Lógica y Estructural del Modelo}
 			\storyepic{Validación y Análisis de Modelos}
-			\storyrfs{40, 41, 43}
+			\storyrfs{39, 40, 41, 42}
 			\storypriority{Alta}
 			\storyrisk{Alta}
 			\storypoints{1.0}
@@ -261,7 +261,7 @@
 		\begin{userstory}[]
 			\storyname{Validación y Generación Automática de Configuraciones}
 			\storyepic{Configuración, Optimización y Recursos}
-			\storyrfs{42, 50, 51, 52}
+			\storyrfs{49, 50, 51, 52}
 			\storypriority{Alta}
 			\storyrisk{Alta}
 			\storypoints{1.0}
@@ -279,7 +279,7 @@
 		\begin{userstory}[]
 			\storyname{Enriquecimiento con Recursos y Taxonomías}
 			\storyepic{Configuración, Optimización y Recursos}
-			\storyrfs{59, 60, 61, 114, 115, 116, 117, 118, 119, 120}
+			\storyrfs{57, 58, 59, 82, 83, 84, 85, 86, 87, 88}
 			\storypriority{Media}
 			\storyrisk{Media}
 			\storypoints{0.8}
@@ -293,7 +293,7 @@
 			\item Aceptar metadatos como idioma, licencia y otros de interés en el registro de los recursos.
 			\end{itemize}
 			}
-			\storyobservation{Los recursos y etiquetas deben servir como apoyo semántico y documental para el uso del modelo. Campos de entrada asociados: RF\#115 (nombre, descripción opcional), RF\#118 (metadatos completos del recurso y contenido) y RF\#119 (identificador de recurso en ruta y campos opcionales, con restricción sobre propietario).}
+			\storyobservation{Los recursos y etiquetas deben servir como apoyo semántico y documental para el uso del modelo. Campos de entrada asociados: RF\#84 (nombre, descripción opcional), RF\#87 (metadatos completos del recurso y contenido) y RF\#88 (identificador de recurso en ruta y campos opcionales, con restricción sobre propietario).}
 		\end{userstory}
 
 

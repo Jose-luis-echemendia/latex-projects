@@ -292,6 +292,7 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#15 & Actualizar dominio & Permite editar la información de un dominio ya existente a un administrador. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de dominio (ruta)
@@ -302,14 +303,17 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#16 & Buscar dominios & Permite localizar dominios por nombre o por descripción. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#17 & Obtener dominio con \ac{FM} & Devuelve un dominio junto a sus \ac{FM} relacionados. & Media & Baja \\
 	\hline
 	\ac{RF}\#18 & Activar dominio & Habilita un dominio previamente desactivado. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#19 & Desactivar dominio & Inhabilita un dominio para evitar su uso temporal o definitivo. & Media & Baja \\
 	\hline
 	\ac{RF}\#20 & Listar \ac{FM}s & Permite listar \ac{FM}s con paginación y filtros por dominio para facilitar su navegación. & Alta & Media \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#21 & Crear \ac{FM} & Crea un \ac{FM} asociado a un dominio válido y consistente. Campos de entrada:
 		\begin{itemize}
 			\item nombre
@@ -320,6 +324,7 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#22 & Consultar \ac{FM} & Muestra el detalle del \ac{FM} incluyendo sus versiones. & Alta & Media \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#23 & Actualizar \ac{FM} & El sistema debe permitir actualizar metadatos del \ac{FM} manteniendo integridad de la información. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de modelo (ruta)
@@ -331,10 +336,12 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#24 & Activar \ac{FM} & Activa un \ac{FM} para habilitar su uso operativo. & Alta & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#25 & Desactivar \ac{FM} & Desactiva un \ac{FM} cuando se requiere restringir su uso. & Alta & Baja \\
 	\hline
 	\ac{RF}\#26 & Listar versiones de modelo & Lista las versiones disponibles de un \ac{FM} específico. & Alta & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#27 & Consultar versión específica de un modelo & Permite recuperar el detalle de una versión concreta de \ac{FM}. & Alta & Baja \\
 	\hline
 	\ac{RF}\#28 & Crear versión de un modelo & Crea una nueva versión, con soporte de \textit{copy-on-write} desde una versión origen. Parámetros y campos de entrada:
@@ -345,17 +352,19 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Media \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#29 & Publicar versión de un modelo & El sistema debe permitir publicar una versión y ejecuta validaciones necesarias antes de su disponibilidad oficial. & Alta & Alta \\
 	\hline
 	\ac{RF}\#30 & Achivar versión de un modelo & Cambia el estado de una versión a archivada para su preservación histórica. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#31 & Restaurar versión de un modelo & EL sistema debe permitir recuperar una versión archivada y la devuelve al flujo de trabajo activo. & Media & Baja \\
 	\hline
 	\ac{RF}\#32 & Obtener estructura completa de un \ac{FM} & El sistema debe entregar el árbol completo para consulta integral de una versión concreta ya sea por identificar o por la versión publicada más reciente. & Alta & Alta \\
 	\hline
-	\ac{RF}\#34 & Obtener Estadísticas de un \ac{FM} & Obtiene métricas principales de la versión publicada más reciente o de una versión específica. & Alta & Media \\
+	\ac{RF}\#33 & Obtener Estadísticas de un \ac{FM} & Obtiene métricas principales de la versión publicada más reciente o de una versión específica. & Alta & Media \\
 	\hline
-	\ac{RF}\#35 & Exportar un \ac{FM} & El sistema debe permitir exportar a la versión publicada más reciente o a una versión concreta en los siguientes formatos: 
+	\ac{RF}\#34 & Exportar un \ac{FM} & El sistema debe permitir exportar a la versión publicada más reciente o a una versión concreta en los siguientes formatos: 
 		\begin{itemize}
 				\item \ac{UVL}.
 				\item \ac{XML}.
@@ -367,9 +376,9 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Media \\
 	\hline
-	\ac{RF}\#36 & Obtener \ac{UVL} efectivo de un \ac{FM} & Permite devolver el \ac{UVL} final, ya sea almacenado o generado desde la estructura vigente. & Alta & Media \\
+	\ac{RF}\#35 & Obtener \ac{UVL} efectivo de un \ac{FM} & Permite devolver el \ac{UVL} final, ya sea almacenado o generado desde la estructura vigente. & Alta & Media \\
 	\hline
-	\ac{RF}\#37 & Guardar \ac{UVL} & El sistema debe permitir guardar un \ac{UVL} analizado y validado. Parámetros y campos de entrada:
+	\ac{RF}\#36 & Guardar \ac{UVL} & El sistema debe permitir guardar un \ac{UVL} analizado y validado. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de modelo (ruta)
 			\item identificador de versión (ruta)
@@ -377,9 +386,9 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
-	\ac{RF}\#38 & Sincronizar \ac{UVL} desde estructura & Regenera y persiste \ac{UVL} a partir del modelo visual para mantener coherencia. & Alta & Alta \\
+	\ac{RF}\#37 & Sincronizar \ac{UVL} desde estructura & Regenera y persiste \ac{UVL} a partir del modelo visual para mantener coherencia. & Alta & Alta \\
 	\hline
-	\ac{RF}\#39 & Aplicar \ac{UVL} a estructura & El sistema debe permitir construir una nueva versión estructural tomando como entrada una definición \ac{UVL}. Parámetros y campos de entrada:
+	\ac{RF}\#38 & Aplicar \ac{UVL} a estructura & El sistema debe permitir construir una nueva versión estructural tomando como entrada una definición \ac{UVL}. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de modelo (ruta)
 			\item identificador de versión (ruta)
@@ -387,15 +396,15 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
-	\ac{RF}\#40 & Validar lógica del modelo & El sistema debe permitir evaluar la satisfacibilidad y consistencia lógica global del modelo. & Alta & Alta \\
+	\ac{RF}\#39 & Validar lógica del modelo & El sistema debe permitir evaluar la satisfacibilidad y consistencia lógica global del modelo. & Alta & Alta \\
 	\hline
-	\ac{RF}\#41 & Validar estructura del modelo & Verifica integridad estructural, incluyendo raíz, ciclos y nodos huérfanos de un \ac{FM}. & Alta & Media \\
+	\ac{RF}\#40 & Validar estructura del modelo & Verifica integridad estructural, incluyendo raíz, ciclos y nodos huérfanos de un \ac{FM}. & Alta & Media \\
 	\hline
-	\ac{RF}\#42 & Validar configuración seleccionada & Comprueba que una selección concreta de características sea válida y consistente. & Alta & Alta \\
+	\ac{RF}\#41 & Validar configuración seleccionada & Comprueba que una selección concreta de características sea válida y consistente. & Alta & Alta \\
 	\hline
-	\ac{RF}\#43 & Análisis estructural de validación & El sistema debe permitir ejecutar análisis de características muertas, redundancias y componentes fuertemente conectados. & Alta & Alta \\
+	\ac{RF}\#42 & Análisis estructural de validación & El sistema debe permitir ejecutar análisis de características muertas, redundancias y componentes fuertemente conectados. & Alta & Alta \\
 	\hline
-	\ac{RF}\#44 & Crear configuración persistente & Crea y almacena configuraciones asociadas a una versión tras validar consistencia. Campos de entrada:
+	\ac{RF}\#43 & Crear configuración persistente & Crea y almacena configuraciones asociadas a una versión tras validar consistencia. Campos de entrada:
 		\begin{itemize}
 			\item nombre
 			\item descripción (opcional)
@@ -404,11 +413,11 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
-	\ac{RF}\#45 & Obtener configuración por identificador & Recupera una configuración específica junto con sus características relacionadas. & Media & Baja \\
+	\ac{RF}\#44 & Obtener configuración por identificador & Recupera una configuración específica junto con sus características relacionadas. & Media & Baja \\
 	\hline
-	\ac{RF}\#46 & Listar configuraciones & Lista configuraciones disponibles con soporte de paginación. & Media & Baja \\
+	\ac{RF}\#45 & Listar configuraciones & Lista configuraciones disponibles con soporte de paginación. & Media & Baja \\
 	\hline
-	\ac{RF}\#47 & Actualizar configuración & Modifica metadatos y características de una configuración existente. Parámetros y campos de entrada:
+	\ac{RF}\#46 & Actualizar configuración & Modifica metadatos y características de una configuración existente. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de configuración (ruta)
 			\item nombre (opcional)
@@ -417,19 +426,19 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Media & Baja \\
 	\hline
-	\ac{RF}\#48 & Activar configuración & Marca una configuración como activa para su uso. & Media & Baja \\
+	\ac{RF}\#47 & Activar configuración & Marca una configuración como activa para su uso. & Media & Baja \\
 	\hline
-	\ac{RF}\#49 & Desactivar configuración & Permite al sistema eliminar lógicamente una configuración. & Media & Baja \\
+	\ac{RF}\#48 & Desactivar configuración & Permite al sistema eliminar lógicamente una configuración. & Media & Baja \\
 	\hline
-	\ac{RF}\#50 & Validar configuración propuesta & El sistema debe permitir evaluar una selección de características sin necesidad de persistirla. & Alta & Alta \\
+	\ac{RF}\#49 & Validar configuración propuesta & El sistema debe permitir evaluar una selección de características sin necesidad de persistirla. & Alta & Alta \\
 	\hline
-	\ac{RF}\#51 & Generar configuraciones válidas & Genera una o varias configuraciones válidas según estrategia definida. & Alta & Alta \\
+	\ac{RF}\#50 & Generar configuraciones válidas & Genera una o varias configuraciones válidas según estrategia definida. & Alta & Alta \\
 	\hline
-	\ac{RF}\#52 & Optimizar configuraciones & Ejecuta algoritmos de optimización para obtener configuraciones de mejor calidad. & Alta & Alta \\
+	\ac{RF}\#51 & Optimizar configuraciones & Ejecuta algoritmos de optimización para obtener configuraciones de mejor calidad. & Alta & Alta \\
 	\hline
-	\ac{RF}\#53 & Listar características & Lista características mediante filtros y representación de árbol por versión. & Alta & Media \\
+	\ac{RF}\#52 & Listar características & Lista características mediante filtros y representación de árbol por versión. & Alta & Media \\
 	\hline
-	\ac{RF}\#54 & Crear característica & El sistema debe permitir crear nuevas características aplicando validaciones y permisos sobre la versión objetivo del modelo. Campos de entrada:
+	\ac{RF}\#53 & Crear característica & El sistema debe permitir crear nuevas características aplicando validaciones y permisos sobre la versión objetivo del modelo. Campos de entrada:
 		\begin{itemize}
 			\item nombre
 			\item tipo
@@ -441,19 +450,19 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
-	\ac{RF}\#55 & Obtener característica & Recupera el detalle completo de una característica específica. & Media & Baja \\
+	\ac{RF}\#54 & Obtener característica & Recupera el detalle completo de una característica específica. & Media & Baja \\
 	\hline
-	\ac{RF}\#56 & Obtener subárbol de característica & Devuelve una característica junto con toda su descendencia. & Media & Media \\
+	\ac{RF}\#55 & Obtener subárbol de característica & Devuelve una característica junto con toda su descendencia. & Media & Media \\
 	\hline
-	\ac{RF}\#58 & Consultar relaciones de característica & Lista relaciones en las que participa una característica determinada. & Media & Baja \\
+	\ac{RF}\#56 & Consultar relaciones de característica & Lista relaciones en las que participa una característica determinada. & Media & Baja \\
 	\hline
-	\ac{RF}\#59 & Listar etiquetas de característica & Recupera las etiquetas asociadas a una característica. & Media & Baja \\
+	\ac{RF}\#57 & Listar etiquetas de característica & Recupera las etiquetas asociadas a una característica. & Media & Baja \\
 	\hline
-	\ac{RF}\#60 & Asociar etiqueta con característica & El sistema debe permitir vincular una etiqueta a una característica. & Media & Baja \\
+	\ac{RF}\#58 & Asociar etiqueta con característica & El sistema debe permitir vincular una etiqueta a una característica. & Media & Baja \\
 	\hline
-	\ac{RF}\#61 & Desasociar etiqueta de una característica & Permite eliminar el vínculo entre una etiqueta y una característica. & Media & Baja \\
+	\ac{RF}\#59 & Desasociar etiqueta de una característica & Permite eliminar el vínculo entre una etiqueta y una característica. & Media & Baja \\
 	\hline
-	\ac{RF}\#62	& Actualizar característica & El sistema debe permitir actualizar campos puntuales de una característica. Parámetros y campos de entrada:
+	\ac{RF}\#60	& Actualizar característica & El sistema debe permitir actualizar campos puntuales de una característica. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de característica (ruta)
 			\item nombre (opcional)
@@ -463,17 +472,17 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
-	\ac{RF}\#63 & Mover característica & El sistema debe permitir reubicar una característica cambiando su nodo padre sin perder trazabilidad. & Alta & Alta \\
+	\ac{RF}\#61 & Mover característica & El sistema debe permitir reubicar una característica cambiando su nodo padre sin perder trazabilidad. & Alta & Alta \\
 	\hline
-	\ac{RF}\#94 & Desactivar característica & El sistema debe permitir eliminar lógicamente una característica y generar una nueva versión consistente del modelo. & Alta & Alta \\
+	\ac{RF}\#62 & Desactivar característica & El sistema debe permitir eliminar lógicamente una característica y generar una nueva versión consistente del modelo. & Alta & Alta \\
 	\hline
-	\ac{RF}\#95 & Activar característica & El sistema debe permitir recuperar una característica anteriormete desactivada. & Alta & Alta \\
+	\ac{RF}\#63 & Activar característica & El sistema debe permitir recuperar una característica anteriormete desactivada. & Alta & Alta \\
 	\hline
-	\ac{RF}\#96 & Listar grupos de características & El sistema debe permitir listar grupos de características con filtros por versión, padre y tipo de agrupación. & Media & Baja \\
+	\ac{RF}\#64 & Listar grupos de características & El sistema debe permitir listar grupos de características con filtros por versión, padre y tipo de agrupación. & Media & Baja \\
 	\hline
-	\ac{RF}\#97 & Obtener grupo de características & Recupera la información de un grupo de características por su identificador. & Media & Baja \\
+	\ac{RF}\#65 & Obtener grupo de características & Recupera la información de un grupo de características por su identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#98 & Crear grupo de características & Crea grupos de características con validaciones para un modelo. Campos de entrada:
+	\ac{RF}\#66 & Crear grupo de características & Crea grupos de características con validaciones para un modelo. Campos de entrada:
 		\begin{itemize}
 			\item tipo de grupo
 			\item identificador de característica padre
@@ -482,7 +491,7 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
-	\ac{RF}\#99 & Actualizar grupo de características & Actualiza grupos de características conservando consistencia y versionado en el modelo. Parámetros y campos de entrada:
+	\ac{RF}\#67 & Actualizar grupo de características & Actualiza grupos de características conservando consistencia y versionado en el modelo. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de grupo (ruta)
 			\item tipo de grupo (opcional)
@@ -492,15 +501,15 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
-	\ac{RF}\#100 & Desactivar grupo de características & Elimina lógicamente grupos de características aplicando reglas de integridad y versionado. & Alta & Alta \\
+	\ac{RF}\#68 & Desactivar grupo de características & Elimina lógicamente grupos de características aplicando reglas de integridad y versionado. & Alta & Alta \\
 	\hline
-	\ac{RF}\#101 & Activar grupo de características & Permitir recuperar grupos de características desactivados. & Alta & Alta \\
+	\ac{RF}\#69 & Activar grupo de características & Permitir recuperar grupos de características desactivados. & Alta & Alta \\
 	\hline
-	\ac{RF}\#102 & Listar relaciones de características & Lista relaciones entre características con criterios de filtrado. & Media & Baja \\
+	\ac{RF}\#70 & Listar relaciones de características & Lista relaciones entre características con criterios de filtrado. & Media & Baja \\
 	\hline
-	\ac{RF}\#103 & Obtener relación de características & Obtiene el detalle de una relación de características por identificador. & Media & Baja \\
+	\ac{RF}\#71 & Obtener relación de características & Obtiene el detalle de una relación de características por identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#104 & Crear relación de características & El sistema debe permitir crear relaciones entre características con validaciones semánticas y \textit{copy-on-write}. Campos de entrada:
+	\ac{RF}\#72 & Crear relación de características & El sistema debe permitir crear relaciones entre características con validaciones semánticas y \textit{copy-on-write}. Campos de entrada:
 		\begin{itemize}
 			\item tipo
 			\item identificador de característica origen
@@ -508,7 +517,7 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
-	\ac{RF}\#105 & Actualizar relación de características & El sistema debe permitir actualizar relaciones de características existentes. Parámetros y campos de entrada:
+	\ac{RF}\#73 & Actualizar relación de características & El sistema debe permitir actualizar relaciones de características existentes. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de relación (ruta)
 			\item tipo (opcional)
@@ -517,15 +526,15 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
-	\ac{RF}\#106 & Activar relaciones de características & Recupera una relación de características anteriormente desactivada. & Alta & Alta \\
+	\ac{RF}\#74 & Activar relaciones de características & Recupera una relación de características anteriormente desactivada. & Alta & Alta \\
 	\hline
-	\ac{RF}\#107 & Desactivar relaciones de características & Elimina lógicamente una relación de características manteniendo la consistencia global del modelo. & Alta & Alta \\
+	\ac{RF}\#75 & Desactivar relaciones de características & Elimina lógicamente una relación de características manteniendo la consistencia global del modelo. & Alta & Alta \\
 	\hline
-	\ac{RF}\#108 & Listar de restricciones & Lista restricciones aplicables según filtros definidos. & Media & Baja \\
+	\ac{RF}\#76 & Listar de restricciones & Lista restricciones aplicables según filtros definidos. & Media & Baja \\
 	\hline
-	\ac{RF}\#109 & Obtener restricción & Recupera el detalle de una restricción por identificador. & Media & Baja \\
+	\ac{RF}\#77 & Obtener restricción & Recupera el detalle de una restricción por identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#110 & Crear restricción & El sistema debe permitir crear restricciones complejas con validaciones y control de versiones. Campos de entrada:
+	\ac{RF}\#78 & Crear restricción & El sistema debe permitir crear restricciones complejas con validaciones y control de versiones. Campos de entrada:
 		\begin{itemize}
 			\item identificador de versión del modelo de características
 			\item expresión lógica
@@ -533,7 +542,7 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
-	\ac{RF}\#111 & Actualizar restricción & Actualiza restricciones existentes preservando coherencia lógica. Parámetros y campos de entrada:
+	\ac{RF}\#79 & Actualizar restricción & Actualiza restricciones existentes preservando coherencia lógica. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de restricción (ruta)
 			\item expresión lógica (opcional)
@@ -541,26 +550,26 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
-	\ac{RF}\#112 & Desactivar restricción & Elimina restricciones aplicando \textit{copy-on-write} para mantener trazabilidad. & Alta & Alta \\
+	\ac{RF}\#80 & Desactivar restricción & Elimina restricciones aplicando \textit{copy-on-write} para mantener trazabilidad. & Alta & Alta \\
 	\hline
-	\ac{RF}\#113 & Activar restricción & Elimina restricciones aplicando \textit{copy-on-write} para mantener trazabilidad. & Alta & Alta \\
+	\ac{RF}\#81 & Activar restricción & Elimina restricciones aplicando \textit{copy-on-write} para mantener trazabilidad. & Alta & Alta \\
 	\hline
-	\ac{RF}\#114 & Listar etiquetas & Lista etiquetas activas disponibles para clasificación funcional. & Media & Baja \\
+	\ac{RF}\#82 & Listar etiquetas & Lista etiquetas activas disponibles para clasificación funcional. & Media & Baja \\
 	\hline
-	\ac{RF}\#115 & Obtener etiqueta & Recupera una etiqueta específica mediante su identificador. & Media & Baja \\
+	\ac{RF}\#83 & Obtener etiqueta & Recupera una etiqueta específica mediante su identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#116 & Crear etiqueta & Crea nuevas etiquetas asegurando unicidad de nombre. Campos de entrada:
+	\ac{RF}\#84 & Crear etiqueta & Crea nuevas etiquetas asegurando unicidad de nombre. Campos de entrada:
 		\begin{itemize}
 			\item nombre
 			\item descripción (opcional)
 		\end{itemize}
 	& Media & Baja \\
 	\hline
-	\ac{RF}\#117 & Listar recursos & Lista recursos registrados con soporte de paginación. & Media & Baja \\
+	\ac{RF}\#85 & Listar recursos & Lista recursos registrados con soporte de paginación. & Media & Baja \\
 	\hline
-	\ac{RF}\#118 & Consultar recurso & Obtiene el detalle de un recurso específico por su identificador. & Media & Baja \\
+	\ac{RF}\#86 & Consultar recurso & Obtiene el detalle de un recurso específico por su identificador. & Media & Baja \\
 	\hline
-	\ac{RF}\#119 & Crear recurso & El sistema debe permitir registrar recursos y asigna propietario. Campos de entrada:
+	\ac{RF}\#87 & Crear recurso & El sistema debe permitir registrar recursos y asigna propietario. Campos de entrada:
 		\begin{itemize}
 			\item título
 			\item tipo
@@ -580,7 +589,7 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Media & Baja \\
 	\hline
-	\ac{RF}\#120 & Actualizar recurso & El sistema debe permitir actualizar parcial o totalmente la información de un recurso y mantener el último documento guardado para el mismo recurso. Parámetros y campos de entrada:
+	\ac{RF}\#88 & Actualizar recurso & El sistema debe permitir actualizar parcial o totalmente la información de un recurso y mantener el último documento guardado para el mismo recurso. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de recurso (ruta)
 			\item título (opcional)
