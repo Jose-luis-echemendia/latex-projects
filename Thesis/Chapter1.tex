@@ -172,7 +172,7 @@ La estructura del \ac{FM} es un árbol de composición, donde:
 La potencia del \ac{FM} reside en su notación gráfica concisa, la cual utiliza la
 posición y símbolos específicos para codificar las restricciones de
 configuración. Las relaciones entre una característica padre (letra P) y sus hijos (letra C) definen
-las decisiones de inclusión o exclusión; véase la Tabla
+las decisiones de inclusión o exclusión; véase la tabla
 \ref{tab:relaciones_estructurales_FM} 
 \citep{pohl2005software, kang1990foda, benavides2010PrinciplesFM, 
 benavides2010automated, Wang2007FormalSemanticsFM}.
@@ -479,10 +479,9 @@ El lenguaje contempla los siguientes niveles principales \citep{universalvariabi
 
 Además, \ac{UVL} incorpora un mecanismo de importación que permite referenciar submodelos, 
 facilitando así la composición de modelos de variabilidad de gran tamaño a partir de módulos 
-más pequeños y gestionables \citep{universalvariabilitylanguage}. El \ac{FM} representado
-(\ref{lst:uvl_sandwich})
-ejemplifica la sintaxis \ac{UVL} y la correspondencia con su representación gráfica
-(\ref{fig:fm_sandwich_uvl}):
+más pequeños y gestionables \citep{universalvariabilitylanguage}. El \ac{FM} representado en 
+las figuras \ref{lst:uvl_sandwich} y \ref{fig:fm_sandwich_uvl}
+ejemplifica la sintaxis \ac{UVL} y la correspondencia con su representación gráfica respectivamente.
 
 \begin{lstlisting}[language=Python, caption={Ejemplo de modelo de variabilidad en \ac{UVL}}. Fuente \cite{universalvariabilitylanguage}., label={lst:uvl_sandwich}, basicstyle=\footnotesize\ttfamily, frame=single, breaklines=true]
 include
@@ -755,7 +754,7 @@ automatizado de la consistencia.
 En los próximos epígrafes se profundiza en esta línea argumental desde dos 
 perspectivas complementarias. En primer lugar, se establece una analogía formal 
 curricular que traduce los principales conceptos de la \ac{SPLE} al dominio educativo, 
-demostrando mediante un ejemplo (\ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2}) 
+demostrando mediante un ejemplo (figuras \ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2}) 
 concreto —como el modelado de la asignatura Estructura de Datos I— 
 cómo los \ac{FM}s pueden capturar la variabilidad intrínseca de los planes de estudio. 
 Posteriormente, se sintetizan los beneficios de las \ac{SPL}, 
@@ -772,11 +771,11 @@ variabilidad, concepto central de la \ac{SPLE} es intrínseca y necesaria en
 los planes de estudio modernos de la enseñanza superior.
 
 Para fundamentar la propuesta, es imprescindible establecer una
-analogía \ref{tab:analogiaSPLeducacion} formal y coherente que permita 
+analogía (tabla \ref{tab:analogiaSPLeducacion}) formal y coherente que permita 
 sustituir los constructos de \ac{SPL} por sus equivalentes en el dominio 
 educativo, elevando el plan de estudios 
 de un simple documento descriptivo a un activo configurable y
-analizable:
+analizable.
 
 \begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
     \caption{Analogía de conceptos de \ac{SPL} en el Dominio Educativo. Fuente: Elaboración propia. \label{tab:analogiaSPLeducacion}}\\
@@ -818,13 +817,14 @@ analizable:
 \end{longtable}
 
 Yendo un paso más adelante para evidenciar la aplicabilidad del \ac{FM}
-al dominio curricular, se presenta un ejemplo (figuras 
-\ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2})
+al dominio curricular, las figuras 
+\ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2} 
+muestran un ejemplo concreto de modelado de la variabilidad curricular
 basado en la asignatura Estructura de Datos I. 
 Se expone el código \ref{lst:uvl_data_structures} \ac{UVL} y su 
 esquema jerárquico conceptual con el fin ilustrativo y 
 suficiente para comprender las decisiones de 
-variabilidad del \ac{FM}:
+variabilidad del \ac{FM}.
 
 \begin{lstlisting}[
     language=Python, 
@@ -1167,7 +1167,7 @@ listado estático de contenidos, posee una estructura jerárquica,
 elementos obligatorios y opcionales, variabilidad controlada, 
 dependencias de prerrequisitos y restricciones internas; todas 
 ellas propiedades capturables dentro de un \ac{FM} formal.
-El modelo mostrado (\ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2}) 
+El modelo mostrado (figuras \ref{fig:fm_data_structures_1} y \ref{fig:fm_data_structures_2}) 
 constituye una representación declarativa de la asignatura, 
 estructurada como un árbol donde la característica raíz corresponde al curso 
 completo y las características hijas representan módulos, temas o decisiones 
@@ -1555,11 +1555,11 @@ mantenibilidad del software \citep{pressman2014se}. Un \textit{framework} adecua
 de código, mejora la seguridad, permite la modularización y posibilita el 
 desarrollo escalable. En este proyecto, el \textit{framework} seleccionado debe soportar 
 concurrencia, validación, comunicación con bases de datos y un desarrollo claro 
-basado en \ac{API}s \citep{gamma1995Frameworks}.
+basado en \ac{API}s \citep{gamma1995design}.
 
 Algunos de los \textit{frameworks} \textit{backend} con los que cuenta Python son 
 Django\textbackslash \ac{DRF}, FastAPI, AIOHTTP, Flask, Tornado, entre otros no tanto conocidos 
-o aclamados por la comunidad. Se evaluaron (\ref{tab:frameworks}) estas opciones considerando 
+o aclamados por la comunidad. Se evaluaron (tabla \ref{tab:frameworks}) estas opciones considerando 
 criterios como rendimiento, facilidad de desarrollo, soporte para tipado, validación automática 
 y capacidades asíncronas.
 
@@ -1920,7 +1920,7 @@ Celery es altamente compatible con FastAPI y Python, manteniendo
 coherencia tecnológica con la decisión de usar un \textit{stack} asíncrono y un modelo 
 de validación compleja \citep{celery2025docs, ramirez2019fastapi}. Su adopción garantiza que la capa lógica pesada no 
 degrade la utilidad interactiva del sistema, sino que se ejecute de forma 
-paralela, programada y resistente. La siguiente tabla \ref{tab:fastAPIvsFastAPIconCelery} 
+paralela, programada y resistente. La tabla \ref{tab:fastAPIvsFastAPIconCelery} 
 respalda la justificación de por qué adicionar celery al sistema.
 
 \begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
@@ -2355,10 +2355,8 @@ prácticas, y en el momento preciso definir parámetros para saber cuál usar.
 Es importante tener en cuenta que el uso de un método ágil no vale para cualquier proyecto. 
 Sin embargo, una de las principales ventajas de los métodos ágiles es su peso inicialmente 
 ligero y por eso las personas que no estén acostumbradas a seguir procesos encuentran 
-estas metodologías bastante agradables.
-    
-La tabla \ref{tab:metodologias} explica de forma resumida las diferencias que 
-existen entre las metodologías ágiles y las tradicionales:
+estas metodologías bastante agradables. La tabla \ref{tab:metodologias} explica de forma resumida las diferencias que 
+existen entre las metodologías ágiles y las tradicionales.
     
     
 \begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|}

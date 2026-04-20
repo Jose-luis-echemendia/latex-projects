@@ -1,21 +1,21 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'example.blg'
-[82] biber:340> INFO - === dom abr 19, 2026, 22:37:10
-[94] Biber.pm:419> INFO - Reading 'example.bcf'
-[175] Biber.pm:979> INFO - Found 120 citekeys in bib section 0
-[184] Biber.pm:4419> INFO - Processing section 0
-[193] Biber.pm:4610> INFO - Looking for bibtex file 'example.bib' for section 0
-[197] bibtex.pm:1713> INFO - LaTeX decoding ...
-[288] bibtex.pm:1519> INFO - Found BibTeX data source 'example.bib'
-[916] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[916] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[916] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'es_ES'
-[1017] bbl.pm:660> INFO - Writing 'example.bbl' with encoding 'UTF-8'
-[1053] bbl.pm:763> INFO - Output to example.bbl
-[1054] Biber.pm:131> WARN - Duplicate entry key: 'visualparadigm2024' in file 'example.bib', skipping ...
-[1054] Biber.pm:131> WARN - ISBN '978-1596932069' in entry 'ferraiolo2007role' is invalid - run biber with '--validate_datamodel' for details.
-[1054] Biber.pm:131> WARN - ISBN '978-0321210250' in entry 'sommerville2005' is invalid - run biber with '--validate_datamodel' for details.
-[1054] Biber.pm:131> WARN - ISBN '978-6075381752' in entry 'rojas2021arquitectura' is invalid - run biber with '--validate_datamodel' for details.
-[1054] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_Xwrd/0a7c5e67b4d952eac587450a692dc29d_266549.utf8, line 1132, warning: 157 characters of junk seen at toplevel
-[1054] Biber.pm:131> WARN - I didn't find a database entry for 'gamma1995Frameworks' (section 0)
-[1054] Biber.pm:133> INFO - WARNINGS: 6
+[112] biber:340> INFO - === lun abr 20, 2026, 13:44:07
+[131] Biber.pm:419> INFO - Reading 'example.bcf'
+[244] Biber.pm:979> INFO - Found 118 citekeys in bib section 0
+[260] Biber.pm:4419> INFO - Processing section 0
+[274] Biber.pm:4610> INFO - Looking for bibtex file 'example.bib' for section 0
+[282] bibtex.pm:1713> INFO - LaTeX decoding ...
+[423] bibtex.pm:1519> INFO - Found BibTeX data source 'example.bib'
+[1414] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1414] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1414] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'es_ES'
+[1582] bbl.pm:660> INFO - Writing 'example.bbl' with encoding 'UTF-8'
+[1644] bbl.pm:763> INFO - Output to example.bbl
+[1645] Biber.pm:131> WARN - Duplicate entry key: 'visualparadigm2024' in file 'example.bib', skipping ...
+[1645] Biber.pm:131> WARN - ISBN '978-1596932069' in entry 'ferraiolo2007role' is invalid - run biber with '--validate_datamodel' for details.
+[1645] Biber.pm:131> WARN - ISBN '978-0321210250' in entry 'sommerville2005' is invalid - run biber with '--validate_datamodel' for details.
+[1645] Biber.pm:131> WARN - ISBN '978-6075381752' in entry 'rojas2021arquitectura' is invalid - run biber with '--validate_datamodel' for details.
+[1645] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_Zbln/0a7c5e67b4d952eac587450a692dc29d_125879.utf8, line 1132, warning: 157 characters of junk seen at toplevel
+[1645] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_Zbln/0a7c5e67b4d952eac587450a692dc29d_125879.utf8, line 1453, warning: 1 characters of junk seen at toplevel
+[1645] Biber.pm:133> INFO - WARNINGS: 6

@@ -2071,45 +2071,6 @@
       \field{title}{UV: Extremely fast Python package installer}
       \field{year}{2024}
     \endentry
-    \entry{Mathew2010}{article}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=ecc03951ef7cd89faeec128314885d15}{%
-           family={Mathew},
-           familyi={M\bibinitperiod},
-           given={Arun\bibnamedelima Tom},
-           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4273197adc075592da13534b1cc2d0dd}{%
-           family={Rao},
-           familyi={R\bibinitperiod},
-           given={C.S.P.},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{a2008a2054ab44490c4e337af3b11e94}
-      \strng{fullhash}{a2008a2054ab44490c4e337af3b11e94}
-      \strng{bibnamehash}{a2008a2054ab44490c4e337af3b11e94}
-      \strng{authorbibnamehash}{a2008a2054ab44490c4e337af3b11e94}
-      \strng{authornamehash}{a2008a2054ab44490c4e337af3b11e94}
-      \strng{authorfullhash}{a2008a2054ab44490c4e337af3b11e94}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{A mechanical assembly is a composition of interrelated parts. Assembly data base stores the geometric models of indi-vidual parts, the spatial positions and orientations of the parts in the assembly, and the relationships between parts. An assembly of parts can be represented by its liaison which has a description of its relationships between the various parts in the assembly. The problem is to not only make the information available but also use the relevant information for making decisions, especially determination of the assembly sequence plan. The method described in this paper ex-tracts the feature based assembly information from CAD models of products and build up liaisons to facilitate assembly planning applications. The system works on the assumption that the designer explicitly defines joints and mating condi-tions. Further, a computer representation of mechanical assemblies in the form of liaisons is necessary in order to automate the generation of assembly plans. A novel method of extracting the assembly information and representing them in the form of liaisons is presented in this paper.}
-      \field{journaltitle}{Journal of Software Engineering \& Applications}
-      \field{number}{2}
-      \field{title}{A Novel Method of Using API to Generate Liaison Relationships from an Assembly.}
-      \field{volume}{3}
-      \field{year}{2010}
-      \field{pages}{167\bibrangedash 175}
-      \range{pages}{9}
-      \verb{file}
-      \verb Mathew2010.pdf:.\\Doc\\Mathew2010.pdf:PDF;Mathew2010.pdf:Doc\\Mathew2010.pdf:PDF
-      \endverb
-    \endentry
     \entry{mendonca2009SAT}{inproceedings}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=10d2ca40c846ef23b707ccc5a64f693e}{%
@@ -4073,7 +4034,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{gamma1995Frameworks}
 \endrefsection
 \endinput
 
