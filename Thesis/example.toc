@@ -52,47 +52,56 @@
 \contentsline {section}{\numberline {2.1}Descripcion de la propuesta de solución}{52}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Sistemas de roles estáticos}{53}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Componentes funcionales de la lógica de negocio del sistema}{56}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Levantamiento de requisitos}{56}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Requisitos funcionales}{56}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Requisitos no funcionales}{70}{subsection.2.2.2}%
-\contentsline {subsubsection}{Seguridad}{71}{section*.31}%
-\contentsline {subsubsection}{Rendimiento}{71}{section*.32}%
-\contentsline {subsubsection}{Integración}{71}{section*.33}%
-\contentsline {subsubsection}{Mantenibilidad y evolución}{71}{section*.34}%
-\contentsline {subsubsection}{Disponibilidad y confiabilidad}{72}{section*.35}%
-\contentsline {subsubsection}{Fiabilidad}{72}{section*.36}%
-\contentsline {subsubsection}{Monitoreo y observabilidad}{72}{section*.37}%
-\contentsline {subsubsection}{Escalabilidad}{72}{section*.38}%
-\contentsline {subsubsection}{Portabilidad}{72}{section*.39}%
-\contentsline {section}{\numberline {2.3}Historias de usuario}{72}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Estimación de esfuerzo por historia de usuarios}{74}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Desarrollo del plan de iteraciones}{75}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Desarrollo del plan de entregas}{75}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Tarjetas Clase-Responsabilidad-Colaboración (CRC)}{76}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Arquitectura de software}{76}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Representación arquitectónica de la solución}{77}{subsection.2.5.1}%
-\contentsline {subsubsection}{Capas definidas para la propuesta de solución}{77}{section*.40}%
-\contentsline {subsubsection}{Flujo de comunicación entre capas}{79}{section*.42}%
-\contentsline {subsubsection}{Arquitectura de Celery}{80}{section*.43}%
-\contentsline {subsubsection}{Ventajas de la arquitectura para la propuesta de solución}{81}{section*.45}%
-\contentsline {section}{\numberline {2.6}Patrones de diseños}{81}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Patrones GRASP}{82}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Patrones \ac {GoF}}{82}{subsection.2.6.2}%
-\contentsline {subsubsection}{Patrones creacionales}{83}{section*.46}%
-\contentsline {subsubsection}{Patrones estructurales}{83}{section*.47}%
-\contentsline {subsubsection}{Patrones de comportamiento}{84}{section*.48}%
-\contentsline {section}{\numberline {2.7}Conclusiones del capítulo}{84}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Sección de prueba}{84}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Ejemplos de código fuente}{85}{section.2.9}%
-\contentsline {chapter}{\numberline {3}Ejemplo de tabla grande}{91}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Tabla aleatoria}{91}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Tablas de ingeniería}{92}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Resultados}{97}{chapter.4}%
-\contentsline {chapter}{Conclusiones}{99}{chapter*.50}%
-\contentsline {chapter}{Recomendaciones}{100}{chapter*.52}%
-\contentsline {chapter}{Glossary}{101}{section*.53}%
-\contentsline {chapter}{Acrónimos}{102}{section*.55}%
-\contentsline {chapter}{Referencias bibliográficas}{104}{chapter*.57}%
+\contentsline {subsubsection}{\ac {CRUD} de \ac {FM}}{56}{section*.32}%
+\contentsline {subsubsection}{Validador lógico de \ac {FM}}{56}{section*.33}%
+\contentsline {subsubsection}{Analizador estructural de \ac {FM}}{57}{section*.34}%
+\contentsline {subsubsection}{Analizador de alto nivel de \ac {FM}}{57}{section*.35}%
+\contentsline {subsubsection}{Constructor del árbol de \ac {FM}}{57}{section*.36}%
+\contentsline {subsubsection}{Manejador de versiones de \ac {FM}}{58}{section*.37}%
+\contentsline {subsubsection}{Exportador de \ac {FM}}{58}{section*.38}%
+\contentsline {subsubsection}{Importador de \ac {UVL}}{58}{section*.39}%
+\contentsline {subsubsection}{Generador de configuraciones de \ac {FM}}{58}{section*.40}%
+\contentsline {section}{\numberline {2.2}Levantamiento de requisitos}{59}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Requisitos funcionales}{59}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Requisitos no funcionales}{73}{subsection.2.2.2}%
+\contentsline {subsubsection}{Seguridad}{74}{section*.41}%
+\contentsline {subsubsection}{Rendimiento}{74}{section*.42}%
+\contentsline {subsubsection}{Integración}{74}{section*.43}%
+\contentsline {subsubsection}{Mantenibilidad y evolución}{74}{section*.44}%
+\contentsline {subsubsection}{Disponibilidad y confiabilidad}{75}{section*.45}%
+\contentsline {subsubsection}{Fiabilidad}{75}{section*.46}%
+\contentsline {subsubsection}{Monitoreo y observabilidad}{75}{section*.47}%
+\contentsline {subsubsection}{Escalabilidad}{75}{section*.48}%
+\contentsline {subsubsection}{Portabilidad}{75}{section*.49}%
+\contentsline {section}{\numberline {2.3}Historias de usuario}{75}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Estimación de esfuerzo por historia de usuarios}{77}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Desarrollo del plan de iteraciones}{78}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Desarrollo del plan de entregas}{78}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Tarjetas Clase-Responsabilidad-Colaboración (CRC)}{79}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Arquitectura de software}{79}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Representación arquitectónica de la solución}{80}{subsection.2.5.1}%
+\contentsline {subsubsection}{Capas definidas para la propuesta de solución}{80}{section*.50}%
+\contentsline {subsubsection}{Flujo de comunicación entre capas}{82}{section*.52}%
+\contentsline {subsubsection}{Arquitectura de Celery}{83}{section*.53}%
+\contentsline {subsubsection}{Ventajas de la arquitectura para la propuesta de solución}{84}{section*.55}%
+\contentsline {section}{\numberline {2.6}Patrones de diseños}{84}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Patrones GRASP}{85}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Patrones \ac {GoF}}{85}{subsection.2.6.2}%
+\contentsline {subsubsection}{Patrones creacionales}{86}{section*.56}%
+\contentsline {subsubsection}{Patrones estructurales}{86}{section*.57}%
+\contentsline {subsubsection}{Patrones de comportamiento}{87}{section*.58}%
+\contentsline {section}{\numberline {2.7}Conclusiones del capítulo}{87}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Sección de prueba}{87}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Ejemplos de código fuente}{88}{section.2.9}%
+\contentsline {chapter}{\numberline {3}Ejemplo de tabla grande}{94}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tabla aleatoria}{94}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Tablas de ingeniería}{95}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Resultados}{100}{chapter.4}%
+\contentsline {chapter}{Conclusiones}{102}{chapter*.60}%
+\contentsline {chapter}{Recomendaciones}{103}{chapter*.62}%
+\contentsline {chapter}{Glossary}{104}{section*.63}%
+\contentsline {chapter}{Acrónimos}{105}{section*.65}%
+\contentsline {chapter}{Referencias bibliográficas}{107}{chapter*.67}%
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
@@ -311,10 +320,10 @@
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Apéndices}{112}{section*.58}%
-\contentsline {chapter}{\numberline {A}Historias de usuario}{113}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Tarjetas CRC}{121}{appendix.Alph2}%
-\contentsline {chapter}{\numberline {C}Proyectos y Avales}{127}{appendix.Alph3}%
-\contentsline {chapter}{\numberline {D}Otro reporte}{128}{appendix.Alph4}%
-\contentsline {section}{\numberline {D.1}Otra sección de muestra}{128}{section.Alph4.1}%
-\contentsline {section}{\numberline {D.2}Otro ensamble Industrial}{128}{section.Alph4.2}%
+\contentsline {chapter}{Apéndices}{115}{section*.68}%
+\contentsline {chapter}{\numberline {A}Historias de usuario}{116}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Tarjetas CRC}{124}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {C}Proyectos y Avales}{130}{appendix.Alph3}%
+\contentsline {chapter}{\numberline {D}Otro reporte}{131}{appendix.Alph4}%
+\contentsline {section}{\numberline {D.1}Otra sección de muestra}{131}{section.Alph4.1}%
+\contentsline {section}{\numberline {D.2}Otro ensamble Industrial}{131}{section.Alph4.2}%

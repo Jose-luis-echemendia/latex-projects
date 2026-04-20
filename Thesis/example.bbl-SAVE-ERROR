@@ -648,6 +648,146 @@
       \field{title}{Redis in Action}
       \field{year}{2013}
     \endentry
+    \entry{celery2025docs}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a1db27179aedb5c3ca1937ad8598f620}{%
+           family={{Celery Project}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{fullhash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{bibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorbibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authornamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorfullhash}{a1db27179aedb5c3ca1937ad8598f620}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.celeryq.dev/}}
+      \field{title}{Celery - Distributed Task Queue Documentation}
+      \field{urlday}{18}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{celery2025firststeps}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a1db27179aedb5c3ca1937ad8598f620}{%
+           family={{Celery Project}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{fullhash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{bibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorbibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authornamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorfullhash}{a1db27179aedb5c3ca1937ad8598f620}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html}}
+      \field{title}{Celery - First Steps with Celery}
+      \field{urlday}{18}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{celery2025beat}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a1db27179aedb5c3ca1937ad8598f620}{%
+           family={{Celery Project}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{fullhash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{bibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorbibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authornamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorfullhash}{a1db27179aedb5c3ca1937ad8598f620}
+      \field{extraname}{3}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.celeryq.dev/en/stable/userguide/periodic-tasks.html}}
+      \field{title}{Celery - Periodic Tasks}
+      \field{urlday}{18}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{celery2025redis}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a1db27179aedb5c3ca1937ad8598f620}{%
+           family={{Celery Project}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{fullhash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{bibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorbibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authornamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorfullhash}{a1db27179aedb5c3ca1937ad8598f620}
+      \field{extraname}{4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.celeryq.dev/en/stable/getting-started/backends-and-brokers/redis.html}}
+      \field{title}{Celery - Using Redis}
+      \field{urlday}{18}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{celery2025workers}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a1db27179aedb5c3ca1937ad8598f620}{%
+           family={{Celery Project}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{fullhash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{bibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorbibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authornamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorfullhash}{a1db27179aedb5c3ca1937ad8598f620}
+      \field{extraname}{5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.celeryq.dev/en/stable/userguide/workers.html}}
+      \field{title}{Celery - Workers Guide}
+      \field{urlday}{18}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
     \entry{chen2020variability}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=5ecc04ab7cd8350e63b66dc42451fa3e}{%
@@ -2484,32 +2624,6 @@
       \field{title}{Estimación de esfuerzo en desarrollo de software ágil: Estudio del estado actual en Bogotá}
       \field{volume}{13}
       \field{year}{2021}
-    \endentry
-    \entry{celery2024docs}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a99c0bde6295b6e85efe5744173697f4}{%
-           family={Project},
-           familyi={P\bibinitperiod},
-           given={Celery},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{a99c0bde6295b6e85efe5744173697f4}
-      \strng{fullhash}{a99c0bde6295b6e85efe5744173697f4}
-      \strng{bibnamehash}{a99c0bde6295b6e85efe5744173697f4}
-      \strng{authorbibnamehash}{a99c0bde6295b6e85efe5744173697f4}
-      \strng{authornamehash}{a99c0bde6295b6e85efe5744173697f4}
-      \strng{authorfullhash}{a99c0bde6295b6e85efe5744173697f4}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://docs.celeryq.dev}}
-      \field{note}{Accessed: 2025-01-10}
-      \field{title}{Celery Distributed Task Queue Documentation}
-      \field{year}{2024}
     \endentry
     \entry{ptc_feature_models}{online}{}
       \name{author}{1}{}{%

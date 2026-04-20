@@ -851,6 +851,11 @@ INPUT ./Chapter2.tex
 INPUT ./Chapter2.tex
 INPUT ./Chapter2.tex
 INPUT Chapter2.tex
+INPUT ./Images/propuesta_solución.jpg
+INPUT ./Images/propuesta_solución.jpg
+INPUT ./Images/propuesta_solución.jpg
+INPUT ./Images/propuesta_solución.jpg
+INPUT ./Images/propuesta_solución.jpg
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xr.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/txr.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/txmi.tfm

@@ -43,7 +43,7 @@ y proponiendo alternativas.
 El sistema incorporará funcionalidades que responden directamente
 a los retos del dominio educativo: evitar inconsistencias curriculares, detectar 
 prerrequisitos no satisfechos, prevenir combinaciones inviables,
-explorar rutas posibles, permitir adaptaciones por niveles, perfiles o competencias 
+explorar rutas posibles, permitir adaptaciones por niveles, perfiles o competencias, 
 y almacenar \textit{snapshots} versionados que faciliten la evolución
 del plan de estudios sin invalidar configuraciones previas. Este enfoque
 no se limita a documentar un currículo, sino que lo convierte en un modelo 
@@ -51,7 +51,7 @@ computable y verificable, habilitando su reutilización y variación controlada.
 
 \subsection{Sistemas de roles estáticos}
 
-Un sistema de roles estáticos constituye un mecanismo de control de acceso y organización funcional en el 
+Un sistema de roles estáticos constituye un mecanismo de control de acceso y organización funcional, en el 
 cual los permisos, responsabilidades y alcances de cada usuario se definen de manera fija durante la fase de 
 diseño del sistema y permanecen invariantes a lo largo del tiempo, salvo intervención explícita de un 
 administrador \citep{ferraiolo2007role, sandhu1996role}. Este paradigma, ampliamente adoptado en sistemas 
@@ -81,8 +81,8 @@ Este enfoque simplifica el desarrollo al eliminar la complejidad asociada a los 
 pero requiere una planificación cuidadosa de la jerarquía y granularidad de los roles para cubrir todos 
 los casos de uso previstos \citep{colantonio2010role}.
 
-En el servicio \textit{backend} objeto de esta investigación, se han definido los siguientes roles \ref{tab:funcion_roles} estáticos, 
-cada uno con una misión y función principal:
+En el servicio \textit{backend} objeto de esta investigación, se han definido los roles estáticos mostrados en la tabla \ref{tab:funcion_roles}, 
+cada uno con una misión y función principal.
 
 % Tabla convertida a longtable para permitir salto de página
 \small
@@ -103,7 +103,7 @@ cada uno con una misión y función principal:
 \hline
 \endlastfoot
 
-Administrador & Gobierno completo de plataforma y datos. & Posee el control total de la plataforma y por tanto es el responsable de su salud, configuración y gestión de usuarios. \\
+Administrador & Gestión y control total de plataforma y datos. & Posee el control total de la plataforma y por tanto es el responsable de su salud, configuración y gestión de usuarios. \\
 \hline
 Diseñador de modelo & Propietario funcional del ciclo de diseño del modelo. & El arquitecto creativo encargado de idear, diseñar y liderar la construcción de los \ac{FM}. \\
 \hline
@@ -111,7 +111,7 @@ Editor de modelo & Colaborador con capacidad de edición acotada al ámbito invi
 \hline
 Revisador & Rol de control de calidad y publicación, sin edición estructural. & Vela por la calidad del modelo, valida y aprueba los modelos antes de que puedan ser utilizados. \\
 \hline
-Configurador & Consumidor experto de modelos publicados para derivar configuraciones. & Constructor práctico que utiliza los \ac{FM} aprobadas para ensamblar soluciones finales. \\
+Configurador & Consumidor experto de modelos publicados para derivar configuraciones. & Constructor práctico que utiliza los \ac{FM} aprobados para ensamblar soluciones finales. \\
 \hline
 Observador & Acceso de solo lectura a artefactos finales/publicados. & Consulta la información pública y final sin poder alterarla. \\
 \hline
@@ -119,7 +119,7 @@ Observador & Acceso de solo lectura a artefactos finales/publicados. & Consulta 
 
 Esta estratificación de roles garantiza una clara separación de responsabilidades y sigue el principio 
 de privilegio mínimo, según el cual cada usuario debe tener 
-únicamente los permisos necesarios para cumplir con sus funciones \citep{saltzer1975protection}. A continuación \ref{tab:jerarquia_roles} se muestra
+únicamente los permisos necesarios para cumplir con sus funciones \citep{saltzer1975protection}. En la tabla \ref{tab:jerarquia_roles} se muestra
 los permisos estáticos de escritura y lectura que posee cada rol.
 
 % Tabla convertida a longtable para permitir salto de página
@@ -169,20 +169,152 @@ los permisos estáticos de escritura y lectura que posee cada rol.
 \subsection{Componentes funcionales de la lógica de negocio del sistema}
 
 Dentro de la arquitectura general del sistema existe una separación funcional de 
-siete componentes fundamentales que encapsulan en requisitos de alto nivel las funcionalidades
-principales del sistema. Cada uno respaldado por estrategias tecnológicas y buenas prácticas del desarrollo de software
-que optimizan su ejecución y conexión entre los mismos. 
+componentes fundamentales que encapsulan en requisitos de alto nivel las funcionalidades
+principales del sistema. Cada uno respaldado por estrategias tecnológicas y buenas prácticas del 
+desarrollo de software que optimizan su ejecución y conexión entre los mismos.
 
+\begin{figure}[H]
+    \centering
+    \captionbox{Componentes de la lógica del negocio del sistema. Fuente: elaboración propia.\label{fig:propuesta_solución}}
+    {\includegraphics[width=0.85\linewidth]{Images/propuesta_solución.jpg}}
+\end{figure}
+
+La figura \ref{fig:propuesta_solución} ilustra los elementos que componen la lógica del negocio del sistema.
+En ella se ve claramente dividido el nucleo funcional en dos principales responsabilidades: los servicios de componentes
+estructurales de \ac{FM} y los servicios que operan directamente sobre el \ac{FM} en su totalidad. Ambos son
+dependientes del otro para su correcto funcionamiento.
+
+Los servicios de componentes estructurales de \ac{FM} proveen las funcionalidades básicas (\ac{CRUD} y otras) que permiten
+construir y modelar los \ac{FM}. Por otro lado, los servicios de \ac{FM}, están descompuestos estrategicamente como parte
+del principio de alta cohesión. A continuación, se describen los servicios de \ac{FM}:
+
+\subsubsection{\ac{CRUD} de \ac{FM}}
+
+Tiene como objetivos exponer operaciones completas de gestión de \ac{FM} y
+centralizar control de permisos, validaciones y respuesta de datos para los clientes. Tiene como funcionalidades:
 \begin{itemize}
-	\item Constructor de \ac{FM}:
-    \item Validador Lógico:
-    \item Generador de Configuraciones
-    \item Analizador de Estructura
-    \item Gestor de Versionado de \ac{FM}
-    \item Interfaz con el SISTEMA AQUEL QUE VI
-    \item UVL lenguaje
+	\item Proveer \textit{endpoints} para administrar \ac{FM}.
+	\item Aplicar control de permisos por rol y propiedad del modelo.
 \end{itemize}
 
+\subsubsection{Validador lógico de \ac{FM}}
+
+Tiene como objetivos verificar la consistencia lógica global de un \ac{FM} y
+asegurar satisfacibilidad de restricciones y relaciones. Entre sus funcionalidades se encuentran:
+\begin{itemize}
+	\item Construir variables booleanas para cada característica.
+	\item Codificar jerarquías, grupos y restricciones.
+	\item Verificar satisfacibilidad completa del modelo y de configuraciones específicas.
+	\item Soportar validación de selecciones parciales con caché.
+	\item Permitir enumerar configuraciones válidas (cuando se utiliza en conjunto con el generador).
+	\item Permitir validaciones en tres niveles:
+	\begin{itemize}
+		\item Nivel 1 (SymPy): validación simbólica para modelos pequeños.
+		\item Nivel 2 (PySAT): solucionador \ac{SAT} escalable para modelos medianos/grandes.
+		\item Nivel 3 (Z3): \ac{SMT}/optimización para análisis avanzados.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Analizador estructural de \ac{FM}}
+
+Se encarga de analizar propiedades topológicas del modelo (más allá de la lógica pura) y
+detectar problemas estructurales y métricas de complejidad. Cuenta con las funcionalidades de:
+\begin{itemize}
+	\item Construir grafos de dependencias y jerarquía.
+	\item Analizar alcanzabilidad, redundancias y relaciones implícitas.
+	\item Calcular métricas de impacto y complejidad.
+	\item Proveer los siguientes tipos de análisis:
+	\begin{itemize}
+		\item Características muertas: Características inaccesibles desde la raíz.
+		\item Redundancias: relaciones o restricciones duplicadas.
+		\item Relaciones implícitas: dependencias no explícitas en la jerarquía.
+		\item Dependencias transitivas: efectos indirectos entre características.
+		\item Componentes fuertemente conexas: ciclos y conectividad.
+		\item Métricas: centralidad, complejidad, profundidad, impacto.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Analizador de alto nivel de \ac{FM}}
+
+Tiene el objetivo principal de orquestar análisis de alto nivel combinando validación lógica, 
+análisis estructural y métricas derivadas. Entre sus funcionalidades se encuentran:
+\begin{itemize}
+	\item Construir \textit{payloads} desde la versión.
+	\item Ejecutar validación lógica y análisis estructural.
+	\item Calcular métricas derivadas: núcleo / comunalidad, conjuntos atómicos y estimación de configuraciones.
+	\item Integrar validaciones \ac{UVL} y validación adicional con Flamapy.
+\end{itemize}
+
+\subsubsection{Constructor del árbol de \ac{FM}}
+
+Encargado únicamente de construir la representación completa del \ac{FM} para consumo de los clientes,
+por lo que tiene como funcionalidades:
+\begin{itemize}
+	\item Construir el árbol jerárquico anidado con metadatos.
+	\item Generar lista de relaciones y restricciones con descripciones legibles.
+	\item Calcular estadísticas agregadas (total de nodos, profundidad del árbol, grupos, etc.).
+	\item Incluir recursos y etiquetas asociados a características.
+\end{itemize}
+
+\subsubsection{Manejador de versiones de \ac{FM}}
+
+Tiene como objetivos gestionar el ciclo de vida de versiones del \ac{FM} y
+garantizar trazabilidad, inmutabilidad y reproducibilidad. Cuenta con las siguientes funcionalidades:
+\begin{itemize}
+	\item Crear nuevas versiones (vacías o clonadas).
+	\item Publicar, archivar y restaurar versiones.
+	\item Genera \textit{snapshots} completos con mapeos $UUID \leftrightarrow Integer$  y estadísticas.
+	\item Controla estados (borrador, en revisión, publicado, archivado).
+\end{itemize}
+
+\subsubsection{Exportador de \ac{FM}}
+
+Su objetivo es exportar el \ac{FM} a formatos estándar para herramientas externas. Tiene las funciones de:
+\begin{itemize}
+	\item Mapea \ac{UUID}s a identificadores numéricos para formatos \ac{SAT}/externos.
+	\item Generar representaciones en múltiples estándares, tales como:
+	\begin{itemize}
+		\item \ac{UVL}.
+		\item \ac{XML}.
+		\item \ac{TVL}.
+		\item \ac{DIMACS}.
+		\item \ac{JSON}.
+		\item \ac{DOT}.
+		\item Mermaid.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Importador de \ac{UVL}}
+
+Tiene como objetivos importar especificaciones \ac{UVL} y materializarlas como estructura de \ac{FM}; y
+validar \ac{UVL} en fases: análisis sintáctico, estructura, restricciones simples y diferencia. Tiene como funcionalidades:
+\begin{itemize}
+	\item Análizar sintácticamente \ac{UVL} en una estructura intermedia (nodos, grupos, restricciones).
+	\item Validar estructura: raíz única, ciclos, cardinalidad mínima de grupos.
+	\item Convertir \ac{UVL} a entidades del modelo (características, grupos, relaciones, restricciones).
+	\item Permitir comparar un \ac{UVL} contra una versión existente.
+\end{itemize}
+
+\subsubsection{Generador de configuraciones de \ac{FM}}
+
+Encargado de generar configuraciones válidas completas o completar decisiones parciales, y
+proponer soluciones diversas o bien optimizadas según estrategia. Cuenta con las funcionalidades de:
+\begin{itemize}
+	\item Usar validación lógica para asegurar que las configuraciones cumplan todas las restricciones.
+	\item Generar una configuración única o múltiples configuraciones diversas.
+	\item Permitir diferentes estrategias para generar las configuraciones:
+	\begin{itemize}
+		\item GREEDY: determinista, rápida y con prioridad en relaciones obligatorias; especializa en rapidez y consistencia sobre diversidad.
+		\item RANDOM: estocástica; prioriza diversidad y exploración, útil para muestras variadas.
+		\item BEAM\_SEARCH: explora varios caminos en paralelo con poda; balancea exploración/eficiencia y prioriza soluciones prometedoras.
+		\item GENETIC (\ac{DEAP}): búsqueda evolutiva multi-objetivo; prioriza optimización de criterios definidos (p. ej., minimizar costos o maximizar cobertura).
+		\item \ac{SAT}\_ENUM: enumeración por \ac{SAT}; prioriza exhaustividad controlada, ideal para listar configuraciones válidas.
+		\item PAIRWISE / UNIFORM / STRATIFIED: muestreo para cobertura; prioriza representatividad (cobertura de pares, distribución uniforme o estratos definidos).
+		\item CP\_\ac{SAT} (\ac{OR-Tools}): programación con restricciones; prioriza factibilidad bajo restricciones complejas y objetivos declarativos.
+		\item \ac{BDD}: muestreo con diagramas de decisión binaria; prioriza eficiencia en conteo/muestreo cuando el modelo es grande.
+		\item \ac{NSGA2}: optimización multi-objetivo con Pareto; prioriza soluciones no dominadas y \textit{trade}-\textit{offs} entre objetivos.
+	\end{itemize}
+\end{itemize}
 
 \section{Levantamiento de requisitos}
 
@@ -229,6 +361,7 @@ solución a la problemática planteada:
     \endlastfoot
                     
     % Cuerpo de la tabla
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#1 & Autenticar usuario & Permite acceder al sistema introduciendo los siguientes datos: 
 		\begin{itemize}
 			\item correo electrónico
@@ -236,19 +369,19 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Baja \\ 
     \hline
-    \rowcolor[HTML]{EDEBF1}
     \ac{RF}\#2 & Cerrar sesión & Permite cerrar la sesión de un usuario anteriormente autenticado & Baja & Baja \\  
     \hline
-    \ac{RF}\#3 & Registrar usuario & Permite registrar un usuario en el sistema con los siguientes datos: 
+    \rowcolor[HTML]{EDEBF1}
+	\ac{RF}\#3 & Registrar usuario & Permite registrar un usuario en el sistema con los siguientes datos: 
 		\begin{itemize}
 				\item correo electrónico
 				\item contraseña
 		\end{itemize}
 	& Alta & Baja \\ 
     \hline
-    \rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#4 & Solicitar recuperación de contraseña & Genera un token de recuperación y lo envía por correo para restablecer el acceso de forma controlada. & Baja & Media \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
     \ac{RF}\#5 & Restablecer contraseña & Permite definir una nueva contraseña válida de forma segura a partir de uno de los siguientes escenarios: 
 		\begin{itemize}
 				\item Escenario con token: token de recuperación y nueva contraseña.
@@ -362,6 +495,7 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#32 & Obtener estructura completa de un \ac{FM} & El sistema debe entregar el árbol completo para consulta integral de una versión concreta ya sea por identificar o por la versión publicada más reciente. & Alta & Alta \\
 	\hline
+    \rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#33 & Obtener Estadísticas de un \ac{FM} & Obtiene métricas principales de la versión publicada más reciente o de una versión específica. & Alta & Media \\
 	\hline
 	\ac{RF}\#34 & Exportar un \ac{FM} & El sistema debe permitir exportar a la versión publicada más reciente o a una versión concreta en los siguientes formatos: 
@@ -376,6 +510,7 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Media \\
 	\hline
+    \rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#35 & Obtener \ac{UVL} efectivo de un \ac{FM} & Permite devolver el \ac{UVL} final, ya sea almacenado o generado desde la estructura vigente. & Alta & Media \\
 	\hline
 	\ac{RF}\#36 & Guardar \ac{UVL} & El sistema debe permitir guardar un \ac{UVL} analizado y validado. Parámetros y campos de entrada:
@@ -386,6 +521,7 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
+    \rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#37 & Sincronizar \ac{UVL} desde estructura & Regenera y persiste \ac{UVL} a partir del modelo visual para mantener coherencia. & Alta & Alta \\
 	\hline
 	\ac{RF}\#38 & Aplicar \ac{UVL} a estructura & El sistema debe permitir construir una nueva versión estructural tomando como entrada una definición \ac{UVL}. Parámetros y campos de entrada:
@@ -396,14 +532,17 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#39 & Validar lógica del modelo & El sistema debe permitir evaluar la satisfacibilidad y consistencia lógica global del modelo. & Alta & Alta \\
 	\hline
 	\ac{RF}\#40 & Validar estructura del modelo & Verifica integridad estructural, incluyendo raíz, ciclos y nodos huérfanos de un \ac{FM}. & Alta & Media \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#41 & Validar configuración seleccionada & Comprueba que una selección concreta de características sea válida y consistente. & Alta & Alta \\
 	\hline
 	\ac{RF}\#42 & Análisis estructural de validación & El sistema debe permitir ejecutar análisis de características muertas, redundancias y componentes fuertemente conectados. & Alta & Alta \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#43 & Crear configuración persistente & Crea y almacena configuraciones asociadas a una versión tras validar consistencia. Campos de entrada:
 		\begin{itemize}
 			\item nombre
@@ -415,6 +554,7 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#44 & Obtener configuración por identificador & Recupera una configuración específica junto con sus características relacionadas. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#45 & Listar configuraciones & Lista configuraciones disponibles con soporte de paginación. & Media & Baja \\
 	\hline
 	\ac{RF}\#46 & Actualizar configuración & Modifica metadatos y características de una configuración existente. Parámetros y campos de entrada:
@@ -426,18 +566,22 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#47 & Activar configuración & Marca una configuración como activa para su uso. & Media & Baja \\
 	\hline
 	\ac{RF}\#48 & Desactivar configuración & Permite al sistema eliminar lógicamente una configuración. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#49 & Validar configuración propuesta & El sistema debe permitir evaluar una selección de características sin necesidad de persistirla. & Alta & Alta \\
 	\hline
 	\ac{RF}\#50 & Generar configuraciones válidas & Genera una o varias configuraciones válidas según estrategia definida. & Alta & Alta \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#51 & Optimizar configuraciones & Ejecuta algoritmos de optimización para obtener configuraciones de mejor calidad. & Alta & Alta \\
 	\hline
 	\ac{RF}\#52 & Listar características & Lista características mediante filtros y representación de árbol por versión. & Alta & Media \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#53 & Crear característica & El sistema debe permitir crear nuevas características aplicando validaciones y permisos sobre la versión objetivo del modelo. Campos de entrada:
 		\begin{itemize}
 			\item nombre
@@ -452,14 +596,17 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#54 & Obtener característica & Recupera el detalle completo de una característica específica. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#55 & Obtener subárbol de característica & Devuelve una característica junto con toda su descendencia. & Media & Media \\
 	\hline
 	\ac{RF}\#56 & Consultar relaciones de característica & Lista relaciones en las que participa una característica determinada. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#57 & Listar etiquetas de característica & Recupera las etiquetas asociadas a una característica. & Media & Baja \\
 	\hline
 	\ac{RF}\#58 & Asociar etiqueta con característica & El sistema debe permitir vincular una etiqueta a una característica. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#59 & Desasociar etiqueta de una característica & Permite eliminar el vínculo entre una etiqueta y una característica. & Media & Baja \\
 	\hline
 	\ac{RF}\#60	& Actualizar característica & El sistema debe permitir actualizar campos puntuales de una característica. Parámetros y campos de entrada:
@@ -472,14 +619,17 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#61 & Mover característica & El sistema debe permitir reubicar una característica cambiando su nodo padre sin perder trazabilidad. & Alta & Alta \\
 	\hline
 	\ac{RF}\#62 & Desactivar característica & El sistema debe permitir eliminar lógicamente una característica y generar una nueva versión consistente del modelo. & Alta & Alta \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#63 & Activar característica & El sistema debe permitir recuperar una característica anteriormete desactivada. & Alta & Alta \\
 	\hline
 	\ac{RF}\#64 & Listar grupos de características & El sistema debe permitir listar grupos de características con filtros por versión, padre y tipo de agrupación. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#65 & Obtener grupo de características & Recupera la información de un grupo de características por su identificador. & Media & Baja \\
 	\hline
 	\ac{RF}\#66 & Crear grupo de características & Crea grupos de características con validaciones para un modelo. Campos de entrada:
@@ -491,6 +641,7 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#67 & Actualizar grupo de características & Actualiza grupos de características conservando consistencia y versionado en el modelo. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de grupo (ruta)
@@ -503,10 +654,12 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#68 & Desactivar grupo de características & Elimina lógicamente grupos de características aplicando reglas de integridad y versionado. & Alta & Alta \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#69 & Activar grupo de características & Permitir recuperar grupos de características desactivados. & Alta & Alta \\
 	\hline
 	\ac{RF}\#70 & Listar relaciones de características & Lista relaciones entre características con criterios de filtrado. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#71 & Obtener relación de características & Obtiene el detalle de una relación de características por identificador. & Media & Baja \\
 	\hline
 	\ac{RF}\#72 & Crear relación de características & El sistema debe permitir crear relaciones entre características con validaciones semánticas y \textit{copy-on-write}. Campos de entrada:
@@ -517,6 +670,7 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#73 & Actualizar relación de características & El sistema debe permitir actualizar relaciones de características existentes. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de relación (ruta)
@@ -528,10 +682,12 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#74 & Activar relaciones de características & Recupera una relación de características anteriormente desactivada. & Alta & Alta \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#75 & Desactivar relaciones de características & Elimina lógicamente una relación de características manteniendo la consistencia global del modelo. & Alta & Alta \\
 	\hline
 	\ac{RF}\#76 & Listar de restricciones & Lista restricciones aplicables según filtros definidos. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#77 & Obtener restricción & Recupera el detalle de una restricción por identificador. & Media & Baja \\
 	\hline
 	\ac{RF}\#78 & Crear restricción & El sistema debe permitir crear restricciones complejas con validaciones y control de versiones. Campos de entrada:
@@ -542,6 +698,7 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Alta & Alta \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#79 & Actualizar restricción & Actualiza restricciones existentes preservando coherencia lógica. Parámetros y campos de entrada:
 		\begin{itemize}
 			\item identificador de restricción (ruta)
@@ -552,10 +709,12 @@ solución a la problemática planteada:
 	\hline
 	\ac{RF}\#80 & Desactivar restricción & Elimina restricciones aplicando \textit{copy-on-write} para mantener trazabilidad. & Alta & Alta \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#81 & Activar restricción & Elimina restricciones aplicando \textit{copy-on-write} para mantener trazabilidad. & Alta & Alta \\
 	\hline
 	\ac{RF}\#82 & Listar etiquetas & Lista etiquetas activas disponibles para clasificación funcional. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#83 & Obtener etiqueta & Recupera una etiqueta específica mediante su identificador. & Media & Baja \\
 	\hline
 	\ac{RF}\#84 & Crear etiqueta & Crea nuevas etiquetas asegurando unicidad de nombre. Campos de entrada:
@@ -565,10 +724,12 @@ solución a la problemática planteada:
 		\end{itemize}
 	& Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#85 & Listar recursos & Lista recursos registrados con soporte de paginación. & Media & Baja \\
 	\hline
 	\ac{RF}\#86 & Consultar recurso & Obtiene el detalle de un recurso específico por su identificador. & Media & Baja \\
 	\hline
+	\rowcolor[HTML]{EDEBF1}
 	\ac{RF}\#87 & Crear recurso & El sistema debe permitir registrar recursos y asigna propietario. Campos de entrada:
 		\begin{itemize}
 			\item título
@@ -1265,8 +1426,6 @@ sin necesidad de conocer explícitamente las implementaciones concretas de sus c
 		\item Transiciones de estado para los recursos y los \ac{FM} (ambos tienen los siguientes estaods: borrador, en revisión, publicado, archivado).
 	\end{itemize} 
 \end{itemize}
-
-
 
 \section{Conclusiones del capítulo}
 
