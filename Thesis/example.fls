@@ -938,12 +938,6 @@ INPUT ./Anexos/BloqueCoronaReport.pdf
 INPUT ./Anexos/BloqueCoronaReport.pdf
 INPUT ./Anexos/BloqueCoronaReport.pdf
 INPUT ./Anexos/BloqueCoronaReport.pdf
-INPUT ./Anexos/BloqueCoronaReport.pdf
-INPUT ./Anexos/BloqueCoronaReport.pdf
-INPUT ./Anexos/BloqueCoronaReport.pdf
-INPUT ./Anexos/BloqueCoronaReport.pdf
-INPUT ./Anexos/BloqueCoronaReport.pdf
-INPUT ./Anexos/BloqueCoronaReport.pdf
 INPUT example.aux
 INPUT example.run.xml
 OUTPUT example.run.xml

@@ -300,387 +300,1201 @@
 	\chapter{Tarjetas CRC}
 	\label{anx:tCRC}
 
-	\begin{crccard}[tb:crc_user]
-		\crcclass{User}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Representar usuarios y roles.
-			\item Mantener estado activo/inactivo.
-			\item Soportar auditoría (creado/actualizado/eliminado por).
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModel (owner/collaborator)\\
-			FeatureModelCollaborator\\
-			Repositorios de usuario
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_user]
+			\crcclass{User}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Representar usuarios y roles.
+				\item Mantener estado activo/inactivo.
+				\item Soportar auditoría (creado/actualizado/eliminado por).
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModel (owner/collaborator)\\
+				FeatureModelCollaborator\\
+				Repositorios de usuario
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_domain]
-		\crcclass{Domain}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Agrupar modelos por dominio.
-			\item Mantener metadatos (nombre, descripción).
-			\item Gestionar relación con modelos.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModel
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_domain]
+			\crcclass{Domain}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Agrupar modelos por dominio.
+				\item Mantener metadatos (nombre, descripción).
+				\item Gestionar relación con modelos.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModel
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_featuremodel]
-		\crcclass{FeatureModel}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Representar un \ac{FM} (nombre, descripción, dominio).
-			\item Enlazar propietario y versiones.
-			\item Mantener colaboradores.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			Domain\\
-			User\\
-			FeatureModelVersion\\
-			FeatureModelCollaborator
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_featuremodel]
+			\crcclass{FeatureModel}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Representar un \ac{FM} (nombre, descripción, dominio).
+				\item Enlazar propietario y versiones.
+				\item Mantener colaboradores.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				Domain\\
+				User\\
+				FeatureModelVersion\\
+				FeatureModelCollaborator
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_featuremodelversion]
-		\crcclass{FeatureModelVersion}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Versionar un \ac{FM} (estado, snapshot, \ac{UVL}).
-			\item Enlazar estructura completa (features, grupos, relaciones, restricciones y configuraciones).
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModel\\
-			Feature\\
-			FeatureGroup\\
-			FeatureRelation\\
-			Constraint\\
-			Configuration
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_featuremodelversion]
+			\crcclass{FeatureModelVersion}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Versionar un \ac{FM} (estado, snapshot, \ac{UVL}).
+				\item Enlazar estructura completa (features, grupos, relaciones, restricciones y configuraciones).
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModel\\
+				Feature\\
+				FeatureGroup\\
+				FeatureRelation\\
+				Constraint\\
+				Configuration
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_feature]
-		\crcclass{Feature}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Representar característica (nombre, tipo, propiedades).
-			\item Mantener jerarquía padre/hijos.
-			\item Enlazar grupo y recurso.
-			\item Soportar tags y configuraciones.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModelVersion\\
-			FeatureGroup\\
-			FeatureRelation\\
-			Tag\\
-			Configuration\\
-			Resource
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_feature]
+			\crcclass{Feature}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Representar característica (nombre, tipo, propiedades).
+				\item Mantener jerarquía padre/hijos.
+				\item Enlazar grupo y recurso.
+				\item Soportar tags y configuraciones.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion\\
+				FeatureGroup\\
+				FeatureRelation\\
+				Tag\\
+				Configuration\\
+				Resource
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_featuregroup]
-		\crcclass{FeatureGroup}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Definir agrupaciones XOR/OR.
-			\item Controlar cardinalidades.
-			\item Enlazar feature padre y miembros.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModelVersion\\
-			Feature
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_featuregroup]
+			\crcclass{FeatureGroup}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Definir agrupaciones XOR/OR.
+				\item Controlar cardinalidades.
+				\item Enlazar feature padre y miembros.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion\\
+				Feature
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_featurerelation]
-		\crcclass{FeatureRelation}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Representar relaciones cross-tree (requires/excludes).
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModelVersion\\
-			Feature
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_featurerelation]
+			\crcclass{FeatureRelation}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Representar relaciones cross-tree (requires/excludes).
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion\\
+				Feature
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_constraint]
-		\crcclass{Constraint}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Persistir restricciones lógicas complejas (expr\_text, expr\_cnf).
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModelVersion
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_constraint]
+			\crcclass{Constraint}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Persistir restricciones lógicas complejas (expr\_text, expr\_cnf).
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_configuration]
-		\crcclass{Configuration}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Persistir selección de features.
-			\item Enlazar tags.
-			\item Mantener estado activo/inactivo.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModelVersion\\
-			Feature\\
-			Tag
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_configuration]
+			\crcclass{Configuration}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Persistir selección de features.
+				\item Enlazar tags.
+				\item Mantener estado activo/inactivo.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion\\
+				Feature\\
+				Tag
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_tag]
-		\crcclass{Tag}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Clasificar features/configuraciones.
-			\item Mantener unicidad por nombre.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			Feature\\
-			Configuration
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_tag]
+			\crcclass{Tag}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Clasificar features/configuraciones.
+				\item Mantener unicidad por nombre.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				Feature\\
+				Configuration
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_resource]
-		\crcclass{Resource}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Representar recursos educativos.
-			\item Mantener metadatos de contenido/licencia.
-			\item Enlazar propietario.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			User\\
-			Feature
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_resource]
+			\crcclass{Resource}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Representar recursos educativos.
+				\item Mantener metadatos de contenido/licencia.
+				\item Enlazar propietario.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				User\\
+				Feature
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_fmversionmanager]
-		\crcclass{FeatureModelVersionManager}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Crear versiones (copy-on-write).
-			\item Publicar/archivar/restaurar versiones.
-			\item Generar snapshot y validaciones de transición.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModelVersionRepository\\
-			FeatureModelVersion\\
-			Feature\\
-			User\\
-			FeatureModel
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_fmversionmanager]
+			\crcclass{FeatureModelVersionManager}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Crear versiones (copy-on-write).
+				\item Publicar/archivar/restaurar versiones.
+				\item Generar snapshot y validaciones de transición.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersionRepository\\
+				FeatureModelVersion\\
+				Feature\\
+				User\\
+				FeatureModel
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_fmexportservice]
-		\crcclass{FeatureModelExportService}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Exportar \ac{FM} a \ac{UVL}/XML/TVL/DIMACS/\ac{JSON}/DOT/Mermaid.
-			\item Construir mapeo UUID $\leftrightarrow$ int.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModelVersion\\
-			Feature\\
-			Constraint\\
-			Enums de exportación
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_fmexportservice]
+			\crcclass{FeatureModelExportService}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Exportar \ac{FM} a \ac{UVL}/XML/TVL/DIMACS/\ac{JSON}/DOT/Mermaid.
+				\item Construir mapeo UUID $\leftrightarrow$ int.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion\\
+				Feature\\
+				Constraint\\
+				Enums de exportación
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_fmuvlimporter]
-		\crcclass{FeatureModelUVLImporter}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Validar \ac{UVL}.
-			\item Construir estructura desde \ac{UVL}.
-			\item Crear relaciones/restricciones y nueva versión.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModelVersionManager\\
-			Feature\\
-			FeatureGroup\\
-			FeatureRelation\\
-			Constraint\\
-			FeatureModelVersion\\
-			User
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_fmuvlimporter]
+			\crcclass{FeatureModelUVLImporter}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Validar \ac{UVL}.
+				\item Construir estructura desde \ac{UVL}.
+				\item Crear relaciones/restricciones y nueva versión.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersionManager\\
+				Feature\\
+				FeatureGroup\\
+				FeatureRelation\\
+				Constraint\\
+				FeatureModelVersion\\
+				User
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_fmlogicalvalidator]
-		\crcclass{FeatureModelLogicalValidator}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Ejecutar validación \ac{SAT}/\ac{SMT} (sympy/pysat/z3).
-			\item Verificar consistencia global y configuraciones.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			InvalidConstraintException y otras excepciones\\
-			Dependencias \ac{SAT}/\ac{SMT}
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_fmlogicalvalidator]
+			\crcclass{FeatureModelLogicalValidator}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Ejecutar validación \ac{SAT}/\ac{SMT} (sympy/pysat/z3).
+				\item Verificar consistencia global y configuraciones.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				InvalidConstraintException y otras excepciones\\
+				Dependencias \ac{SAT}/\ac{SMT}
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_fmconfigurationgenerator]
-		\crcclass{FeatureModelConfigurationGenerator}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Generar configuraciones válidas.
-			\item Aplicar estrategias GREEDY/RANDOM/BEAM/GENETIC/NSGA2.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModelLogicalValidator\\
-			GenerationStrategy\\
-			Dependencias DEAP/OR-Tools/BDD
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_fmconfigurationgenerator]
+			\crcclass{FeatureModelConfigurationGenerator}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Generar configuraciones válidas.
+				\item Aplicar estrategias GREEDY/RANDOM/BEAM/GENETIC/NSGA2.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelLogicalValidator\\
+				GenerationStrategy\\
+				Dependencias DEAP/OR-Tools/BDD
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_fmstructuralanalyzer]
-		\crcclass{FeatureModelStructuralAnalyzer}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Analizar estructura (dead features, redundancias, SCC).
-			\item Calcular métricas de complejidad.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			AnalysisType\\
-			networkx\\
-			Excepciones estructurales
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_fmstructuralanalyzer]
+			\crcclass{FeatureModelStructuralAnalyzer}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Analizar estructura (dead features, redundancias, SCC).
+				\item Calcular métricas de complejidad.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				AnalysisType\\
+				networkx\\
+				Excepciones estructurales
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_fmtreebuilder]
-		\crcclass{FeatureModelTreeBuilder}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Construir árbol completo para respuesta.
-			\item Generar estadísticas.
-			\item Generar \ac{UVL} efectivo.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModelVersion\\
-			Feature\\
-			FeatureGroup\\
-			FeatureModelExportService\\
-			FeatureModelCompleteResponse
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_fmtreebuilder]
+			\crcclass{FeatureModelTreeBuilder}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Construir árbol completo para respuesta.
+				\item Generar estadísticas.
+				\item Generar \ac{UVL} efectivo.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion\\
+				Feature\\
+				FeatureGroup\\
+				FeatureModelExportService\\
+				FeatureModelCompleteResponse
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_fmanalysisfacade]
-		\crcclass{FeatureModelAnalysisFacade}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Orquestar análisis lógico y estructural.
-			\item Calcular commonality/core/atomic sets.
-			\item Ejecutar validación \ac{UVL} opcional (Flamapy).
-			\end{itemize}
-		}
-		\crccolab
-		{
-			FeatureModelLogicalValidator\\
-			FeatureModelStructuralAnalyzer\\
-			FeatureModelUVLImporter
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_fmanalysisfacade]
+			\crcclass{FeatureModelAnalysisFacade}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Orquestar análisis lógico y estructural.
+				\item Calcular commonality/core/atomic sets.
+				\item Ejecutar validación \ac{UVL} opcional (Flamapy).
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelLogicalValidator\\
+				FeatureModelStructuralAnalyzer\\
+				FeatureModelUVLImporter
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_settingsservice]
-		\crcclass{SettingsService}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Consultar y actualizar settings.
-			\item Cachear en Redis.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			AppSetting\\
-			redis\_client
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_settingsservice]
+			\crcclass{SettingsService}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Consultar y actualizar settings.
+				\item Cachear en Redis.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				AppSetting\\
+				redis\_client
+			}
+		\end{crccard}
 
-	\begin{crccard}[tb:crc_appsetting]
-		\crcclass{AppSetting}
-		\crcresp
-		{
-			\begin{itemize}
-			\item Persistir claves de configuración.
-			\item Mantener descripción y valor.
-			\end{itemize}
-		}
-		\crccolab
-		{
-			SettingsService\\
-			Redis cache
-		}
-	\end{crccard}
+		\begin{crccard}[tb:crc_appsetting]
+			\crcclass{AppSetting}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Persistir claves de configuración.
+				\item Mantener descripción y valor.
+				\end{itemize}
+			}de
+			\crccolab
+			{
+				SettingsService\\
+				Redis cache
+			}
+		\end{crccard}
 
-	\chapter{Proyectos y Avales}
-    \includegraphics[scale=0.45]{Anexos/BloqueCoronaReport}
-   
-  	\chapter{Otro reporte}
-  	\section{Otra sección de muestra}
-  	De una sola \hypertarget{word}{sentencia} 
-	\section{Otro ensamble Industrial}
-	\label{anx:ensambleindustrial}
-	\includegraphics[scale=0.45]{Anexos/BloqueCoronaReport}
+	\chapter{Tareas de ingenierías}
+	\label{anx:ti}
+
+		\subsubsection*{HU-01: Autenticación y Autogestión de cuenta}
+
+		\begin{engineeringtask}[tb:engtask_t001]
+		\engtaskuserstory{1}
+		\engtaskname{Diseñar modelo de token de recuperación}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{20}{4}{2026}
+		\engtaskenddate{20}{4}{2026}
+		\engtaskdescription{Diseñar y documentar el modelo de token de recuperación de contraseña, incluyendo ciclo de vida, expiración, estado, relación con usuario y campos de auditoría compatibles con la estrategia de persistencia.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t002]
+		\engtaskuserstory{1}
+		\engtaskname{Implementar esquemas de autenticación}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{20}{4}{2026}
+		\engtaskenddate{21}{4}{2026}
+		\engtaskdescription{Definir esquemas de entrada y salida para registro, inicio de sesión, recuperación de acceso, restablecimiento de contraseña y actualización de perfil, con validaciones explícitas y mensajes de error consistentes.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t003]
+		\engtaskuserstory{1}
+		\engtaskname{Implementar servicio de autenticación y cuenta}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{21}{4}{2026}
+		\engtaskenddate{22}{4}{2026}
+		\engtaskdescription{Diseñar e implementar el servicio de identidad para registro, autenticación, gestión de credenciales, emisión y verificación de tokens, y actualización de perfil, garantizando trazabilidad y cumplimiento de políticas de seguridad.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t004]
+		\engtaskuserstory{1}
+		\engtaskname{Exponer endpoints de auth y perfil}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{22}{4}{2026}
+		\engtaskenddate{23}{4}{2026}
+		\engtaskdescription{Implementar el controlador de identidad con endpoints de registro, inicio/cierre de sesión, solicitud de recuperación, restablecimiento de contraseña y edición de perfil propio; incorporar validación de solicitudes, manejo uniforme de errores y contratos de respuesta consistentes.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t005]
+		\engtaskuserstory{1}
+		\engtaskname{Enviar correos de recuperación asíncronamente}
+		\engtasktype{Crear tareas de celery}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{23}{4}{2026}
+		\engtaskenddate{24}{4}{2026}
+		\engtaskdescription{Implementar la tarea asíncrona de notificación para recuperación de cuenta con políticas de reintento, plantillas de correo versionadas y registro de trazas operativas para auditoría y soporte.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-02: Administración de Usuarios y Permisos}
+
+		\begin{engineeringtask}[tb:engtask_t006]
+		\engtaskuserstory{2}
+		\engtaskname{Implementar esquemas para gestión de usuarios}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{27}{4}{2026}
+		\engtaskenddate{27}{4}{2026}
+		\engtaskdescription{Definir contratos de entrada y salida para listado paginado, filtrado por rol y término de búsqueda, actualización de rol y cambio de estado de cuenta, con reglas de validación y paginación estandarizadas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t007]
+		\engtaskuserstory{2}
+		\engtaskname{Implementar repositorio administrativo de usuarios}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{27}{4}{2026}
+		\engtaskenddate{28}{4}{2026}
+		\engtaskdescription{Implementar el repositorio de usuarios administrativos con consultas paginadas, filtros combinables, búsqueda textual y operaciones de actualización de rol y estado, preservando eliminación lógica y consistencia transaccional.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t008]
+		\engtaskuserstory{2}
+		\engtaskname{Implementar servicio de administración de usuarios}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{28}{4}{2026}
+		\engtaskenddate{29}{4}{2026}
+		\engtaskdescription{Implementar el servicio de administración de usuarios para orquestar permisos, reglas de transición de rol y validaciones de seguridad, incorporando controles de autorización y registro de acciones críticas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t009]
+		\engtaskuserstory{2}
+		\engtaskname{Exponer endpoints de administración de usuarios}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{29}{4}{2026}
+		\engtaskenddate{30}{4}{2026}
+		\engtaskdescription{Implementar el controlador administrativo para listado paginado, filtrado y búsqueda de usuarios, cambio de rol y activación/desactivación de cuentas; aplicar autorización por rol, validación de parámetros de ruta/consulta y trazabilidad de acciones administrativas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t010]
+		\engtaskuserstory{2}
+		\engtaskname{Definir excepciones de administración de usuarios}
+		\engtasktype{Crear excepciones personalizadas}
+		\engtaskpointestimation{4}
+		\engtaskstartdate{30}{4}{2026}
+		\engtaskenddate{30}{4}{2026}
+		\engtaskdescription{Diseñar excepciones de dominio para transición inválida de rol, usuario inexistente y operación no autorizada, estandarizando códigos de error y semántica de respuesta para la capa API.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-03: Gestión de Dominios de Conocimiento}
+
+		\begin{engineeringtask}[tb:engtask_t011]
+		\engtaskuserstory{3}
+		\engtaskname{Ajustar modelo de dominio curricular}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{4}{5}{2026}
+		\engtaskenddate{4}{5}{2026}
+		\engtaskdescription{Refinar el modelo de dominio curricular, incorporando restricciones de unicidad, atributos de estado, campos de auditoría y relaciones con modelos para asegurar consistencia semántica y persistencia confiable.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t012]
+		\engtaskuserstory{3}
+		\engtaskname{Implementar esquemas de dominio}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{4}{5}{2026}
+		\engtaskenddate{5}{5}{2026}
+		\engtaskdescription{Definir esquemas para creación, actualización, consulta, búsqueda y detalle de dominios con modelos asociados, estableciendo validaciones de formato, límites y contratos de serialización coherentes.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t013]
+		\engtaskuserstory{3}
+		\engtaskname{Implementar repositorio de dominios}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{5}{5}{2026}
+		\engtaskenddate{6}{5}{2026}
+		\engtaskdescription{Implementar el repositorio de dominios con consultas paginadas, criterios de búsqueda por nombre y descripción, y recuperación eficiente de relaciones con modelos asociados.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t014]
+		\engtaskuserstory{3}
+		\engtaskname{Implementar servicio de gobernanza de dominios}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{6}{5}{2026}
+		\engtaskenddate{7}{5}{2026}
+		\engtaskdescription{Implementar el servicio de gobernanza de dominios para gestionar ciclo de vida, validaciones de unicidad e integridad referencial, y reglas de activación/desactivación con trazabilidad administrativa.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t015]
+		\engtaskuserstory{3}
+		\engtaskname{Exponer endpoints de dominios}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{7}{5}{2026}
+		\engtaskenddate{8}{5}{2026}
+		\engtaskdescription{Implementar el controlador de dominios para operaciones de creación, consulta, actualización, búsqueda y cambio de estado, incluyendo endpoint de detalle con modelos asociados; asegurar validación de datos, paginación y estandarización de respuestas HTTP.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-04: Gestión Operativa de FM}
+
+		\begin{engineeringtask}[tb:engtask_t016]
+		\engtaskuserstory{4}
+		\engtaskname{Ajustar modelo de FeatureModel y colaboradores}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{11}{5}{2026}
+		\engtaskenddate{11}{5}{2026}
+		\engtaskdescription{Consolidar el modelo de FeatureModel y colaboradores, formalizando relaciones con dominio y propietario, además de reglas de unicidad y consistencia para operaciones de lectura y escritura.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t017]
+		\engtaskuserstory{4}
+		\engtaskname{Implementar esquemas operativos de FM}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{11}{5}{2026}
+		\engtaskenddate{12}{5}{2026}
+		\engtaskdescription{Definir esquemas operativos para alta, actualización, listado paginado y consulta de detalle del modelo, incluyendo metadatos obligatorios, validaciones de consistencia y formato de respuesta uniforme.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t018]
+		\engtaskuserstory{4}
+		\engtaskname{Implementar repositorio de FM}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{12}{5}{2026}
+		\engtaskenddate{13}{5}{2026}
+		\engtaskdescription{Implementar el repositorio de modelos de características con operaciones de persistencia y consultas por dominio, estado y criterios de búsqueda, optimizando lectura para escenarios paginados.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t019]
+		\engtaskuserstory{4}
+		\engtaskname{Implementar servicio operativo de FM}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{13}{5}{2026}
+		\engtaskenddate{14}{5}{2026}
+		\engtaskdescription{Implementar el servicio operativo del catálogo de modelos para gestionar altas, cambios de metadatos y estado operativo, aplicando validaciones de negocio e integridad de información.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t020]
+		\engtaskuserstory{4}
+		\engtaskname{Exponer endpoints de ciclo operativo de FM}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{14}{5}{2026}
+		\engtaskenddate{15}{5}{2026}
+		\engtaskdescription{Implementar el controlador de modelos de características para alta, consulta, actualización y activación/desactivación, con soporte de filtros por dominio, paginación y políticas de autorización según rol funcional.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-05: Gestión de Versiones y Publicación}
+
+		\begin{engineeringtask}[tb:engtask_t021]
+		\engtaskuserstory{5}
+		\engtaskname{Ajustar modelo de versionado de FM}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{18}{5}{2026}
+		\engtaskenddate{18}{5}{2026}
+		\engtaskdescription{Definir el modelo de versionado con estados explícitos, metadatos de snapshot y trazabilidad completa, estableciendo reglas de transición válidas para sostener el ciclo de vida de versiones.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t022]
+		\engtaskuserstory{5}
+		\engtaskname{Implementar repositorio de versiones}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{18}{5}{2026}
+		\engtaskenddate{19}{5}{2026}
+		\engtaskdescription{Implementar el repositorio de versiones con consultas por modelo, localización de versión publicada vigente y recuperación de versiones específicas con sus dependencias necesarias.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t023]
+		\engtaskuserstory{5}
+		\engtaskname{Implementar gestor de versionado copy-on-write}
+		\engtasktype{Crear clase}
+		\engtaskpointestimation{14}
+		\engtaskstartdate{19}{5}{2026}
+		\engtaskenddate{21}{5}{2026}
+		\engtaskdescription{Diseñar e implementar la clase FeatureModelVersionManager para orquestar creación de versiones por copy-on-write, publicación, archivado y restauración, con validación estricta de transiciones de estado.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t024]
+		\engtaskuserstory{5}
+		\engtaskname{Exponer endpoints de versiones y publicación}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{21}{5}{2026}
+		\engtaskenddate{22}{5}{2026}
+		\engtaskdescription{Implementar el controlador de versionado para listar/consultar versiones, crear versiones por copy-on-write, publicar, archivar, restaurar y obtener estructura completa de una versión; incluir validación de transiciones de estado y control de permisos por perfil.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t025]
+		\engtaskuserstory{5}
+		\engtaskname{Definir excepciones de transición de versiones}
+		\engtasktype{Crear excepciones personalizadas}
+		\engtaskpointestimation{4}
+		\engtaskstartdate{22}{5}{2026}
+		\engtaskenddate{22}{5}{2026}
+		\engtaskdescription{Definir excepciones de dominio para transiciones inválidas, condiciones de publicación no satisfechas y conflictos de estado, con mapeo consistente a respuestas HTTP y contexto de diagnóstico.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-06: Análisis de Métricas y Exportación}
+
+		\begin{engineeringtask}[tb:engtask_t026]
+		\engtaskuserstory{6}
+		\engtaskname{Implementar servicio de exportación multiformato}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{16}
+		\engtaskstartdate{25}{5}{2026}
+		\engtaskenddate{26}{5}{2026}
+		\engtaskdescription{Implementar el servicio de exportación multiformato para generar representaciones UVL, XML, TVL, DIMACS, JSON, DOT y Mermaid, incorporando mapeo estable de identificadores y validación de consistencia del artefacto generado.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t027]
+		\engtaskuserstory{6}
+		\engtaskname{Implementar esquemas de métricas y exportación}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{26}{5}{2026}
+		\engtaskenddate{26}{5}{2026}
+		\engtaskdescription{Definir esquemas de solicitud y respuesta para consulta de métricas y exportación por versión objetivo o versión vigente publicada, incluyendo parámetros de formato y validaciones de compatibilidad.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t028]
+		\engtaskuserstory{6}
+		\engtaskname{Exponer endpoints de estadísticas y exportación}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{26}{5}{2026}
+		\engtaskenddate{27}{5}{2026}
+		\engtaskdescription{Implementar el controlador de análisis y exportación para consultar métricas por versión y generar artefactos en formatos técnicos y visuales; soportar negociación de formato, descarga/streaming seguro y manejo de errores de serialización.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t029]
+		\engtaskuserstory{6}
+		\engtaskname{Implementar tareas asíncronas de exportación}
+		\engtasktype{Crear tareas de celery}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{27}{5}{2026}
+		\engtaskenddate{28}{5}{2026}
+		\engtaskdescription{Implementar tareas asíncronas de exportación para procesar cargas intensivas fuera del hilo de petición, con persistencia de estado, almacenamiento de artefactos y mecanismos de recuperación ante fallos.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t030]
+		\engtaskuserstory{6}
+		\engtaskname{Definir excepciones de exportación}
+		\engtasktype{Crear excepciones personalizadas}
+		\engtaskpointestimation{4}
+		\engtaskstartdate{28}{5}{2026}
+		\engtaskenddate{28}{5}{2026}
+		\engtaskdescription{Definir excepciones específicas para formato no soportado, versión inexistente y errores de serialización o generación de artefactos, con semántica clara para observabilidad y soporte operativo.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-07: Edición de la Jerarquía de Características}
+
+		\begin{engineeringtask}[tb:engtask_t031]
+		\engtaskuserstory{7}
+		\engtaskname{Ajustar modelo de Feature para edición jerárquica}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{1}{6}{2026}
+		\engtaskenddate{1}{6}{2026}
+		\engtaskdescription{Ajustar el modelo de Feature para soportar edición jerárquica segura, contemplando relaciones padre-hijo, pertenencia a grupo, vínculo con recursos, propiedades extensibles y estado lógico activo.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t032]
+		\engtaskuserstory{7}
+		\engtaskname{Implementar esquemas de jerarquía de features}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{1}{6}{2026}
+		\engtaskenddate{2}{6}{2026}
+		\engtaskdescription{Definir esquemas de entrada y salida para creación, actualización, movimiento, consulta de detalle y subárbol, y cambio de estado de características, con validaciones estructurales y referenciales.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t033]
+		\engtaskuserstory{7}
+		\engtaskname{Implementar repositorio de features}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{2}{6}{2026}
+		\engtaskenddate{3}{6}{2026}
+		\engtaskdescription{Implementar el repositorio de características con operaciones de recorrido jerárquico, consultas por versión, actualizaciones parciales y desactivación lógica, garantizando integridad de relaciones padre-hijo.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t034]
+		\engtaskuserstory{7}
+		\engtaskname{Implementar servicio de jerarquía de features}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{3}{6}{2026}
+		\engtaskenddate{4}{6}{2026}
+		\engtaskdescription{Implementar el servicio de jerarquía de características para validar movimientos en el árbol, prevenir inconsistencias estructurales y ejecutar versionado copy-on-write en operaciones de activación y desactivación.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t035]
+		\engtaskuserstory{7}
+		\engtaskname{Exponer endpoints de features estructurales}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{4}{6}{2026}
+		\engtaskenddate{5}{6}{2026}
+		\engtaskdescription{Implementar el controlador de características para creación, consulta de detalle/subárbol, actualización, movimiento en jerarquía y activación/desactivación lógica; reforzar validaciones de integridad estructural y autorización por rol de edición.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-08: Modelado de Grupos y Relaciones Estructurales}
+
+		\begin{engineeringtask}[tb:engtask_t036]
+		\engtaskuserstory{8}
+		\engtaskname{Ajustar modelos de FeatureGroup y FeatureRelation}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{8}{6}{2026}
+		\engtaskenddate{8}{6}{2026}
+		\engtaskdescription{Definir y refinar los modelos de grupos y relaciones, incorporando tipo semántico, cardinalidades, extremos de vínculo y estado lógico, junto con reglas de integridad para persistencia y validación.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t037]
+		\engtaskuserstory{8}
+		\engtaskname{Implementar esquemas de grupos y relaciones}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{8}{6}{2026}
+		\engtaskenddate{9}{6}{2026}
+		\engtaskdescription{Definir contratos de API para listado, creación, actualización y cambio de estado de grupos y relaciones, incorporando validaciones de cardinalidad, tipos permitidos y consistencia entre nodos.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t038]
+		\engtaskuserstory{8}
+		\engtaskname{Implementar repositorios de grupos y relaciones}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{9}{6}{2026}
+		\engtaskenddate{10}{6}{2026}
+		\engtaskdescription{Implementar repositorios de grupos y relaciones con consultas por versión, característica padre y tipo semántico, optimizando la carga de datos para validaciones estructurales posteriores.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t039]
+		\engtaskuserstory{8}
+		\engtaskname{Implementar servicio de semántica estructural}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{10}{6}{2026}
+		\engtaskenddate{11}{6}{2026}
+		\engtaskdescription{Implementar el servicio de semántica estructural para validar cardinalidades, coherencia de relaciones cross-tree y reglas de versionado al aplicar cambios sobre la estructura del modelo.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t040]
+		\engtaskuserstory{8}
+		\engtaskname{Exponer endpoints de grupos y relaciones}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{11}{6}{2026}
+		\engtaskenddate{12}{6}{2026}
+		\engtaskdescription{Implementar el controlador de grupos y relaciones para gestión completa de agrupaciones (incluyendo cardinalidades) y relaciones cross-tree; validar reglas semánticas del modelo y aplicar autorización granular para operaciones de edición.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-09: Gestión de Restricciones Transversales}
+
+		\begin{engineeringtask}[tb:engtask_t041]
+		\engtaskuserstory{9}
+		\engtaskname{Ajustar modelo de restricciones lógicas}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{15}{6}{2026}
+		\engtaskenddate{15}{6}{2026}
+		\engtaskdescription{Definir el modelo de restricciones lógicas con representación textual y normalizada, estado de vigencia y metadatos de versión, habilitando trazabilidad y análisis posterior.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t042]
+		\engtaskuserstory{9}
+		\engtaskname{Implementar esquemas de restricciones}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{15}{6}{2026}
+		\engtaskenddate{16}{6}{2026}
+		\engtaskdescription{Definir esquemas de solicitud y respuesta para ciclo completo de restricciones, incluyendo validaciones sintácticas de expresión, serialización uniforme y estructura de errores de dominio.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t043]
+		\engtaskuserstory{9}
+		\engtaskname{Implementar repositorio de restricciones}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{16}{6}{2026}
+		\engtaskenddate{17}{6}{2026}
+		\engtaskdescription{Implementar el repositorio de restricciones con filtros por versión y estado, búsqueda paginada y recuperación de expresiones normalizadas para procesos de validación lógica.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t044]
+		\engtaskuserstory{9}
+		\engtaskname{Implementar servicio de restricciones transversales}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{17}{6}{2026}
+		\engtaskenddate{18}{6}{2026}
+		\engtaskdescription{Implementar el servicio de restricciones transversales para validar sintaxis, transformar expresiones a forma operativa y preservar trazabilidad de cambios mediante reglas de versionado.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t045]
+		\engtaskuserstory{9}
+		\engtaskname{Exponer endpoints de restricciones}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{18}{6}{2026}
+		\engtaskenddate{19}{6}{2026}
+		\engtaskdescription{Implementar el controlador de restricciones lógicas para alta, consulta, actualización y cambio de estado, asegurando validación sintáctica de expresiones, consistencia de versión y respuestas de error homogéneas para fallos de lógica.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-10: Integración y Sincronización UVL}
+
+		\begin{engineeringtask}[tb:engtask_t046]
+		\engtaskuserstory{10}
+		\engtaskname{Implementar importador UVL a estructura}
+		\engtasktype{Crear clase}
+		\engtaskpointestimation{14}
+		\engtaskstartdate{22}{6}{2026}
+		\engtaskenddate{23}{6}{2026}
+		\engtaskdescription{Diseñar e implementar la clase FeatureModelUVLImporter para parseo, validación semántica y construcción de estructura interna a partir de UVL, con reporte de errores orientado a diagnóstico técnico.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t047]
+		\engtaskuserstory{10}
+		\engtaskname{Implementar esquemas de sincronización UVL}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{23}{6}{2026}
+		\engtaskenddate{23}{6}{2026}
+		\engtaskdescription{Definir esquemas de entrada y salida para persistencia de UVL, sincronización desde estructura y aplicación sobre versión destino, con validaciones de compatibilidad y tamaño de contenido.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t048]
+		\engtaskuserstory{10}
+		\engtaskname{Implementar servicio de sincronización UVL}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{23}{6}{2026}
+		\engtaskenddate{24}{6}{2026}
+		\engtaskdescription{Implementar el servicio de sincronización UVL para garantizar equivalencia entre representación visual y textual, persistir UVL efectivo y gestionar creación controlada de nuevas versiones.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t049]
+		\engtaskuserstory{10}
+		\engtaskname{Exponer endpoints de integración UVL}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{24}{6}{2026}
+		\engtaskenddate{25}{6}{2026}
+		\engtaskdescription{Implementar el controlador de integración UVL para guardar contenido validado, sincronizar UVL desde estructura y aplicar UVL sobre una versión destino; contemplar validaciones previas de consistencia y mensajes de error orientados a diagnóstico.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t050]
+		\engtaskuserstory{10}
+		\engtaskname{Definir excepciones de UVL}
+		\engtasktype{Crear excepciones personalizadas}
+		\engtaskpointestimation{4}
+		\engtaskstartdate{25}{6}{2026}
+		\engtaskenddate{26}{6}{2026}
+		\engtaskdescription{Definir excepciones especializadas para errores de parseo, inconsistencias de sincronización y conflictos estructurales, estandarizando el reporte técnico para depuración y soporte.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-11: Validación Lógica y Estructural del Modelo}
+
+		\begin{engineeringtask}[tb:engtask_t051]
+		\engtaskuserstory{11}
+		\engtaskname{Implementar validador lógico SAT/SMT}
+		\engtasktype{Crear clase}
+		\engtaskpointestimation{16}
+		\engtaskstartdate{29}{6}{2026}
+		\engtaskenddate{30}{6}{2026}
+		\engtaskdescription{Diseñar e implementar la clase FeatureModelLogicalValidator para verificar satisfacibilidad global, consistencia lógica y validez de configuraciones propuestas sobre un modelo y versión concretos.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t052]
+		\engtaskuserstory{11}
+		\engtaskname{Implementar analizador estructural}
+		\engtasktype{Crear clase}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{30}{6}{2026}
+		\engtaskenddate{1}{7}{2026}
+		\engtaskdescription{Diseñar e implementar el analizador estructural para detección de ciclos, nodos huérfanos, características muertas, redundancias y componentes fuertemente conectados.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t053]
+		\engtaskuserstory{11}
+		\engtaskname{Implementar fachada de análisis del FM}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{1}{7}{2026}
+		\engtaskenddate{2}{7}{2026}
+		\engtaskdescription{Implementar la fachada de análisis para orquestar validaciones lógicas y estructurales, consolidar resultados en un único contrato y normalizar severidad, trazas y recomendaciones técnicas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t054]
+		\engtaskuserstory{11}
+		\engtaskname{Implementar esquemas de respuesta de análisis}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{2}{7}{2026}
+		\engtaskenddate{2}{7}{2026}
+		\engtaskdescription{Definir esquemas de respuesta para reportes de análisis lógico y estructural, incluyendo severidad, evidencia, recomendaciones y metadatos de ejecución para consumo por clientes y observabilidad.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t055]
+		\engtaskuserstory{11}
+		\engtaskname{Exponer endpoints de validación y análisis}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{2}{7}{2026}
+		\engtaskenddate{3}{7}{2026}
+		\engtaskdescription{Implementar el controlador de validación para análisis lógico y estructural del modelo, validación de configuraciones propuestas y reporte de hallazgos; incorporar ejecución segura con límites de tiempo y manejo controlado de excepciones de análisis.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-12: Gestión de Configuraciones}
+
+		\begin{engineeringtask}[tb:engtask_t056]
+		\engtaskuserstory{12}
+		\engtaskname{Ajustar modelo de Configuration}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{6}{7}{2026}
+		\engtaskenddate{6}{7}{2026}
+		\engtaskdescription{Definir y ajustar el modelo de Configuration con vínculo explícito a versión objetivo, selección de características, estado operativo e historial de cambios para preservar validez temporal.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t057]
+		\engtaskuserstory{12}
+		\engtaskname{Implementar esquemas de configuraciones persistentes}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{6}{7}{2026}
+		\engtaskenddate{7}{7}{2026}
+		\engtaskdescription{Definir esquemas para creación, consulta, listado, actualización y cambio de estado de configuraciones persistentes, así como validación de propuestas no persistidas con contratos de salida normalizados.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t058]
+		\engtaskuserstory{12}
+		\engtaskname{Implementar repositorio de configuraciones}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{7}{7}{2026}
+		\engtaskenddate{8}{7}{2026}
+		\engtaskdescription{Implementar el repositorio de configuraciones con persistencia paginada, filtros por versión y estado, y carga eficiente de asociaciones con características seleccionadas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t059]
+		\engtaskuserstory{12}
+		\engtaskname{Implementar servicio de gestión de configuraciones}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{8}{7}{2026}
+		\engtaskenddate{9}{7}{2026}
+		\engtaskdescription{Implementar el servicio de configuraciones para validar consistencia funcional, persistir selecciones por versión objetivo y gestionar reglas de activación/desactivación con control de estado.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t060]
+		\engtaskuserstory{12}
+		\engtaskname{Exponer endpoints de configuraciones}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{9}{7}{2026}
+		\engtaskenddate{10}{7}{2026}
+		\engtaskdescription{Implementar el controlador de configuraciones para creación persistente, consulta por identificador, listado paginado, actualización y activación/desactivación; incluir endpoint de validación de selección no persistente con contratos claros de entrada y salida.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-13: Validación y Generación Automática de Configuraciones}
+
+		\begin{engineeringtask}[tb:engtask_t061]
+		\engtaskuserstory{13}
+		\engtaskname{Implementar núcleo de generación de configuraciones}
+		\engtasktype{Crear clase}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{13}{7}{2026}
+		\engtaskenddate{14}{7}{2026}
+		\engtaskdescription{Diseñar e implementar la clase base de generación de configuraciones válidas, incorporando estrategias iniciales deterministas y aleatorias, validación previa de restricciones y criterios de factibilidad sobre la versión objetivo del modelo.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t062]
+		\engtaskuserstory{13}
+		\engtaskname{Implementar estrategia BEAM para generación válida}
+		\engtasktype{Crear clase}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{14}{7}{2026}
+		\engtaskenddate{14}{7}{2026}
+		\engtaskdescription{Extender el generador con búsqueda BEAM, incluyendo funciones de puntuación, poda y control de diversidad, para producir candidatos válidos con mejor cobertura y calidad estructural.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t063]
+		\engtaskuserstory{13}
+		\engtaskname{Implementar optimización mono-objetivo}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{14}{7}{2026}
+		\engtaskenddate{15}{7}{2026}
+		\engtaskdescription{Implementar el servicio de optimización mono-objetivo con algoritmos genéticos, definiendo función de aptitud, operadores evolutivos y criterios de convergencia para seleccionar configuraciones válidas de mayor calidad.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t064]
+		\engtaskuserstory{13}
+		\engtaskname{Implementar optimización multiobjetivo}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{15}{7}{2026}
+		\engtaskenddate{15}{7}{2026}
+		\engtaskdescription{Implementar el servicio de optimización multiobjetivo con enfoque de frentes de Pareto, equilibrando criterios de calidad contrapuestos y garantizando diversidad y estabilidad en el conjunto de soluciones candidatas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t065]
+		\engtaskuserstory{13}
+		\engtaskname{Implementar esquemas de generación/optimización}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{15}{7}{2026}
+		\engtaskenddate{16}{7}{2026}
+		\engtaskdescription{Definir contratos de API para validación de propuestas, generación automática y optimización, incluyendo estrategia seleccionada, parámetros de ejecución, límites operativos y estructura homogénea de resultados.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t066]
+		\engtaskuserstory{13}
+		\engtaskname{Exponer endpoints de validación y generación automática}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{16}{7}{2026}
+		\engtaskenddate{17}{7}{2026}
+		\engtaskdescription{Implementar el controlador de configuración avanzada para validar propuestas, generar configuraciones y ejecutar optimización con parametrización controlada; estandarizar respuestas y trazas de ejecución para consumo cliente.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t067]
+		\engtaskuserstory{13}
+		\engtaskname{Ejecutar optimización intensiva en background}
+		\engtasktype{Crear tareas de celery}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{17}{7}{2026}
+		\engtaskenddate{18}{7}{2026}
+		\engtaskdescription{Implementar flujo asíncrono de optimización intensiva con colas de trabajo, control de reintentos, persistencia de estado, almacenamiento de resultados y reanudación por identificador de ejecución.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-14: Enriquecimiento con Recursos y Taxonomías}
+
+		\begin{engineeringtask}[tb:engtask_t068]
+		\engtaskuserstory{14}
+		\engtaskname{Ajustar modelos de Tag y Resource}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{20}{7}{2026}
+		\engtaskenddate{21}{7}{2026}
+		\engtaskdescription{Definir y ajustar los modelos de Tag y Resource con reglas de unicidad, metadatos extendidos y asociaciones con características y propietario, garantizando consistencia funcional y persistencia estable.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t069]
+		\engtaskuserstory{14}
+		\engtaskname{Implementar esquemas de etiquetas y recursos}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{21}{7}{2026}
+		\engtaskenddate{21}{7}{2026}
+		\engtaskdescription{Definir esquemas para gestión completa de etiquetas y gestión parcial/completa de recursos, además de operaciones de asociación y desasociación con características, con validaciones de negocio y formato.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t070]
+		\engtaskuserstory{14}
+		\engtaskname{Implementar repositorios de taxonomías y recursos}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{21}{7}{2026}
+		\engtaskenddate{22}{7}{2026}
+		\engtaskdescription{Implementar repositorios de taxonomías y recursos con búsquedas paginadas, filtros por metadatos y operaciones de vinculación entre entidades, asegurando integridad relacional y consistencia de lectura.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t071]
+		\engtaskuserstory{14}
+		\engtaskname{Implementar servicio de enriquecimiento semántico}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{22}{7}{2026}
+		\engtaskenddate{23}{7}{2026}
+		\engtaskdescription{Implementar el servicio de enriquecimiento semántico para aplicar reglas de propiedad, versionado de metadatos y consistencia de asociaciones entre etiquetas, características y recursos educativos.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t072]
+		\engtaskuserstory{14}
+		\engtaskname{Exponer endpoints de tags y recursos}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{23}{7}{2026}
+		\engtaskenddate{24}{7}{2026}
+		\engtaskdescription{Implementar el controlador de taxonomías y recursos para gestión de etiquetas, asociación/desasociación con características y administración de recursos educativos con metadatos; aplicar reglas de propietario, validaciones de negocio y respuestas consistentes para operaciones parciales y completas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+		
 \end{addendum}
 
 	\addappendix[bloque]{Anexos/BloqueCoronaReport}

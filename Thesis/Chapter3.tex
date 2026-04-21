@@ -1,13 +1,88 @@
-\chapter{Resultados}
+\chapter{Implementación, despliegue y pruebas}
 \label{chap:chapter3}
 
-Escribir aquí el capítulo 3. Otra prueba más  \gls{Engine}. Esto es un ejemplo de cómo se puede \textit{linkear} el anexo \hyperlink{bloque.1}{Controlador Industrial}.
+El presente capítulo materializa los esfuerzos de análisis y diseño expuestos en los capítulos anteriores,
+trasladando las especificaciones técnicas a una implementación concreta y funcional. Aquí se detallan las
+\ac{TI} ejecutadas para construir el servidor \textit{backend}, el diagrama de despliegue que ilustra la 
+distribución física de los componentes del sistema en el entorno de ejecución , así como el proceso de 
+pruebas al que fue sometido el sistema para garantizar su
+calidad, rendimiento, seguridad y conformidad con los requisitos establecidos. La verificación y validación
+sistemáticas mediante diversas estrategias y tipos de pruebas son fundamentales para asegurar que la 
+solución desarrollada satisface las necesidades del cliente final y se encuentre lista para su
+despliegue en un entorno productivo.
 
-Esto es otra cita de la inicial como ejemplo también \citep{Ou2013}.
-\lipsum[1-5]
-Otra prueba más  \gls{Engine}
-\lipsum[1-3]
-Otra prueba más  \gls{Engine}
-\lipsum[1-2]
-Esto es una prueba de link al Anexo \ref{anx:ensambleindustrial}.
-Esto es una prueba de link a la palabra \hyperlink{word}{sentencia}
+
+\section{Fase de implementación}
+
+Dentro del ciclo de vida de un sistema informático se encuentra la fase de implementación. Esta
+es la fase más costosa y que consume más tiempo. Se dice costosa ya que muchas personas,
+herramientas y recursos están involucrados. La metodología \ac{XP} propone que las historias de
+usuario deben ser implementadas en dependencia de la iteración a la que pertenezcan y las
+mismas se descomponen en tareas de ingeniería \citep{maida2015}.
+
+\subsection{Tareas de Ingeniería}
+
+Las \ac{TI} constituyen un artefacto fundamental dentro de la metodología \ac{XP}. 
+Representan la descomposición de las \ac{HU} en actividades técnicas concretas y accionables por parte de los
+desarrolladores. Mientras que una \ac{HU} describe una funcionalidad desde la perspectiva del cliente, una \ac{TI}
+detalla el “cómo” se implementará a nivel técnico \citep{pressman2014se}. En esta sección se enumeran y describen 
+estas tareas, que guiaron el trabajo de codificación diario durante las iteraciones, permitiendo una
+planificación granular y una asignación clara de responsabilidades dentro del equipo de desarrollo.
+
+A continuación, se presenta un ejemplo de las \ac{TI} correspondientes a las \ac{HU} definidas, el resto se puede
+encontrar en el anexo \ref{anx:ti}.
+
+
+\begin{engineeringtask}[tb:engtask_t020]
+\engtaskuserstory{4}
+\engtaskname{Exponer endpoints de ciclo operativo de FM}
+\engtasktype{Crear controlador}
+\engtaskpointestimation{8}
+\engtaskstartdate{14}{5}{2026}
+\engtaskenddate{15}{5}{2026}
+\engtaskdescription{Implementar el controlador de modelos de características para alta, consulta, actualización y activación/desactivación, con soporte de filtros por dominio, paginación y políticas de autorización según rol funcional.}
+\engtaskprogrammer{Jose Luis Echemendia López}
+\end{engineeringtask}
+
+
+\section{Despliegue del sistema}
+
+\subsection{Diagrama de despliegue}
+
+
+\section{Fase de pruebas}
+
+
+
+\begin{acceptancetest}[tb:expresult]
+\testcasecode{HU2\_P1}
+\testcasedescription{Prueba para la funcionalidad autentificar usuario.}
+\testcaseexeccond{
+El usuario debe estar previamente registrado.\\
+El usuario y contraseña deben ser válidos.
+}
+\testcaseexecstep{Se intenta autentificar un usuario en el sistema con los datos
+válidos.}
+\testcaseexpresult{El usuario se autentifica correctamente en el sistema.}
+\testcasename{Autentificar usuario en el sistema.}
+\testcaseuserstory{2}
+\end{acceptancetest}
+
+\begin{acceptancetest}[tb:expresultaa]
+\testcasecode{HU2\_P1}
+\testcasedescription{Prueba para la funcionalidad autentificar usuario.}
+\testcaseexeccond{
+El usuario debe estar previamente registrado.\\
+El usuario y contraseña deben ser válidos.
+}
+\testcaseexecstep{Se intenta autentificar un usuario en el sistema con los datos
+válidos.}
+\testcaseexpresult{El usuario se autentifica correctamente en el sistema.}
+\testcasename{Autentificar usuario en el sistema.}
+\testcaseuserstory{2}
+\end{acceptancetest}
+
+
+\section{Conclusiones del capítulo}
+
+

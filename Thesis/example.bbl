@@ -2045,6 +2045,53 @@
       \field{title}{Learning Python}
       \field{year}{2013}
     \endentry
+    \entry{maida2015}{thesis}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=15989cbdb4a048e2b1ac26c37f301253}{%
+           family={Maida},
+           familyi={M\bibinitperiod},
+           given={E.\bibnamedelimi G.},
+           giveni={E\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1dded9c9a7c1b8dacc824cc310b885c7}{%
+           family={Pacienzia},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Pontificia Universidad Católica Argentina Santa Maria de los Buenos Aires, Facultad de Química e Ingeniería “Fray Rogelio Bacon”}%
+      }
+      \list{location}{1}{%
+        {Buenos Aires}%
+      }
+      \strng{namehash}{db839db80d1a1f490840dce2db1f8b17}
+      \strng{fullhash}{db839db80d1a1f490840dce2db1f8b17}
+      \strng{bibnamehash}{db839db80d1a1f490840dce2db1f8b17}
+      \strng{authorbibnamehash}{db839db80d1a1f490840dce2db1f8b17}
+      \strng{authornamehash}{db839db80d1a1f490840dce2db1f8b17}
+      \strng{authorfullhash}{db839db80d1a1f490840dce2db1f8b17}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Metodologías de desarrollo de software}
+      \field{type}{Tesis Final de Licenciatura en Sistemas y Computación}
+      \field{urlday}{14}
+      \field{urlmonth}{6}
+      \field{urlyear}{2022}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://repositorio.uca.edu.ar/bitstream/123456789/522/1/metodologias-desarrollo-software.pdf
+      \endverb
+      \verb{url}
+      \verb https://repositorio.uca.edu.ar/bitstream/123456789/522/1/metodologias-desarrollo-software.pdf
+      \endverb
+    \endentry
     \entry{uv2024}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1b396e93ac2b982d042269a5dcdb8bf2}{%
@@ -2335,49 +2382,6 @@
       \field{year}{2009}
       \field{pages}{170\bibrangedash 172}
       \range{pages}{3}
-    \endentry
-    \entry{Ou2013}{article}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=816ddd02df4e306741820e0169816624}{%
-           family={Ou},
-           familyi={O\bibinitperiod},
-           given={Li-Ming},
-           giveni={L\bibinithyphendelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=43e8043d875498aa78c40bbb8623fb5b}{%
-           family={Xu},
-           familyi={X\bibinitperiod},
-           given={Xun},
-           giveni={X\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{5dd4528f003252ea5c49b2ce9fcf3626}
-      \strng{fullhash}{5dd4528f003252ea5c49b2ce9fcf3626}
-      \strng{bibnamehash}{5dd4528f003252ea5c49b2ce9fcf3626}
-      \strng{authorbibnamehash}{5dd4528f003252ea5c49b2ce9fcf3626}
-      \strng{authornamehash}{5dd4528f003252ea5c49b2ce9fcf3626}
-      \strng{authorfullhash}{5dd4528f003252ea5c49b2ce9fcf3626}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0010-4485}
-      \field{journaltitle}{Computer-Aided Design}
-      \field{number}{7}
-      \field{title}{Relationship matrix based automatic assembly sequence generation from a CAD model}
-      \field{volume}{45}
-      \field{year}{2013}
-      \field{pages}{1053\bibrangedash 1067}
-      \range{pages}{15}
-      \verb{doi}
-      \verb http://dx.doi.org/10.1016/j.cad.2013.04.002
-      \endverb
-      \verb{file}
-      \verb Ou2013.pdf:.\\Doc\\Ou2013.pdf:PDF;Ou2013.pdf:Doc\\Ou2013.pdf:PDF
-      \endverb
-      \keyw{Assembly sequence generation}
     \endentry
     \entry{pacienzia2015metodologias}{book}{}
       \name{author}{1}{}{%
