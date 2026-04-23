@@ -44,11 +44,11 @@
 			\storyobservation{La gestión de cuentas debe preservar la trazabilidad administrativa y evitar borrados físicos sobre usuarios existentes. Campos de entrada asociados: RF\#9 (identificador de usuario en ruta y rol en consulta).}
 		\end{userstory}
 
-		\subsubsection*{Épica 2: Gobernanza de Dominios Curriculares}
+		\subsubsection*{Épica 2: Gestión de Dominios Curriculares}
 
 		\begin{userstory}[]
 			\storyname{Gestión de Dominios de Conocimiento}
-			\storyepic{Gobernanza de Dominios Curriculares}
+			\storyepic{Gestión de Dominios Curriculares}
 			\storyrfs{12, 13, 14, 15, 16, 17, 18, 19}
 			\storypriority{Alta}
 			\storyrisk{Media}
@@ -517,7 +517,7 @@
 			\crcresp
 			{
 				\begin{itemize}
-				\item Exportar \ac{FM} a \ac{UVL}/XML/TVL/DIMACS/\ac{JSON}/DOT/Mermaid.
+				\item Exportar \ac{FM} a \ac{UVL}/XML/TVL/DIMACS/\ac{JSON}/\ac{DOT}/Mermaid.
 				\item Construir mapeo UUID $\leftrightarrow$ int.
 				\end{itemize}
 			}
@@ -969,7 +969,7 @@
 		\engtaskpointestimation{16}
 		\engtaskstartdate{25}{5}{2026}
 		\engtaskenddate{26}{5}{2026}
-		\engtaskdescription{Implementar el servicio de exportación multiformato para generar representaciones UVL, XML, TVL, DIMACS, JSON, DOT y Mermaid, incorporando mapeo estable de identificadores y validación de consistencia del artefacto generado.}
+		\engtaskdescription{Implementar el servicio de exportación multiformato para generar representaciones UVL, XML, TVL, DIMACS, JSON, \ac{DOT} y Mermaid, incorporando mapeo estable de identificadores y validación de consistencia del artefacto generado.}
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
 
@@ -1495,6 +1495,1670 @@
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
 		
+	\chapter{Pruebas de aceptación}
+	\label{anx:pa}
+
+		\subsubsection*{Épica 1: Gestión de Identidad y Acceso}
+		\subsubsection*{HU-01: Autenticación y Autogestión de cuenta}
+		
+		\begin{acceptancetest}[tb:HU1_P1]
+		\testcasecode{HU1\_P1}
+		\testcasename{Registro de usuario con correo y contraseña}
+		\testcasedescription{Validar que un usuario nuevo pueda registrarse en el sistema con correo y contraseña válidos.}
+		\testcaseexeccond{
+		- El servidor backend está disponible.\\
+		- La base de datos está accesible.\\
+		- No existe un usuario registrado con el correo proporcionado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/auth/register con payload: \{"email": "usuario@test.com", "password": "Pass123!@"\}.\\
+		2. Validar que la respuesta contenga status 201.\\
+		3. Validar que la respuesta incluya el token de autenticación.\\
+		4. Validar que se creó el usuario en la base de datos.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Respuesta contiene access\_token, refresh\_token y user\_id.\\
+		- Usuario registrado en BD con is\_active=True.\\
+		- Contraseña almacenada como hash (no en texto plano).
+		}
+		\testcaseuserstory{1}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU1_P2]
+		\testcasecode{HU1\_P2}
+		\testcasename{Inicio de sesión con correo y contraseña}
+		\testcasedescription{Validar que un usuario registrado pueda iniciar sesión correctamente.}
+		\testcaseexeccond{
+		- El servidor backend está disponible.\\
+		- Existe un usuario registrado con correo test@example.com y contraseña conocida.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/auth/login con payload: \{"email": "test@example.com", "password": "Pass123!@"\}.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que se devuelve un access\_token válido.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta contiene access\_token, refresh\_token y user\_id.\\
+		- El token es válido para futuras peticiones autenticadas.
+		}
+		\testcaseuserstory{1}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU1_P3]
+		\testcasecode{HU1\_P3}
+		\testcasename{Recuperación de acceso mediante token por correo}
+		\testcasedescription{Validar que un usuario pueda solicitar recuperación de contraseña y recibir token por correo.}
+		\testcaseexeccond{
+		- El servidor backend está disponible.\\
+		- El servicio de correo está configurado.\\
+		- Existe un usuario con correo usuario@test.com.\\
+		- El usuario se ha registrado previamente.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/auth/forgot-password con payload: \{"email": "usuario@test.com"\}.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que se envió un correo con token de recuperación.\\
+		4. Extraer token del correo y enviar PUT a /api/v1/auth/reset-password con payload: \{"token": "<token>", "new\_password": "NewPass456!@"\}.\\
+		5. Validar que la contraseña se actualizó.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK (solicitud).\\
+		- Se envía correo con token de recuperación.\\
+		- Status HTTP: 200 OK (reset).\\
+		- Usuario puede iniciar sesión con nueva contraseña.\\
+		- Token anterior se invalida.
+		}
+		\testcaseuserstory{1}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU1_P4]
+		\testcasecode{HU1\_P4}
+		\testcasename{Edición de perfil propio sin intervención administrativa}
+		\testcasedescription{Validar que un usuario autenticado pueda actualizar su perfil (correo, nombre) sin necesidad de administrador.}
+		\testcaseexeccond{
+		- Usuario está autenticado con token válido.\\
+		- El nuevo correo no está registrado en otro usuario.\\
+		- El usuario tiene permisos para editar su propio perfil.
+		}
+		\testcaseexecstep{
+		1. Enviar PUT a /api/v1/auth/profile con headers de autenticación y payload: \{"email": "nuevo@test.com", "first\_name": "Juan", "last\_name": "Pérez"\}.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Consultar GET /api/v1/auth/profile para confirmar cambios.\\
+		4. Validar que los datos actualizados coinciden.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Perfil actualizado en base de datos.\\
+		- Respuesta contiene los datos actualizados.\\
+		- Token sigue siendo válido.\\
+		- Cambios persistidos en BD.
+		}
+		\testcaseuserstory{1}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU1_P5]
+		\testcasecode{HU1\_P5}
+		\testcasename{Cierre de sesión}
+		\testcasedescription{Validar que un usuario pueda cerrar sesión invalidando su token.}
+		\testcaseexeccond{
+		- Usuario está autenticado con token válido.\\
+		- El servidor mantiene una lista de tokens revocados.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/auth/logout con headers de autenticación.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Intentar acceder a un endpoint protegido con el token anterior.\\
+		4. Validar que se rechaza la petición.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Token se añade a lista de revocación.\\
+		- Peticiones posteriores con ese token retornan 401 Unauthorized.\\
+		- Mensaje: "Token revoked or expired".
+		}
+		\testcaseuserstory{1}
+		\end{acceptancetest}
+
+		\subsubsection*{HU-02: Administración de Usuarios y Permisos}
+	
+		\begin{acceptancetest}[tb:HU2_P1]
+		\testcasecode{HU2\_P1}
+		\testcasename{Listar usuarios con filtro por rol}
+		\testcasedescription{Validar que un administrador puede obtener listado de usuarios filtrados por rol.}
+		\testcaseexeccond{
+		- Usuario es administrador (rol=ADMIN).\\
+		- Existen usuarios con diferentes roles en la BD.\\
+		- Usuario está autenticado con token de administrador.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/admin/users?role=EDITOR\&skip=0\&limit=10 con headers de autenticación.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que todos los usuarios retornados tienen role="EDITOR".\\
+		4. Validar que la respuesta incluye total, skip, limit.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta contiene arreglo de usuarios filtrados por rol.\\
+		- Cada usuario incluye: id, email, first\_name, last\_name, role, is\_active.\\
+		- Paginación correcta.
+		}
+		\testcaseuserstory{2}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU2_P2]
+		\testcasecode{HU2\_P2}
+		\testcasename{Listar usuarios con filtro por nombre}
+		\testcasedescription{Validar que un administrador puede filtrar usuarios por nombre completo.}
+		\testcaseexeccond{
+		- Usuario es administrador.\\
+		- Existen usuarios registrados con nombres distintos.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/admin/users?name=Juan\&skip=0\&limit=10 con headers de autenticación.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que todos los usuarios retornados contienen "Juan" en nombre o apellido.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta contiene usuarios cuyo nombre/apellido contiene la búsqueda.\\
+		- Búsqueda es case-insensitive.
+		}
+		\testcaseuserstory{2}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU2_P3]
+		\testcasecode{HU2\_P3}
+		\testcasename{Modificar rol de usuario}
+		\testcasedescription{Validar que un administrador puede cambiar el rol asignado a un usuario.}
+		\testcaseexeccond{
+		- Usuario es administrador.\\
+		- Existe un usuario con rol VIEWER.\\
+		- Usuario está autenticado con credenciales de admin.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de usuario a modificar.\\
+		2. Enviar PUT a /api/v1/admin/users/\{user\_id\}/role con payload: \{"role": "EDITOR"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar GET /api/v1/admin/users/\{user\_id\} para confirmar cambio.\\
+		5. Verificar que role="EDITOR".
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta contiene usuario actualizado con nuevo rol.\\
+		- BD refleja el cambio.\\
+		- Permisos del usuario se actualizan dinámicamente.
+		}
+		\testcaseuserstory{2}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU2_P4]
+		\testcasecode{HU2\_P4}
+		\testcasename{Desactivar cuenta de usuario sin eliminar información}
+		\testcasedescription{Validar que un administrador puede desactivar una cuenta sin eliminar los datos.}
+		\testcaseexeccond{
+		- Usuario es administrador.\\
+		- Existe un usuario activo.\\
+		- No se permiten borrados físicos en el sistema.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de usuario a desactivar.\\
+		2. Enviar PUT a /api/v1/admin/users/\{user\_id\}/status con payload: \{"is\_active": false\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Intentar que el usuario desactivado inicie sesión.\\
+		5. Verificar que el login falla con mensaje de cuenta desactivada.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Usuario marcado como is\_active=False en BD.\\
+		- Datos del usuario persisten en BD.\\
+		- Usuario no puede autenticarse.\\
+		- Mensaje: "User account is deactivated".
+		}
+		\testcaseuserstory{2}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU2_P5]
+		\testcasecode{HU2\_P5}
+		\testcasename{Reactivar cuenta de usuario}
+		\testcasedescription{Validar que un administrador puede reactivar una cuenta desactivada.}
+		\testcaseexeccond{
+		- Usuario es administrador.\\
+		- Existe un usuario desactivado (is\_active=False).\\
+		- Los datos del usuario están intactos en BD.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de usuario a reactivar.\\
+		2. Enviar PUT a /api/v1/admin/users/\{user\_id\}/status con payload: \{"is\_active": true\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Intentar autenticar con el usuario reactivado.\\
+		5. Verificar que el login es exitoso.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Usuario marcado como is\_active=True.\\
+		- Datos originales restaurados.\\
+		- Usuario puede autenticarse normalmente.
+		}
+		\testcaseuserstory{2}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 2: Gestión de Dominios Curriculares}
+		\subsubsection*{HU-03: Gestión de Dominios de Conocimiento}
+
+		\begin{acceptancetest}[tb:HU3_P1]
+		\testcasecode{HU3\_P1}
+		\testcasename{Crear dominio con nombre y descripción}
+		\testcasedescription{Validar que un administrador puede crear un nuevo dominio curricular.}
+		\testcaseexeccond{
+		- Usuario es administrador.\\
+		- Usuario está autenticado.\\
+		- No existe un dominio con el mismo nombre.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/domains con payload: \{"name": "Ingeniería de Software", "description": "Dominio para estudios en ingeniería de software"\}.\\
+		2. Validar que la respuesta contenga status 201.\\
+		3. Verificar que se retorna id, name, description, is\_active, created\_at.\\
+		4. Consultar BD para confirmar persistencia.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Respuesta contiene ID generado y campos completos.\\
+		- Dominio se crea con is\_active=True por defecto.\\
+		- created\_at y updated\_at se establecen automáticamente.
+		}
+		\testcaseuserstory{3}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU3_P2]
+		\testcasecode{HU3\_P2}
+		\testcasename{Obtener dominio con modelos asociados}
+		\testcasedescription{Validar que se puede obtener un dominio junto con todos sus modelos vinculados.}
+		\testcaseexeccond{
+		- Existe un dominio con ID conocido.\\
+		- El dominio tiene modelos asociados.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/domains/\{domain\_id\}?include\_models=true con headers de autenticación.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que la respuesta incluye id, name, description, is\_active.\\
+		4. Verificar que incluye array models con todos los modelos del dominio.\\
+		5. Cada modelo debe contener: id, name, domain\_id, created\_at.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta contiene información del dominio.\\
+		- Array models contiene todos los modelos vinculados.\\
+		- Modelos activos e inactivos se incluyen (según filtro).
+		}
+		\testcaseuserstory{3}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU3_P3]
+		\testcasecode{HU3\_P3}
+		\testcasename{Desactivar dominio}
+		\testcasedescription{Validar que un administrador puede desactivar un dominio sin eliminar información.}
+		\testcaseexeccond{
+		- Usuario es administrador.\\
+		- Existe un dominio activo.\\
+		- El dominio puede no tener modelos o tenerlos.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de dominio a desactivar.\\
+		2. Enviar PUT a /api/v1/domains/\{domain\_id\} con payload: \{"is\_active": false\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar GET /api/v1/domains/\{domain\_id\} para confirmar.\\
+		5. Verificar que is\_active=False.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Dominio marcado como is\_active=False.\\
+		- Información persiste en BD.\\
+		- Modelos del dominio no son eliminados.
+		}
+		\testcaseuserstory{3}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU3_P4]
+		\testcasecode{HU3\_P4}
+		\testcasename{Listar todos los dominios}
+		\testcasedescription{Validar que se puede obtener un listado paginado de dominios.}
+		\testcaseexeccond{
+		- Existen múltiples dominios en la BD.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/domains?skip=0\&limit=10 con headers de autenticación.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que se retorna array de dominios.\\
+		4. Cada dominio incluye: id, name, description, is\_active, created\_at.\\
+		5. Validar paginación: total, skip, limit.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de dominios ordenados por fecha.\\
+		- Paginación correcta.\\
+		- Total de registros se incluye.
+		}
+		\testcaseuserstory{3}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 3: Ciclo de Vida del \ac{FM}}
+		\subsubsection*{HU-04: Gestión Operativa de \ac{FM}}
+		
+		\begin{acceptancetest}[tb:HU4_P1]
+		\testcasecode{HU4\_P1}
+		\testcasename{Crear modelo asociado a dominio válido}
+		\testcasedescription{Validar que se puede crear un nuevo modelo de características en un dominio existente.}
+		\testcaseexeccond{
+		- Usuario es diseñador o administrador.\\
+		- Existe un dominio activo.\\
+		- Usuario está autenticado.\\
+		- No existe modelo con igual nombre en el dominio.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de dominio válido.\\
+		2. Enviar POST a /api/v1/models con payload: \{"name": "Plan 2024", "description": "Modelo curricular 2024", "domain\_id": "<domain\_id>"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se retorna id, name, domain\_id, created\_at.\\
+		5. Validar que existe en BD.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Modelo creado con is\_active=True.\\
+		- Respuesta incluye ID generado.\\
+		- domain\_id está vinculado correctamente.\\
+		- Timestamps (created\_at, updated\_at) se establecen.
+		}
+		\testcaseuserstory{4}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU4_P2]
+		\testcasecode{HU4\_P2}
+		\testcasename{Actualizar metadatos del modelo}
+		\testcasedescription{Validar que los metadatos de un modelo pueden actualizarse sin afectar la estructura.}
+		\testcaseexeccond{
+		- Existe un modelo con ID conocido.\\
+		- Usuario es diseñador del modelo o administrador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de modelo.\\
+		2. Enviar PUT a /api/v1/models/\{model\_id\} con payload: \{"name": "Plan 2024 v2", "description": "Modelo actualizado"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar GET /api/v1/models/\{model\_id\} para confirmar.\\
+		5. Verificar que metadata está actualizada y estructura intacta.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Metadatos actualizados en BD.\\
+		- Estructura del modelo no se modifica.\\
+		- updated\_at se actualiza.\\
+		- Versiones no se ven afectadas.
+		}
+		\testcaseuserstory{4}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU4_P3]
+		\testcasecode{HU4\_P3}
+		\testcasename{Listar modelos con paginación y filtrado}
+		\testcasedescription{Validar que se pueden listar modelos con paginación, ordenamiento y filtros.}
+		\testcaseexeccond{
+		- Existen múltiples modelos en la BD.\\
+		- Modelos están vinculados a dominios.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models?domain\_id=<id>\&skip=0\&limit=10\&sort=-created\_at con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que se retorna array de modelos.\\
+		4. Validar paginación: total, skip, limit.\\
+		5. Verificar que ordenamiento es correcto (descendente por created\_at).
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de modelos paginados.\\
+		- Filtrado por dominio correctamente aplicado.\\
+		- Ordenamiento correcto.\\
+		- Total de registros incluido.
+		}
+		\testcaseuserstory{4}
+		\end{acceptancetest}
+
+		\subsubsection*{HU-05: Gestión de Versiones y Publicación}
+
+		\begin{acceptancetest}[tb:HU5_P1]
+		\testcasecode{HU5\_P1}
+		\testcasename{Crear nueva versión mediante copia al escribir}
+		\testcasedescription{Validar que se puede crear una nueva versión duplicando una versión existente (Copy-on-Write).}
+		\testcaseexeccond{
+		- Existe un modelo con versión publicada.\\
+		- Usuario es diseñador del modelo.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de modelo e ID de versión origen.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions con payload: \{"version\_origin\_id": "<version\_id>", "description": "Version 2.0"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se crea versión con estado "DRAFT".\\
+		5. Validar que la estructura se copió desde versión origen.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Nueva versión creada con estado DRAFT.\\
+		- Copia completa de la estructura anterior.\\
+		- Versión origen no se modifica.\\
+		- Versión nueva tiene version\_number incrementado.
+		}
+		\testcaseuserstory{5}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU5_P2]
+		\testcasecode{HU5\_P2}
+		\testcasename{Validar versión antes de publicación}
+		\testcasedescription{Validar que se ejecutan validaciones antes de permitir publicación de versión.}
+		\testcaseexeccond{
+		- Existe una versión en estado DRAFT.\\
+		- Versión tiene estructura válida o inválida.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de versión.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Respuesta incluye: is\_valid, errors (si los hay), warnings.\\
+		5. Si es válida, usar para publicación; si no, mostrar errores.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta incluye estado de validación.\\
+		- Listado de errores estructurales/lógicos si existen.\\
+		- Listado de advertencias.\\
+		- Puede proceder a publicación si is\_valid=true.
+		}
+		\testcaseuserstory{5}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU5_P3]
+		\testcasecode{HU5\_P3}
+		\testcasename{Publicar versión de modelo}
+		\testcasedescription{Validar que una versión validada puede publicarse y pasar a estado PUBLISHED.}
+		\testcaseexeccond{
+		- Existe versión en estado DRAFT validada.\\
+		- Versión no tiene errores críticos.\\
+		- Usuario es revisor o administrador.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de versión en estado DRAFT.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/publish con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Verificar que estado cambia a PUBLISHED.\\
+		5. Consultar la versión para confirmar cambio de estado.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Estado cambia a PUBLISHED.\\
+		- published\_at se establece con timestamp actual.\\
+		- Versión anterior (si existe) pasa a estado ARCHIVED (opcional).\\
+		- Configuraciones pueden vincularse a esta versión.
+		}
+		\testcaseuserstory{5}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU5_P4]
+		\testcasecode{HU5\_P4}
+		\testcasename{Recuperar versiones archivadas}
+		\testcasedescription{Validar que se pueden listar y recuperar versiones archivadas.}
+		\testcaseexeccond{
+		- Existen versiones en estado ARCHIVED.\\
+		- Usuario está autenticado.\\
+		- Usuario tiene permisos para ver historial.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/versions?status=ARCHIVED con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que se retornan solo versiones ARCHIVED.\\
+		4. Cada versión incluye: id, version\_number, status, archived\_at, created\_at.\\
+		5. Seleccionar una versión y enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de versiones archivadas.\\
+		- Información completa de cada versión.\\
+		- Timestamps de archivación incluidos.\\
+		- Puede recuperar estructura de versión archivada.
+		}
+		\testcaseuserstory{5}
+		\end{acceptancetest}
+
+		\subsubsection*{HU-06: Análisis de Métricas y Exportación}
+
+		\begin{acceptancetest}[tb:HU6_P1]
+		\testcasecode{HU6\_P1}
+		\testcasename{Calcular métricas de versión publicada}
+		\testcasedescription{Validar que se pueden calcular métricas de la versión publicada más reciente.}
+		\testcaseexeccond{
+		- Existe un modelo con versión PUBLISHED.\\
+		- La versión tiene estructura completa.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/metrics con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que incluye métricas: feature\_count, group\_count, constraint\_count, cyclomatic\_complexity, tree\_depth.\\
+		4. Verificar que se calcula sobre versión PUBLISHED.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta incluye todas las métricas.\\
+		- Valores son números enteros >= 0.\\
+		- Cálculo se realiza sobre versión publicada.\\
+		- Valores coinciden con estructura del modelo.
+		}
+		\testcaseuserstory{6}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU6_P2]
+		\testcasecode{HU6\_P2}
+		\testcasename{Exportar modelo en formato UVL}
+		\testcasedescription{Validar que el modelo se puede exportar en formato UVL válido.}
+		\testcaseexeccond{
+		- Existe un modelo con versión PUBLISHED.\\
+		- La versión tiene estructura completa.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=uvl con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que el Content-Type es text/plain o application/x-uvl.\\
+		4. Validar que el contenido es UVL válido (comienza con features o namespace, tiene sintaxis correcta).\\
+		5. Guardar contenido en archivo .uvl y validar.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Content-Type correcto.\\
+		- UVL contiene sintaxis válida.\\
+		- Todas las features, grupos y restricciones están representadas.\\
+		- Puede descargarse como archivo.
+		}
+		\testcaseuserstory{6}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU6_P3]
+		\testcasecode{HU6\_P3}
+		\testcasename{Exportar modelo en formato JSON}
+		\testcasedescription{Validar que el modelo se puede exportar en formato JSON.}
+		\testcaseexeccond{
+		- Existe un modelo con versión PUBLISHED.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=json con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que Content-Type es application/json.\\
+		4. Validar que es JSON válido (se puede parsear).\\
+		5. Verificar que incluye: model, version, features, groups, constraints.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- JSON válido y bien formado.\\
+		- Estructura incluye todos los componentes del modelo.\\
+		- Puede descargarse como .json.
+		}
+		\testcaseuserstory{6}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU6_P4]
+		\testcasecode{HU6\_P4}
+		\testcasename{Exportar modelo en formato \ac{DOT}}
+		\testcasedescription{Validar que el modelo se puede exportar en formato \ac{DOT} para visualización.}
+		\testcaseexeccond{
+		- Existe un modelo con versión PUBLISHED.\\
+		- Usuario está autenticado.\\
+		- El sistema tiene funcionalidad de generación de grafos.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=dot con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que Content-Type es text/plain o text/vnd.graphviz.\\
+		4. Validar sintaxis \ac{DOT} (comienza con digraph o graph).\\
+		5. Intentar renderizar con Graphviz para validar.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Sintaxis \ac{DOT} válida.\\
+		- Nodos representan features.\\
+		- Aristas representan relaciones jerárquicas.\\
+		- Puede visualizarse con herramientas Graphviz.
+		}
+		\testcaseuserstory{6}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU6_P5]
+		\testcasecode{HU6\_P5}
+		\testcasename{Exportar modelo en formato Mermaid}
+		\testcasedescription{Validar que el modelo se puede exportar en formato Mermaid para diagramas interactivos.}
+		\testcaseexeccond{
+		- Existe un modelo con versión PUBLISHED.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=mermaid con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Validar sintaxis Mermaid (comienza con graph o flowchart).\\
+		4. Verificar que incluye features como nodos.\\
+		5. Verificar que relaciones están correctamente representadas.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Sintaxis Mermaid válida.\\
+		- Diagrama representa jerarquía del modelo.\\
+		- Compatible con Mermaid.js.
+		}
+		\testcaseuserstory{6}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 4: Modelado de Variabilidad Estructural}
+		\subsubsection*{HU-07: Edición de la Jerarquía de Características}
+
+		\begin{acceptancetest}[tb:HU7_P1]
+		\testcasecode{HU7\_P1}
+		\testcasename{Crear feature en versión de modelo}
+		\testcasedescription{Validar que se puede crear una nueva feature en una versión específica.}
+		\testcaseexeccond{
+		- Existe un modelo con versión DRAFT.\\
+		- Usuario es diseñador del modelo.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de modelo e ID de versión.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features con payload: \{"name": "Módulo A", "type": "CONCRETE"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se retorna id, name, type, version\_id, parent\_id.\\
+		5. Validar que existe en BD.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Feature creada con ID generado.\\
+		- Type es CONCRETE, ABSTRACT u OPTIONAL según especificación.\\
+		- Sin padre (raíz) inicialmente.\\
+		- Timestamps se establecen.
+		}
+		\testcaseuserstory{7}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU7_P2]
+		\testcasecode{HU7\_P2}
+		\testcasename{Reubicar feature cambiando padre}
+		\testcasedescription{Validar que una feature puede ser reubicada cambiando su padre.}
+		\testcaseexeccond{
+		- Existe una feature con padre.\\
+		- Existe otra feature que será el nuevo padre.\\
+		- Cambio no crearía ciclo.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de feature a mover y ID de nuevo padre.\\
+		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\} con payload: \{"parent\_id": "<new\_parent\_id>"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar feature para confirmar nuevo padre.\\
+		5. Verificar que subárbol se movió correctamente.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Padre actualizado.\\
+		- Subárbol completo se mueve con la feature.\\
+		- Estructura jerarquía mantiene integridad.\\
+		- No se crea ciclo.
+		}
+		\testcaseuserstory{7}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU7_P3]
+		\testcasecode{HU7\_P3}
+		\testcasename{Recuperar subárbol completo de feature}
+		\testcasedescription{Validar que se puede obtener una feature con toda su estructura descendente.}
+		\testcaseexeccond{
+		- Existe una feature con descendientes.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de feature.\\
+		2. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}?include\_subtree=true con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Verificar que incluye la feature y su array de children.\\
+		5. Verificar que cada child incluye sus propios children (recursivo).
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Feature principal incluida.\\
+		- Array children contiene todas las features descendentes.\\
+		- Estructura jerárquica completa preservada.\\
+		- Profundidad del árbol representada correctamente.
+		}
+		\testcaseuserstory{7}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU7_P4]
+		\testcasecode{HU7\_P4}
+		\testcasename{Desactivar feature con soporte de versionado}
+		\testcasedescription{Validar que una feature puede ser desactivada lógicamente manteniéndola en la BD.}
+		\testcaseexeccond{
+		- Existe una feature activa.\\
+		- Feature no es raíz del árbol.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de feature a desactivar.\\
+		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\} con payload: \{"is\_active": false\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar feature para confirmar is\_active=False.\\
+		5. Verificar que no afecta otras versiones.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Feature marcada como is\_active=False.\\
+		- Feature permanece en BD.\\
+		- Otros cambios no afectados.\\
+		- Versionado mantiene registro del cambio.
+		}
+		\testcaseuserstory{7}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU7_P5]
+		\testcasecode{HU7\_P5}
+		\testcasename{Actualizar propiedades de feature}
+		\testcasedescription{Validar que se pueden actualizar propiedades de una feature.}
+		\testcaseexeccond{
+		- Existe una feature.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de feature.\\
+		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\} con payload: \{"name": "Nuevo nombre", "type": "ABSTRACT"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar feature para confirmar cambios.\\
+		5. Verificar que metadata se actualizó.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Nombre actualizado.\\
+		- Tipo actualizado.\\
+		- updated\_at se actualiza.\\
+		- Cambios persistidos en BD.
+		}
+		\testcaseuserstory{7}
+		\end{acceptancetest}
+
+		\subsubsection*{HU-08: Modelado de Grupos y Relaciones Estructurales}
+
+		\begin{acceptancetest}[tb:HU8_P1]
+		\testcasecode{HU8\_P1}
+		\testcasename{Crear grupo XOR entre features}
+		\testcasedescription{Validar que se puede crear un grupo XOR (exactamente uno) entre features hermanas.}
+		\testcaseexeccond{
+		- Existen features hermanas en versión DRAFT.\\
+		- Features tienen mismo padre.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de features a agrupar.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups con payload: \{"group\_type": "XOR", "parent\_id": "<parent\_id>"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se retorna id, group\_type, parent\_id, min\_cardinality=1, max\_cardinality=1.\\
+		5. Asignar features al grupo.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Grupo creado con group\_type=XOR.\\
+		- Cardinalidades establecidas: min=1, max=1.\\
+		- ID generado.\\
+		- Grupo listo para asignar features.
+		}
+		\testcaseuserstory{8}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU8_P2]
+		\testcasecode{HU8\_P2}
+		\testcasename{Crear grupo OR con cardinalidades}
+		\testcasedescription{Validar que se puede crear un grupo OR con cardinalidades mínimas y máximas personalizadas.}
+		\testcaseexeccond{
+		- Existen features hermanas en versión DRAFT.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de padre.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups con payload: \{"group\_type": "OR", "parent\_id": "<parent\_id>", "min\_cardinality": 1, "max\_cardinality": 3\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que cardinalidades se establecen correctamente.\\
+		5. Asignar features al grupo.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Grupo creado con group\_type=OR.\\
+		- Cardinalidades: min=1, max=3.\\
+		- Validación: min >= 1 y max >= min.\\
+		- Grupo aceptará entre 1 y 3 features seleccionadas.
+		}
+		\testcaseuserstory{8}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU8_P3]
+		\testcasecode{HU8\_P3}
+		\testcasename{Crear relación requires entre features}
+		\testcasedescription{Validar que se puede crear una relación de implicación (requires) entre features.}
+		\testcaseexeccond{
+		- Existen dos features en versión DRAFT.\\
+		- Features pueden estar en diferentes ramas.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de feature origen y destino.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships con payload: \{"relationship\_type": "REQUIRES", "source\_id": "<feature\_id\_1>", "target\_id": "<feature\_id\_2>"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se retorna relación con IDs correctos.\\
+		5. Guardar ID de relación.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Relación creada.\\
+		- Tipo: REQUIRES (implicación).\\
+		- Source y target correctos.\\
+		- Bidireccional en términos de consulta.
+		}
+		\testcaseuserstory{8}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU8_P4]
+		\testcasecode{HU8\_P4}
+		\testcasename{Crear relación excludes entre features}
+		\testcasedescription{Validar que se puede crear una relación de exclusión entre features.}
+		\testcaseexeccond{
+		- Existen dos features en versión DRAFT.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de features a relacionar.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships con payload: \{"relationship\_type": "EXCLUDES", "source\_id": "<id\_1>", "target\_id": "<id\_2>"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que relación se crea.\\
+		5. Intentar crear configuración con ambas features (debe fallar).
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Relación de exclusión creada.\\
+		- Ambas features no pueden seleccionarse simultáneamente.\\
+		- Validación de configuraciones lo verifica.
+		}
+		\testcaseuserstory{8}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU8_P5]
+		\testcasecode{HU8\_P5}
+		\testcasename{Listar grupos y relaciones de versión}
+		\testcasedescription{Validar que se pueden obtener todos los grupos y relaciones de una versión.}
+		\testcaseexeccond{
+		- Existe versión con grupos y relaciones.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar array de grupos con id, group\_type, parent\_id, min\_cardinality, max\_cardinality.\\
+		4. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships.\\
+		5. Verificar array de relaciones.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK (ambas).\\
+		- Todos los grupos listados.\\
+		- Todas las relaciones listadas.\\
+		- Información completa de cada grupo/relación.
+		}
+		\testcaseuserstory{8}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 5: Restricciones y Lógica Avanzada}
+		\subsubsection*{HU-09: Gestión de Restricciones Transversales}
+
+		\begin{acceptancetest}[tb:HU9_P1]
+		\testcasecode{HU9\_P1}
+		\testcasename{Crear restricción simples con sintaxis UVL}
+		\testcasedescription{Validar que se puede crear una restricción simple con expresión lógica.}
+		\testcaseexeccond{
+		- Existe versión DRAFT con features.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de versión.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints con payload: \{"expression": "FeatureA => FeatureB", "description": "Si A entonces B"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se parsea y valida la expresión.\\
+		5. Guardar ID de restricción.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Restricción creada con ID.\\
+		- Expresión validada sintácticamente.\\
+		- Descripción opcional almacenada.\\
+		- Restricción activa.
+		}
+		\testcaseuserstory{9}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU9_P2]
+		\testcasecode{HU9\_P2}
+		\testcasename{Crear restricción compleja con múltiples operadores}
+		\testcasedescription{Validar que se pueden crear restricciones complejas con operadores lógicos.}
+		\testcaseexeccond{
+		- Existe versión DRAFT con features.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de versión.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints con payload: \{"expression": "(FeatureA | FeatureB) \& \textasciitilde FeatureC => FeatureD", "description": "Restricción compleja"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se valida correctamente.\\
+		5. Intentar añadir a validación del modelo.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Restricción con múltiples operadores aceptada.\\
+		- Sintaxis: |, \&, \textasciitilde, =>, válidas.\\
+		- Expresión se almacena correctamente.
+		}
+		\testcaseuserstory{9}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU9_P3]
+		\testcasecode{HU9\_P3}
+		\testcasename{Actualizar restricción existente}
+		\testcasedescription{Validar que una restricción puede ser actualizada con nueva expresión.}
+		\testcaseexeccond{
+		- Existe restricción en versión DRAFT.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de restricción.\\
+		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints/\{constraint\_id\} con payload: \{"expression": "FeatureA \& FeatureB => FeatureC", "description": "Expresión actualizada"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar restricción para confirmar cambios.\\
+		5. Verificar que versionado registra el cambio.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Expresión actualizada.\\
+		- Nueva expresión validada.\\
+		- Descripción actualizada.\\
+		- updated\_at se modifica.
+		}
+		\testcaseuserstory{9}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU9_P4]
+		\testcasecode{HU9\_P4}
+		\testcasename{Listar restricciones de versión}
+		\testcasedescription{Validar que se pueden obtener todas las restricciones de una versión.}
+		\testcaseexeccond{
+		- Existe versión con restricciones.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar array de restricciones.\\
+		4. Cada restricción incluye: id, expression, description, is\_active, created\_at.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de todas las restricciones.\\
+		- Información completa de cada restricción.\\
+		- Ordenadas por fecha de creación.
+		}
+		\testcaseuserstory{9}
+		\end{acceptancetest}
+
+		\subsubsection*{HU-010: Integración y Sincronización \ac{UVL}}
+		
+		\begin{acceptancetest}[tb:HU10_P1]
+		\testcasecode{HU10\_P1}
+		\testcasename{Aplicar contenido \ac{UVL} a estructura de modelo}
+		\testcasedescription{Validar que se puede cargar un modelo completo desde contenido \ac{UVL}.}
+		\testcaseexeccond{
+		- Existe una versión DRAFT vacía.\\
+		- Se dispone de contenido \ac{UVL} válido.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Preparar contenido \ac{UVL} válido (features, grupos, restricciones).\\
+		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl con payload: \{"content": "<contenido UVL>"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar la estructura generada del modelo.\\
+		5. Verificar que árbol, grupos y restricciones se crearon correctamente.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Estructura del modelo se genera desde \ac{UVL}.\\
+		- Todas las features se crean.\\
+		- Todos los grupos se crean.\\
+		- Todas las restricciones se crean.\\
+		- Estructura coincide con \ac{UVL} original.
+		}
+		\testcaseuserstory{10}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU10_P2]
+		\testcasecode{HU10\_P2}
+		\testcasename{Exportar contenido \ac{UVL} desde modelo}
+		\testcasedescription{Validar que se puede generar contenido \ac{UVL} válido desde la estructura del modelo.}
+		\testcaseexeccond{
+		- Existe versión PUBLISHED con estructura completa.\\
+		- Estructura es válida.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=uvl con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Extraer contenido \ac{UVL}.\\
+		4. Validar sintaxis \ac{UVL}.\\
+		5. Importar \ac{UVL} en nueva versión y comparar estructura.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- UVL válido y bien formado.\\
+		- Contiene todas las features, grupos y restricciones.\\
+		- Re-importación genera estructura idéntica.
+		}
+		\testcaseuserstory{10}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU10_P3]
+		\testcasecode{HU10\_P3}
+		\testcasename{Persistir UVL analizado en versión}
+		\testcasedescription{Validar que el contenido UVL se analiza, valida y persiste en la BD.}
+		\testcaseexeccond{
+		- Existe versión DRAFT.\\
+		- Se carga contenido UVL válido.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl con contenido UVL.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Consultar GET /api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl.\\
+		4. Verificar que el UVL almacenado coincide con el original.\\
+		5. Validar que existe en BD.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK (ambas).\\
+		- UVL almacenado en BD.\\
+		- Análisis y tokens se persisten.\\
+		- Puede recuperarse completo.\\
+		- Válido para re-importación.
+		}
+		\testcaseuserstory{10}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 6: Validación y Análisis de Modelos}
+		\subsubsection*{HU-11: Validación Lógica y Estructural del Modelo}
+		
+		\begin{acceptancetest}[tb:HU11_P1]
+		\testcasecode{HU11\_P1}
+		\testcasename{Evaluar satisfacibilidad global del modelo}
+		\testcasedescription{Validar que se puede ejecutar un análisis SAT sobre el modelo completo.}
+		\testcaseexeccond{
+		- Existe versión con estructura y restricciones.\\
+		- Sistema tiene integración con solucionador SAT.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/satisfiability con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que respuesta incluye: is\_satisfiable, error\_message (si aplica).\\
+		4. Si es satisfiable, debe existir al menos una configuración válida.\\
+		5. Si no es satisfiable, revisar restricciones.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta incluye is\_satisfiable (true/false).\\
+		- Si false, mensaje de error explicando por qué.\\
+		- Cálculo se ejecuta sobre modelo completo.\\
+		- Tiempo de ejecución razonable.
+		}
+		\testcaseuserstory{11}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU11_P2]
+		\testcasecode{HU11\_P2}
+		\testcasename{Detectar ciclos en la jerarquía}
+		\testcasedescription{Validar que se detectan ciclos en la relaciones entre features.}
+		\testcaseexeccond{
+		- Existe versión con estructura.\\
+		- Estructura puede contener ciclos (intencional para testing).\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Crear escenario con ciclo: A->B->C->A.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/structure con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Verificar que se reporta error: "Cycle detected: A->B->C->A".\\
+		5. Listar features participantes.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta incluye lista de ciclos detectados.\\
+		- Cada ciclo lista features que participan.\\
+		- Mensaje claro de error.
+		}
+		\testcaseuserstory{11}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU11_P3]
+		\testcasecode{HU11\_P3}
+		\testcasename{Identificar características muertas}
+		\testcasedescription{Validar que se detectan características que nunca pueden ser seleccionadas (dead features).}
+		\testcaseexeccond{
+		- Existe versión con restricciones que hacen imposible seleccionar cierta feature.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Crear estructura con feature imposible de seleccionar.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/analyze/dead-features con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Verificar array de features muertas.\\
+		5. Cada feature incluye razón por la que es muerta.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de features muertas identificadas.\\
+		- Explicación de por qué es muerta.\\
+		- Análisis completo y correcto.
+		}
+		\testcaseuserstory{11}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU11_P4]
+		\testcasecode{HU11\_P4}
+		\testcasename{Detectar nodos huérfanos}
+		\testcasedescription{Validar que se detectan features que no tienen ruta a raíz.}
+		\testcaseexeccond{
+		- Existe versión con estructura.\\
+		- Se intenta crear feature sin padre (orphan).\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Buscar features sin ruta a raíz.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/structure con headers.\\
+		3. Validar que la respuesta reporta nodos huérfanos.\\
+		4. Verificar que lista los IDs de nodos huérfanos.\\
+		5. Mensaje explicativo.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Lista de nodos huérfanos detectados.\\
+		- Explicación clara.\\
+		- Recomendación de reparación.
+		}
+		\testcaseuserstory{11}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU11_P5]
+		\testcasecode{HU11\_P5}
+		\testcasename{Ejecutar validación completa}
+		\testcasedescription{Validar que se ejecuta suite completa de validaciones en un paso.}
+		\testcaseexeccond{
+		- Existe versión con estructura.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/full con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Respuesta incluye: satisfiable, cycles, dead\_features, orphan\_nodes, warnings.\\
+		4. Cada sección tiene lista de errores/warnings.\\
+		5. Resumen general de validación.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta incluye todas las validaciones.\\
+		- Formato consistente.\\
+		- Fácil de interpretar.\\
+		- Guía para correcciones.
+		}
+		\testcaseuserstory{11}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 7: Configuración, Optimización y Recursos}
+		\subsubsection*{HU-12: Gestión de Configuraciones}
+
+		\begin{acceptancetest}[tb:HU12_P1]
+		\testcasecode{HU12\_P1}
+		\testcasename{Crear configuración en versión publicada}
+		\testcasedescription{Validar que se puede crear una configuración (selección de features) en una versión publicada.}
+		\testcaseexeccond{
+		- Existe versión PUBLISHED con features.\\
+		- Se dispone de lista válida de features.\\
+		- Usuario es configurador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de features válidas.\\
+		2. Enviar POST a /api/v1/configurations con payload: \{"name": "Config 1", "description": "Configuración de prueba", "version\_id": "<version\_id>", "features": ["<id\_1>", "<id\_2>"]\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se crea configuración con ID.\\
+		5. Validar que se vincula a versión PUBLISHED.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Configuración creada con ID.\\
+		- Vinculada a versión PUBLISHED.\\
+		- Selección de features persistida.\\
+		- Timestamps se establecen.
+		}
+		\testcaseuserstory{12}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU12_P2]
+		\testcasecode{HU12\_P2}
+		\testcasename{Actualizar configuración existente}
+		\testcasedescription{Validar que se puede actualizar nombre, descripción y features de una configuración.}
+		\testcaseexeccond{
+		- Existe configuración persistida.\\
+		- Usuario es propietario o administrador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de configuración.\\
+		2. Enviar PUT a /api/v1/configurations/\{config\_id\} con payload: \{"name": "Nuevo nombre", "description": "Descripción actualizada", "features": ["<nuevo\_id\_1>", "<nuevo\_id\_2>"]\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar configuración para confirmar cambios.\\
+		5. Verificar que features se actualizaron.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Configuración actualizada en BD.\\
+		- Nombre y descripción cambiados.\\
+		- Lista de features actualizada.\\
+		- updated\_at se modifica.
+		}
+		\testcaseuserstory{12}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU12_P3]
+		\testcasecode{HU12\_P3}
+		\testcasename{Listar configuraciones paginadas}
+		\testcasedescription{Validar que se pueden obtener configuraciones con paginación.}
+		\testcaseexeccond{
+		- Existen múltiples configuraciones persistidas.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/configurations?skip=0\&limit=10 con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar array de configuraciones.\\
+		4. Cada config incluye: id, name, description, version\_id, created\_at, updated\_at.\\
+		5. Validar paginación: total, skip, limit.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de configuraciones paginadas.\\
+		- Información completa de cada configuración.\\
+		- Paginación funciona correctamente.\\
+		- Total de registros incluido.
+		}
+		\testcaseuserstory{12}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU12_P4]
+		\testcasecode{HU12\_P4}
+		\testcasename{Filtrar configuraciones por versión}
+		\testcasedescription{Validar que se pueden filtrar configuraciones por ID de versión.}
+		\testcaseexeccond{
+		- Existen configuraciones de múltiples versiones.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de versión específica.\\
+		2. Enviar GET a /api/v1/configurations?version\_id=<version\_id>\&skip=0\&limit=10 con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Verificar que todas las configuraciones retornadas tienen version\_id correcto.\\
+		5. Validar paginación.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Solo configuraciones de versión especificada.\\
+		- Paginación correcta.\\
+		- Filtrado preciso.
+		}
+		\testcaseuserstory{12}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU12_P5]
+		\testcasecode{HU12\_P5}
+		\testcasename{Desactivar configuración}
+		\testcasedescription{Validar que se puede desactivar una configuración sin eliminarla.}
+		\testcaseexeccond{
+		- Existe configuración activa.\\
+		- Usuario es propietario o administrador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de configuración.\\
+		2. Enviar PUT a /api/v1/configurations/\{config\_id\} con payload: \{"is\_active": false\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar configuración para confirmar is\_active=False.\\
+		5. Verificar que datos persisten en BD.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Configuración marcada como is\_active=False.\\
+		- Datos persistidos.\\
+		- No aparece en listados de activas (opcional).
+		}
+		\testcaseuserstory{12}
+		\end{acceptancetest}
+
+		\subsubsection*{HU-13: Validación y Generación Automática de Configuraciones}
+
+		\begin{acceptancetest}[tb:HU13_P1]
+		\testcasecode{HU13\_P1}
+		\testcasename{Validar selección sin persistirla}
+		\testcasedescription{Validar que se puede verificar si una selección es consistente sin guardarla.}
+		\testcaseexeccond{
+		- Existe versión PUBLISHED con estructura y restricciones.\\
+		- Se dispone de lista de features.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/configurations/validate con payload: \{"version\_id": "<version\_id>", "features": ["<id\_1>", "<id\_2>"]\}.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Respuesta incluye: is\_valid, errors (si existen), warnings.\\
+		4. Verificar que no se crea configuración persistida.\\
+		5. Mensaje claro de validación.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta indica validez.\\
+		- Lista de errores si los hay.\\
+		- Lista de advertencias.\\
+		- No se persiste la configuración.
+		}
+		\testcaseuserstory{13}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU13_P2]
+		\testcasecode{HU13\_P2}
+		\testcasename{Generar configuraciones válidas automáticamente}
+		\testcasedescription{Validar que el sistema puede generar automáticamente configuraciones válidas.}
+		\testcaseexeccond{
+		- Existe versión PUBLISHED satisfiable.\\
+		- Usuario está autenticado.\\
+		- Sistema tiene solucionador SAT integrado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/configurations/generate con payload: \{"version\_id": "<version\_id>", "limit": 5\}.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Respuesta incluye array de configuraciones válidas.\\
+		4. Cada una con lista de features seleccionadas.\\
+		5. Límite de generaciones respetado.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de configuraciones generadas.\\
+		- Cada una es válida según restricciones.\\
+		- Cantidad <= limit.\\
+		- Diversidad de soluciones (si limit > 1).
+		}
+		\testcaseuserstory{13}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU13_P3]
+		\testcasecode{HU13\_P3}
+		\testcasename{Generar configuración óptima}
+		\testcasedescription{Validar que se puede generar una configuración optimizada según criterios.}
+		\testcaseexeccond{
+		- Existe versión PUBLISHED.\\
+		- Se definen criterios de optimización.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/configurations/optimize con payload: \{"version\_id": "<version\_id>", "objective": "maximize\_features"\}.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Respuesta incluye configuración optimizada.\\
+		4. Incluye métricas de optimización.\\
+		5. Configuración es válida.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Configuración optimizada devuelta.\\
+		- Cumple restricciones.\\
+		- Optimización aplicada.\\
+		- Métricas incluidas.
+		}
+		\testcaseuserstory{13}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU13_P4]
+		\testcasecode{HU13\_P4}
+		\testcasename{Validar configuración contra restricciones complejas}
+		\testcasedescription{Validar que la validación considera restricciones complejas con múltiples operadores.}
+		\testcaseexeccond{
+		- Existe versión con restricciones complejas.\\
+		- Se dispone de selección a validar.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Crear restricción compleja: (A | B) \& \textasciitilde C => D.\\
+		2. Enviar POST a /api/v1/configurations/validate con selección que viola.\\
+		3. Validar que la respuesta reporta error.\\
+		4. Mensaje indica qué restricción se viola.\\
+		5. Sugerir alternativa válida.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- is\_valid=false.\\
+		- Error específico reportado.\\
+		- Restricción violada identificada.\\
+		- Sugerencia de corrección.
+		}
+		\testcaseuserstory{13}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 6: Validación y Análisis de Modelos}
+		\subsubsection*{HU-11: Enriquecimiento con Recursos y Taxonomías}
+
+		\begin{acceptancetest}[tb:HU14_P1]
+		\testcasecode{HU14\_P1}
+		\testcasename{Crear etiqueta (tag)}
+		\testcasedescription{Validar que se pueden crear etiquetas para clasificar features.}
+		\testcaseexeccond{
+		- Existe modelo.\\
+		- Usuario es diseñador o administrador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/tags con payload: \{"name": "Programación", "color": "\#FF5733"\}.\\
+		2. Validar que la respuesta contenga status 201.\\
+		3. Verificar que se retorna ID de etiqueta.\\
+		4. Verificar que se persiste en BD.\\
+		5. Guardar ID para asociar a features.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Etiqueta creada con ID.\\
+		- Nombre y color se almacenan.\\
+		- Puede utilizarse para asociaciones.
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU14_P2]
+		\testcasecode{HU14\_P2}
+		\testcasename{Asociar etiqueta a feature}
+		\testcasedescription{Validar que se puede asociar una etiqueta a una feature.}
+		\testcaseexeccond{
+		- Existe feature en versión.\\
+		- Existe etiqueta creada.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de feature y etiqueta.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/tags/\{tag\_id\} con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar feature para confirmar asociación.\\
+		5. Verificar que tag aparece en lista de tags de feature.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Etiqueta asociada a feature.\\
+		- Persistida en BD.\\
+		- Consultas posteriores la incluyen.
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU14_P3]
+		\testcasecode{HU14\_P3}
+		\testcasename{Desasociar etiqueta de feature}
+		\testcasedescription{Validar que se puede remover una etiqueta asociada a una feature.}
+		\testcaseexeccond{
+		- Feature tiene etiquetas asociadas.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de feature y tag asociado.\\
+		2. Enviar DELETE a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/tags/\{tag\_id\} con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar feature para confirmar que tag no está asociado.\\
+		5. Verificar que se removió de BD.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Etiqueta removida de feature.\\
+		- BD actualizada.\\
+		- Tag sigue existiendo (se reutiliza).
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU14_P4]
+		\testcasecode{HU14\_P4}
+		\testcasename{Crear recurso educativo}
+		\testcasedescription{Validar que se puede crear un recurso (archivo, enlace) asociado al modelo.}
+		\testcaseexeccond{
+		- Existe modelo.\\
+		- Usuario es editor de recursos.\\
+		- Usuario está autenticado.\\
+		- Se dispone de archivo o URL.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/resources con payload multipart: \{name: "Introducción a Java", type: "VIDEO", url: "https://...", language: "es", license: "CC-BY-4.0"\}.\\
+		2. Validar que la respuesta contenga status 201.\\
+		3. Verificar que se retorna ID de recurso.\\
+		4. Verificar metadatos almacenados.\\
+		5. Guardar ID para asociar a features/configuraciones.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Recurso creado con ID.\\
+		- Metadatos almacenados.\\
+		- Propietario registrado automáticamente.\\
+		- Timestamps se establecen.
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU14_P5]
+		\testcasecode{HU14\_P5}
+		\testcasename{Asociar recurso a feature}
+		\testcasedescription{Validar que se puede vincular un recurso educativo a una feature.}
+		\testcaseexeccond{
+		- Existe feature en versión.\\
+		- Existe recurso creado.\\
+		- Usuario es editor.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de feature y recurso.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/resources/\{resource\_id\} con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar feature para verificar asociación.\\
+		5. Recurso aparece en lista de recursos de feature.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Recurso asociado a feature.\\
+		- Persistencia en BD.\\
+		- Versiones se registran.
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU14_P6]
+		\testcasecode{HU14\_P6}
+		\testcasename{Actualizar metadatos de recurso}
+		\testcasedescription{Validar que se pueden actualizar metadatos del recurso (idioma, licencia, etc).}
+		\testcaseexeccond{
+		- Existe recurso persistido.\\
+		- Usuario es propietario del recurso.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de recurso.\\
+		2. Enviar PUT a /api/v1/resources/\{resource\_id\} con payload: \{"language": "en", "license": "MIT", "description": "Nueva descripción"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar recurso para confirmar cambios.\\
+		5. Verificar que updated\_at se modifica.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Metadatos actualizados en BD.\\
+		- Historial versionado (opcional).\\
+		- Cambios persistidos.\\
+		- Campo updated\_at actualizado.
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU14_P7]
+		\testcasecode{HU14\_P7}
+		\testcasename{Listar recursos de feature con filtros}
+		\testcasedescription{Validar que se pueden obtener todos los recursos de una feature con filtros.}
+		\testcaseexeccond{
+		- Feature tiene múltiples recursos asociados.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/resources?language=es\&type=VIDEO con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que solo recursos con idioma es y tipo VIDEO se retornan.\\
+		4. Cada recurso incluye metadatos completos.\\
+		5. Paginación funciona.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de recursos filtrados.\\
+		- Información completa de cada uno.\\
+		- Filtros aplicados correctamente.\\
+		- Paginación funciona.
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
 \end{addendum}
 
 	\addappendix[bloque]{Anexos/BloqueCoronaReport}
