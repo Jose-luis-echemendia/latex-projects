@@ -47,39 +47,283 @@ encontrar en el anexo \ref{anx:ti}.
 
 \section{Despliegue del sistema}
 
+El despliegue constituye la fase del ciclo de vida del software en la que el sistema 
+desarrollado se pone a disposición de los usuarios finales en un entorno de ejecución real o 
+de pruebas. Esta etapa implica no solo la instalación y configuración de los componentes 
+software en los servidores correspondientes, sino también la verificación de que todas las 
+dependencias tecnológicas (bases de datos, sistemas de almacenamiento, colas de mensajes, 
+etc.) se encuentren operativas y correctamente parametrizadas \citep{bass2012software}. 
+Un despliegue exitoso garantiza que el sistema se comporte en producción de acuerdo con 
+las expectativas definidas durante las primeras fases del desarrollo de software, y constituye el paso 
+previo indispensable para la ejecución de las pruebas de aceptación por parte del cliente.
+
 \subsection{Diagrama de despliegue}
 
+El diagrama de despliegue es un artefacto de modelado utilizado en el \ac{UML} 
+para representar la arquitectura física de un sistema, mostrando 
+la disposición de los nodos de hardware, los componentes software que se ejecutan en cada 
+uno de ellos y los canales de comunicación que los interconectan \citep{booch2005uml}. Su 
+propósito es visualizar la topología de ejecución del sistema, identificar posibles cuellos 
+de botella en la comunicación entre nodos y planificar la distribución de los componentes 
+en entornos productivos. La figura ilustra el diagrama de despliegue 
+correspondiente a la propuesta de solucicón desarrollada.
 
 \section{Fase de pruebas}
 
+La prueba es el proceso de ejecución de un programa con la intención de encontrar errores.
+Es crucial para validar el correcto funcionamiento del sistema y asegurar su calidad.
+Esta sección presenta la estrategia general de pruebas y los resultados obtenidos al aplicar un conjunto de
+técnicas de verificación. El objetivo es demostrar que la aplicación cumple con los requisitos funcionales y
+no funcionales definidos, es confiable bajo diferentes condiciones de operación.
+
+\subsection{Estrategia de pruebas}
+
+Una estrategia de pruebas es un plan de alto nivel que define el enfoque, los objetivos, los recursos y el
+calendario para las actividades de evaluación de la calidad del software. Su propósito es garantizar que las
+pruebas sean sistemáticas, eficientes y efectivas para identificar defectos. \citep{garcia2023}
+
+Se adoptará una estrategia de pruebas basada en riesgos y requisitos. La ejecución seguirá un orden
+progresivo: comenzando con las Pruebas Unitarias para cimentar la calidad del código, seguidas de las
+Pruebas de Integración para verificar la comunicación entre módulos. En paralelo, se realizarán Pruebas
+de Seguridad para validar los controles de acceso. Posteriormente, se ejecutarán Pruebas de Rendimiento
+para evaluar la estabilidad bajo carga. El ciclo culminará con las Pruebas de Aceptación para validar el cumplimiento de
+las necesidades del usuario final. Como parte integral del proceso, al final de cada iteración se ejecutaron
+Pruebas de Regresión para verificar que las nuevas funcionalidades no afectaran el comportamiento existente
+del sistema. Esta aproximación por capas asegura una cobertura comprehensiva y una detección temprana
+de errores en todas las dimensiones de calidad del sistema.
+
+\subsection{Pruebas unitarias}
+
+Las pruebas unitarias son un tipo de prueba de software donde se verifican unidades individuales o
+componentes del código fuente (como una función, un método o una clase) de forma aislada. El objetivo es
+validar que cada parte del software funciona correctamente por sí misma \citep{bedoyaAlzate2021}. En este
+proyecto, se implementaron pruebas unitarias para cubrir los componentes clave del sistema, asegurando que
+cada parte funcione según lo esperado bajo diversas condiciones. Los módulos seleccionados para las pruebas unitarias
+son los: servicios del sistema, repositorios, excepciones personalizadas y utilidades de validación. 
+Estos componentes son fundamentales para la lógica de negocio, la interacción con la base de datos y 
+la gestión de errores, por lo que su correcto funcionamiento es crítico para la estabilidad y confiabilidad 
+del sistema.
+
+Para cada componente, se definieron casos de prueba que cubren tanto escenarios típicos como condiciones 
+límite o errores esperados. Se utilizaron técnicas de aislamiento mediante \textit{mocks} para simular dependencias
+externas como la \ac{BD}, permitiendo así verificar el
+comportamiento interno sin efectos colaterales ni dependencias del entorno. A continuación, se presenta un
+ejemplo de los casos de pruebas unitarias, el resto se puede encontrar en el anexo \ref{anx:pu}.
+
+\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+    \caption{Caso de Prueba Unitaria No1}\\
+    \hline
+    \multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+    \hline
+    \endfirsthead
+                    
+	\multicolumn{2}{c}
+    {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+                    
+    \hline
+	\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+    \hline
+    \endhead
+                    
+    \hline
+	\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+    \endfoot
+                    
+    \hline
+    \endlastfoot
+
+    % Cuerpo de la tabla
+    Descripción: & Verificar que \texttt{FeatureModelVersionManager.}
+    \texttt{create\_new\_version(source\_version=None)} 
+    crea una versión en estado \texttt{DRAFT} con \texttt{version\_number} consecutivo. \\
+	\hline
+    Entrada: & 
+    \begin{itemize}
+        \item \texttt{feature\_model.id} válido.
+        \item Mock de \texttt{repository.get\_latest\_version\_number()} retornando 3.
+        \item \texttt{source\_version=None}.
+    \end{itemize}
+    \\
+	\hline
+    Salida esperada: & 
+    \begin{itemize}
+        \item Nueva versión con \texttt{version\_number=4}.
+        \item \texttt{status=DRAFT}.
+        \item Se ejecuta \texttt{session.commit()} y \texttt{session.refresh()}.
+    \end{itemize}
+    \\
+	\hline
+    Evaluación de la prueba: & 
+    \begin{itemize}
+        \item Pasa si se cumplen valores y llamadas a sesión.
+        \item Falla si no incrementa versión o no persiste cambios.
+    \end{itemize}
+    \\
+	\hline
+\end{longtable}
+
+\subsection{Pruebas de integración}
+
+Las pruebas de integración verifican la interacción y comunicación correcta entre diferentes módulos o
+componentes de software una vez que han sido integrados. El objetivo es encontrar fallos en las interfaces y
+en la interacción entre unidades integradas \citep{paz2016}. En el contexto de este proyecto que es un servidor
+\textit{backend}, las pruebas de integración se realizarán sobre los controladores para verificar que 
+las rutas, la lógica de negocio y la interacción con los servicios y repositorios funcionen correctamente. 
+Se diseñaron casos de prueba que simulen escenarios reales de uso, incluyendo la validación de datos, la 
+gestión de errores y la respuesta del sistema ante diferentes tipos de solicitudes.
+
+Los casos de pruebas de integración se aplicarán sobre las rutas críticas del sistema, las cuales son los controladores
+asociados a los servicios de \ac{FM}.Se diseñaron 18 casos de prueba que abordan las integraciones más críticas del sistema. 
+A continuación, se presenta un ejemplo de las pruebas de integración, el resto se puede encontrar en el anexo \ref{anx:pi}.
+
+\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+\caption{Caso de Prueba de Integración No1}\\
+\hline
+\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+\hline
+\endfirsthead
+                
+\multicolumn{2}{c}
+{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+                
+\hline
+\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+\hline
+\endhead
+                
+\hline
+\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+\endfoot
+                
+\hline
+\endlastfoot
+% Cuerpo de la tabla
+ID de prueba: HU4-P1: & \ac{HU}: 4 \\
+\hline
+Nombre: & 
+Crear \ac{FM} en dominio válido
+\\
+\hline
+Descripción: & 
+Verificar que \texttt{POST} \texttt{/feature-models/} crea un \ac{FM} y persiste metadatos correctamente.
+\\
+\hline
+Condiciones de ejecución: & 
+\begin{itemize} 
+    \item Sistema levantado con datos de prueba
+    \item \ac{BD} limpia o controlada
+    \item Usuario autenticado con rol \texttt{MODEL\_DESIGNER} o \texttt{ADMIN}
+    \item Existe \texttt{domain\_id} activo
+\end{itemize}
+\\
+\hline
+Pasos de ejecución: & 
+\begin{enumerate}
+    \item Enviar \texttt{POST} \texttt{/api/v1/feature-models/} con \texttt{name}, \texttt{description}, \texttt{domain\_id}
+    \item Validar \texttt{HTTP} \texttt{201}
+    \item Verificar respuesta con \texttt{id}, \texttt{owner\_id}, \texttt{domain\_id}, \texttt{is\_active=true}
+    \item Consultar \texttt{GET} \texttt{/api/v1/feature-models/{id}}
+    \item Confirmar persistencia en \ac{BD} (registro creado)
+\end{enumerate}
+\\
+\hline
+Resultados esperados: &
+\begin{itemize}
+    \item Se crea el FM correctamente
+    \item El \texttt{owner\_id} corresponde al usuario autenticado
+    \item Se registra \texttt{created\_at}/\texttt{updated\_at}
+\end{itemize}
+\\
+\hline
+Evaluación de la prueba: &
+Aprobada \\
+\hline
+\end{longtable}
+
+\subsection{Pruebas de seguridad}
+
+Las pruebas de seguridad constituyen un conjunto de técnicas de verificación orientadas a identificar 
+vulnerabilidades, debilidades y riesgos en un sistema software que puedan ser explotados por actores maliciosos 
+\citep{felderer2016security}. A diferencia de las pruebas funcionales, que verifican que el sistema hace 
+lo que debe hacer, las pruebas de seguridad buscan aquello que el sistema no debería permitir: accesos no 
+autorizados, fugas de información, ejecución de código malicioso o violaciones de las políticas de control 
+de acceso \citep{felderer2015survey}. En el contexto de un servicio \textit{backend} que gestiona \ac{FM} que
+tienen información curricular sensible y que pudiera integrarse con sistemas institucionales existentes, 
+la seguridad se convierte en un atributo de calidad crítico que debe ser validado rigurosamente.
+
+Los principales objetivos de las pruebas de seguridad incluyen: identificar activos digitales que requieren 
+protección, clasificar vulnerabilidades potenciales, evaluar las consecuencias de una posible explotación, y 
+proporcionar recomendaciones para la remediación de las fallas detectadas \citep{moradov2023security}. 
+En este proyecto, las pruebas de seguridad se centran en tres dimensiones fundamentales: la autenticación y 
+gestión de sesiones, la autorización basada en roles estáticos, y la protección de los endpoints de la \ac{API} \ac{REST} 
+contra ataques comunes (inyección, manipulación de parámetros, exposición de información sensible). 
+Esta sección presenta los resultados de la verificación sistemática de los criterios de seguridad
+definidos, utilizando para ello una lista de verificación estructurada que permite evaluar de manera objetiva
+el cumplimiento de cada uno de los requisitos establecidos. Dicha lista se evidencia en el anexo \ref{anx:lvs}.
 
 
-\begin{acceptancetest}[tb:expresult]
-\testcasecode{HU2\_P1}
-\testcasedescription{Prueba para la funcionalidad autentificar usuario.}
+\subsection{Pruebas de rendimiento}
+
+Las pruebas de rendimiento evalúan la velocidad, capacidad de respuesta, estabilidad, confiabilidad y
+uso de recursos de un sistema bajo una carga de trabajo determinada. Su objetivo no es encontrar defectos
+funcionales, sino identificar y eliminar cuellos de botella en el rendimiento \citep{diaz2008}. 
+En el contexto del servicio \textit{backend} para la gestión de variabilidad curricular, 
+estas pruebas se centran en validar el cumplimiento de los requisitos no funcionales establecidos, particularmente 
+aquellos relacionados con los tiempos de respuesta de la \ac{API}, capacidad de manejar alto tráfico y 
+el tiempo de latencia entre los repositorios y la \ac{BD}. Esta sección presenta los resultados de la verificación sistemática
+de los criterios de rendimiento definidos, utilizando para ello métricas objetivas que permiten evaluar el
+cumplimiento de cada uno de los requisitos establecidos.
+
+
+\subsection{Pruebas de aceptación}
+
+Las pruebas de aceptación constituyen la fase final del proceso de verificación y validación del software, 
+en la cual se determina si el sistema satisface los criterios de aceptación establecidos por el cliente y se encuentra 
+apto para su despliegue en producción \citep{pressman2014se}. A diferencia de las pruebas funcionales y no funcionales 
+ejecutadas por el equipo de desarrollo, las pruebas de aceptación son típicamente realizadas por el cliente o por usuarios 
+finales en un entorno controlado que simula las condiciones reales de operación \citep{crispin2008agile}. Su propósito 
+fundamental es generar confianza en que el software resuelve efectivamente los problemas del dominio para el cual fue 
+concebido y cumple con las expectativas de sus \textit{stakeholders}.
+
+En el contexto del servicio \textit{backend} para la gestión de variabilidad curricular, las pruebas de aceptación se centran en 
+validar los criteros de acepcatión definidos en las \ac{HU}, principalmente en aquellas orientas a modelar y representar
+fielmente los \ac{FM} y generar configuraciones válidas que correspondan a itinerarios formativos coherentes.
+Estas pruebas se ejecutan sobre escenarios de uso reales, utilizando modelos curriculares de asignaturas y carreras. ç
+Se consideran exitosas cuando todas las historias de usuario priorizadas en el plan de entregas han sido 
+satisfactoriamente validadas por el cliente. A continuación, se presenta un ejemplo de los casos de pruebas definidos, el 
+resto se pueden consultar en el anexo \ref{anx:pa}.
+
+\begin{acceptancetest}[tb:HU6_P2]
+\testcasecode{HU6\_P2}
+\testcasedescription{Validar que el modelo se puede exportar en formato \ac{UVL} válido.}
 \testcaseexeccond{
-El usuario debe estar previamente registrado.\\
-El usuario y contraseña deben ser válidos.
+\begin{itemize}
+    \item Existe un modelo con versión PUBLISHED.\\
+    \item La versión tiene estructura completa.\\
+    \item Usuario está autenticado.
+\end{itemize}
 }
-\testcaseexecstep{Se intenta autentificar un usuario en el sistema con los datos
-válidos.}
-\testcaseexpresult{El usuario se autentifica correctamente en el sistema.}
-\testcasename{Autentificar usuario en el sistema.}
-\testcaseuserstory{2}
-\end{acceptancetest}
-
-\begin{acceptancetest}[tb:expresultaa]
-\testcasecode{HU2\_P1}
-\testcasedescription{Prueba para la funcionalidad autentificar usuario.}
-\testcaseexeccond{
-El usuario debe estar previamente registrado.\\
-El usuario y contraseña deben ser válidos.
+\testcaseexecstep{
+\begin{enumerate} 
+    \item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/export?format=uvl} con cabeceras.\\
+    \item Validar que la respuesta contenga estada 200.\\
+    \item Verificar que el \texttt{Content-Type} es text/plain o application/x-uvl.\\
+    \item Validar que el contenido es \ac{UVL} válido (comienza con features o namespace, tiene sintaxis correcta).\\
+    \item Guardar contenido en archivo .uvl y validar.
+\end{enumerate}
 }
-\testcaseexecstep{Se intenta autentificar un usuario en el sistema con los datos
-válidos.}
-\testcaseexpresult{El usuario se autentifica correctamente en el sistema.}
-\testcasename{Autentificar usuario en el sistema.}
-\testcaseuserstory{2}
+\testcaseexpresult{
+\begin{itemize} 
+    \item Estado \ac{HTTP}: \texttt{200 OK}.\\
+    \item \texttt{Content-Type} correcto.\\
+    \item \ac{UVL} contiene sintaxis válida.\\
+    \item Todas las características, grupos y restricciones están representadas.\\
+    \item Puede descargarse como archivo.
+    \item Re-importación genera estructura idéntica.
+\end{itemize}
+}
+\testcasename{Exportar modelo en formato \ac{UVL}}
+\testcaseuserstory{6}
 \end{acceptancetest}
 
 

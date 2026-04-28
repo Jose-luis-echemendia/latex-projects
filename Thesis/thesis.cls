@@ -1583,6 +1583,54 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \newcommand*{\testcasedescription}[1]{\def\@testcasedescription{#1}}
 \newcommand*{\testcaseexpresult}[1]{\def\@testcaseexpresult{#1}}
 
+\ExplSyntaxOn
+\seq_new:N \l__thesis_acceptance_list_seq
+
+\cs_new_protected:Npn \thesis_acceptance_itemize:n #1
+{
+  \tl_if_in:nnTF {#1} {\begin{itemize}}
+  {#1}
+  {
+    \begin{itemize}
+      \seq_set_split:Nnn \l__thesis_acceptance_list_seq { \\ } {#1}
+      \seq_map_inline:Nn \l__thesis_acceptance_list_seq
+      {
+        \tl_set:Nn \l_tmpa_tl {##1}
+        \tl_trim_spaces:N \l_tmpa_tl
+        \tl_if_blank:NF \l_tmpa_tl
+        {
+          \regex_replace_once:nnN { \A \s* - \s* } {} \l_tmpa_tl
+          \item \tl_use:N \l_tmpa_tl
+        }
+      }
+    \end{itemize}
+  }
+}
+
+\cs_new_protected:Npn \thesis_acceptance_enumerate:n #1
+{
+  \tl_if_in:nnTF {#1} {\begin{enumerate}}
+  {#1}
+  {
+    \begin{enumerate}
+      \seq_set_split:Nnn \l__thesis_acceptance_list_seq { \\ } {#1}
+      \seq_map_inline:Nn \l__thesis_acceptance_list_seq
+      {
+        \tl_set:Nn \l_tmpa_tl {##1}
+        \tl_trim_spaces:N \l_tmpa_tl
+        \tl_if_blank:NF \l_tmpa_tl
+        {
+          \regex_replace_once:nnN { \A \s* \d+ \. \s* } {} \l_tmpa_tl
+          \item \tl_use:N \l_tmpa_tl
+        }
+      }
+    \end{enumerate}
+  }
+}
+\cs_new_eq:NN \thesisacceptanceitemize \thesis_acceptance_itemize:n
+\cs_new_eq:NN \thesisacceptanceenumerate \thesis_acceptance_enumerate:n
+\ExplSyntaxOff
+
 \newcommand*{\@clrtestcasecmds}
 {
 \let\@testcaselabel\undefined
@@ -1649,14 +1697,9 @@ Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días
 \multicolumn{1}{|p{0.4\linewidth}|}{\textbf{Código:} \@testcasecode} & \textbf{Historia de usuario:} \@testcaseuserstory\\ \hline
 \multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Nombre:} \@testcasename} \\ \hline
 \multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Descripción:} \@testcasedescription} \\ \hline
-\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Condiciones de ejecución:}\vspace{-2ex}
- \begin{flushleft}
-\@testcaseexeccond
-\vspace{-2ex}
-\end{flushleft}} \\ \hline
-\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Pasos de ejecución:}\vspace{-2ex}
-\begin{flushleft}\@testcaseexecstep \vspace{-2ex} \end{flushleft}}\\ \hline
-\multicolumn{2}{|p{0.8\linewidth}|}{\textbf{Resultados esperados:} \@testcaseexpresult}
+\multicolumn{2}{|l|}{\parbox[t]{0.8\linewidth}{\textbf{Condiciones de ejecución:}\\[-0.5ex]\thesisacceptanceitemize{\@testcaseexeccond}}} \\ \hline
+\multicolumn{2}{|l|}{\parbox[t]{0.8\linewidth}{\textbf{Pasos de ejecución:}\\[-0.5ex]\thesisacceptanceenumerate{\@testcaseexecstep}}}\\ \hline
+\multicolumn{2}{|l|}{\parbox[t]{0.8\linewidth}{\textbf{Resultados esperados:}\\[-0.5ex]\thesisacceptanceitemize{\@testcaseexpresult}}}
 \end{longtable}
 }
 

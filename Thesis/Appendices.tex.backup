@@ -1,0 +1,4396 @@
+\appendixes
+
+\begin{addendum}
+	\chapter{Historias de usuario}
+	\label{anx:hu}
+
+		\subsubsection*{Épica 1: Gestión de Identidad y Acceso}
+
+		\begin{userstory}[]
+			\storyname{Autenticación y Autogestión de cuenta}
+			\storyepic{Gestión de Identidad y Acceso}
+			\storyrfs{1, 2, 3, 4, 5, 8}
+			\storypriority{Alta}
+			\storyrisk{Media}
+			\storypoints{0.4}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El usuario del sistema debe poder iniciar sesión, cerrar sesión, gestionar su perfil y recuperar su acceso para garantizar la seguridad de sus datos y su identidad en la plataforma.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Permitir registro e inicio con correo y contraseña.
+			\item Procesar recuperación de acceso mediante \textit{token} enviado por correo.
+			\item Permitir la edición del perfil propio sin intervención administrativa.
+			\end{itemize}
+			}
+			\storyobservation{La historia concentra autenticación, recuperación de acceso y autogestión del perfil como capacidades base del módulo de identidad. Campos de entrada asociados: RF\#1 y RF\#3 (correo electrónico, contraseña), RF\#5 (token y nueva contraseña; o contraseña actual y nueva contraseña), RF\#8 (correo electrónico opcional).}
+		\end{userstory}
+
+		\begin{userstory}[]
+			\storyname{Administración de Usuarios y Permisos}
+			\storyepic{Gestión de Identidad y Acceso}
+			\storyrfs{6, 7, 9, 10, 11}
+			\storypriority{Alta}
+			\storyrisk{Media}
+			\storypoints{0.3}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El administrador debe poder gestionar el listado de usuarios, sus roles y su estado activo o inactivo para controlar quién accede a la plataforma y qué acciones puede realizar según la jerarquía estática.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Listar y filtrar usuarios por rol o nombre.
+			\item Modificar el rol asignado a cada usuario.
+			\item Desactivar y activar cuentas sin eliminar la información persistida.
+			\end{itemize}
+			}
+			\storyobservation{La gestión de cuentas debe preservar la trazabilidad administrativa y evitar borrados físicos sobre usuarios existentes. Campos de entrada asociados: RF\#9 (identificador de usuario en ruta y rol en consulta).}
+		\end{userstory}
+
+		\subsubsection*{Épica 2: Gestión de Dominios Curriculares}
+
+		\begin{userstory}[]
+			\storyname{Gestión de Dominios de Conocimiento}
+			\storyepic{Gestión de Dominios Curriculares}
+			\storyrfs{12, 13, 14, 15, 16, 17, 18, 19}
+			\storypriority{Alta}
+			\storyrisk{Media}
+			\storypoints{0.4}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El administrador debe poder crear, actualizar y supervisar los dominios curriculares para establecer el contexto de alto nivel donde se alojarán los \ac{FM}.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Crear dominios con nombre y descripción.
+			\item Activar y desactivar dominios conforme a su estado de uso.
+			\item Obtener cada dominio junto con sus modelos asociados.
+			\end{itemize}
+			}
+			\storyobservation{El dominio funciona como unidad de organización para agrupar y consultar los modelos vinculados. Campos de entrada asociados: RF\#14 (nombre, descripción opcional) y RF\#15 (identificador de dominio en ruta; nombre y descripción opcionales).}
+		\end{userstory}
+
+		\subsubsection*{Épica 3: Ciclo de Vida del \ac{FM}}
+
+		\begin{userstory}[]
+			\storyname{Gestión Operativa de \ac{FM}}
+			\storyepic{Ciclo de Vida del \ac{FM}}
+			\storyrfs{20, 21, 22, 23, 24, 25}
+			\storypriority{Alta}
+			\storyrisk{Alta}
+			\storypoints{1.0}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El diseñador de modelo debe poder crear, listar y modificar los metadatos de los modelos de características dentro de un dominio para mantener un catálogo organizado de planes de estudio o arquitecturas curriculares.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Crear modelos asociados a un dominio válido.
+			\item Actualizar metadatos preservando la integridad del modelo.
+			\item Ofrecer paginación y filtrado para la consulta de modelos.
+			\end{itemize}
+			}
+			\storyobservation{Esta historia cubre la administración operativa del catálogo de modelos, sin entrar todavía en su estructura interna. Campos de entrada asociados: RF\#21 (nombre, descripción opcional, identificador de dominio) y RF\#23 (identificador de modelo en ruta; nombre, descripción y estado activo opcionales).}
+		\end{userstory}
+
+		\begin{userstory}[]
+			\storyname{Gestión de Versiones y Publicación}
+			\storyepic{Ciclo de Vida del \ac{FM}}
+			\storyrfs{26, 27, 28, 29, 30, 31, 32}
+			\storypriority{Alta}
+			\storyrisk{Alta}
+			\storypoints{2.5}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El diseñador de modelo y el revisador deben poder crear versiones, publicar instantáneas y archivar versiones antiguas para garantizar la trazabilidad y evolución del currículo sin afectar configuraciones previas.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Generar nuevas versiones mediante técnica de copia al escribir.
+			\item Validar la versión antes de su publicación oficial.
+			\item Permitir la recuperación de versiones archivadas.
+			\end{itemize}
+			}
+			\storyobservation{La publicación debe conservar el historial del modelo y permitir volver a estados previos sin pérdida de información. Campos de entrada asociados: RF\#28 (identificador de modelo en ruta; identificador de versión origen y descripción opcionales).}
+		\end{userstory}
+
+		\begin{userstory}[]
+			\storyname{Análisis de Métricas y Exportación}
+			\storyepic{Ciclo de Vida del \ac{FM}}
+			\storyrfs{33, 34}
+			\storypriority{Media}
+			\storyrisk{Media}
+			\storypoints{0.8}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El diseñador y el observador deben poder obtener estadísticas y exportar el modelo en múltiples formatos para compartirlo con otras herramientas o analizar su complejidad. Los formatos a soportar son:
+				\begin{itemize}
+					\item \ac{UVL}.
+					\item \ac{XML}.
+					\item \ac{TVL}.
+					\item \ac{DIMACS}.
+					\item \ac{JSON}.
+					\item \ac{DOT}.
+					\item mermaid.
+				\end{itemize}
+			}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Calcular métricas de la versión publicada más reciente o de una versión específica.
+			\item Exportar el modelo en formatos técnicos como \ac{UVL} y \textit{dimacs}.
+			\item Exportar el modelo en formatos visuales como \textit{mermaid} y \textit{dot}.
+			\item Guardar el resultado de la exportación en un archivo.
+			\end{itemize}
+			}
+			\storyobservation{La exportación debe ser consistente con la versión consultada y servir tanto para intercambio técnico como para inspección visual.}
+		\end{userstory}
+
+		\subsubsection*{Épica 4: Modelado de Variabilidad Estructural}
+
+		\begin{userstory}[]
+			\storyname{Edición de la Jerarquía de Características}
+			\storyepic{Modelado de Variabilidad Estructural}
+			\storyrfs{53, 54, 55, 56, 60, 61, 62, 63}
+			\storypriority{Alta}
+			\storyrisk{Alta}
+			\storypoints{1.0}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El diseñador y el editor de modelo deben poder crear, mover, actualizar y desactivar características para construir el árbol de variabilidad que representa el plan de estudios.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Reubicar una \textit{feature} cambiando su padre sin perder consistencia.
+			\item Recuperar subárboles completos de una característica.
+			\item Aplicar desactivación lógica con soporte de versionado.
+			\end{itemize}
+			}
+			\storyobservation{Las operaciones sobre la jerarquía deben preservar integridad estructural y trazabilidad de cambios. Campos de entrada asociados: RF\#53 (nombre, tipo, identificador de versión, y opcionales de padre, grupo, recurso y propiedades) y RF\#60 (identificador de característica en ruta; nombre, tipo, padre y grupo opcionales).}
+		\end{userstory}
+
+		\begin{userstory}[]
+			\storyname{Modelado de Grupos y Relaciones Estructurales}
+			\storyepic{Modelado de Variabilidad Estructural}
+			\storyrfs{64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75}
+			\storypriority{Alta}
+			\storyrisk{Alta}
+			\storypoints{1.0}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El diseñador y el editor de modelo deben poder definir grupos de características, como XOR y OR, y relaciones jerárquicas para restringir cómo se pueden combinar los módulos educativos.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Crear grupos con validaciones sobre el tipo de agrupación.
+			\item Definir relaciones semánticas entre características.
+			\item Permitir la definición de cardinalidades mínimas y máximas.
+			\item Mantener consistencia al activar, desactivar o actualizar dichas estructuras.
+			\end{itemize}
+			}
+			\storyobservation{Esta historia cubre la semántica estructural del árbol y la coherencia entre agrupaciones y relaciones. Campos de entrada asociados: RF\#66 (tipo de grupo, característica padre, cardinalidades), RF\#67 (identificador de grupo en ruta y campos opcionales), RF\#72 (tipo, origen, destino) y RF\#73 (identificador de relación en ruta y campos opcionales).}
+		\end{userstory}
+
+		\subsubsection*{Épica 5: Restricciones y Lógica Avanzada}
+
+		\begin{userstory}[]
+			\storyname{Gestión de Restricciones Transversales}
+			\storyepic{Restricciones y Lógica Avanzada}
+			\storyrfs{76, 77, 78, 79, 80, 81}
+			\storypriority{Alta}
+			\storyrisk{Alta}
+			\storypoints{0.8}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El diseñador de modelo debe poder crear y gestionar reglas de exclusión e implicación complejas para modelar dependencias que no son jerárquicas, por ejemplo, si se elige A, no se puede elegir B.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Permitir crear restricciones complejas con validación de sintaxis.
+			\item Permitir expresiones lógicas complejas.
+			\item Mantener control de versiones sobre las restricciones creadas.
+			\end{itemize}
+			}
+			\storyobservation{Las restricciones deben integrarse con el modelo sin romper la evolución histórica del mismo. Campos de entrada asociados: RF\#78 (identificador de versión, expresión lógica y descripción opcional) y RF\#79 (identificador de restricción en ruta; expresión lógica y descripción opcionales).}
+		\end{userstory}
+
+		\begin{userstory}[]
+			\storyname{Integración y Sincronización \ac{UVL}}
+			\storyepic{Restricciones y Lógica Avanzada}
+			\storyrfs{36, 37, 38, 39}
+			\storypriority{Alta}
+			\storyrisk{Alta}
+			\storypoints{1.0}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El diseñador deben poder operar directamente sobre el lenguaje \ac{UVL} o sincronizarlo desde la interfaz gráfica para mantener la potencia del modelado por código y la facilidad del modelado visual.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Sincronizar el modelo visual al editar el código \ac{UVL}.
+			\item Persistir el \ac{UVL} analizado y validado.
+			\item Aplicar \ac{UVL} a la estructura para regenerar el árbol desde el código \ac{UVL}.
+			\end{itemize}
+			}
+			\storyobservation{La sincronización debe mantener equivalencia entre la representación textual y la representación visual del modelo. Campos de entrada asociados: RF\#36 y RF\#38 (identificador de modelo y versión en ruta, contenido \ac{UVL}).}
+		\end{userstory}
+
+		\subsubsection*{Épica 6: Validación y Análisis de Modelos}
+
+		\begin{userstory}[]
+			\storyname{Validación Lógica y Estructural del Modelo}
+			\storyepic{Validación y Análisis de Modelos}
+			\storyrfs{39, 40, 41, 42}
+			\storypriority{Alta}
+			\storyrisk{Alta}
+			\storypoints{1.0}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El revisador y el diseñador deben poder ejecutar análisis de consistencia, detectar características muertas y redundancias para asegurar que el plan de estudios sea lógicamente posible y no presente errores.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Evaluar la satisfacibilidad global del modelo mediante un solucionador \ac{SAT}.
+			\item Detectar ciclos y nodos huérfanos.
+			\item Identificar características muertas y redundancias.
+			\end{itemize}
+			}
+			\storyobservation{El análisis debe advertir problemas estructurales y semánticos antes de publicar o derivar configuraciones.}
+		\end{userstory}
+
+		\subsubsection*{Épica 7: Configuración, Optimización y Recursos}
+
+		\begin{userstory}[]
+			\storyname{Gestión de Configuraciones}
+			\storyepic{Configuración, Optimización y Recursos}
+			\storyrfs{44, 45, 46, 47, 48, 49}
+			\storypriority{Alta}
+			\storyrisk{Alta}
+			\storypoints{1.0}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El configurador debe poder crear, actualizar y persistir selecciones de características para generar itinerarios educativos específicos para un perfil o estudiante.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Guardar configuraciones asociadas a una versión publicada.
+			\item Ofrecer listado paginado de configuraciones almacenadas.
+			\item Mantener operaciones de actualización y activación sobre configuraciones persistidas.
+			\end{itemize}
+			}
+			\storyobservation{La configuración debe quedar ligada a una versión concreta del modelo para conservar su validez histórica. Campos de entrada asociados: RF\#44 (nombre, descripción opcional, identificador de versión y lista de características) y RF\#47 (identificador de configuración en ruta; nombre, descripción y lista de características opcionales).}
+		\end{userstory}
+
+		\begin{userstory}[]
+			\storyname{Validación y Generación Automática de Configuraciones}
+			\storyepic{Configuración, Optimización y Recursos}
+			\storyrfs{49, 50, 51, 52}
+			\storypriority{Alta}
+			\storyrisk{Alta}
+			\storypoints{1.0}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El configurador y el estudiante deben poder validar si una selección es consistente y generar automáticamente opciones válidas u optimizadas para encontrar el mejor camino formativo sin violar prerrequisitos.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Validar selecciones sin necesidad de persistirlas.
+			\item Ejecutar algoritmos de optimización para proponer mejores configuraciones.
+			\end{itemize}
+			}
+			\storyobservation{La generación automática debe apoyar la toma de decisiones sin obligar a guardar resultados intermedios.}
+		\end{userstory}
+
+		\begin{userstory}[]
+			\storyname{Enriquecimiento con Recursos y Taxonomías}
+			\storyepic{Configuración, Optimización y Recursos}
+			\storyrfs{57, 58, 59, 82, 83, 84, 85, 86, 87, 88}
+			\storypriority{Media}
+			\storyrisk{Media}
+			\storypoints{0.8}
+			\storyprogrammer{Jose Luis Echemendia López}
+			\storydescription{El editor de modelo y el configurador deben poder etiquetar características y vincular recursos externos, como archivos o enlaces, para añadir contenido pedagógico real a la estructura lógica del modelo.}
+			\storyacceptancecriteria{
+			\begin{itemize}
+			\item Asociar y desasociar etiquetas a características.
+			\item Cargar recursos y asignar propietarios.
+			\item Mantener versionada la información asociada a los recursos.
+			\item Aceptar metadatos como idioma, licencia y otros de interés en el registro de los recursos.
+			\end{itemize}
+			}
+			\storyobservation{Los recursos y etiquetas deben servir como apoyo semántico y documental para el uso del modelo. Campos de entrada asociados: RF\#84 (nombre, descripción opcional), RF\#87 (metadatos completos del recurso y contenido) y RF\#88 (identificador de recurso en ruta y campos opcionales, con restricción sobre propietario).}
+		\end{userstory}
+
+
+	\chapter{Tarjetas CRC}
+	\label{anx:tCRC}
+
+		\begin{crccard}[tb:crc_user]
+			\crcclass{User}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Representar usuarios y roles.
+				\item Mantener estado activo/inactivo.
+				\item Soportar auditoría (creado/actualizado/eliminado por).
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModel (owner/collaborator)\\
+				FeatureModelCollaborator\\
+				Repositorios de usuario
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_domain]
+			\crcclass{Domain}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Agrupar modelos por dominio.
+				\item Mantener metadatos (nombre, descripción).
+				\item Gestionar relación con modelos.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModel
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_featuremodel]
+			\crcclass{FeatureModel}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Representar un \ac{FM} (nombre, descripción, dominio).
+				\item Enlazar propietario y versiones.
+				\item Mantener colaboradores.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				Domain\\
+				User\\
+				FeatureModelVersion\\
+				FeatureModelCollaborator
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_featuremodelversion]
+			\crcclass{FeatureModelVersion}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Versionar un \ac{FM} (estado, snapshot, \ac{UVL}).
+				\item Enlazar estructura completa (features, grupos, relaciones, restricciones y configuraciones).
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModel\\
+				Feature\\
+				FeatureGroup\\
+				FeatureRelation\\
+				Constraint\\
+				Configuration
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_feature]
+			\crcclass{Feature}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Representar característica (nombre, tipo, propiedades).
+				\item Mantener jerarquía padre/hijos.
+				\item Enlazar grupo y recurso.
+				\item Soportar tags y configuraciones.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion\\
+				FeatureGroup\\
+				FeatureRelation\\
+				Tag\\
+				Configuration\\
+				Resource
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_featuregroup]
+			\crcclass{FeatureGroup}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Definir agrupaciones XOR/OR.
+				\item Controlar cardinalidades.
+				\item Enlazar feature padre y miembros.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion\\
+				Feature
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_featurerelation]
+			\crcclass{FeatureRelation}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Representar relaciones cross-tree (requires/excludes).
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion\\
+				Feature
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_constraint]
+			\crcclass{Constraint}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Persistir restricciones lógicas complejas (expr\_text, expr\_cnf).
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_configuration]
+			\crcclass{Configuration}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Persistir selección de features.
+				\item Enlazar tags.
+				\item Mantener estado activo/inactivo.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion\\
+				Feature\\
+				Tag
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_tag]
+			\crcclass{Tag}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Clasificar features/configuraciones.
+				\item Mantener unicidad por nombre.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				Feature\\
+				Configuration
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_resource]
+			\crcclass{Resource}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Representar recursos educativos.
+				\item Mantener metadatos de contenido/licencia.
+				\item Enlazar propietario.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				User\\
+				Feature
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_fmversionmanager]
+			\crcclass{FeatureModelVersionManager}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Crear versiones (copy-on-write).
+				\item Publicar/archivar/restaurar versiones.
+				\item Generar snapshot y validaciones de transición.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersionRepository\\
+				FeatureModelVersion\\
+				Feature\\
+				User\\
+				FeatureModel
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_fmexportservice]
+			\crcclass{FeatureModelExportService}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Exportar \ac{FM} a \ac{UVL}/XML/TVL/DIMACS/\ac{JSON}/\ac{DOT}/Mermaid.
+				\item Construir mapeo UUID $\leftrightarrow$ int.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion\\
+				Feature\\
+				Constraint\\
+				Enums de exportación
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_fmuvlimporter]
+			\crcclass{FeatureModelUVLImporter}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Validar \ac{UVL}.
+				\item Construir estructura desde \ac{UVL}.
+				\item Crear relaciones/restricciones y nueva versión.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersionManager\\
+				Feature\\
+				FeatureGroup\\
+				FeatureRelation\\
+				Constraint\\
+				FeatureModelVersion\\
+				User
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_fmlogicalvalidator]
+			\crcclass{FeatureModelLogicalValidator}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Ejecutar validación \ac{SAT}/\ac{SMT} (sympy/pysat/z3).
+				\item Verificar consistencia global y configuraciones.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				InvalidConstraintException y otras excepciones\\
+				Dependencias \ac{SAT}/\ac{SMT}
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_fmconfigurationgenerator]
+			\crcclass{FeatureModelConfigurationGenerator}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Generar configuraciones válidas.
+				\item Aplicar estrategias GREEDY/RANDOM/BEAM/GENETIC/NSGA2.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelLogicalValidator\\
+				GenerationStrategy\\
+				Dependencias DEAP/OR-Tools/BDD
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_fmstructuralanalyzer]
+			\crcclass{FeatureModelStructuralAnalyzer}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Analizar estructura (dead features, redundancias, SCC).
+				\item Calcular métricas de complejidad.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				AnalysisType\\
+				networkx\\
+				Excepciones estructurales
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_fmtreebuilder]
+			\crcclass{FeatureModelTreeBuilder}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Construir árbol completo para respuesta.
+				\item Generar estadísticas.
+				\item Generar \ac{UVL} efectivo.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelVersion\\
+				Feature\\
+				FeatureGroup\\
+				FeatureModelExportService\\
+				FeatureModelCompleteResponse
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_fmanalysisfacade]
+			\crcclass{FeatureModelAnalysisFacade}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Orquestar análisis lógico y estructural.
+				\item Calcular commonality/core/atomic sets.
+				\item Ejecutar validación \ac{UVL} opcional (Flamapy).
+				\end{itemize}
+			}
+			\crccolab
+			{
+				FeatureModelLogicalValidator\\
+				FeatureModelStructuralAnalyzer\\
+				FeatureModelUVLImporter
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_settingsservice]
+			\crcclass{SettingsService}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Consultar y actualizar settings.
+				\item Cachear en Redis.
+				\end{itemize}
+			}
+			\crccolab
+			{
+				AppSetting\\
+				redis\_client
+			}
+		\end{crccard}
+
+		\begin{crccard}[tb:crc_appsetting]
+			\crcclass{AppSetting}
+			\crcresp
+			{
+				\begin{itemize}
+				\item Persistir claves de configuración.
+				\item Mantener descripción y valor.
+				\end{itemize}
+			}de
+			\crccolab
+			{
+				SettingsService\\
+				Redis cache
+			}
+		\end{crccard}
+
+	\chapter{Tareas de ingenierías}
+	\label{anx:ti}
+
+		\subsubsection*{HU-01: Autenticación y Autogestión de cuenta}
+
+		\begin{engineeringtask}[tb:engtask_t001]
+		\engtaskuserstory{1}
+		\engtaskname{Diseñar modelo de token de recuperación}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{20}{4}{2026}
+		\engtaskenddate{20}{4}{2026}
+		\engtaskdescription{Diseñar y documentar el modelo de token de recuperación de contraseña, incluyendo ciclo de vida, expiración, estado, relación con usuario y campos de auditoría compatibles con la estrategia de persistencia.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t002]
+		\engtaskuserstory{1}
+		\engtaskname{Implementar esquemas de autenticación}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{20}{4}{2026}
+		\engtaskenddate{21}{4}{2026}
+		\engtaskdescription{Definir esquemas de entrada y salida para registro, inicio de sesión, recuperación de acceso, restablecimiento de contraseña y actualización de perfil, con validaciones explícitas y mensajes de error consistentes.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t003]
+		\engtaskuserstory{1}
+		\engtaskname{Implementar servicio de autenticación y cuenta}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{21}{4}{2026}
+		\engtaskenddate{22}{4}{2026}
+		\engtaskdescription{Diseñar e implementar el servicio de identidad para registro, autenticación, gestión de credenciales, emisión y verificación de tokens, y actualización de perfil, garantizando trazabilidad y cumplimiento de políticas de seguridad.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t004]
+		\engtaskuserstory{1}
+		\engtaskname{Exponer endpoints de auth y perfil}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{22}{4}{2026}
+		\engtaskenddate{23}{4}{2026}
+		\engtaskdescription{Implementar el controlador de identidad con endpoints de registro, inicio/cierre de sesión, solicitud de recuperación, restablecimiento de contraseña y edición de perfil propio; incorporar validación de solicitudes, manejo uniforme de errores y contratos de respuesta consistentes.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t005]
+		\engtaskuserstory{1}
+		\engtaskname{Enviar correos de recuperación asíncronamente}
+		\engtasktype{Crear tareas de celery}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{23}{4}{2026}
+		\engtaskenddate{24}{4}{2026}
+		\engtaskdescription{Implementar la tarea asíncrona de notificación para recuperación de cuenta con políticas de reintento, plantillas de correo versionadas y registro de trazas operativas para auditoría y soporte.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-02: Administración de Usuarios y Permisos}
+
+		\begin{engineeringtask}[tb:engtask_t006]
+		\engtaskuserstory{2}
+		\engtaskname{Implementar esquemas para gestión de usuarios}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{27}{4}{2026}
+		\engtaskenddate{27}{4}{2026}
+		\engtaskdescription{Definir contratos de entrada y salida para listado paginado, filtrado por rol y término de búsqueda, actualización de rol y cambio de estado de cuenta, con reglas de validación y paginación estandarizadas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t007]
+		\engtaskuserstory{2}
+		\engtaskname{Implementar repositorio administrativo de usuarios}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{27}{4}{2026}
+		\engtaskenddate{28}{4}{2026}
+		\engtaskdescription{Implementar el repositorio de usuarios administrativos con consultas paginadas, filtros combinables, búsqueda textual y operaciones de actualización de rol y estado, preservando eliminación lógica y consistencia transaccional.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t008]
+		\engtaskuserstory{2}
+		\engtaskname{Implementar servicio de administración de usuarios}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{28}{4}{2026}
+		\engtaskenddate{29}{4}{2026}
+		\engtaskdescription{Implementar el servicio de administración de usuarios para orquestar permisos, reglas de transición de rol y validaciones de seguridad, incorporando controles de autorización y registro de acciones críticas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t009]
+		\engtaskuserstory{2}
+		\engtaskname{Exponer endpoints de administración de usuarios}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{29}{4}{2026}
+		\engtaskenddate{30}{4}{2026}
+		\engtaskdescription{Implementar el controlador administrativo para listado paginado, filtrado y búsqueda de usuarios, cambio de rol y activación/desactivación de cuentas; aplicar autorización por rol, validación de parámetros de ruta/consulta y trazabilidad de acciones administrativas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t010]
+		\engtaskuserstory{2}
+		\engtaskname{Definir excepciones de administración de usuarios}
+		\engtasktype{Crear excepciones personalizadas}
+		\engtaskpointestimation{4}
+		\engtaskstartdate{30}{4}{2026}
+		\engtaskenddate{30}{4}{2026}
+		\engtaskdescription{Diseñar excepciones de dominio para transición inválida de rol, usuario inexistente y operación no autorizada, estandarizando códigos de error y semántica de respuesta para la capa API.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-03: Gestión de Dominios de Conocimiento}
+
+		\begin{engineeringtask}[tb:engtask_t011]
+		\engtaskuserstory{3}
+		\engtaskname{Ajustar modelo de dominio curricular}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{4}{5}{2026}
+		\engtaskenddate{4}{5}{2026}
+		\engtaskdescription{Refinar el modelo de dominio curricular, incorporando restricciones de unicidad, atributos de estado, campos de auditoría y relaciones con modelos para asegurar consistencia semántica y persistencia confiable.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t012]
+		\engtaskuserstory{3}
+		\engtaskname{Implementar esquemas de dominio}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{4}{5}{2026}
+		\engtaskenddate{5}{5}{2026}
+		\engtaskdescription{Definir esquemas para creación, actualización, consulta, búsqueda y detalle de dominios con modelos asociados, estableciendo validaciones de formato, límites y contratos de serialización coherentes.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t013]
+		\engtaskuserstory{3}
+		\engtaskname{Implementar repositorio de dominios}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{5}{5}{2026}
+		\engtaskenddate{6}{5}{2026}
+		\engtaskdescription{Implementar el repositorio de dominios con consultas paginadas, criterios de búsqueda por nombre y descripción, y recuperación eficiente de relaciones con modelos asociados.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t014]
+		\engtaskuserstory{3}
+		\engtaskname{Implementar servicio de gobernanza de dominios}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{6}{5}{2026}
+		\engtaskenddate{7}{5}{2026}
+		\engtaskdescription{Implementar el servicio de gobernanza de dominios para gestionar ciclo de vida, validaciones de unicidad e integridad referencial, y reglas de activación/desactivación con trazabilidad administrativa.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t015]
+		\engtaskuserstory{3}
+		\engtaskname{Exponer endpoints de dominios}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{7}{5}{2026}
+		\engtaskenddate{8}{5}{2026}
+		\engtaskdescription{Implementar el controlador de dominios para operaciones de creación, consulta, actualización, búsqueda y cambio de estado, incluyendo endpoint de detalle con modelos asociados; asegurar validación de datos, paginación y estandarización de respuestas HTTP.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-04: Gestión Operativa de FM}
+
+		\begin{engineeringtask}[tb:engtask_t016]
+		\engtaskuserstory{4}
+		\engtaskname{Ajustar modelo de FeatureModel y colaboradores}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{11}{5}{2026}
+		\engtaskenddate{11}{5}{2026}
+		\engtaskdescription{Consolidar el modelo de FeatureModel y colaboradores, formalizando relaciones con dominio y propietario, además de reglas de unicidad y consistencia para operaciones de lectura y escritura.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t017]
+		\engtaskuserstory{4}
+		\engtaskname{Implementar esquemas operativos de FM}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{11}{5}{2026}
+		\engtaskenddate{12}{5}{2026}
+		\engtaskdescription{Definir esquemas operativos para alta, actualización, listado paginado y consulta de detalle del modelo, incluyendo metadatos obligatorios, validaciones de consistencia y formato de respuesta uniforme.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t018]
+		\engtaskuserstory{4}
+		\engtaskname{Implementar repositorio de FM}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{12}{5}{2026}
+		\engtaskenddate{13}{5}{2026}
+		\engtaskdescription{Implementar el repositorio de modelos de características con operaciones de persistencia y consultas por dominio, estado y criterios de búsqueda, optimizando lectura para escenarios paginados.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t019]
+		\engtaskuserstory{4}
+		\engtaskname{Implementar servicio operativo de FM}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{13}{5}{2026}
+		\engtaskenddate{14}{5}{2026}
+		\engtaskdescription{Implementar el servicio operativo del catálogo de modelos para gestionar altas, cambios de metadatos y estado operativo, aplicando validaciones de negocio e integridad de información.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t020]
+		\engtaskuserstory{4}
+		\engtaskname{Exponer endpoints de ciclo operativo de FM}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{14}{5}{2026}
+		\engtaskenddate{15}{5}{2026}
+		\engtaskdescription{Implementar el controlador de modelos de características para alta, consulta, actualización y activación/desactivación, con soporte de filtros por dominio, paginación y políticas de autorización según rol funcional.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-05: Gestión de Versiones y Publicación}
+
+		\begin{engineeringtask}[tb:engtask_t021]
+		\engtaskuserstory{5}
+		\engtaskname{Ajustar modelo de versionado de FM}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{18}{5}{2026}
+		\engtaskenddate{18}{5}{2026}
+		\engtaskdescription{Definir el modelo de versionado con estados explícitos, metadatos de snapshot y trazabilidad completa, estableciendo reglas de transición válidas para sostener el ciclo de vida de versiones.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t022]
+		\engtaskuserstory{5}
+		\engtaskname{Implementar repositorio de versiones}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{18}{5}{2026}
+		\engtaskenddate{19}{5}{2026}
+		\engtaskdescription{Implementar el repositorio de versiones con consultas por modelo, localización de versión publicada vigente y recuperación de versiones específicas con sus dependencias necesarias.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t023]
+		\engtaskuserstory{5}
+		\engtaskname{Implementar gestor de versionado copy-on-write}
+		\engtasktype{Crear clase}
+		\engtaskpointestimation{14}
+		\engtaskstartdate{19}{5}{2026}
+		\engtaskenddate{21}{5}{2026}
+		\engtaskdescription{Diseñar e implementar la clase FeatureModelVersionManager para orquestar creación de versiones por copy-on-write, publicación, archivado y restauración, con validación estricta de transiciones de estado.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t024]
+		\engtaskuserstory{5}
+		\engtaskname{Exponer endpoints de versiones y publicación}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{21}{5}{2026}
+		\engtaskenddate{22}{5}{2026}
+		\engtaskdescription{Implementar el controlador de versionado para listar/consultar versiones, crear versiones por copy-on-write, publicar, archivar, restaurar y obtener estructura completa de una versión; incluir validación de transiciones de estado y control de permisos por perfil.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t025]
+		\engtaskuserstory{5}
+		\engtaskname{Definir excepciones de transición de versiones}
+		\engtasktype{Crear excepciones personalizadas}
+		\engtaskpointestimation{4}
+		\engtaskstartdate{22}{5}{2026}
+		\engtaskenddate{22}{5}{2026}
+		\engtaskdescription{Definir excepciones de dominio para transiciones inválidas, condiciones de publicación no satisfechas y conflictos de estado, con mapeo consistente a respuestas HTTP y contexto de diagnóstico.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-06: Análisis de Métricas y Exportación}
+
+		\begin{engineeringtask}[tb:engtask_t026]
+		\engtaskuserstory{6}
+		\engtaskname{Implementar servicio de exportación multiformato}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{16}
+		\engtaskstartdate{25}{5}{2026}
+		\engtaskenddate{26}{5}{2026}
+		\engtaskdescription{Implementar el servicio de exportación multiformato para generar representaciones UVL, XML, TVL, DIMACS, JSON, \ac{DOT} y Mermaid, incorporando mapeo estable de identificadores y validación de consistencia del artefacto generado.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t027]
+		\engtaskuserstory{6}
+		\engtaskname{Implementar esquemas de métricas y exportación}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{26}{5}{2026}
+		\engtaskenddate{26}{5}{2026}
+		\engtaskdescription{Definir esquemas de solicitud y respuesta para consulta de métricas y exportación por versión objetivo o versión vigente publicada, incluyendo parámetros de formato y validaciones de compatibilidad.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t028]
+		\engtaskuserstory{6}
+		\engtaskname{Exponer endpoints de estadísticas y exportación}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{26}{5}{2026}
+		\engtaskenddate{27}{5}{2026}
+		\engtaskdescription{Implementar el controlador de análisis y exportación para consultar métricas por versión y generar artefactos en formatos técnicos y visuales; soportar negociación de formato, descarga/streaming seguro y manejo de errores de serialización.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t029]
+		\engtaskuserstory{6}
+		\engtaskname{Implementar tareas asíncronas de exportación}
+		\engtasktype{Crear tareas de celery}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{27}{5}{2026}
+		\engtaskenddate{28}{5}{2026}
+		\engtaskdescription{Implementar tareas asíncronas de exportación para procesar cargas intensivas fuera del hilo de petición, con persistencia de estado, almacenamiento de artefactos y mecanismos de recuperación ante fallos.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t030]
+		\engtaskuserstory{6}
+		\engtaskname{Definir excepciones de exportación}
+		\engtasktype{Crear excepciones personalizadas}
+		\engtaskpointestimation{4}
+		\engtaskstartdate{28}{5}{2026}
+		\engtaskenddate{28}{5}{2026}
+		\engtaskdescription{Definir excepciones específicas para formato no soportado, versión inexistente y errores de serialización o generación de artefactos, con semántica clara para observabilidad y soporte operativo.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-07: Edición de la Jerarquía de Características}
+
+		\begin{engineeringtask}[tb:engtask_t031]
+		\engtaskuserstory{7}
+		\engtaskname{Ajustar modelo de Feature para edición jerárquica}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{1}{6}{2026}
+		\engtaskenddate{1}{6}{2026}
+		\engtaskdescription{Ajustar el modelo de Feature para soportar edición jerárquica segura, contemplando relaciones padre-hijo, pertenencia a grupo, vínculo con recursos, propiedades extensibles y estado lógico activo.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t032]
+		\engtaskuserstory{7}
+		\engtaskname{Implementar esquemas de jerarquía de features}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{1}{6}{2026}
+		\engtaskenddate{2}{6}{2026}
+		\engtaskdescription{Definir esquemas de entrada y salida para creación, actualización, movimiento, consulta de detalle y subárbol, y cambio de estado de características, con validaciones estructurales y referenciales.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t033]
+		\engtaskuserstory{7}
+		\engtaskname{Implementar repositorio de features}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{2}{6}{2026}
+		\engtaskenddate{3}{6}{2026}
+		\engtaskdescription{Implementar el repositorio de características con operaciones de recorrido jerárquico, consultas por versión, actualizaciones parciales y desactivación lógica, garantizando integridad de relaciones padre-hijo.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t034]
+		\engtaskuserstory{7}
+		\engtaskname{Implementar servicio de jerarquía de features}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{3}{6}{2026}
+		\engtaskenddate{4}{6}{2026}
+		\engtaskdescription{Implementar el servicio de jerarquía de características para validar movimientos en el árbol, prevenir inconsistencias estructurales y ejecutar versionado copy-on-write en operaciones de activación y desactivación.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t035]
+		\engtaskuserstory{7}
+		\engtaskname{Exponer endpoints de features estructurales}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{4}{6}{2026}
+		\engtaskenddate{5}{6}{2026}
+		\engtaskdescription{Implementar el controlador de características para creación, consulta de detalle/subárbol, actualización, movimiento en jerarquía y activación/desactivación lógica; reforzar validaciones de integridad estructural y autorización por rol de edición.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-08: Modelado de Grupos y Relaciones Estructurales}
+
+		\begin{engineeringtask}[tb:engtask_t036]
+		\engtaskuserstory{8}
+		\engtaskname{Ajustar modelos de FeatureGroup y FeatureRelation}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{8}{6}{2026}
+		\engtaskenddate{8}{6}{2026}
+		\engtaskdescription{Definir y refinar los modelos de grupos y relaciones, incorporando tipo semántico, cardinalidades, extremos de vínculo y estado lógico, junto con reglas de integridad para persistencia y validación.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t037]
+		\engtaskuserstory{8}
+		\engtaskname{Implementar esquemas de grupos y relaciones}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{8}{6}{2026}
+		\engtaskenddate{9}{6}{2026}
+		\engtaskdescription{Definir contratos de API para listado, creación, actualización y cambio de estado de grupos y relaciones, incorporando validaciones de cardinalidad, tipos permitidos y consistencia entre nodos.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t038]
+		\engtaskuserstory{8}
+		\engtaskname{Implementar repositorios de grupos y relaciones}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{9}{6}{2026}
+		\engtaskenddate{10}{6}{2026}
+		\engtaskdescription{Implementar repositorios de grupos y relaciones con consultas por versión, característica padre y tipo semántico, optimizando la carga de datos para validaciones estructurales posteriores.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t039]
+		\engtaskuserstory{8}
+		\engtaskname{Implementar servicio de semántica estructural}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{10}{6}{2026}
+		\engtaskenddate{11}{6}{2026}
+		\engtaskdescription{Implementar el servicio de semántica estructural para validar cardinalidades, coherencia de relaciones cross-tree y reglas de versionado al aplicar cambios sobre la estructura del modelo.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t040]
+		\engtaskuserstory{8}
+		\engtaskname{Exponer endpoints de grupos y relaciones}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{11}{6}{2026}
+		\engtaskenddate{12}{6}{2026}
+		\engtaskdescription{Implementar el controlador de grupos y relaciones para gestión completa de agrupaciones (incluyendo cardinalidades) y relaciones cross-tree; validar reglas semánticas del modelo y aplicar autorización granular para operaciones de edición.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-09: Gestión de Restricciones Transversales}
+
+		\begin{engineeringtask}[tb:engtask_t041]
+		\engtaskuserstory{9}
+		\engtaskname{Ajustar modelo de restricciones lógicas}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{15}{6}{2026}
+		\engtaskenddate{15}{6}{2026}
+		\engtaskdescription{Definir el modelo de restricciones lógicas con representación textual y normalizada, estado de vigencia y metadatos de versión, habilitando trazabilidad y análisis posterior.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t042]
+		\engtaskuserstory{9}
+		\engtaskname{Implementar esquemas de restricciones}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{15}{6}{2026}
+		\engtaskenddate{16}{6}{2026}
+		\engtaskdescription{Definir esquemas de solicitud y respuesta para ciclo completo de restricciones, incluyendo validaciones sintácticas de expresión, serialización uniforme y estructura de errores de dominio.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t043]
+		\engtaskuserstory{9}
+		\engtaskname{Implementar repositorio de restricciones}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{16}{6}{2026}
+		\engtaskenddate{17}{6}{2026}
+		\engtaskdescription{Implementar el repositorio de restricciones con filtros por versión y estado, búsqueda paginada y recuperación de expresiones normalizadas para procesos de validación lógica.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t044]
+		\engtaskuserstory{9}
+		\engtaskname{Implementar servicio de restricciones transversales}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{17}{6}{2026}
+		\engtaskenddate{18}{6}{2026}
+		\engtaskdescription{Implementar el servicio de restricciones transversales para validar sintaxis, transformar expresiones a forma operativa y preservar trazabilidad de cambios mediante reglas de versionado.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t045]
+		\engtaskuserstory{9}
+		\engtaskname{Exponer endpoints de restricciones}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{18}{6}{2026}
+		\engtaskenddate{19}{6}{2026}
+		\engtaskdescription{Implementar el controlador de restricciones lógicas para alta, consulta, actualización y cambio de estado, asegurando validación sintáctica de expresiones, consistencia de versión y respuestas de error homogéneas para fallos de lógica.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-10: Integración y Sincronización UVL}
+
+		\begin{engineeringtask}[tb:engtask_t046]
+		\engtaskuserstory{10}
+		\engtaskname{Implementar importador UVL a estructura}
+		\engtasktype{Crear clase}
+		\engtaskpointestimation{14}
+		\engtaskstartdate{22}{6}{2026}
+		\engtaskenddate{23}{6}{2026}
+		\engtaskdescription{Diseñar e implementar la clase FeatureModelUVLImporter para parseo, validación semántica y construcción de estructura interna a partir de UVL, con reporte de errores orientado a diagnóstico técnico.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t047]
+		\engtaskuserstory{10}
+		\engtaskname{Implementar esquemas de sincronización UVL}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{23}{6}{2026}
+		\engtaskenddate{23}{6}{2026}
+		\engtaskdescription{Definir esquemas de entrada y salida para persistencia de UVL, sincronización desde estructura y aplicación sobre versión destino, con validaciones de compatibilidad y tamaño de contenido.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t048]
+		\engtaskuserstory{10}
+		\engtaskname{Implementar servicio de sincronización UVL}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{23}{6}{2026}
+		\engtaskenddate{24}{6}{2026}
+		\engtaskdescription{Implementar el servicio de sincronización UVL para garantizar equivalencia entre representación visual y textual, persistir UVL efectivo y gestionar creación controlada de nuevas versiones.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t049]
+		\engtaskuserstory{10}
+		\engtaskname{Exponer endpoints de integración UVL}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{24}{6}{2026}
+		\engtaskenddate{25}{6}{2026}
+		\engtaskdescription{Implementar el controlador de integración UVL para guardar contenido validado, sincronizar UVL desde estructura y aplicar UVL sobre una versión destino; contemplar validaciones previas de consistencia y mensajes de error orientados a diagnóstico.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t050]
+		\engtaskuserstory{10}
+		\engtaskname{Definir excepciones de UVL}
+		\engtasktype{Crear excepciones personalizadas}
+		\engtaskpointestimation{4}
+		\engtaskstartdate{25}{6}{2026}
+		\engtaskenddate{26}{6}{2026}
+		\engtaskdescription{Definir excepciones especializadas para errores de parseo, inconsistencias de sincronización y conflictos estructurales, estandarizando el reporte técnico para depuración y soporte.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-11: Validación Lógica y Estructural del Modelo}
+
+		\begin{engineeringtask}[tb:engtask_t051]
+		\engtaskuserstory{11}
+		\engtaskname{Implementar validador lógico SAT/SMT}
+		\engtasktype{Crear clase}
+		\engtaskpointestimation{16}
+		\engtaskstartdate{29}{6}{2026}
+		\engtaskenddate{30}{6}{2026}
+		\engtaskdescription{Diseñar e implementar la clase FeatureModelLogicalValidator para verificar satisfacibilidad global, consistencia lógica y validez de configuraciones propuestas sobre un modelo y versión concretos.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t052]
+		\engtaskuserstory{11}
+		\engtaskname{Implementar analizador estructural}
+		\engtasktype{Crear clase}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{30}{6}{2026}
+		\engtaskenddate{1}{7}{2026}
+		\engtaskdescription{Diseñar e implementar el analizador estructural para detección de ciclos, nodos huérfanos, características muertas, redundancias y componentes fuertemente conectados.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t053]
+		\engtaskuserstory{11}
+		\engtaskname{Implementar fachada de análisis del FM}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{1}{7}{2026}
+		\engtaskenddate{2}{7}{2026}
+		\engtaskdescription{Implementar la fachada de análisis para orquestar validaciones lógicas y estructurales, consolidar resultados en un único contrato y normalizar severidad, trazas y recomendaciones técnicas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t054]
+		\engtaskuserstory{11}
+		\engtaskname{Implementar esquemas de respuesta de análisis}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{2}{7}{2026}
+		\engtaskenddate{2}{7}{2026}
+		\engtaskdescription{Definir esquemas de respuesta para reportes de análisis lógico y estructural, incluyendo severidad, evidencia, recomendaciones y metadatos de ejecución para consumo por clientes y observabilidad.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t055]
+		\engtaskuserstory{11}
+		\engtaskname{Exponer endpoints de validación y análisis}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{2}{7}{2026}
+		\engtaskenddate{3}{7}{2026}
+		\engtaskdescription{Implementar el controlador de validación para análisis lógico y estructural del modelo, validación de configuraciones propuestas y reporte de hallazgos; incorporar ejecución segura con límites de tiempo y manejo controlado de excepciones de análisis.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-12: Gestión de Configuraciones}
+
+		\begin{engineeringtask}[tb:engtask_t056]
+		\engtaskuserstory{12}
+		\engtaskname{Ajustar modelo de Configuration}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{6}{7}{2026}
+		\engtaskenddate{6}{7}{2026}
+		\engtaskdescription{Definir y ajustar el modelo de Configuration con vínculo explícito a versión objetivo, selección de características, estado operativo e historial de cambios para preservar validez temporal.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t057]
+		\engtaskuserstory{12}
+		\engtaskname{Implementar esquemas de configuraciones persistentes}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{6}{7}{2026}
+		\engtaskenddate{7}{7}{2026}
+		\engtaskdescription{Definir esquemas para creación, consulta, listado, actualización y cambio de estado de configuraciones persistentes, así como validación de propuestas no persistidas con contratos de salida normalizados.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t058]
+		\engtaskuserstory{12}
+		\engtaskname{Implementar repositorio de configuraciones}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{7}{7}{2026}
+		\engtaskenddate{8}{7}{2026}
+		\engtaskdescription{Implementar el repositorio de configuraciones con persistencia paginada, filtros por versión y estado, y carga eficiente de asociaciones con características seleccionadas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t059]
+		\engtaskuserstory{12}
+		\engtaskname{Implementar servicio de gestión de configuraciones}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{8}{7}{2026}
+		\engtaskenddate{9}{7}{2026}
+		\engtaskdescription{Implementar el servicio de configuraciones para validar consistencia funcional, persistir selecciones por versión objetivo y gestionar reglas de activación/desactivación con control de estado.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t060]
+		\engtaskuserstory{12}
+		\engtaskname{Exponer endpoints de configuraciones}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{9}{7}{2026}
+		\engtaskenddate{10}{7}{2026}
+		\engtaskdescription{Implementar el controlador de configuraciones para creación persistente, consulta por identificador, listado paginado, actualización y activación/desactivación; incluir endpoint de validación de selección no persistente con contratos claros de entrada y salida.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-13: Validación y Generación Automática de Configuraciones}
+
+		\begin{engineeringtask}[tb:engtask_t061]
+		\engtaskuserstory{13}
+		\engtaskname{Implementar núcleo de generación de configuraciones}
+		\engtasktype{Crear clase}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{13}{7}{2026}
+		\engtaskenddate{14}{7}{2026}
+		\engtaskdescription{Diseñar e implementar la clase base de generación de configuraciones válidas, incorporando estrategias iniciales deterministas y aleatorias, validación previa de restricciones y criterios de factibilidad sobre la versión objetivo del modelo.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t062]
+		\engtaskuserstory{13}
+		\engtaskname{Implementar estrategia BEAM para generación válida}
+		\engtasktype{Crear clase}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{14}{7}{2026}
+		\engtaskenddate{14}{7}{2026}
+		\engtaskdescription{Extender el generador con búsqueda BEAM, incluyendo funciones de puntuación, poda y control de diversidad, para producir candidatos válidos con mejor cobertura y calidad estructural.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t063]
+		\engtaskuserstory{13}
+		\engtaskname{Implementar optimización mono-objetivo}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{14}{7}{2026}
+		\engtaskenddate{15}{7}{2026}
+		\engtaskdescription{Implementar el servicio de optimización mono-objetivo con algoritmos genéticos, definiendo función de aptitud, operadores evolutivos y criterios de convergencia para seleccionar configuraciones válidas de mayor calidad.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t064]
+		\engtaskuserstory{13}
+		\engtaskname{Implementar optimización multiobjetivo}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{15}{7}{2026}
+		\engtaskenddate{15}{7}{2026}
+		\engtaskdescription{Implementar el servicio de optimización multiobjetivo con enfoque de frentes de Pareto, equilibrando criterios de calidad contrapuestos y garantizando diversidad y estabilidad en el conjunto de soluciones candidatas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t065]
+		\engtaskuserstory{13}
+		\engtaskname{Implementar esquemas de generación/optimización}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{6}
+		\engtaskstartdate{15}{7}{2026}
+		\engtaskenddate{16}{7}{2026}
+		\engtaskdescription{Definir contratos de API para validación de propuestas, generación automática y optimización, incluyendo estrategia seleccionada, parámetros de ejecución, límites operativos y estructura homogénea de resultados.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t066]
+		\engtaskuserstory{13}
+		\engtaskname{Exponer endpoints de validación y generación automática}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{16}{7}{2026}
+		\engtaskenddate{17}{7}{2026}
+		\engtaskdescription{Implementar el controlador de configuración avanzada para validar propuestas, generar configuraciones y ejecutar optimización con parametrización controlada; estandarizar respuestas y trazas de ejecución para consumo cliente.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t067]
+		\engtaskuserstory{13}
+		\engtaskname{Ejecutar optimización intensiva en background}
+		\engtasktype{Crear tareas de celery}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{17}{7}{2026}
+		\engtaskenddate{18}{7}{2026}
+		\engtaskdescription{Implementar flujo asíncrono de optimización intensiva con colas de trabajo, control de reintentos, persistencia de estado, almacenamiento de resultados y reanudación por identificador de ejecución.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\subsubsection*{HU-14: Enriquecimiento con Recursos y Taxonomías}
+
+		\begin{engineeringtask}[tb:engtask_t068]
+		\engtaskuserstory{14}
+		\engtaskname{Ajustar modelos de Tag y Resource}
+		\engtasktype{Definir modelos}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{20}{7}{2026}
+		\engtaskenddate{21}{7}{2026}
+		\engtaskdescription{Definir y ajustar los modelos de Tag y Resource con reglas de unicidad, metadatos extendidos y asociaciones con características y propietario, garantizando consistencia funcional y persistencia estable.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t069]
+		\engtaskuserstory{14}
+		\engtaskname{Implementar esquemas de etiquetas y recursos}
+		\engtasktype{Crear esquemas de validación entrada de la api y salida}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{21}{7}{2026}
+		\engtaskenddate{21}{7}{2026}
+		\engtaskdescription{Definir esquemas para gestión completa de etiquetas y gestión parcial/completa de recursos, además de operaciones de asociación y desasociación con características, con validaciones de negocio y formato.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t070]
+		\engtaskuserstory{14}
+		\engtaskname{Implementar repositorios de taxonomías y recursos}
+		\engtasktype{Crear repositorio}
+		\engtaskpointestimation{10}
+		\engtaskstartdate{21}{7}{2026}
+		\engtaskenddate{22}{7}{2026}
+		\engtaskdescription{Implementar repositorios de taxonomías y recursos con búsquedas paginadas, filtros por metadatos y operaciones de vinculación entre entidades, asegurando integridad relacional y consistencia de lectura.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t071]
+		\engtaskuserstory{14}
+		\engtaskname{Implementar servicio de enriquecimiento semántico}
+		\engtasktype{Crear servicio}
+		\engtaskpointestimation{12}
+		\engtaskstartdate{22}{7}{2026}
+		\engtaskenddate{23}{7}{2026}
+		\engtaskdescription{Implementar el servicio de enriquecimiento semántico para aplicar reglas de propiedad, versionado de metadatos y consistencia de asociaciones entre etiquetas, características y recursos educativos.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+
+		\begin{engineeringtask}[tb:engtask_t072]
+		\engtaskuserstory{14}
+		\engtaskname{Exponer endpoints de tags y recursos}
+		\engtasktype{Crear controlador}
+		\engtaskpointestimation{8}
+		\engtaskstartdate{23}{7}{2026}
+		\engtaskenddate{24}{7}{2026}
+		\engtaskdescription{Implementar el controlador de taxonomías y recursos para gestión de etiquetas, asociación/desasociación con características y administración de recursos educativos con metadatos; aplicar reglas de propietario, validaciones de negocio y respuestas consistentes para operaciones parciales y completas.}
+		\engtaskprogrammer{Jose Luis Echemendia López}
+		\end{engineeringtask}
+	
+	\chapter{Pruebas unitarias}
+	\label{anx:pu}	
+
+		\subsubsection*{Servicios}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No1}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+						
+		\multicolumn{2}{c}
+		{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+						
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+						
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+						
+		\hline
+		\endlastfoot
+
+		% Cuerpo de la tabla
+		Descripción: & Verificar que \texttt{FeatureModelVersionManager.}
+		\texttt{create\_new\_version(source\_version=None)} 
+		crea una versión en estado \texttt{DRAFT} con \texttt{version\_number} consecutivo. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{feature\_model.id} válido.
+			\item Mock de \texttt{repository.get\_latest\_version\_number()} retornando 3.
+			\item \texttt{source\_version=None}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Nueva versión con \texttt{version\_number=4}.
+			\item \texttt{status=DRAFT}.
+			\item Se ejecuta \texttt{session.commit()} y \texttt{session.refresh()}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si se cumplen valores y llamadas a sesión.
+			\item Falla si no incrementa versión o no persiste cambios.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No2}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{publish\_version()} rechaza publicar si la versión no está en \texttt{DRAFT}. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Versión con \texttt{status=PUBLISHED}.
+			\item \texttt{validate=True}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Se lanza \texttt{InvalidVersionStateException}.
+			\item No se hace \texttt{commit}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si lanza excepción exacta y no persiste.
+			\item Falla si permite transición inválida.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No3}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{archive\_version()} cambia \texttt{PUBLISHED -> ARCHIVED}. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Versión con \texttt{status=PUBLISHED}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{status=ARCHIVED}.
+			\item Se ejecuta \texttt{commit} y \texttt{refresh}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si transición y persistencia son correctas.
+			\item Falla si estado final no es \texttt{ARCHIVED}.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No4}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{FeatureModelExportService.export()} falla con formato inválido. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Valor de formato no incluido en \texttt{ExportFormat} soportados.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{ValueError} con mensaje de formato no soportado.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si se eleva \texttt{ValueError} y no retorna contenido.
+			\item Falla si intenta exportar sin validar formato.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No5}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{export(ExportFormat.JSON)} retorna contenido serializable. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Versión con features/constraints mínimas.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Cadena JSON válida.
+			\item Incluye metadatos de modelo y versión.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si \texttt{json.loads()} no falla y contiene campos esperados.
+			\item Falla si retorna contenido inválido o incompleto.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No6}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{FeatureModelUVLImporter.validate\_uvl\_only()} valida estructura UVL y no persiste datos. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item UVL válido con sección \texttt{features} y opcional \texttt{constraints}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Resultado con \texttt{is\_valid=True}, \texttt{root}, conteo de \texttt{features} y \texttt{constraints}.
+			\item Sin llamadas a \texttt{session.commit()}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si valida y no modifica \ac{BD}.
+			\item Falla si persiste o retorna estructura incorrecta.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No7}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{\_parse\_uvl()} dispara error cuando la indentación no es múltiplo de 4. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item UVL con línea indentada con 2 espacios.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{UVLParseError} con detalle de indentación inválida.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si se captura \texttt{UVLParseError}.
+			\item Falla si el parser acepta contenido mal indentado.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No8}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{apply\_uvl()} crea una nueva versión, estructura de features y guarda \texttt{uvl\_content}. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item UVL válido.
+			\item Mocks de sesión y \texttt{FeatureModelVersionManager.create\_new\_version()}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Nueva versión con \texttt{uvl\_content} persistido.
+			\item Features creadas con jerarquía válida.
+			\item \texttt{commit} y \texttt{refresh} ejecutados.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si crea estructura y persiste contenido.
+			\item Falla si no crea versión o no guarda UVL.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No9}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{analyze\_version()} combina resultados lógicos/estructurales y añade \texttt{uvl\_validation} cuando hay contenido UVL. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Versión con features y \texttt{uvl\_content}.
+			\item Mocks de validadores y \texttt{validate\_uvl\_only}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{AnalysisSummary} con \texttt{satisfiable}, \texttt{dead\_features}, \texttt{commonality}, \texttt{complexity\_metrics}.
+			\item \texttt{uvl\_validation} presente.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si el summary contiene datos agregados esperados.
+			\item Falla si omite integración de validadores.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No10}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{compare\_versions()} calcula deltas de \texttt{dead\_features}, \texttt{core\_features} y configuraciones. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{base\_version} y \texttt{target\_version} con diferencias controladas (mocks).
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Diccionario con claves \texttt{base}, \texttt{target}, \texttt{delta}.
+			\item Listas de \texttt{*\_added} y \texttt{*\_removed} coherentes.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si los deltas coinciden con el escenario.
+			\item Falla si compara mal o mezcla resultados.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\subsubsection*{Repositorios}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No11}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{BaseUserRepository.validate\_email\_unique()} lanza error si existe usuario. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{existing\_user} no nulo.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{ValueError} con mensaje de email ya registrado.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si bloquea duplicado.
+			\item Falla si permite continuar.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No12}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{BaseDomainRepository.validate\_name\_unique()} permite mismo nombre cuando \texttt{existing\_domain.id == current\_domain\_id}. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{existing\_domain.id} igual a \texttt{current\_domain\_id}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item No excepción.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si no falla en auto-actualización.
+			\item Falla si bloquea un caso válido.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No13}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{validate\_parent\_not\_self(feature\_id, parent\_id)} rechaza autorreferencia. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{feature\_id == parent\_id}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{ValueError} indicando que no puede ser su propio padre.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si detecta autorreferencia.
+			\item Falla si permite ciclo trivial.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No14}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{build\_feature\_tree()} transforma lista plana en árbol por \texttt{parent\_id}. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Lista de features con una raíz y dos hijos.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Lista con 1 raíz y 2 nodos en \texttt{children}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si jerarquía coincide.
+			\item Falla si pierde nodos o relaciones.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No15}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{validate\_same\_version()} falla cuando origen/destino pertenecen a distintas versiones. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{source\_feature.feature\_model\_version\_id != target\_feature.feature\_model\_version\_id}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{ValueError} indicando incompatibilidad de versión.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si bloquea relaciones entre versiones distintas.
+			\item Falla si permite inconsistencia.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No16}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar \texttt{DomainRepository.create()} con datos válidos. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{DomainCreate(name, description)} válido.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Entidad \texttt{Domain} creada y persistida.
+			\item \texttt{is\_active=True} por defecto (si aplica en modelo).
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si persiste y retorna entidad consistente.
+			\item Falla si omite persistencia o retorna datos incompletos.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No17}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{UserRepository.authenticate(email, password)} retorna usuario al recibir credenciales válidas. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Usuario existente.
+			\item Mock de verificación de hash retornando \texttt{True}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Retorna instancia de \texttt{User}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si autentica correctamente.
+			\item Falla si retorna \texttt{None} con credenciales válidas.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No18}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{authenticate()} retorna \texttt{None} con password inválida. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Usuario existente.
+			\item Verificador de hash retornando \texttt{False}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{None}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si no autentica credenciales inválidas.
+			\item Falla si devuelve usuario.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No19}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{FeatureModelVersionRepository.get\_latest\_version\_number()} retorna \texttt{0} cuando no hay versiones y el máximo correcto cuando sí existen. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Escenario A: sin registros.
+			\item Escenario B: versiones con \texttt{version\_number} [1,2,4].
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item A: \texttt{0}.
+			\item B: \texttt{4}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si calcula correctamente en ambos escenarios.
+			\item Falla si retorna \texttt{None} o valor incorrecto.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No20}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar \texttt{get\_statistics(version\_id)} con features, grupos, constraints y relaciones. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Versión con datos de prueba predecibles.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Diccionario con contadores correctos (\texttt{features}, \texttt{groups}, \texttt{constraints}, \texttt{relations}, etc.).
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si contadores coinciden con fixtures.
+			\item Falla si hay desalineación en métricas.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\subsubsection*{3 Excepciones}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{EXC\_HANDLER\_001 — \texttt{\_extract\_object\_from\_request()}}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar normalización de objeto a partir de path y método HTTP. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Request con path \texttt{/api/v1/models/123/versions} y método \texttt{GET}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Objeto \texttt{model.get}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si remueve prefijos (\texttt{api}, \texttt{v1}) y singulariza recurso.
+			\item Falla si retorna objeto no normalizado.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{EXC\_HANDLER\_002 — \texttt{validation\_exception\_handler()}}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que un \texttt{RequestValidationError} genera respuesta estandarizada HTTP 422. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Request válido + excepción de validación con errores de campos.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{JSONResponse} con \texttt{status\_code=422}.
+			\item \texttt{message.category=request\_validation}.
+			\item \texttt{message.error\_code=1001}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si estructura y código de error son correctos.
+			\item Falla si cambia contrato de error.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{EXC\_HANDLER\_003 — \texttt{http\_exception\_handler()}}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar mapeo de códigos para \texttt{HTTPException} (ej. 404). \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{HTTPException(status\_code=404, detail="Not Found")}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{JSONResponse} con \texttt{code=404}, \texttt{error\_code=1005}, \texttt{category=http\_error}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si usa mapa \texttt{\_ERROR\_CODE\_MAP}.
+			\item Falla si devuelve código/mensaje inconsistente.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{EXC\_HANDLER\_004 — \texttt{generic\_exception\_handler()}}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar respuesta controlada para errores no esperados. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{Exception("boom")}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item HTTP 500.
+			\item Mensaje genérico sin filtrar detalle interno.
+			\item \texttt{error\_code=5000}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si no expone detalles sensibles y respeta contrato.
+			\item Falla si filtra stack/error interno al cliente.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{EXC\_BASE\_001 — \texttt{NotFoundException}}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{NotFoundException} inicializa con código 404. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{NotFoundException("X no encontrado")}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{status\_code=404}, \texttt{detail="X no encontrado"}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si hereda y configura correctamente.
+			\item Falla si código HTTP no coincide.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{EXC\_BASE\_002 — \texttt{BusinessLogicException}}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar inicialización de excepción de negocio. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{BusinessLogicException("Regla inválida")}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{status\_code=400}, \texttt{detail} correcto.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si estado y detalle son correctos.
+			\item Falla si usa código distinto.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{EXC\_DOMAIN\_001 — \texttt{DomainAlreadyExistsException}}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar mensaje contextual cuando dominio existe. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{domain\_name="Ingeniería de Software"}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Excepción tipo \texttt{ConflictException} (409).
+			\item Mensaje incluyendo nombre del dominio conflictivo.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si conserva semántica y contexto.
+			\item Falla si mensaje pierde identificador clave.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{EXC\_FM\_001 — \texttt{InvalidVersionStateException}}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar composición de mensaje para transición inválida de versión. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{current\_state="published"}, \texttt{required\_state="draft"}, \texttt{operation="publish version"}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Excepción de negocio con mensaje que incluya estado actual, requerido y operación.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si mensaje es trazable para depuración.
+			\item Falla si omite contexto de transición.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{EXC\_FM\_002 — \texttt{MissingRootFeatureException}}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que se lanza excepción procesable cuando no existe raíz en el árbol. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Instancia directa de \texttt{MissingRootFeatureException()}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Tipo \texttt{UnprocessableEntityException} con HTTP 422.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si mantiene clasificación semántica (error estructural 422).
+			\item Falla si cambia a otro código.
+		\end{itemize}
+		\\
+		\hline
+		
+	\end{longtable}
+
+	\chapter{Pruebas de aceptación}
+	\label{anx:pa}
+
+		\subsubsection*{Épica 1: Gestión de Identidad y Acceso}
+		\subsubsection*{HU-01: Autenticación y Autogestión de cuenta}
+		
+		\begin{acceptancetest}[tb:HU1_P1]
+		\testcasecode{HU1\_P1}
+		\testcasename{Registro de usuario con correo y contraseña}
+		\testcasedescription{Validar que un usuario nuevo pueda registrarse en el sistema con correo y contraseña válidos.}
+		\testcaseexeccond{
+		- El servidor backend está disponible.\\
+		- La base de datos está accesible.\\
+		- No existe un usuario registrado con el correo proporcionado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/auth/register con payload: \{"email": "usuario@test.com", "password": "Pass123!@"\}.\\
+		2. Validar que la respuesta contenga status 201.\\
+		3. Validar que la respuesta incluya el token de autenticación.\\
+		4. Validar que se creó el usuario en la base de datos.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Respuesta contiene access\_token, refresh\_token y user\_id.\\
+		- Usuario registrado en BD con is\_active=True.\\
+		- Contraseña almacenada como hash (no en texto plano).
+		}
+		\testcaseuserstory{1}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU1_P2]
+		\testcasecode{HU1\_P2}
+		\testcasename{Inicio de sesión con correo y contraseña}
+		\testcasedescription{Validar que un usuario registrado pueda iniciar sesión correctamente.}
+		\testcaseexeccond{
+		- El servidor backend está disponible.\\
+		- Existe un usuario registrado con correo test@example.com y contraseña conocida.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/auth/login con payload: \{"email": "test@example.com", "password": "Pass123!@"\}.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que se devuelve un access\_token válido.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta contiene access\_token, refresh\_token y user\_id.\\
+		- El token es válido para futuras peticiones autenticadas.
+		}
+		\testcaseuserstory{1}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU1_P3]
+		\testcasecode{HU1\_P3}
+		\testcasename{Recuperación de acceso mediante token por correo}
+		\testcasedescription{Validar que un usuario pueda solicitar recuperación de contraseña y recibir token por correo.}
+		\testcaseexeccond{
+		- El servidor backend está disponible.\\
+		- El servicio de correo está configurado.\\
+		- Existe un usuario con correo usuario@test.com.\\
+		- El usuario se ha registrado previamente.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/auth/forgot-password con payload: \{"email": "usuario@test.com"\}.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que se envió un correo con token de recuperación.\\
+		4. Extraer token del correo y enviar PUT a /api/v1/auth/reset-password con payload: \{"token": "<token>", "new\_password": "NewPass456!@"\}.\\
+		5. Validar que la contraseña se actualizó.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK (solicitud).\\
+		- Se envía correo con token de recuperación.\\
+		- Status HTTP: 200 OK (reset).\\
+		- Usuario puede iniciar sesión con nueva contraseña.\\
+		- Token anterior se invalida.
+		}
+		\testcaseuserstory{1}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU1_P4]
+		\testcasecode{HU1\_P4}
+		\testcasename{Edición de perfil propio sin intervención administrativa}
+		\testcasedescription{Validar que un usuario autenticado pueda actualizar su perfil (correo, nombre) sin necesidad de administrador.}
+		\testcaseexeccond{
+		- Usuario está autenticado con token válido.\\
+		- El nuevo correo no está registrado en otro usuario.\\
+		- El usuario tiene permisos para editar su propio perfil.
+		}
+		\testcaseexecstep{
+		1. Enviar PUT a /api/v1/auth/profile con headers de autenticación y payload: \{"email": "nuevo@test.com", "first\_name": "Juan", "last\_name": "Pérez"\}.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Consultar GET /api/v1/auth/profile para confirmar cambios.\\
+		4. Validar que los datos actualizados coinciden.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Perfil actualizado en base de datos.\\
+		- Respuesta contiene los datos actualizados.\\
+		- Token sigue siendo válido.\\
+		- Cambios persistidos en BD.
+		}
+		\testcaseuserstory{1}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU1_P5]
+		\testcasecode{HU1\_P5}
+		\testcasename{Cierre de sesión}
+		\testcasedescription{Validar que un usuario pueda cerrar sesión invalidando su token.}
+		\testcaseexeccond{
+		- Usuario está autenticado con token válido.\\
+		- El servidor mantiene una lista de tokens revocados.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/auth/logout con headers de autenticación.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Intentar acceder a un endpoint protegido con el token anterior.\\
+		4. Validar que se rechaza la petición.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Token se añade a lista de revocación.\\
+		- Peticiones posteriores con ese token retornan 401 Unauthorized.\\
+		- Mensaje: "Token revoked or expired".
+		}
+		\testcaseuserstory{1}
+		\end{acceptancetest}
+
+		\subsubsection*{HU-02: Administración de Usuarios y Permisos}
+	
+		\begin{acceptancetest}[tb:HU2_P1]
+		\testcasecode{HU2\_P1}
+		\testcasename{Listar usuarios con filtro por rol}
+		\testcasedescription{Validar que un administrador puede obtener listado de usuarios filtrados por rol.}
+		\testcaseexeccond{
+		- Usuario es administrador (rol=ADMIN).\\
+		- Existen usuarios con diferentes roles en la BD.\\
+		- Usuario está autenticado con token de administrador.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/admin/users?role=EDITOR\&skip=0\&limit=10 con headers de autenticación.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que todos los usuarios retornados tienen role="EDITOR".\\
+		4. Validar que la respuesta incluye total, skip, limit.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta contiene arreglo de usuarios filtrados por rol.\\
+		- Cada usuario incluye: id, email, first\_name, last\_name, role, is\_active.\\
+		- Paginación correcta.
+		}
+		\testcaseuserstory{2}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU2_P2]
+		\testcasecode{HU2\_P2}
+		\testcasename{Listar usuarios con filtro por nombre}
+		\testcasedescription{Validar que un administrador puede filtrar usuarios por nombre completo.}
+		\testcaseexeccond{
+		- Usuario es administrador.\\
+		- Existen usuarios registrados con nombres distintos.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/admin/users?name=Juan\&skip=0\&limit=10 con headers de autenticación.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que todos los usuarios retornados contienen "Juan" en nombre o apellido.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta contiene usuarios cuyo nombre/apellido contiene la búsqueda.\\
+		- Búsqueda es case-insensitive.
+		}
+		\testcaseuserstory{2}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU2_P3]
+		\testcasecode{HU2\_P3}
+		\testcasename{Modificar rol de usuario}
+		\testcasedescription{Validar que un administrador puede cambiar el rol asignado a un usuario.}
+		\testcaseexeccond{
+		- Usuario es administrador.\\
+		- Existe un usuario con rol VIEWER.\\
+		- Usuario está autenticado con credenciales de admin.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de usuario a modificar.\\
+		2. Enviar PUT a /api/v1/admin/users/\{user\_id\}/role con payload: \{"role": "EDITOR"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar GET /api/v1/admin/users/\{user\_id\} para confirmar cambio.\\
+		5. Verificar que role="EDITOR".
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta contiene usuario actualizado con nuevo rol.\\
+		- BD refleja el cambio.\\
+		- Permisos del usuario se actualizan dinámicamente.
+		}
+		\testcaseuserstory{2}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU2_P4]
+		\testcasecode{HU2\_P4}
+		\testcasename{Desactivar cuenta de usuario sin eliminar información}
+		\testcasedescription{Validar que un administrador puede desactivar una cuenta sin eliminar los datos.}
+		\testcaseexeccond{
+		- Usuario es administrador.\\
+		- Existe un usuario activo.\\
+		- No se permiten borrados físicos en el sistema.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de usuario a desactivar.\\
+		2. Enviar PUT a /api/v1/admin/users/\{user\_id\}/status con payload: \{"is\_active": false\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Intentar que el usuario desactivado inicie sesión.\\
+		5. Verificar que el login falla con mensaje de cuenta desactivada.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Usuario marcado como is\_active=False en BD.\\
+		- Datos del usuario persisten en BD.\\
+		- Usuario no puede autenticarse.\\
+		- Mensaje: "User account is deactivated".
+		}
+		\testcaseuserstory{2}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU2_P5]
+		\testcasecode{HU2\_P5}
+		\testcasename{Reactivar cuenta de usuario}
+		\testcasedescription{Validar que un administrador puede reactivar una cuenta desactivada.}
+		\testcaseexeccond{
+		- Usuario es administrador.\\
+		- Existe un usuario desactivado (is\_active=False).\\
+		- Los datos del usuario están intactos en BD.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de usuario a reactivar.\\
+		2. Enviar PUT a /api/v1/admin/users/\{user\_id\}/status con payload: \{"is\_active": true\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Intentar autenticar con el usuario reactivado.\\
+		5. Verificar que el login es exitoso.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Usuario marcado como is\_active=True.\\
+		- Datos originales restaurados.\\
+		- Usuario puede autenticarse normalmente.
+		}
+		\testcaseuserstory{2}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 2: Gestión de Dominios Curriculares}
+		\subsubsection*{HU-03: Gestión de Dominios de Conocimiento}
+
+		\begin{acceptancetest}[tb:HU3_P1]
+		\testcasecode{HU3\_P1}
+		\testcasename{Crear dominio con nombre y descripción}
+		\testcasedescription{Validar que un administrador puede crear un nuevo dominio curricular.}
+		\testcaseexeccond{
+		- Usuario es administrador.\\
+		- Usuario está autenticado.\\
+		- No existe un dominio con el mismo nombre.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/domains con payload: \{"name": "Ingeniería de Software", "description": "Dominio para estudios en ingeniería de software"\}.\\
+		2. Validar que la respuesta contenga status 201.\\
+		3. Verificar que se retorna id, name, description, is\_active, created\_at.\\
+		4. Consultar BD para confirmar persistencia.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Respuesta contiene ID generado y campos completos.\\
+		- Dominio se crea con is\_active=True por defecto.\\
+		- created\_at y updated\_at se establecen automáticamente.
+		}
+		\testcaseuserstory{3}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU3_P2]
+		\testcasecode{HU3\_P2}
+		\testcasename{Obtener dominio con modelos asociados}
+		\testcasedescription{Validar que se puede obtener un dominio junto con todos sus modelos vinculados.}
+		\testcaseexeccond{
+		- Existe un dominio con ID conocido.\\
+		- El dominio tiene modelos asociados.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/domains/\{domain\_id\}?include\_models=true con headers de autenticación.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que la respuesta incluye id, name, description, is\_active.\\
+		4. Verificar que incluye array models con todos los modelos del dominio.\\
+		5. Cada modelo debe contener: id, name, domain\_id, created\_at.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta contiene información del dominio.\\
+		- Array models contiene todos los modelos vinculados.\\
+		- Modelos activos e inactivos se incluyen (según filtro).
+		}
+		\testcaseuserstory{3}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU3_P3]
+		\testcasecode{HU3\_P3}
+		\testcasename{Desactivar dominio}
+		\testcasedescription{Validar que un administrador puede desactivar un dominio sin eliminar información.}
+		\testcaseexeccond{
+		- Usuario es administrador.\\
+		- Existe un dominio activo.\\
+		- El dominio puede no tener modelos o tenerlos.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de dominio a desactivar.\\
+		2. Enviar PUT a /api/v1/domains/\{domain\_id\} con payload: \{"is\_active": false\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar GET /api/v1/domains/\{domain\_id\} para confirmar.\\
+		5. Verificar que is\_active=False.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Dominio marcado como is\_active=False.\\
+		- Información persiste en BD.\\
+		- Modelos del dominio no son eliminados.
+		}
+		\testcaseuserstory{3}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU3_P4]
+		\testcasecode{HU3\_P4}
+		\testcasename{Listar todos los dominios}
+		\testcasedescription{Validar que se puede obtener un listado paginado de dominios.}
+		\testcaseexeccond{
+		- Existen múltiples dominios en la BD.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/domains?skip=0\&limit=10 con headers de autenticación.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que se retorna array de dominios.\\
+		4. Cada dominio incluye: id, name, description, is\_active, created\_at.\\
+		5. Validar paginación: total, skip, limit.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de dominios ordenados por fecha.\\
+		- Paginación correcta.\\
+		- Total de registros se incluye.
+		}
+		\testcaseuserstory{3}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 3: Ciclo de Vida del \ac{FM}}
+		\subsubsection*{HU-04: Gestión Operativa de \ac{FM}}
+		
+		\begin{acceptancetest}[tb:HU4_P1]
+		\testcasecode{HU4\_P1}
+		\testcasename{Crear modelo asociado a dominio válido}
+		\testcasedescription{Validar que se puede crear un nuevo modelo de características en un dominio existente.}
+		\testcaseexeccond{
+		- Usuario es diseñador o administrador.\\
+		- Existe un dominio activo.\\
+		- Usuario está autenticado.\\
+		- No existe modelo con igual nombre en el dominio.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de dominio válido.\\
+		2. Enviar POST a /api/v1/models con payload: \{"name": "Plan 2024", "description": "Modelo curricular 2024", "domain\_id": "<domain\_id>"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se retorna id, name, domain\_id, created\_at.\\
+		5. Validar que existe en BD.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Modelo creado con is\_active=True.\\
+		- Respuesta incluye ID generado.\\
+		- domain\_id está vinculado correctamente.\\
+		- Timestamps (created\_at, updated\_at) se establecen.
+		}
+		\testcaseuserstory{4}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU4_P2]
+		\testcasecode{HU4\_P2}
+		\testcasename{Actualizar metadatos del modelo}
+		\testcasedescription{Validar que los metadatos de un modelo pueden actualizarse sin afectar la estructura.}
+		\testcaseexeccond{
+		- Existe un modelo con ID conocido.\\
+		- Usuario es diseñador del modelo o administrador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de modelo.\\
+		2. Enviar PUT a /api/v1/models/\{model\_id\} con payload: \{"name": "Plan 2024 v2", "description": "Modelo actualizado"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar GET /api/v1/models/\{model\_id\} para confirmar.\\
+		5. Verificar que metadata está actualizada y estructura intacta.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Metadatos actualizados en BD.\\
+		- Estructura del modelo no se modifica.\\
+		- updated\_at se actualiza.\\
+		- Versiones no se ven afectadas.
+		}
+		\testcaseuserstory{4}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU4_P3]
+		\testcasecode{HU4\_P3}
+		\testcasename{Listar modelos con paginación y filtrado}
+		\testcasedescription{Validar que se pueden listar modelos con paginación, ordenamiento y filtros.}
+		\testcaseexeccond{
+		- Existen múltiples modelos en la BD.\\
+		- Modelos están vinculados a dominios.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models?domain\_id=<id>\&skip=0\&limit=10\&sort=-created\_at con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que se retorna array de modelos.\\
+		4. Validar paginación: total, skip, limit.\\
+		5. Verificar que ordenamiento es correcto (descendente por created\_at).
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de modelos paginados.\\
+		- Filtrado por dominio correctamente aplicado.\\
+		- Ordenamiento correcto.\\
+		- Total de registros incluido.
+		}
+		\testcaseuserstory{4}
+		\end{acceptancetest}
+
+		\subsubsection*{HU-05: Gestión de Versiones y Publicación}
+
+		\begin{acceptancetest}[tb:HU5_P1]
+		\testcasecode{HU5\_P1}
+		\testcasename{Crear nueva versión mediante copia al escribir}
+		\testcasedescription{Validar que se puede crear una nueva versión duplicando una versión existente (Copy-on-Write).}
+		\testcaseexeccond{
+		- Existe un modelo con versión publicada.\\
+		- Usuario es diseñador del modelo.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de modelo e ID de versión origen.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions con payload: \{"version\_origin\_id": "<version\_id>", "description": "Version 2.0"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se crea versión con estado "DRAFT".\\
+		5. Validar que la estructura se copió desde versión origen.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Nueva versión creada con estado DRAFT.\\
+		- Copia completa de la estructura anterior.\\
+		- Versión origen no se modifica.\\
+		- Versión nueva tiene version\_number incrementado.
+		}
+		\testcaseuserstory{5}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU5_P2]
+		\testcasecode{HU5\_P2}
+		\testcasename{Validar versión antes de publicación}
+		\testcasedescription{Validar que se ejecutan validaciones antes de permitir publicación de versión.}
+		\testcaseexeccond{
+		- Existe una versión en estado DRAFT.\\
+		- Versión tiene estructura válida o inválida.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de versión.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Respuesta incluye: is\_valid, errors (si los hay), warnings.\\
+		5. Si es válida, usar para publicación; si no, mostrar errores.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta incluye estado de validación.\\
+		- Listado de errores estructurales/lógicos si existen.\\
+		- Listado de advertencias.\\
+		- Puede proceder a publicación si is\_valid=true.
+		}
+		\testcaseuserstory{5}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU5_P3]
+		\testcasecode{HU5\_P3}
+		\testcasename{Publicar versión de modelo}
+		\testcasedescription{Validar que una versión validada puede publicarse y pasar a estado PUBLISHED.}
+		\testcaseexeccond{
+		- Existe versión en estado DRAFT validada.\\
+		- Versión no tiene errores críticos.\\
+		- Usuario es revisor o administrador.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de versión en estado DRAFT.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/publish con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Verificar que estado cambia a PUBLISHED.\\
+		5. Consultar la versión para confirmar cambio de estado.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Estado cambia a PUBLISHED.\\
+		- published\_at se establece con timestamp actual.\\
+		- Versión anterior (si existe) pasa a estado ARCHIVED (opcional).\\
+		- Configuraciones pueden vincularse a esta versión.
+		}
+		\testcaseuserstory{5}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU5_P4]
+		\testcasecode{HU5\_P4}
+		\testcasename{Recuperar versiones archivadas}
+		\testcasedescription{Validar que se pueden listar y recuperar versiones archivadas.}
+		\testcaseexeccond{
+		- Existen versiones en estado ARCHIVED.\\
+		- Usuario está autenticado.\\
+		- Usuario tiene permisos para ver historial.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/versions?status=ARCHIVED con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que se retornan solo versiones ARCHIVED.\\
+		4. Cada versión incluye: id, version\_number, status, archived\_at, created\_at.\\
+		5. Seleccionar una versión y enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de versiones archivadas.\\
+		- Información completa de cada versión.\\
+		- Timestamps de archivación incluidos.\\
+		- Puede recuperar estructura de versión archivada.
+		}
+		\testcaseuserstory{5}
+		\end{acceptancetest}
+
+		\subsubsection*{HU-06: Análisis de Métricas y Exportación}
+
+		\begin{acceptancetest}[tb:HU6_P1]
+		\testcasecode{HU6\_P1}
+		\testcasename{Calcular métricas de versión publicada}
+		\testcasedescription{Validar que se pueden calcular métricas de la versión publicada más reciente.}
+		\testcaseexeccond{
+		- Existe un modelo con versión PUBLISHED.\\
+		- La versión tiene estructura completa.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/metrics con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que incluye métricas: feature\_count, group\_count, constraint\_count, cyclomatic\_complexity, tree\_depth.\\
+		4. Verificar que se calcula sobre versión PUBLISHED.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta incluye todas las métricas.\\
+		- Valores son números enteros >= 0.\\
+		- Cálculo se realiza sobre versión publicada.\\
+		- Valores coinciden con estructura del modelo.
+		}
+		\testcaseuserstory{6}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU6_P2]
+		\testcasecode{HU6\_P2}
+		\testcasename{Exportar modelo en formato UVL}
+		\testcasedescription{Validar que el modelo se puede exportar en formato UVL válido.}
+		\testcaseexeccond{
+		- Existe un modelo con versión PUBLISHED.\\
+		- La versión tiene estructura completa.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=uvl con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que el Content-Type es text/plain o application/x-uvl.\\
+		4. Validar que el contenido es UVL válido (comienza con features o namespace, tiene sintaxis correcta).\\
+		5. Guardar contenido en archivo .uvl y validar.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Content-Type correcto.\\
+		- UVL contiene sintaxis válida.\\
+		- Todas las features, grupos y restricciones están representadas.\\
+		- Puede descargarse como archivo.
+		}
+		\testcaseuserstory{6}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU6_P3]
+		\testcasecode{HU6\_P3}
+		\testcasename{Exportar modelo en formato JSON}
+		\testcasedescription{Validar que el modelo se puede exportar en formato JSON.}
+		\testcaseexeccond{
+		- Existe un modelo con versión PUBLISHED.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=json con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que Content-Type es application/json.\\
+		4. Validar que es JSON válido (se puede parsear).\\
+		5. Verificar que incluye: model, version, features, groups, constraints.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- JSON válido y bien formado.\\
+		- Estructura incluye todos los componentes del modelo.\\
+		- Puede descargarse como .json.
+		}
+		\testcaseuserstory{6}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU6_P4]
+		\testcasecode{HU6\_P4}
+		\testcasename{Exportar modelo en formato \ac{DOT}}
+		\testcasedescription{Validar que el modelo se puede exportar en formato \ac{DOT} para visualización.}
+		\testcaseexeccond{
+		- Existe un modelo con versión PUBLISHED.\\
+		- Usuario está autenticado.\\
+		- El sistema tiene funcionalidad de generación de grafos.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=dot con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que Content-Type es text/plain o text/vnd.graphviz.\\
+		4. Validar sintaxis \ac{DOT} (comienza con digraph o graph).\\
+		5. Intentar renderizar con Graphviz para validar.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Sintaxis \ac{DOT} válida.\\
+		- Nodos representan features.\\
+		- Aristas representan relaciones jerárquicas.\\
+		- Puede visualizarse con herramientas Graphviz.
+		}
+		\testcaseuserstory{6}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU6_P5]
+		\testcasecode{HU6\_P5}
+		\testcasename{Exportar modelo en formato Mermaid}
+		\testcasedescription{Validar que el modelo se puede exportar en formato Mermaid para diagramas interactivos.}
+		\testcaseexeccond{
+		- Existe un modelo con versión PUBLISHED.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=mermaid con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Validar sintaxis Mermaid (comienza con graph o flowchart).\\
+		4. Verificar que incluye features como nodos.\\
+		5. Verificar que relaciones están correctamente representadas.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Sintaxis Mermaid válida.\\
+		- Diagrama representa jerarquía del modelo.\\
+		- Compatible con Mermaid.js.
+		}
+		\testcaseuserstory{6}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 4: Modelado de Variabilidad Estructural}
+		\subsubsection*{HU-07: Edición de la Jerarquía de Características}
+
+		\begin{acceptancetest}[tb:HU7_P1]
+		\testcasecode{HU7\_P1}
+		\testcasename{Crear feature en versión de modelo}
+		\testcasedescription{Validar que se puede crear una nueva feature en una versión específica.}
+		\testcaseexeccond{
+		- Existe un modelo con versión DRAFT.\\
+		- Usuario es diseñador del modelo.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de modelo e ID de versión.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features con payload: \{"name": "Módulo A", "type": "CONCRETE"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se retorna id, name, type, version\_id, parent\_id.\\
+		5. Validar que existe en BD.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Feature creada con ID generado.\\
+		- Type es CONCRETE, ABSTRACT u OPTIONAL según especificación.\\
+		- Sin padre (raíz) inicialmente.\\
+		- Timestamps se establecen.
+		}
+		\testcaseuserstory{7}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU7_P2]
+		\testcasecode{HU7\_P2}
+		\testcasename{Reubicar feature cambiando padre}
+		\testcasedescription{Validar que una feature puede ser reubicada cambiando su padre.}
+		\testcaseexeccond{
+		- Existe una feature con padre.\\
+		- Existe otra feature que será el nuevo padre.\\
+		- Cambio no crearía ciclo.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de feature a mover y ID de nuevo padre.\\
+		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\} con payload: \{"parent\_id": "<new\_parent\_id>"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar feature para confirmar nuevo padre.\\
+		5. Verificar que subárbol se movió correctamente.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Padre actualizado.\\
+		- Subárbol completo se mueve con la feature.\\
+		- Estructura jerarquía mantiene integridad.\\
+		- No se crea ciclo.
+		}
+		\testcaseuserstory{7}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU7_P3]
+		\testcasecode{HU7\_P3}
+		\testcasename{Recuperar subárbol completo de feature}
+		\testcasedescription{Validar que se puede obtener una feature con toda su estructura descendente.}
+		\testcaseexeccond{
+		- Existe una feature con descendientes.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de feature.\\
+		2. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}?include\_subtree=true con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Verificar que incluye la feature y su array de children.\\
+		5. Verificar que cada child incluye sus propios children (recursivo).
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Feature principal incluida.\\
+		- Array children contiene todas las features descendentes.\\
+		- Estructura jerárquica completa preservada.\\
+		- Profundidad del árbol representada correctamente.
+		}
+		\testcaseuserstory{7}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU7_P4]
+		\testcasecode{HU7\_P4}
+		\testcasename{Desactivar feature con soporte de versionado}
+		\testcasedescription{Validar que una feature puede ser desactivada lógicamente manteniéndola en la BD.}
+		\testcaseexeccond{
+		- Existe una feature activa.\\
+		- Feature no es raíz del árbol.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de feature a desactivar.\\
+		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\} con payload: \{"is\_active": false\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar feature para confirmar is\_active=False.\\
+		5. Verificar que no afecta otras versiones.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Feature marcada como is\_active=False.\\
+		- Feature permanece en BD.\\
+		- Otros cambios no afectados.\\
+		- Versionado mantiene registro del cambio.
+		}
+		\testcaseuserstory{7}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU7_P5]
+		\testcasecode{HU7\_P5}
+		\testcasename{Actualizar propiedades de feature}
+		\testcasedescription{Validar que se pueden actualizar propiedades de una feature.}
+		\testcaseexeccond{
+		- Existe una feature.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de feature.\\
+		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\} con payload: \{"name": "Nuevo nombre", "type": "ABSTRACT"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar feature para confirmar cambios.\\
+		5. Verificar que metadata se actualizó.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Nombre actualizado.\\
+		- Tipo actualizado.\\
+		- updated\_at se actualiza.\\
+		- Cambios persistidos en BD.
+		}
+		\testcaseuserstory{7}
+		\end{acceptancetest}
+
+		\subsubsection*{HU-08: Modelado de Grupos y Relaciones Estructurales}
+
+		\begin{acceptancetest}[tb:HU8_P1]
+		\testcasecode{HU8\_P1}
+		\testcasename{Crear grupo XOR entre features}
+		\testcasedescription{Validar que se puede crear un grupo XOR (exactamente uno) entre features hermanas.}
+		\testcaseexeccond{
+		- Existen features hermanas en versión DRAFT.\\
+		- Features tienen mismo padre.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de features a agrupar.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups con payload: \{"group\_type": "XOR", "parent\_id": "<parent\_id>"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se retorna id, group\_type, parent\_id, min\_cardinality=1, max\_cardinality=1.\\
+		5. Asignar features al grupo.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Grupo creado con group\_type=XOR.\\
+		- Cardinalidades establecidas: min=1, max=1.\\
+		- ID generado.\\
+		- Grupo listo para asignar features.
+		}
+		\testcaseuserstory{8}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU8_P2]
+		\testcasecode{HU8\_P2}
+		\testcasename{Crear grupo OR con cardinalidades}
+		\testcasedescription{Validar que se puede crear un grupo OR con cardinalidades mínimas y máximas personalizadas.}
+		\testcaseexeccond{
+		- Existen features hermanas en versión DRAFT.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de padre.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups con payload: \{"group\_type": "OR", "parent\_id": "<parent\_id>", "min\_cardinality": 1, "max\_cardinality": 3\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que cardinalidades se establecen correctamente.\\
+		5. Asignar features al grupo.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Grupo creado con group\_type=OR.\\
+		- Cardinalidades: min=1, max=3.\\
+		- Validación: min >= 1 y max >= min.\\
+		- Grupo aceptará entre 1 y 3 features seleccionadas.
+		}
+		\testcaseuserstory{8}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU8_P3]
+		\testcasecode{HU8\_P3}
+		\testcasename{Crear relación requires entre features}
+		\testcasedescription{Validar que se puede crear una relación de implicación (requires) entre features.}
+		\testcaseexeccond{
+		- Existen dos features en versión DRAFT.\\
+		- Features pueden estar en diferentes ramas.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de feature origen y destino.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships con payload: \{"relationship\_type": "REQUIRES", "source\_id": "<feature\_id\_1>", "target\_id": "<feature\_id\_2>"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se retorna relación con IDs correctos.\\
+		5. Guardar ID de relación.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Relación creada.\\
+		- Tipo: REQUIRES (implicación).\\
+		- Source y target correctos.\\
+		- Bidireccional en términos de consulta.
+		}
+		\testcaseuserstory{8}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU8_P4]
+		\testcasecode{HU8\_P4}
+		\testcasename{Crear relación excludes entre features}
+		\testcasedescription{Validar que se puede crear una relación de exclusión entre features.}
+		\testcaseexeccond{
+		- Existen dos features en versión DRAFT.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de features a relacionar.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships con payload: \{"relationship\_type": "EXCLUDES", "source\_id": "<id\_1>", "target\_id": "<id\_2>"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que relación se crea.\\
+		5. Intentar crear configuración con ambas features (debe fallar).
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Relación de exclusión creada.\\
+		- Ambas features no pueden seleccionarse simultáneamente.\\
+		- Validación de configuraciones lo verifica.
+		}
+		\testcaseuserstory{8}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU8_P5]
+		\testcasecode{HU8\_P5}
+		\testcasename{Listar grupos y relaciones de versión}
+		\testcasedescription{Validar que se pueden obtener todos los grupos y relaciones de una versión.}
+		\testcaseexeccond{
+		- Existe versión con grupos y relaciones.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar array de grupos con id, group\_type, parent\_id, min\_cardinality, max\_cardinality.\\
+		4. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships.\\
+		5. Verificar array de relaciones.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK (ambas).\\
+		- Todos los grupos listados.\\
+		- Todas las relaciones listadas.\\
+		- Información completa de cada grupo/relación.
+		}
+		\testcaseuserstory{8}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 5: Restricciones y Lógica Avanzada}
+		\subsubsection*{HU-09: Gestión de Restricciones Transversales}
+
+		\begin{acceptancetest}[tb:HU9_P1]
+		\testcasecode{HU9\_P1}
+		\testcasename{Crear restricción simples con sintaxis UVL}
+		\testcasedescription{Validar que se puede crear una restricción simple con expresión lógica.}
+		\testcaseexeccond{
+		- Existe versión DRAFT con features.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de versión.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints con payload: \{"expression": "FeatureA => FeatureB", "description": "Si A entonces B"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se parsea y valida la expresión.\\
+		5. Guardar ID de restricción.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Restricción creada con ID.\\
+		- Expresión validada sintácticamente.\\
+		- Descripción opcional almacenada.\\
+		- Restricción activa.
+		}
+		\testcaseuserstory{9}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU9_P2]
+		\testcasecode{HU9\_P2}
+		\testcasename{Crear restricción compleja con múltiples operadores}
+		\testcasedescription{Validar que se pueden crear restricciones complejas con operadores lógicos.}
+		\testcaseexeccond{
+		- Existe versión DRAFT con features.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de versión.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints con payload: \{"expression": "(FeatureA | FeatureB) \& \textasciitilde FeatureC => FeatureD", "description": "Restricción compleja"\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se valida correctamente.\\
+		5. Intentar añadir a validación del modelo.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Restricción con múltiples operadores aceptada.\\
+		- Sintaxis: |, \&, \textasciitilde, =>, válidas.\\
+		- Expresión se almacena correctamente.
+		}
+		\testcaseuserstory{9}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU9_P3]
+		\testcasecode{HU9\_P3}
+		\testcasename{Actualizar restricción existente}
+		\testcasedescription{Validar que una restricción puede ser actualizada con nueva expresión.}
+		\testcaseexeccond{
+		- Existe restricción en versión DRAFT.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de restricción.\\
+		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints/\{constraint\_id\} con payload: \{"expression": "FeatureA \& FeatureB => FeatureC", "description": "Expresión actualizada"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar restricción para confirmar cambios.\\
+		5. Verificar que versionado registra el cambio.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Expresión actualizada.\\
+		- Nueva expresión validada.\\
+		- Descripción actualizada.\\
+		- updated\_at se modifica.
+		}
+		\testcaseuserstory{9}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU9_P4]
+		\testcasecode{HU9\_P4}
+		\testcasename{Listar restricciones de versión}
+		\testcasedescription{Validar que se pueden obtener todas las restricciones de una versión.}
+		\testcaseexeccond{
+		- Existe versión con restricciones.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar array de restricciones.\\
+		4. Cada restricción incluye: id, expression, description, is\_active, created\_at.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de todas las restricciones.\\
+		- Información completa de cada restricción.\\
+		- Ordenadas por fecha de creación.
+		}
+		\testcaseuserstory{9}
+		\end{acceptancetest}
+
+		\subsubsection*{HU-010: Integración y Sincronización \ac{UVL}}
+		
+		\begin{acceptancetest}[tb:HU10_P1]
+		\testcasecode{HU10\_P1}
+		\testcasename{Aplicar contenido \ac{UVL} a estructura de modelo}
+		\testcasedescription{Validar que se puede cargar un modelo completo desde contenido \ac{UVL}.}
+		\testcaseexeccond{
+		- Existe una versión DRAFT vacía.\\
+		- Se dispone de contenido \ac{UVL} válido.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Preparar contenido \ac{UVL} válido (features, grupos, restricciones).\\
+		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl con payload: \{"content": "<contenido UVL>"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar la estructura generada del modelo.\\
+		5. Verificar que árbol, grupos y restricciones se crearon correctamente.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Estructura del modelo se genera desde \ac{UVL}.\\
+		- Todas las features se crean.\\
+		- Todos los grupos se crean.\\
+		- Todas las restricciones se crean.\\
+		- Estructura coincide con \ac{UVL} original.
+		}
+		\testcaseuserstory{10}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU10_P2]
+		\testcasecode{HU10\_P2}
+		\testcasename{Exportar contenido \ac{UVL} desde modelo}
+		\testcasedescription{Validar que se puede generar contenido \ac{UVL} válido desde la estructura del modelo.}
+		\testcaseexeccond{
+		- Existe versión PUBLISHED con estructura completa.\\
+		- Estructura es válida.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=uvl con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Extraer contenido \ac{UVL}.\\
+		4. Validar sintaxis \ac{UVL}.\\
+		5. Importar \ac{UVL} en nueva versión y comparar estructura.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- UVL válido y bien formado.\\
+		- Contiene todas las features, grupos y restricciones.\\
+		- Re-importación genera estructura idéntica.
+		}
+		\testcaseuserstory{10}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU10_P3]
+		\testcasecode{HU10\_P3}
+		\testcasename{Persistir UVL analizado en versión}
+		\testcasedescription{Validar que el contenido UVL se analiza, valida y persiste en la BD.}
+		\testcaseexeccond{
+		- Existe versión DRAFT.\\
+		- Se carga contenido UVL válido.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl con contenido UVL.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Consultar GET /api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl.\\
+		4. Verificar que el UVL almacenado coincide con el original.\\
+		5. Validar que existe en BD.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK (ambas).\\
+		- UVL almacenado en BD.\\
+		- Análisis y tokens se persisten.\\
+		- Puede recuperarse completo.\\
+		- Válido para re-importación.
+		}
+		\testcaseuserstory{10}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 6: Validación y Análisis de Modelos}
+		\subsubsection*{HU-11: Validación Lógica y Estructural del Modelo}
+		
+		\begin{acceptancetest}[tb:HU11_P1]
+		\testcasecode{HU11\_P1}
+		\testcasename{Evaluar satisfacibilidad global del modelo}
+		\testcasedescription{Validar que se puede ejecutar un análisis SAT sobre el modelo completo.}
+		\testcaseexeccond{
+		- Existe versión con estructura y restricciones.\\
+		- Sistema tiene integración con solucionador SAT.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/satisfiability con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que respuesta incluye: is\_satisfiable, error\_message (si aplica).\\
+		4. Si es satisfiable, debe existir al menos una configuración válida.\\
+		5. Si no es satisfiable, revisar restricciones.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta incluye is\_satisfiable (true/false).\\
+		- Si false, mensaje de error explicando por qué.\\
+		- Cálculo se ejecuta sobre modelo completo.\\
+		- Tiempo de ejecución razonable.
+		}
+		\testcaseuserstory{11}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU11_P2]
+		\testcasecode{HU11\_P2}
+		\testcasename{Detectar ciclos en la jerarquía}
+		\testcasedescription{Validar que se detectan ciclos en la relaciones entre features.}
+		\testcaseexeccond{
+		- Existe versión con estructura.\\
+		- Estructura puede contener ciclos (intencional para testing).\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Crear escenario con ciclo: A->B->C->A.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/structure con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Verificar que se reporta error: "Cycle detected: A->B->C->A".\\
+		5. Listar features participantes.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta incluye lista de ciclos detectados.\\
+		- Cada ciclo lista features que participan.\\
+		- Mensaje claro de error.
+		}
+		\testcaseuserstory{11}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU11_P3]
+		\testcasecode{HU11\_P3}
+		\testcasename{Identificar características muertas}
+		\testcasedescription{Validar que se detectan características que nunca pueden ser seleccionadas (dead features).}
+		\testcaseexeccond{
+		- Existe versión con restricciones que hacen imposible seleccionar cierta feature.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Crear estructura con feature imposible de seleccionar.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/analyze/dead-features con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Verificar array de features muertas.\\
+		5. Cada feature incluye razón por la que es muerta.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de features muertas identificadas.\\
+		- Explicación de por qué es muerta.\\
+		- Análisis completo y correcto.
+		}
+		\testcaseuserstory{11}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU11_P4]
+		\testcasecode{HU11\_P4}
+		\testcasename{Detectar nodos huérfanos}
+		\testcasedescription{Validar que se detectan features que no tienen ruta a raíz.}
+		\testcaseexeccond{
+		- Existe versión con estructura.\\
+		- Se intenta crear feature sin padre (orphan).\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Buscar features sin ruta a raíz.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/structure con headers.\\
+		3. Validar que la respuesta reporta nodos huérfanos.\\
+		4. Verificar que lista los IDs de nodos huérfanos.\\
+		5. Mensaje explicativo.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Lista de nodos huérfanos detectados.\\
+		- Explicación clara.\\
+		- Recomendación de reparación.
+		}
+		\testcaseuserstory{11}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU11_P5]
+		\testcasecode{HU11\_P5}
+		\testcasename{Ejecutar validación completa}
+		\testcasedescription{Validar que se ejecuta suite completa de validaciones en un paso.}
+		\testcaseexeccond{
+		- Existe versión con estructura.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/full con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Respuesta incluye: satisfiable, cycles, dead\_features, orphan\_nodes, warnings.\\
+		4. Cada sección tiene lista de errores/warnings.\\
+		5. Resumen general de validación.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta incluye todas las validaciones.\\
+		- Formato consistente.\\
+		- Fácil de interpretar.\\
+		- Guía para correcciones.
+		}
+		\testcaseuserstory{11}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 7: Configuración, Optimización y Recursos}
+		\subsubsection*{HU-12: Gestión de Configuraciones}
+
+		\begin{acceptancetest}[tb:HU12_P1]
+		\testcasecode{HU12\_P1}
+		\testcasename{Crear configuración en versión publicada}
+		\testcasedescription{Validar que se puede crear una configuración (selección de features) en una versión publicada.}
+		\testcaseexeccond{
+		- Existe versión PUBLISHED con features.\\
+		- Se dispone de lista válida de features.\\
+		- Usuario es configurador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de features válidas.\\
+		2. Enviar POST a /api/v1/configurations con payload: \{"name": "Config 1", "description": "Configuración de prueba", "version\_id": "<version\_id>", "features": ["<id\_1>", "<id\_2>"]\}.\\
+		3. Validar que la respuesta contenga status 201.\\
+		4. Verificar que se crea configuración con ID.\\
+		5. Validar que se vincula a versión PUBLISHED.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Configuración creada con ID.\\
+		- Vinculada a versión PUBLISHED.\\
+		- Selección de features persistida.\\
+		- Timestamps se establecen.
+		}
+		\testcaseuserstory{12}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU12_P2]
+		\testcasecode{HU12\_P2}
+		\testcasename{Actualizar configuración existente}
+		\testcasedescription{Validar que se puede actualizar nombre, descripción y features de una configuración.}
+		\testcaseexeccond{
+		- Existe configuración persistida.\\
+		- Usuario es propietario o administrador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de configuración.\\
+		2. Enviar PUT a /api/v1/configurations/\{config\_id\} con payload: \{"name": "Nuevo nombre", "description": "Descripción actualizada", "features": ["<nuevo\_id\_1>", "<nuevo\_id\_2>"]\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar configuración para confirmar cambios.\\
+		5. Verificar que features se actualizaron.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Configuración actualizada en BD.\\
+		- Nombre y descripción cambiados.\\
+		- Lista de features actualizada.\\
+		- updated\_at se modifica.
+		}
+		\testcaseuserstory{12}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU12_P3]
+		\testcasecode{HU12\_P3}
+		\testcasename{Listar configuraciones paginadas}
+		\testcasedescription{Validar que se pueden obtener configuraciones con paginación.}
+		\testcaseexeccond{
+		- Existen múltiples configuraciones persistidas.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/configurations?skip=0\&limit=10 con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar array de configuraciones.\\
+		4. Cada config incluye: id, name, description, version\_id, created\_at, updated\_at.\\
+		5. Validar paginación: total, skip, limit.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de configuraciones paginadas.\\
+		- Información completa de cada configuración.\\
+		- Paginación funciona correctamente.\\
+		- Total de registros incluido.
+		}
+		\testcaseuserstory{12}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU12_P4]
+		\testcasecode{HU12\_P4}
+		\testcasename{Filtrar configuraciones por versión}
+		\testcasedescription{Validar que se pueden filtrar configuraciones por ID de versión.}
+		\testcaseexeccond{
+		- Existen configuraciones de múltiples versiones.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de versión específica.\\
+		2. Enviar GET a /api/v1/configurations?version\_id=<version\_id>\&skip=0\&limit=10 con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Verificar que todas las configuraciones retornadas tienen version\_id correcto.\\
+		5. Validar paginación.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Solo configuraciones de versión especificada.\\
+		- Paginación correcta.\\
+		- Filtrado preciso.
+		}
+		\testcaseuserstory{12}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU12_P5]
+		\testcasecode{HU12\_P5}
+		\testcasename{Desactivar configuración}
+		\testcasedescription{Validar que se puede desactivar una configuración sin eliminarla.}
+		\testcaseexeccond{
+		- Existe configuración activa.\\
+		- Usuario es propietario o administrador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de configuración.\\
+		2. Enviar PUT a /api/v1/configurations/\{config\_id\} con payload: \{"is\_active": false\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar configuración para confirmar is\_active=False.\\
+		5. Verificar que datos persisten en BD.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Configuración marcada como is\_active=False.\\
+		- Datos persistidos.\\
+		- No aparece en listados de activas (opcional).
+		}
+		\testcaseuserstory{12}
+		\end{acceptancetest}
+
+		\subsubsection*{HU-13: Validación y Generación Automática de Configuraciones}
+
+		\begin{acceptancetest}[tb:HU13_P1]
+		\testcasecode{HU13\_P1}
+		\testcasename{Validar selección sin persistirla}
+		\testcasedescription{Validar que se puede verificar si una selección es consistente sin guardarla.}
+		\testcaseexeccond{
+		- Existe versión PUBLISHED con estructura y restricciones.\\
+		- Se dispone de lista de features.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/configurations/validate con payload: \{"version\_id": "<version\_id>", "features": ["<id\_1>", "<id\_2>"]\}.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Respuesta incluye: is\_valid, errors (si existen), warnings.\\
+		4. Verificar que no se crea configuración persistida.\\
+		5. Mensaje claro de validación.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Respuesta indica validez.\\
+		- Lista de errores si los hay.\\
+		- Lista de advertencias.\\
+		- No se persiste la configuración.
+		}
+		\testcaseuserstory{13}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU13_P2]
+		\testcasecode{HU13\_P2}
+		\testcasename{Generar configuraciones válidas automáticamente}
+		\testcasedescription{Validar que el sistema puede generar automáticamente configuraciones válidas.}
+		\testcaseexeccond{
+		- Existe versión PUBLISHED satisfiable.\\
+		- Usuario está autenticado.\\
+		- Sistema tiene solucionador SAT integrado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/configurations/generate con payload: \{"version\_id": "<version\_id>", "limit": 5\}.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Respuesta incluye array de configuraciones válidas.\\
+		4. Cada una con lista de features seleccionadas.\\
+		5. Límite de generaciones respetado.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de configuraciones generadas.\\
+		- Cada una es válida según restricciones.\\
+		- Cantidad <= limit.\\
+		- Diversidad de soluciones (si limit > 1).
+		}
+		\testcaseuserstory{13}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU13_P3]
+		\testcasecode{HU13\_P3}
+		\testcasename{Generar configuración óptima}
+		\testcasedescription{Validar que se puede generar una configuración optimizada según criterios.}
+		\testcaseexeccond{
+		- Existe versión PUBLISHED.\\
+		- Se definen criterios de optimización.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/configurations/optimize con payload: \{"version\_id": "<version\_id>", "objective": "maximize\_features"\}.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Respuesta incluye configuración optimizada.\\
+		4. Incluye métricas de optimización.\\
+		5. Configuración es válida.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Configuración optimizada devuelta.\\
+		- Cumple restricciones.\\
+		- Optimización aplicada.\\
+		- Métricas incluidas.
+		}
+		\testcaseuserstory{13}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU13_P4]
+		\testcasecode{HU13\_P4}
+		\testcasename{Validar configuración contra restricciones complejas}
+		\testcasedescription{Validar que la validación considera restricciones complejas con múltiples operadores.}
+		\testcaseexeccond{
+		- Existe versión con restricciones complejas.\\
+		- Se dispone de selección a validar.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Crear restricción compleja: (A | B) \& \textasciitilde C => D.\\
+		2. Enviar POST a /api/v1/configurations/validate con selección que viola.\\
+		3. Validar que la respuesta reporta error.\\
+		4. Mensaje indica qué restricción se viola.\\
+		5. Sugerir alternativa válida.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- is\_valid=false.\\
+		- Error específico reportado.\\
+		- Restricción violada identificada.\\
+		- Sugerencia de corrección.
+		}
+		\testcaseuserstory{13}
+		\end{acceptancetest}
+
+		\subsubsection*{Épica 6: Validación y Análisis de Modelos}
+		\subsubsection*{HU-11: Enriquecimiento con Recursos y Taxonomías}
+
+		\begin{acceptancetest}[tb:HU14_P1]
+		\testcasecode{HU14\_P1}
+		\testcasename{Crear etiqueta (tag)}
+		\testcasedescription{Validar que se pueden crear etiquetas para clasificar features.}
+		\testcaseexeccond{
+		- Existe modelo.\\
+		- Usuario es diseñador o administrador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/tags con payload: \{"name": "Programación", "color": "\#FF5733"\}.\\
+		2. Validar que la respuesta contenga status 201.\\
+		3. Verificar que se retorna ID de etiqueta.\\
+		4. Verificar que se persiste en BD.\\
+		5. Guardar ID para asociar a features.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Etiqueta creada con ID.\\
+		- Nombre y color se almacenan.\\
+		- Puede utilizarse para asociaciones.
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU14_P2]
+		\testcasecode{HU14\_P2}
+		\testcasename{Asociar etiqueta a feature}
+		\testcasedescription{Validar que se puede asociar una etiqueta a una feature.}
+		\testcaseexeccond{
+		- Existe feature en versión.\\
+		- Existe etiqueta creada.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de feature y etiqueta.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/tags/\{tag\_id\} con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar feature para confirmar asociación.\\
+		5. Verificar que tag aparece en lista de tags de feature.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Etiqueta asociada a feature.\\
+		- Persistida en BD.\\
+		- Consultas posteriores la incluyen.
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU14_P3]
+		\testcasecode{HU14\_P3}
+		\testcasename{Desasociar etiqueta de feature}
+		\testcasedescription{Validar que se puede remover una etiqueta asociada a una feature.}
+		\testcaseexeccond{
+		- Feature tiene etiquetas asociadas.\\
+		- Usuario es diseñador.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de feature y tag asociado.\\
+		2. Enviar DELETE a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/tags/\{tag\_id\} con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar feature para confirmar que tag no está asociado.\\
+		5. Verificar que se removió de BD.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Etiqueta removida de feature.\\
+		- BD actualizada.\\
+		- Tag sigue existiendo (se reutiliza).
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU14_P4]
+		\testcasecode{HU14\_P4}
+		\testcasename{Crear recurso educativo}
+		\testcasedescription{Validar que se puede crear un recurso (archivo, enlace) asociado al modelo.}
+		\testcaseexeccond{
+		- Existe modelo.\\
+		- Usuario es editor de recursos.\\
+		- Usuario está autenticado.\\
+		- Se dispone de archivo o URL.
+		}
+		\testcaseexecstep{
+		1. Enviar POST a /api/v1/resources con payload multipart: \{name: "Introducción a Java", type: "VIDEO", url: "https://...", language: "es", license: "CC-BY-4.0"\}.\\
+		2. Validar que la respuesta contenga status 201.\\
+		3. Verificar que se retorna ID de recurso.\\
+		4. Verificar metadatos almacenados.\\
+		5. Guardar ID para asociar a features/configuraciones.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 201 Created.\\
+		- Recurso creado con ID.\\
+		- Metadatos almacenados.\\
+		- Propietario registrado automáticamente.\\
+		- Timestamps se establecen.
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU14_P5]
+		\testcasecode{HU14\_P5}
+		\testcasename{Asociar recurso a feature}
+		\testcasedescription{Validar que se puede vincular un recurso educativo a una feature.}
+		\testcaseexeccond{
+		- Existe feature en versión.\\
+		- Existe recurso creado.\\
+		- Usuario es editor.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener IDs de feature y recurso.\\
+		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/resources/\{resource\_id\} con headers.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar feature para verificar asociación.\\
+		5. Recurso aparece en lista de recursos de feature.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Recurso asociado a feature.\\
+		- Persistencia en BD.\\
+		- Versiones se registran.
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU14_P6]
+		\testcasecode{HU14\_P6}
+		\testcasename{Actualizar metadatos de recurso}
+		\testcasedescription{Validar que se pueden actualizar metadatos del recurso (idioma, licencia, etc).}
+		\testcaseexeccond{
+		- Existe recurso persistido.\\
+		- Usuario es propietario del recurso.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Obtener ID de recurso.\\
+		2. Enviar PUT a /api/v1/resources/\{resource\_id\} con payload: \{"language": "en", "license": "MIT", "description": "Nueva descripción"\}.\\
+		3. Validar que la respuesta contenga status 200.\\
+		4. Consultar recurso para confirmar cambios.\\
+		5. Verificar que updated\_at se modifica.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Metadatos actualizados en BD.\\
+		- Historial versionado (opcional).\\
+		- Cambios persistidos.\\
+		- Campo updated\_at actualizado.
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+		\begin{acceptancetest}[tb:HU14_P7]
+		\testcasecode{HU14\_P7}
+		\testcasename{Listar recursos de feature con filtros}
+		\testcasedescription{Validar que se pueden obtener todos los recursos de una feature con filtros.}
+		\testcaseexeccond{
+		- Feature tiene múltiples recursos asociados.\\
+		- Usuario está autenticado.
+		}
+		\testcaseexecstep{
+		1. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/resources?language=es\&type=VIDEO con headers.\\
+		2. Validar que la respuesta contenga status 200.\\
+		3. Verificar que solo recursos con idioma es y tipo VIDEO se retornan.\\
+		4. Cada recurso incluye metadatos completos.\\
+		5. Paginación funciona.
+		}
+		\testcaseexpresult{
+		- Status HTTP: 200 OK.\\
+		- Array de recursos filtrados.\\
+		- Información completa de cada uno.\\
+		- Filtros aplicados correctamente.\\
+		- Paginación funciona.
+		}
+		\testcaseuserstory{14}
+		\end{acceptancetest}
+
+\end{addendum}
+
+	\addappendix[bloque]{Anexos/BloqueCoronaReport}
+%\addappendix[controlador]{Anexos/ControladorIndustrialReport}

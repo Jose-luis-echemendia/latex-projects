@@ -812,7 +812,7 @@ A continuación se definen los requisitos no funcionales del sistema:
 \begin{itemize}
 	\item \ac{RnF}\#8: El 95\% de las peticiones a \textit{endpoints} críticos deben responderse en $ \leq 200 $ ms, y el 99\% en $ \leq 500 $ ms.
 	\item \ac{RnF}\#9: El \textit{backend} debe manejar al menos 500 usuarios simultáneos sin degradación superior al 20\%.
-	\item \ac{RnF}\#10: La latencia p95 entre capas (\textit{backend} → \ac{BD}) no debe superar los 50 ms en la misma región.
+	\item \ac{RnF}\#10: La latencia p95 entre capas (repositorios → \ac{BD}) no debe superar los 50 ms en la misma región.
 	\item \ac{RnF}\#11: El sistema debe soportar al menos 1000 peticiones por segundo en condiciones normales de operación.
 \end{itemize}
 
@@ -900,10 +900,10 @@ Las épicas definidas para esta investigación son las siguientes:
 
 \begin{itemize}
 	\item \textbf{Épica 1: Gestión de Identidad y Acceso}: Agrupa las historias relacionadas con la autenticación, gestión de usuarios y control de acceso al sistema.
-	\item \textbf{Épica 2: Gobernanza de Dominios Curriculares}: Incluye las historias que abordan la administración de dominios como contenedores de características.
+	\item \textbf{Épica 2: Gestión de Dominios Curriculares}: Incluye las historias que abordan la administración de dominios como contenedores de características.
 	\item \textbf{Épica 3: Ciclo de Vida del \ac{FM}}: Contiene las historias que tratan sobre la creación, gestión, versionado, métricas, exportación y publicación de los \ac{FM} dentro del sistema.
 	\item \textbf{Épica 4: Modelado de Variabilidad Estructural}: Reúne las historias enfocadas en la construcción del árbol (características), grupos y relaciones.
-	\item \textbf{Épica 5: Restricciones y Lógica Avanzada:}: Agrupa las historias relacionadas con la gestión de restricciones transversales y sincronización con el lenguaje \ac{UVL}.
+	\item \textbf{Épica 5: Restricciones y Lógica Avanzada}: Agrupa las historias relacionadas con la gestión de restricciones transversales y sincronización con el lenguaje \ac{UVL}.
 	\item \textbf{Épica 6: Validación y Análisis de Modelos}: Análisis de consistencia, detección de errores estructurales y características muertas.
 	\item \textbf{Épica 7: Configuración, Optimización y Recursos:}: Contiene las historias relacionadas con la derivación de productos, validación de selecciones, algoritmos de optimización, etiquetas y recursos pedagógicos.
 \end{itemize}

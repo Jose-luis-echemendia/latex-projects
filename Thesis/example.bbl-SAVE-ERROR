@@ -384,6 +384,31 @@
       \field{title}{Extreme Programming Explained: Embrace Change}
       \field{year}{2004}
     \endentry
+    \entry{bedoyaAlzate2021}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=16cdf0490fdbbab75bf469a316480888}{%
+           family={Bedoya\bibnamedelima Alzate},
+           familyi={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Esteban},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{16cdf0490fdbbab75bf469a316480888}
+      \strng{fullhash}{16cdf0490fdbbab75bf469a316480888}
+      \strng{bibnamehash}{16cdf0490fdbbab75bf469a316480888}
+      \strng{authorbibnamehash}{16cdf0490fdbbab75bf469a316480888}
+      \strng{authornamehash}{16cdf0490fdbbab75bf469a316480888}
+      \strng{authorfullhash}{16cdf0490fdbbab75bf469a316480888}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Vid. pág. 46}
+      \field{title}{Implementación de pruebas unitarias}
+      \field{year}{2021}
+    \endentry
     \entry{begel2020grasp}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=2694e1d90cf02deb1abecbc6e1f2f80a}{%
@@ -620,6 +645,47 @@
       \field{journaltitle}{ACM SIGOPS Operating Systems Review}
       \field{title}{An introduction to Docker for reproducible research}
       \field{year}{2015}
+    \endentry
+    \entry{booch2005uml}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e4f07715269e006a4d4a4efa3ce3f996}{%
+           family={Booch},
+           familyi={B\bibinitperiod},
+           given={Grady},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b8ace965f1ffa84dd4512f7e64c62d75}{%
+           family={Rumbaugh},
+           familyi={R\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e8f03cc324f52193ab00c1fab4df61a}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Ivar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{be6f3ff47123ebcb32f54f571b015ebc}
+      \strng{fullhash}{be6f3ff47123ebcb32f54f571b015ebc}
+      \strng{bibnamehash}{be6f3ff47123ebcb32f54f571b015ebc}
+      \strng{authorbibnamehash}{be6f3ff47123ebcb32f54f571b015ebc}
+      \strng{authornamehash}{be6f3ff47123ebcb32f54f571b015ebc}
+      \strng{authorfullhash}{be6f3ff47123ebcb32f54f571b015ebc}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{isbn}{978-0321267979}
+      \field{title}{The Unified Modeling Language User Guide}
+      \field{year}{2005}
     \endentry
     \entry{carlson2013redis}{book}{}
       \name{author}{1}{}{%
@@ -1067,6 +1133,40 @@
       \field{title}{Visual Studio Code Documentation}
       \field{year}{2025}
     \endentry
+    \entry{crispin2008agile}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=94961eb97d99629938a206fa00ee5642}{%
+           family={Crispin},
+           familyi={C\bibinitperiod},
+           given={Lisa},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d01b0c980c35f51a1581f08ccd0e7905}{%
+           family={Gregory},
+           familyi={G\bibinitperiod},
+           given={Janet},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{a8b38a24c38e69853ee65dc19fd52ef1}
+      \strng{fullhash}{a8b38a24c38e69853ee65dc19fd52ef1}
+      \strng{bibnamehash}{a8b38a24c38e69853ee65dc19fd52ef1}
+      \strng{authorbibnamehash}{a8b38a24c38e69853ee65dc19fd52ef1}
+      \strng{authornamehash}{a8b38a24c38e69853ee65dc19fd52ef1}
+      \strng{authorfullhash}{a8b38a24c38e69853ee65dc19fd52ef1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0321534460}
+      \field{title}{Agile Testing: A Practical Guide for Testers and Agile Teams}
+      \field{year}{2008}
+    \endentry
     \entry{sciencedirect_dbms}{misc}{}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
@@ -1157,14 +1257,58 @@
       \verb https://dialnet.unirioja.es/servlet/articulo?codigo=9596104
       \endverb
     \endentry
+    \entry{diaz2008}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=1,uniquepart=given,hash=f245e0a8b10c1aa0e7718a40367ffd86}{%
+           family={Díaz},
+           familyi={D\bibinitperiod},
+           given={Francisco\bibnamedelima Javier},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=c0742f585591a5e26860f7ba0abbee67}{%
+           family={Banchoff\bibnamedelima Tzancoff},
+           familyi={B\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Claudia\bibnamedelima Mariana},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=30d1cd819b8b83a5251e334019e849c9}{%
+           family={Rodríguez},
+           familyi={R\bibinitperiod},
+           given={Anahí\bibnamedelima Soledad},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=c5126a3fb84dee2deb2200a4834f33ce}{%
+           family={Soria},
+           familyi={S\bibinitperiod},
+           given={Valeria},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4258143305f22e1c2e82131455fe59d8}
+      \strng{fullhash}{4258143305f22e1c2e82131455fe59d8}
+      \strng{bibnamehash}{4258143305f22e1c2e82131455fe59d8}
+      \strng{authorbibnamehash}{4258143305f22e1c2e82131455fe59d8}
+      \strng{authornamehash}{4258143305f22e1c2e82131455fe59d8}
+      \strng{authorfullhash}{4258143305f22e1c2e82131455fe59d8}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{XIV Congreso Argentino de Ciencias de la Computación}
+      \field{note}{Vid. pág. 59}
+      \field{title}{Usando Jmeter para pruebas de rendimiento}
+      \field{year}{2008}
+    \endentry
     \entry{diaz2002flexibilidad}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=c4dbd0b072c9a66d4469e412f98af3d6}{%
+        {{un=1,uniquepart=given,hash=c4dbd0b072c9a66d4469e412f98af3d6}{%
            family={Díaz},
            familyi={D\bibinitperiod},
            given={V.},
            giveni={V\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \strng{namehash}{c4dbd0b072c9a66d4469e412f98af3d6}
       \strng{fullhash}{c4dbd0b072c9a66d4469e412f98af3d6}
@@ -1234,6 +1378,133 @@
       \field{journaltitle}{International Journal of Computer Applications}
       \field{title}{FastAPI Framework Performance Analysis for Microservices}
       \field{year}{2023}
+    \endentry
+    \entry{felderer2015survey}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=4fea700d0159ed5bda19febd84335a11}{%
+           family={Felderer},
+           familyi={F\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=257207be18029985375a79e7b1948c3c}{%
+           family={Büchler},
+           familyi={B\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ac47cae5fd801675b05f350a2dd3bfee}{%
+           family={Johns},
+           familyi={J\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b6216838c99116ac497b3f58580819f}{%
+           family={Brucker},
+           familyi={B\bibinitperiod},
+           given={Achim\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56c0fe35e1b3c7a838cff37ac63f0c97}{%
+           family={Breu},
+           familyi={B\bibinitperiod},
+           given={Ruth},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce303c40115b5be71de89930153cdda3}{%
+           family={Pretschner},
+           familyi={P\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{750dbf7c130d23e55e0ab8c7847807d3}
+      \strng{fullhash}{750dbf7c130d23e55e0ab8c7847807d3}
+      \strng{bibnamehash}{750dbf7c130d23e55e0ab8c7847807d3}
+      \strng{authorbibnamehash}{750dbf7c130d23e55e0ab8c7847807d3}
+      \strng{authornamehash}{750dbf7c130d23e55e0ab8c7847807d3}
+      \strng{authorfullhash}{750dbf7c130d23e55e0ab8c7847807d3}
+      \field{extraname}{1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Computers}
+      \field{title}{Security Testing: A Survey}
+      \field{volume}{101}
+      \field{year}{2015}
+      \field{pages}{1\bibrangedash 51}
+      \range{pages}{51}
+      \verb{doi}
+      \verb 10.1016/bs.adcom.2015.11.003
+      \endverb
+    \endentry
+    \entry{felderer2016security}{incollection}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=4fea700d0159ed5bda19febd84335a11}{%
+           family={Felderer},
+           familyi={F\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=257207be18029985375a79e7b1948c3c}{%
+           family={Büchler},
+           familyi={B\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ac47cae5fd801675b05f350a2dd3bfee}{%
+           family={Johns},
+           familyi={J\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b6216838c99116ac497b3f58580819f}{%
+           family={Brucker},
+           familyi={B\bibinitperiod},
+           given={Achim\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56c0fe35e1b3c7a838cff37ac63f0c97}{%
+           family={Breu},
+           familyi={B\bibinitperiod},
+           given={Ruth},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce303c40115b5be71de89930153cdda3}{%
+           family={Pretschner},
+           familyi={P\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{750dbf7c130d23e55e0ab8c7847807d3}
+      \strng{fullhash}{750dbf7c130d23e55e0ab8c7847807d3}
+      \strng{bibnamehash}{750dbf7c130d23e55e0ab8c7847807d3}
+      \strng{authorbibnamehash}{750dbf7c130d23e55e0ab8c7847807d3}
+      \strng{authornamehash}{750dbf7c130d23e55e0ab8c7847807d3}
+      \strng{authorfullhash}{750dbf7c130d23e55e0ab8c7847807d3}
+      \field{extraname}{2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Computers}
+      \field{title}{Security Testing: A Survey}
+      \field{volume}{101}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 51}
+      \range{pages}{51}
+      \verb{doi}
+      \verb 10.1016/bs.adcom.2015.11.003
+      \endverb
     \endentry
     \entry{ferraiolo2007role}{book}{}
       \name{author}{3}{}{%
@@ -1439,6 +1710,54 @@
       \field{isbn}{978-0201633610}
       \field{title}{Design Patterns: Elements of Reusable Object-Oriented Software}
       \field{year}{1995}
+    \endentry
+    \entry{garcia2023}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=60545dcf5630f8ba06daab800213f9cf}{%
+           family={García},
+           familyi={G\bibinitperiod},
+           given={Anays\bibnamedelima Gómez},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f331602694c170d28b65aa69ae15c789}{%
+           family={Hernández},
+           familyi={H\bibinitperiod},
+           given={Mercedes\bibnamedelima Sosa},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25c849b600852f9235d11a47606b1cc4}{%
+           family={Marcos},
+           familyi={M\bibinitperiod},
+           given={Sandra\bibnamedelima Verona},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cbaf8943986981ed5422b0498c97ca23}{%
+           family={Dapena},
+           familyi={D\bibinitperiod},
+           given={Martha\bibnamedelimb Dunia\bibnamedelima Delgado},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1c399000c74e715dfdf9e6059befadb0}
+      \strng{fullhash}{1c399000c74e715dfdf9e6059befadb0}
+      \strng{bibnamehash}{1c399000c74e715dfdf9e6059befadb0}
+      \strng{authorbibnamehash}{1c399000c74e715dfdf9e6059befadb0}
+      \strng{authornamehash}{1c399000c74e715dfdf9e6059befadb0}
+      \strng{authorfullhash}{1c399000c74e715dfdf9e6059befadb0}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Cubana de Transformación Digital}
+      \field{note}{Vid. pág. 46}
+      \field{number}{2}
+      \field{title}{Buenas prácticas de la ingeniería de software: pruebas de software}
+      \field{volume}{4}
+      \field{year}{2023}
+      \field{pages}{205\bibrangedash 1}
+      \range{pages}{-3}
     \endentry
     \entry{gfg_feature_engineering}{online}{}
       \name{author}{1}{}{%
@@ -2311,6 +2630,35 @@
       \verb https://moodle.com/es/what-is-moodle/
       \endverb
     \endentry
+    \entry{moradov2023security}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2f90df49b591486e57da04201c700e4e}{%
+           family={Moradov},
+           familyi={M\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2f90df49b591486e57da04201c700e4e}
+      \strng{fullhash}{2f90df49b591486e57da04201c700e4e}
+      \strng{bibnamehash}{2f90df49b591486e57da04201c700e4e}
+      \strng{authorbibnamehash}{2f90df49b591486e57da04201c700e4e}
+      \strng{authornamehash}{2f90df49b591486e57da04201c700e4e}
+      \strng{authorfullhash}{2f90df49b591486e57da04201c700e4e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://www.imperva.com/learn/application-security/security-testing/}}
+      \field{title}{Security Testing: Types, Tools, and Best Practices}
+      \field{urlday}{21}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+    \endentry
     \entry{investigacionus2025}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=10b2f105c5b841b2ff5c6e08e893942f}{%
@@ -2409,6 +2757,36 @@
       \field{labeltitlesource}{title}
       \field{title}{Metodologías de desarrollo de software}
       \field{year}{2015}
+    \endentry
+    \entry{paz2016}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=861361b5448ef7a772fc5b050c5fd030}{%
+           family={Paz},
+           familyi={P\bibinitperiod},
+           given={Julián\bibnamedelimb Andrés\bibnamedelima Mera},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{861361b5448ef7a772fc5b050c5fd030}
+      \strng{fullhash}{861361b5448ef7a772fc5b050c5fd030}
+      \strng{bibnamehash}{861361b5448ef7a772fc5b050c5fd030}
+      \strng{authorbibnamehash}{861361b5448ef7a772fc5b050c5fd030}
+      \strng{authornamehash}{861361b5448ef7a772fc5b050c5fd030}
+      \strng{authorfullhash}{861361b5448ef7a772fc5b050c5fd030}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ingeniería solidaria}
+      \field{note}{Vid. pág. 50}
+      \field{number}{20}
+      \field{title}{Análisis del proceso de pruebas de calidad de software}
+      \field{volume}{12}
+      \field{year}{2016}
+      \field{pages}{163\bibrangedash 176}
+      \range{pages}{14}
     \endentry
     \entry{pesce2021benchmark}{article}{}
       \name{author}{1}{}{%
@@ -2830,12 +3208,12 @@
     \endentry
     \entry{rodriguez2019gestion_curricular}{article}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=b307dd91983d341b40246fe9316a6502}{%
+        {{un=1,uniquepart=given,hash=b307dd91983d341b40246fe9316a6502}{%
            family={Rodríguez},
            familyi={R\bibinitperiod},
            given={P.},
            giveni={P\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=e87d3c7047ac970d9771879d6fb52e04}{%
            family={Vizcaíno},
            familyi={V\bibinitperiod},

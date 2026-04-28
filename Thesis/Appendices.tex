@@ -706,7 +706,7 @@
 		\engtaskpointestimation{12}
 		\engtaskstartdate{21}{4}{2026}
 		\engtaskenddate{22}{4}{2026}
-		\engtaskdescription{Diseñar e implementar el servicio de identidad para registro, autenticación, gestión de credenciales, emisión y verificación de tokens, y actualización de perfil, garantizando trazabilidad y cumplimiento de políticas de seguridad.}
+		\engtaskdescription{Diseñar e implementar el servicio de identidad para registro, autenticación, gestión de credenciales, emisión y verificación de \textit{tokens}, y actualización de perfil, garantizando trazabilidad y cumplimiento de políticas de seguridad.}
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
 
@@ -1494,7 +1494,2311 @@
 		\engtaskdescription{Implementar el controlador de taxonomías y recursos para gestión de etiquetas, asociación/desasociación con características y administración de recursos educativos con metadatos; aplicar reglas de propietario, validaciones de negocio y respuestas consistentes para operaciones parciales y completas.}
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
+	
+	\chapter{Pruebas unitarias}
+	\label{anx:pu}	
+
+		\subsubsection*{Servicios}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No1}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+						
+		\multicolumn{2}{c}
+		{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+						
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+						
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+						
+		\hline
+		\endlastfoot
+
+		% Cuerpo de la tabla
+		Descripción: & Verificar que \texttt{FeatureModelVersionManager.}
+		\texttt{create\_new\_version(source\_version=None)} 
+		crea una versión en estado \texttt{DRAFT} con \texttt{version\_number} consecutivo. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{feature\_model.id} válido.
+			\item Mock de \texttt{repository.get\_latest\_version\_number()} retornando 3.
+			\item \texttt{source\_version=None}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Nueva versión con \texttt{version\_number=4}.
+			\item \texttt{status=DRAFT}.
+			\item Se ejecuta \texttt{session.commit()} y \texttt{session.refresh()}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si se cumplen valores y llamadas a sesión.
+			\item Falla si no incrementa versión o no persiste cambios.
+		\end{itemize}
+		\\
+		\hline
 		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No2}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{publish\_version()} rechaza publicar si la versión no está en \texttt{DRAFT}. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Versión con \texttt{status=PUBLISHED}.
+			\item \texttt{validate=True}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Se lanza \texttt{InvalidVersionStateException}.
+			\item No se hace \texttt{commit}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si lanza excepción exacta y no persiste.
+			\item Falla si permite transición inválida.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No3}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{archive\_version()} cambia \texttt{PUBLISHED -> ARCHIVED}. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Versión con \texttt{status=PUBLISHED}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{status=ARCHIVED}.
+			\item Se ejecuta \texttt{commit} y \texttt{refresh}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si transición y persistencia son correctas.
+			\item Falla si estado final no es \texttt{ARCHIVED}.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No4}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{FeatureModelExportService.export()} falla con formato inválido. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Valor de formato no incluido en \texttt{ExportFormat} soportados.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{ValueError} con mensaje de formato no soportado.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si se eleva \texttt{ValueError} y no retorna contenido.
+			\item Falla si intenta exportar sin validar formato.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No5}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{export(ExportFormat.JSON)} retorna contenido serializable. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Versión con features/constraints mínimas.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Cadena JSON válida.
+			\item Incluye metadatos de modelo y versión.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si \texttt{json.loads()} no falla y contiene campos esperados.
+			\item Falla si retorna contenido inválido o incompleto.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No6}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{FeatureModelUVLImporter.validate\_uvl\_only()} valida estructura UVL y no persiste datos. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item UVL válido con sección \texttt{features} y opcional \texttt{constraints}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Resultado con \texttt{is\_valid=True}, \texttt{root}, conteo de \texttt{features} y \texttt{constraints}.
+			\item Sin llamadas a \texttt{session.commit()}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si valida y no modifica \ac{BD}.
+			\item Falla si persiste o retorna estructura incorrecta.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No7}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{\_parse\_uvl()} dispara error cuando la indentación no es múltiplo de 4. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item UVL con línea indentada con 2 espacios.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{UVLParseError} con detalle de indentación inválida.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si se captura \texttt{UVLParseError}.
+			\item Falla si el parser acepta contenido mal indentado.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No8}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{apply\_uvl()} crea una nueva versión, estructura de features y guarda \texttt{uvl\_content}. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item UVL válido.
+			\item Mocks de sesión y \texttt{FeatureModelVersionManager.create\_new\_version()}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Nueva versión con \texttt{uvl\_content} persistido.
+			\item Features creadas con jerarquía válida.
+			\item \texttt{commit} y \texttt{refresh} ejecutados.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si crea estructura y persiste contenido.
+			\item Falla si no crea versión o no guarda UVL.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No9}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{analyze\_version()} combina resultados lógicos/estructurales y añade \texttt{uvl\_validation} cuando hay contenido UVL. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Versión con features y \texttt{uvl\_content}.
+			\item Mocks de validadores y \texttt{validate\_uvl\_only}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{AnalysisSummary} con \texttt{satisfiable}, \texttt{dead\_features}, \texttt{commonality}, \texttt{complexity\_metrics}.
+			\item \texttt{uvl\_validation} presente.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si el summary contiene datos agregados esperados.
+			\item Falla si omite integración de validadores.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No10}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{compare\_versions()} calcula deltas de \texttt{dead\_features}, \texttt{core\_features} y configuraciones. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{base\_version} y \texttt{target\_version} con diferencias controladas (mocks).
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Diccionario con claves \texttt{base}, \texttt{target}, \texttt{delta}.
+			\item Listas de \texttt{*\_added} y \texttt{*\_removed} coherentes.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si los deltas coinciden con el escenario.
+			\item Falla si compara mal o mezcla resultados.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\subsubsection*{Repositorios}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No11}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{BaseUserRepository.validate\_email\_unique()} lanza error si existe usuario. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{existing\_user} no nulo.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{ValueError} con mensaje de email ya registrado.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si bloquea duplicado.
+			\item Falla si permite continuar.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No12}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{BaseDomainRepository.validate\_name\_unique()} permite mismo nombre cuando \texttt{existing\_domain.id == current\_domain\_id}. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{existing\_domain.id} igual a \texttt{current\_domain\_id}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item No excepción.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si no falla en auto-actualización.
+			\item Falla si bloquea un caso válido.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No13}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{validate\_parent\_not\_self(feature\_id, parent\_id)} rechaza autorreferencia. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{feature\_id == parent\_id}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{ValueError} indicando que no puede ser su propio padre.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si detecta autorreferencia.
+			\item Falla si permite ciclo trivial.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No14}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{build\_feature\_tree()} transforma lista plana en árbol por \texttt{parent\_id}. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Lista de features con una raíz y dos hijos.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Lista con 1 raíz y 2 nodos en \texttt{children}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si jerarquía coincide.
+			\item Falla si pierde nodos o relaciones.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No15}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{validate\_same\_version()} falla cuando origen/destino pertenecen a distintas versiones. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{source\_feature.feature\_model\_version\_id != target\_feature.feature\_model\_version\_id}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{ValueError} indicando incompatibilidad de versión.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si bloquea relaciones entre versiones distintas.
+			\item Falla si permite inconsistencia.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No16}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar \texttt{DomainRepository.create()} con datos válidos. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{DomainCreate(name, description)} válido.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Entidad \texttt{Domain} creada y persistida.
+			\item \texttt{is\_active=True} por defecto (si aplica en modelo).
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si persiste y retorna entidad consistente.
+			\item Falla si omite persistencia o retorna datos incompletos.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No17}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{UserRepository.authenticate(email, password)} retorna usuario al recibir credenciales válidas. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Usuario existente.
+			\item Mock de verificación de hash retornando \texttt{True}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Retorna instancia de \texttt{User}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si autentica correctamente.
+			\item Falla si retorna \texttt{None} con credenciales válidas.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No18}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{authenticate()} retorna \texttt{None} con password inválida. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Usuario existente.
+			\item Verificador de hash retornando \texttt{False}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{None}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si no autentica credenciales inválidas.
+			\item Falla si devuelve usuario.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No19}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{FeatureModelVersionRepository.get\_latest\_version\_number()} retorna \texttt{0} cuando no hay versiones y el máximo correcto cuando sí existen. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Escenario A: sin registros.
+			\item Escenario B: versiones con \texttt{version\_number} [1,2,4].
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item A: \texttt{0}.
+			\item B: \texttt{4}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si calcula correctamente en ambos escenarios.
+			\item Falla si retorna \texttt{None} o valor incorrecto.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No20}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar \texttt{get\_statistics(version\_id)} con features, grupos, constraints y relaciones. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Versión con datos de prueba predecibles.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Diccionario con contadores correctos (\texttt{features}, \texttt{groups}, \texttt{constraints}, \texttt{relations}, etc.).
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si contadores coinciden con fixtures.
+			\item Falla si hay desalineación en métricas.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\subsubsection*{3 Excepciones}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No21}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar normalización de objeto a partir de path y método HTTP. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Request con path \texttt{/api/v1/models/123/versions} y método \texttt{GET}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Objeto \texttt{model.get}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si remueve prefijos (\texttt{api}, \texttt{v1}) y singulariza recurso.
+			\item Falla si retorna objeto no normalizado.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No22}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que un \texttt{RequestValidationError} genera respuesta estandarizada HTTP 422. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Request válido + excepción de validación con errores de campos.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{JSONResponse} con \texttt{status\_code=422}.
+			\item \texttt{message.category=request\_validation}.
+			\item \texttt{message.error\_code=1001}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si estructura y código de error son correctos.
+			\item Falla si cambia contrato de error.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No23}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar mapeo de códigos para \texttt{HTTPException} (ej. 404). \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{HTTPException(status\_code=404, detail="Not Found")}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{JSONResponse} con \texttt{code=404}, \texttt{error\_code=1005}, \texttt{category=http\_error}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si usa mapa \texttt{\_ERROR\_CODE\_MAP}.
+			\item Falla si devuelve código/mensaje inconsistente.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No24}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar respuesta controlada para errores no esperados. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{Exception("boom")}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item HTTP 500.
+			\item Mensaje genérico sin filtrar detalle interno.
+			\item \texttt{error\_code=5000}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si no expone detalles sensibles y respeta contrato.
+			\item Falla si filtra stack/error interno al cliente.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No25}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que \texttt{NotFoundException} inicializa con código 404. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{NotFoundException("X no encontrado")}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{status\_code=404}, \texttt{detail="X no encontrado"}.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si hereda y configura correctamente.
+			\item Falla si código HTTP no coincide.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No26}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar inicialización de excepción de negocio. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{BusinessLogicException(\"Regla inválida\")}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item \texttt{status\_code=400}, \texttt{detail} correcto.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si estado y detalle son correctos.
+			\item Falla si usa código distinto.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No27}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar mensaje contextual cuando dominio existe. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{domain\_name="Ingeniería de Software"}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Excepción tipo \texttt{ConflictException} (409).
+			\item Mensaje incluyendo nombre del dominio conflictivo.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si conserva semántica y contexto.
+			\item Falla si mensaje pierde identificador clave.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No28}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar composición de mensaje para transición inválida de versión. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item \texttt{current\_state="published"}, \texttt{required\_state="draft"}, \texttt{operation="publish version"}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Excepción de negocio con mensaje que incluya estado actual, requerido y operación.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si mensaje es trazable para depuración.
+			\item Falla si omite contexto de transición.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+		\caption{Caso de Prueba Unitaria No29}\\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		Descripción: & Verificar que se lanza excepción procesable cuando no existe raíz en el árbol. \\
+		\hline
+		Entrada: & 
+		\begin{itemize}
+			\item Instancia directa de \texttt{MissingRootFeatureException()}.
+		\end{itemize}
+		\\
+		\hline
+		Salida esperada: & 
+		\begin{itemize}
+			\item Tipo \texttt{UnprocessableEntityException} con HTTP 422.
+		\end{itemize}
+		\\
+		\hline
+		Evaluación de la prueba: & 
+		\begin{itemize}
+			\item Pasa si mantiene clasificación semántica (error estructural 422).
+			\item Falla si cambia a otro código.
+		\end{itemize}
+		\\
+		\hline
+		
+		\end{longtable}
+
+	\chapter{Pruebas de integración}
+	\label{anx:pi}	
+
+		% ==========================================
+		% HU4: Gestión Operativa de FM
+		% ==========================================
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU4-P1}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU4-P1 & \ac{HU}: 4 \\
+			\hline
+			Nombre: & Crear \ac{FM} en dominio válido \\
+			\hline
+			Descripción: & Verificar que \texttt{POST /feature-models/} crea un \ac{FM} y persiste metadatos correctamente. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Sistema levantado con datos de prueba.
+				\item \ac{BD} limpia o controlada
+				\item Usuario autenticado con rol \texttt{MODEL\_DESIGNER} o \texttt{ADMIN}
+				\item Existe \texttt{domain\_id} activo
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/feature-models/} con \texttt{name}, \texttt{description}, \texttt{domain\_id}.
+				\item Validar HTTP 201.
+				\item Verificar respuesta con \texttt{id}, \texttt{owner\_id}, \texttt{domain\_id}, \texttt{is\_active=true}.
+				\item Consultar \texttt{GET /api/v1/feature-models/\{id\}}.
+				\item Confirmar persistencia en \ac{BD} (registro creado).
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Se crea el \ac{FM} correctamente.
+				\item El \texttt{owner\_id} corresponde al usuario autenticado.
+				\item Se registra \texttt{created\_at}/\texttt{updated\_at}.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU4-P2}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU4-P2 & \ac{HU}: 4 \\
+			\hline
+			Nombre: & Crear \ac{FM} con dominio inexistente \\
+			\hline
+			Descripción: & Verificar manejo de error de negocio cuando \texttt{domain\_id} no existe. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Usuario autenticado con permisos de diseño
+				\item \texttt{domain\_id} inexistente
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/feature-models/} con \texttt{domain\_id} inválido.
+				\item Validar respuesta de error.
+				\item Verificar que no se crea ningún registro en \ac{BD}.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item HTTP 404 (o error de dominio equivalente).
+				\item Mensaje claro de dominio no encontrado.
+				\item Sin efectos colaterales en \ac{BD}.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+
+		% ==========================================
+		% HU5: Gestión de Versiones y Publicación
+		% ==========================================
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU5-P1}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU5-P1 & \ac{HU}: 5 \\
+			\hline
+			Nombre: & Crear nueva versión COW desde versión origen \\
+			\hline
+			Descripción: & Verificar que \texttt{POST /feature-models/\{model\_id\}/versions} crea nueva versión por copy-on-write. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Existe \ac{FM} con versión origen
+				\item Usuario propietario del \ac{FM} o superusuario
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/feature-models/\{model\_id\}/versions} con \texttt{source\_version\_id}.
+				\item Validar respuesta exitosa.
+				\item Verificar que \texttt{version\_number} se incrementa.
+				\item Confirmar que la versión origen permanece inmutable.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item HTTP 200/201 según contrato actual.
+				\item Nueva versión creada en estado editable.
+				\item Estructura clonada sin modificar versión fuente.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU5-P2}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU5-P2 & \ac{HU}: 5 \\
+			\hline
+			Nombre: & Publicar versión válida \\
+			\hline
+			Descripción: & Verificar que \texttt{PATCH /feature-models/\{model\_id\}/versions/\{version\_id\}/publish} cambia estado y persiste publicación. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Versión existente y publicable
+				\item Usuario propietario o superusuario
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Ejecutar \texttt{PATCH /api/v1/feature-models/\{model\_id\}/versions/\{version\_id\}/publish}.
+				\item Validar respuesta.
+				\item Consultar versión por \texttt{GET}.
+				\item Verificar estado final y timestamp de publicación.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Estado pasa a \texttt{PUBLISHED}.
+				\item Se guarda \texttt{published\_at} (si aplica).
+				\item Integridad de datos preservada.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+
+		% ==========================================
+		% HU7: Edición de Jerarquía de Features
+		% ==========================================
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU7-P1}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU7-P1 & \ac{HU}: 7 \\
+			\hline
+			Nombre: & Crear feature en versión de \ac{FM} \\
+			\hline
+			Descripción: & Verificar que \texttt{POST /features/} crea feature y respeta validaciones de parent/version. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Existe versión destino
+				\item Usuario con rol \texttt{MODEL\_DESIGNER}/\texttt{ADMIN}/\texttt{DEVELOPER}
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/features/} con \texttt{feature\_model\_version\_id}, \texttt{name}, \texttt{type}.
+				\item Validar HTTP 201.
+				\item Consultar \texttt{GET /api/v1/features/\{feature\_id\}}.
+				\item Validar persistencia y pertenencia a la versión.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Feature creada con ID único.
+				\item Datos consistentes en \ac{BD}.
+				\item Sin corrupción del árbol.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU7-P2}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU7-P2 & \ac{HU}: 7 \\
+			\hline
+			Nombre: & Reubicar feature con padre inválido \\
+			\hline
+			Descripción: & Verificar rechazo de \texttt{PATCH /features/\{feature\_id\}/move} cuando el nuevo padre no pertenece a la misma versión. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Feature origen existente
+				\item \texttt{parent\_id} de otra versión o inexistente
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{PATCH /api/v1/features/\{feature\_id\}/move} con \texttt{parent\_id} inválido.
+				\item Verificar código de error.
+				\item Consultar la feature original.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item HTTP 400.
+				\item Mensaje de inconsistencia de padre.
+				\item Estructura original se mantiene intacta.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+
+		% ==========================================
+		% HU8: Grupos y Relaciones Estructurales
+		% ==========================================
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU8-P1}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU8-P1 & \ac{HU}: 8 \\
+			\hline
+			Nombre: & Crear grupo OR con cardinalidades válidas \\
+			\hline
+			Descripción: & Verificar integración de \texttt{POST /feature-groups/} con reglas de cardinalidad y versionado COW. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Feature padre existente
+				\item Usuario propietario del modelo o superusuario
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/feature-groups/} con \texttt{group\_type=OR}, \texttt{min\_cardinality}, \texttt{max\_cardinality}, \texttt{parent\_feature\_id}.
+				\item Validar HTTP 201.
+				\item Consultar grupo creado.
+				\item Verificar nueva versión derivada del modelo (si aplica por COW).
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Grupo creado correctamente.
+				\item Cardinalidades persistidas.
+				\item Nueva versión consistente del modelo.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU8-P2}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU8-P2 & \ac{HU}: 8 \\
+			\hline
+			Nombre: & Crear relación EXCLUDES válida \\
+			\hline
+			Descripción: & Verificar que \texttt{POST /feature-relations/} crea relación cross-tree y la persiste. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Features source/target existentes en misma versión
+				\item Usuario con permisos
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/feature-relations/} con \texttt{type=EXCLUDES}.
+				\item Validar HTTP 201.
+				\item Consultar \texttt{GET /api/v1/feature-relations/\{relation\_id\}}.
+				\item Verificar que la relación queda activa y vinculada a la versión.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Relación creada y consistente.
+				\item IDs de source/target correctos.
+				\item Registro trazable en \ac{BD}.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+
+		% ==========================================
+		% HU9: Restricciones Transversales
+		% ==========================================
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU9-P1}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU9-P1 & \ac{HU}: 9 \\
+			\hline
+			Nombre: & Crear constraint con expresión válida \\
+			\hline
+			Descripción: & Verificar que \texttt{POST /constraints/} integra validación y persistencia de restricciones. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Versión de \ac{FM} existente
+				\item Usuario dueño o superusuario
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/constraints/} con \texttt{expr\_text} válido.
+				\item Validar HTTP 201.
+				\item Leer constraint por ID.
+				\item Confirmar persistencia y estado activo.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Constraint creada correctamente.
+				\item Se mantiene consistencia del modelo/versionado COW.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU9-P2}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU9-P2 & \ac{HU}: 9 \\
+			\hline
+			Nombre: & Crear constraint con sintaxis inválida \\
+			\hline
+			Descripción: & Verificar control de errores al intentar persistir una restricción inválida. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Versión existente
+				\item Usuario con permisos
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/constraints/} con \texttt{expr\_text} inválido.
+				\item Validar respuesta de error.
+				\item Confirmar que no se crea registro.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item HTTP 400.
+				\item Mensaje de validación semántica/sintáctica.
+				\item \ac{BD} sin nuevos constraints inválidos.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+
+		% ==========================================
+		% HU10: Integración y Sincronización UVL
+		% ==========================================
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU10-P1}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU10-P1 & \ac{HU}: 10 \\
+			\hline
+			Nombre: & Guardar UVL y disparar análisis asíncrono \\
+			\hline
+			Descripción: & Verificar que \texttt{PUT /feature-models/\{model\_id\}/versions/\{version\_id\}/uvl} persiste UVL y retorna \texttt{analysis\_task\_id}. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Versión existente del modelo
+				\item Usuario propietario/superusuario
+				\item Celery/Redis disponibles
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{PUT /api/v1/feature-models/\{model\_id\}/versions/\{version\_id\}/uvl} con UVL válido.
+				\item Validar HTTP 200.
+				\item Verificar \texttt{source="stored"} y \texttt{analysis\_task\_id} en respuesta.
+				\item Consultar \texttt{GET /api/v1/feature-models/\{model\_id\}/versions/\{version\_id\}/uvl}.
+				\item Confirmar contenido persistido.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item UVL guardado en versión.
+				\item Se encola tarea de análisis.
+				\item Recuperación posterior coincide con contenido enviado.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU10-P2}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU10-P2 & \ac{HU}: 10 \\
+			\hline
+			Nombre: & Aplicar UVL a estructura creando nueva versión \\
+			\hline
+			Descripción: & Verificar que \texttt{POST /feature-models/\{model\_id\}/versions/\{version\_id\}/uvl/apply-to-structure} crea versión estructurada desde UVL. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Versión base existente
+				\item UVL de entrada válido
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/feature-models/\{model\_id\}/versions/\{version\_id\}/uvl/apply-to-structure}.
+				\item Validar HTTP 201.
+				\item Verificar nuevo \texttt{version\_id} retornado.
+				\item Consultar estructura de la nueva versión (features/grupos/relaciones/constraints).
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Nueva versión creada con estructura derivada del UVL.
+				\item Versión fuente no se altera.
+				\item Se retorna \texttt{analysis\_task\_id} para procesamiento posterior.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+
+		% ==========================================
+		% HU11: Validación y Análisis del Modelo
+		% ==========================================
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU11-P1}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU11-P1 & \ac{HU}: 11 \\
+			\hline
+			Nombre: & Validación integral del modelo \\
+			\hline
+			Descripción: & Verificar que \texttt{POST /feature-models/\{model\_id\}/versions/\{version\_id\}/validation/full} devuelve resultado compuesto (lógica + estructura + análisis). \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Versión existente con features y restricciones
+				\item Usuario autenticado
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/feature-models/\{model\_id\}/versions/\{version\_id\}/validation/full}.
+				\item Validar HTTP 200.
+				\item Confirmar presencia de secciones \texttt{logical}, \texttt{structure}, \texttt{analysis}.
+				\item Revisar coherencia de \texttt{is\_valid} y listas de errores/warnings.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Contrato de respuesta completo y consistente.
+				\item Sin errores de serialización.
+				\item Métricas/issue list alineadas con datos del modelo.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU11-P2}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU11-P2 & \ac{HU}: 11 \\
+			\hline
+			Nombre: & Resumen de análisis avanzado \\
+			\hline
+			Descripción: & Verificar \texttt{POST /feature-models/\{model\_id\}/versions/\{version\_id\}/analysis/summary} y su payload analítico. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Versión existente y accesible
+				\item Usuario autorizado
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/feature-models/\{model\_id\}/versions/\{version\_id\}/analysis/summary} con \texttt{max\_solutions} y \texttt{analysis\_types} opcionales.
+				\item Validar HTTP 200.
+				\item Verificar campos: \texttt{satisfiable}, \texttt{dead\_features}, \texttt{core\_features}, \texttt{complexity\_metrics}, \texttt{estimated\_configurations}.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Resumen calculado correctamente.
+				\item Campos obligatorios presentes y tipados.
+				\item Resultado reproducible con mismo input/base de datos.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+
+		% ==========================================
+		% HU6: Métricas y Exportación
+		% ==========================================
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU6-P1}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU6-P1 & \ac{HU}: 6 \\
+			\hline
+			Nombre: & Exportar última versión publicada en Mermaid \\
+			\hline
+			Descripción: & Verificar \texttt{GET /feature-models/\{model\_id\}/versions/latest/export/mermaid} incluyendo persistencia de artefacto de exportación. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Existe al menos una versión \texttt{PUBLISHED}
+				\item MinIO y Redis operativos
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Ejecutar \texttt{GET /api/v1/feature-models/\{model\_id\}/versions/latest/export/mermaid}.
+				\item Validar HTTP 200 y \texttt{Content-Type} de texto.
+				\item Verificar cabecera \texttt{Content-Disposition}.
+				\item Consultar \texttt{GET /api/v1/feature-models/\{model\_id\}/exports} para confirmar cache/indexado de export.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Contenido Mermaid válido.
+				\item Export registrado en cache y almacenamiento de objetos.
+				\item URL de descarga disponible en listado de exports.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU6-P2}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU6-P2 & \ac{HU}: 6 \\
+			\hline
+			Nombre: & Obtener estadísticas de última versión publicada \\
+			\hline
+			Descripción: & Verificar \texttt{GET /feature-models/\{model\_id\}/} 
+			\texttt{versions/latest/statistics} y exactitud mínima de métricas. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item \ac{FM} existente con versión \texttt{PUBLISHED}
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Ejecutar \texttt{GET /api/v1/feature-models/\{model\_id\}/}
+					\texttt{versions/latest/statistics}.
+				\item Validar HTTP 200.
+				\item Verificar campos esperados (\texttt{total\_features}, \texttt{total\_groups}, \texttt{total\_relations}, \texttt{total\_constraints}, \texttt{max\_tree\_depth}, etc.).
+				\item Contrastar al menos 2 métricas con consulta directa de \ac{BD}.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Métricas consistentes con la estructura almacenada.
+				\item Contrato de respuesta completo.
+				\item Sin desalineación entre repositorio y cálculo estadístico.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+
+		% ==========================================
+		% HU12/HU13: Configuraciones
+		% ==========================================
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU12-P1}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU12-P1 & \ac{HU}: 12 \\
+			\hline
+			Nombre: & Crear configuración válida \\
+			\hline
+			Descripción: & Verificar que \texttt{POST /configurations/} valida selección de features y persiste configuración solo si es válida. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Versión de \ac{FM} existente
+				\item Conjunto de features que cumple restricciones
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/configurations/} con \texttt{feature\_model\_version\_id} y \texttt{feature\_ids} válidos.
+				\item Validar HTTP 200/201 según contrato actual.
+				\item Recuperar configuración por ID.
+				\item Verificar relación con versión y features persistidos.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Configuración creada y almacenada.
+				\item Validación lógica aplicada antes de persistir.
+				\item Estructura de respuesta correcta.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
+			\caption{Caso de Prueba de Integración HU13-P1}\\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+			\hline
+			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+
+			ID de prueba: HU13-P1 & \ac{HU}: 13 \\
+			\hline
+			Nombre: & Generación automática de configuraciones \\
+			\hline
+			Descripción: & Verificar \texttt{POST /configurations/generate} para múltiples resultados y métrica de calidad. \\
+			\hline
+			Condiciones de ejecución: & 
+			\begin{itemize}
+				\item Versión satisfacible
+				\item Motor de generación habilitado
+			\end{itemize}
+			\\
+			\hline
+			Pasos de ejecución: & 
+			\begin{enumerate}
+				\item Enviar \texttt{POST /api/v1/configurations/generate} con \texttt{feature\_model\_version\_id}, \texttt{count}, \texttt{strategy}.
+				\item Validar HTTP 200.
+				\item Verificar que \texttt{results} tenga tamaño \texttt{<= count} y elementos con \texttt{success}/\texttt{selected\_features}.
+				\item Verificar objeto \texttt{quality} no vacío.
+			\end{enumerate}
+			\\
+			\hline
+			Resultados esperados: & 
+			\begin{itemize}
+				\item Se devuelven configuraciones válidas.
+				\item El límite solicitado se respeta.
+				\item Métricas de calidad disponibles para evaluación.
+			\end{itemize}
+			\\
+			\hline
+			Evaluación de la prueba: & Aprobada \\
+			\hline
+		\end{longtable}
+
+	\chapter{Lista de verificación de seguridad}
+	\label{anx:lvs}	
+
+		\begin{longtable}{|p{10cm}|p{3cm}|}
+		\caption{Lista de Verificación de Seguridad}\\
+		\hline
+		\colorentry{Verificación} & \colorentry{Cumple} \\
+		\hline
+		\endfirsthead
+		\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+		\hline
+		\colorentry{Verificación} & \colorentry{Cumple} \\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		
+		\multicolumn{2}{|p{13cm}|}{\ac{RnF}\#1: El sistema debe implementar autenticación basada en \textit{tokens} \ac{JWT} para garantizar la seguridad de las sesiones de usuario} \\
+		\hline
+		Iniciar sesión emite un token de acceso firmado & \checkmark \\
+		\hline
+		El token incluye identidad del usuario & \checkmark \\
+		\hline
+		El sistema valida firma y espira el token en cada petición autenticada & \checkmark \\
+		\hline
+		Se bloquea acceso con token inválido/expirado & \checkmark \\
+		\hline
+		Se bloquea acceso para usuario inactivo & \checkmark \\
+		\hline
+		\multicolumn{2}{|p{13cm}|}{\ac{RnF}\#2: El sistema debe implementar un ciclo de vida completo para los \textit{tokens} \ac{JWT} que incluya operaciones de emisión, 
+			renovación e invalidación, garantizando que los \textit{tokens} tengan un tiempo de expiración limitado y puedan ser 
+			revocados explícitamente por el usuario} \\
+		\hline
+		Existe emisión de token de acceso y token para refrescar & \checkmark \\
+		\hline
+		Existe \textit{endpoint} de renovación de token & \checkmark \\
+		\hline
+		Existe \textit{endpoint} de invalidación explícita & \checkmark \\
+		\hline
+		Se verifica expiración del token de refrescar & \checkmark \\
+		\hline
+		Se usa lista negra para revocar tokens de refrescar & \checkmark \\
+		\hline
+		\multicolumn{2}{|p{13cm}|}{\ac{RnF}\#3: El sistema debe implementar un mecanismo de eliminación lógica mediante 
+			un cambio de estado (activo/inactivo)  para conservar la integridad referencial de la 
+			\ac{BD}} \\
+		\hline
+		Las entidades del sistema incluyen \texttt{is\_active} & \checkmark \\
+		\hline
+		Existen operaciones de activación/desactivación & \checkmark \\
+		\hline
+		Existen consultas que filtran por \texttt{is\_active} en listados & \checkmark \\
+		\hline
+		Todos las eliminaciones del sistema usan solo eliminación lógica & \checkmark \\
+		\hline
+		Existe política única documentada para cuándo es permitido un eliminado fuerte & \checkmark \\
+		\hline
+		\multicolumn{2}{|p{13cm}|}{\ac{RnF}\#4: Uso exclusivo de \ac{UUID} como tipo de dato para llaves primarias en las tablas de la \ac{BD}, no valores numéricos.
+			Su generación se realizará automáticamente a nivel de aplicación o \ac{BD}. Esto garantiza unicidad global y mejora la seguridad al no exponer 
+			patrones secuenciales} \\
+		\hline
+		Las tablas usan \ac{UUID} como \ac{PK} & \checkmark \\
+		\hline
+		\textit{Endpoints} usan \ac{UUID} en parámetros/\textit{path} para entidades principales & \checkmark \\
+		\hline
+		\multicolumn{2}{|p{13cm}|}{\ac{RnF}\#5: Solo usuarios autorizados deben poder crear, modificar y eliminar registros del sistema} \\
+		\hline
+		Existen mecanismos de autorización por rol reutilizables & \checkmark \\
+		\hline
+		Existen rutas críticas con protección por rol & \checkmark \\
+		\hline
+		Todas las rutas \ac{CRUD} tienen dependencia explícita de autenticación y autorización & \checkmark \\
+		\hline
+		Hay pruebas de autorización por \textit{endpoint} y rol para todas las rutas de escritura & \checkmark \\
+		\hline
+		Hay pruebas de denegación (403) por rol insuficiente en todos los \ac{CRUD} & \checkmark \\
+		\hline
+		\multicolumn{2}{|p{13cm}|}{\ac{RnF}\#6: El acceso al sistema a través de cualquier cliente debe ser mediante una
+			comunicación segura \ac{TLS}/\ac{SSL} para proteger la 
+			confidencialidad e integridad de los datos transmitidos} \\
+		\hline
+		El despliegue productivo define \textit{routers} \ac{HTTPS} & \checkmark \\
+		\hline
+		Se configura redirección de \ac{HTTP} a \ac{HTTPS} & \checkmark \\
+		\hline
+		Se validan cabeceras de seguridad \ac{TLS}/\ac{SSL} en tiempo de ejecución & \checkmark \\
+		\hline
+		\multicolumn{2}{|p{13cm}|}{\ac{RnF}\#7: Toda configuración variable (\ac{BD}, credenciales, \ac{URL}s externas) debe inyectarse vía variables de entorno, no hardcodeada} \\
+		\hline
+		Variables sensibles se leen desde \texttt{Settings/env} & \checkmark \\
+		\hline
+		Despliegue productivo inyecta variables vía GitHub & \checkmark \\
+		\hline
+		Hay validadores para secretos inseguros en producción & \checkmark \\
+		\hline
+		No existen credenciales hardcodeadas en el repositorio & \checkmark \\
+		\hline
+		Existe escaneo automático de secretos en \ac{CI} & \checkmark \\
+		\hline
+		
+		\end{longtable}
+
+
+
 	\chapter{Pruebas de aceptación}
 	\label{anx:pa}
 
@@ -1506,21 +3810,27 @@
 		\testcasename{Registro de usuario con correo y contraseña}
 		\testcasedescription{Validar que un usuario nuevo pueda registrarse en el sistema con correo y contraseña válidos.}
 		\testcaseexeccond{
-		- El servidor backend está disponible.\\
-		- La base de datos está accesible.\\
-		- No existe un usuario registrado con el correo proporcionado.
+		\begin{itemize}
+			\item El servidor del sistema está disponible.
+			\item La \ac{BD} está accesible.
+			\item No existe un usuario registrado con el correo proporcionado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar POST a /api/v1/auth/register con payload: \{"email": "usuario@test.com", "password": "Pass123!@"\}.\\
-		2. Validar que la respuesta contenga status 201.\\
-		3. Validar que la respuesta incluya el token de autenticación.\\
-		4. Validar que se creó el usuario en la base de datos.
+		\begin{enumerate}
+			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/register} con carga útil: \texttt{\{"email": "usuario@test.com", "password": "Pass123!@"\}}.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{201}.
+			\item Validar que la respuesta incluya el \textit{token} de autenticación.
+			\item Validar que se creó el usuario en la \ac{BD}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Respuesta contiene access\_token, refresh\_token y user\_id.\\
-		- Usuario registrado en BD con is\_active=True.\\
-		- Contraseña almacenada como hash (no en texto plano).
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{201 Created}.
+			\item Respuesta contiene \texttt{access\_token}, \texttt{refresh\_token} y \texttt{user\_id}.
+			\item Usuario registrado en \ac{BD} con \texttt{is\_active=True}.
+			\item Contraseña almacenada como \texttt{hash} (no en texto plano).
+		\end{itemize}
 		}
 		\testcaseuserstory{1}
 		\end{acceptancetest}
@@ -1530,18 +3840,24 @@
 		\testcasename{Inicio de sesión con correo y contraseña}
 		\testcasedescription{Validar que un usuario registrado pueda iniciar sesión correctamente.}
 		\testcaseexeccond{
-		- El servidor backend está disponible.\\
-		- Existe un usuario registrado con correo test@example.com y contraseña conocida.
+		\begin{itemize}
+			\item El servidor del sistema está disponible.
+			\item Existe un usuario registrado con correo \texttt{test@example.com} y contraseña conocida.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar POST a /api/v1/auth/login con payload: \{"email": "test@example.com", "password": "Pass123!@"\}.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que se devuelve un access\_token válido.
+		\begin{enumerate}
+			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/login} con carga útil: \texttt{\{"email": "test@example.com", "password": "Pass123!@"\}}.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Verificar que se devuelve un \texttt{access\_token} válido.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Respuesta contiene access\_token, refresh\_token y user\_id.\\
-		- El token es válido para futuras peticiones autenticadas.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Respuesta contiene \texttt{access\_token}, \texttt{refresh\_token} y \texttt{user\_id}.
+			\item El \textit{token} es válido para futuras peticiones autenticadas.
+		\end{itemize}
 		}
 		\testcaseuserstory{1}
 		\end{acceptancetest}
@@ -1551,24 +3867,30 @@
 		\testcasename{Recuperación de acceso mediante token por correo}
 		\testcasedescription{Validar que un usuario pueda solicitar recuperación de contraseña y recibir token por correo.}
 		\testcaseexeccond{
-		- El servidor backend está disponible.\\
-		- El servicio de correo está configurado.\\
-		- Existe un usuario con correo usuario@test.com.\\
-		- El usuario se ha registrado previamente.
+		\begin{itemize}
+			\item El servidor del sistema está disponible.
+			\item El servicio de correo está configurado.
+			\item Existe un usuario con correo \texttt{usuario@test.com}.
+			\item El usuario se ha registrado previamente.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar POST a /api/v1/auth/forgot-password con payload: \{"email": "usuario@test.com"\}.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que se envió un correo con token de recuperación.\\
-		4. Extraer token del correo y enviar PUT a /api/v1/auth/reset-password con payload: \{"token": "<token>", "new\_password": "NewPass456!@"\}.\\
-		5. Validar que la contraseña se actualizó.
+		\begin{enumerate}
+			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/forgot-password} con carga útil: \texttt{\{"email": "usuario@test.com"\}}.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Verificar que se envió un correo con \textit{token} de recuperación.
+			\item Extraer el \textit{token} del correo y enviar \texttt{PUT} a \texttt{/api/v1/auth/reset-password} con carga útil: \texttt{\{"token": "<token>", "new\_password": "NewPass456!@"\}}.
+			\item Validar que la contraseña se actualizó.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK (solicitud).\\
-		- Se envía correo con token de recuperación.\\
-		- Status HTTP: 200 OK (reset).\\
-		- Usuario puede iniciar sesión con nueva contraseña.\\
-		- Token anterior se invalida.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK} (solicitud).
+			\item Se envía correo con \textit{token} de recuperación.
+			\item Estado \ac{HTTP}: \texttt{200 OK} (restablecimiento).
+			\item Usuario puede iniciar sesión con nueva contraseña.
+			\item El \textit{token} anterior se invalida.
+		\end{itemize}
 		}
 		\testcaseuserstory{1}
 		\end{acceptancetest}
@@ -1578,22 +3900,28 @@
 		\testcasename{Edición de perfil propio sin intervención administrativa}
 		\testcasedescription{Validar que un usuario autenticado pueda actualizar su perfil (correo, nombre) sin necesidad de administrador.}
 		\testcaseexeccond{
-		- Usuario está autenticado con token válido.\\
-		- El nuevo correo no está registrado en otro usuario.\\
-		- El usuario tiene permisos para editar su propio perfil.
+		\begin{itemize}
+			\item Usuario está autenticado con \textit{token} válido.
+			\item El nuevo correo no está registrado en otro usuario.
+			\item El usuario tiene permisos para editar su propio perfil.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar PUT a /api/v1/auth/profile con headers de autenticación y payload: \{"email": "nuevo@test.com", "first\_name": "Juan", "last\_name": "Pérez"\}.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Consultar GET /api/v1/auth/profile para confirmar cambios.\\
-		4. Validar que los datos actualizados coinciden.
+		\begin{enumerate}
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/auth/profile} con cabeceras de autenticación y carga útil: \texttt{\{"email": "nuevo@test.com", "first\_name": "Juan", "last\_name": "Pérez"\}}.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Consultar \texttt{GET} a \texttt{/api/v1/auth/profile} para confirmar cambios.
+			\item Validar que los datos actualizados coinciden.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Perfil actualizado en base de datos.\\
-		- Respuesta contiene los datos actualizados.\\
-		- Token sigue siendo válido.\\
-		- Cambios persistidos en BD.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Perfil actualizado en \ac{BD}.
+			\item Respuesta contiene los datos actualizados.
+			\item El \textit{token} sigue siendo válido.
+			\item Cambios persistidos en \ac{BD}.
+		\end{itemize}
 		}
 		\testcaseuserstory{1}
 		\end{acceptancetest}
@@ -1603,20 +3931,26 @@
 		\testcasename{Cierre de sesión}
 		\testcasedescription{Validar que un usuario pueda cerrar sesión invalidando su token.}
 		\testcaseexeccond{
-		- Usuario está autenticado con token válido.\\
-		- El servidor mantiene una lista de tokens revocados.
+		\begin{itemize}
+			\item Usuario está autenticado con \textit{token} válido.
+			\item El servidor mantiene una lista de \textit{tokens} revocados.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar POST a /api/v1/auth/logout con headers de autenticación.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Intentar acceder a un endpoint protegido con el token anterior.\\
-		4. Validar que se rechaza la petición.
+		\begin{enumerate}
+			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/logout} con cabeceras de autenticación.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Intentar acceder a un \textit{endpoint} protegido con el \textit{token} anterior.
+			\item Validar que se rechaza la petición.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Token se añade a lista de revocación.\\
-		- Peticiones posteriores con ese token retornan 401 Unauthorized.\\
-		- Mensaje: "Token revoked or expired".
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item El \textit{token} se añade a lista de revocación.
+			\item Peticiones posteriores con ese \textit{token} retornan \ac{HTTP} \texttt{401 Unauthorized}.
+			\item Mensaje: \texttt{"Token revoked or expired"}.
+		\end{itemize}
 		}
 		\testcaseuserstory{1}
 		\end{acceptancetest}
@@ -1628,21 +3962,27 @@
 		\testcasename{Listar usuarios con filtro por rol}
 		\testcasedescription{Validar que un administrador puede obtener listado de usuarios filtrados por rol.}
 		\testcaseexeccond{
-		- Usuario es administrador (rol=ADMIN).\\
-		- Existen usuarios con diferentes roles en la BD.\\
-		- Usuario está autenticado con token de administrador.
+		\begin{itemize}
+			\item Usuario es administrador (rol=\texttt{ADMIN}).
+			\item Existen usuarios con diferentes roles en la \ac{BD}.
+			\item Usuario está autenticado con \textit{token} de administrador.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/admin/users?role=EDITOR\&skip=0\&limit=10 con headers de autenticación.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que todos los usuarios retornados tienen role="EDITOR".\\
-		4. Validar que la respuesta incluye total, skip, limit.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/admin/users?role=EDITOR\&skip=0\&limit=10} con cabeceras de autenticación.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Verificar que todos los usuarios retornados tienen \texttt{role="EDITOR"}.
+			\item Validar que la respuesta incluye total, skip, limit.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Respuesta contiene arreglo de usuarios filtrados por rol.\\
-		- Cada usuario incluye: id, email, first\_name, last\_name, role, is\_active.\\
-		- Paginación correcta.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Respuesta contiene arreglo de usuarios filtrados por rol.
+			\item Cada usuario incluye: \texttt{id}, \texttt{email}, \texttt{first\_name}, \texttt{last\_name}, \texttt{role}, \texttt{is\_active}.
+			\item Paginación correcta.
+		\end{itemize}
 		}
 		\testcaseuserstory{2}
 		\end{acceptancetest}
@@ -1652,19 +3992,25 @@
 		\testcasename{Listar usuarios con filtro por nombre}
 		\testcasedescription{Validar que un administrador puede filtrar usuarios por nombre completo.}
 		\testcaseexeccond{
-		- Usuario es administrador.\\
-		- Existen usuarios registrados con nombres distintos.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Usuario es administrador.
+			\item Existen usuarios registrados con nombres distintos.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/admin/users?name=Juan\&skip=0\&limit=10 con headers de autenticación.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que todos los usuarios retornados contienen "Juan" en nombre o apellido.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/admin/users?name=Juan\&skip=0\&limit=10} con cabeceras de autenticación.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Verificar que todos los usuarios retornados contienen "Juan" en nombre o apellido.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Respuesta contiene usuarios cuyo nombre/apellido contiene la búsqueda.\\
-		- Búsqueda es case-insensitive.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Respuesta contiene usuarios cuyo nombre/apellido contiene la búsqueda.
+			\item Búsqueda sin distinción de mayúsculas/minúsculas.
+		\end{itemize}
 		}
 		\testcaseuserstory{2}
 		\end{acceptancetest}
@@ -1674,22 +4020,28 @@
 		\testcasename{Modificar rol de usuario}
 		\testcasedescription{Validar que un administrador puede cambiar el rol asignado a un usuario.}
 		\testcaseexeccond{
-		- Usuario es administrador.\\
-		- Existe un usuario con rol VIEWER.\\
-		- Usuario está autenticado con credenciales de admin.
+		\begin{itemize}
+			\item Usuario es administrador.
+			\item Existe un usuario con rol \texttt{VIEWER}.
+			\item Usuario está autenticado con credenciales de \textit{admin}.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de usuario a modificar.\\
-		2. Enviar PUT a /api/v1/admin/users/\{user\_id\}/role con payload: \{"role": "EDITOR"\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar GET /api/v1/admin/users/\{user\_id\} para confirmar cambio.\\
-		5. Verificar que role="EDITOR".
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de usuario a modificar.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/admin/users/\{user\_id\}/role} con carga útil: \texttt{\{"role": "EDITOR"\}}.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Consultar \texttt{GET} a \texttt{/api/v1/admin/users/\{user\_id\}} para confirmar cambio.
+			\item Verificar que \texttt{role="EDITOR"}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Respuesta contiene usuario actualizado con nuevo rol.\\
-		- BD refleja el cambio.\\
-		- Permisos del usuario se actualizan dinámicamente.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Respuesta contiene usuario actualizado con nuevo rol.
+			\item La \ac{BD} refleja el cambio.
+			\item Permisos del usuario se actualizan dinámicamente.
+		\end{itemize}
 		}
 		\testcaseuserstory{2}
 		\end{acceptancetest}
@@ -1699,23 +4051,29 @@
 		\testcasename{Desactivar cuenta de usuario sin eliminar información}
 		\testcasedescription{Validar que un administrador puede desactivar una cuenta sin eliminar los datos.}
 		\testcaseexeccond{
-		- Usuario es administrador.\\
-		- Existe un usuario activo.\\
-		- No se permiten borrados físicos en el sistema.
+		\begin{itemize}
+			\item Usuario es administrador.
+			\item Existe un usuario activo.
+			\item No se permiten borrados físicos en el sistema.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de usuario a desactivar.\\
-		2. Enviar PUT a /api/v1/admin/users/\{user\_id\}/status con payload: \{"is\_active": false\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Intentar que el usuario desactivado inicie sesión.\\
-		5. Verificar que el login falla con mensaje de cuenta desactivada.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de usuario a desactivar.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/admin/users/\{user\_id\}/status} con carga útil: \texttt{\{"is\_active": false\}}.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Intentar que el usuario desactivado inicie sesión.
+			\item Verificar que el inicio de sesión falla con mensaje de cuenta desactivada.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Usuario marcado como is\_active=False en BD.\\
-		- Datos del usuario persisten en BD.\\
-		- Usuario no puede autenticarse.\\
-		- Mensaje: "User account is deactivated".
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Usuario marcado como \texttt{is\_active=False} en \ac{BD}.
+			\item Datos del usuario persisten en \ac{BD}.
+			\item Usuario no puede autenticarse.
+			\item Mensaje: \texttt{"User account is deactivated"}.
+		\end{itemize}
 		}
 		\testcaseuserstory{2}
 		\end{acceptancetest}
@@ -1725,22 +4083,28 @@
 		\testcasename{Reactivar cuenta de usuario}
 		\testcasedescription{Validar que un administrador puede reactivar una cuenta desactivada.}
 		\testcaseexeccond{
-		- Usuario es administrador.\\
-		- Existe un usuario desactivado (is\_active=False).\\
-		- Los datos del usuario están intactos en BD.
+		\begin{itemize}
+			\item Usuario es administrador.
+			\item Existe un usuario desactivado (\texttt{is\_active=False}).
+			\item Los datos del usuario están intactos en \ac{BD}.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de usuario a reactivar.\\
-		2. Enviar PUT a /api/v1/admin/users/\{user\_id\}/status con payload: \{"is\_active": true\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Intentar autenticar con el usuario reactivado.\\
-		5. Verificar que el login es exitoso.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de usuario a reactivar.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/admin/users/\{user\_id\}/status} con carga útil: \texttt{\{"is\_active": true\}}.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Intentar autenticar con el usuario reactivado.
+			\item Verificar que el inicio de sesión es exitoso.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Usuario marcado como is\_active=True.\\
-		- Datos originales restaurados.\\
-		- Usuario puede autenticarse normalmente.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Usuario marcado como \texttt{is\_active=True}.
+			\item Datos originales restaurados.
+			\item Usuario puede autenticarse normalmente.
+		\end{itemize}
 		}
 		\testcaseuserstory{2}
 		\end{acceptancetest}
@@ -1753,21 +4117,27 @@
 		\testcasename{Crear dominio con nombre y descripción}
 		\testcasedescription{Validar que un administrador puede crear un nuevo dominio curricular.}
 		\testcaseexeccond{
-		- Usuario es administrador.\\
-		- Usuario está autenticado.\\
-		- No existe un dominio con el mismo nombre.
+		\begin{itemize}
+			\item Usuario es administrador.
+			\item Usuario está autenticado.
+			\item No existe un dominio con el mismo nombre.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar POST a /api/v1/domains con payload: \{"name": "Ingeniería de Software", "description": "Dominio para estudios en ingeniería de software"\}.\\
-		2. Validar que la respuesta contenga status 201.\\
-		3. Verificar que se retorna id, name, description, is\_active, created\_at.\\
-		4. Consultar BD para confirmar persistencia.
+		\begin{enumerate}
+			\item Enviar \texttt{POST} a \texttt{/api/v1/domains} con carga útil: \texttt{\{"name": "Ingeniería de Software", "description": "Dominio para estudios en ingeniería de software"\}}.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{201}.
+			\item Verificar que se retorna \texttt{id}, \texttt{name}, \texttt{description}, \texttt{is\_active}, \texttt{created\_at}.
+			\item Consultar \ac{BD} para confirmar persistencia.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Respuesta contiene ID generado y campos completos.\\
-		- Dominio se crea con is\_active=True por defecto.\\
-		- created\_at y updated\_at se establecen automáticamente.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{201 Created}.
+			\item Respuesta contiene \texttt{ID} generado y campos completos.
+			\item Dominio se crea con \texttt{is\_active=True} por defecto.
+			\item \texttt{created\_at} y \texttt{updated\_at} se establecen automáticamente.
+		\end{itemize}
 		}
 		\testcaseuserstory{3}
 		\end{acceptancetest}
@@ -1777,22 +4147,28 @@
 		\testcasename{Obtener dominio con modelos asociados}
 		\testcasedescription{Validar que se puede obtener un dominio junto con todos sus modelos vinculados.}
 		\testcaseexeccond{
-		- Existe un dominio con ID conocido.\\
-		- El dominio tiene modelos asociados.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe un dominio con \texttt{ID} conocido.
+			\item El dominio tiene modelos asociados.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/domains/\{domain\_id\}?include\_models=true con headers de autenticación.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que la respuesta incluye id, name, description, is\_active.\\
-		4. Verificar que incluye array models con todos los modelos del dominio.\\
-		5. Cada modelo debe contener: id, name, domain\_id, created\_at.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/domains/\{domain\_id\}?include\_models=true} con cabeceras de autenticación.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Verificar que la respuesta incluye \texttt{id}, \texttt{name}, \texttt{description}, \texttt{is\_active}.
+			\item Verificar que incluye arreglo \texttt{models} con todos los modelos del dominio.
+			\item Cada modelo debe contener: \texttt{id}, \texttt{name}, \texttt{domain\_id}, \texttt{created\_at}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Respuesta contiene información del dominio.\\
-		- Array models contiene todos los modelos vinculados.\\
-		- Modelos activos e inactivos se incluyen (según filtro).
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Respuesta contiene información del dominio.
+			\item Arreglo \texttt{models} contiene todos los modelos vinculados.
+			\item Modelos activos e inactivos se incluyen (según filtro).
+		\end{itemize}
 		}
 		\testcaseuserstory{3}
 		\end{acceptancetest}
@@ -1802,22 +4178,28 @@
 		\testcasename{Desactivar dominio}
 		\testcasedescription{Validar que un administrador puede desactivar un dominio sin eliminar información.}
 		\testcaseexeccond{
-		- Usuario es administrador.\\
-		- Existe un dominio activo.\\
-		- El dominio puede no tener modelos o tenerlos.
+		\begin{itemize}
+			\item Usuario es administrador.
+			\item Existe un dominio activo.
+			\item El dominio puede no tener modelos o tenerlos.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de dominio a desactivar.\\
-		2. Enviar PUT a /api/v1/domains/\{domain\_id\} con payload: \{"is\_active": false\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar GET /api/v1/domains/\{domain\_id\} para confirmar.\\
-		5. Verificar que is\_active=False.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de dominio a desactivar.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/domains/\{domain\_id\}} con carga útil: \texttt{\{"is\_active": false\}}.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Consultar \texttt{GET} a \texttt{/api/v1/domains/\{domain\_id\}} para confirmar.
+			\item Verificar que \texttt{is\_active=False}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Dominio marcado como is\_active=False.\\
-		- Información persiste en BD.\\
-		- Modelos del dominio no son eliminados.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Dominio marcado como \texttt{is\_active=False}.
+			\item Información persiste en \ac{BD}.
+			\item Modelos del dominio no son eliminados.
+		\end{itemize}
 		}
 		\testcaseuserstory{3}
 		\end{acceptancetest}
@@ -1827,21 +4209,27 @@
 		\testcasename{Listar todos los dominios}
 		\testcasedescription{Validar que se puede obtener un listado paginado de dominios.}
 		\testcaseexeccond{
-		- Existen múltiples dominios en la BD.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existen múltiples dominios en la \ac{BD}.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/domains?skip=0\&limit=10 con headers de autenticación.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que se retorna array de dominios.\\
-		4. Cada dominio incluye: id, name, description, is\_active, created\_at.\\
-		5. Validar paginación: total, skip, limit.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/domains?skip=0\&limit=10} con cabeceras de autenticación.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Verificar que se retorna arreglo de dominios.
+			\item Cada dominio incluye: \texttt{id}, \texttt{name}, \texttt{description}, \texttt{is\_active}, \texttt{created\_at}.
+			\item Validar paginación: total, skip, limit.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Array de dominios ordenados por fecha.\\
-		- Paginación correcta.\\
-		- Total de registros se incluye.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Arreglo de dominios ordenados por fecha.
+			\item Paginación correcta.
+			\item Total de registros se incluye.
+		\end{itemize}
 		}
 		\testcaseuserstory{3}
 		\end{acceptancetest}
@@ -1854,24 +4242,30 @@
 		\testcasename{Crear modelo asociado a dominio válido}
 		\testcasedescription{Validar que se puede crear un nuevo modelo de características en un dominio existente.}
 		\testcaseexeccond{
-		- Usuario es diseñador o administrador.\\
-		- Existe un dominio activo.\\
-		- Usuario está autenticado.\\
-		- No existe modelo con igual nombre en el dominio.
+		\begin{itemize}
+			\item Usuario es diseñador o administrador.
+			\item Existe un dominio activo.
+			\item Usuario está autenticado.
+			\item No existe modelo con igual nombre en el dominio.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de dominio válido.\\
-		2. Enviar POST a /api/v1/models con payload: \{"name": "Plan 2024", "description": "Modelo curricular 2024", "domain\_id": "<domain\_id>"\}.\\
-		3. Validar que la respuesta contenga status 201.\\
-		4. Verificar que se retorna id, name, domain\_id, created\_at.\\
-		5. Validar que existe en BD.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de dominio válido.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models} con carga útil: \texttt{\{"name": "Plan 2024", "description": "Modelo curricular 2024", "domain\_id": "<domain\_id>"\}}.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{201}.
+			\item Verificar que se retorna \texttt{id}, \texttt{name}, \texttt{domain\_id}, \texttt{created\_at}.
+			\item Validar que existe en \ac{BD}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Modelo creado con is\_active=True.\\
-		- Respuesta incluye ID generado.\\
-		- domain\_id está vinculado correctamente.\\
-		- Timestamps (created\_at, updated\_at) se establecen.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{201 Created}.
+			\item Modelo creado con \texttt{is\_active=True}.
+			\item Respuesta incluye \texttt{ID} generado.
+			\item \texttt{domain\_id} está vinculado correctamente.
+			\item \texttt{created\_at} y \texttt{updated\_at} se establecen.
+		\end{itemize}
 		}
 		\testcaseuserstory{4}
 		\end{acceptancetest}
@@ -1881,23 +4275,29 @@
 		\testcasename{Actualizar metadatos del modelo}
 		\testcasedescription{Validar que los metadatos de un modelo pueden actualizarse sin afectar la estructura.}
 		\testcaseexeccond{
-		- Existe un modelo con ID conocido.\\
-		- Usuario es diseñador del modelo o administrador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe un modelo con \texttt{ID} conocido.
+			\item Usuario es diseñador del modelo o administrador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de modelo.\\
-		2. Enviar PUT a /api/v1/models/\{model\_id\} con payload: \{"name": "Plan 2024 v2", "description": "Modelo actualizado"\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar GET /api/v1/models/\{model\_id\} para confirmar.\\
-		5. Verificar que metadata está actualizada y estructura intacta.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de modelo.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}} con carga útil: \texttt{\{"name": "Plan 2024 v2", "description": "Modelo actualizado"\}}.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Consultar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}} para confirmar.
+			\item Verificar que los metadatos están actualizados y la estructura intacta.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Metadatos actualizados en BD.\\
-		- Estructura del modelo no se modifica.\\
-		- updated\_at se actualiza.\\
-		- Versiones no se ven afectadas.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Metadatos actualizados en \ac{BD}.
+			\item Estructura del modelo no se modifica.
+			\item \texttt{updated\_at} se actualiza.
+			\item Versiones no se ven afectadas.
+		\end{itemize}
 		}
 		\testcaseuserstory{4}
 		\end{acceptancetest}
@@ -1907,23 +4307,29 @@
 		\testcasename{Listar modelos con paginación y filtrado}
 		\testcasedescription{Validar que se pueden listar modelos con paginación, ordenamiento y filtros.}
 		\testcaseexeccond{
-		- Existen múltiples modelos en la BD.\\
-		- Modelos están vinculados a dominios.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existen múltiples modelos en la \ac{BD}.
+			\item Modelos están vinculados a dominios.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/models?domain\_id=<id>\&skip=0\&limit=10\&sort=-created\_at con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que se retorna array de modelos.\\
-		4. Validar paginación: total, skip, limit.\\
-		5. Verificar que ordenamiento es correcto (descendente por created\_at).
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models?domain\_id=<id>\&skip=0\&limit=10\&sort=-created\_at} con cabeceras de autenticación.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Verificar que se retorna arreglo de modelos.
+			\item Validar paginación: total, skip, limit.
+			\item Verificar que el ordenamiento es correcto (descendente por \texttt{created\_at}).
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Array de modelos paginados.\\
-		- Filtrado por dominio correctamente aplicado.\\
-		- Ordenamiento correcto.\\
-		- Total de registros incluido.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Arreglo de modelos paginados.
+			\item Filtrado por dominio correctamente aplicado.
+			\item Ordenamiento correcto.
+			\item Total de registros incluido.
+		\end{itemize}
 		}
 		\testcaseuserstory{4}
 		\end{acceptancetest}
@@ -1935,23 +4341,29 @@
 		\testcasename{Crear nueva versión mediante copia al escribir}
 		\testcasedescription{Validar que se puede crear una nueva versión duplicando una versión existente (Copy-on-Write).}
 		\testcaseexeccond{
-		- Existe un modelo con versión publicada.\\
-		- Usuario es diseñador del modelo.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe un modelo con versión publicada.
+			\item Usuario es diseñador del modelo.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de modelo e ID de versión origen.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions con payload: \{"version\_origin\_id": "<version\_id>", "description": "Version 2.0"\}.\\
-		3. Validar que la respuesta contenga status 201.\\
-		4. Verificar que se crea versión con estado "DRAFT".\\
-		5. Validar que la estructura se copió desde versión origen.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de modelo y \texttt{ID} de versión origen.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions} con carga útil: \texttt{\{"version\_origin\_id": "<version\_id>", "description": "Versión 2.0"\}}.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{201}.
+			\item Verificar que se crea versión con estado \texttt{DRAFT}.
+			\item Validar que la estructura se copió desde versión origen.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Nueva versión creada con estado DRAFT.\\
-		- Copia completa de la estructura anterior.\\
-		- Versión origen no se modifica.\\
-		- Versión nueva tiene version\_number incrementado.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{201 Created}.
+			\item Nueva versión creada con estado \texttt{DRAFT}.
+			\item Copia completa de la estructura anterior.
+			\item Versión origen no se modifica.
+			\item Versión nueva tiene \texttt{version\_number} incrementado.
+		\end{itemize}
 		}
 		\testcaseuserstory{5}
 		\end{acceptancetest}
@@ -1961,23 +4373,29 @@
 		\testcasename{Validar versión antes de publicación}
 		\testcasedescription{Validar que se ejecutan validaciones antes de permitir publicación de versión.}
 		\testcaseexeccond{
-		- Existe una versión en estado DRAFT.\\
-		- Versión tiene estructura válida o inválida.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe una versión en estado DRAFT.
+			\item Versión tiene estructura válida o inválida.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de versión.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate con headers.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Respuesta incluye: is\_valid, errors (si los hay), warnings.\\
-		5. Si es válida, usar para publicación; si no, mostrar errores.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de versión.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate} con cabeceras de autenticación.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Respuesta incluye: \texttt{is\_valid}, \texttt{errors} (si los hay), \texttt{warnings}.
+			\item Si es válida, usar para publicación; si no, mostrar errores.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Respuesta incluye estado de validación.\\
-		- Listado de errores estructurales/lógicos si existen.\\
-		- Listado de advertencias.\\
-		- Puede proceder a publicación si is\_valid=true.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: \texttt{200 OK}.
+			\item Respuesta incluye estado de validación.
+			\item Listado de errores estructurales/lógicos si existen.
+			\item Listado de advertencias.
+			\item Puede proceder a publicación si \texttt{is\_valid=true}.
+		\end{itemize}
 		}
 		\testcaseuserstory{5}
 		\end{acceptancetest}
@@ -1987,23 +4405,29 @@
 		\testcasename{Publicar versión de modelo}
 		\testcasedescription{Validar que una versión validada puede publicarse y pasar a estado PUBLISHED.}
 		\testcaseexeccond{
-		- Existe versión en estado DRAFT validada.\\
-		- Versión no tiene errores críticos.\\
-		- Usuario es revisor o administrador.
+		\begin{itemize}
+			\item Existe versión en estado DRAFT validada.
+			\item Versión no tiene errores críticos.
+			\item Usuario es revisor o administrador.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de versión en estado DRAFT.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/publish con headers.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Verificar que estado cambia a PUBLISHED.\\
-		5. Consultar la versión para confirmar cambio de estado.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de versión en estado \texttt{DRAFT}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/publish} con cabeceras de autenticación.
+			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
+			\item Verificar que el estado cambia a \texttt{PUBLISHED}.
+			\item Consultar la versión para confirmar cambio de estado.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Estado cambia a PUBLISHED.\\
-		- published\_at se establece con timestamp actual.\\
-		- Versión anterior (si existe) pasa a estado ARCHIVED (opcional).\\
-		- Configuraciones pueden vincularse a esta versión.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Estado cambia a PUBLISHED.
+			\item \texttt{published\_at} se establece con marca de tiempo actual.
+			\item Versión anterior (si existe) pasa a estado ARCHIVED (opcional).
+			\item Configuraciones pueden vincularse a esta versión.
+		\end{itemize}
 		}
 		\testcaseuserstory{5}
 		\end{acceptancetest}
@@ -2013,23 +4437,29 @@
 		\testcasename{Recuperar versiones archivadas}
 		\testcasedescription{Validar que se pueden listar y recuperar versiones archivadas.}
 		\testcaseexeccond{
-		- Existen versiones en estado ARCHIVED.\\
-		- Usuario está autenticado.\\
-		- Usuario tiene permisos para ver historial.
+		\begin{itemize}
+			\item Existen versiones en estado ARCHIVED.
+			\item Usuario está autenticado.
+			\item Usuario tiene permisos para ver historial.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/models/\{model\_id\}/versions?status=ARCHIVED con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que se retornan solo versiones ARCHIVED.\\
-		4. Cada versión incluye: id, version\_number, status, archived\_at, created\_at.\\
-		5. Seleccionar una versión y enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions?status=ARCHIVED} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar que se retornan solo versiones ARCHIVED.
+			\item Cada versión incluye: \texttt{id}, \texttt{version\_number}, \texttt{status}, \texttt{archived\_at}, \texttt{created\_at}.
+			\item Seleccionar una versión y enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Array de versiones archivadas.\\
-		- Información completa de cada versión.\\
-		- Timestamps de archivación incluidos.\\
-		- Puede recuperar estructura de versión archivada.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Arreglo de versiones archivadas.
+			\item Información completa de cada versión.
+			\item Marcas de tiempo de archivación incluidas.
+			\item Puede recuperar estructura de versión archivada.
+		\end{itemize}
 		}
 		\testcaseuserstory{5}
 		\end{acceptancetest}
@@ -2041,48 +4471,61 @@
 		\testcasename{Calcular métricas de versión publicada}
 		\testcasedescription{Validar que se pueden calcular métricas de la versión publicada más reciente.}
 		\testcaseexeccond{
-		- Existe un modelo con versión PUBLISHED.\\
-		- La versión tiene estructura completa.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe un modelo con versión PUBLISHED.
+			\item La versión tiene estructura completa.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/models/\{model\_id\}/metrics con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que incluye métricas: feature\_count, group\_count, constraint\_count, cyclomatic\_complexity, tree\_depth.\\
-		4. Verificar que se calcula sobre versión PUBLISHED.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/metrics} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar que incluye métricas: \texttt{feature\_count}, \texttt{group\_count}, \texttt{constraint\_count}, \texttt{cyclomatic\_complexity}, \texttt{tree\_depth}.
+			\item Verificar que se calcula sobre versión PUBLISHED.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Respuesta incluye todas las métricas.\\
-		- Valores son números enteros >= 0.\\
-		- Cálculo se realiza sobre versión publicada.\\
-		- Valores coinciden con estructura del modelo.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Respuesta incluye todas las métricas.
+			\item Valores son números enteros $\ge 0$.
+			\item Cálculo se realiza sobre versión publicada.
+			\item Valores coinciden con estructura del modelo.
+		\end{itemize}
 		}
 		\testcaseuserstory{6}
 		\end{acceptancetest}
 
 		\begin{acceptancetest}[tb:HU6_P2]
 		\testcasecode{HU6\_P2}
-		\testcasename{Exportar modelo en formato UVL}
-		\testcasedescription{Validar que el modelo se puede exportar en formato UVL válido.}
+		\testcasename{Exportar modelo en formato \ac{UVL}}
+		\testcasedescription{Validar que el modelo se puede exportar en formato \ac{UVL} válido.}
 		\testcaseexeccond{
-		- Existe un modelo con versión PUBLISHED.\\
-		- La versión tiene estructura completa.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe un modelo con versión PUBLISHED.
+			\item La versión tiene estructura completa.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=uvl con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que el Content-Type es text/plain o application/x-uvl.\\
-		4. Validar que el contenido es UVL válido (comienza con features o namespace, tiene sintaxis correcta).\\
-		5. Guardar contenido en archivo .uvl y validar.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/export?format=uvl} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar que \texttt{Content-Type} es \texttt{text/plain} o \texttt{application/x-uvl}.
+			\item Validar que el contenido es \ac{UVL} válido (comienza con \texttt{features} o \texttt{namespace}, tiene sintaxis correcta).
+			\item Guardar contenido en archivo \texttt{.uvl} y validar.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Content-Type correcto.\\
-		- UVL contiene sintaxis válida.\\
-		- Todas las features, grupos y restricciones están representadas.\\
-		- Puede descargarse como archivo.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item \texttt{Content-Type} correcto.
+			\item \ac{UVL} contiene sintaxis válida.
+			\item Todas las características, grupos y restricciones están representadas.
+			\item Puede descargarse como archivo.
+			\item Reimportación genera estructura idéntica.
+		\end{itemize}
 		}
 		\testcaseuserstory{6}
 		\end{acceptancetest}
@@ -2092,21 +4535,27 @@
 		\testcasename{Exportar modelo en formato JSON}
 		\testcasedescription{Validar que el modelo se puede exportar en formato JSON.}
 		\testcaseexeccond{
-		- Existe un modelo con versión PUBLISHED.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe un modelo con versión PUBLISHED.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=json con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que Content-Type es application/json.\\
-		4. Validar que es JSON válido (se puede parsear).\\
-		5. Verificar que incluye: model, version, features, groups, constraints.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/export?format=json} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar que \texttt{Content-Type} es \texttt{application/json}.
+			\item Validar que es \ac{JSON} válido (se puede analizar).
+			\item Verificar que incluye: \texttt{model}, \texttt{version}, \texttt{features}, \texttt{groups}, \texttt{constraints}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- JSON válido y bien formado.\\
-		- Estructura incluye todos los componentes del modelo.\\
-		- Puede descargarse como .json.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item \ac{JSON} válido y bien formado.
+			\item Estructura incluye todos los componentes del modelo.
+			\item Puede descargarse como \texttt{.json}.
+		\end{itemize}
 		}
 		\testcaseuserstory{6}
 		\end{acceptancetest}
@@ -2116,23 +4565,29 @@
 		\testcasename{Exportar modelo en formato \ac{DOT}}
 		\testcasedescription{Validar que el modelo se puede exportar en formato \ac{DOT} para visualización.}
 		\testcaseexeccond{
-		- Existe un modelo con versión PUBLISHED.\\
-		- Usuario está autenticado.\\
-		- El sistema tiene funcionalidad de generación de grafos.
+		\begin{itemize}
+			\item Existe un modelo con versión PUBLISHED.
+			\item Usuario está autenticado.
+			\item El sistema tiene funcionalidad de generación de grafos.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=dot con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que Content-Type es text/plain o text/vnd.graphviz.\\
-		4. Validar sintaxis \ac{DOT} (comienza con digraph o graph).\\
-		5. Intentar renderizar con Graphviz para validar.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/export?format=dot} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar que \texttt{Content-Type} es \texttt{text/plain} o \texttt{text/vnd.graphviz}.
+			\item Validar sintaxis \ac{DOT} (comienza con \texttt{digraph} o \texttt{graph}).
+			\item Intentar renderizar con \texttt{Graphviz} para validar.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Sintaxis \ac{DOT} válida.\\
-		- Nodos representan features.\\
-		- Aristas representan relaciones jerárquicas.\\
-		- Puede visualizarse con herramientas Graphviz.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Sintaxis \ac{DOT} válida.
+			\item Nodos representan características.
+			\item Aristas representan relaciones jerárquicas.
+			\item Puede visualizarse con herramientas \texttt{Graphviz}.
+		\end{itemize}
 		}
 		\testcaseuserstory{6}
 		\end{acceptancetest}
@@ -2142,21 +4597,27 @@
 		\testcasename{Exportar modelo en formato Mermaid}
 		\testcasedescription{Validar que el modelo se puede exportar en formato Mermaid para diagramas interactivos.}
 		\testcaseexeccond{
-		- Existe un modelo con versión PUBLISHED.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe un modelo con versión PUBLISHED.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=mermaid con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Validar sintaxis Mermaid (comienza con graph o flowchart).\\
-		4. Verificar que incluye features como nodos.\\
-		5. Verificar que relaciones están correctamente representadas.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/export?format=mermaid} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Validar sintaxis \texttt{Mermaid} (comienza con \texttt{graph} o \texttt{flowchart}).
+			\item Verificar que incluye características como nodos.
+			\item Verificar que relaciones están correctamente representadas.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Sintaxis Mermaid válida.\\
-		- Diagrama representa jerarquía del modelo.\\
-		- Compatible con Mermaid.js.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Sintaxis \texttt{Mermaid} válida.
+			\item Diagrama representa jerarquía del modelo.
+			\item Compatible con \texttt{Mermaid.js}.
+		\end{itemize}
 		}
 		\testcaseuserstory{6}
 		\end{acceptancetest}
@@ -2166,132 +4627,162 @@
 
 		\begin{acceptancetest}[tb:HU7_P1]
 		\testcasecode{HU7\_P1}
-		\testcasename{Crear feature en versión de modelo}
-		\testcasedescription{Validar que se puede crear una nueva feature en una versión específica.}
+		\testcasename{Crear característica en versión de modelo}
+		\testcasedescription{Validar que se puede crear una nueva característica en una versión específica.}
 		\testcaseexeccond{
-		- Existe un modelo con versión DRAFT.\\
-		- Usuario es diseñador del modelo.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe un modelo con versión DRAFT.
+			\item Usuario es diseñador del modelo.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de modelo e ID de versión.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features con payload: \{"name": "Módulo A", "type": "CONCRETE"\}.\\
-		3. Validar que la respuesta contenga status 201.\\
-		4. Verificar que se retorna id, name, type, version\_id, parent\_id.\\
-		5. Validar que existe en BD.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de modelo e \texttt{ID} de versión.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features} con carga útil: \texttt{\{"name": "Módulo A", "type": "CONCRETE"\}}.
+			\item Validar que la respuesta contenga estado 201.
+			\item Verificar que se retorna \texttt{id}, \texttt{name}, \texttt{type}, \texttt{version\_id}, \texttt{parent\_id}.
+			\item Validar que existe en \ac{BD}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Feature creada con ID generado.\\
-		- Type es CONCRETE, ABSTRACT u OPTIONAL según especificación.\\
-		- Sin padre (raíz) inicialmente.\\
-		- Timestamps se establecen.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 201 Created.
+			\item Característica creada con \texttt{ID} generado.
+			\item Tipo es \texttt{CONCRETE}, \texttt{ABSTRACT} u \texttt{OPTIONAL} según especificación.
+			\item Sin padre (raíz) inicialmente.
+			\item Marcas de tiempo se establecen.
+		\end{itemize}
 		}
 		\testcaseuserstory{7}
 		\end{acceptancetest}
 
 		\begin{acceptancetest}[tb:HU7_P2]
 		\testcasecode{HU7\_P2}
-		\testcasename{Reubicar feature cambiando padre}
-		\testcasedescription{Validar que una feature puede ser reubicada cambiando su padre.}
+		\testcasename{Reubicar característica cambiando padre}
+		\testcasedescription{Validar que una característica puede ser reubicada cambiando su padre.}
 		\testcaseexeccond{
-		- Existe una feature con padre.\\
-		- Existe otra feature que será el nuevo padre.\\
-		- Cambio no crearía ciclo.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe una característica con padre.
+			\item Existe otra característica que será el nuevo padre.
+			\item Cambio no crearía ciclo.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de feature a mover y ID de nuevo padre.\\
-		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\} con payload: \{"parent\_id": "<new\_parent\_id>"\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar feature para confirmar nuevo padre.\\
-		5. Verificar que subárbol se movió correctamente.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de la característica a mover y \texttt{ID} del nuevo padre.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}} con carga útil: \texttt{\{"parent\_id": "<new\_parent\_id>"\}}.
+			\item Validar que la respuesta contenga estado 200.
+			\item Consultar característica para confirmar nuevo padre.
+			\item Verificar que subárbol se movió correctamente.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Padre actualizado.\\
-		- Subárbol completo se mueve con la feature.\\
-		- Estructura jerarquía mantiene integridad.\\
-		- No se crea ciclo.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Padre actualizado.
+			\item Subárbol completo se mueve con la característica.
+			\item Estructura jerárquica mantiene integridad.
+			\item No se crea ciclo.
+		\end{itemize}
 		}
 		\testcaseuserstory{7}
 		\end{acceptancetest}
 
 		\begin{acceptancetest}[tb:HU7_P3]
 		\testcasecode{HU7\_P3}
-		\testcasename{Recuperar subárbol completo de feature}
-		\testcasedescription{Validar que se puede obtener una feature con toda su estructura descendente.}
+		\testcasename{Recuperar subárbol completo de característica}
+		\testcasedescription{Validar que se puede obtener una característica con toda su estructura descendente.}
 		\testcaseexeccond{
-		- Existe una feature con descendientes.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe una característica con descendientes.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de feature.\\
-		2. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}?include\_subtree=true con headers.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Verificar que incluye la feature y su array de children.\\
-		5. Verificar que cada child incluye sus propios children (recursivo).
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de la característica.
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}?include\_subtree=true} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar que incluye la característica y su arreglo de \texttt{children}.
+			\item Verificar que cada \texttt{child} incluye sus propios \texttt{children} (recursivo).
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Feature principal incluida.\\
-		- Array children contiene todas las features descendentes.\\
-		- Estructura jerárquica completa preservada.\\
-		- Profundidad del árbol representada correctamente.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Característica principal incluida.
+			\item Arreglo \texttt{children} contiene todas las características descendentes.
+			\item Estructura jerárquica completa preservada.
+			\item Profundidad del árbol representada correctamente.
+		\end{itemize}
 		}
 		\testcaseuserstory{7}
 		\end{acceptancetest}
 
 		\begin{acceptancetest}[tb:HU7_P4]
 		\testcasecode{HU7\_P4}
-		\testcasename{Desactivar feature con soporte de versionado}
-		\testcasedescription{Validar que una feature puede ser desactivada lógicamente manteniéndola en la BD.}
+		\testcasename{Desactivar característica con soporte de versionado}
+		\testcasedescription{Validar que una característica puede ser desactivada lógicamente manteniéndola en la \ac{BD}.}
 		\testcaseexeccond{
-		- Existe una feature activa.\\
-		- Feature no es raíz del árbol.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe una característica activa.
+			\item La característica no es raíz del árbol.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de feature a desactivar.\\
-		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\} con payload: \{"is\_active": false\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar feature para confirmar is\_active=False.\\
-		5. Verificar que no afecta otras versiones.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de la característica a desactivar.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}} con carga útil: \texttt{\{"is\_active": false\}}.
+			\item Validar que la respuesta contenga estado 200.
+			\item Consultar característica para confirmar \texttt{is\_active=false}.
+			\item Verificar que no afecta otras versiones.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Feature marcada como is\_active=False.\\
-		- Feature permanece en BD.\\
-		- Otros cambios no afectados.\\
-		- Versionado mantiene registro del cambio.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Característica marcada como \texttt{is\_active=false}.
+			\item Característica permanece en \ac{BD}.
+			\item Otros cambios no afectados.
+			\item Versionado mantiene registro del cambio.
+		\end{itemize}
 		}
 		\testcaseuserstory{7}
 		\end{acceptancetest}
 
 		\begin{acceptancetest}[tb:HU7_P5]
 		\testcasecode{HU7\_P5}
-		\testcasename{Actualizar propiedades de feature}
-		\testcasedescription{Validar que se pueden actualizar propiedades de una feature.}
+		\testcasename{Actualizar propiedades de característica}
+		\testcasedescription{Validar que se pueden actualizar propiedades de una característica.}
 		\testcaseexeccond{
-		- Existe una feature.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe una característica.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de feature.\\
-		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\} con payload: \{"name": "Nuevo nombre", "type": "ABSTRACT"\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar feature para confirmar cambios.\\
-		5. Verificar que metadata se actualizó.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de la característica.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}} con carga útil: \texttt{\{"name": "Nuevo nombre", "type": "ABSTRACT"\}}.
+			\item Validar que la respuesta contenga estado 200.
+			\item Consultar característica para confirmar cambios.
+			\item Verificar que metadata se actualizó.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Nombre actualizado.\\
-		- Tipo actualizado.\\
-		- updated\_at se actualiza.\\
-		- Cambios persistidos en BD.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Nombre actualizado.
+			\item Tipo actualizado.
+			\item \texttt{updated\_at} se actualiza.
+			\item Cambios persistidos en \ac{BD}.
+		\end{itemize}
 		}
 		\testcaseuserstory{7}
 		\end{acceptancetest}
@@ -2300,27 +4791,33 @@
 
 		\begin{acceptancetest}[tb:HU8_P1]
 		\testcasecode{HU8\_P1}
-		\testcasename{Crear grupo XOR entre features}
-		\testcasedescription{Validar que se puede crear un grupo XOR (exactamente uno) entre features hermanas.}
+		\testcasename{Crear grupo XOR entre características}
+		\testcasedescription{Validar que se puede crear un grupo XOR (exactamente uno) entre características hermanas.}
 		\testcaseexeccond{
-		- Existen features hermanas en versión DRAFT.\\
-		- Features tienen mismo padre.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existen características hermanas en versión DRAFT.
+			\item Las características tienen el mismo padre.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener IDs de features a agrupar.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups con payload: \{"group\_type": "XOR", "parent\_id": "<parent\_id>"\}.\\
-		3. Validar que la respuesta contenga status 201.\\
-		4. Verificar que se retorna id, group\_type, parent\_id, min\_cardinality=1, max\_cardinality=1.\\
-		5. Asignar features al grupo.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de las características a agrupar.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups} con carga útil: \texttt{\{"group\_type": "XOR", "parent\_id": "<parent\_id>"\}}.
+			\item Validar que la respuesta contenga estado 201.
+			\item Verificar que se retorna \texttt{id}, \texttt{group\_type}, \texttt{parent\_id}, \texttt{min\_cardinality=1}, \texttt{max\_cardinality=1}.
+			\item Asignar características al grupo.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Grupo creado con group\_type=XOR.\\
-		- Cardinalidades establecidas: min=1, max=1.\\
-		- ID generado.\\
-		- Grupo listo para asignar features.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 201 Created.
+			\item Grupo creado con \texttt{group\_type=XOR}.
+			\item Cardinalidades establecidas: min=1, max=1.
+			\item \texttt{ID} generado.
+			\item Grupo listo para asignar características.
+		\end{itemize}
 		}
 		\testcaseuserstory{8}
 		\end{acceptancetest}
@@ -2330,75 +4827,93 @@
 		\testcasename{Crear grupo OR con cardinalidades}
 		\testcasedescription{Validar que se puede crear un grupo OR con cardinalidades mínimas y máximas personalizadas.}
 		\testcaseexeccond{
-		- Existen features hermanas en versión DRAFT.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existen características hermanas en versión DRAFT.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de padre.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups con payload: \{"group\_type": "OR", "parent\_id": "<parent\_id>", "min\_cardinality": 1, "max\_cardinality": 3\}.\\
-		3. Validar que la respuesta contenga status 201.\\
-		4. Verificar que cardinalidades se establecen correctamente.\\
-		5. Asignar features al grupo.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de padre.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups} con carga útil: \texttt{\{"group\_type": "OR", "parent\_id": "<parent\_id>", "min\_cardinality": 1, "max\_cardinality": 3\}}.
+			\item Validar que la respuesta contenga estado 201.
+			\item Verificar que cardinalidades se establecen correctamente.
+			\item Asignar características al grupo.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Grupo creado con group\_type=OR.\\
-		- Cardinalidades: min=1, max=3.\\
-		- Validación: min >= 1 y max >= min.\\
-		- Grupo aceptará entre 1 y 3 features seleccionadas.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 201 Created.
+			\item Grupo creado con \texttt{group\_type=OR}.
+			\item Cardinalidades: min=1, max=3.
+			\item Validación: \texttt{min} $\ge 1$ y \texttt{max} $\ge$ \texttt{min}.
+			\item Grupo aceptará entre 1 y 3 características seleccionadas.
+		\end{itemize}
 		}
 		\testcaseuserstory{8}
 		\end{acceptancetest}
 
 		\begin{acceptancetest}[tb:HU8_P3]
 		\testcasecode{HU8\_P3}
-		\testcasename{Crear relación requires entre features}
-		\testcasedescription{Validar que se puede crear una relación de implicación (requires) entre features.}
+		\testcasename{Crear relación requires entre características}
+		\testcasedescription{Validar que se puede crear una relación de implicación (\texttt{requires}) entre características.}
 		\testcaseexeccond{
-		- Existen dos features en versión DRAFT.\\
-		- Features pueden estar en diferentes ramas.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existen dos características en versión DRAFT.
+			\item Las características pueden estar en diferentes ramas.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener IDs de feature origen y destino.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships con payload: \{"relationship\_type": "REQUIRES", "source\_id": "<feature\_id\_1>", "target\_id": "<feature\_id\_2>"\}.\\
-		3. Validar que la respuesta contenga status 201.\\
-		4. Verificar que se retorna relación con IDs correctos.\\
-		5. Guardar ID de relación.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de característica origen y destino.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships} con carga útil: \texttt{\{"relationship\_type": "REQUIRES", "source\_id": "<feature\_id\_1>", "target\_id": "<feature\_id\_2>"\}}.
+			\item Validar que la respuesta contenga estado 201.
+			\item Verificar que se retorna relación con \texttt{ID} correctos.
+			\item Guardar \texttt{ID} de relación.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Relación creada.\\
-		- Tipo: REQUIRES (implicación).\\
-		- Source y target correctos.\\
-		- Bidireccional en términos de consulta.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 201 Created.
+			\item Relación creada.
+			\item Tipo: \texttt{REQUIRES} (implicación).
+			\item \texttt{source} y \texttt{target} correctos.
+			\item Bidireccional en términos de consulta.
+		\end{itemize}
 		}
 		\testcaseuserstory{8}
 		\end{acceptancetest}
 
 		\begin{acceptancetest}[tb:HU8_P4]
 		\testcasecode{HU8\_P4}
-		\testcasename{Crear relación excludes entre features}
-		\testcasedescription{Validar que se puede crear una relación de exclusión entre features.}
+		\testcasename{Crear relación excludes entre características}
+		\testcasedescription{Validar que se puede crear una relación de exclusión entre características.}
 		\testcaseexeccond{
-		- Existen dos features en versión DRAFT.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existen dos características en versión DRAFT.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener IDs de features a relacionar.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships con payload: \{"relationship\_type": "EXCLUDES", "source\_id": "<id\_1>", "target\_id": "<id\_2>"\}.\\
-		3. Validar que la respuesta contenga status 201.\\
-		4. Verificar que relación se crea.\\
-		5. Intentar crear configuración con ambas features (debe fallar).
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de características a relacionar.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships} con carga útil: \texttt{\{"relationship\_type": "EXCLUDES", "source\_id": "<id\_1>", "target\_id": "<id\_2>"\}}.
+			\item Validar que la respuesta contenga estado 201.
+			\item Verificar que relación se crea.
+			\item Intentar crear configuración con ambas características (debe fallar).
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Relación de exclusión creada.\\
-		- Ambas features no pueden seleccionarse simultáneamente.\\
-		- Validación de configuraciones lo verifica.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 201 Created.
+			\item Relación de exclusión creada.
+			\item Ambas características no pueden seleccionarse simultáneamente.
+			\item Validación de configuraciones lo verifica.
+		\end{itemize}
 		}
 		\testcaseuserstory{8}
 		\end{acceptancetest}
@@ -2408,21 +4923,27 @@
 		\testcasename{Listar grupos y relaciones de versión}
 		\testcasedescription{Validar que se pueden obtener todos los grupos y relaciones de una versión.}
 		\testcaseexeccond{
-		- Existe versión con grupos y relaciones.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión con grupos y relaciones.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar array de grupos con id, group\_type, parent\_id, min\_cardinality, max\_cardinality.\\
-		4. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships.\\
-		5. Verificar array de relaciones.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar arreglo de grupos con \texttt{id}, \texttt{group\_type}, \texttt{parent\_id}, \texttt{min\_cardinality}, \texttt{max\_cardinality}.
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships}.
+			\item Verificar arreglo de relaciones.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK (ambas).\\
-		- Todos los grupos listados.\\
-		- Todas las relaciones listadas.\\
-		- Información completa de cada grupo/relación.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK (ambas).
+			\item Todos los grupos listados.
+			\item Todas las relaciones listadas.
+			\item Información completa de cada grupo/relación.
+		\end{itemize}
 		}
 		\testcaseuserstory{8}
 		\end{acceptancetest}
@@ -2432,26 +4953,32 @@
 
 		\begin{acceptancetest}[tb:HU9_P1]
 		\testcasecode{HU9\_P1}
-		\testcasename{Crear restricción simples con sintaxis UVL}
+		\testcasename{Crear restricción simple con sintaxis UVL}
 		\testcasedescription{Validar que se puede crear una restricción simple con expresión lógica.}
 		\testcaseexeccond{
-		- Existe versión DRAFT con features.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión DRAFT con características.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de versión.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints con payload: \{"expression": "FeatureA => FeatureB", "description": "Si A entonces B"\}.\\
-		3. Validar que la respuesta contenga status 201.\\
-		4. Verificar que se parsea y valida la expresión.\\
-		5. Guardar ID de restricción.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de versión.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints} con carga útil: \texttt{\{"expression": "FeatureA => FeatureB", "description": "Si A entonces B"\}}.
+			\item Validar que la respuesta contenga estado 201.
+			\item Verificar que se analiza y valida la expresión.
+			\item Guardar \texttt{ID} de restricción.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Restricción creada con ID.\\
-		- Expresión validada sintácticamente.\\
-		- Descripción opcional almacenada.\\
-		- Restricción activa.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 201 Created.
+			\item Restricción creada con \texttt{ID}.
+			\item Expresión validada sintácticamente.
+			\item Descripción opcional almacenada.
+			\item Restricción activa.
+		\end{itemize}
 		}
 		\testcaseuserstory{9}
 		\end{acceptancetest}
@@ -2461,22 +4988,28 @@
 		\testcasename{Crear restricción compleja con múltiples operadores}
 		\testcasedescription{Validar que se pueden crear restricciones complejas con operadores lógicos.}
 		\testcaseexeccond{
-		- Existe versión DRAFT con features.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión DRAFT con características.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de versión.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints con payload: \{"expression": "(FeatureA | FeatureB) \& \textasciitilde FeatureC => FeatureD", "description": "Restricción compleja"\}.\\
-		3. Validar que la respuesta contenga status 201.\\
-		4. Verificar que se valida correctamente.\\
-		5. Intentar añadir a validación del modelo.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de versión.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints} con carga útil: \texttt{\{"expression": "(FeatureA | FeatureB) \& \textasciitilde FeatureC => FeatureD", "description": "Restricción compleja"\}}.
+			\item Validar que la respuesta contenga estado 201.
+			\item Verificar que se valida correctamente.
+			\item Intentar añadir a validación del modelo.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Restricción con múltiples operadores aceptada.\\
-		- Sintaxis: |, \&, \textasciitilde, =>, válidas.\\
-		- Expresión se almacena correctamente.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 201 Created.
+			\item Restricción con múltiples operadores aceptada.
+			\item Sintaxis: \texttt{|}, \texttt{\&}, \texttt{\textasciitilde}, \texttt{=>}, válidas.
+			\item Expresión se almacena correctamente.
+		\end{itemize}
 		}
 		\testcaseuserstory{9}
 		\end{acceptancetest}
@@ -2486,23 +5019,29 @@
 		\testcasename{Actualizar restricción existente}
 		\testcasedescription{Validar que una restricción puede ser actualizada con nueva expresión.}
 		\testcaseexeccond{
-		- Existe restricción en versión DRAFT.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe restricción en versión DRAFT.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de restricción.\\
-		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints/\{constraint\_id\} con payload: \{"expression": "FeatureA \& FeatureB => FeatureC", "description": "Expresión actualizada"\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar restricción para confirmar cambios.\\
-		5. Verificar que versionado registra el cambio.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de restricción.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints/\{constraint\_id\}} con carga útil: \texttt{\{"expression": "FeatureA \& FeatureB => FeatureC", "description": "Expresión actualizada"\}}.
+			\item Validar que la respuesta contenga estado 200.
+			\item Consultar restricción para confirmar cambios.
+			\item Verificar que versionado registra el cambio.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Expresión actualizada.\\
-		- Nueva expresión validada.\\
-		- Descripción actualizada.\\
-		- updated\_at se modifica.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Expresión actualizada.
+			\item Nueva expresión validada.
+			\item Descripción actualizada.
+			\item \texttt{updated\_at} se modifica.
+		\end{itemize}
 		}
 		\testcaseuserstory{9}
 		\end{acceptancetest}
@@ -2512,20 +5051,26 @@
 		\testcasename{Listar restricciones de versión}
 		\testcasedescription{Validar que se pueden obtener todas las restricciones de una versión.}
 		\testcaseexeccond{
-		- Existe versión con restricciones.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión con restricciones.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar array de restricciones.\\
-		4. Cada restricción incluye: id, expression, description, is\_active, created\_at.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar arreglo de restricciones.
+			\item Cada restricción incluye: \texttt{id}, \texttt{expression}, \texttt{description}, \texttt{is\_active}, \texttt{created\_at}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Array de todas las restricciones.\\
-		- Información completa de cada restricción.\\
-		- Ordenadas por fecha de creación.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Arreglo de todas las restricciones.
+			\item Información completa de cada restricción.
+			\item Ordenadas por fecha de creación.
+		\end{itemize}
 		}
 		\testcaseuserstory{9}
 		\end{acceptancetest}
@@ -2537,77 +5082,64 @@
 		\testcasename{Aplicar contenido \ac{UVL} a estructura de modelo}
 		\testcasedescription{Validar que se puede cargar un modelo completo desde contenido \ac{UVL}.}
 		\testcaseexeccond{
-		- Existe una versión DRAFT vacía.\\
-		- Se dispone de contenido \ac{UVL} válido.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe una versión DRAFT vacía.
+			\item Se dispone de contenido \ac{UVL} válido.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Preparar contenido \ac{UVL} válido (features, grupos, restricciones).\\
-		2. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl con payload: \{"content": "<contenido UVL>"\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar la estructura generada del modelo.\\
-		5. Verificar que árbol, grupos y restricciones se crearon correctamente.
+		\begin{enumerate}
+			\item Preparar contenido \ac{UVL} válido (características, grupos, restricciones).
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl} con carga útil: \texttt{\{"content": "<contenido UVL>"\}}.
+			\item Validar que la respuesta contenga estado 200.
+			\item Consultar la estructura generada del modelo.
+			\item Verificar que árbol, grupos y restricciones se crearon correctamente.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Estructura del modelo se genera desde \ac{UVL}.\\
-		- Todas las features se crean.\\
-		- Todos los grupos se crean.\\
-		- Todas las restricciones se crean.\\
-		- Estructura coincide con \ac{UVL} original.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Estructura del modelo se genera desde \ac{UVL}.
+			\item Todas las características se crean.
+			\item Todos los grupos se crean.
+			\item Todas las restricciones se crean.
+			\item Estructura coincide con \ac{UVL} original.
+		\end{itemize}
 		}
 		\testcaseuserstory{10}
 		\end{acceptancetest}
 
 		\begin{acceptancetest}[tb:HU10_P2]
-		\testcasecode{HU10\_P2}
-		\testcasename{Exportar contenido \ac{UVL} desde modelo}
-		\testcasedescription{Validar que se puede generar contenido \ac{UVL} válido desde la estructura del modelo.}
-		\testcaseexeccond{
-		- Existe versión PUBLISHED con estructura completa.\\
-		- Estructura es válida.\\
-		- Usuario está autenticado.
-		}
-		\testcaseexecstep{
-		1. Enviar GET a /api/v1/models/\{model\_id\}/export?format=uvl con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Extraer contenido \ac{UVL}.\\
-		4. Validar sintaxis \ac{UVL}.\\
-		5. Importar \ac{UVL} en nueva versión y comparar estructura.
-		}
-		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- UVL válido y bien formado.\\
-		- Contiene todas las features, grupos y restricciones.\\
-		- Re-importación genera estructura idéntica.
-		}
-		\testcaseuserstory{10}
-		\end{acceptancetest}
-
-		\begin{acceptancetest}[tb:HU10_P3]
 		\testcasecode{HU10\_P3}
 		\testcasename{Persistir UVL analizado en versión}
 		\testcasedescription{Validar que el contenido UVL se analiza, valida y persiste en la BD.}
 		\testcaseexeccond{
-		- Existe versión DRAFT.\\
-		- Se carga contenido UVL válido.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión DRAFT.
+			\item Se carga contenido UVL válido.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar PUT a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl con contenido UVL.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Consultar GET /api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl.\\
-		4. Verificar que el UVL almacenado coincide con el original.\\
-		5. Validar que existe en BD.
+		\begin{enumerate}
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl} con contenido \ac{UVL}.
+			\item Validar que la respuesta contenga estado 200.
+			\item Consultar \texttt{GET} \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl}.
+			\item Verificar que el UVL almacenado coincide con el original.
+			\item Validar que existe en \ac{BD}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK (ambas).\\
-		- UVL almacenado en BD.\\
-		- Análisis y tokens se persisten.\\
-		- Puede recuperarse completo.\\
-		- Válido para re-importación.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK (ambas).
+			\item \ac{UVL} almacenado en \ac{BD}.
+			\item Análisis y \texttt{tokens} se persisten.
+			\item Puede recuperarse completo.
+			\item Válido para reimportación.
+		\end{itemize}
 		}
 		\testcaseuserstory{10}
 		\end{acceptancetest}
@@ -2620,23 +5152,29 @@
 		\testcasename{Evaluar satisfacibilidad global del modelo}
 		\testcasedescription{Validar que se puede ejecutar un análisis SAT sobre el modelo completo.}
 		\testcaseexeccond{
-		- Existe versión con estructura y restricciones.\\
-		- Sistema tiene integración con solucionador SAT.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión con estructura y restricciones.
+			\item Sistema tiene integración con solucionador SAT.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/satisfiability con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que respuesta incluye: is\_satisfiable, error\_message (si aplica).\\
-		4. Si es satisfiable, debe existir al menos una configuración válida.\\
-		5. Si no es satisfiable, revisar restricciones.
+		\begin{enumerate}
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/satisfiability} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar que respuesta incluye: \texttt{is\_satisfiable}, \texttt{error\_message} (si aplica).
+			\item Si es satisfiable, debe existir al menos una configuración válida.
+			\item Si no es satisfiable, revisar restricciones.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Respuesta incluye is\_satisfiable (true/false).\\
-		- Si false, mensaje de error explicando por qué.\\
-		- Cálculo se ejecuta sobre modelo completo.\\
-		- Tiempo de ejecución razonable.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Respuesta incluye \texttt{is\_satisfiable} (\texttt{true/false}).
+			\item Si false, mensaje de error explicando por qué.
+			\item Cálculo se ejecuta sobre modelo completo.
+			\item Tiempo de ejecución razonable.
+		\end{itemize}
 		}
 		\testcaseuserstory{11}
 		\end{acceptancetest}
@@ -2644,24 +5182,30 @@
 		\begin{acceptancetest}[tb:HU11_P2]
 		\testcasecode{HU11\_P2}
 		\testcasename{Detectar ciclos en la jerarquía}
-		\testcasedescription{Validar que se detectan ciclos en la relaciones entre features.}
+		\testcasedescription{Validar que se detectan ciclos en las relaciones entre características.}
 		\testcaseexeccond{
-		- Existe versión con estructura.\\
-		- Estructura puede contener ciclos (intencional para testing).\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión con estructura.
+			\item Estructura puede contener ciclos (intencional para testing).
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Crear escenario con ciclo: A->B->C->A.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/structure con headers.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Verificar que se reporta error: "Cycle detected: A->B->C->A".\\
-		5. Listar features participantes.
+		\begin{enumerate}
+			\item Crear escenario con ciclo: \texttt{A->B->C->A}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/structure} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar que se reporta error: \texttt{"Cycle detected: A->B->C->A"}.
+			\item Listar características participantes.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Respuesta incluye lista de ciclos detectados.\\
-		- Cada ciclo lista features que participan.\\
-		- Mensaje claro de error.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Respuesta incluye lista de ciclos detectados.
+			\item Cada ciclo lista características que participan.
+			\item Mensaje claro de error.
+		\end{itemize}
 		}
 		\testcaseuserstory{11}
 		\end{acceptancetest}
@@ -2669,23 +5213,29 @@
 		\begin{acceptancetest}[tb:HU11_P3]
 		\testcasecode{HU11\_P3}
 		\testcasename{Identificar características muertas}
-		\testcasedescription{Validar que se detectan características que nunca pueden ser seleccionadas (dead features).}
+		\testcasedescription{Validar que se detectan características que nunca pueden ser seleccionadas.}
 		\testcaseexeccond{
-		- Existe versión con restricciones que hacen imposible seleccionar cierta feature.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión con restricciones que hacen imposible seleccionar cierta característica.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Crear estructura con feature imposible de seleccionar.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/analyze/dead-features con headers.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Verificar array de features muertas.\\
-		5. Cada feature incluye razón por la que es muerta.
+		\begin{enumerate}
+			\item Crear estructura con característica imposible de seleccionar.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/analyze/dead-features} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar arreglo de características muertas.
+			\item Cada característica incluye razón por la que es muerta.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Array de features muertas identificadas.\\
-		- Explicación de por qué es muerta.\\
-		- Análisis completo y correcto.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Arreglo de características muertas identificadas.
+			\item Explicación de por qué es muerta.
+			\item Análisis completo y correcto.
+		\end{itemize}
 		}
 		\testcaseuserstory{11}
 		\end{acceptancetest}
@@ -2693,24 +5243,30 @@
 		\begin{acceptancetest}[tb:HU11_P4]
 		\testcasecode{HU11\_P4}
 		\testcasename{Detectar nodos huérfanos}
-		\testcasedescription{Validar que se detectan features que no tienen ruta a raíz.}
+		\testcasedescription{Validar que se detectan características que no tienen ruta a raíz.}
 		\testcaseexeccond{
-		- Existe versión con estructura.\\
-		- Se intenta crear feature sin padre (orphan).\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión con estructura.
+			\item Se intenta crear característica sin padre (huérfana).
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Buscar features sin ruta a raíz.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/structure con headers.\\
-		3. Validar que la respuesta reporta nodos huérfanos.\\
-		4. Verificar que lista los IDs de nodos huérfanos.\\
-		5. Mensaje explicativo.
+		\begin{enumerate}
+			\item Buscar características sin ruta a raíz.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/structure} con cabeceras.
+			\item Validar que la respuesta reporta nodos huérfanos.
+			\item Verificar que lista los IDs de nodos huérfanos.
+			\item Mensaje explicativo.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Lista de nodos huérfanos detectados.\\
-		- Explicación clara.\\
-		- Recomendación de reparación.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Lista de nodos huérfanos detectados.
+			\item Explicación clara.
+			\item Recomendación de reparación.
+		\end{itemize}
 		}
 		\testcaseuserstory{11}
 		\end{acceptancetest}
@@ -2718,24 +5274,30 @@
 		\begin{acceptancetest}[tb:HU11_P5]
 		\testcasecode{HU11\_P5}
 		\testcasename{Ejecutar validación completa}
-		\testcasedescription{Validar que se ejecuta suite completa de validaciones en un paso.}
+		\testcasedescription{Validar que se ejecuta el conjunto completo de validaciones en un paso.}
 		\testcaseexeccond{
-		- Existe versión con estructura.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión con estructura.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/full con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Respuesta incluye: satisfiable, cycles, dead\_features, orphan\_nodes, warnings.\\
-		4. Cada sección tiene lista de errores/warnings.\\
-		5. Resumen general de validación.
+		\begin{enumerate}
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/full} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Respuesta incluye: \texttt{satisfiable}, \texttt{cycles}, \texttt{dead\_features}, \texttt{orphan\_nodes}, \texttt{warnings}.
+			\item Cada sección tiene lista de errores/advertencias.
+			\item Resumen general de validación.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Respuesta incluye todas las validaciones.\\
-		- Formato consistente.\\
-		- Fácil de interpretar.\\
-		- Guía para correcciones.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Respuesta incluye todas las validaciones.
+			\item Formato consistente.
+			\item Fácil de interpretar.
+			\item Guía para correcciones.
+		\end{itemize}
 		}
 		\testcaseuserstory{11}
 		\end{acceptancetest}
@@ -2746,26 +5308,32 @@
 		\begin{acceptancetest}[tb:HU12_P1]
 		\testcasecode{HU12\_P1}
 		\testcasename{Crear configuración en versión publicada}
-		\testcasedescription{Validar que se puede crear una configuración (selección de features) en una versión publicada.}
+		\testcasedescription{Validar que se puede crear una configuración (selección de características) en una versión publicada.}
 		\testcaseexeccond{
-		- Existe versión PUBLISHED con features.\\
-		- Se dispone de lista válida de features.\\
-		- Usuario es configurador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión PUBLISHED con características.
+			\item Se dispone de lista válida de características.
+			\item Usuario es configurador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener IDs de features válidas.\\
-		2. Enviar POST a /api/v1/configurations con payload: \{"name": "Config 1", "description": "Configuración de prueba", "version\_id": "<version\_id>", "features": ["<id\_1>", "<id\_2>"]\}.\\
-		3. Validar que la respuesta contenga status 201.\\
-		4. Verificar que se crea configuración con ID.\\
-		5. Validar que se vincula a versión PUBLISHED.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de características válidas.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations} con carga útil: \texttt{\{"name": "Config 1", "description": "Configuración de prueba", "version\_id": "<version\_id>", "features": ["<id\_1>", "<id\_2>"]\}}.
+			\item Validar que la respuesta contenga estado 201.
+			\item Verificar que se crea configuración con \texttt{ID}.
+			\item Validar que se vincula a versión PUBLISHED.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Configuración creada con ID.\\
-		- Vinculada a versión PUBLISHED.\\
-		- Selección de features persistida.\\
-		- Timestamps se establecen.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 201 Created.
+			\item Configuración creada con \texttt{ID}.
+			\item Vinculada a versión PUBLISHED.
+			\item Selección de características persistida.
+			\item Marcas de tiempo se establecen.
+		\end{itemize}
 		}
 		\testcaseuserstory{12}
 		\end{acceptancetest}
@@ -2773,25 +5341,31 @@
 		\begin{acceptancetest}[tb:HU12_P2]
 		\testcasecode{HU12\_P2}
 		\testcasename{Actualizar configuración existente}
-		\testcasedescription{Validar que se puede actualizar nombre, descripción y features de una configuración.}
+		\testcasedescription{Validar que se puede actualizar nombre, descripción y características de una configuración.}
 		\testcaseexeccond{
-		- Existe configuración persistida.\\
-		- Usuario es propietario o administrador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe configuración persistida.
+			\item Usuario es propietario o administrador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de configuración.\\
-		2. Enviar PUT a /api/v1/configurations/\{config\_id\} con payload: \{"name": "Nuevo nombre", "description": "Descripción actualizada", "features": ["<nuevo\_id\_1>", "<nuevo\_id\_2>"]\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar configuración para confirmar cambios.\\
-		5. Verificar que features se actualizaron.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de configuración.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/configurations/\{config\_id\}} con carga útil: \texttt{\{"name": "Nuevo nombre", "description": "Descripción actualizada", "features": ["<nuevo\_id\_1>", "<nuevo\_id\_2>"]\}}.
+			\item Validar que la respuesta contenga estado 200.
+			\item Consultar configuración para confirmar cambios.
+			\item Verificar que las características se actualizaron.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Configuración actualizada en BD.\\
-		- Nombre y descripción cambiados.\\
-		- Lista de features actualizada.\\
-		- updated\_at se modifica.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Configuración actualizada en \ac{BD}.
+			\item Nombre y descripción cambiados.
+			\item Lista de características actualizada.
+			\item \texttt{updated\_at} se modifica.
+		\end{itemize}
 		}
 		\testcaseuserstory{12}
 		\end{acceptancetest}
@@ -2801,22 +5375,28 @@
 		\testcasename{Listar configuraciones paginadas}
 		\testcasedescription{Validar que se pueden obtener configuraciones con paginación.}
 		\testcaseexeccond{
-		- Existen múltiples configuraciones persistidas.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existen múltiples configuraciones persistidas.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/configurations?skip=0\&limit=10 con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar array de configuraciones.\\
-		4. Cada config incluye: id, name, description, version\_id, created\_at, updated\_at.\\
-		5. Validar paginación: total, skip, limit.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/configurations?skip=0\&limit=10} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar arreglo de configuraciones.
+			\item Cada configuración incluye: \texttt{id}, \texttt{name}, \texttt{description}, \texttt{version\_id}, \texttt{created\_at}, \texttt{updated\_at}.
+			\item Validar paginación: \texttt{total}, \texttt{skip}, \texttt{limit}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Array de configuraciones paginadas.\\
-		- Información completa de cada configuración.\\
-		- Paginación funciona correctamente.\\
-		- Total de registros incluido.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Arreglo de configuraciones paginadas.
+			\item Información completa de cada configuración.
+			\item Paginación funciona correctamente.
+			\item Total de registros incluido.
+		\end{itemize}
 		}
 		\testcaseuserstory{12}
 		\end{acceptancetest}
@@ -2826,21 +5406,27 @@
 		\testcasename{Filtrar configuraciones por versión}
 		\testcasedescription{Validar que se pueden filtrar configuraciones por ID de versión.}
 		\testcaseexeccond{
-		- Existen configuraciones de múltiples versiones.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existen configuraciones de múltiples versiones.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de versión específica.\\
-		2. Enviar GET a /api/v1/configurations?version\_id=<version\_id>\&skip=0\&limit=10 con headers.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Verificar que todas las configuraciones retornadas tienen version\_id correcto.\\
-		5. Validar paginación.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de versión específica.
+			\item Enviar \texttt{GET} a \texttt{/api/v1/configurations?version\_id=<version\_id>\&skip=0\&limit=10} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar que todas las configuraciones retornadas tienen \texttt{version\_id} correcto.
+			\item Validar paginación.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Solo configuraciones de versión especificada.\\
-		- Paginación correcta.\\
-		- Filtrado preciso.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Solo configuraciones de versión especificada.
+			\item Paginación correcta.
+			\item Filtrado preciso.
+		\end{itemize}
 		}
 		\testcaseuserstory{12}
 		\end{acceptancetest}
@@ -2850,22 +5436,28 @@
 		\testcasename{Desactivar configuración}
 		\testcasedescription{Validar que se puede desactivar una configuración sin eliminarla.}
 		\testcaseexeccond{
-		- Existe configuración activa.\\
-		- Usuario es propietario o administrador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe configuración activa.
+			\item Usuario es propietario o administrador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de configuración.\\
-		2. Enviar PUT a /api/v1/configurations/\{config\_id\} con payload: \{"is\_active": false\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar configuración para confirmar is\_active=False.\\
-		5. Verificar que datos persisten en BD.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de configuración.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/configurations/\{config\_id\}} con carga útil: \texttt{\{"is\_active": false\}}.
+			\item Validar que la respuesta contenga estado 200.
+			\item Consultar configuración para confirmar \texttt{is\_active=false}.
+			\item Verificar que datos persisten en \ac{BD}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Configuración marcada como is\_active=False.\\
-		- Datos persistidos.\\
-		- No aparece en listados de activas (opcional).
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Configuración marcada como \texttt{is\_active=false}.
+			\item Datos persistidos.
+			\item No aparece en listados de activas (opcional).
+		\end{itemize}
 		}
 		\testcaseuserstory{12}
 		\end{acceptancetest}
@@ -2877,23 +5469,29 @@
 		\testcasename{Validar selección sin persistirla}
 		\testcasedescription{Validar que se puede verificar si una selección es consistente sin guardarla.}
 		\testcaseexeccond{
-		- Existe versión PUBLISHED con estructura y restricciones.\\
-		- Se dispone de lista de features.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión PUBLISHED con estructura y restricciones.
+			\item Se dispone de lista de características.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar POST a /api/v1/configurations/validate con payload: \{"version\_id": "<version\_id>", "features": ["<id\_1>", "<id\_2>"]\}.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Respuesta incluye: is\_valid, errors (si existen), warnings.\\
-		4. Verificar que no se crea configuración persistida.\\
-		5. Mensaje claro de validación.
+		\begin{enumerate}
+			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations/validate} con carga útil: \texttt{\{"version\_id": "<version\_id>", "features": ["<id\_1>", "<id\_2>"]\}}.
+			\item Validar que la respuesta contenga estado 200.
+			\item Respuesta incluye: \texttt{is\_valid}, \texttt{errors} (si existen), \texttt{warnings}.
+			\item Verificar que no se crea configuración persistida.
+			\item Mensaje claro de validación.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Respuesta indica validez.\\
-		- Lista de errores si los hay.\\
-		- Lista de advertencias.\\
-		- No se persiste la configuración.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Respuesta indica validez.
+			\item Lista de errores si los hay.
+			\item Lista de advertencias.
+			\item No se persiste la configuración.
+		\end{itemize}
 		}
 		\testcaseuserstory{13}
 		\end{acceptancetest}
@@ -2903,23 +5501,29 @@
 		\testcasename{Generar configuraciones válidas automáticamente}
 		\testcasedescription{Validar que el sistema puede generar automáticamente configuraciones válidas.}
 		\testcaseexeccond{
-		- Existe versión PUBLISHED satisfiable.\\
-		- Usuario está autenticado.\\
-		- Sistema tiene solucionador SAT integrado.
+		\begin{itemize}
+			\item Existe versión PUBLISHED satisfiable.
+			\item Usuario está autenticado.
+			\item Sistema tiene solucionador SAT integrado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar POST a /api/v1/configurations/generate con payload: \{"version\_id": "<version\_id>", "limit": 5\}.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Respuesta incluye array de configuraciones válidas.\\
-		4. Cada una con lista de features seleccionadas.\\
-		5. Límite de generaciones respetado.
+		\begin{enumerate}
+			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations/generate} con carga útil: \texttt{\{"version\_id": "<version\_id>", "limit": 5\}}.
+			\item Validar que la respuesta contenga estado 200.
+			\item Respuesta incluye arreglo de configuraciones válidas.
+			\item Cada una con lista de características seleccionadas.
+			\item Límite de generaciones respetado.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Array de configuraciones generadas.\\
-		- Cada una es válida según restricciones.\\
-		- Cantidad <= limit.\\
-		- Diversidad de soluciones (si limit > 1).
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Arreglo de configuraciones generadas.
+			\item Cada una es válida según restricciones.
+			\item Cantidad $\le$ \texttt{limit}.
+			\item Diversidad de soluciones (si \texttt{limit} $> 1$).
+		\end{itemize}
 		}
 		\testcaseuserstory{13}
 		\end{acceptancetest}
@@ -2929,23 +5533,29 @@
 		\testcasename{Generar configuración óptima}
 		\testcasedescription{Validar que se puede generar una configuración optimizada según criterios.}
 		\testcaseexeccond{
-		- Existe versión PUBLISHED.\\
-		- Se definen criterios de optimización.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión PUBLISHED.
+			\item Se definen criterios de optimización.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar POST a /api/v1/configurations/optimize con payload: \{"version\_id": "<version\_id>", "objective": "maximize\_features"\}.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Respuesta incluye configuración optimizada.\\
-		4. Incluye métricas de optimización.\\
-		5. Configuración es válida.
+		\begin{enumerate}
+			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations/optimize} con carga útil: \texttt{\{"version\_id": "<version\_id>", "objective": "maximize\_features"\}}.
+			\item Validar que la respuesta contenga estado 200.
+			\item Respuesta incluye configuración optimizada.
+			\item Incluye métricas de optimización.
+			\item Configuración es válida.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Configuración optimizada devuelta.\\
-		- Cumple restricciones.\\
-		- Optimización aplicada.\\
-		- Métricas incluidas.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Configuración optimizada devuelta.
+			\item Cumple restricciones.
+			\item Optimización aplicada.
+			\item Métricas incluidas.
+		\end{itemize}
 		}
 		\testcaseuserstory{13}
 		\end{acceptancetest}
@@ -2955,23 +5565,29 @@
 		\testcasename{Validar configuración contra restricciones complejas}
 		\testcasedescription{Validar que la validación considera restricciones complejas con múltiples operadores.}
 		\testcaseexeccond{
-		- Existe versión con restricciones complejas.\\
-		- Se dispone de selección a validar.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe versión con restricciones complejas.
+			\item Se dispone de selección a validar.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Crear restricción compleja: (A | B) \& \textasciitilde C => D.\\
-		2. Enviar POST a /api/v1/configurations/validate con selección que viola.\\
-		3. Validar que la respuesta reporta error.\\
-		4. Mensaje indica qué restricción se viola.\\
-		5. Sugerir alternativa válida.
+		\begin{enumerate}
+			\item Crear restricción compleja: \texttt{(A | B) \& \textasciitilde C => D}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations/validate} con selección que viola.
+			\item Validar que la respuesta reporta error.
+			\item Mensaje indica qué restricción se viola.
+			\item Sugerir alternativa válida.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- is\_valid=false.\\
-		- Error específico reportado.\\
-		- Restricción violada identificada.\\
-		- Sugerencia de corrección.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item \texttt{is\_valid=false}.
+			\item Error específico reportado.
+			\item Restricción violada identificada.
+			\item Sugerencia de corrección.
+		\end{itemize}
 		}
 		\testcaseuserstory{13}
 		\end{acceptancetest}
@@ -2981,76 +5597,94 @@
 
 		\begin{acceptancetest}[tb:HU14_P1]
 		\testcasecode{HU14\_P1}
-		\testcasename{Crear etiqueta (tag)}
-		\testcasedescription{Validar que se pueden crear etiquetas para clasificar features.}
+		\testcasename{Crear etiqueta}
+		\testcasedescription{Validar que se pueden crear etiquetas para clasificar características.}
 		\testcaseexeccond{
-		- Existe modelo.\\
-		- Usuario es diseñador o administrador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe modelo.
+			\item Usuario es diseñador o administrador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar POST a /api/v1/tags con payload: \{"name": "Programación", "color": "\#FF5733"\}.\\
-		2. Validar que la respuesta contenga status 201.\\
-		3. Verificar que se retorna ID de etiqueta.\\
-		4. Verificar que se persiste en BD.\\
-		5. Guardar ID para asociar a features.
+		\begin{enumerate}
+			\item Enviar \texttt{POST} a \texttt{/api/v1/tags} con carga útil: \texttt{\{"name": "Programación", "color": "\#FF5733"\}}.
+			\item Validar que la respuesta contenga estado 201.
+			\item Verificar que se retorna \texttt{ID} de etiqueta.
+			\item Verificar que se persiste en \ac{BD}.
+			\item Guardar \texttt{ID} para asociar a características.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Etiqueta creada con ID.\\
-		- Nombre y color se almacenan.\\
-		- Puede utilizarse para asociaciones.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 201 Created.
+			\item Etiqueta creada con \texttt{ID}.
+			\item Nombre y color se almacenan.
+			\item Puede utilizarse para asociaciones.
+		\end{itemize}
 		}
 		\testcaseuserstory{14}
 		\end{acceptancetest}
 
 		\begin{acceptancetest}[tb:HU14_P2]
 		\testcasecode{HU14\_P2}
-		\testcasename{Asociar etiqueta a feature}
-		\testcasedescription{Validar que se puede asociar una etiqueta a una feature.}
+		\testcasename{Asociar etiqueta a característica}
+		\testcasedescription{Validar que se puede asociar una etiqueta a una característica.}
 		\testcaseexeccond{
-		- Existe feature en versión.\\
-		- Existe etiqueta creada.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe característica en versión.
+			\item Existe etiqueta creada.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener IDs de feature y etiqueta.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/tags/\{tag\_id\} con headers.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar feature para confirmar asociación.\\
-		5. Verificar que tag aparece en lista de tags de feature.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de característica y etiqueta.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/tags/\{tag\_id\}} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Consultar característica para confirmar asociación.
+			\item Verificar que la etiqueta aparece en lista de etiquetas de la característica.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Etiqueta asociada a feature.\\
-		- Persistida en BD.\\
-		- Consultas posteriores la incluyen.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Etiqueta asociada a característica.
+			\item Persistida en \ac{BD}.
+			\item Consultas posteriores la incluyen.
+		\end{itemize}
 		}
 		\testcaseuserstory{14}
 		\end{acceptancetest}
 
 		\begin{acceptancetest}[tb:HU14_P3]
 		\testcasecode{HU14\_P3}
-		\testcasename{Desasociar etiqueta de feature}
-		\testcasedescription{Validar que se puede remover una etiqueta asociada a una feature.}
+		\testcasename{Desasociar etiqueta de característica}
+		\testcasedescription{Validar que se puede remover una etiqueta asociada a una característica.}
 		\testcaseexeccond{
-		- Feature tiene etiquetas asociadas.\\
-		- Usuario es diseñador.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item La característica tiene etiquetas asociadas.
+			\item Usuario es diseñador.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener IDs de feature y tag asociado.\\
-		2. Enviar DELETE a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/tags/\{tag\_id\} con headers.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar feature para confirmar que tag no está asociado.\\
-		5. Verificar que se removió de BD.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de característica y etiqueta asociada.
+			\item Enviar \texttt{DELETE} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/tags/\{tag\_id\}} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Consultar característica para confirmar que la etiqueta no está asociada.
+			\item Verificar que se removió de \ac{BD}.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Etiqueta removida de feature.\\
-		- BD actualizada.\\
-		- Tag sigue existiendo (se reutiliza).
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Etiqueta removida de la característica.
+			\item \ac{BD} actualizada.
+			\item La etiqueta sigue existiendo (se reutiliza).
+		\end{itemize}
 		}
 		\testcaseuserstory{14}
 		\end{acceptancetest}
@@ -3060,50 +5694,62 @@
 		\testcasename{Crear recurso educativo}
 		\testcasedescription{Validar que se puede crear un recurso (archivo, enlace) asociado al modelo.}
 		\testcaseexeccond{
-		- Existe modelo.\\
-		- Usuario es editor de recursos.\\
-		- Usuario está autenticado.\\
-		- Se dispone de archivo o URL.
+		\begin{itemize}
+			\item Existe modelo.
+			\item Usuario es editor de recursos.
+			\item Usuario está autenticado.
+			\item Se dispone de archivo o URL.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Enviar POST a /api/v1/resources con payload multipart: \{name: "Introducción a Java", type: "VIDEO", url: "https://...", language: "es", license: "CC-BY-4.0"\}.\\
-		2. Validar que la respuesta contenga status 201.\\
-		3. Verificar que se retorna ID de recurso.\\
-		4. Verificar metadatos almacenados.\\
-		5. Guardar ID para asociar a features/configuraciones.
+		\begin{enumerate}
+			\item Enviar \texttt{POST} a \texttt{/api/v1/resources} con carga útil multipart: \texttt{\{name: "Introducción a Java", type: "VIDEO", url: "https://...", language: "es", license: "CC-BY-4.0"\}}.
+			\item Validar que la respuesta contenga estado 201.
+			\item Verificar que se retorna \texttt{ID} de recurso.
+			\item Verificar metadatos almacenados.
+			\item Guardar \texttt{ID} para asociar a características/configuraciones.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 201 Created.\\
-		- Recurso creado con ID.\\
-		- Metadatos almacenados.\\
-		- Propietario registrado automáticamente.\\
-		- Timestamps se establecen.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 201 Created.
+			\item Recurso creado con \texttt{ID}.
+			\item Metadatos almacenados.
+			\item Propietario registrado automáticamente.
+			\item Marcas de tiempo se establecen.
+		\end{itemize}
 		}
 		\testcaseuserstory{14}
 		\end{acceptancetest}
 
 		\begin{acceptancetest}[tb:HU14_P5]
 		\testcasecode{HU14\_P5}
-		\testcasename{Asociar recurso a feature}
-		\testcasedescription{Validar que se puede vincular un recurso educativo a una feature.}
+		\testcasename{Asociar recurso a característica}
+		\testcasedescription{Validar que se puede vincular un recurso educativo a una característica.}
 		\testcaseexeccond{
-		- Existe feature en versión.\\
-		- Existe recurso creado.\\
-		- Usuario es editor.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe característica en versión.
+			\item Existe recurso creado.
+			\item Usuario es editor.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener IDs de feature y recurso.\\
-		2. Enviar POST a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/resources/\{resource\_id\} con headers.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar feature para verificar asociación.\\
-		5. Recurso aparece en lista de recursos de feature.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de característica y recurso.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/resources/\{resource\_id\}} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Consultar característica para verificar asociación.
+			\item Recurso aparece en lista de recursos de la característica.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Recurso asociado a feature.\\
-		- Persistencia en BD.\\
-		- Versiones se registran.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Recurso asociado a característica.
+			\item Persistencia en \ac{BD}.
+			\item Versiones se registran.
+		\end{itemize}
 		}
 		\testcaseuserstory{14}
 		\end{acceptancetest}
@@ -3113,48 +5759,60 @@
 		\testcasename{Actualizar metadatos de recurso}
 		\testcasedescription{Validar que se pueden actualizar metadatos del recurso (idioma, licencia, etc).}
 		\testcaseexeccond{
-		- Existe recurso persistido.\\
-		- Usuario es propietario del recurso.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item Existe recurso persistido.
+			\item Usuario es propietario del recurso.
+			\item Usuario está autenticado.
+		\end{itemize}
 		}
 		\testcaseexecstep{
-		1. Obtener ID de recurso.\\
-		2. Enviar PUT a /api/v1/resources/\{resource\_id\} con payload: \{"language": "en", "license": "MIT", "description": "Nueva descripción"\}.\\
-		3. Validar que la respuesta contenga status 200.\\
-		4. Consultar recurso para confirmar cambios.\\
-		5. Verificar que updated\_at se modifica.
+		\begin{enumerate}
+			\item Obtener \texttt{ID} de recurso.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/resources/\{resource\_id\}} con carga útil: \texttt{\{"language": "en", "license": "MIT", "description": "Nueva descripción"\}}.
+			\item Validar que la respuesta contenga estado 200.
+			\item Consultar recurso para confirmar cambios.
+			\item Verificar que \texttt{updated\_at} se modifica.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Metadatos actualizados en BD.\\
-		- Historial versionado (opcional).\\
-		- Cambios persistidos.\\
-		- Campo updated\_at actualizado.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Metadatos actualizados en \ac{BD}.
+			\item Historial versionado (opcional).
+			\item Cambios persistidos.
+			\item Campo \texttt{updated\_at} actualizado.
+		\end{itemize}
 		}
 		\testcaseuserstory{14}
 		\end{acceptancetest}
 
 		\begin{acceptancetest}[tb:HU14_P7]
 		\testcasecode{HU14\_P7}
-		\testcasename{Listar recursos de feature con filtros}
-		\testcasedescription{Validar que se pueden obtener todos los recursos de una feature con filtros.}
+		\testcasename{Listar recursos de característica con filtros}
+		\testcasedescription{Validar que se pueden obtener todos los recursos de una característica con filtros.}
 		\testcaseexeccond{
-		- Feature tiene múltiples recursos asociados.\\
-		- Usuario está autenticado.
+		\begin{itemize}
+			\item La característica tiene múltiples recursos asociados.
+			\item Usuario está autenticado.
+		\end{itemize}	
 		}
 		\testcaseexecstep{
-		1. Enviar GET a /api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/resources?language=es\&type=VIDEO con headers.\\
-		2. Validar que la respuesta contenga status 200.\\
-		3. Verificar que solo recursos con idioma es y tipo VIDEO se retornan.\\
-		4. Cada recurso incluye metadatos completos.\\
-		5. Paginación funciona.
+		\begin{enumerate}
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/resources?language=es\&type=VIDEO} con cabeceras.
+			\item Validar que la respuesta contenga estado 200.
+			\item Verificar que solo recursos con idioma \texttt{es} y tipo \texttt{VIDEO} se retornan.
+			\item Cada recurso incluye metadatos completos.
+			\item Paginación funciona.
+		\end{enumerate}
 		}
 		\testcaseexpresult{
-		- Status HTTP: 200 OK.\\
-		- Array de recursos filtrados.\\
-		- Información completa de cada uno.\\
-		- Filtros aplicados correctamente.\\
-		- Paginación funciona.
+		\begin{itemize}
+			\item Estado \ac{HTTP}: 200 OK.
+			\item Arreglo de recursos filtrados.
+			\item Información completa de cada uno.
+			\item Filtros aplicados correctamente.
+			\item Paginación funciona.
+		\end{itemize}
 		}
 		\testcaseuserstory{14}
 		\end{acceptancetest}
