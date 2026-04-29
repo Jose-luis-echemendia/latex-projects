@@ -111,6 +111,32 @@
       \verb https://www.anthology.com/blackboard-learn
       \endverb
     \endentry
+    \entry{jmeter2025docs}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b499b5be8914246b406785e1327dbb3}{%
+           family={{Apache Software Foundation}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b499b5be8914246b406785e1327dbb3}
+      \strng{fullhash}{8b499b5be8914246b406785e1327dbb3}
+      \strng{bibnamehash}{8b499b5be8914246b406785e1327dbb3}
+      \strng{authorbibnamehash}{8b499b5be8914246b406785e1327dbb3}
+      \strng{authornamehash}{8b499b5be8914246b406785e1327dbb3}
+      \strng{authorfullhash}{8b499b5be8914246b406785e1327dbb3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://jmeter.apache.org/documentation.html}}
+      \field{title}{Apache JMeter Documentation}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
     \entry{apel2013feature}{book}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=255851f52a558d3493d6dd761ab4801d}{%
@@ -1378,6 +1404,32 @@
       \field{journaltitle}{International Journal of Computer Applications}
       \field{title}{FastAPI Framework Performance Analysis for Microservices}
       \field{year}{2023}
+    \endentry
+    \entry{fastapi2025testing}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=81a0de0881d056c4952159accd1d4166}{%
+           family={{FastAPI Community}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{81a0de0881d056c4952159accd1d4166}
+      \strng{fullhash}{81a0de0881d056c4952159accd1d4166}
+      \strng{bibnamehash}{81a0de0881d056c4952159accd1d4166}
+      \strng{authorbibnamehash}{81a0de0881d056c4952159accd1d4166}
+      \strng{authornamehash}{81a0de0881d056c4952159accd1d4166}
+      \strng{authorfullhash}{81a0de0881d056c4952159accd1d4166}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://fastapi.tiangolo.com/tutorial/testing/}}
+      \field{title}{FastAPI Testing Documentation}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
     \endentry
     \entry{felderer2015survey}{article}{}
       \name{author}{6}{}{%
@@ -2911,6 +2963,32 @@
       \field{title}{PostgreSQL Official Documentation}
       \field{year}{2024}
     \endentry
+    \entry{postman2025docs}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=827f159e08e537af949c7dc4452dad6b}{%
+           family={{Postman Inc.}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{827f159e08e537af949c7dc4452dad6b}
+      \strng{fullhash}{827f159e08e537af949c7dc4452dad6b}
+      \strng{bibnamehash}{827f159e08e537af949c7dc4452dad6b}
+      \strng{authorbibnamehash}{827f159e08e537af949c7dc4452dad6b}
+      \strng{authornamehash}{827f159e08e537af949c7dc4452dad6b}
+      \strng{authorfullhash}{827f159e08e537af949c7dc4452dad6b}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://learning.postman.com/docs/}}
+      \field{title}{Postman Documentation}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
     \entry{pressman2014se}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b92a423bae31729e13272e7637eee19d}{%
@@ -3023,6 +3101,32 @@
       \verb{url}
       \verb https://www.pure-systems.com/en/products/purevariants
       \endverb
+    \endentry
+    \entry{pytest2025docs}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a7452efd4160aa593e77518e676adc87}{%
+           family={{pytest Community}},
+           familyi={p\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7452efd4160aa593e77518e676adc87}
+      \strng{fullhash}{a7452efd4160aa593e77518e676adc87}
+      \strng{bibnamehash}{a7452efd4160aa593e77518e676adc87}
+      \strng{authorbibnamehash}{a7452efd4160aa593e77518e676adc87}
+      \strng{authornamehash}{a7452efd4160aa593e77518e676adc87}
+      \strng{authorfullhash}{a7452efd4160aa593e77518e676adc87}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.pytest.org/}}
+      \field{title}{pytest: helps you write better programs}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
     \endentry
     \entry{ramel2021VSCodePopularity}{article}{}
       \name{author}{1}{}{%

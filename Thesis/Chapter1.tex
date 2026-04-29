@@ -2207,16 +2207,23 @@ procesos de negocio y arquitectura empresarial \citep{visualparadigm2024}.
 
 Para garantizar la calidad y correcto funcionamiento del sistema propuesto, se 
 emplearán herramientas especializadas tanto para pruebas de \ac{API} como para 
-pruebas unitarias del código.
+pruebas unitarias del código. Existen múltiples alternativas en el mercado —como 
+JUnit para Java, Mocha para JavaScript, pytest para Python, o Postman y SoapUI 
+para pruebas de \ac{API}—, por lo que la selección de las herramientas para este 
+proyecto se basó en su compatibilidad con el ecosistema tecnológico adoptado, 
+su madurez y el soporte documental disponible.
 
 Postman será utilizado como plataforma de desarrollo y pruebas de \ac{API}s 
-\citep{postman2024}. Esta herramienta permite diseñar, documentar y probar \textit{endpoints} 
+\citep{postman2025docs}. Esta herramienta permite diseñar, documentar y probar \textit{endpoints} 
 RESTful de forma interactiva, facilitando la verificación de contratos de datos, 
 validación de respuestas, gestión de variables de entorno y automatización de 
 colecciones de pruebas. Postman resulta esencial para validar el comportamiento 
-del \textit{backend} FastAPI, asegurando que las operaciones de generación y validación 
-de configuraciones curriculares respondan correctamente bajo distintos escenarios 
-\citep{postman2024}.
+del \textit{backend} FastAPI, pues el servidor desarrollado en la tecnología seleccionada permite con facilidad
+descargar o importar la documentación en la herramienta, lo que brinda mayor agilidad en escribir las pruebas, 
+asegurando que las operaciones de generación y validación 
+de configuraciones curriculares respondan correctamente bajo distintos escenarios en etapas tempranas
+\citep{postman2025docs, fastapi2023docs}. Postman será empleado para la ejecución de pruebas de aceptación manuales 
+y semiautomáticas.
 
 Complementariamente, se utilizará Pytest como \textit{framework} para la 
 ejecución de pruebas unitarias en Python \citep{pytest2024}. Pytest destaca por su 
@@ -2226,9 +2233,24 @@ automatizadas. Su integración con el ecosistema Python permite validar lógica 
 negocio, algoritmos de validación, operaciones sobre modelos de características 
 y comportamiento de componentes aislados del sistema \citep{pytest2024}.
 
-La combinación de Postman para pruebas de integración a nivel de \ac{API} y Pytest 
-para pruebas unitarias proporciona una cobertura completa del sistema, 
-garantizando robustez tanto en la interfaz externa como en la lógica interna.    
+Para las pruebas de integración se determinó emplear TestClient proporcionado por FastAPI con 
+Pytest para simular peticiones \ac{HTTP} reales a los \textit{endpoints} del sistema sin necesidad de levantar 
+un servidor en cada ejecución. TestClient permite enviar peticiones directamente a la aplicación 
+FastAPI, verificando el enrutamiento, la validación de datos de entrada, la ejecución de la lógica de negocio 
+y el formato de las respuestas \citep{fastapi2025testing}. Esta aproximación garantiza que las pruebas de 
+integración sean rápidas, repetibles y fácilmente automatizables dentro del mismo ecosistema que las pruebas 
+unitarias.
+
+Se escogió Apache JMeter como herramienta de carga y estrés. 
+JMeter permite diseñar planes de prueba que simulan múltiples usuarios concurrentes ejecutando operaciones 
+sobre la \ac{API} \ac{REST} del sistema, registrando métricas como tiempo de respuesta (promedio, percentiles 90 y 95), 
+rendimiento (peticiones por segundo), tasa de error y consumo de recursos del servidor \citep{jmeter2025docs}. 
+Los planes de prueba se configuraron para simular escenarios de carga creciente (de 10 a 500 usuarios 
+concurrentes) y para evaluar el comportamiento del sistema bajo condiciones de estrés sostenido.
+    
+Esta combinación de herramientas y técnicas proporciona una cobertura integral de los diferentes niveles de prueba por los que será
+sometido el sistema, asegurando que los defectos sean detectados en la fase más temprana posible y que el producto 
+final cumpla con los estándares de calidad esperados antes de su despliegue en producción.
         
 \subsection{Entorno Integrado de Desarrollo}
 
