@@ -2208,30 +2208,30 @@ procesos de negocio y arquitectura empresarial \citep{visualparadigm2024}.
 Para garantizar la calidad y correcto funcionamiento del sistema propuesto, se 
 emplearán herramientas especializadas tanto para pruebas de \ac{API} como para 
 pruebas unitarias del código. Existen múltiples alternativas en el mercado —como 
-JUnit para Java, Mocha para JavaScript, pytest para Python, o Postman y SoapUI 
+JUnit para Java, Mocha para JavaScript, Pytest para Python, o Postman y SoapUI 
 para pruebas de \ac{API}—, por lo que la selección de las herramientas para este 
 proyecto se basó en su compatibilidad con el ecosistema tecnológico adoptado, 
 su madurez y el soporte documental disponible.
 
 Postman será utilizado como plataforma de desarrollo y pruebas de \ac{API}s 
 \citep{postman2025docs}. Esta herramienta permite diseñar, documentar y probar \textit{endpoints} 
-RESTful de forma interactiva, facilitando la verificación de contratos de datos, 
+\ac{REST}ful de forma interactiva, facilitando la verificación de contratos de datos, 
 validación de respuestas, gestión de variables de entorno y automatización de 
 colecciones de pruebas. Postman resulta esencial para validar el comportamiento 
 del \textit{backend} FastAPI, pues el servidor desarrollado en la tecnología seleccionada permite con facilidad
-descargar o importar la documentación en la herramienta, lo que brinda mayor agilidad en escribir las pruebas, 
+descargar o importar la documentación en la herramienta, lo que brinda mayor agilidad a la hora de escribir las pruebas, 
 asegurando que las operaciones de generación y validación 
 de configuraciones curriculares respondan correctamente bajo distintos escenarios en etapas tempranas
 \citep{postman2025docs, fastapi2023docs}. Postman será empleado para la ejecución de pruebas de aceptación manuales 
 y semiautomáticas.
 
 Complementariamente, se utilizará Pytest como \textit{framework} para la 
-ejecución de pruebas unitarias en Python \citep{pytest2024}. Pytest destaca por su 
+ejecución de pruebas unitarias en Python \citep{pytest2025docs}. Pytest destaca por su 
 sintaxis clara, capacidad de parametrización, gestión de \textit{fixtures} y generación 
 de reportes detallados, lo que facilita la escritura y mantenimiento de pruebas 
 automatizadas. Su integración con el ecosistema Python permite validar lógica de 
 negocio, algoritmos de validación, operaciones sobre modelos de características 
-y comportamiento de componentes aislados del sistema \citep{pytest2024}.
+y comportamiento de componentes aislados del sistema \citep{pytest2025docs}.
 
 Para las pruebas de integración se determinó emplear TestClient proporcionado por FastAPI con 
 Pytest para simular peticiones \ac{HTTP} reales a los \textit{endpoints} del sistema sin necesidad de levantar 
@@ -2241,7 +2241,7 @@ y el formato de las respuestas \citep{fastapi2025testing}. Esta aproximación ga
 integración sean rápidas, repetibles y fácilmente automatizables dentro del mismo ecosistema que las pruebas 
 unitarias.
 
-Se escogió Apache JMeter como herramienta de carga y estrés. 
+Se escogió Apache JMeter como herramienta para las pruebas de carga y estrés. 
 JMeter permite diseñar planes de prueba que simulan múltiples usuarios concurrentes ejecutando operaciones 
 sobre la \ac{API} \ac{REST} del sistema, registrando métricas como tiempo de respuesta (promedio, percentiles 90 y 95), 
 rendimiento (peticiones por segundo), tasa de error y consumo de recursos del servidor \citep{jmeter2025docs}. 

@@ -2220,35 +2220,6 @@
       \field{type}{techreport}
       \field{year}{1990}
     \endentry
-    \entry{pytest2024}{misc}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=34a528066a0b9b6c4981299e6f540bec}{%
-           family={Krekel},
-           familyi={K\bibinitperiod},
-           given={Holger},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a8b2e39951bba535f313f563f6abaef6}{%
-           family={contributors},
-           familyi={c\bibinitperiod}}}%
-      }
-      \strng{namehash}{3a23d7227574a90844759cf382e293c6}
-      \strng{fullhash}{3a23d7227574a90844759cf382e293c6}
-      \strng{bibnamehash}{3a23d7227574a90844759cf382e293c6}
-      \strng{authorbibnamehash}{3a23d7227574a90844759cf382e293c6}
-      \strng{authornamehash}{3a23d7227574a90844759cf382e293c6}
-      \strng{authorfullhash}{3a23d7227574a90844759cf382e293c6}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://docs.pytest.org}}
-      \field{note}{Accessed: 2025-01-10}
-      \field{title}{pytest Documentation}
-      \field{year}{2024}
-    \endentry
     \entry{larman2004applying}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=be7db5922f05fc919bdc1c036502e5ee}{%
@@ -3075,6 +3046,32 @@
       \verb{url}
       \verb https://www.pure-systems.com/en/products/purevariants
       \endverb
+    \endentry
+    \entry{pytest2025docs}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a7452efd4160aa593e77518e676adc87}{%
+           family={{pytest Community}},
+           familyi={p\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7452efd4160aa593e77518e676adc87}
+      \strng{fullhash}{a7452efd4160aa593e77518e676adc87}
+      \strng{bibnamehash}{a7452efd4160aa593e77518e676adc87}
+      \strng{authorbibnamehash}{a7452efd4160aa593e77518e676adc87}
+      \strng{authornamehash}{a7452efd4160aa593e77518e676adc87}
+      \strng{authorfullhash}{a7452efd4160aa593e77518e676adc87}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.pytest.org/}}
+      \field{title}{pytest: helps you write better programs}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
     \endentry
     \entry{ramel2021VSCodePopularity}{article}{}
       \name{author}{1}{}{%
