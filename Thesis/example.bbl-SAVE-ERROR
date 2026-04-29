@@ -1594,7 +1594,7 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{9781596932069}
+      \field{isbn}{978-1596932069}
       \field{title}{Role-Based Access Control}
       \field{year}{2007}
     \endentry
@@ -3326,7 +3326,7 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{9786075381752}
+      \field{isbn}{978-6075381752}
       \field{title}{Arquitectura de Software: Fundamentos y Prácticas}
       \field{year}{2021}
     \endentry
@@ -3746,7 +3746,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{8}
-      \field{isbn}{9780321210250}
+      \field{isbn}{978-0321210250}
       \field{title}{Software Engineering}
       \field{year}{2005}
     \endentry

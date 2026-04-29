@@ -1,12 +1,12 @@
 # Fdb version 4
 ["biber example"] 0 "example.bcf" "example.bbl" "example" 0 -1
-  "example.bcf" 1777428571.15599 124355 67db55c921f29e9c983db35b2e7ad093 "pdflatex"
-  "example.bib" 1777422971.38382 59909 0397413896d44ca7ac15d3fde57b302e ""
+  "example.bcf" 1777432897.22895 124355 67db55c921f29e9c983db35b2e7ad093 "pdflatex"
+  "example.bib" 1777431921.38015 59635 a6086c6ff4451fc261f49787896f5384 ""
   (generated)
   "example.bbl"
   "example.blg"
   (rewritten before read)
-["pdflatex"] 1777428557.19876 "/home/jose/Escritorio/latex-projects/Thesis/example.tex" "example.pdf" "example" 1777428571.48693 2
+["pdflatex"] 1777432883.95028 "/home/jose/Escritorio/latex-projects/Thesis/example.tex" "example.pdf" "example" 1777432897.55821 2
   "/etc/texmf/web2c/texmf.cnf" 1761542323.73075 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/jose/Escritorio/latex-projects/Thesis/example.tex" 1777414556.71987 3252 8f045d9e17df50847e29d5da14762f74 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -372,7 +372,7 @@
   "Acronyms.tex" 1777232210.82574 5096 ed340dd26d08ad9b4fde0395a3ea6b7e ""
   "Anexos/BloqueCoronaReport.pdf" 1773287771.67951 32585 f6dcb9b166373f1eb7befc7ea7378f57 ""
   "Appendices.tex" 1777409978.69411 212866 60df46269dd765a99edd19ef92d5ff5e ""
-  "Chapter1.tex" 1777428559.90771 157431 f83dcdd609acc42075d6f61f8f6d52c6 ""
+  "Chapter1.tex" 1777429042.53771 157446 dc52780484a1a1d2e8f304a00d65916f ""
   "Chapter2.tex" 1776896381.34572 85549 2664507bafd1d3a8a1b2c2fa03eb6b33 ""
   "Chapter3.tex" 1777422045.62358 18242 2de8d1a2041165ba6e22c99b9dfa61e3 ""
   "Conclusions.tex" 1773287771.68551 48 b63bb1ca574a9c5bf657318d343e7187 ""
@@ -384,17 +384,17 @@
   "Introduction.tex" 1773287771.70751 11426 668d4a49ac9ef682ad16059f68aa24e3 ""
   "LogoUCI.eps" 1773287771.71251 359286 4e6ce2f2284e24069f973c06c4379580 ""
   "Suggestions.tex" 1773287771.71851 66 bfde05723de326d96e8ea615eb3ce1b6 ""
-  "example.acr" 0 -1 0 ""
-  "example.aux" 1777428570.74698 154183 6cd148bb69ecda6a85af79f2cefeaacf "pdflatex"
-  "example.bbl" 1777422972.13544 184950 5625aa414c8714b4a20e1b77d030170d "biber example"
-  "example.gls" 0 -1 0 ""
-  "example.loa" 1777428558.6239 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "example.lof" 1777428571.15876 9037 76f8a4d2d3ca41b9243a03929281b9c1 "pdflatex"
-  "example.lol" 1777428571.15876 371 a3a36c20e5a3f918d0a3eac010d861e0 "pdflatex"
-  "example.lot" 1777428571.15876 33303 2059aedf02f0f86c16b7acefc10dc286 "pdflatex"
-  "example.tdo" 1777428558.63271 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "example.acr" 1777432288.88919 16082 35456d6afd9183ffbfcc4ad0a8add2eb ""
+  "example.aux" 1777432896.83295 154551 9b1758853155de65263d2724a6c0e7ce "pdflatex"
+  "example.bbl" 1777432694.4556 184947 647d0a4041faa6d94739909b9fc7db54 "biber example"
+  "example.gls" 1777432288.8383 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "example.loa" 1777432885.38985 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "example.lof" 1777432897.23109 9036 3abe61b32c1dbf4a3f2785c172ec2c9a "pdflatex"
+  "example.lol" 1777432897.23109 371 a3a36c20e5a3f918d0a3eac010d861e0 "pdflatex"
+  "example.lot" 1777432897.23109 33300 1abc7705924cbad7437554675d4db37f "pdflatex"
+  "example.tdo" 1777432885.39771 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "example.tex" 1777414556.71987 3252 8f045d9e17df50847e29d5da14762f74 ""
-  "example.toc" 1777428571.15876 18263 b459ab05632e4319cfc152a3c1206740 "pdflatex"
+  "example.toc" 1777432897.23109 18318 cb78f462e9b953ef14a0ef211e8a3b36 "pdflatex"
   "kbordermatrix.sty" 1773287771.74452 357 2cf6729df6e08a84b23512434a5c5c32 ""
   "thesis.cls" 1777302767.22693 50705 e52d8d497e743c028d84531330117a4b ""
   (generated)
