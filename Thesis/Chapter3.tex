@@ -162,6 +162,99 @@ ejemplo de los casos de pruebas unitarias, el resto se puede encontrar en el ane
 	\hline
 \end{longtable}
 
+\subsubsection{Resultados de las pruebas unitarias}
+
+El proceso de pruebas unitarias se ejecutó de forma iterativa a lo largo de las siete iteraciones de desarrollo, 
+siguiendo la metodología \ac{XP} que promueve la escritura de pruebas antes del código y la \ac{CI} \citep{beck2000extreme}. 
+Este enfoque permitió detectar y corregir defectos de forma temprana, garantizando la estabilidad
+y calidad del código en cada incremento funcional.
+
+Se diseñaron y ejecutaron iterativamente hasta 29 casos de prueba unitaria que cubrieron la totalidad de los
+componentes críticos del sistema. Las pruebas se estructuraron para validar tanto los escenarios positivos
+(funcionamiento normal de los servicios) como los negativos (manejo de errores y validaciones), asegurando
+una evaluación comprehensiva de la lógica de negocio. Se llevó a cabo la ejecución completa de estas
+pruebas en ocho iteraciones, para verificar el cumplimiento de los requisitos técnicos desde la perspectiva
+del desarrollador.
+
+El total de fallas detectadas (16) durante el proceso de pruebas unitarias se 
+clasificaron en cinco categorías principales. La tabla \ref{tab:matriz_teVScomponente} muestra la distribución de los tipos 
+de error en relación con los componentes afectados, lo que permitió identificar áreas críticas y orientar 
+las correcciones de manera eficiente al registrar también cuál componente falló.
+
+\begin{longtable}{|p{3.0cm}|p{2.0cm}|p{2.0cm}|p{2.0cm}|p{5.0cm}|}
+    \caption{Matriz de tipo de error contra componentes. Fuente: Elaboración propia}
+    \label{tab:matriz_teVScomponente}\\
+    \hline
+    \rowcolor[HTML]{CBCEFB} 
+    - & Servicios & Repositorios & Excepciones & Detalles \\
+    \hline
+    \endfirsthead
+                    
+	\multicolumn{5}{c}
+    {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+                    
+    \hline
+    \rowcolor[HTML]{CBCEFB} 
+	- & Servicios & Repositorios & Excepciones & Detalles \\
+    \hline
+    \endhead
+                    
+    \hline
+	\multicolumn{5}{|r|}{{Continúa en la siguiente página}} \\
+    \endfoot
+                    
+    \hline
+    \endlastfoot
+
+    % Cuerpo de la tabla
+    \colorentry{Lógica de negocio:} & 4 & 1 & 0 &
+    Los servicios que fallaron fueron el de contruir el árbol de características, 
+    el validador lógico de modelos, el exportador de modelos y el generador de configuraciones. Además, el repositorio
+    de características falló al no impedir que una característica sea su propio padre (autorreferencia).
+    \\
+	\hline
+    \colorentry{Validación de datos:} & 1 & 2 & 0 & 
+    EL servicio de importador de \ac{UVL} tuvo un error durante la validación de \ac{UVL} para generar estructura y versión. 
+    El repositorio de restricciones presentó problemas para registrar correctamente los datos y el repositorio de usuarios 
+    presentó un fallo durante el registro de usuarios por incompatibilidad en el nombre de los roles.
+    \\
+	\hline
+    \colorentry{Escritura/lectura de la \ac{BD}:} & 2 & 2 & 0 & 
+    Los servicios de constuir el árbol de características y el exportador de modelos también presentaron 
+    fallas al devolver incorrectamente la información recuperada en la \ac{BD}. 
+    El repositorio de las restricciones presentó 
+    un fallo al devolver incorrectamente los datos y el repositorio de características falló a la hora de mapear los metadatos. 
+    \\
+	\hline
+    \colorentry{Inconsistencia en las excepciones:} & 1 & 0 & 1 & 
+    El servicio de analizador estructural de \ac{FM} empleó una excepción incorrecta. La excepción 
+    \texttt{DomainNotFoundException} devolvió un estado no esperado.
+    \\
+	\hline
+    \colorentry{Respuesta de las excepciones:} & 1 & 0 & 1 & 
+    El servicio de gestionar el versionado de los \ac{FM} devolvió un mensaje incorrecto al 
+    lanzar el identificador del modelo en vez del número de la versión cuando se intaba crear una nueva. La excepción 
+    \texttt{FeatureAccessDeniedException} devolvió el identificador del modelo como objeto en lugar de la cadena de caracteres.
+    \\
+	\hline
+    \colorentry{Total:} & 9 & 5 & 2 & Se encontraron 16 fallas \\
+	\hline
+\end{longtable}
+
+Cada una de estas fallas fue abordada mediante correcciones específicas en el código, seguidas de la 
+re-ejecución de las pruebas para confirmar su resolución.
+La octava y última iteración consistió en la ejecución de las 29 pruebas unitarias para confirmar la
+estabilidad final y la resolución completa de los fallos. Al concluir esta fase, no quedaron fallos pendientes
+(0 fallos), alcanzando el 100 \% de aprobación en todas las pruebas. 
+La figura \ref{fig:result_ut} resume el resultado de estas pruebas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Images/result_ut.png}
+    \caption{Resultados de las Pruebas Unitarias. Fuente: Elaboración propia.}
+    \label{fig:result_ut}
+\end{figure}
+
 \subsection{Pruebas de integración}
 
 Las pruebas de integración verifican la interacción y comunicación correcta entre diferentes módulos o
@@ -173,7 +266,7 @@ Se diseñaron casos de prueba que simulen escenarios reales de uso, incluyendo l
 gestión de errores y la respuesta del sistema ante diferentes tipos de solicitudes.
 
 Los casos de pruebas de integración se aplicarán sobre las rutas críticas del sistema, las cuales son los controladores
-asociados a los servicios de \ac{FM}.Se diseñaron 18 casos de prueba que abordan las integraciones más críticas del sistema. 
+asociados a los servicios de \ac{FM} (entre otros). Se diseñaron 18 casos de prueba que abordan las integraciones más críticas del sistema. 
 A continuación, se presenta un ejemplo de las pruebas de integración, el resto se puede encontrar en el anexo \ref{anx:pi}.
 
 \begin{longtable}{|p{3.0cm}|p{10.0cm}|}
@@ -240,6 +333,49 @@ Aprobada \\
 \hline
 \end{longtable}
 
+\subsubsection{Resultados de las pruebas de integración}
+
+Las pruebas de integración se centraron en validar la correcta interacción entre los diferentes componentes del 
+sistema a través de la \ac{API} \ac{REST}, abarcando desde la recepción de peticiones \ac{HTTP} en los controladores 
+hasta la respuesta final generada por la capa de servicios, pasando por la comunicación con los repositorios y 
+la \ac{BD}. Este proceso de verificación se ejecutó de forma iterativa a lo largo del ciclo de desarrollo, 
+totalizando 6 iteraciones de pruebas, de las cuales 5 se realizaron durante el desarrollo activo de las funcionalidades 
+y una iteración final de validación y regresión al concluir la implementación. Para garantizar la calidad de las 
+integraciones, se diseñaron 18 casos de prueba que cubren las rutas críticas del sistema, específicamente los 
+controladores asociados a los servicios de \ac{FM}.
+
+Durante la ejecución de las pruebas de integración se detectaron un total de 8 fallas, las cuales se identificaron 
+en las siguientes funcionaliades:
+
+\begin{itemize}
+    \item Crear \ac{FM} en dominio válido (HU4-P1).
+    \item Reubicar feature con padre inválido (HU7-P2).
+    \item Crear grupo OR con cardinalidades válidas (HU8-P1).
+    \item Crear nueva versión con (\textit{Copy-on-Write}) desde origen (esta funcionalidad falló en 3 ocasiones) (HU5-P1).
+    \item Aplicar UVL a estructura creando nueva versión (HU10-P2).
+    \item Generación automática de configuraciones (HU13-P1). 
+\end{itemize}
+
+Cada una de estas fallas fue documentada, corregida y sometida a una nueva ronda 
+de pruebas para confirmar su resolución. A diferencia de las pruebas unitarias, que se centran en componentes 
+aislados, las pruebas de integración revelaron problemas que solo se manifiestan cuando los componentes 
+interactúan entre sí, como la propagación incorrecta de errores entre capas y la falta de validaciones de negocio 
+en los controladores.
+
+La sexta y última iteración consistió en la ejecución completa de los 18 casos de prueba sobre el sistema ya 
+estabilizado, verificando que las correcciones aplicadas no introdujeran nuevos defectos ni afectaran 
+funcionalidades previamente validadas. Al concluir esta fase, no quedaron fallos pendientes (0 fallos), 
+alcanzando el 100\% de aprobación en todas las pruebas ejecutadas. La figura \ref{fig:result_it} resume el 
+resultado de estas pruebas, mostrando la evolución de la tasa de éxito a lo largo de las iteraciones y 
+la resolución progresiva de las fallas detectadas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Images/result_it.png}
+    \caption{Resultados de las Pruebas de Integración. Fuente: Elaboración propia.}
+    \label{fig:result_it}
+\end{figure}
+
 \subsection{Pruebas de seguridad}
 
 Las pruebas de seguridad constituyen un conjunto de técnicas de verificación orientadas a identificar 
@@ -261,6 +397,81 @@ Esta sección presenta los resultados de la verificación sistemática de los cr
 definidos, utilizando para ello una lista de verificación estructurada que permite evaluar de manera objetiva
 el cumplimiento de cada uno de los requisitos establecidos. Dicha lista se evidencia en el anexo \ref{anx:lvs}.
 
+\subsubsection{Resultados de las pruebas de seguridad}
+
+Las pruebas de seguridad aplicadas al sistema son fundamentales, ya que se enfocan en garantizar la
+protección de los datos y el control de acceso a las funcionalidades. Para evaluar estos aspectos, se utilizó
+la lista de chequeo de seguridad definida en el anexo \ref{anx:lvs}, obteniendo en la primera iteración los resultados
+evidenciados en la tabla \ref{tab:results_st_1t}.
+
+\begin{longtable}{|p{6.0cm}|p{3.0cm}|}
+    \caption{Resultados de pruebas de seguridad - Primera iteración. Fuente: Elaboración propia.}
+    \label{tab:results_st_1t}\\
+    \hline
+    \rowcolor[HTML]{CBCEFB}
+    Categoría de las pruebas fallidas & Cantidad de errores \\
+    \hline
+    \endfirsthead
+                    
+    \multicolumn{2}{c}
+    {{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+                    
+    \hline
+    \rowcolor[HTML]{CBCEFB}
+    Categoría de las pruebas fallidas & Cantidad de errores \\
+    \hline
+    \endhead
+                    
+    \hline
+    \multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+    \endfoot
+                    
+    \hline
+    \endlastfoot
+
+    % Cuerpo de la tabla
+    Autenticación y control de acceso & 2 \\
+    \hline
+    Protección de datos y comunicaciones & 2 \\
+    \hline
+    Validación de entrada y protección contra ataques & 2 \\
+    \hline
+    manipulación de parámetros & 1 \\
+    \hline
+    total & 7 \\
+    \hline
+\end{longtable}
+
+Las pruebas fallidas identificadas incluyeron:
+
+\begin{itemize}
+    \item Acceso no autorizado a rutas protegidas mediante manipulación de \ac{URL}s.
+    \item Tiempo de expiración de sesiones configurado de manera muy permisiva.
+    \item Falta de lista negra para tokens de autenticación comprometidos.
+    \item Exposición de información sensible en mensajes de error.
+    \item Inyección de código a través de parámetros no validados en \textit{endpoints} de creación y actualización de \ac{FM}.
+    \item Manipulación del parámetro de estado para los \ac{FM} saltándose las validaciones del negocio.
+\end{itemize}
+
+Esto llevó a la implementación de \textit{middlewares} más estrictos y a la ocultación de campos sensibles en los 
+esquemas de serialización de la \ac{API}. Se implementó un controlador para invalidar tokens de autenticación 
+comprometidos mediante una lista negra, y se ajustaron las políticas de expiración de sesiones para reducir 
+la ventana de oportunidad de ataques. Se ajustaron los mensajes de error para evitar la exposición de 
+información sensible que pudiera ser utilizada por atacantes para identificar vulnerabilidades.
+Las dependencias de los controladores para el acceso de recurso por rol se repasaron y reforzaron para evitar 
+el acceso inadecuado de los recursos del sistema. Asimismo, se desacopló la actualización de metadatos de las 
+transiciones de estado crítico, implementando validaciones forzadas en la capa de servicio que impiden el 
+cambio a estados como \texttt{PUBLISHED} sin la ejecución previa y exitosa de los motores de análisis lógico.
+Tras aplicar estas correcciones, se ejecutó una segunda iteración de pruebas de seguridad, obteniendo un 
+resultado de 0 fallas, lo que indica que el sistema ahora cumple con los criterios de seguridad establecidos. 
+La figura \ref{fig:result_st} resume la evolución de los resultados de las pruebas de seguridad a lo largo de las iteraciones.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Images/result_st.png}
+    \caption{Resultados de las Pruebas de Seguridad. Fuente: Elaboración propia.}
+    \label{fig:result_st}
+\end{figure}
 
 \subsection{Pruebas de rendimiento}
 
@@ -272,8 +483,237 @@ estas pruebas se centran en validar el cumplimiento de los requisitos no funcion
 aquellos relacionados con los tiempos de respuesta de la \ac{API}, capacidad de manejar alto tráfico y 
 el tiempo de latencia entre los repositorios y la \ac{BD}. Esta sección presenta los resultados de la verificación sistemática
 de los criterios de rendimiento definidos, utilizando para ello métricas objetivas que permiten evaluar el
-cumplimiento de cada uno de los requisitos establecidos.
+cumplimiento de cada uno de los requisitos establecidos. 
 
+La herramienta empleada para la ejecución de estas pruebas fue Apache JMeter, que permite evaluar el comportamiento 
+del sistema bajo carga repetitiva. Se escogieron como casos de pruebas los controladores más críticos del sistema, 
+específicamente aquellos asociados a los servicios de \ac{FM}, debido a que gestionan la lógica de negocio más 
+compleja y podrían presentar los mayores desafíos de rendimiento. La selección de estos controladores respondió a 
+criterios como su frecuencia de uso, el costo computacional de las operaciones involucradas, el impacto en la 
+experiencia del usuario y la complejidad de las transformaciones de datos requeridas.
+
+Los controladores seleccionados para las pruebas de rendimiento fueron:
+
+\begin{enumerate}
+    \item Obtención del árbol completo del modelo (\texttt{GET /\{model\_id\}/versions/latest/complete}): 
+    Este controlador es considerado el más crítico del sistema, pues constituye la base de la mayoría de las 
+    operaciones realizadas desde el cliente visual, incluyendo la representación gráfica del árbol de características. 
+    Su importancia radica en que una demora en su respuesta afecta directamente toda la interacción del usuario 
+    con el modelo. Internamente, consume una lógica compleja que involucra la construcción del árbol completo, 
+    la serialización de la estructura jerárquica (características, grupos, restricciones) y el cálculo de 
+    estadísticas asociadas.
+    
+    \item Análisis estructural completo del modelo (\texttt{POST /\{model\_id\}/versions/\{version\_id\} \\ /analysis/summary}): 
+    Este controlador ejecuta operaciones de alta intensidad computacional, incluyendo la detección de características 
+    muertas, la identificación de características obligatorias, el análisis de satisfacibilidad mediante solucionadores 
+    \ac{SAT}, el cálculo de conjuntos atómicos y la medición de la complejidad del modelo. Su criticidad deriva de 
+    ser una operación bloqueante (sin procesamiento asíncrono) que puede tardar varios segundos en modelos de gran 
+    tamaño, lo que impacta directamente en la fluidez del trabajo del gestor curricular cuando solicita un análisis 
+    profundo de su modelo.
+    
+    \item Generación de configuraciones válidas (\texttt{POST /configurations/generate}): 
+    Este controlador aborda uno de los problemas centrales de la investigación: la derivación de planes de estudio 
+    válidos a partir de un modelo de características. Su complejidad es exponencial respecto al número de 
+    características y restricciones definidas, y ofrece múltiples estrategias de generación (ávida, aleatoria, 
+    genética multiobjetivo), cada una con diferente costo computacional. La experiencia del usuario es 
+    particularmente sensible en este punto, ya que la generación de un número elevado de configuraciones puede 
+    implicar un bucle intensivo de validación mediante resolución \ac{SAT}.
+    
+    \item Exportación del modelo a múltiples formatos (\texttt{GET /\{model\_id\}/versions/\{version\_id\} \\ /export/\{format\}}): 
+    Este controlador permite exportar el modelo a ocho formatos diferentes (XML, JSON, DIMACS, \ac{UVL}, Mermaid, 
+    DOT, TVL, SPLOT). Su criticidad radica en las operaciones de entrada y salida intensivas que realiza: 
+    lectura de datos desde la base de datos, transformación de la estructura completa del árbol según el formato 
+    destino, serialización y almacenamiento temporal en el sistema de archivos, y envío al cliente. Los formatos 
+    orientados a visualización (Mermaid, Graphviz) requieren transformaciones adicionales que incrementan el 
+    costo computacional, y los modelos de gran tamaño generan archivos voluminosos cuyo envío debe realizarse 
+    de forma eficiente.
+    
+    \item Análisis asíncrono por lotes (\texttt{POST /\{model\_id\}/versions/\{version\_id\}/analysis/batch}): 
+    Este controlador actúa como puerta de entrada para tareas de larga duración delegadas al sistema de colas 
+    Celery. Su importancia estratégica deriva de que cualquier fallo en este punto implica la pérdida de 
+    solicitudes de análisis por parte de los usuarios. Las pruebas de rendimiento deben verificar el 
+    comportamiento del sistema cuando múltiples usuarios lanzan análisis en paralelo, evaluando la capacidad 
+    de la cola de mensajes (Redis) y de los trabajadores Celery para gestionar la contención.
+    
+    \item Obtención de estadísticas agregadas (\texttt{GET /\{model\_id\}/versions/latest/statistics}): 
+    Este controlador devuelve métricas resumidas del modelo (cantidad de características, restricciones, profundidad 
+    del árbol, entre otras). Aunque cada consulta tiene un costo computacional moderado (requiere recorrer 
+    múltiples relaciones en la base de datos), su alta frecuencia de invocación —cada vez que un usuario 
+    accede al tablero principal o abre un modelo— puede generar un impacto acumulativo significativo en la 
+    carga del sistema, especialmente cuando múltiples usuarios trabajan simultáneamente.
+    
+    \item Validación completa del modelo (\texttt{POST /\{model\_id\}/versions/\{version\_id\}/validation/full}): 
+    Este controlador combina tres servicios de alta complejidad en una sola operación: la validación estructural 
+    del árbol, la validación lógica de las restricciones y el análisis de propiedades del modelo. Su criticidad 
+    reside en que se ejecuta justo antes de que un gestor curricular publique una nueva versión de un plan de 
+    estudio, constituyendo un punto de bloqueo en el flujo de trabajo. Una demora excesiva en este punto puede 
+    generar frustración en el usuario e interrumpir el ciclo de publicación de cambios curriculares.
+    
+    \item Validación de una configuración específica (\texttt{POST /configurations/\{id\}/validate}): 
+    Este controlador se invoca antes de persistir cada configuración generada, verificando que la selección 
+    de características cumpla con todas las restricciones definidas en el modelo. Su frecuencia de uso es 
+    muy elevada, especialmente en escenarios donde los usuarios generan y evalúan decenas o cientos de 
+    configuraciones de forma interactiva. Aunque cada validación individual tiene un costo moderado, la 
+    acumulación de estas operaciones puede representar una carga significativa para el sistema.
+\end{enumerate}
+
+Para cada uno de estos controladores, se definieron tres escenarios de prueba progresivos que permiten evaluar 
+el comportamiento del sistema bajo diferentes condiciones de carga:
+
+\begin{enumerate}
+    \item Escenario base: Simula una carga normal de operación, con 10 usuarios concurrentes trabajando 
+    sobre modelos de 50 características. Este escenario establece la línea base de rendimiento esperado en 
+    condiciones habituales de uso.
+    
+    \item Escenario pico: Representa situaciones de alta demanda, con 100 usuarios concurrentes operando 
+    sobre modelos de más de 100 características. Este escenario evalúa la capacidad del sistema para mantener 
+    tiempos de respuesta aceptables durante horas de máxima concurrencia, como períodos de planificación 
+    curricular intensiva.
+    
+    \item Escenario de estrés: Somete al sistema a condiciones extremas, con 1.000 usuarios simultáneos 
+    y modelos complejos que incluyen restricciones anidadas y estructuras de características profundas. Este 
+    escenario permite identificar el punto de quiebre del sistema, los cuellos de botella en la infraestructura 
+    (base de datos, caché, cola de mensajes) y el comportamiento bajo condiciones de sobrecarga.
+\end{enumerate}
+
+
+\subsubsection{Resultados de las pruebas de rendimiento}
+
+Las pruebas de rendimiento se ejecutaron en dos iteraciones completas sobre los ocho controladores seleccionados. 
+En cada iteración, cada controlador fue sometido a los tres escenarios de carga definidos 
+(base, pico y estrés), con el objetivo de evaluar el comportamiento del sistema, identificar cuellos 
+de botella y verificar el cumplimiento de los requisitos no funcionales establecidos. La primera iteración 
+tuvo un carácter diagnóstico, permitiendo detectar las operaciones con mayores tiempos de respuesta y los 
+componentes que limitaban el rendimiento del sistema. Con base en los hallazgos obtenidos, se aplicaron un 
+conjunto de técnicas y estrategias de optimización, tras lo cual se ejecutó una segunda iteración para validar 
+la efectividad de las correcciones implementadas.
+
+Durante la primera iteración, se evidenció que varios controladores presentaban tiempos de 
+respuesta superiores a los límites aceptables, especialmente en los escenarios pico y de estrés. 
+Los principales problemas detectados fueron:
+
+\begin{itemize}
+    \item El controlador de obtención del árbol completo mostró una degradación significativa 
+    en modelos de gran tamaño, debido a la construcción recursiva del árbol sin estrategias de caché efectivas.
+    \item El controlador de análisis estructural completo presentó demoras excesivas 
+    (superiores a 30 segundos en escenario de estrés) por la ejecución bloqueante de los solucionadores \ac{SAT}.
+    \item El controlador de generación de configuraciones evidenció tiempos de respuesta 
+    variables según la estrategia seleccionada, con la estrategia genética multiobjetivo siendo la 
+    más afectada por el aumento de restricciones.
+    \item El controlador de exportación mostró problemas de entrada y salida al generar archivos de gran 
+    tamaño, con tiempos de transferencia que impactaban negativamente en la experiencia del usuario.
+\end{itemize}
+
+La figura \ref{fig:rendimiento_iteracion1} presenta un resumen de los tiempos de respuesta obtenidos 
+para cada controlador en los tres escenarios de carga durante la primera iteración.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Images/result_rt1t.png}
+    \caption{Resultados de la primera iteración de pruebas de rendimiento. Fuente: Elaboración propia.}
+    \label{fig:rendimiento_iteracion1}
+\end{figure}
+
+Con el objetivo de reducir los tiempos de respuesta y mejorar la escalabilidad del sistema, 
+se implementaron las siguientes técnicas y estrategias de optimización:
+
+\begin{itemize}
+    \item Implementación de caché distribuida: Se incorporó Redis como sistema de caché para almacenar 
+    los resultados de operaciones costosas y frecuentes, como la obtención del árbol completo y las 
+    estadísticas agregadas. La estrategia de caché implementada serializa la respuesta completa del árbol 
+    como objeto JSON en Redis, evitando reconstrucciones innecesarias. Se definieron tiempos de expiración 
+    diferenciados según el estado del modelo: 3600 segundos (una hora) para los modelos publicados, cuya 
+    estructura cambia con poca frecuencia, y 300 segundos (cinco minutos) para los modelos en edición, 
+    que son inherentemente más volátiles. Adicionalmente, se implementó una invalidación inteligente que 
+    borra únicamente las claves afectadas por cada operación de escritura, en lugar de invalidar todo el 
+    caché globalmente.
+    
+    \item Procesamiento asíncrono con Celery: Las operaciones de análisis estructural completo y generación 
+    masiva de configuraciones, que involucran la ejecución de solucionadores SAT con complejidad exponencial, 
+    fueron delegadas a trabajadores en segundo plano mediante el sistema de colas Celery. Esta estrategia 
+    libera el flujo principal de la aplicación, permitiendo que el usuario reciba una respuesta inmediata 
+    con el identificador de la tarea, mientras que el procesamiento pesado se ejecuta en segundo plano. 
+    Se configuraron colas con diferentes prioridades: una cola de alta prioridad para análisis solicitados 
+    interactivamente por el usuario, y una cola de baja prioridad para exportaciones masivas y tareas de 
+    limpieza periódica. Adicionalmente, se implementó un tiempo máximo de ejecución (timeout) de 5
+    segundos para el solucionador SAT, evitando que operaciones que no convergen bloqueen indefinidamente a 
+    los trabajadores.
+    
+    \item Optimización de consultas a la base de datos: Se implementaron múltiples mejoras en el acceso a 
+    PostgreSQL. En primer lugar, se añadieron índices estratégicos en las tablas de mayor volumen y 
+    consulta, incluyendo índices compuestos en las relaciones entre características y restricciones, 
+    así como índices descendentes para la búsqueda de versiones recientes. Estas optimizaciones 
+    redujeron significativamente los recorridos de tablas completas en operaciones de construcción del 
+    árbol de características. En segundo lugar, se implementó el mecanismo de carga diferida, que redujo 
+    el número de consultas a la base de datos en modelo grandes de aproximadamente; esto permitió Agrupar
+    consultar relacionadas en una sola transacción. Adicionalmente, se configuró el grupo de conexiones a 
+    la base de datos con parámetros optimizados (\texttt{pool\_size=20}, \texttt{max\_overflow=40}), 
+    permitiendo gestionar eficientemente escenarios de alta concurrencia.
+    
+    \item Serialización eficiente y compresión de respuestas: Se optimizó el proceso de serialización de 
+    respuestas en los controladores más críticos. En lugar de serializar la totalidad de la estructura del 
+    árbol, las características, las relaciones y las restricciones de una sola vez, se implementó una 
+    serialización diferida que solo procesa los componentes necesarios 
+    para la vista inicial del usuario, posponiendo la carga de elementos profundos hasta que sean 
+    solicitados explícitamente. Esta estrategia redujo el tamaño de las respuestas \ac{JSON} en 
+    aproximadamente un 60\%. Complementariamente, se habilitó la compresión GZIP mediante el middleware de FastAPI para todas 
+    las respuestas con tamaño superior a 1 kilobyte, reduciendo el volumen de datos transmitidos en la 
+    red hasta en un 80\%, especialmente beneficioso para modelos curriculares extremadamente grandes.
+
+    \item Optimización del flujo de validación y análisis: Se refactorizó el proceso de validación lógica 
+    de restricciones para ejecutar las comprobaciones en paralelo mediante tareas asíncronas, aprovechando 
+    el multiprocesamiento en entornos con múltiples núcleos de CPU. Para operaciones que tradicionalmente 
+    eran bloqueantes, como el análisis del solucionador SAT, se incorporó un límite de tiempo máximo de 
+    ejecución, más allá del cual la operación retorna un estado de "desconocido" o "no determinado" en 
+    lugar de esperar indefinidamente. Esta estrategia garantiza que la latencia máxima del sistema se 
+    mantenga controlada, incluso ante modelos con restricciones particularmente complejas que podrían 
+    llevar a los solucionadores a explorar espacios de búsqueda combinatoriamente explosivos.
+    
+    \item Para el controlador de generación de configuraciones, se implementaron múltiples estrategias 
+    que el usuario puede seleccionar según sus necesidades: una estrategia ávida (\textit{greedy}) para 
+    obtener configuraciones válidas de forma rápida (ideal para exploración inicial), una estrategia 
+    aleatoria basada en solucionadores SAT para un muestreo más diverso, y una estrategia de optimización 
+    multiobjetivo mediante algoritmos genéticos NSGA-II para escenarios donde se requiere maximizar 
+    simultáneamente varios criterios (por ejemplo, minimizar carga académica y maximizar afinidad con 
+    competencias deseadas); este enfoque permite permitiendo al usuario 
+    seleccionar el equilibrio entre velocidad y calidad de los resultados.
+    Adicionalmente, se implementó un modo de generación por lotes con procesamiento 
+    asíncrono, donde el usuario puede solicitar la generación de hasta 100 configuraciones en una sola 
+    petición, siendo cada validación procesada de forma concurrente por los trabajadores de Celery.    
+
+    \item Escalado horizontal mediante contenedores: 
+    Empleando Docker y Kubernetes, el sistema puede crear réplicas dinámicas del backend bajo alta demanda, 
+    distribuyendo la carga mediante un balanceador. Adicionalmente, la base de datos PostgreSQL se configuró 
+    con réplicas de solo lectura para escalar las operaciones de consulta, garantizando tiempos de respuesta 
+    aceptables en escenarios de máxima concurrencia sin rediseñar la arquitectura.
+\end{itemize}
+
+Tras aplicar las correcciones y estrategias de optimización descritas, se ejecutó 
+una segunda iteración de pruebas de rendimiento, sometiendo nuevamente los ocho controladores 
+a los tres escenarios de carga. Los resultados obtenidos mostraron una mejora significativa 
+en todos los indicadores evaluados. Los controladores que anteriormente presentaban tiempos 
+de respuesta críticos redujeron su latencia en más de un 70\%, y ninguno de ellos superó los límites 
+establecidos en los requisitos no funcionales.
+
+La figura \ref{fig:rendimiento_iteracion2} presenta los resultados de la segunda iteración, 
+evidenciando la estabilidad y el rendimiento alcanzado por el sistema.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Images/result_rt2t.png}
+    \caption{Resultados de la segunda iteración de pruebas de rendimiento. Fuente: Elaboración propia.}
+    \label{fig:rendimiento_iteracion2}
+\end{figure}
+
+Los resultados obtenidos en la segunda iteración demuestran que el sistema cumple satisfactoriamente con los 
+requisitos no funcionales de rendimiento definidos.
+En el escenario base (10 usuarios concurrentes), todos los controladores respondieron en menos de 2 
+segundos. En el escenario pico (100 usuarios concurrentes), los tiempos de respuesta se mantuvieron 
+por debajo de 2.5 segundos para las operaciones síncronas, con solo dos controladores superiores a los 2 segundos, 
+mientras que las operaciones asíncronas retornaron 
+una respuesta inmediata con el identificador de la tarea. En el escenario de estrés (1.000 usuarios simultáneos), 
+el sistema demostró una capacidad de manejo de carga satisfactoria, con tiempos de respuesta por debajo de 3 
+segundos para las operaciones críticas, sin errores ni caídas del servicio.
 
 \subsection{Pruebas de aceptación}
 
@@ -326,7 +766,79 @@ resto se pueden consultar en el anexo \ref{anx:pa}.
 \testcaseuserstory{6}
 \end{acceptancetest}
 
+\subsubsection{Resultados de las pruebas de aceptación}
+
+Las pruebas de aceptación se ejecutaron en tres iteraciones sobre un total de 63 casos de prueba diseñados 
+a partir de las historias de usuario priorizadas en el plan de entregas. Estas pruebas fueron ejecutadas en Postman.
+Durante la primera ejecución de las pruebas de aceptación, se detectaron 11 fallas en el comportamiento del sistema. 
+Estas fallas se clasificaron en las siguientes categorías:
+
+\begin{itemize}
+    \item Fallas en la validación de restricciones (4 casos): El sistema permitía la creación de restricciones que 
+    referenciaban características inactivas o que generaban conflictos lógicos no detectados durante la validación estructural.
+
+    \item Inconsistencias en la exportación a \ac{UVL} (3 casos): En modelos con grupos anidados de características, 
+    la exportación generaba una sintaxis \ac{UVL} mal formada que no podía ser reimportada correctamente.
+
+    \item Errores en la generación de configuraciones (2 casos): El generador de configuraciones producía en 
+    ocasiones configuraciones que violaban restricciones de exclusión mutua entre características.
+
+    \item Problemas de autorización (2 casos): Algunos \textit{endpoints} permitían la modificación 
+    de modelos por parte de usuarios con rol de observador, violando la política de privilegios definida.
+\end{itemize}
+
+Todas estas fallas fueron corregidas mediante modificaciones directas en el código afectado, 
+principalmente en los servicios de validación lógica, en el exportador de modelos y en las dependencias de 
+autorización de los controladores.
+
+Tras aplicar las correcciones derivadas de la primera iteración, se ejecutó una nueva ronda de pruebas de 
+aceptación. En esta ocasión, el número de fallas se redujo significativamente a solo 3 casos, todos 
+ellos relacionados con aspectos periféricos del sistema:
+
+\begin{itemize}
+    \item Envío de respuestas en formatos incorrectos (2 casos): Ciertos \textit{endpoints} devolvían códigos de estado 
+    \ac{HTTP} inapropiados para situaciones de error (por ejemplo, retornar 400 en lugar de 404 cuando un recurso no existía).
+
+    \item Mensajes de error poco informativos (1 caso): En una validación fallida, el mensaje de error no especificaba qué 
+    característica era la causa del conflicto, dificultando la corrección por parte del usuario.
+\end{itemize}
+
+Estas fallas fueron igualmente corregidas, ajustando el manejo de excepciones en los controladores y 
+mejorando la retroalimentación proporcionada al usuario en las respuestas de error. Con el objetivo 
+de garantizar que las correcciones aplicadas no introdujeran nuevos defectos ni afectaran 
+funcionalidades previamente validadas, se ejecutó una tercera iteración de pruebas de aceptación, esta vez 
+con un enfoque de regresión completo. En esta iteración, se volvieron a ejecutar la totalidad de los 63 casos 
+de prueba, obteniendo como resultado cero fallas. La figura \ref{fig:result_at} resume el 
+comportamiento del sistema a lo largo de las tres iteraciones, mostrando la evolución positiva en la tasa de éxito 
+de las pruebas de aceptación.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Images/result_at.png}
+    \caption{Resultados de las Pruebas Aceptación. Fuente: Elaboración propia.}
+    \label{fig:result_at}
+\end{figure}
 
 \section{Conclusiones del capítulo}
 
+Luego del desarrollo del presente capítulo se arribaron a las siguientes conclusiones:
 
+\begin{itemize}
+    \item 
+\end{itemize}
+
+% Adicionalmente, la implementación de las estrategias de caché y procesamiento asíncrono permitió que el sistema 
+% escalara adecuadamente al aumentar la carga de trabajo, manteniendo la estabilidad y la calidad del servicio. 
+% En particular, los controladores de análisis estructural y generación de configuraciones, 
+% que inicialmente presentaban los mayores desafíos de rendimiento, lograron tiempos de respuesta aceptables 
+% gracias a la delegación de tareas pesadas a los trabajadores en segundo plano. 
+
+% En consecuencia, se concluye que el servicio backend satisface los requisitos no funcionales de rendimiento 
+% establecidos, garantizando una experiencia de usuario fluida incluso bajo condiciones de alta demanda y 
+% en escenarios de trabajo con modelos curriculares de gran complejidad.
+
+% La culminación de las pruebas de aceptación con un 100\% de casos exitosos en la tercera iteración confirma 
+% que el servicio backend satisface los criterios de aceptación definidos conjuntamente con el cliente. Todas 
+% las historias de usuario priorizadas en el plan de entregas fueron validadas satisfactoriamente, demostrando 
+% que el sistema resuelve efectivamente el problema de gestión de variabilidad curricular para el cual fue 
+% concebido. En consecuencia, el sistema se considera apto para su despliegue en un entorno productivo.

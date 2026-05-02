@@ -790,9 +790,9 @@ A continuación se definen los requisitos no funcionales del sistema:
 \subsubsection{Seguridad}
 
 \begin{itemize}
-	\item \ac{RnF}\#1: El sistema debe implementar autenticación basada en \textit{tokens} \ac{JWT} para garantizar la seguridad de las sesiones de usuario.
-	\item \ac{RnF}\#2: El sistema debe implementar un ciclo de vida completo para los \textit{tokens} \ac{JWT} que incluya operaciones de emisión, 
-			renovación e invalidación, garantizando que los \textit{tokens} tengan un tiempo de expiración limitado y puedan ser 
+	\item \ac{RnF}\#1: El sistema debe implementar autenticación basada en tokens \ac{JWT} para garantizar la seguridad de las sesiones de usuario.
+	\item \ac{RnF}\#2: El sistema debe implementar un ciclo de vida completo para los tokens \ac{JWT} que incluya operaciones de emisión, 
+			renovación e invalidación, garantizando que los tokens tengan un tiempo de expiración limitado y puedan ser 
 			revocados explícitamente por el usuario.
 	\item \ac{RnF}\#3: El sistema debe implementar un mecanismo de eliminación lógica mediante 
 			un cambio de estado (activo/inactivo)  para conservar la integridad referencial de la 
@@ -810,10 +810,10 @@ A continuación se definen los requisitos no funcionales del sistema:
 \subsubsection{Rendimiento}
 
 \begin{itemize}
-	\item \ac{RnF}\#8: El 95\% de las peticiones a \textit{endpoints} críticos deben responderse en $ \leq 200 $ ms, y el 99\% en $ \leq 500 $ ms.
-	\item \ac{RnF}\#9: El \textit{backend} debe manejar al menos 500 usuarios simultáneos sin degradación superior al 20\%.
+	\item \ac{RnF}\#8: El 90\% de las peticiones a \textit{endpoints} críticos deben responderse en $ \leq 200 $ ms, y el 95\% en $ \leq 500 $ ms.
+	\item \ac{RnF}\#9: El \textit{backend} debe manejar al menos 1000 usuarios simultáneos sin degradación superior al 20\%.
+	\item \ac{RnF}\#11: El sistema debe soportar al menos 100 peticiones por segundo en condiciones de alta demanda y 10 peticiones por segundos en condiciones normales de operación.
 	\item \ac{RnF}\#10: La latencia p95 entre capas (repositorios → \ac{BD}) no debe superar los 50 ms en la misma región.
-	\item \ac{RnF}\#11: El sistema debe soportar al menos 1000 peticiones por segundo en condiciones normales de operación.
 \end{itemize}
 
 \subsubsection{Integración}
@@ -862,7 +862,7 @@ A continuación se definen los requisitos no funcionales del sistema:
 \begin{itemize}
 	\item \ac{RnF}\#26: El sistema debe permitir agregar o quitar instancias del \textit{backend} sin detener el servicio ni perder sesiones activas (escalado horizontal).
 	\item \ac{RnF}\#27: En horas pico, el sistema debe auto-escalar de 2 a 10 réplicas en menos de 3 minutos.
-	\item \ac{RnF}\#28: La capa de datos debe soportar particionamiento o réplicas de lectura sin cambios en la lógica de negocio.
+	\item \ac{RnF}\#28: La \ac{BD} soportar particionamiento o réplicas de lectura sin cambios en la lógica de negocio.
 \end{itemize}
 
 \subsubsection{Portabilidad}

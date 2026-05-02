@@ -18,7 +18,7 @@
 			\storyacceptancecriteria{
 			\begin{itemize}
 			\item Permitir registro e inicio con correo y contraseña.
-			\item Procesar recuperación de acceso mediante \textit{token} enviado por correo.
+			\item Procesar recuperación de acceso mediante token enviado por correo.
 			\item Permitir la edición del perfil propio sin intervención administrativa.
 			\end{itemize}
 			}
@@ -295,7 +295,6 @@
 			}
 			\storyobservation{Los recursos y etiquetas deben servir como apoyo semántico y documental para el uso del modelo. Campos de entrada asociados: RF\#84 (nombre, descripción opcional), RF\#87 (metadatos completos del recurso y contenido) y RF\#88 (identificador de recurso en ruta y campos opcionales, con restricción sobre propietario).}
 		\end{userstory}
-
 
 	\chapter{Tarjetas CRC}
 	\label{anx:tCRC}
@@ -706,7 +705,7 @@
 		\engtaskpointestimation{12}
 		\engtaskstartdate{21}{4}{2026}
 		\engtaskenddate{22}{4}{2026}
-		\engtaskdescription{Diseñar e implementar el servicio de identidad para registro, autenticación, gestión de credenciales, emisión y verificación de \textit{tokens}, y actualización de perfil, garantizando trazabilidad y cumplimiento de políticas de seguridad.}
+		\engtaskdescription{Diseñar e implementar el servicio de identidad para registro, autenticación, gestión de credenciales, emisión y verificación de tokens, y actualización de perfil, garantizando trazabilidad y cumplimiento de políticas de seguridad.}
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
 
@@ -3712,7 +3711,7 @@
 		\hline
 		\endlastfoot
 		
-		\multicolumn{2}{|p{13cm}|}{\ac{RnF}\#1: El sistema debe implementar autenticación basada en \textit{tokens} \ac{JWT} para garantizar la seguridad de las sesiones de usuario} \\
+		\multicolumn{2}{|p{13cm}|}{\ac{RnF}\#1: El sistema debe implementar autenticación basada en tokens \ac{JWT} para garantizar la seguridad de las sesiones de usuario} \\
 		\hline
 		Iniciar sesión emite un token de acceso firmado & \checkmark \\
 		\hline
@@ -3724,8 +3723,8 @@
 		\hline
 		Se bloquea acceso para usuario inactivo & \checkmark \\
 		\hline
-		\multicolumn{2}{|p{13cm}|}{\ac{RnF}\#2: El sistema debe implementar un ciclo de vida completo para los \textit{tokens} \ac{JWT} que incluya operaciones de emisión, 
-			renovación e invalidación, garantizando que los \textit{tokens} tengan un tiempo de expiración limitado y puedan ser 
+		\multicolumn{2}{|p{13cm}|}{\ac{RnF}\#2: El sistema debe implementar un ciclo de vida completo para los tokens \ac{JWT} que incluya operaciones de emisión, 
+			renovación e invalidación, garantizando que los tokens tengan un tiempo de expiración limitado y puedan ser 
 			revocados explícitamente por el usuario} \\
 		\hline
 		Existe emisión de token de acceso y token para refrescar & \checkmark \\
@@ -3820,7 +3819,7 @@
 		\begin{enumerate}
 			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/register} con carga útil: \texttt{\{"email": "usuario@test.com", "password": "Pass123!@"\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{201}.
-			\item Validar que la respuesta incluya el \textit{token} de autenticación.
+			\item Validar que la respuesta incluya el token de autenticación.
 			\item Validar que se creó el usuario en la \ac{BD}.
 		\end{enumerate}
 		}
@@ -3856,7 +3855,7 @@
 		\begin{itemize}
 			\item Estado \ac{HTTP}: \texttt{200 OK}.
 			\item Respuesta contiene \texttt{access\_token}, \texttt{refresh\_token} y \texttt{user\_id}.
-			\item El \textit{token} es válido para futuras peticiones autenticadas.
+			\item El token es válido para futuras peticiones autenticadas.
 		\end{itemize}
 		}
 		\testcaseuserstory{1}
@@ -3878,18 +3877,18 @@
 		\begin{enumerate}
 			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/forgot-password} con carga útil: \texttt{\{"email": "usuario@test.com"\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
-			\item Verificar que se envió un correo con \textit{token} de recuperación.
-			\item Extraer el \textit{token} del correo y enviar \texttt{PUT} a \texttt{/api/v1/auth/reset-password} con carga útil: \texttt{\{"token": "<token>", "new\_password": "NewPass456!@"\}}.
+			\item Verificar que se envió un correo con token de recuperación.
+			\item Extraer el token del correo y enviar \texttt{PUT} a \texttt{/api/v1/auth/reset-password} con carga útil: \texttt{\{"token": "<token>", "new\_password": "NewPass456!@"\}}.
 			\item Validar que la contraseña se actualizó.
 		\end{enumerate}
 		}
 		\testcaseexpresult{
 		\begin{itemize}
 			\item Estado \ac{HTTP}: \texttt{200 OK} (solicitud).
-			\item Se envía correo con \textit{token} de recuperación.
+			\item Se envía correo con token de recuperación.
 			\item Estado \ac{HTTP}: \texttt{200 OK} (restablecimiento).
 			\item Usuario puede iniciar sesión con nueva contraseña.
-			\item El \textit{token} anterior se invalida.
+			\item El token anterior se invalida.
 		\end{itemize}
 		}
 		\testcaseuserstory{1}
@@ -3901,7 +3900,7 @@
 		\testcasedescription{Validar que un usuario autenticado pueda actualizar su perfil (correo, nombre) sin necesidad de administrador.}
 		\testcaseexeccond{
 		\begin{itemize}
-			\item Usuario está autenticado con \textit{token} válido.
+			\item Usuario está autenticado con token válido.
 			\item El nuevo correo no está registrado en otro usuario.
 			\item El usuario tiene permisos para editar su propio perfil.
 		\end{itemize}
@@ -3919,7 +3918,7 @@
 			\item Estado \ac{HTTP}: \texttt{200 OK}.
 			\item Perfil actualizado en \ac{BD}.
 			\item Respuesta contiene los datos actualizados.
-			\item El \textit{token} sigue siendo válido.
+			\item El token sigue siendo válido.
 			\item Cambios persistidos en \ac{BD}.
 		\end{itemize}
 		}
@@ -3932,23 +3931,23 @@
 		\testcasedescription{Validar que un usuario pueda cerrar sesión invalidando su token.}
 		\testcaseexeccond{
 		\begin{itemize}
-			\item Usuario está autenticado con \textit{token} válido.
-			\item El servidor mantiene una lista de \textit{tokens} revocados.
+			\item Usuario está autenticado con token válido.
+			\item El servidor mantiene una lista de tokens revocados.
 		\end{itemize}
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/logout} con cabeceras de autenticación.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
-			\item Intentar acceder a un \textit{endpoint} protegido con el \textit{token} anterior.
+			\item Intentar acceder a un \textit{endpoint} protegido con el token anterior.
 			\item Validar que se rechaza la petición.
 		\end{enumerate}
 		}
 		\testcaseexpresult{
 		\begin{itemize}
 			\item Estado \ac{HTTP}: \texttt{200 OK}.
-			\item El \textit{token} se añade a lista de revocación.
-			\item Peticiones posteriores con ese \textit{token} retornan \ac{HTTP} \texttt{401 Unauthorized}.
+			\item El token se añade a lista de revocación.
+			\item Peticiones posteriores con ese token retornan \ac{HTTP} \texttt{401 Unauthorized}.
 			\item Mensaje: \texttt{"Token revoked or expired"}.
 		\end{itemize}
 		}
@@ -3965,7 +3964,7 @@
 		\begin{itemize}
 			\item Usuario es administrador (rol=\texttt{ADMIN}).
 			\item Existen usuarios con diferentes roles en la \ac{BD}.
-			\item Usuario está autenticado con \textit{token} de administrador.
+			\item Usuario está autenticado con token de administrador.
 		\end{itemize}
 		}
 		\testcaseexecstep{
