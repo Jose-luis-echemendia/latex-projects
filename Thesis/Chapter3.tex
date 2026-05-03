@@ -824,21 +824,36 @@ de las pruebas de aceptación.
 Luego del desarrollo del presente capítulo se arribaron a las siguientes conclusiones:
 
 \begin{itemize}
-    \item 
+    \item La fase de implementación demostró que la adopción de la metodología \ac{XP} con descomposición de historias de usuario en \ac{TI} 
+    fue acertada para un proyecto de esta naturaleza. La granularidad de las tareas 
+    permitió un seguimiento preciso del avance, la integración continua de nuevas funcionalidades,
+    una detección temprana de desviaciones en los plazos estimados y una 
+    distribución equilibrada de la carga de trabajo. Las 72 \ac{TI} ejecutadas
+    a lo largo de siete iteraciones evidenciaron que las mayores complejidades técnicas se concentraron en los servicios de 
+    análisis estructural de \ac{FM}, generación de configuraciones y gestión de versiones, lo que orientó los esfuerzos de 
+    optimización hacia estas áreas críticas.
+     
+    \item Las pruebas unitarias y de integración, al ejecutarse de forma iterativa durante todo el desarrollo, permitieron detectar y 
+    corregir 24 fallas (16 en pruebas unitarias y 8 en pruebas de integración) antes de que estas alcanzaran las pruebas de aceptación. 
+    Esta detección temprana redujo drásticamente la cantidad de errores severos encontrados por el cliente en la fase final, donde solo se 
+    reportaron 11 fallas iniciales, en su mayoría relacionadas con aspectos periféricos y no con la lógica central del sistema.
+    
+    \item Las estrategias de optimización aplicadas (caché distribuida con Redis, procesamiento asíncrono con Celery, optimización de 
+    consultas a la base de datos, compresión de respuestas y escalado horizontal con Kubernetes) lograron una reducción promedio del 61\% 
+    en los tiempos de respuesta de los ocho controladores críticos evaluados. En el escenario de estrés (1000 usuarios simultáneos), las mejoras 
+    más significativas se observaron en los controladores de validación completa (reducción del 74\%, de 11380 ms a 2991 ms) y de análisis 
+    estructural (reducción del 72\%, de 10390 ms a 2691 ms), que inicialmente presentaban los mayores cuellos de botella. En consecuencia, 
+    se concluye que el servicio backend satisface los requisitos no funcionales de rendimiento 
+    establecidos, garantizando una experiencia de usuario fluida incluso bajo condiciones de alta demanda y 
+    en escenarios de trabajo con modelos curriculares de gran complejidad.
+    
+    \item Las pruebas de seguridad confirmaron que el sistema satisface la totalidad de los requisitos no funcionales de 
+    seguridad definidos. La implementación de autenticación mediante tokens \ac{JWT} con ciclo de vida completo, lista negra para tokens 
+    comprometidos, comunicación cifrada mediante \ac{HTTPS}, uso exclusivo de \ac{UUID} como identificadores, control de acceso basado en roles y 
+    eliminación lógica mediante cambio de estado garantiza la protección de la información curricular sensible frente a accesos no autorizados.
+    
+    \item La culminación de las pruebas de aceptación con un 100\% de casos exitosos en la tercera iteración (0 fallas sobre 63 casos) 
+    confirma que el servicio backend satisface los criterios de aceptación definidos conjuntamente con el cliente. Todas las historias
+    de usuario priorizadas en el plan de entregas fueron validadas satisfactoriamente, demostrando que el sistema resuelve efectivamente 
+    el problema de gestión de variabilidad curricular para el cual fue concebido.
 \end{itemize}
-
-% Adicionalmente, la implementación de las estrategias de caché y procesamiento asíncrono permitió que el sistema 
-% escalara adecuadamente al aumentar la carga de trabajo, manteniendo la estabilidad y la calidad del servicio. 
-% En particular, los controladores de análisis estructural y generación de configuraciones, 
-% que inicialmente presentaban los mayores desafíos de rendimiento, lograron tiempos de respuesta aceptables 
-% gracias a la delegación de tareas pesadas a los trabajadores en segundo plano. 
-
-% En consecuencia, se concluye que el servicio backend satisface los requisitos no funcionales de rendimiento 
-% establecidos, garantizando una experiencia de usuario fluida incluso bajo condiciones de alta demanda y 
-% en escenarios de trabajo con modelos curriculares de gran complejidad.
-
-% La culminación de las pruebas de aceptación con un 100\% de casos exitosos en la tercera iteración confirma 
-% que el servicio backend satisface los criterios de aceptación definidos conjuntamente con el cliente. Todas 
-% las historias de usuario priorizadas en el plan de entregas fueron validadas satisfactoriamente, demostrando 
-% que el sistema resuelve efectivamente el problema de gestión de variabilidad curricular para el cual fue 
-% concebido. En consecuencia, el sistema se considera apto para su despliegue en un entorno productivo.
