@@ -1,1 +1,137 @@
-\newglossaryentry{Engine}{name=engine, description={part of a program which handles certain types of data (Computers)}}
+\newglossaryentry{pod}
+{
+    name={Pod},
+    description={Unidad mínima y desplegable en Kubernetes que encapsula uno o más contenedores (generalmente Docker), almacenamiento, una dirección IP única y opciones de configuración. Los contenedores dentro de un mismo pod comparten el ciclo de vida, el espacio de red y pueden comunicarse mediante \texttt{localhost} \citep{kubernetes2025pods}}
+}
+
+\newglossaryentry{clúster}
+{
+    name={Clúster},
+    description={Conjunto de nodos (máquinas físicas o virtuales) que ejecutan aplicaciones contenerizadas gestionadas por Kubernetes. Un clúster consta de al menos un nodo maestro (plano de control) y varios nodos trabajadores. El plano de control gestiona el estado del clúster, mientras que los nodos trabajadores ejecutan las cargas de trabajo \citep{kubernetes2025components}}
+}
+
+\newglossaryentry{nodo}
+{
+    name={nodo},
+    description={Máquina física o virtual que forma parte de un clúster Kubernetes. Cada nodo contiene los servicios necesarios para ejecutar pods, incluyendo el kubelet (agente que se comunica con el plano de control), el tiempo de ejecución de contenedores (por ejemplo, Docker) y el proxy de red kube-proxy \citep{kubernetes2025nodes}}
+}
+
+\newglossaryentry{plano-control}
+{
+    name={Plano de control},
+    description={Conjunto de componentes que gestionan el estado global del clúster Kubernetes. Incluye el servidor API (kube-apiserver), el almacén clave-valor etcd, el controlador de planificación (kube-scheduler) y los controladores integrados (kube-controller-manager). Es el cerebro del clúster que toma decisiones sobre escalado, reinicio y distribución de pods \citep{kubernetes2025controlplane}}
+}
+
+\newglossaryentry{namespace}
+{
+    name={Espacio de nombres},
+    description={Mecanismo de aislamiento lógico dentro de un clúster Kubernetes que permite dividir los recursos del clúster entre múltiples usuarios, equipos o entornos (desarrollo, pruebas, producción). Los recursos dentro de un mismo espacio de nombres pueden referenciarse entre sí mediante nombres cortos, mientras que entre espacios diferentes se requiere calificación \citep{kubernetes2025namespaces}}
+}
+
+\newglossaryentry{service}
+{
+    name={Servicio},
+    description={Abstracción que define un conjunto lógico de pods y una política de acceso a ellos. Un servicio expone una dirección IP virtual y un puerto que permanecen estables incluso cuando los pods subyacentes se crean, destruyen o reubican. Los tipos más comunes son \texttt{ClusterIP} (accesible solo dentro del clúster) y \texttt{LoadBalancer} (accesible desde fuera del clúster) \citep{kubernetes2025services}}
+}
+
+\newglossaryentry{ingress}
+{
+    name={Ingress},
+    description={Recurso de Kubernetes que gestiona el acceso externo a los servicios dentro del clúster, típicamente a través de \ac{HTTPS} o \ac{HTTP}. Permite definir reglas de enrutamiento basadas en el nombre de host y la ruta de la URL, así como configurar la terminación de certificados \ac{TLS} \citep{kubernetes2025ingress}}
+}
+
+\newglossaryentry{ConfigMap}
+{
+    name={ConfigMap},
+    description={Recurso que permite desacoplar la configuración del código de las aplicaciones contenerizadas. Almacena pares clave-valor con información de configuración no sensible (como rutas, nombres de servicios, etc.) que puede ser inyectada en los pods como variables de entorno o archivos montados \citep{kubernetes2025configmap}}
+}
+
+\newglossaryentry{Secret}
+{
+    name={Secreto},
+    description={Recurso similar al ConfigMap pero destinado a almacenar información sensible, como contraseñas, tokens de autenticación, claves SSH o credenciales de bases de datos. Los datos se codifican en base64 y Kubernetes puede gestionar su acceso de forma más restrictiva que los ConfigMaps convencionales \citep{kubernetes2025secrets}}
+}
+
+\newglossaryentry{pvc}
+{
+    name={Reclamación de volumen persistente},
+    description={Solicitud de almacenamiento realizada por un usuario o un pod. La PVC especifica la cantidad de almacenamiento requerido y el modo de acceso (lectura-escritura por un solo nodo, lectura-escritura por múltiples nodos, etc.). Kubernetes vincula la PVC con un volumen persistente (PV) que cumple con los requisitos solicitados \citep{kubernetes2025pvc}}
+}
+
+\newglossaryentry{pv}
+{
+    name={Volumenes persistentes},
+    description={Recursos de almacenamiento aprovisionado en el clúster, independiente del ciclo de vida de cualquier pod que lo utilice. Representa un recurso de almacenamiento real en la infraestructura subyacente (disco en la nube, almacenamiento en red, volumen local, etc.) y puede ser aprovisionado estáticamente por el administrador o dinámicamente mediante clases de almacenamiento \citep{kubernetes2025pv}}
+}
+
+\newglossaryentry{loadbalancer}
+{
+    name={Balanceador de carga},
+    description={Tipo de servicio Kubernetes que expone un servicio externamente mediante un balanceador de carga proporcionado por el proveedor de nube (AWS, GCP, Azure) o configurado manualmente en entornos on-premise. Asigna una dirección IP pública (o accesible desde fuera del clúster) y distribuye el tráfico entrante entre los pods que respaldan el servicio \citep{kubernetes2025loadbalancer}}
+}
+
+\newglossaryentry{clusterip}
+{
+    name={ClusterIP},
+    description={Tipo de servicio por defecto en Kubernetes que expone el servicio mediante una dirección IP interna accesible únicamente desde dentro del clúster. Es útil para la comunicación entre diferentes componentes internos del sistema (por ejemplo, FastAPI comunicándose con PostgreSQL) sin exponerlos directamente al exterior \citep{kubernetes2025clusterip}}
+}
+
+\newglossaryentry{K3s}
+{
+    name={K3s},
+    description={Distribución certificada de Kubernetes de código abierto, ligera y compatible con el estándar Kubernetes, diseñada específicamente para entornos de borde, IoT y despliegues con recursos limitados. Requiere menos memoria y CPU que una instalación estándar de Kubernetes, lo que la hace ideal para clústeres pequeños y servidores de gama baja \citep{k3s2025docs}}
+}
+
+\newglossaryentry{Traefik}
+{
+    name={Traefik},
+    description={Controlador de Ingress (Ingress Controller) de código abierto que actúa como enrutador y balanceador de carga de capa 7 para clústeres Kubernetes, Docker y otros orquestadores. En el despliegue propuesto, Traefik funciona como punto único de entrada externa, recibiendo peticiones \ac{HTTPS} del cliente y enrutándolas al servicio FastAPI según las reglas definidas. Gestiona automáticamente los certificados \ac{TLS} y proporciona terminación de conexiones seguras \citep{traefik2025docs}}
+}
+
+\newglossaryentry{kube-apiserver}
+{
+    name={kube-apiserver},
+    description={Servidor API de Kubernetes que actúa como la puerta de entrada principal al clúster. Es el componente central que expone la \ac{API} de Kubernetes a través de una interfaz \ac{REST}. Todos los clientes (kubelet, kubectl, controladores) comunican con él para crear, modificar, eliminar y consultar objetos del clúster. Utiliza etcd como almacén de datos persistente \citep{kubernetes2025apiserver}}
+}
+
+\newglossaryentry{etcd}
+{
+    name={etcd},
+    description={Base de datos clave-valor distribuida de código abierto que actúa como almacén de datos consistente del plano de control de Kubernetes. Almacena la configuración completa, el estado de todos los objetos del clúster (pods, servicios, volúmenes, etc.) y es la única fuente de verdad. Proporciona garantías de consistencia y puede configurarse para alta disponibilidad con replicación \citep{kubernetes2025etcd}}
+}
+
+\newglossaryentry{kube-scheduler}
+{
+    name={kube-scheduler},
+    description={Componente del plano de control que asigna pods a nodos. Observa los pods recién creados sin nodo asignado y selecciona nodos adecuados basándose en restricciones de recursos (CPU, memoria), políticas de afinidad, anti-afinidad y otras estrategias de planificación \citep{kubernetes2025scheduler}}
+}
+
+\newglossaryentry{kube-controller-manager}
+{
+    name={kube-controller-manager},
+    description={Componente del plano de control que ejecuta múltiples controladores responsables de regular el estado del clúster. Cada controlador monitorea el estado actual y trabaja para llevarlo al estado deseado. Entre ellos están el controlador de replicación (asegura que haya el número correcto de réplicas), controlador de nodos y otros que gestionan recursos y ciclos de vida \citep{kubernetes2025controller-manager}}
+}
+
+\newglossaryentry{kubelet}
+{
+    name={kubelet},
+    description={Agente que se ejecuta en cada nodo del clúster y es responsable de asegurar que los contenedores especificados en los manifiestos de pods se ejecuten realmente en el nodo. Se comunica constantemente con el plano de control a través del kube-apiserver, reporta el estado del nodo y de los pods, gestiona volúmenes persistentes y ejecuta sondas de salud \citep{kubernetes2025kubelet}}
+}
+
+\newglossaryentry{kube-proxy}
+{
+    name={kube-proxy},
+    description={Componente de red que se ejecuta en cada nodo y es responsable de implementar las reglas de enrutamiento de servicios de Kubernetes. Mantiene las reglas de red (iptables, ipvs o userspace) que permiten que el tráfico destinado a un servicio sea correctamente redirigido a los pods correspondientes. Sin kube-proxy, los servicios ClusterIP no funcionarían \citep{kubernetes2025kube-proxy}}
+}
+
+\newglossaryentry{kubectl}
+{
+    name={Kubectl},
+    description={Herramienta de línea de comandos de Kubernetes que permite a los administradores y desarrolladores interactuar con el clúster. Envía comandos al kube-apiserver para crear, inspeccionar, actualizar y eliminar recursos de Kubernetes. Puede usarse para desplegar aplicaciones, inspeccionar y gestionar recursos del clúster, ver logs y ejecutar comandos dentro de contenedores \citep{kubernetes2025kubectl}}
+}
+
+\newglossaryentry{rolling-updates}
+{
+    name={Actualizaciones de rodillo},
+    description={Estrategia de actualización que reemplaza gradualmente instancias antiguas de una aplicación por instancias nuevas sin causar tiempo de inactividad. Kubernetes actualiza progresivamente los pods, generalmente reemplazando uno a uno y verificando la salud antes de continuar. Permite reversiones rápidas si algo sale mal y asegura disponibilidad continua del servicio \citep{kubernetes2025rolling-updates}}
+}

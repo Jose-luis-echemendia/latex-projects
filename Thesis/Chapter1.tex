@@ -1,4 +1,4 @@
-\chapter{Fundamentación Teórica}
+\chapter{Fundamentación teórica}
 
 \label{chap:chapter1}
 
@@ -103,7 +103,7 @@ Productos Educativos", donde un tronco curricular común puede derivar en
 múltiples planes de estudio especializados mediante la gestión explícita de su
 variabilidad.
 
-\subsubsection{Evolución y Mantenimiento de Líneas de Productos}
+\subsubsection{Evolución y mantenimiento de líneas de productos}
 
 Las \ac{SPL} no son entidades estáticas; evolucionan con el tiempo para adaptarse a 
 nuevos requisitos, tecnologías y mercados. La evolución de \ac{SPL} se refiere al 
@@ -265,7 +265,7 @@ Las dos formas más comunes y fundamentales son:
     \citep{sundermann2023sat, benavides2005Taxonomy}.
 \end{itemize}
 
-\subsubsection{Semántica Formal y Solucionadores SAT (\textit{SAT Solvers})}
+\subsubsection{Semántica formal y solucionadores SAT (\textit{SAT Solvers})}
 
 La semántica formal de un \ac{FM} proporciona un
 significado matemático preciso a todos sus elementos (jerarquía, relaciones y
@@ -300,7 +300,7 @@ restricciones), lo que permite un análisis automático y libre de ambigüedades
     modelos industriales \citep{sundermann2023sat, soos2020Ganak}.
 \end{itemize}
 
-\subsubsection{Operaciones sobre Modelos de Características}
+\subsubsection{Operaciones sobre \ac{FM}}
 
 Para que un \ac{FM} sea útil en un entorno de desarrollo, debe soportar un conjunto de 
 operaciones que permitan manipularlo y consultarlo. Estas operaciones están agrupadas por
@@ -331,7 +331,7 @@ grupos y son:
     \end{itemize}
 \end{itemize}
 
-\subsubsection{Modelos de Características con atributos}
+\subsubsection{\ac{FM} con atributos}
 
 Los \ac{FM}s básicos, también conocidos como \ac{FM}s booleanos, capturan únicamente 
 la presencia o ausencia de características. Sin embargo, muchos dominios requieren 
@@ -731,7 +731,7 @@ este enfoque:
 \end{itemize}
 
 
-\section{Fortalezas de los Modelos de Característica aplicado en la gestión curricular}
+\section{Fortalezas de los \ac{FM} aplicado en la gestión curricular}
 
 La verdadera potencia del \ac{FM} radica en que, una vez formalizado,
 se convierte en un modelo lógico-matemático que define explícitamente
@@ -1266,7 +1266,7 @@ de administración académica y los mecanismos de planificación curricular
 basados en variabilidad, lo que justifica la necesidad y pertinencia
 de la solución desarrollada.
 
-\subsection{Panorama General del Mercado}
+\subsection{Panorama general del mercado}
 
 El mercado de sistemas de gestión curricular presenta una segmentación clara
 entre soluciones genéricas de administración académica y herramientas
@@ -1277,7 +1277,7 @@ existen vacíos significativos en soluciones específicas para la
 planificación curricular basada en Líneas de Productos Educativos 
 \citep{sanchez2020metodologia}.
     
-\subsection{Análisis de Soluciones Existentes}
+\subsection{Análisis de soluciones existentes}
 
 El análisis de soluciones existentes se organiza en dos grupos claramente 
 diferenciados, cada uno representativo de perspectivas y alcances funcionales 
@@ -1292,7 +1292,7 @@ brechas tecnológicas y conceptuales que fundamentan la necesidad de una soluci�
 especializada que integre fortalezas de ambos mundos mientras atiende las demandas 
 propias de la planificación curricular.
         
-\subsubsection{Sistemas de Gestión Curricular Tradicionales}
+\subsubsection{Sistemas de gestión curricular tradicionales}
 
 \begin{itemize}
     \item SIGA y Banner: Los sistemas como Banner son fundamentalmente
@@ -1331,7 +1331,7 @@ propias de la planificación curricular.
     curricular en sí.
 \end{itemize}
 
-\subsubsection{Herramientas de Modelado de Variabilidad}
+\subsubsection{Herramientas de modelado de variabilidad}
 
 \begin{itemize}
     \item Pure::variants: es una solución comercial robusta para \ac{SPLE}. 
@@ -1398,7 +1398,7 @@ propias de la planificación curricular.
     
 \end{itemize}
 
-\subsection{Oportunidades de Mercado Identificadas}
+\subsection{Oportunidades de mercado identificadas}
 
 Del análisis realizado se evidencia que el mercado asociado a la temática 
 padece de un vacío crítico en herramientas capaces de integrar la gestión de variabilidad,
@@ -1472,7 +1472,7 @@ automática de configuraciones. Esta caracterización permite comprender la base
 tecnológica que sustenta la solución y cómo cada herramienta contribuye al logro de 
 sus objetivos funcionales y no funcionales.
 
-\subsection{Lenguaje de Programación}
+\subsection{Lenguaje de programación}
 
 Los lenguajes de programación son herramientas formales que permiten 
 expresar instrucciones de manera estructurada para que un sistema 
@@ -1643,7 +1643,7 @@ Motor lo convierten en una opción versátil y preparada para escalar junto con 
 \citep{lubanovic2019python}. Por estas razones, FastAPI constituye la base tecnológica idónea para implementar 
 la propuesta de solución, alineado con los objetivos funcionales y no funcionales del sistema.
 
-\subsection{Base de Datos y Gestor de Base de Datos}
+\subsection{Base de datos y gestor de base de datos}
 
 Las bases de datos son sistemas diseñados para almacenar, organizar y 
 proteger información de manera eficiente y estructurada, garantizando su 
@@ -1691,7 +1691,7 @@ como herramienta administrativa proporciona una base confiable y alineada
 con las necesidades de integridad, consistencia y trazabilidad del sistema 
 a desarrollar.
         
-\subsection{Contenerización y Orquestación}
+\subsection{Contenerización y orquestación. Docker y Kubernetes}
 
 La contenerización es una tecnología que permite empaquetar aplicaciones junto con 
 todas sus dependencias en unidades aisladas, reproducibles y portables llamadas 
@@ -1728,19 +1728,70 @@ servicios del sistema \citep{docker2024docs}. Esto incluye la configuración de 
 de persistencia en volúmenes, variables de entorno, reglas de dependencias entre 
 contenedores, puntos de exposición de puertos, así como políticas de reinicio. 
 En el contexto del sistema de modelado curricular, Docker Compose facilita levantar 
-el entorno completo de desarrollo o producción con un solo comando, garantizando 
-escalabilidad y reduciendo tiempos de despliegue o recuperación ante fallos 
-\citep{boettiger2015introduction}.
+el entorno completo de desarrollo o pruebas con un solo comando, garantizando 
+reproducibilidad y reduciendo tiempos de despliegue \citep{boettiger2015introduction}.
+
+Cabe precisar que Docker Compose se empleará exclusivamente durante la fase de 
+desarrollo y para simular un entorno de producción local, permitiendo validar el 
+comportamiento integral del sistema antes de su despliegue final. Sin embargo, para 
+el despliegue en un entorno productivo real —donde se requiere alta disponibilidad, 
+escalabilidad automática y tolerancia a fallos— se utilizará Kubernetes, la plataforma 
+de orquestación de contenedores más extendida en la industria \citep{kubernetes2025docs}.
+
+Kubernetes es un sistema de código abierto para la automatización del despliegue, 
+escalado y gestión de aplicaciones contenedorizadas. Originalmente desarrollado por 
+Google, actualmente es mantenido por la Cloud Native Computing Foundation 
+(CNCF) \citep{kubernetes2025overview}. A diferencia de Docker Compose, que opera 
+sobre un único nodo, Kubernetes gestiona clústeres completos de máquinas, 
+distribuyendo los contenedores entre múltiples servidores y garantizando que la 
+aplicación se mantenga operativa incluso si alguno de ellos falla.
+
+La adopción de Kubernetes para el despliegue productivo del servicio backend 
+aporta múltiples ventajas:
+
+\begin{itemize}
+    \item Escalado automático: Kubernetes permite aumentar o reducir el número 
+    de réplicas de los contenedores en función de la demanda (uso de CPU, memoria o 
+    métricas personalizadas). Esto resulta especialmente valioso para el sistema de 
+    modelado curricular, donde la carga de trabajo puede incrementarse 
+    significativamente durante períodos de planificación académica intensiva.
+    
+    \item Alta disponibilidad y tolerancia a fallos: El orquestador monitorea 
+    continuamente el estado de los contenedores y reinicia automáticamente aquellos 
+    que fallen. Asimismo, puede redistribuir las réplicas entre nodos sanos en caso 
+    de caída de un servidor, minimizando el tiempo de inactividad del servicio.
+    
+    \item Balanceo de carga interno: Kubernetes expone los contenedores como 
+    servicios con una dirección \ac{IP} virtual y distribuye el tráfico entrante entre 
+    todas las réplicas disponibles, evitando la sobrecarga de una instancia específica.
+    
+    \item Actualizaciones continuas sin tiempo de inactividad: Mediante 
+    estrategias como \textit{rolling updates}, Kubernetes puede actualizar la versión 
+    de los contenedores sin interrumpir el servicio, reemplazando gradualmente las 
+    réplicas antiguas por las nuevas mientras el sistema sigue respondiendo peticiones.
+    
+    \item Gestión declarativa de la configuración: Al igual que Docker Compose, 
+    Kubernetes utiliza archivos de configuración declarativos (YAML) que describen el 
+    estado deseado del sistema. El orquestador se encarga de reconciliar el estado 
+    actual con el deseado, simplificando la administración y auditoría de los 
+    despliegues.
+    
+    \item \textbf{Portabilidad entre infraestructuras}: Kubernetes está soportado por los 
+    principales proveedores de nube (AWS, Azure, Google Cloud) y también puede desplegarse sobre 
+    \ac{VPS} convencionales mediante distribuciones ligeras como K3s o MicroK8s. 
+    Esto permite ejecutar el sistema tanto en nubes públicas como en infraestructura propia o alquilada sin 
+    modificar la configuración de orquestación.
+\end{itemize}
 
 Un beneficio adicional de esta estrategia es su contribución a las prácticas de 
 \ac{CI/CD}. Gracias a la naturaleza 
 declarativa y reproducible de los contenedores, el sistema puede desplegarse 
-automáticamente mediante \textins{pipelines} controlados sin intervención manual, asegurando 
+automáticamente mediante \textit{pipelines} controlados sin intervención manual, asegurando 
 que las versiones del modelo curricular, las configuraciones generadas y los 
 \textit{snapshots} almacenados sean accesibles en entornos iguales o equivalentes entre sí 
 \citep{docker2024docs}.
 
-\subsection{Almacenamiento en Memoria, \textit{Caching} y Mensajería}
+\subsection{Almacenamiento en memoria, caché y mensajería}
 
 El almacenamiento en memoria es una técnica que permite guardar temporalmente datos en la
 \ac{RAM} para acelerar el acceso a información que se consulta de forma recurrente, 
@@ -1796,7 +1847,7 @@ asíncrona del \textit{backend} \citep{ramirez2019fastapi}. Gracias a biblioteca
 lectura/escritura se realizan sin bloquear el \texttt{event loop}, lo que maximiza la 
 concurrencia cuando múltiples usuarios exploran configuraciones simultáneamente.
             
-\subsection{Almacenamiento de Archivos y Objetos}
+\subsection{Almacenamiento de archivos y objetos}
         
 El almacenamiento persistente de archivos, versiones históricas de modelos y 
 resultados derivados de las evaluaciones requiere una tecnología que ofrezca 
@@ -1842,7 +1893,7 @@ requerir configuración adicional. Esto habilita una solución completa de
 almacenamiento distribuido que puede operar tanto en entornos locales (\textit{on-premise}) 
 como en infraestructuras institucionales o nube privada.
 
-\subsection{Procesamiento Asíncrono}
+\subsection{Procesamiento asíncrono}
 
 El procesamiento asíncrono permite ejecutar tareas en segundo plano sin bloquear 
 la operación principal del sistema, lo cual es esencial cuando existen tareas costosas, 
@@ -1992,7 +2043,7 @@ para la naturaleza intensiva de la manipulación y validación de \ac{FM}s,
 generando configuraciones, \textit{snapshots} y cálculos alternativos sin afectar la 
 disponibilidad del sistema.
     
-\subsection{Algoritmos, Motor de Reglas y Validación}
+\subsection{Algoritmos, motor de reglas y validación}
 
 Para garantizar la consistencia, completitud y validez de las configuraciones
 generadas a partir del \ac{FM}, la plataforma integrará
@@ -2257,7 +2308,7 @@ Esta combinación de herramientas y técnicas proporciona una cobertura integral
 sometido el sistema, asegurando que los defectos sean detectados en la fase más temprana posible y que el producto 
 final cumpla con los estándares de calidad esperados antes de su despliegue en producción.
         
-\subsection{Entorno Integrado de Desarrollo}
+\subsection{Entorno integrado de desarrollo}
 
 Los \ac{IDE} son las herramientas que 
 todo desarrollador debe tener a mano. Permiten editar y gestionar

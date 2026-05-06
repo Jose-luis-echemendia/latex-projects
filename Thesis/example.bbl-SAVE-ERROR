@@ -1028,6 +1028,32 @@
       \field{title}{Documenting Software Architectures: Views and Beyond}
       \field{year}{2010}
     \endentry
+    \entry{kubernetes2025overview}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0cb2a59444ef04aeca44654441071c35}{%
+           family={{Cloud Native Computing Foundation}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{fullhash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{bibnamehash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{authorbibnamehash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{authornamehash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{authorfullhash}{0cb2a59444ef04aeca44654441071c35}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/}}
+      \field{title}{Kubernetes: Production-Grade Container Orchestration}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
     \entry{cohn2004user}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=d33712bcde2d63bad054a832b61d01e8}{%
@@ -2219,6 +2245,62 @@
       \field{title}{Feature-Oriented Domain Analysis (FODA) Feasibility Study}
       \field{type}{techreport}
       \field{year}{1990}
+    \endentry
+    \entry{kubernetes2025docs}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/}}
+      \field{title}{Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025pods}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/workloads/pods/}}
+      \field{title}{Pods - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
     \endentry
     \entry{larman2004applying}{book}{}
       \name{author}{1}{}{%

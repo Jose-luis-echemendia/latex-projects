@@ -1028,6 +1028,32 @@
       \field{title}{Documenting Software Architectures: Views and Beyond}
       \field{year}{2010}
     \endentry
+    \entry{kubernetes2025overview}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0cb2a59444ef04aeca44654441071c35}{%
+           family={{Cloud Native Computing Foundation}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{fullhash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{bibnamehash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{authorbibnamehash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{authornamehash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{authorfullhash}{0cb2a59444ef04aeca44654441071c35}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/}}
+      \field{title}{Kubernetes: Production-Grade Container Orchestration}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
     \entry{cohn2004user}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=d33712bcde2d63bad054a832b61d01e8}{%
@@ -2219,6 +2245,370 @@
       \field{title}{Feature-Oriented Domain Analysis (FODA) Feasibility Study}
       \field{type}{techreport}
       \field{year}{1990}
+    \endentry
+    \entry{kubernetes2025clusterip}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service}}
+      \field{title}{ClusterIP - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025configmap}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/configuration/configmap/}}
+      \field{title}{ConfigMaps - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025ingress}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{3}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/services-networking/ingress/}}
+      \field{title}{Ingress - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025components}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{4}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/overview/components/}}
+      \field{title}{Kubernetes Components - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025docs}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{5}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/}}
+      \field{title}{Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025loadbalancer}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{6}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer}}
+      \field{title}{LoadBalancer - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025namespaces}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{7}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/}}
+      \field{title}{Namespaces - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025nodes}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{8}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/architecture/nodes/}}
+      \field{title}{Nodes - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025pvc}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{9}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/storage/persistent-volumes/}}
+      \field{title}{Persistent Volume Claims - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025pv}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{10}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{10}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/storage/persistent-volumes/}}
+      \field{title}{Persistent Volumes - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025pods}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{11}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{11}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/workloads/pods/}}
+      \field{title}{Pods - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025secrets}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{12}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{12}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/configuration/secret/}}
+      \field{title}{Secrets - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025services}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{13}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{13}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/services-networking/service/}}
+      \field{title}{Services - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
     \endentry
     \entry{larman2004applying}{book}{}
       \name{author}{1}{}{%
@@ -4025,6 +4415,32 @@
       \verb 10.1145/3579028.3609013
       \endverb
     \endentry
+    \entry{k3s2025docs}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d6ab87b15d5cdc98c3b4d1902551adb6}{%
+           family={{SUSE Rancher}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d6ab87b15d5cdc98c3b4d1902551adb6}
+      \strng{fullhash}{d6ab87b15d5cdc98c3b4d1902551adb6}
+      \strng{bibnamehash}{d6ab87b15d5cdc98c3b4d1902551adb6}
+      \strng{authorbibnamehash}{d6ab87b15d5cdc98c3b4d1902551adb6}
+      \strng{authornamehash}{d6ab87b15d5cdc98c3b4d1902551adb6}
+      \strng{authorfullhash}{d6ab87b15d5cdc98c3b4d1902551adb6}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://docs.k3s.io/}}
+      \field{title}{K3s: Lightweight Kubernetes}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
     \entry{flamapyrest2024}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=58594210cb45b9ed3a2e94672d95cb8c}{%
@@ -4205,6 +4621,32 @@
       \field{year}{2014}
       \field{pages}{70\bibrangedash 85}
       \range{pages}{16}
+    \endentry
+    \entry{traefik2025docs}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f459ef7b581d2900c1c5da5a0cf1fbc1}{%
+           family={{Traefik Labs}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{f459ef7b581d2900c1c5da5a0cf1fbc1}
+      \strng{fullhash}{f459ef7b581d2900c1c5da5a0cf1fbc1}
+      \strng{bibnamehash}{f459ef7b581d2900c1c5da5a0cf1fbc1}
+      \strng{authorbibnamehash}{f459ef7b581d2900c1c5da5a0cf1fbc1}
+      \strng{authornamehash}{f459ef7b581d2900c1c5da5a0cf1fbc1}
+      \strng{authorfullhash}{f459ef7b581d2900c1c5da5a0cf1fbc1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://doc.traefik.io/traefik/providers/kubernetes-ingress/}}
+      \field{title}{Traefik Kubernetes Ingress Controller}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
     \endentry
     \entry{unesco2022}{book}{}
       \name{author}{1}{}{%
@@ -4465,6 +4907,14 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{kubernetes2025apiserver}
+  \missing{kubernetes2025controller-manager}
+  \missing{kubernetes2025etcd}
+  \missing{kubernetes2025kube-proxy}
+  \missing{kubernetes2025kubectl}
+  \missing{kubernetes2025kubelet}
+  \missing{kubernetes2025rolling-updates}
+  \missing{kubernetes2025scheduler}
 \endrefsection
 \endinput
 

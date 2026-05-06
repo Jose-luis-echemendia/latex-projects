@@ -20,7 +20,7 @@ herramientas y recursos están involucrados. La metodología \ac{XP} propone que
 usuario deben ser implementadas en dependencia de la iteración a la que pertenezcan y las
 mismas se descomponen en tareas de ingeniería \citep{maida2015}.
 
-\subsection{Tareas de Ingeniería}
+\subsection{Tareas de ingeniería}
 
 Las \ac{TI} constituyen un artefacto fundamental dentro de la metodología \ac{XP}. 
 Representan la descomposición de las \ac{HU} en actividades técnicas concretas y accionables por parte de los
@@ -49,9 +49,9 @@ encontrar en el anexo \ref{anx:ti}.
 
 El despliegue constituye la fase del ciclo de vida del software en la que el sistema 
 desarrollado se pone a disposición de los usuarios finales en un entorno de ejecución real o 
-de pruebas. Esta etapa implica no solo la instalación y configuración de los componentes 
+de pruebas. Esta etapa implica no solo la instalación y configuración de los componentes de
 software en los servidores correspondientes, sino también la verificación de que todas las 
-dependencias tecnológicas (bases de datos, sistemas de almacenamiento, colas de mensajes, 
+dependencias tecnológicas (\ac{BD}, sistemas de almacenamiento, colas de mensajes, 
 etc.) se encuentren operativas y correctamente parametrizadas \citep{bass2012software}. 
 Un despliegue exitoso garantiza que el sistema se comporte en producción de acuerdo con 
 las expectativas definidas durante las primeras fases del desarrollo de software, y constituye el paso 
@@ -61,12 +61,177 @@ previo indispensable para la ejecución de las pruebas de aceptación por parte 
 
 El diagrama de despliegue es un artefacto de modelado utilizado en el \ac{UML} 
 para representar la arquitectura física de un sistema, mostrando 
-la disposición de los nodos de hardware, los componentes software que se ejecutan en cada 
+la disposición de los nodos de hardware, los componentes de software que se ejecutan en cada 
 uno de ellos y los canales de comunicación que los interconectan \citep{booch2005uml}. Su 
 propósito es visualizar la topología de ejecución del sistema, identificar posibles cuellos 
 de botella en la comunicación entre nodos y planificar la distribución de los componentes 
-en entornos productivos. La figura ilustra el diagrama de despliegue 
+en entornos productivos. La figura \ref{fig:dd} ilustra el diagrama de despliegue 
 correspondiente a la propuesta de solucicón desarrollada.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Images/dd.jpg}
+    \caption{Diagrama de despliegue. Fuente: Elaboración propia.}
+    \label{fig:dd}
+\end{figure}
+
+A continuación, se describen los elementos más relevantes de la arquitectura de despliegue:
+
+\subsubsection{Cliente y desarrollador}
+
+El cliente representa al usuario final como actor que accede al sistema a través de un navegador web 
+o una aplicación cliente. La comunicación entre el cliente y el clúster se realiza exclusivamente 
+mediante el protocolo \ac{HTTPS} a través del puerto 443, garantizando la confidencialidad e 
+integridad de los datos transmitidos.
+
+El actor desarrollador es un usuario avanzado que interactúa directamente con el clúster a través del 
+Nodo de Plano de Control para gestionar las aplicaciones. Su rol es fundamental para la operación del 
+sistema, pero no para el tráfico de usuarios finales. Entre sus principales acciones se tiene:
+
+\begin{itemize}
+    \item No accede directamente a los \gls{pod}s o \gls{service}s de producción (como lo hace el cliente). En su lugar, utiliza herramientas como \gls{kubectl} o la \ac{API} de Kubernetes para interactuar con el \gls{kube-apiserver} (usualmente mediante el puerto 6443 o una interfaz segura).
+    \item Gestiona el ciclo de vida de los recursos: El desarrollador declara el estado deseado de la aplicación mediante manifiestos YAML (definiendo \gls{pod}s, \gls{service}s, \gls{ingress}, \gls{pv}, etc.). El plano de control se encarga de hacer realidad ese estado.
+    \item Monitoriza y depura: A través del plano de control, el desarrollador puede consultar \textit{logs}, describir el estado de los componentes (ej. estado de las réplicas de FastAPI, salud de MinIO) y escalar servicios manual o automáticamente.
+    \item Actualiza imágenes: Es el responsable de iniciar actualizaciones de las imágenes de los contenedores (por ejemplo, una nueva versión del \textit{backend} FastAPI o de Redis) mediante \gls{rolling-updates} o recreando los \gls{pod}s.
+\end{itemize}
+
+\subsubsection{Clúster K3s}
+
+El sistema se despliega sobre un \gls{clúster} \gls{K3s}, una distribución certificada de Kubernetes de código abierto, 
+ligera y certificada, especialmente diseñada para entornos de borde y despliegues con recursos limitados. 
+El \gls{clúster} está compuesto por un \gls{nodo} de plano de control y múltiples \gls{nodo}s trabajadores. El plano de 
+control aloja los componentes de orquestación de Kubernetes, mientras que los \gls{nodo}s trabajadores ejecutan 
+las cargas de trabajo del sistema. Esta arquitectura permite escalar horizontalmente el sistema añadiendo 
+más \gls{nodo}s trabajadores según los requisitos de carga y disponibilidad.
+
+\subsubsection{Nodo de Plano de Control}
+
+El diagrama muestra un \gls{nodo} dedicado exclusivamente a la gestión del clúster. Este \gls{nodo} aloja los 
+componentes de control de Kubernetes, que son el cerebro del 
+orquestador. A diferencia del \gls{nodo} trabajador, este \gls{nodo} no ejecuta cargas de trabajo de la 
+aplicación (como FastAPI o PostgreSQL), sino que se encarga de la administración global del 
+estado del clúster.
+
+Los componentes clave que residen en este \gls{nodo} son:
+
+\begin{itemize}
+    \item \gls{kube-apiserver}: Es la puerta de entrada al clúster. Todas las operaciones de gestión (crear, eliminar, modificar recursos) pasan por él. Tanto el \gls{kubelet} de los \gls{nodo}s trabajadores como el \gls{kubectl} del desarrollador se comunican con él a través del puerto 6443.
+    \item \gls{etcd}: \ac{BD} clave-valor (no visible explícitamente en el diagrama pero implícita en los componentes de control) que almacena el estado completo del clúster. Es la única fuente de verdad.
+    \item \gls{kube-scheduler}: Decide en qué \gls{nodo} trabajador se desplegará un nuevo \gls{pod}, basándose en los recursos disponibles y las restricciones (recursos, afinidad, etc.).
+    \item \gls{kube-controller-manager}: Ejecuta controladores que gestionan el estado del clúster (ej. si un \gls{pod} falla y debe ser reemplazado).
+\end{itemize}
+
+\subsubsection{Nodo trabajador. Componentes del sistema}
+
+Dentro del \gls{nodo} trabajador, los componentes del sistema se organizan en dos \gls{namespace}
+lógicos: \gls{ingress} y producción; además, se tiene los elementos del sistema \gls{kubelet} y \gls{kube-proxy}.
+Estas piezas tienen como responsabilidades:
+
+\begin{itemize}
+    \item \gls{namespace} \gls{ingress}: Aloja el controlador de entrada 
+    \gls{Traefik}, que actúa como punto único de entrada para todo el tráfico externo hacia el clúster. 
+    \gls{Traefik} funciona como un balanceador de carga y enrutador de capa 7, que recibe las peticiones 
+    \ac{HTTPS} del cliente y las dirige al servicio correspondiente dentro del clúster. Adicionalmente, 
+    gestiona los certificados \ac{TLS} para la terminación de las conexiones seguras, simplificando la 
+    configuración de seguridad.
+    
+    \item \gls{namespace} producción: Contiene todos los \gls{service}s y cápsulas (\gls{pod}s) que 
+    implementan la funcionalidad del sistema. Se organiza como una arquitectura de microservicios 
+    donde cada componente se ejecuta en su propia cápsula o en réplicas distribuidas. La comunicación 
+    interna entre estas cápsulas se realiza a través de servicios internos tipo \gls{clusterip}, 
+    que proporcionan direcciones \ac{IP} virtuales estables y equilibran la carga entre las réplicas 
+    disponibles.
+
+    \item \gls{kubelet}: es el agente de Kubernetes que se ejecuta en cada \gls{nodo} trabajador y tiene como tareas: 
+    \begin{itemize}
+        \item Escuchar las instrucciones del Plano de Control.
+        \item Asegurarse de que los \gls{pod}s (contenedores) estén ejecutándose realmente según lo definido.
+        \item Reportar el estado del \gls{nodo}, los \gls{pod}s y el uso de recursos al Plano de Control.
+        \item Gestiona los \gls{pv} (monta los \gls{pv} en los \gls{pod}s).
+    \end{itemize}
+
+    \item \gls{kube-proxy}: encargado de implementar las reglas de red en el \gls{nodo} trabajador.
+    Es responsable de que el tráfico enviado al servicio \texttt{fm-service} (\gls{clusterip})
+    sea correctamente redirigido a uno de los \gls{pod}s de FastAPI. Sin \gls{kube-proxy}, los \gls{service}s
+    \gls{clusterip} no funcionarían.
+    
+\end{itemize}
+
+\subsubsection{Componentes del despliegue}
+
+El diagrama de despliegue evidencia cómo se distribuyen los componentes del sistema en el \gls{clúster} \gls{K3s}. 
+Ninguno de los componentes descritos a continuación se despliega como una única instancia aislada, 
+sino que se integran mediante servicios internos que proporcionan direcciones de red estables y 
+balanceo de carga.
+
+\begin{itemize}
+    \item Servicio FastAPI y réplicas: El \textit{backend} desarrollado con FastAPI se despliega mediante 
+    tres réplicas idénticas (\texttt{fm-pod}), distribuidas entre los \gls{nodo}s trabajadores del clúster. Estas réplicas 
+    se agrupan tras el \gls{service} interno \texttt{fm-service} de tipo \gls{clusterip}, 
+    que expone una dirección \ac{IP} virtual y distribuye el tráfico entrante entre las tres instancias 
+    mediante balanceo (\textit{round-robin}). Esta disposición garantiza alta disponibilidad 
+    (si una réplica falla, el servicio sigue operativo) y escalabilidad horizontal 
+    (el número de réplicas puede ajustarse dinámicamente según la demanda).
+    
+    \item Trabajadores Celery: Dos réplicas de trabajadores Celery operan de forma independiente 
+    al servicio FastAPI, procesando las tareas asíncronas de larga duración. Se comunican con el 
+    servicio \texttt{redis-service} (tipo \gls{clusterip}), que les proporciona un punto de 
+    acceso estable al \gls{pod} de Redis, actuando como intermediario de mensajes y almacén de resultados.
+    
+    \item \gls{service}s de infraestructura: Tres \gls{service}s internos (\texttt{postgres-service},
+    \texttt{redis-service} y \texttt{minio-service}) exponen respectivamente los \gls{pod}s de PostgreSQL, 
+    Redis y MinIO. Cada uno se despliega como un \gls{pod} individual con su correspondiente 
+    servicio de tipo \gls{clusterip}, lo que permite al \textit{backend} y a los trabajadores 
+    Celery comunicarse con ellos sin conocer sus direcciones \ac{IP} concretas. Los datos de 
+    estos tres componentes se respaldan en \gls{pv}, desacoplados de los
+    contenedores mediante reclamaciones (\gls{pvc}) que garantizan su supervivencia más allá
+    del ciclo de vida de los \gls{pod}s.
+
+    \item \gls{ConfigMap}s: En el diagrama se ven \texttt{app-config} (para FastAPI), \texttt{postgres-config}, etc. 
+    Los \gls{ConfigMap}s se usan para inyectar configuración no confidencial (variables de entorno, 
+    archivos de configuración) en los \gls{pod}s sin tener que reconstruir la imagen Docker. 
+    Esto permite modificar la configuración sin reiniciar los contenedores.
+
+    \item \gls{Secret}s: Se ven \texttt{app-secret}, \texttt{postgres-secret}, \texttt{redis-secret}, \texttt{minio-secret}. Los \gls{Secret}s 
+    son objetos de Kubernetes para almacenar datos sensibles (contraseñas de bases de datos, tokens, 
+    claves de \ac{API}). Se inyectan en los \gls{pod}s de forma segura (no en texto plano en los manifiestos YAML).
+\end{itemize}
+
+Todos los \gls{service}s internos del \gls{clúster} son del tipo \gls{clusterip}, lo 
+que significa que solo son accesibles desde dentro del \gls{clúster}. El único punto de 
+entrada externo es el \gls{service} balanceador \texttt{traefik-lb} 
+(tipo \gls{loadbalancer}), que recibe las peticiones \ac{HTTPS} del cliente y las enruta 
+al \gls{service} FastAPI a través del controlador de entrada, manteniendo el resto de 
+la infraestructura aislada de accesos externos directos.
+
+\subsubsection{Volúmenes persistentes y almacenamiento}
+
+Cada uno de los \gls{service}s de infraestructura (PostgreSQL, Redis y MinIO) requiere almacenamiento
+persistente para preservar los datos más allá del ciclo de vida de los contenedores. Para ello,
+se definen reclamaciones de \gls{pv} (\gls{pvc}) que se vinculan a \gls{pv}
+provisionados a nivel de \gls{clúster}. Estos volúmenes se almacenan en un sistema de archivos
+compartido o en discos de red (según la infraestructura subyacente), garantizando que los
+datos sobrevivan a reinicios, caídas o reubicaciones de los \gls{pod}s entre \gls{nodo}s.
+
+\subsubsection{Flujo de comunicación}
+
+El flujo de comunicación entre los componentes sigue la siguiente secuencia:
+
+\begin{enumerate}
+    \item El cliente envía una petición \ac{HTTPS} a la dirección \ac{IP} pública del \gls{clúster}.
+    \item El \gls{service} balanceador \texttt{traefik-lb} recibe la petición y la dirige al \gls{pod} de \texttt{traefik}.
+    \item \texttt{traefik} inspecciona la ruta de la petición y la enruta al \gls{service} \texttt{fm-service} según las reglas definidas en el \gls{ingress}.
+    \item El \gls{service} \texttt{fm-service} distribuye la petición entre las tres réplicas del \textit{backend} FastAPI mediante balanceo de carga \textit{round-robin}.
+    \item Dependiendo de la operación solicitada, el \gls{pod} de \ac{FM} puede:
+    \begin{itemize}
+        \item Consultar o modificar datos en PostgreSQL a través del \gls{service} \texttt{postgres-service}.
+        \item Leer o escribir en la caché de Redis mediante el \gls{service} \texttt{redis-service}.
+        \item Almacenar o recuperar archivos de MinIO a través del \gls{service} \texttt{minio-service}.
+        \item Publicar una tarea asíncrona en la cola de Redis, que será consumida por los trabajadores Celery.
+    \end{itemize}
+    \item La respuesta sigue el camino inverso hasta llegar al cliente.
+\end{enumerate}
+
 
 \section{Fase de pruebas}
 
@@ -748,7 +913,7 @@ resto se pueden consultar en el anexo \ref{anx:pa}.
     \item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/export?format=uvl} con cabeceras.\\
     \item Validar que la respuesta contenga estada 200.\\
     \item Verificar que el \texttt{Content-Type} es text/plain o application/x-uvl.\\
-    \item Validar que el contenido es \ac{UVL} válido (comienza con features o namespace, tiene sintaxis correcta).\\
+    \item Validar que el contenido es \ac{UVL} válido (comienza con características o \textit{namespace}, tiene sintaxis correcta).\\
     \item Guardar contenido en archivo .uvl y validar.
 \end{enumerate}
 }
@@ -832,18 +997,22 @@ Luego del desarrollo del presente capítulo se arribaron a las siguientes conclu
     a lo largo de siete iteraciones evidenciaron que las mayores complejidades técnicas se concentraron en los servicios de 
     análisis estructural de \ac{FM}, generación de configuraciones y gestión de versiones, lo que orientó los esfuerzos de 
     optimización hacia estas áreas críticas.
-     
+
+    \item La arquitectura de despliegue garantiza que el sistema sea escalable, resiliente a fallos, 
+    seguro (mediante \ac{HTTPS} y gestión centralizada de secretos) y fácil de administrar gracias a 
+    la naturaleza declarativa de Kubernetes.
+  
     \item Las pruebas unitarias y de integración, al ejecutarse de forma iterativa durante todo el desarrollo, permitieron detectar y 
     corregir 24 fallas (16 en pruebas unitarias y 8 en pruebas de integración) antes de que estas alcanzaran las pruebas de aceptación. 
     Esta detección temprana redujo drásticamente la cantidad de errores severos encontrados por el cliente en la fase final, donde solo se 
     reportaron 11 fallas iniciales, en su mayoría relacionadas con aspectos periféricos y no con la lógica central del sistema.
     
     \item Las estrategias de optimización aplicadas (caché distribuida con Redis, procesamiento asíncrono con Celery, optimización de 
-    consultas a la base de datos, compresión de respuestas y escalado horizontal con Kubernetes) lograron una reducción promedio del 61\% 
+    consultas a la \ac{BD}, compresión de respuestas y escalado horizontal con Kubernetes) lograron una reducción promedio del 61\% 
     en los tiempos de respuesta de los ocho controladores críticos evaluados. En el escenario de estrés (1000 usuarios simultáneos), las mejoras 
     más significativas se observaron en los controladores de validación completa (reducción del 74\%, de 11380 ms a 2991 ms) y de análisis 
     estructural (reducción del 72\%, de 10390 ms a 2691 ms), que inicialmente presentaban los mayores cuellos de botella. En consecuencia, 
-    se concluye que el servicio backend satisface los requisitos no funcionales de rendimiento 
+    se concluye que el servicio \textit{backend} satisface los requisitos no funcionales de rendimiento 
     establecidos, garantizando una experiencia de usuario fluida incluso bajo condiciones de alta demanda y 
     en escenarios de trabajo con modelos curriculares de gran complejidad.
     
@@ -853,7 +1022,7 @@ Luego del desarrollo del presente capítulo se arribaron a las siguientes conclu
     eliminación lógica mediante cambio de estado garantiza la protección de la información curricular sensible frente a accesos no autorizados.
     
     \item La culminación de las pruebas de aceptación con un 100\% de casos exitosos en la tercera iteración (0 fallas sobre 63 casos) 
-    confirma que el servicio backend satisface los criterios de aceptación definidos conjuntamente con el cliente. Todas las historias
-    de usuario priorizadas en el plan de entregas fueron validadas satisfactoriamente, demostrando que el sistema resuelve efectivamente 
+    confirma que el servicio \textit{backend} satisface los criterios de aceptación definidos conjuntamente con el cliente. Todas las \ac{HU} 
+    priorizadas en el plan de entregas fueron validadas satisfactoriamente, demostrando que el sistema resuelve efectivamente 
     el problema de gestión de variabilidad curricular para el cual fue concebido.
 \end{itemize}
