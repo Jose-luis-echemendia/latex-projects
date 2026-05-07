@@ -3,5 +3,44 @@
 Tras el desarrollo integral de esta investigación, se arriba a las siguientes conclusiones fundamentales:
 
 \begin{itemize}
-    \item La solución demuestra que es posible captar la variabilidad curricular mediante la técnica de los \ac{FM} de la \ac{SPLE}
+    \item La solución demuestra que es posible captar la variabilidad curricular mediante la 
+    técnica de los \ac{FM} de la \ac{SPLE}. El servicio \textit{backend} implementado permite representar formalmente planes de estudio, 
+    definir relaciones de obligatoriedad, optatividad y prerrequisitos como restricciones formales, y 
+    derivar configuraciones válidas que corresponden a itinerarios formativos personalizados. 
+    En consecuencia, se cumple satisfactoriamente el objetivo general planteado al inicio de la investigación.
+
+    \item El servicio \textit{backend} desarrollado se posiciona estratégicamente en el mercado educativo, 
+    constituyendo una innovación con pertinencia tecnológica y académico-formativa. Al cubrir la 
+    brecha existente entre los sistemas de gestión académica tradicionales 
+    (incapaces de modelar variabilidad) y las potentes herramientas de ingeniería de líneas de 
+    productos (diseñadas para expertos en software), la solución aporta un enfoque accesible 
+    para gestores curriculares no especializados en ingeniería de software, 
+    democratizando el uso de técnicas avanzadas de variabilidad en el dominio educativo.
+    
+    \item La adopción de la metodología ágil \ac{XP} fue acertada al facilitar un desarrollo iterativo y colaborativo, 
+    permitiendo una adaptación continua a los requisitos del cliente y una detección temprana de errores. 
+    La estrecha participación del usuario durante todo el proceso aseguró que el sistema final se alineara 
+    plenamente con las necesidades reales.
+
+    \item La arquitectura en capas adoptada, combinada con los principios de diseño \ac{GRASP} y 
+    los patrones \ac{GoF} proporcionó una base sólida para la implementación del sistema. 
+    Esta organización permitió una clara separación de responsabilidades, facilitó la mantenibilidad 
+    del código y la modularidad del mismo para luego ser sometido a pruebas sin complicaciones.
+    
+    \item El diagrama de despliegue evidencia que el sistema se despliega sobre un clúster K3s, una 
+    distribución ligera de Kubernetes, garantizando alta disponibilidad, escalabilidad automática y tolerancia a fallos. 
+    La disposición de los componentes —tres réplicas del \textit{backend} FastAPI, dos trabajadores Celery y 
+    los servicios de infraestructura (PostgreSQL, Redis, MinIO) organizados en los espacios de 
+    nombres \texttt{ingress} y \texttt{production}— 
+    asegura que el tráfico externo entre exclusivamente a través del controlador Traefik, 
+    manteniendo el resto de la infraestructura aislada de accesos externos directos. Los 
+    volúmenes persistentes y las reclamaciones de volumen persistente garantizan 
+    la supervivencia de los datos más allá del ciclo de vida de los contenedores.
+
+    \item Gracias a los resultados obtenidos en las pruebas de rendimiento, el sistema es capaz de mantenerse
+    operativo en altas condiciones de demanda, soportando hasta 1000 usuarios simultáneos sin caídas
+    del servicio y con tiempos de respuesta inferiores a 3 segundos en el escenario de estrés para las
+    operaciones críticas. Los tiempos de respuesta obtenidos garantizan una experiencia de usuario fluida
+    incluso durante períodos de planificación curricular intensiva.
+
 \end{itemize} 

@@ -18,7 +18,7 @@
 
 \newglossaryentry{plano-control}
 {
-    name={Plano de control},
+    name={plano de control},
     description={Conjunto de componentes que gestionan el estado global del clúster Kubernetes. Incluye el servidor API (kube-apiserver), el almacén clave-valor etcd, el controlador de planificación (kube-scheduler) y los controladores integrados (kube-controller-manager). Es el cerebro del clúster que toma decisiones sobre escalado, reinicio y distribución de pods \citep{kubernetes2025controlplane}}
 }
 
@@ -66,7 +66,7 @@
 
 \newglossaryentry{loadbalancer}
 {
-    name={Balanceador de carga},
+    name={balanceador de carga},
     description={Tipo de servicio Kubernetes que expone un servicio externamente mediante un balanceador de carga proporcionado por el proveedor de nube (AWS, GCP, Azure) o configurado manualmente en entornos on-premise. Asigna una dirección IP pública (o accesible desde fuera del clúster) y distribuye el tráfico entrante entre los pods que respaldan el servicio \citep{kubernetes2025loadbalancer}}
 }
 
@@ -132,6 +132,18 @@
 
 \newglossaryentry{rolling-updates}
 {
-    name={Actualizaciones de rodillo},
+    name={actualizaciones de rodillo},
     description={Estrategia de actualización que reemplaza gradualmente instancias antiguas de una aplicación por instancias nuevas sin causar tiempo de inactividad. Kubernetes actualiza progresivamente los pods, generalmente reemplazando uno a uno y verificando la salud antes de continuar. Permite reversiones rápidas si algo sale mal y asegura disponibilidad continua del servicio \citep{kubernetes2025rolling-updates}}
+}
+
+\newglossaryentry{yaml}
+{
+    name={YAML},
+    description={Lenguaje de serialización de datos legible por humanos, cuyo acrónimo recursivo significa \textit{YAML Ain't Markup Language} (YAML no es un lenguaje de marcado). Se utiliza ampliamente en archivos de configuración debido a su sintaxis limpia y expresiva, que emplea indentación para representar estructuras jerárquicas (diccionarios, listas y tipos escalares). En el ecosistema Kubernetes, todos los recursos del clúster (pods, servicios, configmaps, secretos, volúmenes persistentes, entre otros) se definen declarativamente mediante archivos YAML, los cuales describen el estado deseado del sistema. La naturaleza declarativa y legible de YAML facilita la administración, el control de versiones y la automatización de despliegues mediante prácticas de \ac{IaC} \citep{yaml2025spec, kubernetes2025yaml}}
+}
+
+\newglossaryentry{job}
+{
+    name={trabajo},
+    description={Recurso de Kubernetes que crea uno o más pods y se asegura de que un número específico de ellos se complete exitosamente. A diferencia de otros controladores como \texttt{Deployment} o \texttt{ReplicaSet}, que mantienen pods en ejecución continua, los Jobs están diseñados para tareas que tienen un inicio y un fin definidos (procesamiento por lotes, migraciones de base de datos, exportaciones programadas, etc.). Un Job crea los pods necesarios y monitorea su finalización; si un pod falla, el Job lo recrea automáticamente hasta alcanzar el número de terminaciones exitosas especificado en su configuración. \citep{kubernetes2025jobs}}
 }

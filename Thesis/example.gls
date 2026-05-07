@@ -5,14 +5,14 @@
 		\setentrycounter[]{page}\glsnumberformat{93}}}\glsgroupskip
 \glsgroupheading{B}\relax \glsresetentrylist %
 \glossentry{loadbalancer}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{94}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{95}}}\glsgroupskip
 \glsgroupheading{C}\relax \glsresetentrylist %
 \glossentry{clusterip}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{94}}}%
+		\setentrycounter[]{page}\glsnumberformat{94\delimN 95}}}%
 \glossentry{clúster}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{93\delimR 95}}}%
 \glossentry{ConfigMap}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{94}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{95}}}\glsgroupskip
 \glsgroupheading{E}\relax \glsresetentrylist %
 \glossentry{namespace}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{93}}}%
@@ -41,6 +41,8 @@
 \glossentry{nodo}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{93\delimR 95}}}\glsgroupskip
 \glsgroupheading{P}\relax \glsresetentrylist %
+\glossentry{plano-control}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{92\delimN 93}}}%
 \glossentry{pod}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{92\delimR 95}}}\glsgroupskip
 \glsgroupheading{R}\relax \glsresetentrylist %
@@ -48,13 +50,20 @@
 		\setentrycounter[]{page}\glsnumberformat{94\delimN 95}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossentry{Secret}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{94}}}%
+		\setentrycounter[]{page}\glsnumberformat{95}}}%
 \glossentry{service}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{92\delimR 95}}}\glsgroupskip
 \glsgroupheading{T}\relax \glsresetentrylist %
+\glossentry{job}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{94}}}%
 \glossentry{Traefik}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{93}}}\glsgroupskip
 \glsgroupheading{V}\relax \glsresetentrylist %
 \glossentry{pv}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{94\delimN 95}}}%
+		\setentrycounter[]{page}\glsnumberformat{92}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{94\delimN 95}}}\glsgroupskip
+\glsgroupheading{Y}\relax \glsresetentrylist %
+\glossentry{yaml}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{92}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{95}}}%
 \end{theglossary}\glossarypostamble

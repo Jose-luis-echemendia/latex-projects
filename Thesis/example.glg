@@ -1,7 +1,7 @@
 This is makeindex, version 2.17 [TeX Live 2023] (kpathsea + Thai support).
 Scanning style file ./example.ist...........................done (27 attributes redefined, 0 ignored).
-Scanning input file example.glo....done (86 entries accepted, 0 rejected).
-Sorting entries....done (582 comparisons).
-Generating output file example.gls....done (60 lines written, 0 warnings).
+Scanning input file example.glo....done (114 entries accepted, 0 rejected).
+Sorting entries....done (802 comparisons).
+Generating output file example.gls....done (69 lines written, 0 warnings).
 Output written in example.gls.
 Transcript written in example.glg.

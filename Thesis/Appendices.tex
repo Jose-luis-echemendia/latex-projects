@@ -1825,7 +1825,7 @@
 		Entrada: & 
 		\begin{itemize}
 			\item UVL válido.
-			\item Mocks de sesión y \texttt{FeatureModelVersionManager.create\_new\_version()}.
+			\item Mocks de sesión y \texttt{FeatureModelVersionManager. create\_new\_version()}.
 		\end{itemize}
 		\\
 		\hline
@@ -2282,7 +2282,7 @@
 		\hline
 		\endlastfoot
 		
-		Descripción: & Verificar que \texttt{FeatureModelVersionRepository.get\_latest\_version\_number()} retorna \texttt{0} cuando no hay versiones y el máximo correcto cuando sí existen. \\
+		Descripción: & Verificar que \texttt{FeatureModelVersionRepository. get\_latest\_version\_number()} retorna \texttt{0} cuando no hay versiones y el máximo correcto cuando sí existen. \\
 		\hline
 		Entrada: & 
 		\begin{itemize}
@@ -2873,7 +2873,7 @@
 			\hline
 			Pasos de ejecución: & 
 			\begin{enumerate}
-				\item Enviar \texttt{POST /api/v1/feature-models/\{model\_id\}/versions} con \texttt{source\_version\_id}.
+				\item Enviar \texttt{POST /api/v1/feature-models/\{model\_id\}/ versions} con \texttt{source\_version\_id}.
 				\item Validar respuesta exitosa.
 				\item Verificar que \texttt{version\_number} se incrementa.
 				\item Confirmar que la versión origen permanece inmutable.
@@ -2913,7 +2913,7 @@
 			\hline
 			Nombre: & Publicar versión válida \\
 			\hline
-			Descripción: & Verificar que \texttt{PATCH /feature-models/\{model\_id\}/versions/\{version\_id\}/publish} cambia estado y persiste publicación. \\
+			Descripción: & Verificar que \texttt{PATCH /feature-models/\{model\_id\}/versions/ \{version\_id\}/publish} cambia estado y persiste publicación. \\
 			\hline
 			Condiciones de ejecución: & 
 			\begin{itemize}
@@ -2924,7 +2924,7 @@
 			\hline
 			Pasos de ejecución: & 
 			\begin{enumerate}
-				\item Ejecutar \texttt{PATCH /api/v1/feature-models/\{model\_id\}/versions/\{version\_id\}/publish}.
+				\item Ejecutar \texttt{PATCH /api/v1/feature-models/\{model\_id\}/ versions/\{version\_id\}/publish}.
 				\item Validar respuesta.
 				\item Consultar versión por \texttt{GET}.
 				\item Verificar estado final y timestamp de publicación.
@@ -3139,7 +3139,7 @@
 			\begin{enumerate}
 				\item Enviar \texttt{POST /api/v1/feature-relations/} con \texttt{type=EXCLUDES}.
 				\item Validar HTTP 201.
-				\item Consultar \texttt{GET /api/v1/feature-relations/\{relation\_id\}}.
+				\item Consultar \texttt{GET /api/v1/feature-relations/ \{relation\_id\}}.
 				\item Verificar que la relación queda activa y vinculada a la versión.
 			\end{enumerate}
 			\\
@@ -3287,7 +3287,7 @@
 			\hline
 			Nombre: & Guardar UVL y disparar análisis asíncrono \\
 			\hline
-			Descripción: & Verificar que \texttt{PUT /feature-models/\{model\_id\}/versions/\{version\_id\}/uvl} persiste UVL y retorna \texttt{analysis\_task\_id}. \\
+			Descripción: & Verificar que \texttt{PUT /feature-models/\{model\_id\}/versions/ \{version\_id\}/uvl} persiste UVL y retorna \texttt{analysis\_task\_id}. \\
 			\hline
 			Condiciones de ejecución: & 
 			\begin{itemize}
@@ -3299,10 +3299,10 @@
 			\hline
 			Pasos de ejecución: & 
 			\begin{enumerate}
-				\item Enviar \texttt{PUT /api/v1/feature-models/\{model\_id\}/versions/\{version\_id\}/uvl} con UVL válido.
+				\item Enviar \texttt{PUT /api/v1/feature-models/\{model\_id\}/ versions/\{version\_id\}/uvl} con UVL válido.
 				\item Validar HTTP 200.
 				\item Verificar \texttt{source="stored"} y \texttt{analysis\_task\_id} en respuesta.
-				\item Consultar \texttt{GET /api/v1/feature-models/\{model\_id\}/versions/\{version\_id\}/uvl}.
+				\item Consultar \texttt{GET /api/v1/feature-models/\{model\_id\}/ versions/\{version\_id\}/uvl}.
 				\item Confirmar contenido persistido.
 			\end{enumerate}
 			\\
@@ -3340,7 +3340,7 @@
 			\hline
 			Nombre: & Aplicar UVL a estructura creando nueva versión \\
 			\hline
-			Descripción: & Verificar que \texttt{POST /feature-models/\{model\_id\}/versions/\{version\_id\}/uvl/apply-to-structure} crea versión estructurada desde UVL. \\
+			Descripción: & Verificar que \texttt{POST /feature-models/\{model\_id\}/versions/ \{version\_id\}/uvl/apply-to-structure} crea versión estructurada desde UVL. \\
 			\hline
 			Condiciones de ejecución: & 
 			\begin{itemize}
@@ -3351,7 +3351,7 @@
 			\hline
 			Pasos de ejecución: & 
 			\begin{enumerate}
-				\item Enviar \texttt{POST /api/v1/feature-models/\{model\_id\}/versions/\{version\_id\}/uvl/apply-to-structure}.
+				\item Enviar \texttt{POST /api/v1/feature-models/\{model\_id\}/ versions/\{version\_id\}/uvl/apply-to-structure}.
 				\item Validar HTTP 201.
 				\item Verificar nuevo \texttt{version\_id} retornado.
 				\item Consultar estructura de la nueva versión (features/grupos/relaciones/constraints).
@@ -3396,7 +3396,7 @@
 			\hline
 			Nombre: & Validación integral del modelo \\
 			\hline
-			Descripción: & Verificar que \texttt{POST /feature-models/\{model\_id\}/versions/\{version\_id\}/validation/full} devuelve resultado compuesto (lógica + estructura + análisis). \\
+			Descripción: & Verificar que \texttt{POST /feature-models/\{model\_id\}/versions/ \{version\_id\}/validation/full} devuelve resultado compuesto (lógica + estructura + análisis). \\
 			\hline
 			Condiciones de ejecución: & 
 			\begin{itemize}
@@ -3407,7 +3407,7 @@
 			\hline
 			Pasos de ejecución: & 
 			\begin{enumerate}
-				\item Enviar \texttt{POST /api/v1/feature-models/\{model\_id\}/versions/\{version\_id\}/validation/full}.
+				\item Enviar \texttt{POST /api/v1/feature-models/\{model\_id\}/ versions/\{version\_id\}/validation/full}.
 				\item Validar HTTP 200.
 				\item Confirmar presencia de secciones \texttt{logical}, \texttt{structure}, \texttt{analysis}.
 				\item Revisar coherencia de \texttt{is\_valid} y listas de errores/warnings.
@@ -3447,7 +3447,7 @@
 			\hline
 			Nombre: & Resumen de análisis avanzado \\
 			\hline
-			Descripción: & Verificar \texttt{POST /feature-models/\{model\_id\}/versions/\{version\_id\}/analysis/summary} y su payload analítico. \\
+			Descripción: & Verificar \texttt{POST /feature-models/\{model\_id\}/versions/ \{version\_id\}/analysis/summary} y su payload analítico. \\
 			\hline
 			Condiciones de ejecución: & 
 			\begin{itemize}
@@ -3458,7 +3458,7 @@
 			\hline
 			Pasos de ejecución: & 
 			\begin{enumerate}
-				\item Enviar \texttt{POST /api/v1/feature-models/\{model\_id\}/versions/\{version\_id\}/analysis/summary} con \texttt{max\_solutions} y \texttt{analysis\_types} opcionales.
+				\item Enviar \texttt{POST /api/v1/feature-models/\{model\_id\}/ versions/\{version\_id\}/analysis/summary} con \texttt{max\_solutions} y \texttt{analysis\_types} opcionales.
 				\item Validar HTTP 200.
 				\item Verificar campos: \texttt{satisfiable}, \texttt{dead\_features}, \texttt{core\_features}, \texttt{complexity\_metrics}, \texttt{estimated\_configurations}.
 			\end{enumerate}
@@ -3502,7 +3502,7 @@
 			\hline
 			Nombre: & Exportar última versión publicada en Mermaid \\
 			\hline
-			Descripción: & Verificar \texttt{GET /feature-models/\{model\_id\}/versions/latest/export/mermaid} incluyendo persistencia de artefacto de exportación. \\
+			Descripción: & Verificar \texttt{GET /feature-models/\{model\_id\}/versions/latest/ export/mermaid} incluyendo persistencia de artefacto de exportación. \\
 			\hline
 			Condiciones de ejecución: & 
 			\begin{itemize}
@@ -3513,10 +3513,10 @@
 			\hline
 			Pasos de ejecución: & 
 			\begin{enumerate}
-				\item Ejecutar \texttt{GET /api/v1/feature-models/\{model\_id\}/versions/latest/export/mermaid}.
+				\item Ejecutar \texttt{GET /api/v1/feature-models/\{model\_id\}/ versions/latest/export/mermaid}.
 				\item Validar HTTP 200 y \texttt{Content-Type} de texto.
 				\item Verificar cabecera \texttt{Content-Disposition}.
-				\item Consultar \texttt{GET /api/v1/feature-models/\{model\_id\}/exports} para confirmar cache/indexado de export.
+				\item Consultar \texttt{GET /api/v1/feature-models/\{model\_id\}/ exports} para confirmar cache/indexado de export.
 			\end{enumerate}
 			\\
 			\hline
@@ -4314,7 +4314,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{GET} a \texttt{/api/v1/models?domain\_id=<id>\&skip=0\&limit=10\&sort=-created\_at} con cabeceras de autenticación.
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models?domain\_id=<id>\&skip=0\&limit=10\& sort=-created\_at} con cabeceras de autenticación.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
 			\item Verificar que se retorna arreglo de modelos.
 			\item Validar paginación: total, skip, limit.
@@ -4448,7 +4448,7 @@
 			\item Validar que la respuesta contenga estado 200.
 			\item Verificar que se retornan solo versiones ARCHIVED.
 			\item Cada versión incluye: \texttt{id}, \texttt{version\_number}, \texttt{status}, \texttt{archived\_at}, \texttt{created\_at}.
-			\item Seleccionar una versión y enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}}.
+			\item Seleccionar una versión y enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/ \{version\_id\}}.
 		\end{enumerate}
 		}
 		\testcaseexpresult{
@@ -4672,7 +4672,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de la característica a mover y \texttt{ID} del nuevo padre.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}} con carga útil: \texttt{\{"parent\_id": "<new\_parent\_id>"\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}} con carga útil: \texttt{\{"parent\_id": "<new\_parent\_id>"\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar característica para confirmar nuevo padre.
 			\item Verificar que subárbol se movió correctamente.
@@ -4703,7 +4703,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de la característica.
-			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}?include\_subtree=true} con cabeceras.
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}?include\_subtree=true} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
 			\item Verificar que incluye la característica y su arreglo de \texttt{children}.
 			\item Verificar que cada \texttt{child} incluye sus propios \texttt{children} (recursivo).
@@ -4736,7 +4736,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de la característica a desactivar.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}} con carga útil: \texttt{\{"is\_active": false\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}} con carga útil: \texttt{\{"is\_active": false\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar característica para confirmar \texttt{is\_active=false}.
 			\item Verificar que no afecta otras versiones.
@@ -4768,7 +4768,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de la característica.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}} con carga útil: \texttt{\{"name": "Nuevo nombre", "type": "ABSTRACT"\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}} con carga útil: \texttt{\{"name": "Nuevo nombre", "type": "ABSTRACT"\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar característica para confirmar cambios.
 			\item Verificar que metadata se actualizó.
@@ -4868,7 +4868,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de característica origen y destino.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships} con carga útil: \texttt{\{"relationship\_type": "REQUIRES", "source\_id": "<feature\_id\_1>", "target\_id": "<feature\_id\_2>"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ relationships} con carga útil: \texttt{\{"relationship\_type": "REQUIRES", "source\_id": "<feature\_id\_1>", "target\_id": "<feature\_id\_2>"\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que se retorna relación con \texttt{ID} correctos.
 			\item Guardar \texttt{ID} de relación.
@@ -4900,7 +4900,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de características a relacionar.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships} con carga útil: \texttt{\{"relationship\_type": "EXCLUDES", "source\_id": "<id\_1>", "target\_id": "<id\_2>"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ relationships} con carga útil: \texttt{\{"relationship\_type": "EXCLUDES", "source\_id": "<id\_1>", "target\_id": "<id\_2>"\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que relación se crea.
 			\item Intentar crear configuración con ambas características (debe fallar).
@@ -4932,7 +4932,7 @@
 			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
 			\item Verificar arreglo de grupos con \texttt{id}, \texttt{group\_type}, \texttt{parent\_id}, \texttt{min\_cardinality}, \texttt{max\_cardinality}.
-			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/relationships}.
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ relationships}.
 			\item Verificar arreglo de relaciones.
 		\end{enumerate}
 		}
@@ -4964,7 +4964,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de versión.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints} con carga útil: \texttt{\{"expression": "FeatureA => FeatureB", "description": "Si A entonces B"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ constraints} con carga útil: \texttt{\{"expression": "FeatureA => FeatureB", "description": "Si A entonces B"\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que se analiza y valida la expresión.
 			\item Guardar \texttt{ID} de restricción.
@@ -4996,7 +4996,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de versión.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints} con carga útil: \texttt{\{"expression": "(FeatureA | FeatureB) \& \textasciitilde FeatureC => FeatureD", "description": "Restricción compleja"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ constraints} con carga útil: \texttt{\{"expression": "(FeatureA | FeatureB) \& \textasciitilde FeatureC => FeatureD", "description": "Restricción compleja"\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que se valida correctamente.
 			\item Intentar añadir a validación del modelo.
@@ -5027,7 +5027,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de restricción.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints/\{constraint\_id\}} con carga útil: \texttt{\{"expression": "FeatureA \& FeatureB => FeatureC", "description": "Expresión actualizada"\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ constraints/\{constraint\_id\}} con carga útil: \texttt{\{"expression": "FeatureA \& FeatureB => FeatureC", "description": "Expresión actualizada"\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar restricción para confirmar cambios.
 			\item Verificar que versionado registra el cambio.
@@ -5057,7 +5057,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/constraints} con cabeceras.
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ constraints} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
 			\item Verificar arreglo de restricciones.
 			\item Cada restricción incluye: \texttt{id}, \texttt{expression}, \texttt{description}, \texttt{is\_active}, \texttt{created\_at}.
@@ -5159,7 +5159,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/satisfiability} con cabeceras.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ validate/satisfiability} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
 			\item Verificar que respuesta incluye: \texttt{is\_satisfiable}, \texttt{error\_message} (si aplica).
 			\item Si es satisfiable, debe existir al menos una configuración válida.
@@ -5192,7 +5192,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Crear escenario con ciclo: \texttt{A->B->C->A}.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/structure} con cabeceras.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ validate/structure} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
 			\item Verificar que se reporta error: \texttt{"Cycle detected: A->B->C->A"}.
 			\item Listar características participantes.
@@ -5222,7 +5222,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Crear estructura con característica imposible de seleccionar.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/analyze/dead-features} con cabeceras.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ analyze/dead-features} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
 			\item Verificar arreglo de características muertas.
 			\item Cada característica incluye razón por la que es muerta.
@@ -5253,7 +5253,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Buscar características sin ruta a raíz.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/structure} con cabeceras.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ validate/structure} con cabeceras.
 			\item Validar que la respuesta reporta nodos huérfanos.
 			\item Verificar que lista los IDs de nodos huérfanos.
 			\item Mensaje explicativo.
@@ -5282,7 +5282,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/validate/full} con cabeceras.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ validate/full} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
 			\item Respuesta incluye: \texttt{satisfiable}, \texttt{cycles}, \texttt{dead\_features}, \texttt{orphan\_nodes}, \texttt{warnings}.
 			\item Cada sección tiene lista de errores/advertencias.
@@ -5413,7 +5413,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de versión específica.
-			\item Enviar \texttt{GET} a \texttt{/api/v1/configurations?version\_id=<version\_id>\&skip=0\&limit=10} con cabeceras.
+			\item Enviar \texttt{GET} a \texttt{/api/v1/configurations?version\_id=<version\_id>\&skip=0\& limit=10} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
 			\item Verificar que todas las configuraciones retornadas tienen \texttt{version\_id} correcto.
 			\item Validar paginación.
@@ -5640,7 +5640,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de característica y etiqueta.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/tags/\{tag\_id\}} con cabeceras.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}/tags/\{tag\_id\}} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar característica para confirmar asociación.
 			\item Verificar que la etiqueta aparece en lista de etiquetas de la característica.
@@ -5671,7 +5671,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de característica y etiqueta asociada.
-			\item Enviar \texttt{DELETE} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/tags/\{tag\_id\}} con cabeceras.
+			\item Enviar \texttt{DELETE} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}/tags/\{tag\_id\}} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar característica para confirmar que la etiqueta no está asociada.
 			\item Verificar que se removió de \ac{BD}.
@@ -5736,7 +5736,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de característica y recurso.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/resources/\{resource\_id\}} con cabeceras.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}/resources/\{resource\_id\}} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar característica para verificar asociación.
 			\item Recurso aparece en lista de recursos de la característica.
@@ -5797,7 +5797,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features/\{feature\_id\}/resources?language=es\&type=VIDEO} con cabeceras.
+			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}/resources?language=es\&type=VIDEO} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
 			\item Verificar que solo recursos con idioma \texttt{es} y tipo \texttt{VIDEO} se retornan.
 			\item Cada recurso incluye metadatos completos.

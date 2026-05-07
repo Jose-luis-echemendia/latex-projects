@@ -90,8 +90,8 @@ sistema, pero no para el tráfico de usuarios finales. Entre sus principales acc
 
 \begin{itemize}
     \item No accede directamente a los \gls{pod}s o \gls{service}s de producción (como lo hace el cliente). En su lugar, utiliza herramientas como \gls{kubectl} o la \ac{API} de Kubernetes para interactuar con el \gls{kube-apiserver} (usualmente mediante el puerto 6443 o una interfaz segura).
-    \item Gestiona el ciclo de vida de los recursos: El desarrollador declara el estado deseado de la aplicación mediante manifiestos YAML (definiendo \gls{pod}s, \gls{service}s, \gls{ingress}, \gls{pv}, etc.). El plano de control se encarga de hacer realidad ese estado.
-    \item Monitoriza y depura: A través del plano de control, el desarrollador puede consultar \textit{logs}, describir el estado de los componentes (ej. estado de las réplicas de FastAPI, salud de MinIO) y escalar servicios manual o automáticamente.
+    \item Gestiona el ciclo de vida de los recursos: El desarrollador declara el estado deseado de la aplicación mediante manifiestos \gls{yaml} (definiendo \gls{pod}s, \gls{service}s, \gls{ingress}, \gls{pv}, etc.). El \gls{plano-control} se encarga de hacer realidad ese estado.
+    \item Monitoriza y depura: A través del \gls{plano-control}, el desarrollador puede consultar \textit{logs}, describir el estado de los componentes (ej. estado de las réplicas de FastAPI, salud de MinIO) y escalar servicios manual o automáticamente.
     \item Actualiza imágenes: Es el responsable de iniciar actualizaciones de las imágenes de los contenedores (por ejemplo, una nueva versión del \textit{backend} FastAPI o de Redis) mediante \gls{rolling-updates} o recreando los \gls{pod}s.
 \end{itemize}
 
@@ -99,7 +99,7 @@ sistema, pero no para el tráfico de usuarios finales. Entre sus principales acc
 
 El sistema se despliega sobre un \gls{clúster} \gls{K3s}, una distribución certificada de Kubernetes de código abierto, 
 ligera y certificada, especialmente diseñada para entornos de borde y despliegues con recursos limitados. 
-El \gls{clúster} está compuesto por un \gls{nodo} de plano de control y múltiples \gls{nodo}s trabajadores. El plano de 
+El \gls{clúster} está compuesto por un \gls{nodo} de \gls{plano-control} y múltiples \gls{nodo}s trabajadores. El plano de 
 control aloja los componentes de orquestación de Kubernetes, mientras que los \gls{nodo}s trabajadores ejecutan 
 las cargas de trabajo del sistema. Esta arquitectura permite escalar horizontalmente el sistema añadiendo 
 más \gls{nodo}s trabajadores según los requisitos de carga y disponibilidad.
@@ -178,6 +178,19 @@ balanceo de carga.
     servicio \texttt{redis-service} (tipo \gls{clusterip}), que les proporciona un punto de 
     acceso estable al \gls{pod} de Redis, actuando como intermediario de mensajes y almacén de resultados.
     
+    \item Inicialización del sistema: Para garantizar que el entorno 
+    de \ac{BD} esté completamente preparado antes de que el servidor comience a operar, 
+    se ha definido un recurso de \gls{job} de Kubernetes llamado \texttt{fm-prestart}. 
+    Este \gls{job} se ejecuta una única vez durante el despliegue inicial (o cuando se fuerza su recreación) 
+    y es responsable de orquestar la configuración inicial de la \ac{BD} PostgreSQL. Entre las principales acciones
+    a realizar por el \gls{job} están:
+    \begin{itemize}
+        \item Verificar si la \ac{BD} ya existe en el servidor PostgreSQL. Si no existe, la crea automáticamente.
+        \item Garantizar que PostgreSQL acepte conexiones antes de continuar.
+        \item Generar la documentación técnica del proyecto. Este paso es no crítico (si falla, el \gls{job} continúa).
+        \item Sembrar datos iniciales en la \ac{BD}.
+    \end{itemize}
+
     \item \gls{service}s de infraestructura: Tres \gls{service}s internos (\texttt{postgres-service},
     \texttt{redis-service} y \texttt{minio-service}) exponen respectivamente los \gls{pod}s de PostgreSQL, 
     Redis y MinIO. Cada uno se despliega como un \gls{pod} individual con su correspondiente 
@@ -194,7 +207,7 @@ balanceo de carga.
 
     \item \gls{Secret}s: Se ven \texttt{app-secret}, \texttt{postgres-secret}, \texttt{redis-secret}, \texttt{minio-secret}. Los \gls{Secret}s 
     son objetos de Kubernetes para almacenar datos sensibles (contraseñas de bases de datos, tokens, 
-    claves de \ac{API}). Se inyectan en los \gls{pod}s de forma segura (no en texto plano en los manifiestos YAML).
+    claves de \ac{API}). Se inyectan en los \gls{pod}s de forma segura (no en texto plano en los manifiestos \gls{yaml}).
 \end{itemize}
 
 Todos los \gls{service}s internos del \gls{clúster} son del tipo \gls{clusterip}, lo 
