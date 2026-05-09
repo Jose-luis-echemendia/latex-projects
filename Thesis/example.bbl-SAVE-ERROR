@@ -2330,7 +2330,7 @@
       \field{year}{2025}
       \field{urldateera}{ce}
     \endentry
-    \entry{kubernetes2025components}{misc}{}
+    \entry{kubernetes2025jobs}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
            family={{Kubernetes Community}},
@@ -2350,8 +2350,64 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/workloads/controllers/job/}}
+      \field{title}{Jobs - Kubernetes Documentation}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025components}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{5}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
       \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/overview/components/}}
       \field{title}{Kubernetes Components - Kubernetes Documentation}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025controlplane}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{6}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/overview/components/#control-plane-components}}
+      \field{title}{Kubernetes Control Plane - Kubernetes Documentation}
       \field{urlday}{3}
       \field{urlmonth}{5}
       \field{urlyear}{2026}
@@ -2370,10 +2426,10 @@
       \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
-      \field{extraname}{5}
+      \field{extraname}{7}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradate}{5}
+      \field{extradate}{7}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2398,10 +2454,10 @@
       \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
-      \field{extraname}{6}
+      \field{extraname}{8}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradate}{6}
+      \field{extradate}{8}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2426,10 +2482,10 @@
       \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
-      \field{extraname}{7}
+      \field{extraname}{9}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradate}{7}
+      \field{extradate}{9}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2454,10 +2510,10 @@
       \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
-      \field{extraname}{8}
+      \field{extraname}{10}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradate}{8}
+      \field{extradate}{10}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2482,10 +2538,10 @@
       \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
-      \field{extraname}{9}
+      \field{extraname}{11}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradate}{9}
+      \field{extradate}{11}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2510,10 +2566,10 @@
       \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
-      \field{extraname}{10}
+      \field{extraname}{12}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradate}{10}
+      \field{extradate}{12}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2538,10 +2594,10 @@
       \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
-      \field{extraname}{11}
+      \field{extraname}{13}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradate}{11}
+      \field{extradate}{13}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2566,10 +2622,10 @@
       \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
-      \field{extraname}{12}
+      \field{extraname}{14}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradate}{12}
+      \field{extradate}{14}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2594,10 +2650,10 @@
       \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
       \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
-      \field{extraname}{13}
+      \field{extraname}{15}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradate}{13}
+      \field{extradate}{15}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2605,6 +2661,34 @@
       \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/services-networking/service/}}
       \field{title}{Services - Kubernetes Documentation}
       \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{kubernetes2025yaml}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad6096a29ad0da8fb7291ada50598e7a}{%
+           family={{Kubernetes Community}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{fullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{bibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorbibnamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authornamehash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \strng{authorfullhash}{ad6096a29ad0da8fb7291ada50598e7a}
+      \field{extraname}{16}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{16}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/}}
+      \field{title}{Understanding Kubernetes Objects - Kubernetes Documentation}
+      \field{urlday}{6}
       \field{urlmonth}{5}
       \field{urlyear}{2026}
       \field{year}{2025}
@@ -4849,6 +4933,32 @@
       \field{urlmonth}{4}
       \field{urlyear}{2026}
       \field{year}{2009}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{yaml2025spec}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2890f9d3d6867a395d68590a390a5309}{%
+           family={{YAML Community}},
+           familyi={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{2890f9d3d6867a395d68590a390a5309}
+      \strng{fullhash}{2890f9d3d6867a395d68590a390a5309}
+      \strng{bibnamehash}{2890f9d3d6867a395d68590a390a5309}
+      \strng{authorbibnamehash}{2890f9d3d6867a395d68590a390a5309}
+      \strng{authornamehash}{2890f9d3d6867a395d68590a390a5309}
+      \strng{authorfullhash}{2890f9d3d6867a395d68590a390a5309}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible en: \url{https://yaml.org/spec/1.2.2/}}
+      \field{title}{YAML Specification (YAML 1.2)}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
       \field{urldateera}{ce}
     \endentry
     \entry{pysat2018}{inproceedings}{}

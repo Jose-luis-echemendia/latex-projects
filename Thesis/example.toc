@@ -11,10 +11,10 @@
 \contentsline {subsubsection}{Operaciones sobre \ac {FM}}{11}{section*.18}%
 \contentsline {subsubsection}{\ac {FM} con atributos}{12}{section*.19}%
 \contentsline {subsubsection}{Análisis Automatizado de Modelos de Características (AAFM)}{13}{section*.20}%
-\contentsline {subsection}{\numberline {1.1.3}Lenguaje Universal de Variabilidad (UVL)}{14}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.3}Lenguaje Universal de Variabilidad (UVL)}{13}{subsection.1.1.3}%
 \contentsline {subsubsection}{Diseño del lenguaje y niveles de expresividad}{14}{section*.21}%
-\contentsline {subsection}{\numberline {1.1.4}Configuraciones y configurador curricular}{17}{subsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.1.5}Gestión y flexibilidad curricular. Línea de Productos Educativos}{18}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.4}Configuraciones y configurador curricular}{16}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Gestión y flexibilidad curricular. Línea de Productos Educativos}{17}{subsection.1.1.5}%
 \contentsline {subsubsection}{Hacia las Líneas de Productos Educativos}{18}{section*.23}%
 \contentsline {section}{\numberline {1.2}Fortalezas de los \ac {FM} aplicado en la gestión curricular}{19}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Analogía formal curricular}{20}{subsection.1.2.1}%
@@ -25,7 +25,7 @@
 \contentsline {subsubsection}{Sistemas de gestión curricular tradicionales}{27}{section*.26}%
 \contentsline {subsubsection}{Herramientas de modelado de variabilidad}{28}{section*.27}%
 \contentsline {subsection}{\numberline {1.3.3}Oportunidades de mercado identificadas}{29}{subsection.1.3.3}%
-\contentsline {section}{\numberline {1.4}Herramientas y tecnologías}{30}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Herramientas y tecnologías}{31}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Lenguaje de programación}{31}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}\textit {Framework} de desarrollo}{32}{subsection.1.4.2}%
 \contentsline {subsection}{\numberline {1.4.3}Base de datos y gestor de base de datos}{34}{subsection.1.4.3}%
@@ -42,7 +42,7 @@
 \contentsline {subsection}{\numberline {1.4.14}Entorno integrado de desarrollo}{46}{subsection.1.4.14}%
 \contentsline {section}{\numberline {1.5}Metodología de desarrollo del software}{46}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Metodologías de desarrollo de software tradicionales}{47}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Metodologías de desarrollo de software ágiles}{48}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.2}Metodologías de desarrollo de software ágiles}{47}{subsection.1.5.2}%
 \contentsline {subsection}{\numberline {1.5.3}Elección de la metodología}{48}{subsection.1.5.3}%
 \contentsline {subsection}{\numberline {1.5.4}Programación Extrema}{50}{subsection.1.5.4}%
 \contentsline {subsubsection}{Artefactos}{52}{section*.28}%
@@ -83,9 +83,9 @@
 \contentsline {subsubsection}{Flujo de comunicación entre capas}{84}{section*.50}%
 \contentsline {subsubsection}{Arquitectura de Celery}{85}{section*.51}%
 \contentsline {subsubsection}{Ventajas de la arquitectura para la propuesta de solución}{86}{section*.53}%
-\contentsline {section}{\numberline {2.6}Patrones de diseños}{86}{section.2.6}%
+\contentsline {section}{\numberline {2.6}Patrones de diseños}{87}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Patrones GRASP}{87}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Patrones \ac {GoF}}{87}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.2}Patrones \ac {GoF}}{88}{subsection.2.6.2}%
 \contentsline {subsubsection}{Patrones creacionales}{88}{section*.54}%
 \contentsline {subsubsection}{Patrones estructurales}{88}{section*.55}%
 \contentsline {subsubsection}{Patrones de comportamiento}{89}{section*.56}%
@@ -119,346 +119,11 @@
 \contentsline {chapter}{Recomendaciones}{116}{chapter*.79}%
 \contentsline {chapter}{Glossary}{117}{section*.80}%
 \contentsline {chapter}{Acrónimos}{120}{section*.82}%
-\contentsline {chapter}{Referencias bibliográficas}{122}{chapter*.84}%
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Apéndices}{133}{section*.85}%
-\contentsline {chapter}{\numberline {A}Historias de usuario}{134}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Tarjetas CRC}{144}{appendix.Alph2}%
-\contentsline {chapter}{\numberline {C}Tareas de ingenierías}{151}{appendix.Alph3}%
-\contentsline {chapter}{\numberline {D}Pruebas unitarias}{177}{appendix.Alph4}%
-\contentsline {chapter}{\numberline {E}Pruebas de integración}{192}{appendix.Alph5}%
-\contentsline {chapter}{\numberline {F}Lista de verificación de seguridad}{207}{appendix.Alph6}%
-\contentsline {chapter}{\numberline {G}Pruebas de aceptación}{209}{appendix.Alph7}%
+\contentsline {chapter}{Apéndices}{122}{section*.84}%
+\contentsline {chapter}{\numberline {A}Historias de usuario}{123}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Tarjetas CRC}{133}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {C}Tareas de ingenierías}{140}{appendix.Alph3}%
+\contentsline {chapter}{\numberline {D}Pruebas unitarias}{166}{appendix.Alph4}%
+\contentsline {chapter}{\numberline {E}Pruebas de integración}{181}{appendix.Alph5}%
+\contentsline {chapter}{\numberline {F}Lista de verificación de seguridad}{196}{appendix.Alph6}%
+\contentsline {chapter}{\numberline {G}Pruebas de aceptación}{198}{appendix.Alph7}%

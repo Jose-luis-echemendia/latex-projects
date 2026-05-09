@@ -589,11 +589,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex-iso690/spanish-iso.lbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx
 OUTPUT example.bcf
-INPUT example.bbl
-INPUT ./example.bbl
-INPUT ./example.bbl
-INPUT ./example.bbl
-INPUT example.bbl
 INPUT ./LogoUCI.eps
 INPUT ./LogoUCI.eps
 INPUT ./LogoUCI.eps
@@ -926,9 +921,6 @@ INPUT example.acr
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xsc.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/t1xsc.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtxsc.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/tcxi.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/tcxi.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtcxi.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xr.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xb.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/t1xb.vf
@@ -939,7 +931,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xtt.tfm
 INPUT example.aux
 OUTPUT example.run.xml
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/aurical/JanaSkrivanaSlant.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtcxi.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb
