@@ -1,0 +1,27 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[1] Config.pm:310> INFO - Logfile is 'example.blg'
+[125] biber:340> INFO - === sáb may  9, 2026, 12:56:11
+[147] Biber.pm:419> INFO - Reading 'example.bcf'
+[371] Biber.pm:979> INFO - Found 157 citekeys in bib section 0
+[408] Biber.pm:4419> INFO - Processing section 0
+[436] Biber.pm:4610> INFO - Looking for bibtex file 'example.bib' for section 0
+[456] bibtex.pm:1713> INFO - LaTeX decoding ...
+[850] bibtex.pm:1519> INFO - Found BibTeX data source 'example.bib'
+[2215] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2215] UCollate.pm:68> INFO - Overriding locale 'es_ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2216] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'es_ES'
+[2443] bbl.pm:660> INFO - Writing 'example.bbl' with encoding 'UTF-8'
+[2520] bbl.pm:763> INFO - Output to example.bbl
+[2521] Biber.pm:131> WARN - ISBN '9781596932069' in entry 'ferraiolo2007role' is invalid - run biber with '--validate_datamodel' for details.
+[2521] Biber.pm:131> WARN - ISBN '9780321210250' in entry 'sommerville2005' is invalid - run biber with '--validate_datamodel' for details.
+[2521] Biber.pm:131> WARN - ISBN '9786075381752' in entry 'rojas2021arquitectura' is invalid - run biber with '--validate_datamodel' for details.
+[2521] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_0xOq/0a7c5e67b4d952eac587450a692dc29d_611591.utf8, line 1156, warning: 157 characters of junk seen at toplevel
+[2521] Biber.pm:131> WARN - I didn't find a database entry for 'kubernetes2025rolling-updates' (section 0)
+[2521] Biber.pm:131> WARN - I didn't find a database entry for 'kubernetes2025etcd' (section 0)
+[2522] Biber.pm:131> WARN - I didn't find a database entry for 'kubernetes2025apiserver' (section 0)
+[2522] Biber.pm:131> WARN - I didn't find a database entry for 'kubernetes2025controller-manager' (section 0)
+[2522] Biber.pm:131> WARN - I didn't find a database entry for 'kubernetes2025kube-proxy' (section 0)
+[2522] Biber.pm:131> WARN - I didn't find a database entry for 'kubernetes2025scheduler' (section 0)
+[2522] Biber.pm:131> WARN - I didn't find a database entry for 'kubernetes2025kubectl' (section 0)
+[2522] Biber.pm:131> WARN - I didn't find a database entry for 'kubernetes2025kubelet' (section 0)
+[2522] Biber.pm:133> INFO - WARNINGS: 12
