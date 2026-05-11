@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.18)  9 MAY 2026 12:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.18)  9 MAY 2026 12:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1589,62 +1589,7 @@ File: t1txr.fd 2000/12/15 v3.1
 LaTeX Warning: Unused global option(s):
     [spanish,final].
 
-(./example.aux
-LaTeX Info: Redefining \. on input line 21.
-LaTeX Info: Redefining \% on input line 21.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `tb:crc_featuremodel' multiply defined.
-
-
-LaTeX Warning: Label `tb:engtask_t020' multiply defined.
-
-
-LaTeX Warning: Label `tb:HU6_P2' multiply defined.
-
-)
+(./example.aux)
 \openout1 = `example.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 60.
@@ -2002,57 +1947,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--61
 
 ] [6
 
-] (./example.toc
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [7
-
-] [8])
+]
+No file example.toc.
 \tf@toc=\write9
 \openout9 = `example.toc'.
 
- [9] (./example.lof
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-)
+[7
+
+]
+No file example.lof.
 \tf@lof=\write10
 \openout10 = `example.lof'.
 
- [10
+[8
 
-] (./example.lot
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [11
-
-] [12] [13] [14] [15] [16])
+]
+No file example.lot.
 \tf@lot=\write11
 \openout11 = `example.lot'.
 
- [17] (./example.loa)
+[9
+
+] (./example.loa)
 \tf@loa=\write12
 \openout12 = `example.loa'.
 
- [18
+ [10
 
 ] (./example.lol)
 \tf@lol=\write13
 \openout13 = `example.lol'.
 
- [19
+ [11
 
 ] (./Introduction.tex [1
 
 
 ]
-LaTeX Info: Redefining \. on input line 89.
-LaTeX Info: Redefining \% on input line 89.
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
  [2]
-LaTeX Info: Redefining \. on input line 142.
-LaTeX Info: Redefining \% on input line 142.
+LaTeX Info: Redefining \. on input line 136.
+LaTeX Info: Redefining \% on input line 136.
  [3]) (./Chapter1.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -2075,13 +2011,4993 @@ LaTeX Font Info:    Font shape `T1/txr/b/it' in size <12> not available
 LaTeX Info: Redefining \. on input line 144.
 LaTeX Info: Redefining \% on input line 144.
  [7]
+
+LaTeX Warning: Reference `tab:relaciones_estructurales_FM' on page 8 undefined on input line 177.
+
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 186.
 LaTeX Info: Redefining \. on input line 219.
 LaTeX Info: Redefining \% on input line 219.
- [8]
-<Images/feature_models.png, id=964, 618.81187pt x 412.54124pt>
+[8]
+
+LaTeX Warning: Reference `tab:relaciones_estructurales_FM' on page 9 undefined on input line 221.
+
+
+LaTeX Warning: Reference `fig:relaciones_estructurales_FM' on page 9 undefined on input line 228.
+
+<Images/feature_models.png, id=259, 618.81187pt x 412.54124pt>
 File: Images/feature_models.png Graphic file (type png)
 <use Images/feature_models.png>
 Package pdftex.def Info: Images/feature_models.png  used on input line 235.
-(pdftex.def)             Req
+(pdftex.def)             Requested size: 469.75502pt x 313.18208pt.
+LaTeX Info: Redefining \. on input line 239.
+LaTeX Info: Redefining \% on input line 239.
+[9]
+LaTeX Font Info:    Font shape `T1/txr/b/it' in size <10.95> not available
+(Font)              Font shape `T1/txr/bx/it' tried instead on input line 240.
+LaTeX Info: Redefining \. on input line 266.
+LaTeX Info: Redefining \% on input line 266.
+ [10 <./Images/feature_models.png>]
+LaTeX Info: Redefining \. on input line 312.
+LaTeX Info: Redefining \% on input line 312.
+ [11]
+
+LaTeX Warning: Reference `lst:uvl_sandwich' on page 12 undefined on input line 365.
+
+LaTeX Info: Redefining \. on input line 366.
+LaTeX Info: Redefining \% on input line 366.
+[12]
+LaTeX Info: Redefining \. on input line 410.
+LaTeX Info: Redefining \% on input line 410.
+ [13]
+
+LaTeX Warning: Reference `tab:relaciones_estructurales_FM' on page 14 undefined on input line 437.
+
+LaTeX Info: Redefining \. on input line 454.
+LaTeX Info: Redefining \% on input line 454.
+[14]
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 465.
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+
+LaTeX Warning: Reference `lst:uvl_sandwich' on page 15 undefined on input line 486.
+
+
+LaTeX Warning: Reference `fig:fm_sandwich_uvl' on page 15 undefined on input line 486.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 489.
+LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <9> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 501.
+LaTeX Info: Redefining \. on input line 507.
+LaTeX Info: Redefining \% on input line 507.
+ [15]
+LaTeX Font Info:    Font shape `T1/txr/b/n' in size <9> not available
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 609.
+LaTeX Info: Redefining \. on input line 636.
+LaTeX Info: Redefining \% on input line 636.
+ [16]
+LaTeX Info: Redefining \. on input line 683.
+LaTeX Info: Redefining \% on input line 683.
+ [17]
+LaTeX Info: Redefining \. on input line 722.
+LaTeX Info: Redefining \% on input line 722.
+ [18]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\ac' on input line 734.
+
+LaTeX Info: Redefining \. on input line 756.
+LaTeX Info: Redefining \% on input line 756.
+[19]
+
+LaTeX Warning: Reference `fig:fm_data_structures_1' on page 20 undefined on input line 760.
+
+
+LaTeX Warning: Reference `fig:fm_data_structures_2' on page 20 undefined on input line 760.
+
+
+LaTeX Warning: Reference `tab:analogiaSPLeducacion' on page 20 undefined on input line 777.
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 788--788
+[]|\T1/txr/bx/n/10 Concepto aná-lo-go en pla-ni-fi-ca-
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 797--797
+[]|\T1/txr/bx/n/10 Concepto aná-lo-go en pla-ni-fi-ca-
+ []
+
+LaTeX Info: Redefining \. on input line 821.
+LaTeX Info: Redefining \% on input line 821.
+[20]
+
+LaTeX Warning: Reference `fig:fm_data_structures_1' on page 21 undefined on input line 825.
+
+
+LaTeX Warning: Reference `fig:fm_data_structures_2' on page 21 undefined on input line 825.
+
+
+LaTeX Warning: Reference `lst:uvl_data_structures' on page 21 undefined on input line 828.
+
+LaTeX Info: Redefining \. on input line 877.
+LaTeX Info: Redefining \% on input line 877.
+[21]
+LaTeX Info: Redefining \. on input line 1039.
+LaTeX Info: Redefining \% on input line 1039.
+ [22]
+LaTeX Info: Redefining \. on input line 1168.
+LaTeX Info: Redefining \% on input line 1168.
+ [23]
+Overfull \vbox (10.07777pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1168.
+LaTeX Info: Redefining \% on input line 1168.
+ [24]
+
+LaTeX Warning: Reference `fig:fm_data_structures_1' on page 25 undefined on input line 1174.
+
+
+LaTeX Warning: Reference `fig:fm_data_structures_2' on page 25 undefined on input line 1174.
+
+LaTeX Info: Redefining \. on input line 1231.
+LaTeX Info: Redefining \% on input line 1231.
+[25]
+LaTeX Info: Redefining \. on input line 1268.
+LaTeX Info: Redefining \% on input line 1268.
+ [26]
+LaTeX Info: Redefining \. on input line 1314.
+LaTeX Info: Redefining \% on input line 1314.
+ [27]
+LaTeX Info: Redefining \. on input line 1374.
+LaTeX Info: Redefining \% on input line 1374.
+ [28]
+LaTeX Info: Redefining \. on input line 1421.
+LaTeX Info: Redefining \% on input line 1421.
+ [29]
+LaTeX Info: Redefining \. on input line 1477.
+LaTeX Info: Redefining \% on input line 1477.
+ [30]
+LaTeX Info: Redefining \. on input line 1529.
+LaTeX Info: Redefining \% on input line 1529.
+ [31]
+LaTeX Info: Redefining \. on input line 1566.
+LaTeX Info: Redefining \% on input line 1566.
+ [32]
+
+LaTeX Warning: Reference `tab:frameworks' on page 33 undefined on input line 1569.
+
+LaTeX Font Info:    Font shape `T1/txr/b/it' in size <10> not available
+(Font)              Font shape `T1/txr/bx/it' tried instead on input line 1579.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1603--1604
+[]|\T1/txr/m/n/10 Clientes\servidores
+ []
+
+
+LaTeX Warning: Reference `tab:frameworks' on page 33 undefined on input line 1608.
+
+LaTeX Info: Redefining \. on input line 1636.
+LaTeX Info: Redefining \% on input line 1636.
+[33]
+LaTeX Info: Redefining \. on input line 1683.
+LaTeX Info: Redefining \% on input line 1683.
+ [34]
+LaTeX Info: Redefining \. on input line 1736.
+LaTeX Info: Redefining \% on input line 1736.
+ [35]
+LaTeX Info: Redefining \. on input line 1787.
+LaTeX Info: Redefining \% on input line 1787.
+ [36]
+LaTeX Info: Redefining \. on input line 1841.
+LaTeX Info: Redefining \% on input line 1841.
+ [37]
+LaTeX Info: Redefining \. on input line 1898.
+LaTeX Info: Redefining \% on input line 1898.
+ [38]
+LaTeX Info: Redefining \. on input line 1957.
+LaTeX Info: Redefining \% on input line 1957.
+ [39]
+
+LaTeX Warning: Reference `tab:fastAPIvsFastAPIconCelery' on page 40 undefined on input line 1981.
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 2013--2014
+[]|\T1/txr/m/n/10 Respuestas in-me-dia-tas + se-gui-
+ []
+
+LaTeX Info: Redefining \. on input line 2040.
+LaTeX Info: Redefining \% on input line 2040.
+[40]
+LaTeX Info: Redefining \. on input line 2095.
+LaTeX Info: Redefining \% on input line 2095.
+ [41]
+LaTeX Info: Redefining \. on input line 2152.
+LaTeX Info: Redefining \% on input line 2152.
+ [42]
+LaTeX Info: Redefining \. on input line 2205.
+LaTeX Info: Redefining \% on input line 2205.
+ [43]
+LaTeX Info: Redefining \. on input line 2255.
+LaTeX Info: Redefining \% on input line 2255.
+ [44]
+LaTeX Info: Redefining \. on input line 2309.
+LaTeX Info: Redefining \% on input line 2309.
+ [45]
+LaTeX Info: Redefining \. on input line 2358.
+LaTeX Info: Redefining \% on input line 2358.
+ [46]
+LaTeX Info: Redefining \. on input line 2390.
+LaTeX Info: Redefining \% on input line 2390.
+ [47]
+LaTeX Info: Redefining \. on input line 2428.
+LaTeX Info: Redefining \% on input line 2428.
+ [48]
+
+LaTeX Warning: Reference `tab:metodologias' on page 49 undefined on input line 2437.
+
+
+Underfull \hbox (badness 2302) in paragraph at lines 2447--2448
+[]|\T1/txr/bx/n/10 Metodologías Tra-di-cio-na-
+ []
+
+
+Underfull \hbox (badness 2302) in paragraph at lines 2453--2454
+[]|\T1/txr/bx/n/10 Metodologías Tra-di-cio-na-
+ []
+
+
+LaTeX Warning: Reference `tab:metodologias' on page 49 undefined on input line 2494.
+
+
+LaTeX Warning: Reference `tab:resultado' on page 49 undefined on input line 2496.
+
+LaTeX Info: Redefining \. on input line 2550.
+LaTeX Info: Redefining \% on input line 2550.
+[49]
+
+LaTeX Warning: Reference `tab:comparacionAgil' on page 50 undefined on input line 2556.
+
+
+LaTeX Warning: Reference `tab:comparacionAgil' on page 50 undefined on input line 2593.
+
+LaTeX Info: Redefining \. on input line 2612.
+LaTeX Info: Redefining \% on input line 2612.
+[50]
+LaTeX Info: Redefining \. on input line 2631.
+LaTeX Info: Redefining \% on input line 2631.
+ [51]
+LaTeX Info: Redefining \. on input line 2666.
+LaTeX Info: Redefining \% on input line 2666.
+ [52]) (./Chapter2.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [53]
+Cap\'{\i }tulo 2.
+[54
+
+]
+LaTeX Info: Redefining \. on input line 83.
+LaTeX Info: Redefining \% on input line 83.
+ [55]
+
+LaTeX Warning: Reference `tab:funcion_roles' on page 56 undefined on input line 84.
+
+
+LaTeX Warning: Reference `tab:jerarquia_roles' on page 56 undefined on input line 123.
+
+
+Overfull \hbox (6.9845pt too wide) in paragraph at lines 130--130
+[]|\T1/txr/bx/n/10 Administrador| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+[]|\T1/txr/bx/n/10 Editor de
+ []
+
+
+Overfull \hbox (1.4345pt too wide) in paragraph at lines 130--130
+[]|\T1/txr/bx/n/10 Configurador| 
+ []
+
+
+Overfull \hbox (21.47392pt too wide) in alignment at lines 127--132
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (6.9845pt too wide) in paragraph at lines 135--135
+[]|\T1/txr/bx/n/10 Administrador| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
+[]|\T1/txr/bx/n/10 Editor de
+ []
+
+
+Overfull \hbox (1.4345pt too wide) in paragraph at lines 135--135
+[]|\T1/txr/bx/n/10 Configurador| 
+ []
+
+
+Overfull \hbox (21.47392pt too wide) in alignment at lines 132--137
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (21.47392pt too wide) in alignment at lines 137--139
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (21.47392pt too wide) in alignment at lines 139--141
+ [] [] [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+[]|\T1/txr/m/n/10 R=Sí /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+\T1/txr/m/n/10 (so-lo don-de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+\T1/txr/m/n/10 co-la-bo-ra;
+ []
+
+
+Underfull \hbox (badness 7186) in paragraph at lines 147--147
+\T1/txr/m/n/10 sin crear ni
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+[]|\T1/txr/m/n/10 R=Sí (pu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+\T1/txr/m/n/10 bli-ca-dos) /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+[]|\T1/txr/m/n/10 R=Sí (pu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+\T1/txr/m/n/10 bli-ca-dos) /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\T1/txr/bx/n/10 FeatureModel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\T1/txr/m/n/10 R=Sí /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\T1/txr/m/n/10 R=Sí /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\T1/txr/m/n/10 R=Sí /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+\T1/txr/m/n/10 (en mo-de-los
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Overfull \hbox (3.55858pt too wide) in paragraph at lines 153--153
+[]|\T1/txr/bx/n/10 FeatureRelation| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\T1/txr/m/n/10 (en mo-de-los
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\T1/txr/m/n/10 (en mo-de-los
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+\T1/txr/m/n/10 (en mo-de-los
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[]|\T1/txr/bx/n/10 FeatureModel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\T1/txr/m/n/10 (ges-tio-na
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\T1/txr/m/n/10 co-la-bo-ra-do-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\T1/txr/m/n/10 res de sus
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\T1/txr/m/n/10 (aco-ta-do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\T1/txr/m/n/10 se-gún con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\T1/txr/m/n/10 fi-gu-ra-ción
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+[]|\T1/txr/m/n/10 R=No /
+ []
+
+
+Overfull \hbox (21.47392pt too wide) in alignment at lines 141--165
+ [] [] [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
+[56]
+LaTeX Info: Redefining \. on input line 176.
+LaTeX Info: Redefining \% on input line 176.
+ [57]
+<Images/propuesta_soluciÃ³n.jpg, id=1170, 974.64125pt x 504.88625pt>
+File: Images/propuesta_soluciÃ³n.jpg Graphic file (type jpg)
+<use Images/propuesta_soluciÃ³n.jpg>
+Package pdftex.def Info: Images/propuesta_soluciÃ³n.jpg  used on input line 180.
+(pdftex.def)             Requested size: 399.29463pt x 206.84291pt.
+
+
+LaTeX Warning: Reference `fig:propuesta_soluciÃ³n' on page 58 undefined on input line 183.
+
+LaTeX Info: Redefining \. on input line 208.
+LaTeX Info: Redefining \% on input line 208.
+[58 <./Images/propuesta_soluciÃ³n.jpg>]
+LaTeX Info: Redefining \. on input line 265.
+LaTeX Info: Redefining \% on input line 265.
+ [59]
+LaTeX Info: Redefining \. on input line 312.
+LaTeX Info: Redefining \% on input line 312.
+ [60]
+
+LaTeX Warning: Reference `tab:rf' on page 61 undefined on input line 335.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+[]|\T1/txr/m/n/10 Solicitar re-cu-pe-ra-ción de
+ []
+
+
+Underfull \hbox (badness 4254) in paragraph at lines 441--441
+[]|\T1/txr/m/n/10 Habilita un do-mi-nio pre-via-men-te
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 495--495
+[]|\T1/txr/m/n/10 El sis-te-ma de-be en-tre-gar el ár-bol
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 526--528
+\T1/txr/m/n/10 una nue-va ver-sión es-truc-tu-ral to-
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 542--542
+[]|\T1/txr/m/n/10 El sis-te-ma de-be per-mi-tir eje-cu-tar
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 542--542
+\T1/txr/m/n/10 aná-li-sis de ca-rac-te-rís-ti-cas muer-tas,
+ []
+
+
+Underfull \hbox (badness 4072) in paragraph at lines 545--547
+[]|\T1/txr/m/n/10 Crea y al-ma-ce-na con-fi-gu-ra-cio-nes
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 549--550
+[]\T1/txr/m/n/10 identificador de ver-sión del
+ []
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 554--554
+[]|\T1/txr/m/n/10 Obtener con-fi-gu-ra-ción por
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--557
+[]|\T1/txr/m/n/10 Lista con-fi-gu-ra-cio-nes dis-po-ni-bles
+ []
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 574--574
+[]|\T1/txr/m/n/10 Validar con-fi-gu-ra-ción pro-
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 588--589
+[]\T1/txr/m/n/10 identificador de ver-sión del
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 638--639
+[]\T1/txr/m/n/10 cardinalidad mí-ni-ma (op-cio-
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 649--650
+[]\T1/txr/m/n/10 cardinalidad mí-ni-ma (op-cio-
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 664--666
+\T1/txr/m/n/10 li-da-cio-nes se-mán-ti-cas y \T1/txr/m/it/10 copy-on-
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 694--695
+[]\T1/txr/m/n/10 identificador de ver-sión del
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--703
+[]|\T1/txr/m/n/10 Actualiza res-tric-cio-nes exis-ten-tes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--703
+\T1/txr/m/n/10 pre-ser-van-do co-he-ren-cia ló-gi-ca.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--704
+[]\T1/txr/m/n/10 identificador de res-tric-ción
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 709--709
+[]|\T1/txr/m/n/10 Elimina res-tric-cio-nes apli-can-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 709--709
+\T1/txr/m/n/10 do \T1/txr/m/it/10 copy-on-write \T1/txr/m/n/10 pa-ra man-te-ner
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 712--712
+[]|\T1/txr/m/n/10 Elimina res-tric-cio-nes apli-can-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 712--712
+\T1/txr/m/n/10 do \T1/txr/m/it/10 copy-on-write \T1/txr/m/n/10 pa-ra man-te-ner
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 714--714
+[]|\T1/txr/m/n/10 Lista eti-que-tas ac-ti-vas dis-po-ni-bles
+ []
+
+
+Underfull \hbox (badness 2617) in paragraph at lines 719--721
+[]|\T1/txr/m/n/10 Crea nue-vas eti-que-tas ase-gu-ran-do
+ []
+
+
+Underfull \hbox (badness 5939) in paragraph at lines 744--745
+[]\T1/txr/m/n/10 identificador de pro-pie-ta-rio
+ []
+
+
+Underfull \hbox (badness 5939) in paragraph at lines 765--766
+[]\T1/txr/m/n/10 identificador de pro-pie-ta-rio
+ []
+
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+[61]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [62]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [63]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [64]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [65]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [66]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [67]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [68]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [69]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [70]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [71]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [72]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [73]
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+ [74]
+LaTeX Info: Redefining \. on input line 794.
+LaTeX Info: Redefining \% on input line 794.
+ [75]
+Overfull \hbox (1.65201pt too wide) in paragraph at lines 804--807
+[][][][]\T1/txr/m/n/10 RnF[][]#6: El ac-ce-so al sis-te-ma a tra-vés de cual-quier clien-te de-be ser me-dian-te una co-mu-ni-ca-ción se-gu-ra TLS[][][][][]/SSL[][][][][]
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 816.
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
+File: ts1txr.fd 2000/12/15 v3.1
+)
+LaTeX Info: Redefining \. on input line 839.
+LaTeX Info: Redefining \% on input line 839.
+ [76]
+LaTeX Info: Redefining \. on input line 889.
+LaTeX Info: Redefining \% on input line 889.
+ [77]
+
+LaTeX Warning: Reference `anx:hu' on page 78 undefined on input line 912.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 2.4 on input line 931.
+
+LaTeX Info: Redefining \. on input line 931.
+LaTeX Info: Redefining \% on input line 931.
+[78]
+
+LaTeX Warning: Reference `tab:estimationtest' on page 79 undefined on input line 942.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 2.5 on input line 959.
+
+
+LaTeX Warning: Reference `tb:iterdurationtest' on page 79 undefined on input line 965.
+
+LaTeX Info: Redefining \. on input line 967.
+LaTeX Info: Redefining \% on input line 967.
+[79]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 2.6 on input line 970.
+
+
+LaTeX Warning: Reference `tab:pe' on page 80 undefined on input line 984.
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 1013--1013
+[]|\T1/txr/m/n/10 20 de di-ciem-bre del
+ []
+
+LaTeX Info: Redefining \. on input line 1028.
+LaTeX Info: Redefining \% on input line 1028.
+[80]
+
+LaTeX Warning: Reference `anx:tCRC' on page 81 undefined on input line 1041.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 2.8 on input line 1060.
+
+LaTeX Info: Redefining \. on input line 1071.
+LaTeX Info: Redefining \% on input line 1071.
+[81]
+
+LaTeX Warning: Reference `fig:arquitectura_capas' on page 82 undefined on input line 1125.
+
+<Images/arquitectura_feature_model4.jpg, id=1616, 1429.34pt x 1097.09875pt>
+File: Images/arquitectura_feature_model4.jpg Graphic file (type jpg)
+<use Images/arquitectura_feature_model4.jpg>
+Package pdftex.def Info: Images/arquitectura_feature_model4.jpg  used on input line 1131.
+(pdftex.def)             Requested size: 399.29463pt x 306.48247pt.
+LaTeX Info: Redefining \. on input line 1133.
+LaTeX Info: Redefining \% on input line 1133.
+[82]
+LaTeX Info: Redefining \. on input line 1158.
+LaTeX Info: Redefining \% on input line 1158.
+ [83 <./Images/arquitectura_feature_model4.jpg>]
+LaTeX Info: Redefining \. on input line 1207.
+LaTeX Info: Redefining \% on input line 1207.
+ [84]
+
+LaTeX Warning: Reference `fig:arquitectura_celery' on page 85 undefined on input line 1218.
+
+<Images/arquitectura_celery.jpg, id=1665, 605.26125pt x 259.97125pt>
+File: Images/arquitectura_celery.jpg Graphic file (type jpg)
+<use Images/arquitectura_celery.jpg>
+Package pdftex.def Info: Images/arquitectura_celery.jpg  used on input line 1223.
+(pdftex.def)             Requested size: 399.29463pt x 171.50618pt.
+LaTeX Info: Redefining \. on input line 1253.
+LaTeX Info: Redefining \% on input line 1253.
+[85 <./Images/arquitectura_celery.jpg>]
+LaTeX Info: Redefining \. on input line 1310.
+LaTeX Info: Redefining \% on input line 1310.
+ [86]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\ac' on input line 1350.
+
+LaTeX Info: Redefining \. on input line 1358.
+LaTeX Info: Redefining \% on input line 1358.
+[87]
+LaTeX Info: Redefining \. on input line 1412.
+LaTeX Info: Redefining \% on input line 1412.
+ [88]) (./Chapter3.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [89]
+Cap\'{\i }tulo 3.
+
+LaTeX Warning: Reference `anx:ti' on page 90 undefined on input line 33.
+
+[90
+
+]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 3.1 on input line 45.
+
+
+LaTeX Warning: Reference `fig:dd' on page 91 undefined on input line 68.
+
+<Images/dd.jpg, id=1774, 1809.76125pt x 1099.10625pt>
+File: Images/dd.jpg Graphic file (type jpg)
+<use Images/dd.jpg>
+Package pdftex.def Info: Images/dd.jpg  used on input line 73.
+(pdftex.def)             Requested size: 469.75502pt x 285.29129pt.
+LaTeX Info: Redefining \. on input line 77.
+LaTeX Info: Redefining \% on input line 77.
+[91]
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
+ [92 <./Images/dd.jpg>]
+LaTeX Info: Redefining \. on input line 145.
+LaTeX Info: Redefining \% on input line 145.
+ [93]
+Overfull \hbox (3.99191pt too wide) in paragraph at lines 194--202
+[][][][]\T1/txr/m/n/10 Servicio[][]s de in-fra-es-truc-tu-ra: Tres [][][]Ser-vi-cio[][]s in-ter-nos (\T1/txtt/m/n/10 postgres-service\T1/txr/m/n/10 , \T1/txtt/m/n/10 redis-service \T1/txr/m/n/10 y \T1/txtt/m/n/10 minio-service\T1/txr/m/n/10 )
+ []
+
+LaTeX Info: Redefining \. on input line 207.
+LaTeX Info: Redefining \% on input line 207.
+[94]
+LaTeX Info: Redefining \. on input line 256.
+LaTeX Info: Redefining \% on input line 256.
+ [95]
+
+LaTeX Warning: Reference `anx:pu' on page 96 undefined on input line 289.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--317
+[]|\T1/txr/m/n/10 Verificar que \T1/txtt/m/n/10 FeatureModelVersionManager.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--317
+\T1/txtt/m/n/10 create_new_version(source_version=None) \T1/txr/m/n/10 crea una ver-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 3.2 on input line 341.
+
+LaTeX Info: Redefining \. on input line 341.
+LaTeX Info: Redefining \% on input line 341.
+[96]
+
+LaTeX Warning: Reference `tab:matriz_teVScomponente' on page 97 undefined on input line 358.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--400
+[]|\T1/txr/m/n/10 Escritura/lectura de
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 408--411
+[]|\T1/txr/m/n/10 El ser-vi-cio de ana-li-za-dor es-truc-
+ []
+
+
+Underfull \hbox (badness 7081) in paragraph at lines 408--411
+\T1/txr/m/n/10 tu-ral de [][][]FM[][] em-pleó una ex-
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 408--411
+\T1/txr/m/n/10 cep-ción in-co-rrec-ta. La ex-cep-ción
+ []
+
+
+Underfull \hbox (badness 7203) in paragraph at lines 408--411
+\T1/txtt/m/n/10 DomainNotFoundException \T1/txr/m/n/10 de-
+ []
+
+
+Underfull \hbox (badness 1931) in paragraph at lines 413--417
+[]|\T1/txr/m/n/10 El ser-vi-cio de ges-tio-nar el ver-
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 413--417
+\T1/txr/m/n/10 sio-na-do de los [][][]FM[][] de-vol-vió un
+ []
+
+
+Underfull \hbox (badness 3746) in paragraph at lines 413--417
+\T1/txr/m/n/10 men-sa-je in-co-rrec-to al lan-zar el
+ []
+
+
+Overfull \hbox (4.7358pt too wide) in paragraph at lines 413--417
+\T1/txtt/m/n/10 FeatureAccessDeniedException
+ []
+
+LaTeX Info: Redefining \. on input line 420.
+LaTeX Info: Redefining \% on input line 420.
+[97]
+LaTeX Info: Redefining \. on input line 420.
+LaTeX Info: Redefining \% on input line 420.
+ [98]
+
+LaTeX Warning: Reference `fig:result_ut' on page 99 undefined on input line 427.
+
+<Images/result_ut.png, id=2009, 1268.74pt x 893.3375pt>
+File: Images/result_ut.png Graphic file (type png)
+<use Images/result_ut.png>
+Package pdftex.def Info: Images/result_ut.png  used on input line 431.
+(pdftex.def)             Requested size: 469.75502pt x 330.76143pt.
+LaTeX Info: Redefining \. on input line 435.
+LaTeX Info: Redefining \% on input line 435.
+[99]
+
+LaTeX Warning: Reference `anx:pi' on page 100 undefined on input line 448.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST /api/v1/feature-models/ \T1/txr/m/n/10 con \T1/txtt/m/n/10 name\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--496
+[]\T1/txr/m/n/10 Verificar res-pues-ta con \T1/txtt/m/n/10 id\T1/txr/m/n/10 , \T1/txtt/m/n/10 owner_id\T1/txr/m/n/10 , \T1/txtt/m/n/10 domain_id\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--509
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 512.
+LaTeX Info: Redefining \% on input line 512.
+[100 <./Images/result_ut.png>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 3.4 on input line 512.
+
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+[101]
+
+LaTeX Warning: Reference `fig:result_it' on page 102 undefined on input line 546.
+
+<Images/result_it.png, id=2047, 1268.74pt x 893.3375pt>
+File: Images/result_it.png Graphic file (type png)
+<use Images/result_it.png>
+Package pdftex.def Info: Images/result_it.png  used on input line 552.
+(pdftex.def)             Requested size: 469.75502pt x 330.76143pt.
+LaTeX Info: Redefining \. on input line 556.
+LaTeX Info: Redefining \% on input line 556.
+[102]
+
+LaTeX Warning: Reference `anx:lvs' on page 103 undefined on input line 576.
+
+LaTeX Info: Redefining \. on input line 578.
+LaTeX Info: Redefining \% on input line 578.
+[103 <./Images/result_it.png>]
+
+LaTeX Warning: Reference `anx:lvs' on page 104 undefined on input line 582.
+
+
+LaTeX Warning: Reference `tab:results_st_1t' on page 104 undefined on input line 583.
+
+
+LaTeX Warning: Reference `fig:result_st' on page 104 undefined on input line 645.
+
+<Images/result_st.png, id=2072, 1268.74pt x 893.3375pt>
+File: Images/result_st.png Graphic file (type png)
+<use Images/result_st.png>
+Package pdftex.def Info: Images/result_st.png  used on input line 649.
+(pdftex.def)             Requested size: 469.75502pt x 330.76143pt.
+LaTeX Info: Redefining \. on input line 653.
+LaTeX Info: Redefining \% on input line 653.
+[104]
+LaTeX Info: Redefining \. on input line 683.
+LaTeX Info: Redefining \% on input line 683.
+ [105 <./Images/result_st.png>]
+LaTeX Info: Redefining \. on input line 729.
+LaTeX Info: Redefining \% on input line 729.
+ [106]
+
+LaTeX Warning: Reference `fig:rendimiento_iteracion1' on page 107 undefined on input line 785.
+
+LaTeX Info: Redefining \. on input line 787.
+LaTeX Info: Redefining \% on input line 787.
+[107]
+<Images/result_rt1t.png, id=2116, 1314.9125pt x 858.20625pt>
+File: Images/result_rt1t.png Graphic file (type png)
+<use Images/result_rt1t.png>
+Package pdftex.def Info: Images/result_rt1t.png  used on input line 790.
+(pdftex.def)             Requested size: 469.75502pt x 306.58379pt.
+LaTeX Info: Redefining \. on input line 819.
+LaTeX Info: Redefining \% on input line 819.
+ [108 <./Images/result_rt1t.png>]
+LaTeX Info: Redefining \. on input line 867.
+LaTeX Info: Redefining \% on input line 867.
+ [109]
+
+LaTeX Warning: Reference `fig:rendimiento_iteracion2' on page 110 undefined on input line 876.
+
+<Images/result_rt2t.png.png, id=2128, 1314.9125pt x 858.20625pt>
+File: Images/result_rt2t.png.png Graphic file (type png)
+<use Images/result_rt2t.png.png>
+Package pdftex.def Info: Images/result_rt2t.png.png  used on input line 881.
+(pdftex.def)             Requested size: 469.75502pt x 306.58379pt.
+LaTeX Info: Redefining \. on input line 905.
+LaTeX Info: Redefining \% on input line 905.
+[110 <./Images/result_rt2t.png.png>]
+
+LaTeX Warning: Reference `anx:pa' on page 111 undefined on input line 912.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 3.6 on input line 945.
+
+LaTeX Info: Redefining \. on input line 945.
+LaTeX Info: Redefining \% on input line 945.
+[111]
+LaTeX Info: Redefining \. on input line 971.
+LaTeX Info: Redefining \% on input line 971.
+ [112]
+
+LaTeX Warning: Reference `fig:result_at' on page 113 undefined on input line 989.
+
+<Images/result_at.png, id=2166, 1314.9125pt x 858.20625pt>
+File: Images/result_at.png Graphic file (type png)
+<use Images/result_at.png>
+Package pdftex.def Info: Images/result_at.png  used on input line 995.
+(pdftex.def)             Requested size: 469.75502pt x 306.58379pt.
+LaTeX Info: Redefining \. on input line 1005.
+LaTeX Info: Redefining \% on input line 1005.
+[113 <./Images/result_at.png>]) (./Conclusions.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [114]) (./Suggestions.tex [115
+
+]) (./Appendices.tex)
+
+Package glossaries Warning: No \printglossary or \printglossaries found. 
+(Remove \makeglossaries if you don't want any glossaries.) 
+This document will not have a glossary.
+
+(./example.gls [116
+
+]
+
+LaTeX Warning: Citation 'kubernetes2025rolling-updates' on page 117 undefined on input line 5.
+
+./example.gls:8: Illegal parameter number in definition of \abx@field@note.
+<to be read again> 
+                   l
+l.8 ...tentrycounter[]{page}\glsnumberformat{95}}}
+                                                  \glsgroupskip
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+./example.gls:11: Illegal parameter number in definition of \abx@field@note.
+<to be read again> 
+                   d
+l.11 ...er[]{page}\glsnumberformat{94\delimN 95}}}
+                                                  %
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+
+LaTeX Warning: Citation 'kubernetes2025etcd' on page 117 undefined on input line 20.
+
+[117
+
+
+]
+
+LaTeX Warning: Citation 'kubernetes2025apiserver' on page 118 undefined on input line 29.
+
+
+LaTeX Warning: Citation 'kubernetes2025controller-manager' on page 118 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'kubernetes2025kube-proxy' on page 118 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'kubernetes2025scheduler' on page 118 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'kubernetes2025kubectl' on page 118 undefined on input line 37.
+
+
+LaTeX Warning: Citation 'kubernetes2025kubelet' on page 118 undefined on input line 39.
+
+./example.gls:45: Illegal parameter number in definition of \abx@field@note.
+<to be read again> 
+                   c
+l.45 ...er[]{page}\glsnumberformat{92\delimN 93}}}
+                                                  %
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+LaTeX Info: Redefining \. on input line 50.
+LaTeX Info: Redefining \% on input line 50.
+[118]) (./example.acr
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [119] [120
+
+
+])
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [121]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+Overfull \hbox (19.08313pt too wide) in paragraph at lines 70--70
+[][]\T1/txr/m/n/10.95 ACADEMIALAB, [s.f.]. \T1/txr/m/it/10.95 Lí-nea de pro-duc-tos de soft-wa-re\T1/txr/m/n/10.95 . []Url[]: [][]$\T1/txtt/m/n/10.95 https : / / academia -[] lab . com / enciclopedia /
+ []
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+Overfull \hbox (3.03131pt too wide) in paragraph at lines 70--70
+[][]\T1/txr/m/n/10.95 BECK, Kent y AN-DRES, Cynthia, 2004. \T1/txr/m/it/10.95 Ex-tre-me Pro-gram-ming Ex-plai-ned: Em-bra-ce Chan-ge\T1/txr/m/n/10.95 . 2nd. Addison-
+ []
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[122
+
+]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [123]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [124]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+Overfull \hbox (24.95256pt too wide) in paragraph at lines 70--70
+[][]\T1/txr/m/n/10.95 FELDERER, Mi-chael; BÜ-CHLER, Matthias; JOHNS, Mar-tin; BRUC-KER, Achim D.; BREU, Ruth y PRETSCH-
+ []
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+Overfull \hbox (24.95256pt too wide) in paragraph at lines 70--70
+[][]\T1/txr/m/n/10.95 FELDERER, Mi-chael; BÜ-CHLER, Matthias; JOHNS, Mar-tin; BRUC-KER, Achim D.; BREU, Ruth y PRETSCH-
+ []
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[125]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Illegal parameter number in definition of \abx@field@note.
+<to be read again> 
+                   d
+l.70 \end{document}
+                   
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   d
+l.70 \end{document}
+                   
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   d
+l.70 \end{document}
+                   
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+Overfull \hbox (3.42422pt too wide) in paragraph at lines 70--70
+\T1/txr/m/n/10.95 03]. Dis-po-ni-ble en: [][]$\T1/txtt/m/n/10.95 https : / / kubernetes . io / docs / concepts / services -[] networking / ingress/$[][]\T1/txr/m/n/10.95 . 
+ []
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Illegal parameter number in definition of \abx@field@note.
+<to be read again> 
+                   c
+l.70 \end{document}
+                   
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   c
+l.70 \end{document}
+                   
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   c
+l.70 \end{document}
+                   
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Illegal parameter number in definition of \abx@field@note.
+<to be read again> 
+                   l
+l.70 \end{document}
+                   
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[126]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   l
+l.70 \end{document}
+                   
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   l
+l.70 \end{document}
+                   
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+
+Overfull \hbox (4.85724pt too wide) in paragraph at lines 70--70
+[][]\T1/txr/m/n/10.95 KUBERNETES COM-MU-NITY, 2025h. \T1/txr/m/it/10.95 Load-Ba-lan-cer - Ku-ber-ne-tes Do-cu-men-ta-tion []\T1/txr/m/n/10.95 [on-li-ne][]. [[]vi-si-ta-do[] 2026-
+ []
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+Overfull \hbox (10.99576pt too wide) in paragraph at lines 70--70
+[]\T1/txr/m/n/10.95 [on-li-ne][]. [[]vi-si-ta-do[] 2026-05-06]. Dis-po-ni-ble en: [][]$\T1/txtt/m/n/10.95 https : / / kubernetes . io / docs / concepts / overview /
+ []
+
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[127]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [128]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [129]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [130]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [131]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [132]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includefoot 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=620.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Font shape `T1/txr/b/n' in size <24.88> not available
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 70.
+ [133
+
+
+
+]
+Ap\'{e}ndice A.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.1 on input line 70.
+
+[134
+
+
+
+]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.2 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.3 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[135]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.4 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[136]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.5 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.6 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[137]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.7 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[138]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.8 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[139]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.9 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.10 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[140]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.11 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.12 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[141]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.13 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[142]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.14 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[143]
+Ap\'{e}ndice B.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.1 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.2 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.3 on input line 70.
+
+[144
+
+]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.4 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.5 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.6 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[145]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.7 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.8 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.9 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[146]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.10 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.11 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.12 on input line 70.
+
+
+Overfull \hbox (39.75589pt too wide) in paragraph at lines 70--70
+[][][]\T1/txr/m/n/10 UVL[][]/XML/TVL/DIMACS/[][][]JSON[][]/[][][]DOT[][]/Mermaid.  
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.13 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[147]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.14 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.15 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.16 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[148]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.17 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.18 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.19 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[149]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.20 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.21 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[150]
+Ap\'{e}ndice C.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.1 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.2 on input line 70.
+
+[151
+
+]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.3 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.4 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.5 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[152]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.6 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.7 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[153]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.8 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.9 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.10 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[154]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.11 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.12 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.13 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[155]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.14 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.15 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.16 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[156]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.17 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.18 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.19 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[157]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.20 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.21 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[158]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.22 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.23 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.24 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[159]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.25 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.26 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.27 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[160]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.28 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.29 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.30 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[161]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.31 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.32 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[162]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.33 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.34 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.35 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[163]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.36 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.37 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.38 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[164]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.39 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.40 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.41 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[165]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.42 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.43 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.44 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[166]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.45 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.46 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.47 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[167]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.48 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.49 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.50 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[168]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.51 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.52 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[169]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.53 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.54 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.55 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[170]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.56 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.57 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.58 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[171]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.59 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.60 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.61 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[172]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.62 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.63 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.64 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[173]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.65 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.66 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.67 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[174]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.68 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.69 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[175]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.70 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.71 on input line 70.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table C.72 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[176]
+Ap\'{e}ndice D.
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Verificar que \T1/txtt/m/n/10 FeatureModelVersionManager.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txtt/m/n/10 create_new_version(source_version=None) \T1/txr/m/n/10 crea una ver-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.1 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+[177
+
+]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.2 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.3 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[178]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.4 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.5 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[179]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.6 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.7 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Mocks de se-sión y \T1/txtt/m/n/10 FeatureModelVersionManager.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[180]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.8 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txtt/m/n/10 AnalysisSummary \T1/txr/m/n/10 con \T1/txtt/m/n/10 satisfiable\T1/txr/m/n/10 , \T1/txtt/m/n/10 dead_features\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.9 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Verificar que \T1/txtt/m/n/10 compare_versions() \T1/txr/m/n/10 cal-cu-la del-tas de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[181]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.10 on input line 70.
+
+
+Underfull \hbox (badness 3872) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Verificar que \T1/txtt/m/n/10 BaseUserRepository.validate_email_unique()
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.11 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txr/m/n/10 per-mi-te mis-mo nom-bre cuan-do \T1/txtt/m/n/10 existing_domain.id ==
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[182]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.12 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Verificar que \T1/txtt/m/n/10 validate_parent_not_self(feature_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.13 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[183]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.14 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txtt/m/n/10 source_feature.feature_model_version_id !=
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.15 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.16 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[184]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.17 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.18 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[185]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Verificar que \T1/txtt/m/n/10 FeatureModelVersionRepository.
+ []
+
+
+Underfull \hbox (badness 2173) in paragraph at lines 70--70
+\T1/txtt/m/n/10 get_latest_version_number() \T1/txr/m/n/10 re-tor-na \T1/txtt/m/n/10 0 \T1/txr/m/n/10 cuan-do no hay ver-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.19 on input line 70.
+
+
+Underfull \hbox (badness 2253) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Diccionario con con-ta-do-res co-rrec-tos (\T1/txtt/m/n/10 features\T1/txr/m/n/10 , \T1/txtt/m/n/10 groups\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[186]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.20 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.21 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[187]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.22 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txtt/m/n/10 HTTPException(status_code=404, detail="Not
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txtt/m/n/10 JSONResponse \T1/txr/m/n/10 con \T1/txtt/m/n/10 code=404\T1/txr/m/n/10 , \T1/txtt/m/n/10 error_code=1005\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.23 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[188]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.24 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.25 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.26 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[189]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.27 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.28 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[190]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table D.29 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[191]
+Ap\'{e}ndice E.
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST /api/v1/feature-models/ \T1/txr/m/n/10 con \T1/txtt/m/n/10 name\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Verificar res-pues-ta con \T1/txtt/m/n/10 id\T1/txr/m/n/10 , \T1/txtt/m/n/10 owner_id\T1/txr/m/n/10 , \T1/txtt/m/n/10 domain_id\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.1 on input line 70.
+
+[192
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.2 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST /api/v1/feature-models/{model_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[193]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.3 on input line 70.
+
+
+Underfull \hbox (badness 3872) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Verificar que \T1/txtt/m/n/10 PATCH /feature-models/{model_id}/versions/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Ejecutar \T1/txtt/m/n/10 PATCH /api/v1/feature-models/{model_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.4 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[194]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST /api/v1/features/ \T1/txr/m/n/10 con
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.5 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[195]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.6 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[196]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST /api/v1/feature-groups/ \T1/txr/m/n/10 con
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txtt/m/n/10 group_type=OR\T1/txr/m/n/10 , \T1/txtt/m/n/10 min_cardinality\T1/txr/m/n/10 , \T1/txtt/m/n/10 max_cardinality\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.7 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST /api/v1/feature-relations/ \T1/txr/m/n/10 con
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Consultar \T1/txtt/m/n/10 GET /api/v1/feature-relations/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[197]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.8 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.9 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[198]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.10 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[199]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Verificar que \T1/txtt/m/n/10 PUT /feature-models/{model_id}/versions/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 PUT /api/v1/feature-models/{model_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Consultar \T1/txtt/m/n/10 GET /api/v1/feature-models/{model_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.11 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[200]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Verificar que \T1/txtt/m/n/10 POST /feature-models/{model_id}/versions/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST /api/v1/feature-models/{model_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.12 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Verificar que \T1/txtt/m/n/10 POST /feature-models/{model_id}/versions/
+ []
+
+
+Underfull \hbox (badness 3229) in paragraph at lines 70--70
+\T1/txtt/m/n/10 {version_id}/validation/full \T1/txr/m/n/10 de-vuel-ve re-sul-ta-do com-pues-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST /api/v1/feature-models/{model_id}/
+ []
+
+
+Underfull \hbox (badness 5787) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Confirmar pre-sen-cia de sec-cio-nes \T1/txtt/m/n/10 logical\T1/txr/m/n/10 , \T1/txtt/m/n/10 structure\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[201]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.13 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Verificar \T1/txtt/m/n/10 POST /feature-models/{model_id}/versions/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST /api/v1/feature-models/{model_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txtt/m/n/10 versions/{version_id}/analysis/summary \T1/txr/m/n/10 con
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Verificar cam-pos: \T1/txtt/m/n/10 satisfiable\T1/txr/m/n/10 , \T1/txtt/m/n/10 dead_features\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txtt/m/n/10 core_features\T1/txr/m/n/10 , \T1/txtt/m/n/10 complexity_metrics\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.14 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[202]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Ejecutar \T1/txtt/m/n/10 GET /api/v1/feature-models/{model_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Consultar \T1/txtt/m/n/10 GET /api/v1/feature-models/{model_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.15 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[203]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Verificar \T1/txtt/m/n/10 GET /feature-models/{model_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Ejecutar \T1/txtt/m/n/10 GET /api/v1/feature-models/{model_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.16 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[204]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST /api/v1/configurations/ \T1/txr/m/n/10 con
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.17 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST /api/v1/configurations/generate \T1/txr/m/n/10 con
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Resultados es-pe-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/txr/m/n/10 Evaluación de la
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[205]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table E.18 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[206]
+Ap\'{e}ndice F.
+[207
+
+]
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [208]
+Ap\'{e}ndice G.
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/auth/register \T1/txr/m/n/10 con car-ga útil: \T1/txtt/m/n/10 {.[]ail":
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.1 on input line 70.
+
+[209
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/auth/login \T1/txr/m/n/10 con car-ga útil: \T1/txtt/m/n/10 {.[]ail":
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.2 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/auth/forgot-password \T1/txr/m/n/10 con car-ga útil: \T1/txtt/m/n/10 {.[]ail":
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.3 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[210]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 PUT \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/auth/profile \T1/txr/m/n/10 con ca-be-ce-ras de au-ten-ti-ca-ción y car-ga
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txr/m/n/10 útil: \T1/txtt/m/n/10 {.[]ail": "nuevo@test.com", "first_name": "Juan", "last_name":
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.4 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[211]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.5 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[212]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.6 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[213]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.7 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Bad character code (-1).
+\es@chf ->\char \hyphenchar \font 
+                                  
+l.70 \end{document}
+                   
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.8 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[214]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 PUT \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/admin/users/{user_id}/status \T1/txr/m/n/10 con car-ga útil:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.9 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[215]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 PUT \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/admin/users/{user_id}/status \T1/txr/m/n/10 con car-ga útil:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.10 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[216]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 3088) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/domains \T1/txr/m/n/10 con car-ga útil: \T1/txtt/m/n/10 {"name": Ïngeniería de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txtt/m/n/10 Software", "description": "Dominio para estudios en ingeniería de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.11 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[217]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.12 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 PUT \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/domains/{domain_id} \T1/txr/m/n/10 con car-ga útil: \T1/txtt/m/n/10 {ïs_active":
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.13 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[218]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.14 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[219]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models \T1/txr/m/n/10 con car-ga útil: \T1/txtt/m/n/10 {"name": "Plan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txtt/m/n/10 2024", "description": "Modelo curricular 2024", "domain_id":
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.15 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[220]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.16 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[221]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 GET \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models?domain_id=<id>&skip=0&limit=10&
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.17 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[222]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions \T1/txr/m/n/10 con car-ga útil:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txtt/m/n/10 {"version_origin_id": ^^Sversion_id>", "description": "Versión
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.18 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[223]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Overfull \hbox (2.98813pt too wide) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/validate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.19 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[224]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.20 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.21 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[225]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.22 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[226]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.23 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[227]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.24 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[228]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.25 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.26 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[229]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Overfull \hbox (2.98813pt too wide) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/features
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.27 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[230]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 PUT \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.28 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[231]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 GET \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.29 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[232]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 PUT \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.30 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 PUT \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[233]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.31 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 3989) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Verificar que se re-tor-na \T1/txtt/m/n/10 id\T1/txr/m/n/10 , \T1/txtt/m/n/10 group_type\T1/txr/m/n/10 , \T1/txtt/m/n/10 parent_id\T1/txr/m/n/10 , \T1/txtt/m/n/10 min_cardinality=1\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.32 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[234]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txr/m/n/10 con car-ga útil: \T1/txtt/m/n/10 {"group_type": .[]R", "parent_id": ^^Sparent_id>",
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.33 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[235]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Bad character code (-1).
+\es@chf ->\char \hyphenchar \font 
+                                  
+l.70 \end{document}
+                   
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Bad character code (-1).
+\es@chf ->\char \hyphenchar \font 
+                                  
+l.70 \end{document}
+                   
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txtt/m/n/10 relationships \T1/txr/m/n/10 con car-ga útil: \T1/txtt/m/n/10 {^^@elationship_type": ^^@EQUIRES",
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.34 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[236]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Bad character code (-1).
+\es@chf ->\char \hyphenchar \font 
+                                  
+l.70 \end{document}
+                   
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txtt/m/n/10 relationships \T1/txr/m/n/10 con car-ga útil: \T1/txtt/m/n/10 {^^@elationship_type": .[]CLUDES",
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.35 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[237]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 GET \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/groups
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 GET \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.36 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[238]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txtt/m/n/10 constraints \T1/txr/m/n/10 con car-ga útil: \T1/txtt/m/n/10 {.[]pression": "FeatureA =>FeatureB",
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.37 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[239]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+/home/jose/Escritorio/latex-projects/Thesis/example.tex:70: Bad character code (-1).
+\es@chf ->\char \hyphenchar \font 
+                                  
+l.70 \end{document}
+                   
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/txtt/m/n/10 constraints \T1/txr/m/n/10 con car-ga útil: \T1/txtt/m/n/10 {.[]pression": "(FeatureA | FeatureB) &
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.38 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 PUT \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 70--70
+\T1/txtt/m/n/10 constraints/{constraint_id} \T1/txr/m/n/10 con car-ga útil: \T1/txtt/m/n/10 {.[]pression": "FeatureA
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[240]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.39 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 GET \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.40 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[241]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.41 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[242]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.42 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[243]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.43 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[244]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.44 on input line 70.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[245]
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model_id}/versions/{version_id}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table G.45 on input line 70.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\T1/txr/m/n/10 Enviar \T1/txtt/m/n/10 POST \T1/txr/m/n/10 a \T1/txtt/m/n/10 /api/v1/models/{model
