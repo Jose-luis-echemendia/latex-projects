@@ -1832,6 +1832,14 @@ contribuye a experiencias interactivas y a la capacidad del sistema de
 responder en tiempo real a decisiones del usuario (por ejemplo, activar 
 o desactivar características, consultar prerequisitos, etc.) \citep{carlson2013redis}.
 
+Redis desempeñará otro papel fundamental en el sistema, pues 
+será empleado como \textit{broker} de mensajes y como \textit{backend}
+de resultados para Celery. En términos sencillos, esto significa que Redis gestionará las colas que 
+distribuyen las tareas en segundo plano (\textit{broker}) y, a su vez, almacenará el estado 
+y los resultados de esas tareas (\textit{backend}). 
+Esta configuración permite ejecutar y rastrear procesos asíncronos sin bloquear 
+el servidor principal \citep{celery2025docs}.
+
 Otro aspecto clave es que Redis permite persistencia opcional mediante 
 \textit{snapshots}, lo que lo convierte en un aliado directo del soporte de 
 versionado de modelos y configuraciones \citep{carlson2013redis}. Es decir, puede almacenar estados 
@@ -1846,7 +1854,8 @@ del sistema y evita acumulación de datos residual \citep{carlson2013redis}.
 
 Finalmente, una característica determinante para su elección es su excelente 
 integración con FastAPI, permitiendo aprovechar plenamente la naturaleza 
-asíncrona del \textit{backend} \citep{ramirez2019fastapi}. Gracias a bibliotecas como \texttt{aioredis}, las operaciones de 
+asíncrona del \textit{backend} \citep{ramirez2019fastapi}. 
+Gracias a bibliotecas como \texttt{aioredis}, las operaciones de 
 lectura/escritura se realizan sin bloquear el \texttt{event loop}, lo que maximiza la 
 concurrencia cuando múltiples usuarios exploran configuraciones simultáneamente.
             
