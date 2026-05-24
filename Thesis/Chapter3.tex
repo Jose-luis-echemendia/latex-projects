@@ -842,7 +842,7 @@ se implementaron las siguientes técnicas y estrategias de optimización:
     de restricciones para ejecutar las comprobaciones en paralelo mediante tareas asíncronas, aprovechando 
     el multiprocesamiento en entornos con múltiples núcleos de CPU. Para operaciones que tradicionalmente 
     eran bloqueantes, como el análisis del solucionador SAT, se incorporó un límite de tiempo máximo de 
-    ejecución, más allá del cual la operación retorna un estado de "desconocido" o "no determinado" en 
+    ejecución, más allá del cual la operación retorna un estado de ``desconocido'' o ``no determinado'' en 
     lugar de esperar indefinidamente. Esta estrategia garantiza que la latencia máxima del sistema se 
     mantenga controlada, incluso ante modelos con restricciones particularmente complejas que podrían 
     llevar a los solucionadores a explorar espacios de búsqueda combinatoriamente explosivos.

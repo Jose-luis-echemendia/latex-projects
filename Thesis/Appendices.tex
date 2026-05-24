@@ -2456,7 +2456,7 @@
 		\hline
 		Entrada: & 
 		\begin{itemize}
-			\item \texttt{HTTPException(status\_code=404, detail="Not Found")}.
+			\item \texttt{HTTPException(status\_code=404, detail=``Not Found'')}.
 		\end{itemize}
 		\\
 		\hline
@@ -2497,7 +2497,7 @@
 		\hline
 		Entrada: & 
 		\begin{itemize}
-			\item \texttt{Exception("boom")}.
+			\item \texttt{Exception(``boom'')}.
 		\end{itemize}
 		\\
 		\hline
@@ -2540,13 +2540,13 @@
 		\hline
 		Entrada: & 
 		\begin{itemize}
-			\item \texttt{NotFoundException("X no encontrado")}.
+			\item \texttt{NotFoundException(``X no encontrado'')}.
 		\end{itemize}
 		\\
 		\hline
 		Salida esperada: & 
 		\begin{itemize}
-			\item \texttt{status\_code=404}, \texttt{detail="X no encontrado"}.
+			\item \texttt{status\_code=404}, \texttt{detail=``X no encontrado''}.
 		\end{itemize}
 		\\
 		\hline
@@ -2581,7 +2581,7 @@
 		\hline
 		Entrada: & 
 		\begin{itemize}
-			\item \texttt{BusinessLogicException(\"Regla inválida\")}.
+			\item \texttt{BusinessLogicException(``Regla inválida'')}.
 		\end{itemize}
 		\\
 		\hline
@@ -2622,7 +2622,7 @@
 		\hline
 		Entrada: & 
 		\begin{itemize}
-			\item \texttt{domain\_name="Ingeniería de Software"}.
+			\item \texttt{domain\_name=``Ingeniería de Software''}.
 		\end{itemize}
 		\\
 		\hline
@@ -2664,7 +2664,7 @@
 		\hline
 		Entrada: & 
 		\begin{itemize}
-			\item \texttt{current\_state="published"}, \texttt{required\_state="draft"}, \texttt{operation="publish version"}.
+			\item \texttt{current\_state=``published''}, \texttt{required\_state=``draft''}, \texttt{operation=``publish version''}.
 		\end{itemize}
 		\\
 		\hline
@@ -3301,7 +3301,7 @@
 			\begin{enumerate}
 				\item Enviar \texttt{PUT /api/v1/feature-models/\{model\_id\}/ versions/\{version\_id\}/uvl} con UVL válido.
 				\item Validar HTTP 200.
-				\item Verificar \texttt{source="stored"} y \texttt{analysis\_task\_id} en respuesta.
+				\item Verificar \texttt{source=``stored''} y \texttt{analysis\_task\_id} en respuesta.
 				\item Consultar \texttt{GET /api/v1/feature-models/\{model\_id\}/ versions/\{version\_id\}/uvl}.
 				\item Confirmar contenido persistido.
 			\end{enumerate}
@@ -3817,7 +3817,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/register} con carga útil: \texttt{\{"email": "usuario@test.com", "password": "Pass123!@"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/register} con carga útil: \texttt{\{``email'': ``usuario@test.com'', ``password'': ``Pass123!@''\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{201}.
 			\item Validar que la respuesta incluya el token de autenticación.
 			\item Validar que se creó el usuario en la \ac{BD}.
@@ -3846,7 +3846,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/login} con carga útil: \texttt{\{"email": "test@example.com", "password": "Pass123!@"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/login} con carga útil: \texttt{\{``email'': ``test@example.com'', ``password'': ``Pass123!@''\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
 			\item Verificar que se devuelve un \texttt{access\_token} válido.
 		\end{enumerate}
@@ -3875,10 +3875,10 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/forgot-password} con carga útil: \texttt{\{"email": "usuario@test.com"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/auth/forgot-password} con carga útil: \texttt{\{``email'': ``usuario@test.com''\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
 			\item Verificar que se envió un correo con token de recuperación.
-			\item Extraer el token del correo y enviar \texttt{PUT} a \texttt{/api/v1/auth/reset-password} con carga útil: \texttt{\{"token": "<token>", "new\_password": "NewPass456!@"\}}.
+			\item Extraer el token del correo y enviar \texttt{PUT} a \texttt{/api/v1/auth/reset-password} con carga útil: \texttt{\{``token'': ``<token>'', ``new\_password'': ``NewPass456!@''\}}.
 			\item Validar que la contraseña se actualizó.
 		\end{enumerate}
 		}
@@ -3907,7 +3907,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/auth/profile} con cabeceras de autenticación y carga útil: \texttt{\{"email": "nuevo@test.com", "first\_name": "Juan", "last\_name": "Pérez"\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/auth/profile} con cabeceras de autenticación y carga útil: \texttt{\{``email'': ``nuevo@test.com'', ``first\_name'': ``Juan'', ``last\_name'': ``Pérez''\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
 			\item Consultar \texttt{GET} a \texttt{/api/v1/auth/profile} para confirmar cambios.
 			\item Validar que los datos actualizados coinciden.
@@ -3948,7 +3948,7 @@
 			\item Estado \ac{HTTP}: \texttt{200 OK}.
 			\item El token se añade a lista de revocación.
 			\item Peticiones posteriores con ese token retornan \ac{HTTP} \texttt{401 Unauthorized}.
-			\item Mensaje: \texttt{"Token revoked or expired"}.
+			\item Mensaje: \texttt{``Token revoked or expired''}.
 		\end{itemize}
 		}
 		\testcaseuserstory{1}
@@ -3971,7 +3971,7 @@
 		\begin{enumerate}
 			\item Enviar \texttt{GET} a \texttt{/api/v1/admin/users?role=EDITOR\&skip=0\&limit=10} con cabeceras de autenticación.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
-			\item Verificar que todos los usuarios retornados tienen \texttt{role="EDITOR"}.
+			\item Verificar que todos los usuarios retornados tienen \texttt{role=``EDITOR''}.
 			\item Validar que la respuesta incluye total, skip, limit.
 		\end{enumerate}
 		}
@@ -4001,7 +4001,7 @@
 		\begin{enumerate}
 			\item Enviar \texttt{GET} a \texttt{/api/v1/admin/users?name=Juan\&skip=0\&limit=10} con cabeceras de autenticación.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
-			\item Verificar que todos los usuarios retornados contienen "Juan" en nombre o apellido.
+			\item Verificar que todos los usuarios retornados contienen ``Juan'' en nombre o apellido.
 		\end{enumerate}
 		}
 		\testcaseexpresult{
@@ -4028,10 +4028,10 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de usuario a modificar.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/admin/users/\{user\_id\}/role} con carga útil: \texttt{\{"role": "EDITOR"\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/admin/users/\{user\_id\}/role} con carga útil: \texttt{\{``role'': ``EDITOR''\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
 			\item Consultar \texttt{GET} a \texttt{/api/v1/admin/users/\{user\_id\}} para confirmar cambio.
-			\item Verificar que \texttt{role="EDITOR"}.
+			\item Verificar que \texttt{role=``EDITOR''}.
 		\end{enumerate}
 		}
 		\testcaseexpresult{
@@ -4059,7 +4059,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de usuario a desactivar.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/admin/users/\{user\_id\}/status} con carga útil: \texttt{\{"is\_active": false\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/admin/users/\{user\_id\}/status} con carga útil: \texttt{\{``is\_active'': false\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
 			\item Intentar que el usuario desactivado inicie sesión.
 			\item Verificar que el inicio de sesión falla con mensaje de cuenta desactivada.
@@ -4071,7 +4071,7 @@
 			\item Usuario marcado como \texttt{is\_active=False} en \ac{BD}.
 			\item Datos del usuario persisten en \ac{BD}.
 			\item Usuario no puede autenticarse.
-			\item Mensaje: \texttt{"User account is deactivated"}.
+			\item Mensaje: \texttt{``User account is deactivated''}.
 		\end{itemize}
 		}
 		\testcaseuserstory{2}
@@ -4091,7 +4091,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de usuario a reactivar.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/admin/users/\{user\_id\}/status} con carga útil: \texttt{\{"is\_active": true\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/admin/users/\{user\_id\}/status} con carga útil: \texttt{\{``is\_active'': true\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
 			\item Intentar autenticar con el usuario reactivado.
 			\item Verificar que el inicio de sesión es exitoso.
@@ -4124,7 +4124,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{POST} a \texttt{/api/v1/domains} con carga útil: \texttt{\{"name": "Ingeniería de Software", "description": "Dominio para estudios en ingeniería de software"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/domains} con carga útil: \texttt{\{``name'': ``Ingeniería de Software'', ``description'': ``Dominio para estudios en ingeniería de software''\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{201}.
 			\item Verificar que se retorna \texttt{id}, \texttt{name}, \texttt{description}, \texttt{is\_active}, \texttt{created\_at}.
 			\item Consultar \ac{BD} para confirmar persistencia.
@@ -4186,7 +4186,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de dominio a desactivar.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/domains/\{domain\_id\}} con carga útil: \texttt{\{"is\_active": false\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/domains/\{domain\_id\}} con carga útil: \texttt{\{``is\_active'': false\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
 			\item Consultar \texttt{GET} a \texttt{/api/v1/domains/\{domain\_id\}} para confirmar.
 			\item Verificar que \texttt{is\_active=False}.
@@ -4251,7 +4251,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de dominio válido.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models} con carga útil: \texttt{\{"name": "Plan 2024", "description": "Modelo curricular 2024", "domain\_id": "<domain\_id>"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models} con carga útil: \texttt{\{``name'': ``Plan 2024'', ``description'': ``Modelo curricular 2024'', ``domain\_id'': ``<domain\_id>''\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{201}.
 			\item Verificar que se retorna \texttt{id}, \texttt{name}, \texttt{domain\_id}, \texttt{created\_at}.
 			\item Validar que existe en \ac{BD}.
@@ -4283,7 +4283,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de modelo.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}} con carga útil: \texttt{\{"name": "Plan 2024 v2", "description": "Modelo actualizado"\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}} con carga útil: \texttt{\{``name'': ``Plan 2024 v2'', ``description'': ``Modelo actualizado''\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{200}.
 			\item Consultar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}} para confirmar.
 			\item Verificar que los metadatos están actualizados y la estructura intacta.
@@ -4349,7 +4349,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de modelo y \texttt{ID} de versión origen.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions} con carga útil: \texttt{\{"version\_origin\_id": "<version\_id>", "description": "Versión 2.0"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions} con carga útil: \texttt{\{``version\_origin\_id'': ``<version\_id>'', ``description'': ``Versión 2.0''\}}.
 			\item Validar que la respuesta contenga estado \ac{HTTP} \texttt{201}.
 			\item Verificar que se crea versión con estado \texttt{DRAFT}.
 			\item Validar que la estructura se copió desde versión origen.
@@ -4638,7 +4638,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de modelo e \texttt{ID} de versión.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features} con carga útil: \texttt{\{"name": "Módulo A", "type": "CONCRETE"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/features} con carga útil: \texttt{\{``name'': ``Módulo A'', ``type'': ``CONCRETE''\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que se retorna \texttt{id}, \texttt{name}, \texttt{type}, \texttt{version\_id}, \texttt{parent\_id}.
 			\item Validar que existe en \ac{BD}.
@@ -4672,7 +4672,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de la característica a mover y \texttt{ID} del nuevo padre.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}} con carga útil: \texttt{\{"parent\_id": "<new\_parent\_id>"\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}} con carga útil: \texttt{\{``parent\_id'': ``<new\_parent\_id>''\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar característica para confirmar nuevo padre.
 			\item Verificar que subárbol se movió correctamente.
@@ -4736,7 +4736,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de la característica a desactivar.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}} con carga útil: \texttt{\{"is\_active": false\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}} con carga útil: \texttt{\{``is\_active'': false\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar característica para confirmar \texttt{is\_active=false}.
 			\item Verificar que no afecta otras versiones.
@@ -4768,7 +4768,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de la característica.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}} con carga útil: \texttt{\{"name": "Nuevo nombre", "type": "ABSTRACT"\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ features/\{feature\_id\}} con carga útil: \texttt{\{``name'': ``Nuevo nombre'', ``type'': ``ABSTRACT''\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar característica para confirmar cambios.
 			\item Verificar que metadata se actualizó.
@@ -4803,7 +4803,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de las características a agrupar.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups} con carga útil: \texttt{\{"group\_type": "XOR", "parent\_id": "<parent\_id>"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups} con carga útil: \texttt{\{``group\_type'': ``XOR'', ``parent\_id'': ``<parent\_id>''\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que se retorna \texttt{id}, \texttt{group\_type}, \texttt{parent\_id}, \texttt{min\_cardinality=1}, \texttt{max\_cardinality=1}.
 			\item Asignar características al grupo.
@@ -4835,7 +4835,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de padre.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups} con carga útil: \texttt{\{"group\_type": "OR", "parent\_id": "<parent\_id>", "min\_cardinality": 1, "max\_cardinality": 3\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/groups} con carga útil: \texttt{\{``group\_type'': ``OR'', ``parent\_id'': ``<parent\_id>'', ``min\_cardinality'': 1, ``max\_cardinality'': 3\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que cardinalidades se establecen correctamente.
 			\item Asignar características al grupo.
@@ -4868,7 +4868,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de característica origen y destino.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ relationships} con carga útil: \texttt{\{"relationship\_type": "REQUIRES", "source\_id": "<feature\_id\_1>", "target\_id": "<feature\_id\_2>"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ relationships} con carga útil: \texttt{\{``relationship\_type'': ``REQUIRES'', ``source\_id'': ``<feature\_id\_1>'', ``target\_id'': ``<feature\_id\_2>''\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que se retorna relación con \texttt{ID} correctos.
 			\item Guardar \texttt{ID} de relación.
@@ -4900,7 +4900,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de características a relacionar.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ relationships} con carga útil: \texttt{\{"relationship\_type": "EXCLUDES", "source\_id": "<id\_1>", "target\_id": "<id\_2>"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ relationships} con carga útil: \texttt{\{``relationship\_type'': ``EXCLUDES'', ``source\_id'': ``<id\_1>'', ``target\_id'': ``<id\_2>''\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que relación se crea.
 			\item Intentar crear configuración con ambas características (debe fallar).
@@ -4964,7 +4964,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de versión.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ constraints} con carga útil: \texttt{\{"expression": "FeatureA => FeatureB", "description": "Si A entonces B"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ constraints} con carga útil: \texttt{\{``expression'': ``FeatureA => FeatureB'', ``description'': ``Si A entonces B''\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que se analiza y valida la expresión.
 			\item Guardar \texttt{ID} de restricción.
@@ -4996,7 +4996,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de versión.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ constraints} con carga útil: \texttt{\{"expression": "(FeatureA | FeatureB) \& \textasciitilde FeatureC => FeatureD", "description": "Restricción compleja"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ constraints} con carga útil: \texttt{\{``expression'': ``(FeatureA | FeatureB) \& \textasciitilde FeatureC => FeatureD'', ``description'': ``Restricción compleja''\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que se valida correctamente.
 			\item Intentar añadir a validación del modelo.
@@ -5027,7 +5027,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de restricción.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ constraints/\{constraint\_id\}} con carga útil: \texttt{\{"expression": "FeatureA \& FeatureB => FeatureC", "description": "Expresión actualizada"\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ constraints/\{constraint\_id\}} con carga útil: \texttt{\{``expression'': ``FeatureA \& FeatureB => FeatureC'', ``description'': ``Expresión actualizada''\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar restricción para confirmar cambios.
 			\item Verificar que versionado registra el cambio.
@@ -5091,7 +5091,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Preparar contenido \ac{UVL} válido (características, grupos, restricciones).
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl} con carga útil: \texttt{\{"content": "<contenido UVL>"\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/uvl} con carga útil: \texttt{\{``content'': ``<contenido UVL>''\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar la estructura generada del modelo.
 			\item Verificar que árbol, grupos y restricciones se crearon correctamente.
@@ -5194,7 +5194,7 @@
 			\item Crear escenario con ciclo: \texttt{A->B->C->A}.
 			\item Enviar \texttt{POST} a \texttt{/api/v1/models/\{model\_id\}/versions/\{version\_id\}/ validate/structure} con cabeceras.
 			\item Validar que la respuesta contenga estado 200.
-			\item Verificar que se reporta error: \texttt{"Cycle detected: A->B->C->A"}.
+			\item Verificar que se reporta error: \texttt{``Cycle detected: A->B->C->A''}.
 			\item Listar características participantes.
 		\end{enumerate}
 		}
@@ -5319,7 +5319,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de características válidas.
-			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations} con carga útil: \texttt{\{"name": "Config 1", "description": "Configuración de prueba", "version\_id": "<version\_id>", "features": ["<id\_1>", "<id\_2>"]\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations} con carga útil: \texttt{\{``name'': ``Config 1'', ``description'': ``Configuración de prueba'', ``version\_id'': ``<version\_id>'', ``features'': [``<id\_1>'', ``<id\_2>'']\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que se crea configuración con \texttt{ID}.
 			\item Validar que se vincula a versión PUBLISHED.
@@ -5351,7 +5351,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de configuración.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/configurations/\{config\_id\}} con carga útil: \texttt{\{"name": "Nuevo nombre", "description": "Descripción actualizada", "features": ["<nuevo\_id\_1>", "<nuevo\_id\_2>"]\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/configurations/\{config\_id\}} con carga útil: \texttt{\{``name'': ``Nuevo nombre'', ``description'': ``Descripción actualizada'', ``features'': [``<nuevo\_id\_1>'', ``<nuevo\_id\_2>'']\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar configuración para confirmar cambios.
 			\item Verificar que las características se actualizaron.
@@ -5444,7 +5444,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de configuración.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/configurations/\{config\_id\}} con carga útil: \texttt{\{"is\_active": false\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/configurations/\{config\_id\}} con carga útil: \texttt{\{``is\_active'': false\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar configuración para confirmar \texttt{is\_active=false}.
 			\item Verificar que datos persisten en \ac{BD}.
@@ -5476,7 +5476,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations/validate} con carga útil: \texttt{\{"version\_id": "<version\_id>", "features": ["<id\_1>", "<id\_2>"]\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations/validate} con carga útil: \texttt{\{``version\_id'': ``<version\_id>'', ``features'': [``<id\_1>'', ``<id\_2>'']\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Respuesta incluye: \texttt{is\_valid}, \texttt{errors} (si existen), \texttt{warnings}.
 			\item Verificar que no se crea configuración persistida.
@@ -5508,7 +5508,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations/generate} con carga útil: \texttt{\{"version\_id": "<version\_id>", "limit": 5\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations/generate} con carga útil: \texttt{\{``version\_id'': ``<version\_id>'', ``limit'': 5\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Respuesta incluye arreglo de configuraciones válidas.
 			\item Cada una con lista de características seleccionadas.
@@ -5540,7 +5540,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations/optimize} con carga útil: \texttt{\{"version\_id": "<version\_id>", "objective": "maximize\_features"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/configurations/optimize} con carga útil: \texttt{\{``version\_id'': ``<version\_id>'', ``objective'': ``maximize\_features''\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Respuesta incluye configuración optimizada.
 			\item Incluye métricas de optimización.
@@ -5607,7 +5607,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{POST} a \texttt{/api/v1/tags} con carga útil: \texttt{\{"name": "Programación", "color": "\#FF5733"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/tags} con carga útil: \texttt{\{``name'': ``Programación'', ``color'': ``\#FF5733''\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que se retorna \texttt{ID} de etiqueta.
 			\item Verificar que se persiste en \ac{BD}.
@@ -5702,7 +5702,7 @@
 		}
 		\testcaseexecstep{
 		\begin{enumerate}
-			\item Enviar \texttt{POST} a \texttt{/api/v1/resources} con carga útil multipart: \texttt{\{name: "Introducción a Java", type: "VIDEO", url: "https://...", language: "es", license: "CC-BY-4.0"\}}.
+			\item Enviar \texttt{POST} a \texttt{/api/v1/resources} con carga útil multipart: \texttt{\{name: ``Introducción a Java'', type: ``VIDEO'', url: ``https://...'', language: ``es'', license: ``CC-BY-4.0''\}}.
 			\item Validar que la respuesta contenga estado 201.
 			\item Verificar que se retorna \texttt{ID} de recurso.
 			\item Verificar metadatos almacenados.
@@ -5767,7 +5767,7 @@
 		\testcaseexecstep{
 		\begin{enumerate}
 			\item Obtener \texttt{ID} de recurso.
-			\item Enviar \texttt{PUT} a \texttt{/api/v1/resources/\{resource\_id\}} con carga útil: \texttt{\{"language": "en", "license": "MIT", "description": "Nueva descripción"\}}.
+			\item Enviar \texttt{PUT} a \texttt{/api/v1/resources/\{resource\_id\}} con carga útil: \texttt{\{``language'': ``en'', ``license'': ``MIT'', ``description'': ``Nueva descripción''\}}.
 			\item Validar que la respuesta contenga estado 200.
 			\item Consultar recurso para confirmar cambios.
 			\item Verificar que \texttt{updated\_at} se modifica.
