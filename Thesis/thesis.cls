@@ -451,6 +451,10 @@ Ingeniero en Ciencias Informáticas }
 \addsign[#1]{#2}
 \def\tutorsheading{#1:}
 }
+\newcommand\addconsultant[1]
+{%
+\def\@consultant{#1}
+}
 \newcommand\gettutor[1]
 {%
 \csuse{tutor#1}
@@ -832,6 +836,10 @@ showstringspaces=false,      % Leerzeichen in Strings anzeigen ?
 \stepcounter{rowcnt}
 & \gettutor{\therowcnt}\\
 }
+  \ifx\@consultant\@undefined\relax
+  \else
+  Consultante:  & \@consultant\\
+  \fi
 \end{tabular}
 \vfill
 {\bfseries La Habana, \number\year} \\

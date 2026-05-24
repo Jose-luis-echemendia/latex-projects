@@ -6,7 +6,7 @@
 \glossaryentry{Pod?\glossentry{pod}|setentrycounter[]{page}"\glsnumberformat}{92}
 \glossaryentry{Servicio?\glossentry{service}|setentrycounter[]{page}"\glsnumberformat}{92}
 \glossaryentry{Ingress?\glossentry{ingress}|setentrycounter[]{page}"\glsnumberformat}{92}
-\glossaryentry{Volumenes persistentes?\glossentry{pv}|setentrycounter[]{page}"\glsnumberformat}{92}
+\glossaryentry{volumenes persistentes?\glossentry{pv}|setentrycounter[]{page}"\glsnumberformat}{92}
 \glossaryentry{plano de control?\glossentry{plano-control}|setentrycounter[]{page}"\glsnumberformat}{92}
 \glossaryentry{plano de control?\glossentry{plano-control}|setentrycounter[]{page}"\glsnumberformat}{92}
 \glossaryentry{actualizaciones de rodillo?\glossentry{rolling-updates}|setentrycounter[]{page}"\glsnumberformat}{93}
@@ -52,8 +52,8 @@
 \glossaryentry{Pod?\glossentry{pod}|setentrycounter[]{page}"\glsnumberformat}{94}
 \glossaryentry{nodo?\glossentry{nodo}|setentrycounter[]{page}"\glsnumberformat}{94}
 \glossaryentry{Pod?\glossentry{pod}|setentrycounter[]{page}"\glsnumberformat}{94}
-\glossaryentry{Volumenes persistentes?\glossentry{pv}|setentrycounter[]{page}"\glsnumberformat}{94}
-\glossaryentry{Volumenes persistentes?\glossentry{pv}|setentrycounter[]{page}"\glsnumberformat}{94}
+\glossaryentry{volumenes persistentes?\glossentry{pv}|setentrycounter[]{page}"\glsnumberformat}{94}
+\glossaryentry{volumenes persistentes?\glossentry{pv}|setentrycounter[]{page}"\glsnumberformat}{94}
 \glossaryentry{Pod?\glossentry{pod}|setentrycounter[]{page}"\glsnumberformat}{94}
 \glossaryentry{kube-proxy?\glossentry{kube-proxy}|setentrycounter[]{page}"\glsnumberformat}{94}
 \glossaryentry{nodo?\glossentry{nodo}|setentrycounter[]{page}"\glsnumberformat}{94}
@@ -78,8 +78,8 @@
 \glossaryentry{Pod?\glossentry{pod}|setentrycounter[]{page}"\glsnumberformat}{94}
 \glossaryentry{Pod?\glossentry{pod}|setentrycounter[]{page}"\glsnumberformat}{94}
 \glossaryentry{ClusterIP?\glossentry{clusterip}|setentrycounter[]{page}"\glsnumberformat}{94}
-\glossaryentry{Volumenes persistentes?\glossentry{pv}|setentrycounter[]{page}"\glsnumberformat}{94}
-\glossaryentry{Reclamación de volumen persistente?\glossentry{pvc}|setentrycounter[]{page}"\glsnumberformat}{94}
+\glossaryentry{volumenes persistentes?\glossentry{pv}|setentrycounter[]{page}"\glsnumberformat}{94}
+\glossaryentry{reclamación de volumen persistente?\glossentry{pvc}|setentrycounter[]{page}"\glsnumberformat}{94}
 \glossaryentry{Pod?\glossentry{pod}|setentrycounter[]{page}"\glsnumberformat}{94}
 \glossaryentry{ConfigMap?\glossentry{ConfigMap}|setentrycounter[]{page}"\glsnumberformat}{95}
 \glossaryentry{ConfigMap?\glossentry{ConfigMap}|setentrycounter[]{page}"\glsnumberformat}{95}

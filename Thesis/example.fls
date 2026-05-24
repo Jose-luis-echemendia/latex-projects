@@ -606,6 +606,8 @@ INPUT ./LogoUCI.eps
 INPUT ./LogoUCI-eps-converted-to.pdf
 INPUT ./LogoUCI-eps-converted-to.pdf
 INPUT ./LogoUCI-eps-converted-to.pdf
+INPUT ./LogoUCI-eps-converted-to.pdf
+INPUT ./LogoUCI-eps-converted-to.pdf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xsc.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xsc.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xsc.tfm
@@ -934,5 +936,3 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xb.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/t1xb.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtxptmb.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtxb.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xtt.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xtt.tfm
