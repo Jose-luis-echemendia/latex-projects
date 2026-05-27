@@ -1309,14 +1309,58 @@
       \verb https://dialnet.unirioja.es/servlet/articulo?codigo=9596104
       \endverb
     \endentry
+    \entry{diaz2008}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=1,uniquepart=given,hash=f245e0a8b10c1aa0e7718a40367ffd86}{%
+           family={Díaz},
+           familyi={D\bibinitperiod},
+           given={Francisco\bibnamedelima Javier},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=c0742f585591a5e26860f7ba0abbee67}{%
+           family={Banchoff\bibnamedelima Tzancoff},
+           familyi={B\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Claudia\bibnamedelima Mariana},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=30d1cd819b8b83a5251e334019e849c9}{%
+           family={Rodríguez},
+           familyi={R\bibinitperiod},
+           given={Anahí\bibnamedelima Soledad},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=c5126a3fb84dee2deb2200a4834f33ce}{%
+           family={Soria},
+           familyi={S\bibinitperiod},
+           given={Valeria},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4258143305f22e1c2e82131455fe59d8}
+      \strng{fullhash}{4258143305f22e1c2e82131455fe59d8}
+      \strng{bibnamehash}{4258143305f22e1c2e82131455fe59d8}
+      \strng{authorbibnamehash}{4258143305f22e1c2e82131455fe59d8}
+      \strng{authornamehash}{4258143305f22e1c2e82131455fe59d8}
+      \strng{authorfullhash}{4258143305f22e1c2e82131455fe59d8}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{XIV Congreso Argentino de Ciencias de la Computación}
+      \field{note}{Vid. pág. 59}
+      \field{title}{Usando Jmeter para pruebas de rendimiento}
+      \field{year}{2008}
+    \endentry
     \entry{diaz2002flexibilidad}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=c4dbd0b072c9a66d4469e412f98af3d6}{%
+        {{un=1,uniquepart=given,hash=c4dbd0b072c9a66d4469e412f98af3d6}{%
            family={Díaz},
            familyi={D\bibinitperiod},
            given={V.},
            giveni={V\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \strng{namehash}{c4dbd0b072c9a66d4469e412f98af3d6}
       \strng{fullhash}{c4dbd0b072c9a66d4469e412f98af3d6}
@@ -3687,12 +3731,12 @@
     \endentry
     \entry{rodriguez2019gestion_curricular}{article}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=b307dd91983d341b40246fe9316a6502}{%
+        {{un=1,uniquepart=given,hash=b307dd91983d341b40246fe9316a6502}{%
            family={Rodríguez},
            familyi={R\bibinitperiod},
            given={P.},
            giveni={P\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=e87d3c7047ac970d9771879d6fb52e04}{%
            family={Vizcaíno},
            familyi={V\bibinitperiod},
@@ -4973,7 +5017,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{didiaz2008}
   \missing{kubernetes2025apiserver}
   \missing{kubernetes2025controller-manager}
   \missing{kubernetes2025etcd}
