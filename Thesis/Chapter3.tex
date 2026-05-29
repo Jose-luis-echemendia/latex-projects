@@ -448,67 +448,57 @@ asociados a los servicios de \ac{FM} (entre otros). Se diseñaron 18 casos de pr
 A continuación, se presenta un ejemplo de las pruebas de integración, el resto se puede encontrar en el anexo \ref{anx:pi}.
 
 \begin{longtable}{|p{3.0cm}|p{10.0cm}|}
-\caption{Caso de Prueba de Integración No1}\\
-\hline
-\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
-\hline
-\endfirsthead
-                
-\multicolumn{2}{c}
-{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
-                
-\hline
-\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
-\hline
-\endhead
-                
-\hline
-\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
-\endfoot
-                
-\hline
-\endlastfoot
-% Cuerpo de la tabla
-ID de prueba: HU4-P1: & \ac{HU}: 4 \\
-\hline
-Nombre: & 
-Crear \ac{FM} en dominio válido
-\\
-\hline
-Descripción: & 
-Verificar que \texttt{POST} \texttt{/feature-models/} crea un \ac{FM} y persiste metadatos correctamente.
-\\
-\hline
-Condiciones de ejecución: & 
-\begin{itemize} 
-    \item Sistema levantado con datos de prueba
-    \item \ac{BD} limpia o controlada
-    \item Usuario autenticado con rol \texttt{MODEL\_DESIGNER} o \texttt{ADMIN}
-    \item Existe \texttt{domain\_id} activo
-\end{itemize}
-\\
-\hline
-Pasos de ejecución: & 
-\begin{enumerate}
-    \item Enviar \texttt{POST} \texttt{/api/v1/feature-models/} con \texttt{name}, \texttt{description}, \texttt{domain\_id}
-    \item Validar \texttt{HTTP} \texttt{201}
-    \item Verificar respuesta con \texttt{id}, \texttt{owner\_id}, \texttt{domain\_id}, \texttt{is\_active=true}
-    \item Consultar \texttt{GET} \texttt{/api/v1/feature-models/{id}}
-    \item Confirmar persistencia en \ac{BD} (registro creado)
-\end{enumerate}
-\\
-\hline
-Resultados esperados: &
-\begin{itemize}
-    \item Se crea el FM correctamente
-    \item El \texttt{owner\_id} corresponde al usuario autenticado
-    \item Se registra \texttt{created\_at}/\texttt{updated\_at}
-\end{itemize}
-\\
-\hline
-Evaluación de la prueba: &
-Aprobada \\
-\hline
+	\caption{Caso de Prueba de Integración HU4-P1}\\
+	\hline
+	\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+	\hline
+	\endfirsthead
+	\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
+	\hline
+	\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
+	\hline
+	\endhead
+	\hline
+	\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
+	\endfoot
+	\hline
+	\endlastfoot
+
+	ID de prueba: HU4-P1 & \ac{HU}: 4 \\
+	\hline
+	Nombre: & Crear \ac{FM} en dominio válido \\
+	\hline
+	Descripción: & Verificar que \texttt{POST /feature-models/} crea un \ac{FM} y persiste metadatos correctamente. \\
+	\hline
+	Condiciones de ejecución: & 
+	\begin{itemize}
+		\item Sistema levantado con datos de prueba.
+		\item \ac{BD} limpia o controlada
+		\item Usuario autenticado con rol \texttt{MODEL\_DESIGNER} o \texttt{ADMIN}
+		\item Existe \texttt{domain\_id} activo
+	\end{itemize}
+	\\
+	\hline
+	Pasos de ejecución: & 
+	\begin{enumerate}
+		\item Enviar \texttt{POST /api/v1/feature-models/} con \texttt{name}, \texttt{description}, \texttt{domain\_id}.
+		\item Validar HTTP 201.
+		\item Verificar respuesta con \texttt{id}, \texttt{owner\_id}, \texttt{domain\_id}, \texttt{is\_active=true}.
+		\item Consultar \texttt{GET /api/v1/feature-models/\{id\}}.
+		\item Confirmar persistencia en \ac{BD} (registro creado).
+	\end{enumerate}
+	\\
+	\hline
+	Resultados esperados: & 
+	\begin{itemize}
+		\item Se crea el \ac{FM} correctamente.
+		\item El \texttt{owner\_id} corresponde al usuario autenticado.
+		\item Se registra \texttt{created\_at}/\texttt{updated\_at}.
+	\end{itemize}
+	\\
+	\hline
+	Evaluación de la prueba: & Aprobada \\
+	\hline
 \end{longtable}
 
 \subsubsection{Resultados de las pruebas de integración}
@@ -913,34 +903,34 @@ resto se pueden consultar en el anexo \ref{anx:pa}.
 
 \begin{acceptancetest}[tb:HU6_P2]
 \testcasecode{HU6\_P2}
+\testcasename{Exportar modelo en formato \ac{UVL}}
 \testcasedescription{Validar que el modelo se puede exportar en formato \ac{UVL} válido.}
 \testcaseexeccond{
 \begin{itemize}
-    \item Existe un modelo con versión PUBLISHED.\\
-    \item La versión tiene estructura completa.\\
-    \item Usuario está autenticado.
+	\item Existe un modelo con versión PUBLISHED.
+	\item La versión tiene estructura completa.
+	\item Usuario está autenticado.
 \end{itemize}
 }
 \testcaseexecstep{
-\begin{enumerate} 
-    \item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/export?format=uvl} con cabeceras.\\
-    \item Validar que la respuesta contenga estada 200.\\
-    \item Verificar que el \texttt{Content-Type} es text/plain o application/x-uvl.\\
-    \item Validar que el contenido es \ac{UVL} válido (comienza con características o \textit{namespace}, tiene sintaxis correcta).\\
-    \item Guardar contenido en archivo .uvl y validar.
+\begin{enumerate}
+	\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/export?format=uvl} con cabeceras.
+	\item Validar que la respuesta contenga estado 200.
+	\item Verificar que \texttt{Content-Type} es \texttt{text/plain} o \texttt{application/x-uvl}.
+	\item Validar que el contenido es \ac{UVL} válido (comienza con \texttt{features} o \texttt{namespace}, tiene sintaxis correcta).
+	\item Guardar contenido en archivo \texttt{.uvl} y validar.
 \end{enumerate}
 }
 \testcaseexpresult{
-\begin{itemize} 
-    \item Estado \ac{HTTP}: \texttt{200 OK}.\\
-    \item \texttt{Content-Type} correcto.\\
-    \item \ac{UVL} contiene sintaxis válida.\\
-    \item Todas las características, grupos y restricciones están representadas.\\
-    \item Puede descargarse como archivo.
-    \item Re-importación genera estructura idéntica.
+\begin{itemize}
+	\item Estado \ac{HTTP}: 200 OK.
+	\item \texttt{Content-Type} correcto.
+	\item \ac{UVL} contiene sintaxis válida.
+	\item Todas las características, grupos y restricciones están representadas.
+	\item Puede descargarse como archivo.
+	\item Reimportación genera estructura idéntica.
 \end{itemize}
 }
-\testcasename{Exportar modelo en formato \ac{UVL}}
 \testcaseuserstory{6}
 \end{acceptancetest}
 

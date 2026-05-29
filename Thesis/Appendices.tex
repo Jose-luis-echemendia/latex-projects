@@ -4,8 +4,6 @@
 	\chapter{Historias de usuario}
 	\label{anx:hu}
 
-		\subsubsection*{Épica 1: Gestión de Identidad y Acceso}
-
 		\begin{userstory}[]
 			\storyname{Autenticación y Autogestión de cuenta}
 			\storyepic{Gestión de Identidad y Acceso}
@@ -44,8 +42,6 @@
 			\storyobservation{La gestión de cuentas debe preservar la trazabilidad administrativa y evitar borrados físicos sobre usuarios existentes. Campos de entrada asociados: RF\#9 (identificador de usuario en ruta y rol en consulta).}
 		\end{userstory}
 
-		\subsubsection*{Épica 2: Gestión de Dominios Curriculares}
-
 		\begin{userstory}[]
 			\storyname{Gestión de Dominios de Conocimiento}
 			\storyepic{Gestión de Dominios Curriculares}
@@ -64,8 +60,6 @@
 			}
 			\storyobservation{El dominio funciona como unidad de organización para agrupar y consultar los modelos vinculados. Campos de entrada asociados: RF\#14 (nombre, descripción opcional) y RF\#15 (identificador de dominio en ruta; nombre y descripción opcionales).}
 		\end{userstory}
-
-		\subsubsection*{Épica 3: Ciclo de Vida del \ac{FM}}
 
 		\begin{userstory}[]
 			\storyname{Gestión Operativa de \ac{FM}}
@@ -135,8 +129,6 @@
 			\storyobservation{La exportación debe ser consistente con la versión consultada y servir tanto para intercambio técnico como para inspección visual.}
 		\end{userstory}
 
-		\subsubsection*{Épica 4: Modelado de Variabilidad Estructural}
-
 		\begin{userstory}[]
 			\storyname{Edición de la Jerarquía de Características}
 			\storyepic{Modelado de Variabilidad Estructural}
@@ -176,8 +168,6 @@
 			\storyobservation{Esta historia cubre la semántica estructural del árbol y la coherencia entre agrupaciones y relaciones. Campos de entrada asociados: RF\#66 (tipo de grupo, característica padre, cardinalidades), RF\#67 (identificador de grupo en ruta y campos opcionales), RF\#72 (tipo, origen, destino) y RF\#73 (identificador de relación en ruta y campos opcionales).}
 		\end{userstory}
 
-		\subsubsection*{Épica 5: Restricciones y Lógica Avanzada}
-
 		\begin{userstory}[]
 			\storyname{Gestión de Restricciones Transversales}
 			\storyepic{Restricciones y Lógica Avanzada}
@@ -216,28 +206,6 @@
 			\storyobservation{La sincronización debe mantener equivalencia entre la representación textual y la representación visual del modelo. Campos de entrada asociados: RF\#36 y RF\#38 (identificador de modelo y versión en ruta, contenido \ac{UVL}).}
 		\end{userstory}
 
-		\subsubsection*{Épica 6: Validación y Análisis de Modelos}
-
-		\begin{userstory}[]
-			\storyname{Validación Lógica y Estructural del Modelo}
-			\storyepic{Validación y Análisis de Modelos}
-			\storyrfs{39, 40, 41, 42}
-			\storypriority{Alta}
-			\storyrisk{Alta}
-			\storypoints{1.0}
-			\storyprogrammer{Jose Luis Echemendia López}
-			\storydescription{El revisador y el diseñador deben poder ejecutar análisis de consistencia, detectar características muertas y redundancias para asegurar que el plan de estudios sea lógicamente posible y no presente errores.}
-			\storyacceptancecriteria{
-			\begin{itemize}
-			\item Evaluar la satisfacibilidad global del modelo mediante un solucionador \ac{SAT}.
-			\item Detectar ciclos y nodos huérfanos.
-			\item Identificar características muertas y redundancias.
-			\end{itemize}
-			}
-			\storyobservation{El análisis debe advertir problemas estructurales y semánticos antes de publicar o derivar configuraciones.}
-		\end{userstory}
-
-		\subsubsection*{Épica 7: Configuración, Optimización y Recursos}
 
 		\begin{userstory}[]
 			\storyname{Gestión de Configuraciones}
@@ -330,25 +298,6 @@
 			\crccolab
 			{
 				FeatureModel
-			}
-		\end{crccard}
-
-		\begin{crccard}[tb:crc_featuremodel]
-			\crcclass{FeatureModel}
-			\crcresp
-			{
-				\begin{itemize}
-				\item Representar un \ac{FM} (nombre, descripción, dominio).
-				\item Enlazar propietario y versiones.
-				\item Mantener colaboradores.
-				\end{itemize}
-			}
-			\crccolab
-			{
-				Domain\\
-				User\\
-				FeatureModelVersion\\
-				FeatureModelCollaborator
 			}
 		\end{crccard}
 
@@ -674,8 +623,6 @@
 	\chapter{Tareas de ingenierías}
 	\label{anx:ti}
 
-		\subsubsection*{HU-01: Autenticación y Autogestión de cuenta}
-
 		\begin{engineeringtask}[tb:engtask_t001]
 		\engtaskuserstory{1}
 		\engtaskname{Diseñar modelo de token de recuperación}
@@ -730,8 +677,6 @@
 		\engtaskdescription{Implementar la tarea asíncrona de notificación para recuperación de cuenta con políticas de reintento, plantillas de correo versionadas y registro de trazas operativas para auditoría y soporte.}
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
-
-		\subsubsection*{HU-02: Administración de Usuarios y Permisos}
 
 		\begin{engineeringtask}[tb:engtask_t006]
 		\engtaskuserstory{2}
@@ -788,8 +733,6 @@
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
 
-		\subsubsection*{HU-03: Gestión de Dominios de Conocimiento}
-
 		\begin{engineeringtask}[tb:engtask_t011]
 		\engtaskuserstory{3}
 		\engtaskname{Ajustar modelo de dominio curricular}
@@ -845,8 +788,6 @@
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
 
-		\subsubsection*{HU-04: Gestión Operativa de FM}
-
 		\begin{engineeringtask}[tb:engtask_t016]
 		\engtaskuserstory{4}
 		\engtaskname{Ajustar modelo de FeatureModel y colaboradores}
@@ -890,19 +831,6 @@
 		\engtaskdescription{Implementar el servicio operativo del catálogo de modelos para gestionar altas, cambios de metadatos y estado operativo, aplicando validaciones de negocio e integridad de información.}
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
-
-		\begin{engineeringtask}[tb:engtask_t020]
-		\engtaskuserstory{4}
-		\engtaskname{Exponer endpoints de ciclo operativo de FM}
-		\engtasktype{Crear controlador}
-		\engtaskpointestimation{8}
-		\engtaskstartdate{14}{5}{2026}
-		\engtaskenddate{15}{5}{2026}
-		\engtaskdescription{Implementar el controlador de modelos de características para alta, consulta, actualización y activación/desactivación, con soporte de filtros por dominio, paginación y políticas de autorización según rol funcional.}
-		\engtaskprogrammer{Jose Luis Echemendia López}
-		\end{engineeringtask}
-
-		\subsubsection*{HU-05: Gestión de Versiones y Publicación}
 
 		\begin{engineeringtask}[tb:engtask_t021]
 		\engtaskuserstory{5}
@@ -959,8 +887,6 @@
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
 
-		\subsubsection*{HU-06: Análisis de Métricas y Exportación}
-
 		\begin{engineeringtask}[tb:engtask_t026]
 		\engtaskuserstory{6}
 		\engtaskname{Implementar servicio de exportación multiformato}
@@ -1015,8 +941,6 @@
 		\engtaskdescription{Definir excepciones específicas para formato no soportado, versión inexistente y errores de serialización o generación de artefactos, con semántica clara para observabilidad y soporte operativo.}
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
-
-		\subsubsection*{HU-07: Edición de la Jerarquía de Características}
 
 		\begin{engineeringtask}[tb:engtask_t031]
 		\engtaskuserstory{7}
@@ -1073,8 +997,6 @@
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
 
-		\subsubsection*{HU-08: Modelado de Grupos y Relaciones Estructurales}
-
 		\begin{engineeringtask}[tb:engtask_t036]
 		\engtaskuserstory{8}
 		\engtaskname{Ajustar modelos de FeatureGroup y FeatureRelation}
@@ -1129,8 +1051,6 @@
 		\engtaskdescription{Implementar el controlador de grupos y relaciones para gestión completa de agrupaciones (incluyendo cardinalidades) y relaciones cross-tree; validar reglas semánticas del modelo y aplicar autorización granular para operaciones de edición.}
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
-
-		\subsubsection*{HU-09: Gestión de Restricciones Transversales}
 
 		\begin{engineeringtask}[tb:engtask_t041]
 		\engtaskuserstory{9}
@@ -1187,8 +1107,6 @@
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
 
-		\subsubsection*{HU-10: Integración y Sincronización UVL}
-
 		\begin{engineeringtask}[tb:engtask_t046]
 		\engtaskuserstory{10}
 		\engtaskname{Implementar importador UVL a estructura}
@@ -1243,8 +1161,6 @@
 		\engtaskdescription{Definir excepciones especializadas para errores de parseo, inconsistencias de sincronización y conflictos estructurales, estandarizando el reporte técnico para depuración y soporte.}
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
-
-		\subsubsection*{HU-11: Validación Lógica y Estructural del Modelo}
 
 		\begin{engineeringtask}[tb:engtask_t051]
 		\engtaskuserstory{11}
@@ -1301,8 +1217,6 @@
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
 
-		\subsubsection*{HU-12: Gestión de Configuraciones}
-
 		\begin{engineeringtask}[tb:engtask_t056]
 		\engtaskuserstory{12}
 		\engtaskname{Ajustar modelo de Configuration}
@@ -1357,8 +1271,6 @@
 		\engtaskdescription{Implementar el controlador de configuraciones para creación persistente, consulta por identificador, listado paginado, actualización y activación/desactivación; incluir endpoint de validación de selección no persistente con contratos claros de entrada y salida.}
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
-
-		\subsubsection*{HU-13: Validación y Generación Automática de Configuraciones}
 
 		\begin{engineeringtask}[tb:engtask_t061]
 		\engtaskuserstory{13}
@@ -1437,8 +1349,6 @@
 		\engtaskprogrammer{Jose Luis Echemendia López}
 		\end{engineeringtask}
 
-		\subsubsection*{HU-14: Enriquecimiento con Recursos y Taxonomías}
-
 		\begin{engineeringtask}[tb:engtask_t068]
 		\engtaskuserstory{14}
 		\engtaskname{Ajustar modelos de Tag y Resource}
@@ -1496,61 +1406,6 @@
 	
 	\chapter{Pruebas unitarias}
 	\label{anx:pu}	
-
-		\subsubsection*{Servicios}
-
-		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
-		\caption{Caso de Prueba Unitaria No1}\\
-		\hline
-		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
-		\hline
-		\endfirsthead
-						
-		\multicolumn{2}{c}
-		{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
-						
-		\hline
-		\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba Unitaria}}} \\
-		\hline
-		\endhead
-						
-		\hline
-		\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
-		\endfoot
-						
-		\hline
-		\endlastfoot
-
-		% Cuerpo de la tabla
-		Descripción: & Verificar que \texttt{FeatureModelVersionManager.}
-		\texttt{create\_new\_version(source\_version=None)} 
-		crea una versión en estado \texttt{DRAFT} con \texttt{version\_number} consecutivo. \\
-		\hline
-		Entrada: & 
-		\begin{itemize}
-			\item \texttt{feature\_model.id} válido.
-			\item Mock de \texttt{repository.get\_latest\_version\_number()} retornando 3.
-			\item \texttt{source\_version=None}.
-		\end{itemize}
-		\\
-		\hline
-		Salida esperada: & 
-		\begin{itemize}
-			\item Nueva versión con \texttt{version\_number=4}.
-			\item \texttt{status=DRAFT}.
-			\item Se ejecuta \texttt{session.commit()} y \texttt{session.refresh()}.
-		\end{itemize}
-		\\
-		\hline
-		Evaluación de la prueba: & 
-		\begin{itemize}
-			\item Pasa si se cumplen valores y llamadas a sesión.
-			\item Falla si no incrementa versión o no persiste cambios.
-		\end{itemize}
-		\\
-		\hline
-		
-		\end{longtable}
 
 		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
 		\caption{Caso de Prueba Unitaria No2}\\
@@ -1931,8 +1786,6 @@
 		\hline
 		
 		\end{longtable}
-
-		\subsubsection*{Repositorios}
 
 		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
 		\caption{Caso de Prueba Unitaria No11}\\
@@ -2349,8 +2202,6 @@
 		
 		\end{longtable}
 
-		\subsubsection*{3 Excepciones}
-
 		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
 		\caption{Caso de Prueba Unitaria No21}\\
 		\hline
@@ -2731,60 +2582,6 @@
 		% ==========================================
 		% HU4: Gestión Operativa de FM
 		% ==========================================
-
-		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
-			\caption{Caso de Prueba de Integración HU4-P1}\\
-			\hline
-			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
-			\hline
-			\endfirsthead
-			\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior.}} \\
-			\hline
-			\multicolumn{2}{c|}{\colorentry{\textbf{Caso de Prueba de Integración}}} \\
-			\hline
-			\endhead
-			\hline
-			\multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\
-			\endfoot
-			\hline
-			\endlastfoot
-
-			ID de prueba: HU4-P1 & \ac{HU}: 4 \\
-			\hline
-			Nombre: & Crear \ac{FM} en dominio válido \\
-			\hline
-			Descripción: & Verificar que \texttt{POST /feature-models/} crea un \ac{FM} y persiste metadatos correctamente. \\
-			\hline
-			Condiciones de ejecución: & 
-			\begin{itemize}
-				\item Sistema levantado con datos de prueba.
-				\item \ac{BD} limpia o controlada
-				\item Usuario autenticado con rol \texttt{MODEL\_DESIGNER} o \texttt{ADMIN}
-				\item Existe \texttt{domain\_id} activo
-			\end{itemize}
-			\\
-			\hline
-			Pasos de ejecución: & 
-			\begin{enumerate}
-				\item Enviar \texttt{POST /api/v1/feature-models/} con \texttt{name}, \texttt{description}, \texttt{domain\_id}.
-				\item Validar HTTP 201.
-				\item Verificar respuesta con \texttt{id}, \texttt{owner\_id}, \texttt{domain\_id}, \texttt{is\_active=true}.
-				\item Consultar \texttt{GET /api/v1/feature-models/\{id\}}.
-				\item Confirmar persistencia en \ac{BD} (registro creado).
-			\end{enumerate}
-			\\
-			\hline
-			Resultados esperados: & 
-			\begin{itemize}
-				\item Se crea el \ac{FM} correctamente.
-				\item El \texttt{owner\_id} corresponde al usuario autenticado.
-				\item Se registra \texttt{created\_at}/\texttt{updated\_at}.
-			\end{itemize}
-			\\
-			\hline
-			Evaluación de la prueba: & Aprobada \\
-			\hline
-		\end{longtable}
 
 		\begin{longtable}{|p{3.0cm}|p{10.0cm}|}
 			\caption{Caso de Prueba de Integración HU4-P2}\\
@@ -3800,9 +3597,6 @@
 
 	\chapter{Pruebas de aceptación}
 	\label{anx:pa}
-
-		\subsubsection*{Épica 1: Gestión de Identidad y Acceso}
-		\subsubsection*{HU-01: Autenticación y Autogestión de cuenta}
 		
 		\begin{acceptancetest}[tb:HU1_P1]
 		\testcasecode{HU1\_P1}
@@ -3953,8 +3747,6 @@
 		}
 		\testcaseuserstory{1}
 		\end{acceptancetest}
-
-		\subsubsection*{HU-02: Administración de Usuarios y Permisos}
 	
 		\begin{acceptancetest}[tb:HU2_P1]
 		\testcasecode{HU2\_P1}
@@ -4108,9 +3900,6 @@
 		\testcaseuserstory{2}
 		\end{acceptancetest}
 
-		\subsubsection*{Épica 2: Gestión de Dominios Curriculares}
-		\subsubsection*{HU-03: Gestión de Dominios de Conocimiento}
-
 		\begin{acceptancetest}[tb:HU3_P1]
 		\testcasecode{HU3\_P1}
 		\testcasename{Crear dominio con nombre y descripción}
@@ -4232,9 +4021,6 @@
 		}
 		\testcaseuserstory{3}
 		\end{acceptancetest}
-
-		\subsubsection*{Épica 3: Ciclo de Vida del \ac{FM}}
-		\subsubsection*{HU-04: Gestión Operativa de \ac{FM}}
 		
 		\begin{acceptancetest}[tb:HU4_P1]
 		\testcasecode{HU4\_P1}
@@ -4332,8 +4118,6 @@
 		}
 		\testcaseuserstory{4}
 		\end{acceptancetest}
-
-		\subsubsection*{HU-05: Gestión de Versiones y Publicación}
 
 		\begin{acceptancetest}[tb:HU5_P1]
 		\testcasecode{HU5\_P1}
@@ -4463,8 +4247,6 @@
 		\testcaseuserstory{5}
 		\end{acceptancetest}
 
-		\subsubsection*{HU-06: Análisis de Métricas y Exportación}
-
 		\begin{acceptancetest}[tb:HU6_P1]
 		\testcasecode{HU6\_P1}
 		\testcasename{Calcular métricas de versión publicada}
@@ -4491,39 +4273,6 @@
 			\item Valores son números enteros $\ge 0$.
 			\item Cálculo se realiza sobre versión publicada.
 			\item Valores coinciden con estructura del modelo.
-		\end{itemize}
-		}
-		\testcaseuserstory{6}
-		\end{acceptancetest}
-
-		\begin{acceptancetest}[tb:HU6_P2]
-		\testcasecode{HU6\_P2}
-		\testcasename{Exportar modelo en formato \ac{UVL}}
-		\testcasedescription{Validar que el modelo se puede exportar en formato \ac{UVL} válido.}
-		\testcaseexeccond{
-		\begin{itemize}
-			\item Existe un modelo con versión PUBLISHED.
-			\item La versión tiene estructura completa.
-			\item Usuario está autenticado.
-		\end{itemize}
-		}
-		\testcaseexecstep{
-		\begin{enumerate}
-			\item Enviar \texttt{GET} a \texttt{/api/v1/models/\{model\_id\}/export?format=uvl} con cabeceras.
-			\item Validar que la respuesta contenga estado 200.
-			\item Verificar que \texttt{Content-Type} es \texttt{text/plain} o \texttt{application/x-uvl}.
-			\item Validar que el contenido es \ac{UVL} válido (comienza con \texttt{features} o \texttt{namespace}, tiene sintaxis correcta).
-			\item Guardar contenido en archivo \texttt{.uvl} y validar.
-		\end{enumerate}
-		}
-		\testcaseexpresult{
-		\begin{itemize}
-			\item Estado \ac{HTTP}: 200 OK.
-			\item \texttt{Content-Type} correcto.
-			\item \ac{UVL} contiene sintaxis válida.
-			\item Todas las características, grupos y restricciones están representadas.
-			\item Puede descargarse como archivo.
-			\item Reimportación genera estructura idéntica.
 		\end{itemize}
 		}
 		\testcaseuserstory{6}
@@ -4620,9 +4369,6 @@
 		}
 		\testcaseuserstory{6}
 		\end{acceptancetest}
-
-		\subsubsection*{Épica 4: Modelado de Variabilidad Estructural}
-		\subsubsection*{HU-07: Edición de la Jerarquía de Características}
 
 		\begin{acceptancetest}[tb:HU7_P1]
 		\testcasecode{HU7\_P1}
@@ -4786,8 +4532,6 @@
 		\testcaseuserstory{7}
 		\end{acceptancetest}
 
-		\subsubsection*{HU-08: Modelado de Grupos y Relaciones Estructurales}
-
 		\begin{acceptancetest}[tb:HU8_P1]
 		\testcasecode{HU8\_P1}
 		\testcasename{Crear grupo XOR entre características}
@@ -4947,9 +4691,6 @@
 		\testcaseuserstory{8}
 		\end{acceptancetest}
 
-		\subsubsection*{Épica 5: Restricciones y Lógica Avanzada}
-		\subsubsection*{HU-09: Gestión de Restricciones Transversales}
-
 		\begin{acceptancetest}[tb:HU9_P1]
 		\testcasecode{HU9\_P1}
 		\testcasename{Crear restricción simple con sintaxis UVL}
@@ -5073,8 +4814,6 @@
 		}
 		\testcaseuserstory{9}
 		\end{acceptancetest}
-
-		\subsubsection*{HU-010: Integración y Sincronización \ac{UVL}}
 		
 		\begin{acceptancetest}[tb:HU10_P1]
 		\testcasecode{HU10\_P1}
@@ -5142,9 +4881,6 @@
 		}
 		\testcaseuserstory{10}
 		\end{acceptancetest}
-
-		\subsubsection*{Épica 6: Validación y Análisis de Modelos}
-		\subsubsection*{HU-11: Validación Lógica y Estructural del Modelo}
 		
 		\begin{acceptancetest}[tb:HU11_P1]
 		\testcasecode{HU11\_P1}
@@ -5300,9 +5036,6 @@
 		}
 		\testcaseuserstory{11}
 		\end{acceptancetest}
-
-		\subsubsection*{Épica 7: Configuración, Optimización y Recursos}
-		\subsubsection*{HU-12: Gestión de Configuraciones}
 
 		\begin{acceptancetest}[tb:HU12_P1]
 		\testcasecode{HU12\_P1}
@@ -5461,8 +5194,6 @@
 		\testcaseuserstory{12}
 		\end{acceptancetest}
 
-		\subsubsection*{HU-13: Validación y Generación Automática de Configuraciones}
-
 		\begin{acceptancetest}[tb:HU13_P1]
 		\testcasecode{HU13\_P1}
 		\testcasename{Validar selección sin persistirla}
@@ -5590,9 +5321,6 @@
 		}
 		\testcaseuserstory{13}
 		\end{acceptancetest}
-
-		\subsubsection*{Épica 6: Validación y Análisis de Modelos}
-		\subsubsection*{HU-11: Enriquecimiento con Recursos y Taxonomías}
 
 		\begin{acceptancetest}[tb:HU14_P1]
 		\testcasecode{HU14\_P1}

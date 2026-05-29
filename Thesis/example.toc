@@ -114,7 +114,7 @@
 \contentsline {subsubsection}{Resultados de las pruebas de rendimiento}{107}{section*.71}%
 \contentsline {subsection}{\numberline {3.3.6}Pruebas de aceptación}{111}{subsection.3.3.6}%
 \contentsline {subsubsection}{Resultados de las pruebas de aceptación}{112}{section*.74}%
-\contentsline {section}{\numberline {3.4}Conclusiones del capítulo}{114}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Conclusiones del capítulo}{113}{section.3.4}%
 \contentsline {chapter}{Conclusiones}{115}{chapter*.77}%
 \contentsline {chapter}{Recomendaciones}{116}{chapter*.79}%
 \contentsline {chapter}{Glossary}{117}{section*.80}%
@@ -488,9 +488,9 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{Apéndices}{134}{section*.85}%
 \contentsline {chapter}{\numberline {A}Historias de usuario}{135}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Tarjetas CRC}{145}{appendix.Alph2}%
-\contentsline {chapter}{\numberline {C}Tareas de ingenierías}{152}{appendix.Alph3}%
-\contentsline {chapter}{\numberline {D}Pruebas unitarias}{178}{appendix.Alph4}%
-\contentsline {chapter}{\numberline {E}Pruebas de integración}{193}{appendix.Alph5}%
-\contentsline {chapter}{\numberline {F}Lista de verificación de seguridad}{208}{appendix.Alph6}%
-\contentsline {chapter}{\numberline {G}Pruebas de aceptación}{210}{appendix.Alph7}%
+\contentsline {chapter}{\numberline {B}Tarjetas CRC}{144}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {C}Tareas de ingenierías}{151}{appendix.Alph3}%
+\contentsline {chapter}{\numberline {D}Pruebas unitarias}{175}{appendix.Alph4}%
+\contentsline {chapter}{\numberline {E}Pruebas de integración}{190}{appendix.Alph5}%
+\contentsline {chapter}{\numberline {F}Lista de verificación de seguridad}{204}{appendix.Alph6}%
+\contentsline {chapter}{\numberline {G}Pruebas de aceptación}{206}{appendix.Alph7}%
