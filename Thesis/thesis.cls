@@ -944,11 +944,11 @@ hidelinks
 {
 \clearpage
 \thispagestyle{empty}
-\chapter*{Declaración de auditoría}
+\chapter*{Declaración de autoría}
 
-Declaramos ser autores de la presente tesis y reconocemos a la Universidad de las Ciencias Informóticas los derechos patrimoniales sobre esta, con carácter exclusivo.\\
+Declaramos ser autores de la presente tesis y reconocemos a la Universidad de las Ciencias Informáticas los derechos patrimoniales sobre esta, con carácter exclusivo.\\
 
-Para que así conste firmamos la presente a los \underline{\hspace{0.7cm}} días del mes de \underline{\hspace{1.7cm}} del año \underline{\hspace{1.3cm}}.
+Para que así conste firmamos la presente a los 21 días del mes de mayo del año 2026.
 
 \newcounter{itemscnt}
 \setcounter{itemscnt}{0}

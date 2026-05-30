@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber example"] 0 "example.bcf" "example.bbl" "example" 0 -1
-  "example.bcf" 0 -1 0 "pdflatex"
+["biber example"] 1780163686.98506 "example.bcf" "example.bbl" "example" 1780163760.09399 0
+  "example.bcf" 1780163759.66729 126679 80797b1ba991c00c9ae1fb598de015a2 "pdflatex"
   "example.bib" 1779936062.01603 66768 d2c0348f58402ca5a9a4268f99e132ea ""
   (generated)
   "example.bbl"
   "example.blg"
   (rewritten before read)
-["pdflatex"] 1780082680.22888 "/home/jose/Escritorio/latex-projects/Thesis/example.tex" "example.pdf" "example" 1780082696.45736 2
+["pdflatex"] 1780163741.67094 "/home/jose/Escritorio/latex-projects/Thesis/example.tex" "example.pdf" "example" 1780163760.09431 2
   "/etc/texmf/web2c/texmf.cnf" 1761542323.73075 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/jose/Escritorio/latex-projects/Thesis/example.tex" 1780069040.00792 6114 7644081048f9ad8a5406c3d8b6242f68 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -391,18 +391,18 @@
   "LogoUCI.eps" 1779333414.93902 359286 4e6ce2f2284e24069f973c06c4379580 ""
   "Suggestions.tex" 1778596788.70733 1333 e5fe97992b1d3d83d19133e149a91be5 ""
   "example.acr" 1780082661.90109 19007 784720bcfb71f229757da0a20656fa95 ""
-  "example.aux" 1780082695.48237 167511 0191bf9aad2388270bf444f60db46eb9 "pdflatex"
-  "example.bbl" 0 -1 0 "biber example"
+  "example.aux" 1780163759.02633 167514 4e8ba22fa263b10c5b9b48c63ac7072f "pdflatex"
+  "example.bbl" 1780163688.57927 217830 9a7ab8596d9d43763fd093c4f75dcc01 "biber example"
   "example.gls" 1780082661.74791 3753 851ccb9f5f11d7b9316910acc043a12c ""
-  "example.loa" 1780082681.66932 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "example.lof" 1780082696.08458 13481 ec9bd8440f9450ef687006c5adca95f6 "pdflatex"
-  "example.lol" 1780082696.08458 371 a3a36c20e5a3f918d0a3eac010d861e0 "pdflatex"
-  "example.lot" 1780082696.08458 36329 d70e4c3099d717b3311376d3ccbd03b2 "pdflatex"
-  "example.run.xml" 1780082696.08458 2402 7908265bf458345a89bc7e0a9e79f5c3 "pdflatex"
+  "example.loa" 1780163744.98375 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "example.lof" 1780163759.66988 13481 ec9bd8440f9450ef687006c5adca95f6 "pdflatex"
+  "example.lol" 1780163759.66988 371 a3a36c20e5a3f918d0a3eac010d861e0 "pdflatex"
+  "example.lot" 1780163759.66988 36329 d70e4c3099d717b3311376d3ccbd03b2 "pdflatex"
+  "example.run.xml" 1780163759.66988 2402 7908265bf458345a89bc7e0a9e79f5c3 "pdflatex"
   "example.tex" 1780069040.00792 6114 7644081048f9ad8a5406c3d8b6242f68 ""
-  "example.toc" 1780082696.08458 22593 ab945e4135a133be4245a5366895c1b1 "pdflatex"
+  "example.toc" 1780163759.66988 22593 ab945e4135a133be4245a5366895c1b1 "pdflatex"
   "kbordermatrix.sty" 1773287771.74452 357 2cf6729df6e08a84b23512434a5c5c32 ""
-  "thesis.cls" 1779640358.36459 50843 81e773c1432a0adec299f35854986027 ""
+  "thesis.cls" 1780163739.17913 50773 ffadeda866b28a2d0ac5d51cf74eba3d ""
   (generated)
   "example.acn"
   "example.aux"
