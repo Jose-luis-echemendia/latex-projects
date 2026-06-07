@@ -562,9 +562,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xr.tfm
-INPUT ./example.aux
-INPUT ./example.aux
-INPUT example.aux
 OUTPUT example.aux
 INPUT /usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
@@ -693,17 +690,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xi.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/txfonts/t1xi.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtxptmri.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/rtxi.tfm
-INPUT ./example.toc
-INPUT ./example.toc
-INPUT example.toc
 OUTPUT example.toc
-INPUT ./example.lof
-INPUT ./example.lof
-INPUT example.lof
 OUTPUT example.lof
-INPUT ./example.lot
-INPUT ./example.lot
-INPUT example.lot
 OUTPUT example.lot
 INPUT ./example.loa
 INPUT ./example.loa
